@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Discovery · The Oberdorfer Team</title>
+<meta name="description" content="Page-by-page design audit of Wakefield at Home (Fall 2026), REWAP Brokerage review, and three magazine-based visual directions.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../assets/logo/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/docs.css">
+<style>
+  .page-audit { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: var(--space-5) var(--gutter); padding-block: var(--space-7); border-top: 1px solid var(--border-subtle); }
+  .page-audit:first-of-type { border-top: 1px solid var(--rule-gold); }
+  .page-audit img { width: 100%; max-width: 20rem; box-shadow: var(--shadow-1); }
+  .page-audit dl { display: grid; grid-template-columns: 8.5rem 1fr; gap: var(--space-3) var(--space-5); font-size: var(--step-body-s); }
+  .page-audit dt { font: 600 0.6875rem/1.5 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-accent); }
+  .page-audit dd { margin: 0; }
+  @media (max-width: 52rem) { .page-audit { grid-template-columns: 1fr; } .page-audit dl { grid-template-columns: 1fr; gap: var(--space-1); } .page-audit dd { margin-bottom: var(--space-3); } }
+  .finding { display: grid; gap: var(--space-2); border-top: 1px solid var(--rule-gold); padding-top: var(--space-4); }
+  .finding b { font: 300 var(--step-h2)/1 var(--font-display); color: var(--text-display); font-weight: 300; }
+  /* direction sketches */
+  .dir { display: grid; gap: var(--space-4); align-content: start; }
+  .dir__sketch { container-type: inline-size; aspect-ratio: 16 / 10; overflow: hidden; position: relative; border: 1px solid var(--border-subtle); }
+  .dir--chosen .dir__sketch { outline: 2px solid var(--ot-gold); outline-offset: 4px; }
+  .sk-a { background: var(--ot-navy); color: var(--ot-ivory); display: grid; justify-items: center; align-content: center; text-align: center; gap: 2.4cqw; }
+  .sk-a::before { content: ""; position: absolute; inset: 3cqw; border: 1px solid var(--ot-gold); }
+  .sk-a::after { content: ""; position: absolute; inset: calc(3cqw + 5px); border: 1px solid rgb(180 154 101 / .4); }
+  .sk-a small { font: 600 1.6cqw/1 var(--font-sans); letter-spacing: .3em; text-transform: uppercase; color: var(--ot-gold); }
+  .sk-a b { font: 300 8.5cqw/1 var(--font-display); }
+  .sk-a img { width: 40cqw; }
+  .sk-a span { font: 300 2.6cqw/1.3 var(--font-sans); color: #D9D5CC; }
+  .sk-b { background: var(--ot-ivory); display: grid; grid-template-columns: repeat(12, 1fr); }
+  .sk-b > i { border-left: 1px solid rgb(180 154 101 / .35); }
+  .sk-b__photo { position: absolute; right: 0; top: 0; bottom: 0; width: 44%; background: url("../assets/img/photo/team-portrait.webp") 50% 20% / cover; }
+  .sk-b__text { position: absolute; left: 6cqw; top: 14cqw; width: 46cqw; display: grid; gap: 2cqw; }
+  .sk-b__text small { font: 600 1.4cqw/1 var(--font-sans); letter-spacing: .26em; text-transform: uppercase; color: var(--ot-gold-ink); }
+  .sk-b__text b { font: 400 6.4cqw/1 var(--font-display); color: var(--ot-navy); letter-spacing: -.02em; }
+  .sk-b__dim { position: absolute; left: 6cqw; width: 44cqw; bottom: 9cqw; height: 2cqw; border-inline: 1px solid var(--ot-gold); }
+  .sk-b__dim::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; border-top: 1px solid var(--ot-gold); }
+  .sk-b__house { position: absolute; left: 30cqw; bottom: 12cqw; width: 22cqw; color: var(--ot-navy); }
+  .sk-c { background: var(--ot-sandstone); }
+  .sk-c__photo { position: absolute; left: 5cqw; top: 6cqw; bottom: 6cqw; width: 42cqw; background: url("../assets/img/photo/cover-portrait.webp") 50% 25% / cover; border-radius: 20cqw 20cqw 0 0; }
+  .sk-c__text { position: absolute; left: 53cqw; right: 6cqw; top: 18cqw; display: grid; gap: 2.2cqw; }
+  .sk-c__text b { font: 400 italic 6cqw/1.02 var(--font-display); color: var(--ot-navy); }
+  .sk-c__text span { font: 400 2.2cqw/1.5 var(--font-sans); color: var(--ot-ink); }
+  .sk-c__text em { font-style: normal; justify-self: start; background: var(--ot-navy); color: var(--ot-ivory); font: 600 1.5cqw/1 var(--font-sans); letter-spacing: .16em; text-transform: uppercase; padding: 1.8cqw 3cqw; border-radius: 10cqw; }
+  .sk-ab { background: var(--ot-navy); }
+  .sk-ab > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 88% 22%; }
+  .sk-ab::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgb(7 29 45 / .96), rgb(7 29 45 / .75) 42%, rgb(7 29 45 / 0) 72%); }
+  .sk-ab::after { content: ""; position: absolute; inset: 2cqw; z-index: 3; border: 1px solid var(--ot-gold); }
+  .sk-ab__grid { position: absolute; z-index: 1; inset: 0 2cqw; display: grid; grid-template-columns: repeat(12, 1fr); }
+  .sk-ab__grid i { border-left: 1px solid rgb(180 154 101 / .14); }
+  .sk-ab__text { position: absolute; z-index: 2; left: 6.5cqw; top: 15cqw; width: 50cqw; display: grid; gap: 2cqw; }
+  .sk-ab__text small { font: 600 1.4cqw/1 var(--font-sans); letter-spacing: .26em; text-transform: uppercase; color: var(--ot-gold); }
+  .sk-ab__text b { font: 300 7cqw/0.98 var(--font-display); color: var(--ot-ivory); }
+  .sk-ab__search { position: absolute; z-index: 2; left: 6.5cqw; right: 6.5cqw; bottom: 6cqw; height: 6cqw; background: var(--ot-paper); border: 1px solid var(--ot-gold); display: grid; grid-template-columns: 2fr 1fr 1fr 1fr .9fr; }
+  .sk-ab__search i { border-right: 1px solid #DCD4C6; } .sk-ab__search i:last-child { background: var(--ot-navy); border: 0; }
+  .sk-ab__logo { position: absolute; z-index: 2; left: 6.5cqw; top: 5.5cqw; width: 22cqw; }
+  .verdict { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="doc-bar">
+  <div class="container doc-bar__inner">
+    <a class="doc-bar__brand" href="../index.html"><img src="../assets/logo/monogram-navy.svg" alt="" width="40" height="50"><span>Discovery</span></a>
+    <p class="doc-bar__current" data-current-chapter>Audit and directions</p>
+    <div class="doc-bar__actions">
+      <a class="icon-btn" href="../index.html" aria-label="Back to the overview"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-grid"/></svg></a>
+      <button class="doc-bar__contents" type="button" data-contents-toggle aria-controls="contents-panel" aria-expanded="false">Contents</button>
+    </div>
+  </div>
+</header>
+
+<div class="contents-panel surface-inverse" id="contents-panel" role="dialog" aria-modal="true" aria-label="Discovery contents" aria-hidden="true">
+  <div class="container contents-panel__inner">
+    <div class="contents-panel__head">
+      <img src="../assets/logo/logo-primary-gold.svg" alt="The Oberdorfer Team" width="300" height="40" style="width:18rem">
+      <button class="icon-btn" type="button" data-close aria-label="Close contents"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-close"/></svg></button>
+    </div>
+    <ol class="toc" role="list">
+      <li><a href="#findings"><span class="toc__num">01</span><span class="toc__title">Key findings</span><span class="toc__note">Summary</span></a></li>
+      <li><a href="#pages"><span class="toc__num">02</span><span class="toc__title">Page by page</span><span class="toc__note">Audit</span></a></li>
+      <li><a href="#systems"><span class="toc__num">03</span><span class="toc__title">Design systems in the PDF</span><span class="toc__note">Audit</span></a></li>
+      <li><a href="#content"><span class="toc__num">04</span><span class="toc__title">Content inventory</span><span class="toc__note">Audit</span></a></li>
+      <li><a href="#rewap"><span class="toc__num">05</span><span class="toc__title">REWAP Brokerage review</span><span class="toc__note">Context</span></a></li>
+      <li><a href="#directions"><span class="toc__num">06</span><span class="toc__title">Three directions</span><span class="toc__note">Decision</span></a></li>
+    </ol>
+  </div>
+</div>
+
+<main id="main">
+
+<section class="doc-cover folio-frame" style="min-height:auto" aria-labelledby="d-title">
+  <div class="doc-cover__inner">
+    <div class="doc-cover__top"><p class="doc-cover__issue">Deliverables 1 and 3 · Discovery · October 15, 2026</p></div>
+    <div class="doc-cover__title">
+      <h1 class="display-xl answer" id="d-title"><span>Know the magazine.</span><span><em>Love the brand.</em></span></h1>
+      <p class="lead">A page-by-page audit of <em>Wakefield at Home</em> (Fall 2026), a review of the principal brokerage's site, and the three visual directions it led to.</p>
+    </div>
+    <div class="doc-cover__foot"><p>Source: Wakefield_At_Home_8_Page_Print_Ready.pdf · 8 pages · 8.5 × 11 in · 0.125 in bleed · saddle stitch</p><span class="badge badge--source">Analysis of source</span></div>
+  </div>
+</section>
+
+<!-- 01 FINDINGS -->
+<section class="chapter" id="findings" data-chapter="01 · Key findings" aria-labelledby="h-find">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>Summary</span><span class="label--quiet">Discovery</span></div>
+      <p class="chapter__num" aria-hidden="true">01</p>
+      <h2 class="chapter__title display-m answer" id="h-find"><span>The identity already exists.</span><span>It needs a system.</span></h2>
+    </div>
+    <div class="cols cols--3" style="row-gap:var(--space-7)">
+      <div class="finding"><b>2 typefaces</b><p class="body-s">The PDF's font data names <strong>Cormorant Garamond Light</strong> and Light Italic, and <strong>Manrope ExtraLight</strong>. Every headline is Light. These are the exact faces, not guesses.</p></div>
+      <div class="finding"><b>6 colors</b><p class="body-s">Sampled from the pages: navy <code>#071D2D</code>, ivory <code>#F7F3EC</code>, ink <code>#142A38</code>, gold <code>#B49A65</code>, sandstone <code>#E9E2D5</code>, slate <code>#59656A</code>. All are close to the brief's estimates.</p></div>
+      <div class="finding"><b>2.45 : 1</b><p class="body-s">The contrast of the gold labels on ivory. That is fine in print at this size, but it fails WCAG AA on screen. The system adds a deeper <em>Gold Ink</em> (5.1:1).</p></div>
+      <div class="finding"><b>1 illustration</b><p class="body-s">The only drawing is the house linework on page 7. Decoration is otherwise limited to hairlines and the inset frame. That restraint is the luxury.</p></div>
+      <div class="finding"><b>4 source credits</b><p class="body-s">Photos and data are credited: Wikimedia CC BY-SA, Redfin with an access date, the Town of Wakefield, and the CFPB. The habit of citing sources is a brand asset.</p></div>
+      <div class="finding"><b>3 flags</b><p class="body-s">The page 6 food photo is AI-generated, as disclosed. "Top Producer" is not documented. 406-250-7620 is a Montana area code. All three need confirmation.</p></div>
+    </div>
+    <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Discovery · 2026</span><span>01</span></div>
+  </div>
+</section>
+
+<!-- 02 PAGES -->
+<section class="chapter surface-muted" id="pages" data-chapter="02 · Page by page" aria-labelledby="h-pages">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>Audit</span><span class="label--quiet">Discovery</span></div>
+      <p class="chapter__num" aria-hidden="true">02</p>
+      <h2 class="chapter__title display-m answer" id="h-pages"><span>Eight pages,</span><span>one voice.</span></h2>
+    </div>
+
+    <article class="page-audit"><img src="../assets/img/source-pages/page-1.webp" alt="Page 1, cover" loading="lazy" width="900" height="1157">
+      <div class="stack" style="--stack:var(--space-4)"><h3 class="h3">Page 1 · Cover</h3><dl>
+        <dt>Messaging</dt><dd>"Fall in love with your home." Issue line "Fall 2026 / Local living. Beautiful homes." Contents tease "The Fall Field Guide". "Powered by Real Estate Wealth Acquisition and Preservation Brokerage".</dd>
+        <dt>Typography</dt><dd>The gold Cormorant wordmark sits top-center. The masthead "WAKEFIELD" is very large, light capitals, with "AT HOME" widely tracked beneath. Small Manrope caps carry the issue line and section labels.</dd>
+        <dt>Color</dt><dd>A midnight-navy field with a full-bleed photo, darkened toward the top and bottom so the type holds. Gold for the wordmark and frame.</dd>
+        <dt>Composition</dt><dd>An inset gold hairline frame. A symmetric masthead, with the cover line at bottom left and the contents at bottom right. The photo fills the page.</dd>
+        <dt>Photography</dt><dd>The couple at the door of a stately home with autumn plantings, in warm evening light. <span class="badge badge--verify">Confirm photo approval</span></dd>
+        <dt>Takeaway</dt><dd>The strongest single asset. The website hero should be this cover, translated.</dd></dl></div></article>
+
+    <article class="page-audit"><img src="../assets/img/source-pages/page-2.webp" alt="Page 2, team introduction" loading="lazy" width="900" height="1157">
+      <div class="stack" style="--stack:var(--space-4)"><h3 class="h3">Page 2 · Team introduction</h3><dl>
+        <dt>Messaging</dt><dd>"A husband-and-wife team. A shared commitment." "Husband. Wife. Your Team." The biography. "Top Producer". "Thoughtful service. Creative marketing. A personal connection to every move." "Luxury at every price point." Personal / Purposeful / Prepared.</dd>
+        <dt>Layout</dt><dd>Two columns: a portrait on the left (about 40%), and the name and biography on the right. A navy panel at the foot holds the promise and the three-part triad.</dd>
+        <dt>Hierarchy</dt><dd>Running head → two-line headline → small attribution → portrait and name → biography → navy promise. Clear and calm.</dd>
+        <dt>Details</dt><dd>Gold small-caps labels for the triad, ivory ground, generous margins.</dd>
+        <dt>Takeaway</dt><dd>This is the About page and the homepage introduction. The navy triad panel becomes a reusable block.</dd></dl></div></article>
+
+    <article class="page-audit"><img src="../assets/img/source-pages/page-3.webp" alt="Page 3, community editorial" loading="lazy" width="900" height="1157">
+      <div class="stack" style="--stack:var(--space-4)"><h3 class="h3">Page 3 · Community editorial</h3><dl>
+        <dt>Messaging</dt><dd>"Close to Boston. Closer to what matters." Lake Quannapowitt, the town center, commuter rail. History: 1812 (South Reading), 1868 (renamed for Cyrus Wakefield).</dd>
+        <dt>Layout</dt><dd>An oversized headline, a full-width panoramic photo with an italic serif caption, a three-column "Find your rhythm" section, and a sandstone history band with dates set as display numerals.</dd>
+        <dt>Sourcing</dt><dd>Town of Wakefield, Wakefield Historical Society. Photo by RedSoxFan274, Wikimedia Commons, CC BY-SA 4.0.</dd>
+        <dt>Opportunity</dt><dd>The panorama is soft and the horizon is slightly tilted. Future issues should use commissioned photography of each community.</dd>
+        <dt>Takeaway</dt><dd>This becomes the template for every community page.</dd></dl></div></article>
+
+    <article class="page-audit"><img src="../assets/img/source-pages/page-4.webp" alt="Page 4, market insights" loading="lazy" width="900" height="1157">
+      <div class="stack" style="--stack:var(--space-4)"><h3 class="h3">Page 4 · Market insights</h3><dl>
+        <dt>Messaging</dt><dd>"Know the market. Love the home." Teaches comparison: "Sold vs. asking", "Beyond square feet", "Your next step".</dd>
+        <dt>Data</dt><dd>Wakefield, all home types: median sale price $786,979 (3 months ending August 2026); 21 median days on market (August 2026); $483 per sq. ft. (rolling 3 months); 103.3% sale-to-list (August 2026). Redfin, accessed October 10, 2026.</dd>
+        <dt>Presentation</dt><dd>A navy 2 × 2 panel with gold hairline dividers, light serif numerals and gold caps labels, with the period under each figure.</dd>
+        <dt>Takeaway</dt><dd>A model of honest data. The component keeps its source, period and geography, and the figures are never shown as live or statewide.</dd></dl></div></article>
+
+    <article class="page-audit"><img src="../assets/img/source-pages/page-5.webp" alt="Page 5, seasonal lifestyle" loading="lazy" width="900" height="1157">
+      <div class="stack" style="--stack:var(--space-4)"><h3 class="h3">Page 5 · Seasonal lifestyle</h3><dl>
+        <dt>Messaging</dt><dd>"The best plans are close to home." Six destinations with links: the lake, Wakefield Farmers Market, Breakheart Reservation, Beebe Library, Brooksby Farm, Connors Farm. "A little fresh air. A few good memories."</dd>
+        <dt>Layout</dt><dd>A tall image on the left (about 40%) with a numbered list on the right, each item with a serif title, a short description and a source URL.</dd>
+        <dt>Photography</dt><dd>Breakheart Reservation by Joseph Reagle, Wikimedia Commons, CC BY-SA 4.0. Saturated autumn colour and still water.</dd>
+        <dt>Takeaway</dt><dd>Numbered lists are justified here as a guide. This becomes the "Field Guide" journal format.</dd></dl></div></article>
+
+    <article class="page-audit"><img src="../assets/img/source-pages/page-6.webp" alt="Page 6, recipes" loading="lazy" width="900" height="1157">
+      <div class="stack" style="--stack:var(--space-4)"><h3 class="h3">Page 6 · Recipes</h3><dl>
+        <dt>Messaging</dt><dd>"Gather around." "Set a table. Make a memory." Roasted squash and apple soup, and maple apple crisp, with servings and times.</dd>
+        <dt>Layout</dt><dd>A photo on the left, two recipes on the right separated by a gold rule, and a short essay under the photo.</dd>
+        <dt>Integrity</dt><dd>"Food image: AI-generated editorial photograph" is disclosed on the page. <span class="badge badge--verify">Replace with real photography for the web</span></dd>
+        <dt>Takeaway</dt><dd>Lifestyle content builds warmth. The journal's Recipes and Entertaining category inherits this layout.</dd></dl></div></article>
+
+    <article class="page-audit"><img src="../assets/img/source-pages/page-7.webp" alt="Page 7, buyer and seller services" loading="lazy" width="900" height="1157">
+      <div class="stack" style="--stack:var(--space-4)"><h3 class="h3">Page 7 · Buyer and seller services</h3><dl>
+        <dt>Messaging</dt><dd>"Make your home feel exceptional." Selling steps 01–03 and buying steps 01–03. "Ready for a personal plan? Call Brandon and Kaitlyn." "The 30-minute fall edit."</dd>
+        <dt>Layout</dt><dd>A full navy page with two step columns, an ivory callout band at the foot, and a CFPB preapproval resource.</dd>
+        <dt>Details</dt><dd>A gold line drawing of a house, the publication's only illustration. It is the source of the architectural linework and the dimension rule.</dd>
+        <dt>Takeaway</dt><dd>This becomes the Buy and Sell pathways. The step component keeps its numbers because the order matters.</dd></dl></div></article>
+
+    <article class="page-audit"><img src="../assets/img/source-pages/page-8.webp" alt="Page 8, closing brand message" loading="lazy" width="900" height="1157">
+      <div class="stack" style="--stack:var(--space-4)"><h3 class="h3">Page 8 · Closing brand message</h3><dl>
+        <dt>Messaging</dt><dd>"A personal standard of service." "Luxury at every price point." "For the home you have. For the life you are building." "Buying, selling, or simply curious about Wakefield? We would love to be a resource." The phone number. "Husband-and-wife team / Top Producer".</dd>
+        <dt>Composition</dt><dd>A centered, minimal layout inside the inset gold frame. The REWAP logo sits on its own ivory plate with "Powered by". Equal Housing Opportunity.</dd>
+        <dt>Takeaway</dt><dd>This becomes the site's closing CTA and footer, and the model for how the brokerage is credited.</dd></dl></div></article>
+    <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Discovery · 2026</span><span>02</span></div>
+  </div>
+</section>
+
+<!-- 03 SYSTEMS -->
+<section class="chapter" id="systems" data-chapter="03 · Design systems in the PDF" aria-labelledby="h-sys">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>Audit</span><span class="label--quiet">Discovery</span></div>
+      <p class="chapter__num" aria-hidden="true">03</p>
+      <h2 class="chapter__title display-m answer" id="h-sys"><span>What makes it look</span><span>expensive.</span></h2>
+    </div>
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable table">
+    <table class="tokens">
+      <thead><tr><th scope="col">Element</th><th scope="col">Observed</th><th scope="col">Carried into the system</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Typography</th><td>Cormorant Garamond Light for every headline, often as two short lines. Light Italic for captions and the answering half. Manrope ExtraLight for text, with widely tracked caps for labels.</td><td>Same faces. Light display from 30px up. Text raised to Regular for screens. Labels in 600, tracked 0.18em.</td></tr>
+        <tr><th scope="row">Color</th><td>Navy and ivory alternate by page (navy on 1, 7 and 8, plus the 2 and 4 panels). Gold appears only as lines, labels and the wordmark. A sandstone band on page 3.</td><td>Sampled tokens, Gold Ink for accessible text, semantic remapping for navy sections.</td></tr>
+        <tr><th scope="row">Grid</th><td>About 0.6 in margins, a 3-column body grid (pages 3, 4, 7), and image/text splits of about 40/60 (pages 2, 5, 6).</td><td>A 12-column grid. The 3-column triad becomes 4 + 4 + 4. Splits become 6 + 5 offsets.</td></tr>
+        <tr><th scope="row">Image composition</th><td>Full bleed on the cover, a framed rectangle elsewhere, never rounded. Panoramic landscape on page 3, tall portrait crops on pages 2, 5 and 6.</td><td>Square corners. Ratio set: 16:9, 4:5, 4:3, 3:4, 3:2, 9:16.</td></tr>
+        <tr><th scope="row">Photography</th><td>Warm, natural light. Autumn palette. People shown as a couple, not as stock. Credited sources.</td><td>Art direction guide with favor and avoid rules, and licensing and AI-image rules.</td></tr>
+        <tr><th scope="row">Spacing</th><td>Generous top margins, headline space at about 1.5× body text. Dense text columns balanced by quiet bands.</td><td>4px scale with editorial jumps. Section rhythm of 64–136px.</td></tr>
+        <tr><th scope="row">Hierarchy</th><td>Running head → headline → lead → body → source line → folio. Consistent on every page.</td><td>Chapter and section components, folio bar, source-line style.</td></tr>
+        <tr><th scope="row">Decoration</th><td>The inset hairline frame (pages 1, 8), gold rules, and the page 7 house drawing. Nothing else.</td><td>The folio frame, gold rule, dimension rule, and the line-illustration family.</td></tr>
+        <tr><th scope="row">Consistency</th><td>High. Every page shares the running head, folio and type pairing. One technical gap: the file also references Helvetica, which is not embedded, for one text object.</td><td>Brand-wide font rules. Helvetica is not used.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="block" style="margin-top:var(--space-7)">
+      <div class="block__label"><h3>Strengths</h3></div>
+      <div class="block__body cols cols--3 col-rule body-s">
+        <div><p>A distinctive, restrained luxury look that suits every price point, not only mansions.</p></div>
+        <div><p>A personal, honest voice, with sources and dates even in marketing copy.</p></div>
+        <div><p>Local editorial content that builds relationships, a channel competitors rarely match.</p></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__label"><h3>Opportunities</h3></div>
+      <div class="block__body cols cols--3 col-rule body-s">
+        <div><p>Contrast: gold labels and ExtraLight text are too faint for screens.</p></div>
+        <div><p>Geography: the masthead and copy are Wakefield-only, so the brand needs a Massachusetts-wide frame.</p></div>
+        <div><p>No logo system yet: the wordmark is typeset, with no monogram, favicon or lockups. Photography is partly sourced from Wikimedia and partly AI-generated.</p></div>
+      </div>
+    </div>
+    <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Discovery · 2026</span><span>03</span></div>
+  </div>
+</section>
+
+<!-- 04 CONTENT -->
+<section class="chapter surface-muted" id="content" data-chapter="04 · Content inventory" aria-labelledby="h-content">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>Audit</span><span class="label--quiet">Discovery</span></div>
+      <p class="chapter__num" aria-hidden="true">04</p>
+      <h2 class="chapter__title display-m answer" id="h-content"><span>What is confirmed,</span><span>and what is not.</span></h2>
+    </div>
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable table">
+    <table class="tokens">
+      <thead><tr><th scope="col">Item</th><th scope="col">Status</th><th scope="col">Use</th></tr></thead>
+      <tbody>
+        <tr><td>"Luxury at every price point." and all brand lines on pages 2 and 8</td><td><span class="badge badge--source">Source</span></td><td>Promise, hierarchy, site copy</td></tr>
+        <tr><td>Personal / Purposeful / Prepared with their supporting lines</td><td><span class="badge badge--source">Source</span></td><td>Pillars</td></tr>
+        <tr><td>Biography (care, honesty, hard work…)</td><td><span class="badge badge--source">Source</span></td><td>About, brand story</td></tr>
+        <tr><td>Phone 406-250-7620</td><td><span class="badge badge--verify">Confirm</span></td><td>All contact points</td></tr>
+        <tr><td>"Top Producer"</td><td><span class="badge badge--verify">Document</span></td><td>Withheld until verified</td></tr>
+        <tr><td>Wakefield market figures (Redfin, accessed Oct 10, 2026)</td><td><span class="badge badge--source">Source · historical</span></td><td>Example data only, never live or statewide</td></tr>
+        <tr><td>Wakefield history (1812, 1868) and the six seasonal destinations</td><td><span class="badge badge--source">Source · seasonal</span></td><td>Community template example. Schedules change.</td></tr>
+        <tr><td>Couple portraits (pages 1, 2)</td><td><span class="badge badge--verify">Confirm approval</span></td><td>Hero, About</td></tr>
+        <tr><td>Lake and Breakheart photos</td><td><span class="badge badge--source">CC BY-SA 4.0</span></td><td>With attribution only</td></tr>
+        <tr><td>Food photo (page 6)</td><td><span class="badge badge--verify">AI-generated</span></td><td>Not reused as photography</td></tr>
+        <tr><td>Team email, website, license numbers, office, testimonials, agents, awards</td><td><span class="badge badge--demo">Absent</span></td><td>Labeled placeholders only</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Discovery · 2026</span><span>04</span></div>
+  </div>
+</section>
+
+<!-- 05 REWAP -->
+<section class="chapter" id="rewap" data-chapter="05 · REWAP Brokerage review" aria-labelledby="h-rewap">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>Context</span><span class="label--quiet">Discovery</span></div>
+      <p class="chapter__num" aria-hidden="true">05</p>
+      <h2 class="chapter__title display-m answer" id="h-rewap"><span>Two brands,</span><span>clearly separate.</span></h2>
+      <p class="chapter__intro lead">rewapbrokerage.com, reviewed October 15, 2026.</p>
+    </div>
+    <div class="split" style="align-items:start">
+      <div class="stack" style="grid-column:1/span 6">
+        <dl class="body-s kv">
+          <dt class="label label--quiet">Status</dt><dd>A one-page "Coming Soon" placeholder: "Welcome to REWAP Brokerage." No navigation, services or agent pages.</dd>
+          <dt class="label label--quiet">Legal name</dt><dd>"Rewap Brokerage LLC" (footer copyright). The magazine writes it out as Real Estate Wealth Acquisition and Preservation Brokerage.</dd>
+          <dt class="label label--quiet">Address</dt><dd>652 Park Ave, Worcester, MA 01603, as listed on the site. <span class="badge badge--verify">Confirm</span></dd>
+          <dt class="label label--quiet">Disclosures</dt><dd>No license number or Equal Housing notice is visible on the site.</dd>
+          <dt class="label label--quiet">Identity</dt><dd>A metallic gold and navy "key" logo with a skyline. It is a different visual language from the Oberdorfer editorial style.</dd>
+        </dl>
+      </div>
+      <div class="stack" style="grid-column:8/span 5">
+        <div class="stage" style="min-height:12rem"><img src="../assets/img/rewap-logo.webp" alt="REWAP Brokerage logo as reproduced on page 8" style="width:min(22rem,100%)"></div>
+        <p class="caption">As reproduced on page 8 of the publication.</p>
+        <p class="body-s"><strong>Implication:</strong> the brokerage's metallic style should never mix with the team's flat hairline language. The magazine's solution is right: the REWAP logo sits on its own ivory plate, introduced by "Powered by". Because REWAP is based in Worcester, the statewide service area including Worcester is a natural fit.</p>
+      </div>
+    </div>
+    <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Discovery · 2026</span><span>05</span></div>
+  </div>
+</section>
+
+<!-- 06 DIRECTIONS -->
+<section class="chapter surface-muted" id="directions" data-chapter="06 · Three directions" aria-labelledby="h-dir">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>Decision</span><span class="label--quiet">Deliverable 3</span></div>
+      <p class="chapter__num" aria-hidden="true">06</p>
+      <h2 class="chapter__title display-m answer" id="h-dir"><span>Three ways forward.</span><span>All from the magazine.</span></h2>
+      <p class="chapter__intro lead">Each sketch shows the first screen of the homepage. All three keep the navy, ivory and gold, and the light serif.</p>
+    </div>
+    <div class="cols cols--3" style="row-gap:var(--space-8)">
+      <article class="dir">
+        <div class="dir__sketch sk-a" aria-hidden="true"><small>Massachusetts real estate</small><img src="../assets/logo/logo-primary-gold.svg" alt=""><b>Luxury at every<br>price point.</b><span>For the home you have.</span></div>
+        <p class="label">Concept A</p><h3 class="h3">Editorial Heritage</h3>
+        <p class="body-s">The closest to the magazine: a centered serif masthead, inset double frame, navy and ivory pages, restrained gold and large light headlines.</p>
+        <p class="body-s"><strong>Strength:</strong> instantly recognisable to the clients. <strong>Risk:</strong> it can feel static and print-bound on screen, and centered layouts struggle with dense listing content.</p>
+      </article>
+      <article class="dir">
+        <div class="dir__sketch sk-b" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><div class="sk-b__photo"></div><div class="sk-b__text"><small>Massachusetts real estate</small><b>Luxury at every price point.</b></div><svg class="sk-b__house" viewBox="0 0 400 260"><use href="../assets/img/illustrations.svg#colonial"/></svg><div class="sk-b__dim"></div></div>
+        <p class="label">Concept B</p><h3 class="h3">Modern Architectural</h3>
+        <p class="body-s">A contemporary evolution: a visible 12-column grid, asymmetric splits, linework and dimension lines from page 7, and tighter, more precise type.</p>
+        <p class="body-s"><strong>Strength:</strong> handles listings, filters and data with ease. <strong>Risk:</strong> cooler and less personal, and it drifts furthest from what the clients like.</p>
+      </article>
+      <article class="dir">
+        <div class="dir__sketch sk-c" aria-hidden="true"><div class="sk-c__photo"></div><div class="sk-c__text"><b>Luxury at every price point.</b><span>Husband. Wife. Your Team.</span><em>Let's talk</em></div></div>
+        <p class="label">Concept C</p><h3 class="h3">Warm Contemporary</h3>
+        <p class="body-s">A softer, more personal take: sandstone grounds, arched portrait frames, rounded buttons, italic headlines and lifestyle-led storytelling.</p>
+        <p class="body-s"><strong>Strength:</strong> the most approachable for first-time buyers. <strong>Risk:</strong> it loses the navy authority and edges toward the generic "cream and serif" look many brands share.</p>
+      </article>
+    </div>
+    <div class="block" style="margin-top:var(--space-8)">
+      <div class="block__label"><h3>Recommended and chosen</h3><div class="verdict" style="margin-top:var(--space-3)"><span class="badge badge--source">Chosen Oct 15, 2026</span></div></div>
+      <div class="block__body stack" style="--stack:var(--space-5)">
+        <div class="dir dir--chosen" style="max-width:52rem">
+          <div class="dir__sketch sk-ab" aria-hidden="true"><img src="../assets/img/photo/cover-portrait.webp" alt=""><div class="sk-ab__grid"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><img class="sk-ab__logo" src="../assets/logo/logo-primary-ivory.svg" alt="" style="position:absolute;inset:auto;left:6.5cqw;top:5.5cqw;width:22cqw;height:auto;z-index:2"><div class="sk-ab__text"><small>Massachusetts real estate</small><b>Luxury at every price point.</b></div><div class="sk-ab__search"><i></i><i></i><i></i><i></i><i></i></div></div>
+        </div>
+        <h3 class="h2"><em>A + B:</em> Editorial Heritage on an architectural grid.</h3>
+        <div class="cols body-s">
+          <p><strong>From A, the identity:</strong> the cover becomes the hero inside the inset frame. Light Cormorant headlines that answer each other. Navy for covers and closings, ivory for reading. The running heads and folios as page furniture.</p>
+          <p><strong>From B, the structure:</strong> a 12-column grid with asymmetric splits for real content such as listings, filters, agent directories and data. The dimension-line rule and the house-drawing illustration family. Precise, square components.</p>
+        </div>
+        <p class="body-s"><strong>Why:</strong> Brandon and Kaitlyn asked to keep the magazine. A alone keeps it but cannot carry a property-search site, and B alone carries the site but loses the warmth. Together they stay recognisably the magazine and work as a website. C's warmth comes through photography and voice instead of softer shapes.</p>
+        <div class="cluster"><a class="btn" href="../brand-book/">Open the brand book</a><a class="btn btn--secondary" href="../design-system/">Open the design system</a></div>
+      </div>
+    </div>
+    <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Discovery · 2026</span><span>06</span></div>
+  </div>
+</section>
+
+</main>
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>

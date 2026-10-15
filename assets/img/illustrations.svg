@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <!--
+    Architectural line drawings in the manner of the publication's p7 house
+    linework. They are ILLUSTRATIONS used as placeholders for demo listings and
+    community cards; they must be replaced with real, licensed photography and
+    must never be presented as a specific property.
+    Stroke is currentColor; set color on the <svg> that uses them.
+  -->
+  <symbol id="colonial" viewBox="0 0 400 260">
+    <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="miter" vector-effect="non-scaling-stroke">
+      <path d="M20 252H380"/>
+      <path d="M60 110L112 62H288L340 110Z"/>
+      <path d="M118 74V40H136V64M264 64V40H282V74"/>
+      <path d="M66 110H334V116H66Z"/>
+      <path d="M72 116V240H328V116"/>
+      <path d="M72 176H328" stroke-dasharray="2 5"/>
+      <g id="c-win2">
+        <rect x="88" y="128" width="26" height="38"/><path d="M101 128V166M88 147H114"/>
+        <path d="M84 166H118"/>
+      </g>
+      <use href="#c-win2" x="46"/><use href="#c-win2" x="178"/><use href="#c-win2" x="224"/>
+      <rect x="190" y="132" width="20" height="30"/><path d="M200 132V162"/>
+      <g id="c-win1">
+        <rect x="88" y="188" width="26" height="40"/><path d="M101 188V228M88 208H114"/><path d="M84 188H118"/>
+      </g>
+      <use href="#c-win1" x="46"/><use href="#c-win1" x="178"/><use href="#c-win1" x="224"/>
+      <path d="M186 240V196H214V240"/>
+      <path d="M186 196A14 14 0 0 1 214 196"/>
+      <path d="M200 196V240M186 218H214" stroke-width="0.8"/>
+      <path d="M178 240V200H182V240M218 240V200H222V240"/>
+      <path d="M172 240H228V246H172ZM164 246H236V252H164Z"/>
+      <path d="M40 252V236Q46 222 52 236V252M348 252V230Q356 214 364 230V252" stroke-width="0.9"/>
+    </g>
+  </symbol>
+
+  <symbol id="triple-decker" viewBox="0 0 400 260">
+    <g fill="none" stroke="currentColor" stroke-width="1.2" vector-effect="non-scaling-stroke">
+      <path d="M20 252H380"/>
+      <path d="M132 64L222 12L312 64"/>
+      <path d="M140 64V252M304 64V252M140 64H304"/>
+      <path d="M210 40H234V54H210Z"/>
+      <path d="M140 126H304M140 190H304" stroke-dasharray="2 5"/>
+      <g id="td-floor">
+        <path d="M96 76H186V126H96Z"/>
+        <path d="M100 126V80M182 126V80M141 126V80" stroke-width="0.9"/>
+        <path d="M96 108H186" stroke-width="0.9"/>
+        <path d="M104 108V126M112 108V126M120 108V126M128 108V126M154 108V126M162 108V126M170 108V126M178 108V126" stroke-width="0.6"/>
+        <rect x="204" y="80" width="30" height="36"/><path d="M219 80V116M204 98H234"/>
+        <rect x="252" y="80" width="30" height="36"/><path d="M267 80V116M252 98H282"/>
+      </g>
+      <use href="#td-floor" y="64"/>
+      <use href="#td-floor" y="128"/>
+      <path d="M90 76L141 62L192 76" stroke-width="0.9"/>
+      <path d="M150 252V214H172V252" stroke-width="1"/>
+      <path d="M142 252H180" />
+    </g>
+  </symbol>
+
+  <symbol id="cape" viewBox="0 0 400 260">
+    <g fill="none" stroke="currentColor" stroke-width="1.2" vector-effect="non-scaling-stroke">
+      <path d="M20 252H380"/>
+      <path d="M74 152L124 92H276L326 152Z"/>
+      <path d="M192 92V66H210V92"/>
+      <g id="cape-dormer">
+        <path d="M134 128V108L152 94L170 108V128Z"/>
+        <rect x="143" y="110" width="18" height="18"/><path d="M152 110V128"/>
+      </g>
+      <use href="#cape-dormer" x="96"/>
+      <path d="M84 152V244H316V152"/>
+      <g id="cape-win">
+        <rect x="104" y="174" width="26" height="40"/><path d="M117 174V214M104 194H130"/><path d="M100 214H134"/>
+      </g>
+      <use href="#cape-win" x="40"/><use href="#cape-win" x="126"/><use href="#cape-win" x="166"/>
+      <path d="M188 244V182H212V244"/><path d="M188 192H212" stroke-width="0.8"/>
+      <path d="M180 244H220V252"/>
+      <path d="M300 252V232Q306 218 312 232V252M60 252V226Q70 206 80 226V252" stroke-width="0.9"/>
+    </g>
+  </symbol>
+
+  <symbol id="townscape" viewBox="0 0 400 260">
+    <g fill="none" stroke="currentColor" stroke-width="1.1" vector-effect="non-scaling-stroke">
+      <path d="M0 214H400"/>
+      <path d="M0 228Q100 222 200 228T400 228M0 240Q100 234 200 240T400 240" stroke-width="0.7"/>
+      <path d="M40 214V150L70 128L100 150V214M54 214V186H86V214"/>
+      <path d="M118 214V122H170V214M118 140H170M126 152H134V166H126ZM154 152H162V166H154ZM126 178H134V192H126ZM154 178H162V192H154Z"/>
+      <path d="M196 214V112L218 92V40L224 28L230 40V92L252 112V214"/>
+      <path d="M212 214V188Q224 176 236 188V214M218 130H230V150H218Z"/>
+      <path d="M270 214V156H330V214M270 156L300 136L330 156M284 170H296V186H284ZM304 170H316V186H304Z"/>
+      <path d="M346 214V176Q356 156 366 176V214M378 214V184Q386 168 394 184V214" stroke-width="0.9"/>
+    </g>
+  </symbol>
+</svg>

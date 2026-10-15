@@ -1,0 +1,98 @@
+# Design
+
+<!-- Visual system for The Oberdorfer Team. Product truth lives in PRODUCT.md. -->
+
+## World
+
+The visual world continues the team's print publication, *Wakefield at Home*, Fall 2026. It is an editorial luxury magazine on a New England architectural grid.
+
+Direction: **Concept A, Editorial Heritage, on Concept B's architectural grid**. The user chose it on 2026-10-15.
+
+- **Light scene:** ivory paper read by daylight. Navy is reserved for "cover" moments: heroes, statistics, closings, navigation and the footer.
+- **Restraint:** gold appears only as a line, a frame or a small label on navy.
+
+## Tokens
+
+The source of truth is `assets/css/tokens.css`. Every component reads the semantic tokens. `.surface-inverse` remaps them for navy grounds, and `.surface-muted` remaps them for sandstone.
+
+| Role | Token | Value | Notes |
+|---|---|---|---|
+| Primary | `--ot-navy` | `#071D2D` | Sampled from p1, p4, p7, p8 |
+| Ground | `--ot-ivory` | `#F7F3EC` | Sampled from p2–p6 |
+| Body text | `--ot-ink` | `#142A38` | 13.4:1 on ivory |
+| Accent line | `--ot-gold` | `#B49A65` | Text on navy only (6.3:1); 2.45:1 on ivory, so lines only there |
+| Accent text | `--ot-gold-ink` | `#7A6438` | Gold-toned text on ivory (5.1:1) |
+| Surface | `--ot-sandstone` | `#E9E2D5` | Bands and callouts |
+| Secondary | `--ot-slate` | `#59656A` | Captions (5.4:1) |
+| On-navy secondary | `--ot-mist` | `#A3AEB3` | 7.6:1 |
+| Status | `--success` / `--warning` / `--error` | `#2F5D45` / `#7A4E0E` / `#9A2B22` | Each ≥ 6:1 on its tint |
+
+## Typography
+
+The source fonts were verified from the PDF's embedded font data.
+
+- **Display:** Cormorant Garamond.
+  - Headlines use weight 300 from 30px up.
+  - Smaller serif text uses 400–500.
+  - Italic is used for the answering line of a headline and for captions.
+- **Text:** Manrope.
+  - Body 400, navigation 500, labels and buttons 600.
+  - Labels and buttons are uppercase with 0.14–0.18em tracking.
+- **Scale:** fluid `clamp()` steps.
+  - Display XL is 52→96px; body is 16px at 1.65 line height on a 68ch measure.
+  - Statistics use tabular lining numerals.
+- **Headline construction:** two short sentences on two lines, the second answering the first (class `.answer`).
+
+## Layout
+
+- **Grid:** 12 columns.
+  - Gutter 16→32px, page margin 16→80px, maximum content width 1312px.
+  - Editorial splits are 6 + 5 with an offset.
+  - Sections are 64→136px tall, with more space above a heading than below.
+- **Corners:** square everywhere (`--radius: 0`). There are no shadows except on paper mockups.
+- **Signatures:**
+  - **Folio frame** (`.folio-frame`): an inset 1px gold double frame. Use one per view.
+  - **Running head and folio bar:** page furniture taken from the publication.
+  - **Dimension rule** (`.dim-rule`): taken from the p7 house linework.
+  - **Line illustrations:** colonial, triple-decker, Cape and townscape.
+
+## Components
+
+The components live in `assets/css/components.css`, and each one maps to a planned `ot/*` Gutenberg block:
+
+- Buttons and links
+- Site header: navy, overlay and light variants, plus the mobile menu
+- Cover hero
+- Property search bar
+- Cards: listing, agent, community and article
+- Market statistics panel
+- Forms, including validation states
+- Editorial furniture: triad, steps, pull quote, testimonial, FAQ and breadcrumbs
+- Lead capture: CTA panel, newsletter, office card and map plate
+- Footer with brokerage attribution
+
+The REWAP logo is never redrawn. It always sits on its own ivory plate.
+
+## Motion
+
+There is one gesture: gold rules draw from left to right with the exponential ease-out `cubic-bezier(0.16, 1, 0.3, 1)`, and content settles 14px beneath them.
+
+- The button underline draws on hover.
+- Menus and contents panels open with a top-down clip wipe.
+- The page has no parallax and no looping animation.
+- `prefers-reduced-motion` removes all movement.
+
+## Imagery
+
+- Use natural-light architecture and lifestyle photography, credited and licensed.
+- Overlays are navy scrims only.
+- Image ratios are 16:9, 4:5, 4:3, 3:4, 3:2 and 9:16. Set a `--focal` point for each image so mobile crops keep the subject.
+- Don't present AI-generated images as real people, homes or places.
+- Use line illustrations as labeled placeholders until photography exists.
+
+## Content integrity
+
+Use badge classes `.badge--source`, `--proposed`, `--verify` and `--demo` to mark the status of content.
+
+- Demo listings and agents are always labeled.
+- Market data always carries its source, period and geography.

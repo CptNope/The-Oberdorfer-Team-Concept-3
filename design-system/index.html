@@ -1,0 +1,896 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design System · The Oberdorfer Team</title>
+<meta name="description" content="Design tokens and component library for The Oberdorfer Team website and marketing, evolved from Wakefield at Home.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../assets/logo/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/logo/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/docs.css">
+<style>
+  .ds-row { display: flex; flex-wrap: wrap; gap: var(--space-4); align-items: center; }
+  .ds-states { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); gap: var(--space-5) var(--gutter); }
+  .ds-state { display: grid; gap: var(--space-2); align-content: start; }
+  .ds-state > .caption { order: 2; }
+  .is-hover { --btn-bg: var(--ot-navy-700); }
+  .is-hover::after { transform: scaleX(1); }
+  .force-focus { outline: var(--focus-width) solid var(--focus-ring); outline-offset: var(--focus-offset); }
+  .space-scale { display: grid; gap: var(--space-2); }
+  .space-scale div { display: grid; grid-template-columns: 7rem 4rem 1fr; gap: var(--space-4); align-items: center; font-size: var(--step-caption); }
+  .space-scale i { display: block; height: 0.75rem; background: var(--ot-gold); width: var(--s); }
+  .grid-demo { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gutter); height: 7rem; }
+  .grid-demo span { background: color-mix(in srgb, var(--ot-gold) 14%, transparent); border-inline: 1px solid color-mix(in srgb, var(--ot-gold) 55%, transparent); }
+  .icon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr)); gap: 0; border-top: 1px solid var(--border-subtle); border-left: 1px solid var(--border-subtle); }
+  .icon-grid figure { display: grid; justify-items: center; gap: var(--space-3); padding: var(--space-5) var(--space-2); border-right: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); font-size: 0.6875rem; color: var(--text-muted); letter-spacing: 0.06em; }
+  .icon-grid .icon { width: 1.75rem; height: 1.75rem; color: var(--ot-navy); }
+  .header-demo { border: 1px solid var(--border-subtle); overflow: hidden; }
+  .header-demo .site-header { position: relative; }
+  .overlay-demo { position: relative; height: 15rem; background: url("../assets/img/photo/lake-quannapowitt.webp") center / cover; }
+  .overlay-demo::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgb(7 29 45 / 0.75), transparent 60%); }
+  .overlay-demo .site-header { position: absolute; inset: 0 0 auto; background: transparent; }
+  .demo-illu { color: var(--ot-gold); background: var(--ot-navy); display: grid; place-items: center; }
+  .demo-illu svg { width: 82%; height: auto !important; }
+  .demo-illu--light { color: var(--ot-navy); background: var(--ot-sandstone); }
+  .phone .site-header__inner { min-height: 4rem; padding-inline: 1rem; }
+  .phone .mobile-menu { position: absolute; display: block; clip-path: none; visibility: visible; padding: 5rem 1.25rem 1.5rem; }
+  .mini-hero { min-height: 30rem; }
+  .wp-map td:first-child code { white-space: nowrap; }
+  .motion-demo { display: grid; gap: var(--space-4); }
+  .motion-demo .rule { transform-origin: left; animation: draw 2.4s var(--ease-out) infinite; }
+  @keyframes draw { 0% { transform: scaleX(0); } 45%, 100% { transform: scaleX(1); } }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div id="live" class="visually-hidden" aria-live="polite"></div>
+
+<header class="doc-bar">
+  <div class="container doc-bar__inner">
+    <a class="doc-bar__brand" href="../index.html"><img src="../assets/logo/monogram-navy.svg" alt="" width="40" height="50"><span>Design System</span></a>
+    <p class="doc-bar__current" data-current-chapter aria-live="off">Foundations and components</p>
+    <div class="doc-bar__actions">
+      <a class="icon-btn" href="../index.html" aria-label="Back to the overview"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-grid"/></svg></a>
+      <button class="doc-bar__contents" type="button" data-contents-toggle aria-controls="contents-panel" aria-expanded="false">Contents</button>
+    </div>
+  </div>
+</header>
+
+<div class="contents-panel surface-inverse" id="contents-panel" role="dialog" aria-modal="true" aria-label="Design system contents" aria-hidden="true">
+  <div class="container contents-panel__inner">
+    <div class="contents-panel__head">
+      <img src="../assets/logo/logo-primary-gold.svg" alt="The Oberdorfer Team" width="300" height="40" style="width:18rem">
+      <button class="icon-btn" type="button" data-close aria-label="Close contents"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-close"/></svg></button>
+    </div>
+    <ol class="toc" role="list">
+      <li><a href="#color"><span class="toc__num">01</span><span class="toc__title">Color tokens</span><span class="toc__note">Foundations</span></a></li>
+      <li><a href="#type"><span class="toc__num">02</span><span class="toc__title">Type scale</span><span class="toc__note">Foundations</span></a></li>
+      <li><a href="#space"><span class="toc__num">03</span><span class="toc__title">Space, grid and lines</span><span class="toc__note">Foundations</span></a></li>
+      <li><a href="#icons"><span class="toc__num">04</span><span class="toc__title">Icons</span><span class="toc__note">Foundations</span></a></li>
+      <li><a href="#buttons"><span class="toc__num">05</span><span class="toc__title">Buttons and links</span><span class="toc__note">Components</span></a></li>
+      <li><a href="#navigation"><span class="toc__num">06</span><span class="toc__title">Navigation</span><span class="toc__note">Components</span></a></li>
+      <li><a href="#hero"><span class="toc__num">07</span><span class="toc__title">Editorial hero</span><span class="toc__note">Components</span></a></li>
+      <li><a href="#search"><span class="toc__num">08</span><span class="toc__title">Property search</span><span class="toc__note">Components</span></a></li>
+      <li><a href="#cards"><span class="toc__num">09</span><span class="toc__title">Cards</span><span class="toc__note">Components</span></a></li>
+      <li><a href="#market"><span class="toc__num">10</span><span class="toc__title">Market statistics</span><span class="toc__note">Components</span></a></li>
+      <li><a href="#forms"><span class="toc__num">11</span><span class="toc__title">Forms</span><span class="toc__note">Components</span></a></li>
+      <li><a href="#editorial"><span class="toc__num">12</span><span class="toc__title">Editorial content</span><span class="toc__note">Components</span></a></li>
+      <li><a href="#conversion"><span class="toc__num">13</span><span class="toc__title">Lead capture, office, map</span><span class="toc__note">Components</span></a></li>
+      <li><a href="#footer"><span class="toc__num">14</span><span class="toc__title">Footer and attribution</span><span class="toc__note">Components</span></a></li>
+      <li><a href="#motion"><span class="toc__num">15</span><span class="toc__title">Motion and accessibility</span><span class="toc__note">Behaviour</span></a></li>
+      <li><a href="#wordpress"><span class="toc__num">16</span><span class="toc__title">WordPress mapping</span><span class="toc__note">Implementation</span></a></li>
+    </ol>
+  </div>
+</div>
+
+<main id="main">
+
+<section class="doc-cover folio-frame" aria-labelledby="ds-title" style="min-height:auto">
+  <div class="doc-cover__inner">
+    <div class="doc-cover__top">
+      <p class="doc-cover__issue">Design System · Version 1.0 · Proposed</p>
+    </div>
+    <div class="doc-cover__title">
+      <h1 class="display-xl answer" id="ds-title"><span>Built from the page.</span><span><em>Ready for the web.</em></span></h1>
+      <p class="lead">Every token below was measured from <em>Wakefield at Home</em>, then extended for screens, states and accessibility. Components map one-to-one to the planned WordPress blocks.</p>
+    </div>
+    <div class="doc-cover__foot">
+      <p>Files: <a href="../assets/css/tokens.css" style="color:inherit">tokens.css</a> · <a href="../assets/css/base.css" style="color:inherit">base.css</a> · <a href="../assets/css/components.css" style="color:inherit">components.css</a></p>
+      <span class="badge badge--proposed">Proposed · awaiting approval</span>
+    </div>
+  </div>
+</section>
+
+<!-- 01 COLOR ======================================================== -->
+<section class="chapter" id="color" data-chapter="01 · Color tokens" aria-labelledby="h-color">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>Foundations</span><span class="label--quiet">Design System</span></div>
+      <p class="chapter__num" aria-hidden="true">01</p>
+      <h2 class="chapter__title display-m answer" id="h-color"><span>Navy for authority.</span><span>Ivory for warmth.</span></h2>
+      <p class="chapter__intro lead">Gold is a line, not a fill. The brand stays luxurious by holding back.</p>
+    </div>
+
+    <div class="block">
+      <div class="block__label"><h3>Brand primitives</h3><p>Sampled from the print file. The deeper <em>Gold Ink</em> is new: the magazine's gold labels on ivory measure 2.45:1, below the WCAG minimum for small text.</p></div>
+      <div class="block__body">
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable table">
+        <table class="tokens">
+          <thead><tr><th scope="col">Token</th><th scope="col">Value</th><th scope="col">Source</th><th scope="col">Use</th></tr></thead>
+          <tbody>
+            <tr><td><code>--ot-navy</code> <button class="copy-btn" data-copy="var(--ot-navy)" aria-label="Copy --ot-navy"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-copy"/></svg></button></td><td><span class="dot" style="--c:#071D2D"></span>#071D2D</td><td>p1, p4, p7, p8</td><td>Navigation, footer, cover heroes, CTA panels, display type</td></tr>
+            <tr><td><code>--ot-ink</code> <button class="copy-btn" data-copy="var(--ot-ink)" aria-label="Copy --ot-ink"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-copy"/></svg></button></td><td><span class="dot" style="--c:#142A38"></span>#142A38</td><td>p2–p6 body</td><td>Body text on light grounds</td></tr>
+            <tr><td><code>--ot-ivory</code> <button class="copy-btn" data-copy="var(--ot-ivory)" aria-label="Copy --ot-ivory"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-copy"/></svg></button></td><td><span class="dot" style="--c:#F7F3EC"></span>#F7F3EC</td><td>p2–p6 ground</td><td>Page background, text on navy</td></tr>
+            <tr><td><code>--ot-paper</code></td><td><span class="dot" style="--c:#FBF9F5"></span>#FBF9F5</td><td>New</td><td>Inputs, raised cards on ivory</td></tr>
+            <tr><td><code>--ot-sandstone</code></td><td><span class="dot" style="--c:#E9E2D5"></span>#E9E2D5</td><td>p3 history band</td><td>Alternating sections, stat and callout panels</td></tr>
+            <tr><td><code>--ot-gold</code> <button class="copy-btn" data-copy="var(--ot-gold)" aria-label="Copy --ot-gold"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-copy"/></svg></button></td><td><span class="dot" style="--c:#B49A65"></span>#B49A65</td><td>All pages</td><td>Rules, frames, linework; labels <em>on navy only</em></td></tr>
+            <tr><td><code>--ot-gold-ink</code></td><td><span class="dot" style="--c:#7A6438"></span>#7A6438</td><td>New</td><td>Gold-toned text on ivory and paper (5.1:1)</td></tr>
+            <tr><td><code>--ot-gold-pale</code></td><td><span class="dot" style="--c:#D9C9A5"></span>#D9C9A5</td><td>New</td><td>Focus ring and hover on navy</td></tr>
+            <tr><td><code>--ot-slate</code></td><td><span class="dot" style="--c:#59656A"></span>#59656A</td><td>p2–p6 captions</td><td>Captions, metadata, secondary text</td></tr>
+            <tr><td><code>--ot-mist</code></td><td><span class="dot" style="--c:#A3AEB3"></span>#A3AEB3</td><td>New</td><td>Secondary text on navy (7.6:1)</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="block__label"><h3>Semantic layer</h3><p>Components read semantic tokens only. Navy sections remap them with <code>.surface-inverse</code>, so one component works on either ground.</p></div>
+      <div class="block__body">
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable table">
+        <table class="tokens">
+          <thead><tr><th scope="col">Group</th><th scope="col">Tokens</th><th scope="col">On ivory</th><th scope="col">On navy</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Surface</th><td><code>--surface-page</code> <code>--surface-raised</code> <code>--surface-muted</code> <code>--surface-inverse</code></td><td>ivory · paper · sandstone</td><td>navy · navy-800</td></tr>
+            <tr><th scope="row">Text</th><td><code>--text-display</code> <code>--text-body</code> <code>--text-muted</code> <code>--text-accent</code></td><td>navy · ink · slate · gold-ink</td><td>ivory · #E4E0D8 · mist · gold</td></tr>
+            <tr><th scope="row">Rules</th><td><code>--rule-gold</code> <code>--rule-hair</code> <code>--border-subtle</code> <code>--border-input</code></td><td>gold · 55% gold</td><td>gold · 45% gold</td></tr>
+            <tr><th scope="row">Focus</th><td><code>--focus-ring</code> <code>--focus-width</code> <code>--focus-offset</code></td><td>navy, 2px, 3px offset</td><td>gold-pale</td></tr>
+            <tr><th scope="row">States</th><td><code>--hover-tint</code> <code>--press-tint</code> <code>--disabled-*</code></td><td colspan="2">Tints derived from navy or ivory; never a new hue</td></tr>
+            <tr><th scope="row">Forms</th><td><code>--input-bg</code> <code>--input-border</code> <code>--input-placeholder</code> <code>--input-border-focus</code></td><td>paper · #8E8778 (3.2:1)</td><td>navy-800 · #6F8090</td></tr>
+            <tr><th scope="row">Status</th><td><code>--success</code> <code>--warning</code> <code>--error</code> <code>--info</code> (+ <code>-bg</code>)</td><td colspan="2">Muted heritage tones: pine, ochre, brick. All ≥ 6:1 on their tint.</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <div class="ds-row" style="margin-top:var(--space-5)">
+          <span class="badge badge--source">Source-confirmed</span>
+          <span class="badge badge--proposed">Proposed</span>
+          <span class="badge badge--demo">Demo content</span>
+          <span class="badge badge--verify">Needs verification</span>
+        </div>
+        <p class="caption" style="margin-top:var(--space-3)">Content-integrity badges are part of the system. They must appear on any demo listing, unverified claim or placeholder until it is replaced.</p>
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="block__label"><h3>Contrast checks</h3><p>WCAG 2.2: 4.5:1 for body text, 3:1 for large text (24px+, or 18.5px+ bold) and UI boundaries.</p></div>
+      <div class="block__body table-scroll" tabindex="0" role="region" aria-label="Scrollable table">
+        <table class="matrix">
+          <thead><tr><th scope="col">Pairing</th><th scope="col">Sample</th><th scope="col">Ratio</th><th scope="col">Small text</th><th scope="col">Large text / UI</th></tr></thead>
+          <tbody>
+            <tr><td>Navy on ivory</td><td><span class="sample" style="background:#F7F3EC;color:#071D2D">Aa</span></td><td class="tabular">15.53</td><td class="pass">Pass</td><td class="pass">Pass</td></tr>
+            <tr><td>Ink on ivory</td><td><span class="sample" style="background:#F7F3EC;color:#142A38">Aa</span></td><td class="tabular">13.39</td><td class="pass">Pass</td><td class="pass">Pass</td></tr>
+            <tr><td>Slate on ivory</td><td><span class="sample" style="background:#F7F3EC;color:#59656A">Aa</span></td><td class="tabular">5.43</td><td class="pass">Pass</td><td class="pass">Pass</td></tr>
+            <tr><td>Slate on sandstone</td><td><span class="sample" style="background:#E9E2D5;color:#59656A">Aa</span></td><td class="tabular">4.67</td><td class="pass">Pass</td><td class="pass">Pass</td></tr>
+            <tr><td>Gold on ivory (magazine labels)</td><td><span class="sample" style="background:#F7F3EC;color:#B49A65">Aa</span></td><td class="tabular">2.45</td><td class="fail">Fail</td><td class="fail">Lines only</td></tr>
+            <tr><td>Gold Ink on ivory</td><td><span class="sample" style="background:#F7F3EC;color:#7A6438">Aa</span></td><td class="tabular">5.12</td><td class="pass">Pass</td><td class="pass">Pass</td></tr>
+            <tr><td>Gold on navy</td><td><span class="sample" style="background:#071D2D;color:#B49A65">Aa</span></td><td class="tabular">6.34</td><td class="pass">Pass</td><td class="pass">Pass</td></tr>
+            <tr><td>Ivory on navy</td><td><span class="sample" style="background:#071D2D;color:#F7F3EC">Aa</span></td><td class="tabular">15.53</td><td class="pass">Pass</td><td class="pass">Pass</td></tr>
+            <tr><td>Mist on navy</td><td><span class="sample" style="background:#071D2D;color:#A3AEB3">Aa</span></td><td class="tabular">7.58</td><td class="pass">Pass</td><td class="pass">Pass</td></tr>
+            <tr><td>Input border on ivory</td><td><span class="sample" style="background:#F7F3EC;box-shadow:inset 0 0 0 1px #8E8778;color:#142A38">Field</span></td><td class="tabular">3.23</td><td>n/a</td><td class="pass">Pass</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Design System · 2026</span><span>01</span></div>
+  </div>
+</section>
+
+<!-- 02 TYPE ========================================================= -->
+<section class="chapter" id="type" data-chapter="02 · Type scale" aria-labelledby="h-type">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>Foundations</span><span class="label--quiet">Design System</span></div>
+      <p class="chapter__num" aria-hidden="true">02</p>
+      <h2 class="chapter__title display-m answer" id="h-type"><span>Light headlines.</span><span>Legible everything else.</span></h2>
+      <p class="chapter__intro lead">The PDF sets every headline in Cormorant Garamond <em>Light</em> and its text in Manrope <em>ExtraLight</em>. Headlines keep Light. Text moves up to Regular, because ExtraLight is too faint for screens.</p>
+    </div>
+    <div class="block block--wide">
+      <div class="block__body">
+        <div class="specimen"><p class="specimen__meta"><b>Display XL</b>--step-display-xl<br>52 → 96px · 300 · 1.02</p><p class="specimen__sample display-xl">Luxury at every price point.</p></div>
+        <div class="specimen"><p class="specimen__meta"><b>Display L</b>--step-display-l<br>44 → 76px · 300</p><p class="specimen__sample display-l">Fall in love with your home.</p></div>
+        <div class="specimen"><p class="specimen__meta"><b>Display M</b>--step-display-m<br>36 → 56px · 300</p><p class="specimen__sample display-m answer"><span>Close to Boston.</span><span>Closer to what matters.</span></p></div>
+        <div class="specimen"><p class="specimen__meta"><b>H1</b>--step-h1<br>34 → 52px · 300</p><p class="specimen__sample h1">Know the market. Love the home.</p></div>
+        <div class="specimen"><p class="specimen__meta"><b>H2</b>--step-h2<br>30 → 44px · 300</p><p class="specimen__sample h2">The best plans are close to home.</p></div>
+        <div class="specimen"><p class="specimen__meta"><b>H3</b>--step-h3<br>24 → 34px · 400</p><p class="specimen__sample h3">What these numbers can tell you</p></div>
+        <div class="specimen"><p class="specimen__meta"><b>H4</b>--step-h4<br>21 → 26px · 400</p><p class="specimen__sample h4">If you are selling</p></div>
+        <div class="specimen"><p class="specimen__meta"><b>H5</b>--step-h5<br>20px · 500 serif</p><p class="specimen__sample h5">Roasted squash &amp; apple soup</p></div>
+        <div class="specimen"><p class="specimen__meta"><b>H6</b>--step-h6<br>13px · 600 sans</p><p class="specimen__sample h6">Start with the right comparisons.</p></div>
+        <div class="specimen"><p class="specimen__meta"><b>Lead</b>--step-lead<br>18 → 21px · Manrope 300</p><p class="specimen__sample lead">A useful snapshot helps you ask better questions. A thoughtful comparison helps you make better decisions.</p></div>
+        <div class="specimen"><p class="specimen__meta"><b>Body</b>--step-body<br>16px · 400 · 1.65 · 68ch</p><p class="specimen__sample prose">Whether you are buying your first home, making room for your next chapter, or preparing to sell, we want you to feel heard, informed, and supported from the first conversation through closing.</p></div>
+        <div class="specimen"><p class="specimen__meta"><b>Body small</b>--step-body-s<br>14px · 400</p><p class="specimen__sample body-s">Lot size, renovation quality, layout, parking, and condominium fees all belong in the comparison.</p></div>
+        <div class="specimen"><p class="specimen__meta"><b>Caption</b>--step-caption<br>13px · slate</p><p class="specimen__sample"><span class="caption">Source: Redfin, Wakefield Housing Market, accessed October 10, 2026.</span><br><span class="caption caption--serif">An evening on Lake Quannapowitt.</span></p></div>
+        <div class="specimen"><p class="specimen__meta"><b>Label</b>--step-label<br>12px · 600 · 0.18em caps</p><p class="specimen__sample label">Real estate / Wakefield, Massachusetts</p></div>
+        <div class="specimen"><p class="specimen__meta"><b>Button</b>0.78rem · 600 · 0.14em</p><p class="specimen__sample"><span class="btn btn--small" style="pointer-events:none">Request a consultation</span></p></div>
+        <div class="specimen"><p class="specimen__meta"><b>Navigation</b>13px · 500 · 0.06em</p><p class="specimen__sample" style="font:500 .8125rem/1 var(--font-sans);letter-spacing:.06em;color:var(--ot-navy)">Buy&nbsp;&nbsp;&nbsp;Sell&nbsp;&nbsp;&nbsp;Communities&nbsp;&nbsp;&nbsp;Our Team&nbsp;&nbsp;&nbsp;Journal</p></div>
+        <div class="specimen"><p class="specimen__meta"><b>Statistic</b>--step-stat<br>40 → 64px · 300 · tabular</p><p class="specimen__sample stat__value" style="color:var(--ot-navy)">$786,979</p></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__label"><h3>Rules</h3></div>
+      <div class="block__body cols cols--3 col-rule">
+        <div><h4 class="h5">Two lines that answer</h4><p class="body-s">Headlines are often two short sentences, the second answering the first. Break the line where the thought turns, using <code>.answer</code>.</p></div>
+        <div><h4 class="h5">Light is reserved</h4><p class="body-s">Use weight 300 only from 30px up. Smaller serif text uses 400–500, and body text never goes below Manrope 400.</p></div>
+        <div><h4 class="h5">Capitals are small</h4><p class="body-s">Uppercase is limited to sans labels and buttons, tracked 0.14–0.18em. Never set a serif headline in all caps, except the stacked logo.</p></div>
+      </div>
+    </div>
+    <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Design System · 2026</span><span>02</span></div>
+  </div>
+</section>
+
+<!-- 03 SPACE / GRID / LINES ========================================= -->
+<section class="chapter surface-muted" id="space" data-chapter="03 · Space, grid and lines" aria-labelledby="h-space">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>Foundations</span><span class="label--quiet">Design System</span></div>
+      <p class="chapter__num" aria-hidden="true">03</p>
+      <h2 class="chapter__title display-m answer" id="h-space"><span>Generous margins.</span><span>Precise lines.</span></h2>
+      <p class="chapter__intro lead">The magazine's whitespace, on Concept B's architectural twelve-column grid.</p>
+    </div>
+    <div class="block">
+      <div class="block__label"><h3>Spacing scale</h3><p>4px base with editorial jumps. Sections breathe with <code>--section-y</code> (64 → 136px).</p></div>
+      <div class="block__body space-scale">
+        <div><code>--space-1</code><span class="tabular">4px</span><i style="--s:4px"></i></div>
+        <div><code>--space-2</code><span class="tabular">8px</span><i style="--s:8px"></i></div>
+        <div><code>--space-3</code><span class="tabular">12px</span><i style="--s:12px"></i></div>
+        <div><code>--space-4</code><span class="tabular">16px</span><i style="--s:16px"></i></div>
+        <div><code>--space-5</code><span class="tabular">24px</span><i style="--s:24px"></i></div>
+        <div><code>--space-6</code><span class="tabular">32px</span><i style="--s:32px"></i></div>
+        <div><code>--space-7</code><span class="tabular">48px</span><i style="--s:48px"></i></div>
+        <div><code>--space-8</code><span class="tabular">64px</span><i style="--s:64px"></i></div>
+        <div><code>--space-9</code><span class="tabular">96px</span><i style="--s:96px"></i></div>
+        <div><code>--space-10</code><span class="tabular">128px</span><i style="--s:128px"></i></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__label"><h3>Grid</h3><p>12 columns, gutter 16 → 32px, page margin 16 → 80px, content max 1312px. Editorial layouts favour 6 + 5 offsets (image left, text from column 8).</p></div>
+      <div class="block__body"><div class="grid-demo" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+    </div>
+    <div class="block">
+      <div class="block__label"><h3>Lines</h3><p>Square corners everywhere. Depth comes from rules and grounds, almost never shadows.</p></div>
+      <div class="block__body cols">
+        <div class="stack"><hr class="rule"><p class="caption"><code>.rule</code>: 1px antique gold. Section and column dividers, as in the magazine.</p></div>
+        <div class="stack"><hr class="rule rule--hair"><p class="caption"><code>.rule--hair</code>: softened gold for long dividers on ivory.</p></div>
+        <div class="stack"><hr class="dim-rule"><p class="caption"><code>.dim-rule</code>: dimension line with end ticks, taken from the house drawing on page 7. Use it for measurements, ranges and architectural sections.</p></div>
+        <div class="stack"><div class="folio-frame" style="height:8rem;background:var(--ot-navy);--frame-inset:.75rem"></div><p class="caption"><code>.folio-frame</code>: the cover's inset double frame. Use one per view, on covers, heroes and the closing panel.</p></div>
+      </div>
+    </div>
+    <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Design System · 2026</span><span>03</span></div>
+  </div>
+</section>
+
+<!-- 04 ICONS ========================================================= -->
+<section class="chapter" id="icons" data-chapter="04 · Icons" aria-labelledby="h-icons">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>Foundations</span><span class="label--quiet">Design System</span></div>
+      <p class="chapter__num" aria-hidden="true">04</p>
+      <h2 class="chapter__title display-m answer" id="h-icons"><span>Drawn, not decorated.</span></h2>
+      <p class="chapter__intro lead">One authored set on a 24px grid with a 1.25 stroke and square ends, matching the page 7 linework. Icons support labels and never replace them.</p>
+    </div>
+    <div class="icon-grid">
+      <figure><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-search"/></svg><figcaption>search</figcaption></figure>
+      <figure><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-menu"/></svg><figcaption>menu</figcaption></figure>
+      <figure><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-close"/></svg><figcaption>close</figcaption></figure>
+      <figure><svg class="icon" aria-hidden="true" viewBox="0 0 34 12" style="width:2.4rem"><use href="../assets/img/icons.svg#i-arrow"/></svg><figcaption>arrow</figcaption></figure>
+      <figure><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-phone"/></svg><figcaption>phone</figcaption></figure>
+      <figure><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-mail"/></svg><figcaption>mail</figcaption></figure>
+      <figure><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-pin"/></svg><figcaption>pin</figcaption></figure>
+      <figure><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-heart"/></svg><figcaption>save</figcaption></figure>
+      <figure><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-bed"/></svg><figcaption>beds</figcaption></figure>
+      <figure><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-bath"/></svg><figcaption>baths</figcaption></figure>
+      <figure><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-area"/></svg><figcaption>area</figcaption></figure>
+      <figure><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-calendar"/></svg><figcaption>calendar</figcaption></figure>
+      <figure><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-map"/></svg><figcaption>map</figcaption></figure>
+      <figure><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-door"/></svg><figcaption>office</figcaption></figure>
+      <figure><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-user"/></svg><figcaption>agent</figcaption></figure>
+      <figure><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-check"/></svg><figcaption>success</figcaption></figure>
+      <figure><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-alert"/></svg><figcaption>error</figcaption></figure>
+      <figure><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-info"/></svg><figcaption>info</figcaption></figure>
+      <figure><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-download"/></svg><figcaption>download</figcaption></figure>
+      <figure><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-external"/></svg><figcaption>external</figcaption></figure>
+    </div>
+    <div class="block" style="margin-top:var(--space-7)">
+      <div class="block__label"><h3>Illustrations</h3><p>Massachusetts house types drawn in the same line, used as <strong>placeholders</strong> for demo listings and community cards until licensed photography arrives.</p></div>
+      <div class="block__body cols cols--3">
+        <figure class="figure"><div class="demo-illu" style="aspect-ratio:4/3"><svg viewBox="0 0 400 260" role="img" aria-label="Line drawing of a Federal colonial house"><use href="../assets/img/illustrations.svg#colonial"/></svg></div><figcaption class="caption">Colonial</figcaption></figure>
+        <figure class="figure"><div class="demo-illu demo-illu--light" style="aspect-ratio:4/3"><svg viewBox="0 0 400 260" role="img" aria-label="Line drawing of a triple-decker"><use href="../assets/img/illustrations.svg#triple-decker"/></svg></div><figcaption class="caption">Triple-decker (Worcester, Greater Boston)</figcaption></figure>
+        <figure class="figure"><div class="demo-illu" style="aspect-ratio:4/3"><svg viewBox="0 0 400 260" role="img" aria-label="Line drawing of a Cape house"><use href="../assets/img/illustrations.svg#cape"/></svg></div><figcaption class="caption">Cape</figcaption></figure>
+      </div>
+    </div>
+    <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Design System · 2026</span><span>04</span></div>
+  </div>
+</section>
+
+<!-- 05 BUTTONS ======================================================= -->
+<section class="chapter" id="buttons" data-chapter="05 · Buttons and links" aria-labelledby="h-buttons">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>Components</span><span class="label--quiet">ot/button</span></div>
+      <p class="chapter__num" aria-hidden="true">05</p>
+      <h2 class="chapter__title display-m answer" id="h-buttons"><span>Every action,</span><span>clearly named.</span></h2>
+      <p class="chapter__intro lead">Square, tracked and quiet. On hover a gold rule draws under the label, the magazine's line put into motion.</p>
+    </div>
+    <div class="block">
+      <div class="block__label"><h3>On ivory</h3></div>
+      <div class="block__body ds-states">
+        <div class="ds-state"><span class="caption">Primary · default</span><a class="btn" href="#buttons">Request a consultation</a></div>
+        <div class="ds-state"><span class="caption">Primary · hover</span><a class="btn is-hover" href="#buttons" tabindex="-1">Request a consultation</a></div>
+        <div class="ds-state"><span class="caption">Primary · focus</span><a class="btn force-focus" href="#buttons" tabindex="-1">Request a consultation</a></div>
+        <div class="ds-state"><span class="caption">Primary · loading</span><button class="btn" type="button" aria-busy="true">Sending</button></div>
+        <div class="ds-state"><span class="caption">Primary · disabled</span><button class="btn" type="button" disabled>Request a consultation</button></div>
+        <div class="ds-state"><span class="caption">Secondary</span><a class="btn btn--secondary" href="#buttons">View the buyer guide</a></div>
+        <div class="ds-state"><span class="caption">Small</span><a class="btn btn--small" href="#buttons">Schedule a showing</a></div>
+        <div class="ds-state"><span class="caption">Text link with arrow</span><a class="link-arrow" href="#buttons">Read the market update <svg class="icon" aria-hidden="true" viewBox="0 0 34 12"><use href="../assets/img/icons.svg#i-arrow"/></svg></a></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__label"><h3>On navy</h3></div>
+      <div class="block__body surface-inverse" style="padding:var(--space-6)">
+        <div class="ds-states">
+          <div class="ds-state"><span class="caption">Primary (ivory)</span><a class="btn" href="#buttons">Start your search</a></div>
+          <div class="ds-state"><span class="caption">Gold</span><a class="btn btn--gold" href="#buttons">Call 406-250-7620</a></div>
+          <div class="ds-state"><span class="caption">Secondary</span><a class="btn btn--secondary" href="#buttons">Meet the team</a></div>
+          <div class="ds-state"><span class="caption">Text link</span><a class="link-arrow" href="#buttons" style="color:var(--ot-ivory)">Explore communities <svg class="icon" aria-hidden="true" viewBox="0 0 34 12"><use href="../assets/img/icons.svg#i-arrow"/></svg></a></div>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__label"><h3>Copy rules</h3></div>
+      <div class="block__body cols col-rule">
+        <div><p class="h6" style="color:var(--success)">Use</p><p class="body-s">Request a consultation · Schedule a showing · Get a market review · Call Brandon and Kaitlyn · Send my question</p></div>
+        <div><p class="h6" style="color:var(--error)">Avoid</p><p class="body-s">Submit · Click here · Learn more · Get started now! · Unlock your dream home</p></div>
+      </div>
+    </div>
+    <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Design System · 2026</span><span>05</span></div>
+  </div>
+</section>
+
+<!-- 06 NAVIGATION ==================================================== -->
+<section class="chapter" id="navigation" data-chapter="06 · Navigation" aria-labelledby="h-nav">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>Components</span><span class="label--quiet">ot/site-header · ot/mobile-menu</span></div>
+      <p class="chapter__num" aria-hidden="true">06</p>
+      <h2 class="chapter__title display-m answer" id="h-nav"><span>Search is one tap away.</span><span>So is a person.</span></h2>
+      <p class="chapter__intro lead">Seven destinations, a search button, and a phone call always in reach. The header is sticky on scroll and turns solid navy once it leaves the hero.</p>
+    </div>
+    <div class="block block--wide"><div class="block__body stack" style="--stack:var(--space-6)">
+      <figure class="stack" style="--stack:var(--space-2)"><figcaption class="caption">Solid navy · default</figcaption>
+        <div class="header-demo">
+          <header class="site-header" aria-label="Example header, solid">
+            <div class="container site-header__inner">
+              <a class="site-header__brand" href="#navigation"><img src="../assets/logo/logo-compact-ivory.svg" alt="The Oberdorfer Team" width="320" height="68" style="height:2.2rem"></a>
+              <nav class="nav" aria-label="Example primary"><a href="#navigation" aria-current="page">Buy</a><a href="#navigation">Sell</a><a href="#navigation">Communities</a><a href="#navigation">Our Team</a><a href="#navigation">Journal</a><a href="#navigation">Join Our Team</a><a href="#navigation">Contact</a></nav>
+              <div class="site-header__actions">
+                <button class="icon-btn" type="button" aria-label="Search properties"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-search"/></svg></button>
+                <a class="btn btn--gold btn--small" href="tel:+14062507620">406-250-7620</a>
+                <button class="icon-btn nav-toggle" type="button" aria-label="Open menu"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-menu"/></svg></button>
+              </div>
+            </div>
+          </header>
+        </div>
+      </figure>
+      <figure class="stack" style="--stack:var(--space-2)"><figcaption class="caption">Transparent over hero (<code>.site-header--overlay</code>), turns solid after 40px of scroll</figcaption>
+        <div class="header-demo overlay-demo">
+          <header class="site-header" aria-label="Example header, overlay">
+            <div class="container site-header__inner">
+              <a class="site-header__brand" href="#navigation"><img src="../assets/logo/logo-primary-ivory.svg" alt="The Oberdorfer Team" width="300" height="40" style="height:1.6rem"></a>
+              <nav class="nav" aria-label="Example overlay"><a href="#navigation">Buy</a><a href="#navigation">Sell</a><a href="#navigation">Communities</a><a href="#navigation">Our Team</a><a href="#navigation">Journal</a><a href="#navigation">Contact</a></nav>
+              <div class="site-header__actions"><button class="icon-btn" type="button" aria-label="Search properties"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-search"/></svg></button><button class="icon-btn nav-toggle" type="button" aria-label="Open menu"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-menu"/></svg></button></div>
+            </div>
+          </header>
+        </div>
+      </figure>
+      <figure class="stack" style="--stack:var(--space-2)"><figcaption class="caption">Light (<code>.site-header--light</code>), for editorial and journal pages</figcaption>
+        <div class="header-demo">
+          <header class="site-header site-header--light" aria-label="Example header, light">
+            <div class="container site-header__inner">
+              <a class="site-header__brand" href="#navigation"><img src="../assets/logo/logo-compact-navy.svg" alt="The Oberdorfer Team" width="320" height="68" style="height:2.2rem"></a>
+              <nav class="nav" aria-label="Example light"><a href="#navigation">Buy</a><a href="#navigation">Sell</a><a href="#navigation">Communities</a><a href="#navigation">Our Team</a><a href="#navigation" aria-current="page">Journal</a><a href="#navigation">Contact</a></nav>
+              <div class="site-header__actions"><button class="icon-btn" type="button" aria-label="Search properties"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-search"/></svg></button><a class="btn btn--small" href="#navigation">Contact</a><button class="icon-btn nav-toggle" type="button" aria-label="Open menu"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-menu"/></svg></button></div>
+            </div>
+          </header>
+        </div>
+      </figure>
+      <div class="cols" style="align-items:start">
+        <div class="phone" aria-label="Mobile menu preview" role="img">
+          <div class="phone__screen">
+            <div class="mobile-menu is-open" aria-hidden="true">
+              <ul>
+                <li><a href="#navigation" tabindex="-1">Buy <span>Search homes</span></a></li>
+                <li><a href="#navigation" tabindex="-1">Sell <span>Market review</span></a></li>
+                <li><a href="#navigation" tabindex="-1">Communities</a></li>
+                <li><a href="#navigation" tabindex="-1">Our Team</a></li>
+                <li><a href="#navigation" tabindex="-1">Journal</a></li>
+                <li><a href="#navigation" tabindex="-1">Join Our Team</a></li>
+                <li><a href="#navigation" tabindex="-1">Contact</a></li>
+              </ul>
+              <div class="mobile-menu__foot"><span class="btn btn--gold">Call 406-250-7620</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="prose body-s">
+          <h3 class="h4">Mobile menu</h3>
+          <p>A full-screen navy sheet that opens with a top-down clip reveal. Links are set at 30px Cormorant, so the menu reads like a table of contents rather than a list of buttons.</p>
+          <ul><li>The toggle has <code>aria-expanded</code>. Escape closes the menu and returns focus to the toggle.</li><li>Content behind the menu is made <code>inert</code> while it is open.</li><li>The call button stays in the thumb zone at the bottom.</li><li>Under reduced motion, the menu appears without the wipe.</li></ul>
+        </div>
+      </div>
+    </div></div>
+    <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Design System · 2026</span><span>06</span></div>
+  </div>
+</section>
+
+<!-- 07 HERO =========================================================== -->
+<section class="chapter" id="hero" data-chapter="07 · Editorial hero" aria-labelledby="h-hero">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>Components</span><span class="label--quiet">ot/hero-cover</span></div>
+      <p class="chapter__num" aria-hidden="true">07</p>
+      <h2 class="chapter__title display-m answer" id="h-hero"><span>The cover,</span><span>translated.</span></h2>
+      <p class="chapter__intro lead">Full-bleed photography under a navy scrim, inside the inset gold frame, with the issue line at the top and the promise at the bottom. Mark the focal point with <code>--focal</code> so the crop survives on mobile.</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="hero-cover folio-frame mini-hero">
+      <div class="hero-cover__media"><img src="../assets/img/photo/cover-portrait.webp" alt="Brandon and Kaitlyn Oberdorfer outside a home with autumn plantings" style="--focal:50% 22%" width="1103" height="1426" loading="lazy"></div>
+      <div class="hero-cover__inner">
+        <p class="label" style="color:var(--ot-ivory);text-align:center">Massachusetts · Buying · Selling · Local living</p>
+        <div></div>
+        <div class="stack" style="--stack:var(--space-5);max-width:40rem">
+          <h3 class="display-l answer" style="color:var(--ot-ivory)"><span>Luxury at</span><span>every price point.</span></h3>
+          <p class="lead" style="color:#E4E0D8">Thoughtful service. Creative marketing. A personal connection to every move.</p>
+          <div class="cluster"><a class="btn" href="#hero" style="--btn-bg:var(--ot-ivory);--btn-fg:var(--ot-navy);--btn-border:var(--ot-ivory)">Search homes</a><a class="btn btn--secondary" href="#hero" style="--btn-fg:var(--ot-ivory);--btn-border:var(--ot-ivory)">Get a market review</a></div>
+        </div>
+      </div>
+    </div>
+    <p class="caption" style="margin-top:var(--space-3)">Photo: <em>Wakefield at Home</em> cover portrait. <span class="badge badge--verify">Confirm approved photography</span></p>
+    <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Design System · 2026</span><span>07</span></div>
+  </div>
+</section>
+
+<!-- 08 SEARCH ========================================================= -->
+<section class="chapter surface-muted" id="search" data-chapter="08 · Property search" aria-labelledby="h-search">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>Components</span><span class="label--quiet">ot/property-search</span></div>
+      <p class="chapter__num" aria-hidden="true">08</p>
+      <h2 class="chapter__title display-m answer" id="h-search"><span>A search bar</span><span>that belongs here.</span></h2>
+      <p class="chapter__intro lead">This front end styles the authorized IDX provider's search. The prototype uses demo data only, with no live MLS connection.</p>
+    </div>
+    <form class="search-bar" role="search" aria-label="Property search (demo)" onsubmit="return false">
+      <div class="field"><label class="field__label" for="q">Location</label><input class="input" id="q" type="text" placeholder="Town, neighborhood or ZIP" autocomplete="off"></div>
+      <div class="field"><label class="field__label" for="pmin">Price</label><select class="select" id="pmin"><option>Any price</option><option>Up to $500k</option><option>$500k – $800k</option><option>$800k – $1.2M</option><option>$1.2M +</option></select></div>
+      <div class="field"><label class="field__label" for="beds">Beds</label><select class="select" id="beds"><option>Any</option><option>2+</option><option>3+</option><option>4+</option></select></div>
+      <div class="field"><label class="field__label" for="type">Home type</label><select class="select" id="type"><option>All types</option><option>Single-family</option><option>Condominium</option><option>Multi-family</option></select></div>
+      <button class="btn" type="submit"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-search"/></svg>Search</button>
+    </form>
+    <div class="filters" style="margin-top:var(--space-5)" role="group" aria-label="Quick filters (demo)">
+      <span class="caption" style="margin-right:var(--space-2)">Refine</span>
+      <label class="choice"><input type="checkbox" checked><span>Open houses</span></label>
+      <label class="choice"><input type="checkbox"><span>New this week</span></label>
+      <label class="choice"><input type="checkbox"><span>Near commuter rail</span></label>
+      <label class="choice"><input type="checkbox"><span>Price reduced</span></label>
+    </div>
+    <p class="form-note" style="margin-top:var(--space-5)">The IDX provider has not been selected yet, and the team cannot assume it may use the principal brokerage's MLS permissions. Styling flexibility varies by provider.</p>
+    <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Design System · 2026</span><span>08</span></div>
+  </div>
+</section>
+
+<!-- 09 CARDS ========================================================== -->
+<section class="chapter" id="cards" data-chapter="09 · Cards" aria-labelledby="h-cards">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>Components</span><span class="label--quiet">ot/listing-card · ot/agent-card · ot/community-card · ot/article-card</span></div>
+      <p class="chapter__num" aria-hidden="true">09</p>
+      <h2 class="chapter__title display-m answer" id="h-cards"><span>Image first.</span><span>Facts underneath.</span></h2>
+      <p class="chapter__intro lead">Cards are unboxed. The photograph and a hairline do the framing, as on the magazine's pages.</p>
+    </div>
+    <div class="block">
+      <div class="block__label"><h3>Listing card</h3><p>Every demo listing carries the <em>Demo</em> badge and invented, obviously placeholder details. Live cards will add the MLS courtesy line, listing brokerage and data date.</p></div>
+      <div class="block__body cols cols--3">
+        <a class="listing-card" href="#cards">
+          <div class="listing-card__media demo-illu"><svg viewBox="0 0 400 260" role="img" aria-label="Illustration of a colonial house (placeholder)"><use href="../assets/img/illustrations.svg#colonial"/></svg><span class="badge badge--demo">Demo listing</span><button class="icon-btn listing-card__save" type="button" data-save="Demo Residence One" aria-pressed="false" aria-label="Save Demo Residence One"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-heart"/></svg></button></div>
+          <p class="listing-card__price tabular">$000,000</p>
+          <p class="listing-card__address">Demo Residence One · Example Street, Massachusetts</p>
+          <p class="listing-card__specs"><span><b>4</b> beds</span><span><b>2.5</b> baths</span><span><b>2,400</b> sq ft</span><span>Colonial</span></p>
+          <p class="listing-card__courtesy">Listing courtesy of [Listing brokerage] · MLS data as of [date]</p>
+        </a>
+        <a class="listing-card" href="#cards">
+          <div class="listing-card__media demo-illu demo-illu--light"><svg viewBox="0 0 400 260" role="img" aria-label="Illustration of a triple-decker (placeholder)"><use href="../assets/img/illustrations.svg#triple-decker"/></svg><span class="badge badge--demo">Demo listing</span><button class="icon-btn listing-card__save" type="button" data-save="Demo Residence Two" aria-pressed="true" aria-label="Remove Demo Residence Two"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-heart"/></svg></button></div>
+          <p class="listing-card__price tabular">$000,000</p>
+          <p class="listing-card__address">Demo Residence Two · Example Avenue, Massachusetts</p>
+          <p class="listing-card__specs"><span><b>3</b> units</span><span><b>6</b> beds</span><span><b>3,600</b> sq ft</span><span>Multi-family</span></p>
+          <p class="listing-card__courtesy">Saved state shown · Listing courtesy of [Listing brokerage]</p>
+        </a>
+        <a class="listing-card" href="#cards">
+          <div class="listing-card__media demo-illu"><svg viewBox="0 0 400 260" role="img" aria-label="Illustration of a Cape house (placeholder)"><use href="../assets/img/illustrations.svg#cape"/></svg><span class="badge badge--demo">Demo listing</span><button class="icon-btn listing-card__save" type="button" data-save="Demo Residence Three" aria-pressed="false" aria-label="Save Demo Residence Three"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-heart"/></svg></button></div>
+          <p class="listing-card__price tabular">$000,000</p>
+          <p class="listing-card__address">Demo Residence Three · Example Lane, Massachusetts</p>
+          <p class="listing-card__specs"><span><b>3</b> beds</span><span><b>2</b> baths</span><span><b>1,650</b> sq ft</span><span>Cape</span></p>
+          <p class="listing-card__courtesy">Listing courtesy of [Listing brokerage]</p>
+        </a>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__label"><h3>Property gallery</h3><p>One lead image and two supporting views. The last tile opens the full gallery.</p></div>
+      <div class="block__body">
+        <div class="gallery" style="aspect-ratio:16/8">
+          <div class="demo-illu"><svg viewBox="0 0 400 260" role="img" aria-label="Placeholder: front elevation"><use href="../assets/img/illustrations.svg#colonial"/></svg></div>
+          <div class="demo-illu demo-illu--light"><svg viewBox="0 0 400 260" role="img" aria-label="Placeholder: street view"><use href="../assets/img/illustrations.svg#townscape"/></svg></div>
+          <div class="demo-illu gallery__more"><svg viewBox="0 0 400 260" role="img" aria-label="Placeholder: rear elevation"><use href="../assets/img/illustrations.svg#cape"/></svg><a class="btn btn--small" href="#cards" style="--btn-bg:var(--ot-ivory);--btn-fg:var(--ot-navy);--btn-border:var(--ot-ivory)">All photos</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__label"><h3>Agent card</h3><p>Brandon and Kaitlyn lead, as one card, the way the magazine presents them. Future agents use the same card. Fields for unverified details stay empty, never invented.</p></div>
+      <div class="block__body cols cols--3">
+        <article class="agent-card">
+          <div class="agent-card__photo"><img src="../assets/img/photo/team-portrait.webp" alt="Brandon and Kaitlyn Oberdorfer" width="1400" height="1680" loading="lazy"></div>
+          <div class="stack" style="--stack:var(--space-2)">
+            <p class="agent-card__title">Team leaders</p>
+            <h3 class="agent-card__name">Brandon &amp; Kaitlyn Oberdorfer</h3>
+            <p class="body-s muted">Husband. Wife. Your Team.</p>
+          </div>
+          <div class="agent-card__meta"><span class="chip">Buyers</span><span class="chip">Sellers</span><span class="chip">Massachusetts</span></div>
+          <a class="link-arrow" href="#cards">View profile <svg class="icon" aria-hidden="true" viewBox="0 0 34 12"><use href="../assets/img/icons.svg#i-arrow"/></svg></a>
+        </article>
+        <article class="agent-card">
+          <div class="agent-card__photo agent-card__photo--placeholder"><div class="stack" style="--stack:var(--space-3);justify-items:center;display:grid"><svg class="icon" aria-hidden="true" style="width:2.5rem;height:2.5rem"><use href="../assets/img/icons.svg#i-user"/></svg><p class="caption">Headshot pending<br>4:5, natural light, ivory or navy backdrop</p></div></div>
+          <div class="stack" style="--stack:var(--space-2)">
+            <p class="agent-card__title">Agent title</p>
+            <h3 class="agent-card__name">Future Agent</h3>
+            <p class="body-s muted">Biography, license and specialties are added in WordPress once verified.</p>
+          </div>
+          <div class="agent-card__meta"><span class="badge badge--demo">Placeholder</span></div>
+        </article>
+        <div class="prose body-s">
+          <h4 class="h5">Fields</h4>
+          <ul><li>Name, photo, title</li><li>Verified license information</li><li>Specialties and service areas (filterable)</li><li>Languages</li><li>Phone, email, social links</li><li>Authorized listings, testimonials, articles</li><li>Lead attribution ID</li></ul>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__label"><h3>Community card</h3><p>Portrait 3:4 cards for the Massachusetts community hub. Use real local photography with the source credited; use the line illustration until it arrives.</p></div>
+      <div class="block__body cols cols--3">
+        <a class="community-card" href="#cards"><img src="../assets/img/photo/lake-quannapowitt.webp" alt="" loading="lazy" style="object-position:30% 50%"><div class="community-card__body"><span class="community-card__meta">Middlesex County</span><span class="community-card__name">Wakefield</span></div></a>
+        <a class="community-card" href="#cards"><div class="demo-illu" style="position:absolute;inset:0"><svg viewBox="0 0 400 260" aria-hidden="true"><use href="../assets/img/illustrations.svg#triple-decker"/></svg></div><div class="community-card__body"><span class="community-card__meta">Worcester County · Guide planned</span><span class="community-card__name">Worcester</span></div></a>
+        <a class="community-card" href="#cards"><div class="demo-illu" style="position:absolute;inset:0"><svg viewBox="0 0 400 260" aria-hidden="true"><use href="../assets/img/illustrations.svg#townscape"/></svg></div><div class="community-card__body"><span class="community-card__meta">Middlesex County · Guide planned</span><span class="community-card__name">Melrose</span></div></a>
+      </div>
+      <p class="caption block__body" style="grid-column:4/-1">Lake Quannapowitt Panorama, RedSoxFan274 / Wikimedia Commons, CC BY-SA 4.0, cropped.</p>
+    </div>
+    <div class="block">
+      <div class="block__label"><h3>Article card</h3></div>
+      <div class="block__body cols cols--3">
+        <a class="article-card" href="#cards"><div class="article-card__media"><img src="../assets/img/photo/breakheart-reservation.webp" alt="" loading="lazy"></div><p class="label">Seasonal features</p><h3 class="article-card__title">The best plans are close to home</h3><p class="article-card__meta">Wakefield at Home · Fall 2026</p></a>
+        <a class="article-card" href="#cards"><div class="article-card__media demo-illu demo-illu--light"><svg viewBox="0 0 400 260" aria-hidden="true"><use href="../assets/img/illustrations.svg#colonial"/></svg></div><p class="label">Real estate insights</p><h3 class="article-card__title">Know the market. Love the home.</h3><p class="article-card__meta">Wakefield at Home · Fall 2026</p></a>
+        <a class="article-card" href="#cards"><div class="article-card__media"><img src="../assets/img/photo/lake-quannapowitt.webp" alt="" loading="lazy"></div><p class="label">Local living</p><h3 class="article-card__title">Close to Boston. Closer to what matters.</h3><p class="article-card__meta">Wakefield at Home · Fall 2026</p></a>
+      </div>
+    </div>
+    <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Design System · 2026</span><span>09</span></div>
+  </div>
+</section>
+
+<!-- 10 MARKET ========================================================= -->
+<section class="chapter" id="market" data-chapter="10 · Market statistics" aria-labelledby="h-market">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>Components</span><span class="label--quiet">ot/market-stats</span></div>
+      <p class="chapter__num" aria-hidden="true">10</p>
+      <h2 class="chapter__title display-m answer" id="h-market"><span>Every number</span><span>carries its date.</span></h2>
+      <p class="chapter__intro lead">The navy two-by-two panel from page 4. Each value shows its period, and the panel always carries its geography, source and access date. Values are entered per report and are never live.</p>
+    </div>
+    <div class="split" style="align-items:start">
+      <div style="grid-column:1/span 7">
+        <p class="label" style="margin-bottom:var(--space-3)">Data through August 2026 / All home types / Wakefield</p>
+        <div class="stat-panel">
+          <div class="stat"><span class="stat__value tabular">$786,979</span><span class="stat__label">Median sale price</span><span class="stat__period">3 months ending August 2026</span></div>
+          <div class="stat"><span class="stat__value tabular">21</span><span class="stat__label">Median days on market</span><span class="stat__period">August 2026</span></div>
+          <div class="stat"><span class="stat__value tabular">$483</span><span class="stat__label">Median sold price / sq. ft.</span><span class="stat__period">Redfin rolling 3-month snapshot</span></div>
+          <div class="stat"><span class="stat__value tabular">103.3%</span><span class="stat__label">Sale-to-list price</span><span class="stat__period">August 2026</span></div>
+        </div>
+        <p class="stat-source">Source: Redfin, Wakefield Housing Market, accessed October 10, 2026. Geography: Wakefield town, all home types. Figures may be revised. This is not a valuation of any individual home.</p>
+      </div>
+      <div class="stack" style="grid-column:9/span 4">
+        <span class="badge badge--source">Source-confirmed · historical</span>
+        <h3 class="h4">What these numbers can tell you</h3>
+        <p class="body-s">The townwide median is a starting point. Your best comparisons are recent closed sales that resemble your property.</p>
+        <a class="link-arrow" href="#market">Ask for a property-specific review <svg class="icon" aria-hidden="true" viewBox="0 0 34 12"><use href="../assets/img/icons.svg#i-arrow"/></svg></a>
+        <div class="note note--verify"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-alert"/></svg><p><strong>Before launch:</strong> choose a licensed, maintainable data source. These Wakefield figures must not appear as current or statewide.</p></div>
+      </div>
+    </div>
+    <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Design System · 2026</span><span>10</span></div>
+  </div>
+</section>
+
+<!-- 11 FORMS ========================================================== -->
+<section class="chapter surface-muted" id="forms" data-chapter="11 · Forms" aria-labelledby="h-forms">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>Components</span><span class="label--quiet">ot/inquiry-form</span></div>
+      <p class="chapter__num" aria-hidden="true">11</p>
+      <h2 class="chapter__title display-m answer" id="h-forms"><span>Short forms.</span><span>Clear next steps.</span></h2>
+      <p class="chapter__intro lead">Labels sit above the fields, errors say how to fix the problem, and every form explains what happens next. No one has to create an account.</p>
+    </div>
+    <div class="block">
+      <div class="block__label"><h3>Field states</h3></div>
+      <div class="block__body ds-states">
+        <div class="field"><label class="field__label" for="s1">Default</label><input class="input" id="s1" placeholder="Your full name"></div>
+        <div class="field"><label class="field__label" for="s2">Focus</label><input class="input" id="s2" value="Kaitlyn" style="border-color:var(--input-border-focus);box-shadow:0 0 0 1px var(--input-border-focus),0 0 0 4px color-mix(in srgb,var(--ot-gold) 35%,transparent)"></div>
+        <div class="field field--error"><label class="field__label" for="s3">Error</label><input class="input" id="s3" value="kaitlyn@" aria-invalid="true" aria-describedby="s3e"><p class="field__error" id="s3e"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-alert"/></svg><span>Enter an email address like name@example.com.</span></p></div>
+        <div class="field field--success"><label class="field__label" for="s4">Valid</label><input class="input" id="s4" value="(406) 250-7620"></div>
+        <div class="field"><label class="field__label" for="s5">Disabled</label><input class="input" id="s5" value="Assigned automatically" disabled></div>
+        <div class="field"><label class="field__label" for="s6">Select</label><select class="select" id="s6"><option>I'm buying</option><option>I'm selling</option><option>Both</option></select></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__label"><h3>Working example</h3><p>Try sending it empty. Validation is real, and nothing is transmitted.</p></div>
+      <div class="block__body">
+        <form class="form" data-demo-form data-icons="../assets/img/icons.svg" aria-labelledby="f-title" style="max-width:44rem">
+          <h3 class="h3" id="f-title">Request a seller consultation</h3>
+          <div class="form__row">
+            <div class="field"><label class="field__label" for="f-name">Full name <span class="req">(required)</span></label><input class="input" id="f-name" name="name" autocomplete="name" required data-label="Your name" aria-describedby="f-name-e"><p class="field__error" id="f-name-e" hidden><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-alert"/></svg><span></span></p></div>
+            <div class="field"><label class="field__label" for="f-email">Email <span class="req">(required)</span></label><input class="input" id="f-email" name="email" type="email" autocomplete="email" required data-label="Email" aria-describedby="f-email-e"><p class="field__error" id="f-email-e" hidden><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-alert"/></svg><span></span></p></div>
+          </div>
+          <div class="form__row">
+            <div class="field"><label class="field__label" for="f-phone">Phone <span class="opt">(optional)</span></label><input class="input" id="f-phone" name="phone" type="tel" autocomplete="tel" pattern="[0-9()+\-\s.]{7,}" data-pattern-msg="Use digits, spaces or dashes, for example 406-250-7620." aria-describedby="f-phone-e"><p class="field__error" id="f-phone-e" hidden><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-alert"/></svg><span></span></p></div>
+            <div class="field"><label class="field__label" for="f-town">Property town</label><input class="input" id="f-town" name="town" autocomplete="address-level2" placeholder="e.g. Worcester"></div>
+          </div>
+          <fieldset class="choice-group">
+            <legend class="field__label">Best way to reach you</legend>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="pref" value="call" checked><span>Call</span></label>
+              <label class="choice"><input type="radio" name="pref" value="text"><span>Text</span></label>
+              <label class="choice"><input type="radio" name="pref" value="email"><span>Email</span></label>
+            </div>
+          </fieldset>
+          <div class="field"><label class="field__label" for="f-msg">Your timing and goals <span class="opt">(optional)</span></label><textarea class="textarea" id="f-msg" name="message" placeholder="When would you like to move? Anything we should know about the home?"></textarea></div>
+          <label class="check"><input type="checkbox" name="news"><span>Also send me the seasonal <em>At Home</em> publication. Unsubscribe any time.</span></label>
+          <p class="form-note">We use these details only to respond to your request. Your inquiry goes to Brandon and Kaitlyn and is not sold or shared. <span class="badge badge--verify">Privacy policy to be written</span></p>
+          <div><button class="btn" type="submit">Request my consultation</button></div>
+          <div data-form-status hidden tabindex="-1" role="status"></div>
+        </form>
+      </div>
+    </div>
+    <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Design System · 2026</span><span>11</span></div>
+  </div>
+</section>
+
+<!-- 12 EDITORIAL ====================================================== -->
+<section class="chapter" id="editorial" data-chapter="12 · Editorial content" aria-labelledby="h-editorial">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>Components</span><span class="label--quiet">ot/triad · ot/steps · ot/pull-quote · ot/faq · ot/breadcrumbs</span></div>
+      <p class="chapter__num" aria-hidden="true">12</p>
+      <h2 class="chapter__title display-m answer" id="h-editorial"><span>The magazine's furniture,</span><span>made reusable.</span></h2>
+    </div>
+    <div class="block">
+      <div class="block__label"><h3>Principles triad</h3><p>From page 2. Three columns under one gold rule each.</p></div>
+      <div class="block__body triad">
+        <div><p class="label">Personal</p><p class="h4">Two partners invested in your goals.</p></div>
+        <div><p class="label">Purposeful</p><p class="h4">A plan shaped around your home and life.</p></div>
+        <div><p class="label">Prepared</p><p class="h4">Clear guidance and attention to the details.</p></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__label"><h3>Numbered steps</h3><p>From page 7. Use numbers only when the order matters.</p></div>
+      <div class="block__body cols">
+        <div><h4 class="h4" style="margin-bottom:var(--space-5)">If you are selling</h4>
+          <ol class="steps">
+            <li><div><h5>Start with the right comparisons.</h5><p class="body-s">Review recent closed sales with similar location, style, condition, and living area.</p></div></li>
+            <li><div><h5>Create a strong first impression.</h5><p class="body-s">Clear the entry, simplify the rooms, and show the home in good light.</p></div></li>
+            <li><div><h5>Build a plan around your life.</h5><p class="body-s">Discuss your timing, showing preferences, and next move.</p></div></li>
+          </ol>
+        </div>
+        <div><h4 class="h4" style="margin-bottom:var(--space-5)">If you are buying</h4>
+          <ol class="steps">
+            <li><div><h5>Get ready before you find the one.</h5><p class="body-s">Connect with a lender for preapproval and review a comfortable monthly budget.</p></div></li>
+            <li><div><h5>Know your everyday priorities.</h5><p class="body-s">Test the routine as well as the floor plan.</p></div></li>
+            <li><div><h5>Look beyond the listing price.</h5><p class="body-s">Consider taxes, insurance, condominium fees, and maintenance.</p></div></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__label"><h3>Pull quote and testimonial</h3><p>Testimonials appear only with the client's written permission. Until then the block shows its empty state.</p></div>
+      <div class="block__body stack" style="--stack:var(--space-7)">
+        <p class="pull-quote">Home holds the everyday moments that become a life.</p>
+        <figure class="testimonial testimonial--placeholder">
+          <span class="testimonial__mark" aria-hidden="true"></span>
+          <blockquote>Verified client testimonial will appear here, quoted exactly, with the client's permission on file.</blockquote>
+          <figcaption class="caption">Client first name, town · Year · <span class="badge badge--demo">Empty state</span></figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__label"><h3>FAQ accordion</h3><p>Native <code>&lt;details&gt;</code> for keyboard and screen-reader support, plus FAQPage structured data.</p></div>
+      <div class="block__body accordion">
+        <details open><summary>How do I start the buying process?</summary><div class="accordion__body body-s"><p>Begin with a lender conversation about preapproval and a comfortable monthly budget. The Consumer Financial Protection Bureau's guide to preapproval letters is a useful first read.</p></div></details>
+        <details><summary>What is a property-specific market review?</summary><div class="accordion__body body-s"><p>A comparison of recent closed sales that resemble your home in location, size, condition and style. It is more useful than a townwide median.</p></div></details>
+        <details><summary>Which Massachusetts towns do you serve?</summary><div class="accordion__body body-s"><p>Statewide, including Worcester and Greater Boston. <span class="badge badge--verify">Final list to be confirmed</span></p></div></details>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__label"><h3>Breadcrumbs</h3></div>
+      <div class="block__body"><nav class="breadcrumbs" aria-label="Breadcrumb example"><ol><li><a href="#editorial">Home</a></li><li><a href="#editorial">Communities</a></li><li><a href="#editorial">Middlesex County</a></li><li aria-current="page">Wakefield</li></ol></nav></div>
+    </div>
+    <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Design System · 2026</span><span>12</span></div>
+  </div>
+</section>
+
+<!-- 13 CONVERSION ===================================================== -->
+<section class="chapter" id="conversion" data-chapter="13 · Lead capture, office, map" aria-labelledby="h-conv">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>Components</span><span class="label--quiet">ot/cta-panel · ot/newsletter · ot/office · ot/map</span></div>
+      <p class="chapter__num" aria-hidden="true">13</p>
+      <h2 class="chapter__title display-m answer" id="h-conv"><span>Ready for a personal plan?</span><span>Call Brandon and Kaitlyn.</span></h2>
+    </div>
+    <div class="cols" style="align-items:stretch">
+      <div class="cta-panel folio-frame folio-frame--single" style="--frame-inset:.75rem">
+        <p class="label" style="color:var(--ot-gold)">A personal standard of service</p>
+        <h3 class="h2">For the home you have. <em>For the life you are building.</em></h3>
+        <a class="cta-panel__phone" href="tel:+14062507620">406-250-7620</a>
+        <div class="cluster"><a class="btn" href="#conversion">Request a consultation</a><a class="btn btn--secondary" href="#conversion" style="--btn-fg:var(--ot-ivory);--btn-border:color-mix(in srgb,var(--ot-ivory) 60%,transparent)">Email the team</a></div>
+      </div>
+      <div class="stack" style="--stack:var(--space-6)">
+        <div class="surface-muted" style="padding:var(--space-6)">
+          <p class="h4">The seasonal <em>At Home</em> publication</p>
+          <p class="body-s" style="margin-top:var(--space-2)">Local living, real estate insight and recipes to share, four times a year.</p>
+          <form class="newsletter" style="margin-top:var(--space-5)" onsubmit="return false" aria-label="Newsletter sign-up (demo)">
+            <label class="visually-hidden" for="nl">Email address</label>
+            <input class="input" id="nl" type="email" placeholder="Email address" autocomplete="email">
+            <button class="btn btn--small" type="submit">Subscribe</button>
+          </form>
+        </div>
+        <div class="office-card">
+          <div class="cluster" style="justify-content:space-between"><h3 class="h4">The Oberdorfer Team Office</h3><span class="badge badge--verify">Planned · details unconfirmed</span></div>
+          <dl>
+            <dt>Address</dt><dd>To be confirmed</dd>
+            <dt>Phone</dt><dd><a href="tel:+14062507620">406-250-7620</a></dd>
+            <dt>Hours</dt><dd>By appointment (to be confirmed)</dd>
+            <dt>Brokerage</dt><dd>A team office of REWAP Brokerage LLC (formal status to be confirmed)</dd>
+          </dl>
+          <a class="link-arrow" href="#conversion">Request an appointment <svg class="icon" aria-hidden="true" viewBox="0 0 34 12"><use href="../assets/img/icons.svg#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="block" style="margin-top:var(--space-7)">
+      <div class="block__label"><h3>Map</h3><p>A static, styled map plate in place of a third-party map embed: faster, private, and on brand. An interactive map loads only when the visitor asks for it.</p></div>
+      <div class="block__body">
+        <div class="map-frame">
+          <svg viewBox="0 0 800 500" role="img" aria-label="Stylised map placeholder showing streets and a lake">
+            <rect width="800" height="500" fill="#E9E2D5"/>
+            <path d="M520 120c60-30 130 0 150 60s-20 140-90 150-120-40-130-100 10-90 70-110z" fill="#D7DEDF" stroke="#B49A65" stroke-width="1"/>
+            <g stroke="#FBF9F5" stroke-width="10" fill="none" stroke-linecap="round"><path d="M0 300C200 280 360 330 800 260"/><path d="M300 0C320 160 280 340 330 500"/><path d="M90 0L210 500"/><path d="M800 420C600 400 450 440 300 500"/></g>
+            <g stroke="#DDD3C2" stroke-width="4" fill="none"><path d="M0 120H500M0 200C150 190 300 220 480 180M120 380H800M600 0V120M680 330V500"/></g>
+            <path d="M0 455H800" stroke="#071D2D" stroke-width="1.5" stroke-dasharray="14 8"/>
+            <g transform="translate(338 284)"><circle r="22" fill="#071D2D"/><circle r="22" fill="none" stroke="#B49A65" stroke-width="1" transform="scale(1.35)"/><text y="6" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="20" fill="#F7F3EC">O</text></g>
+          </svg>
+          <p class="map-frame__note"><span class="badge badge--demo">Illustrative map · no real location</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Design System · 2026</span><span>13</span></div>
+  </div>
+</section>
+
+<!-- 14 FOOTER ========================================================= -->
+<section class="chapter" id="footer" data-chapter="14 · Footer and attribution" aria-labelledby="h-footer" style="padding-bottom:0">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>Components</span><span class="label--quiet">ot/site-footer · ot/brokerage-attribution</span></div>
+      <p class="chapter__num" aria-hidden="true">14</p>
+      <h2 class="chapter__title display-m answer" id="h-footer"><span>Two brands,</span><span>clearly related.</span></h2>
+      <p class="chapter__intro lead">The REWAP logo is never redrawn or recoloured. It sits on its own ivory plate, as on the magazine's back cover, so the two identities never blend.</p>
+    </div>
+  </div>
+  <footer class="site-footer" aria-label="Example footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="stack" style="--stack:var(--space-5)">
+          <img src="../assets/logo/logo-primary-gold.svg" alt="The Oberdorfer Team" width="300" height="40" style="width:17rem">
+          <p class="body-s" style="max-width:30ch">Luxury at every price point. For the home you have. For the life you are building.</p>
+          <a class="cta-panel__phone" href="tel:+14062507620" style="font-size:2rem">406-250-7620</a>
+        </div>
+        <div><h2>Explore</h2><ul><li><a href="#footer">Buy a home</a></li><li><a href="#footer">Sell your home</a></li><li><a href="#footer">Communities</a></li><li><a href="#footer">Market insights</a></li></ul></div>
+        <div><h2>Team</h2><ul><li><a href="#footer">Our story</a></li><li><a href="#footer">Meet the team</a></li><li><a href="#footer">Join our team</a></li><li><a href="#footer">Office</a></li></ul></div>
+        <div><h2>Read</h2><ul><li><a href="#footer">Journal</a></li><li><a href="#footer">At Home archive</a></li><li><a href="#footer">Contact</a></li></ul></div>
+      </div>
+      <div class="attribution">
+        <div class="attribution__plate"><img src="../assets/img/rewap-logo.webp" alt="REWAP Brokerage" width="900" height="300"><small>Real Estate Wealth Acquisition and Preservation Brokerage</small></div>
+        <div class="stack" style="--stack:var(--space-3)">
+          <p class="disclosure"><strong>The Oberdorfer Team</strong> is a real estate team operating under <strong>REWAP Brokerage LLC</strong>, Massachusetts. Brokerage license number, team disclosure language and office address [to be supplied and approved by the principal broker]. Listing information is provided by [MLS name] and is deemed reliable but not guaranteed.</p>
+          <p class="eho"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-eho"/></svg>Equal Housing Opportunity</p>
+          <p class="disclosure">© 2026 The Oberdorfer Team · <a href="#footer">Privacy</a> · <a href="#footer">Accessibility</a> · <a href="#footer">Fair housing notice</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</section>
+
+<!-- 15 MOTION ========================================================= -->
+<section class="chapter" id="motion" data-chapter="15 · Motion and accessibility" aria-labelledby="h-motion">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>Behaviour</span><span class="label--quiet">Design System</span></div>
+      <p class="chapter__num" aria-hidden="true">15</p>
+      <h2 class="chapter__title display-m answer" id="h-motion"><span>One gesture:</span><span>the line draws.</span></h2>
+      <p class="chapter__intro lead">The brand moves the way a pen rules a page. Gold lines draw from left to right and content settles beneath them. There is no parallax, bounce or looping animation.</p>
+    </div>
+    <div class="block">
+      <div class="block__label"><h3>Motion tokens</h3></div>
+      <div class="block__body cols">
+        <div class="motion-demo"><hr class="rule"><p class="caption">Rule draw · <code>--dur-reveal</code> 1100ms · <code>--ease-out</code> cubic-bezier(0.16, 1, 0.3, 1)</p></div>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable table"><table class="tokens"><tbody>
+          <tr><td><code>--dur-fast</code></td><td>160ms</td><td>Colour, border</td></tr>
+          <tr><td><code>--dur-base</code></td><td>280ms</td><td>Button rule, nav underline</td></tr>
+          <tr><td><code>--dur-slow</code></td><td>720ms</td><td>Section settle, menu wipe</td></tr>
+          <tr><td><code>--dur-reveal</code></td><td>1100ms</td><td>Gold rule draw, image ease-in on hover</td></tr>
+        </tbody></table></div>
+      </div>
+    </div>
+    <div class="block">
+      <div class="block__label"><h3>Accessibility floor</h3><p>Target: WCAG 2.2 AA.</p></div>
+      <div class="block__body cols cols--3 col-rule body-s">
+        <div><h4 class="h5">Perceivable</h4><p>Contrast is checked for every pairing above. Photos carry alt text, and decorative linework is <code>aria-hidden</code>. Content is visible by default if JavaScript fails.</p></div>
+        <div><h4 class="h5">Operable</h4><p>2px focus rings with a 3px offset in navy, or pale gold on dark grounds. Targets are at least 44px. A skip link, Escape to close panels, and no keyboard traps. <code>prefers-reduced-motion</code> removes all movement.</p></div>
+        <div><h4 class="h5">Understandable</h4><p>Labels sit above fields. Errors name the problem and the fix, and statuses are announced. Buttons say what they do, and forms say what happens next.</p></div>
+      </div>
+    </div>
+    <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Design System · 2026</span><span>15</span></div>
+  </div>
+</section>
+
+<!-- 16 WORDPRESS ====================================================== -->
+<section class="chapter surface-muted" id="wordpress" data-chapter="16 · WordPress mapping" aria-labelledby="h-wp">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>Implementation</span><span class="label--quiet">Design System</span></div>
+      <p class="chapter__num" aria-hidden="true">16</p>
+      <h2 class="chapter__title display-m answer" id="h-wp"><span>One component,</span><span>one block.</span></h2>
+      <p class="chapter__intro lead">Tokens become <code>theme.json</code> presets, and components become server-rendered Gutenberg blocks with the same class names. Editors compose pages and never touch CSS.</p>
+    </div>
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Scrollable table">
+    <table class="tokens wp-map">
+      <thead><tr><th scope="col">Block</th><th scope="col">Component</th><th scope="col">Editable fields</th><th scope="col">Data source</th></tr></thead>
+      <tbody>
+        <tr><td><code>ot/hero-cover</code></td><td>Editorial hero</td><td>Image + focal point, issue line, headline (2 lines), lead, 2 buttons</td><td>Post content</td></tr>
+        <tr><td><code>ot/property-search</code></td><td>Search bar + filters</td><td>Default town, visible filters</td><td>IDX provider (TBD)</td></tr>
+        <tr><td><code>ot/listing-grid</code></td><td>Listing card</td><td>Query: agent, community, status, count</td><td>IDX / MLS feed only</td></tr>
+        <tr><td><code>ot/agent-card</code> · <code>ot/agent-directory</code></td><td>Agent card</td><td>Filters: specialty, service area, language</td><td>CPT <code>agent</code></td></tr>
+        <tr><td><code>ot/community-card</code> · <code>ot/community-hub</code></td><td>Community card</td><td>Region, county, featured image + credit</td><td>CPT <code>community</code></td></tr>
+        <tr><td><code>ot/market-stats</code></td><td>Statistics panel</td><td>4 values, labels, periods, source, access date, geography (all required)</td><td>Fields per report</td></tr>
+        <tr><td><code>ot/inquiry-form</code></td><td>Forms</td><td>Lead type, routing agent, consent copy, success copy</td><td>Form plugin → CRM (TBD)</td></tr>
+        <tr><td><code>ot/triad</code> · <code>ot/steps</code> · <code>ot/pull-quote</code></td><td>Editorial furniture</td><td>Text only</td><td>Post content</td></tr>
+        <tr><td><code>ot/testimonial</code></td><td>Testimonial</td><td>Quote, name, town, permission on file (required)</td><td>CPT <code>testimonial</code></td></tr>
+        <tr><td><code>ot/faq</code></td><td>Accordion</td><td>Q &amp; A pairs; outputs FAQPage JSON-LD</td><td>Post content</td></tr>
+        <tr><td><code>ot/office</code></td><td>Office card + map</td><td>Address, hours, phone, agents</td><td>CPT <code>office</code></td></tr>
+        <tr><td><code>ot/brokerage-attribution</code></td><td>Footer attribution</td><td>Locked; edited in Site Settings only</td><td>Global options</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Design System · 2026</span><span>16</span></div>
+  </div>
+</section>
+
+</main>
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+/* ==========================================================================
+   The Oberdorfer Team — Design Tokens  v1.0 (proposed, awaiting approval)
+   Source of truth for the website, the WordPress theme (theme.json maps to
+   these names) and marketing templates.
+
+   Palette values were sampled from the print PDF "Wakefield at Home — Fall
+   2026" (150 dpi render, dominant-pixel analysis), not guessed.
+   ========================================================================== */
+
+:root {
+  /* ---- 1. Brand primitives ------------------------------------------- */
+  --ot-navy:        #071D2D; /* Midnight Navy   — p1 cover, p4 stat panel, p7, p8 */
+  --ot-navy-800:    #0E2738; /* raised navy surface                          */
+  --ot-navy-700:    #1A3446; /* navy hover / borders on navy                 */
+  --ot-ink:         #142A38; /* Text Ink        — body copy on ivory, p2–p6  */
+  --ot-ivory:       #F7F3EC; /* Warm Ivory      — page ground, p2–p6         */
+  --ot-paper:       #FBF9F5; /* lifted ivory for inputs and raised cards     */
+  --ot-sandstone:   #E9E2D5; /* Sandstone       — p3 history band            */
+  --ot-sandstone-2: #DDD3C2; /* deeper sandstone for borders on sand         */
+  --ot-gold:        #B49A65; /* Antique Gold    — rules, frames, labels on navy */
+  --ot-gold-ink:    #7A6438; /* Gold Ink        — gold TEXT on light grounds (5.1:1) */
+  --ot-gold-pale:   #D9C9A5; /* gold tint for hairlines on navy, highlights   */
+  --ot-slate:       #59656A; /* Slate           — captions, metadata          */
+  --ot-mist:        #A3AEB3; /* Slate on navy   — secondary text on navy (7.6:1) */
+
+  /* ---- 2. Semantic: surfaces ----------------------------------------- */
+  --surface-page:     var(--ot-ivory);
+  --surface-raised:   var(--ot-paper);
+  --surface-muted:    var(--ot-sandstone);
+  --surface-inverse:  var(--ot-navy);
+  --surface-inverse-raised: var(--ot-navy-800);
+  --surface-overlay:  rgb(7 29 45 / 0.62); /* photo scrim / modal backdrop */
+
+  /* ---- 3. Semantic: text --------------------------------------------- */
+  --text-display:   var(--ot-navy);   /* 15.5:1 on ivory */
+  --text-body:      var(--ot-ink);    /* 13.4:1 on ivory */
+  --text-muted:     var(--ot-slate);  /*  5.4:1 on ivory, 4.7:1 on sandstone */
+  --text-accent:    var(--ot-gold-ink);
+  --text-on-inverse: var(--ot-ivory);
+  --text-on-inverse-muted: var(--ot-mist);
+  --text-on-inverse-accent: var(--ot-gold); /* 6.3:1 on navy */
+  --text-link:      var(--ot-navy);
+  --text-link-hover: var(--ot-gold-ink);
+
+  /* ---- 4. Semantic: borders and rules -------------------------------- */
+  --rule-gold:      var(--ot-gold);
+  --rule-hair:      color-mix(in srgb, var(--ot-gold) 55%, var(--ot-ivory));
+  --border-subtle:  #DCD4C6;
+  --border-strong:  var(--ot-ink);
+  --border-input:   #8E8778;       /* 3.3:1 on ivory — meets 1.4.11 */
+  --border-on-inverse: var(--ot-navy-700);
+
+  /* ---- 5. Interaction states ----------------------------------------- */
+  --focus-ring:        var(--ot-navy);
+  --focus-ring-inverse: var(--ot-gold-pale);
+  --focus-width:       2px;
+  --focus-offset:      3px;
+  --hover-tint:        rgb(7 29 45 / 0.05);
+  --hover-tint-inverse: rgb(247 243 236 / 0.07);
+  --press-tint:        rgb(7 29 45 / 0.1);
+  --disabled-bg:       #ECE7DE;
+  --disabled-fg:       #7D7A73;    /* 3.5:1 — disabled is exempt but stays legible */
+  --disabled-border:   #D5CEC1;
+
+  /* ---- 6. Form states ------------------------------------------------ */
+  --input-bg:          var(--ot-paper);
+  --input-fg:          var(--ot-ink);
+  --input-placeholder: #6B7276;    /* 4.7:1 on paper */
+  --input-border:      var(--border-input);
+  --input-border-hover: var(--ot-ink);
+  --input-border-focus: var(--ot-navy);
+
+  /* ---- 7. Semantic status (tuned to sit in the palette) -------------- */
+  --success:     #2F5D45;  --success-bg: #E3ECE4; /* 6.3:1 on its bg */
+  --warning:     #7A4E0E;  --warning-bg: #F4E9D3; /* 6.0:1 */
+  --error:       #9A2B22;  --error-bg:   #F6E3DF; /* 6.2:1 */
+  --info:        var(--ot-navy); --info-bg: #E4E9EC;
+
+  /* ---- 8. Typography ------------------------------------------------- */
+  --font-display: "Cormorant Garamond", "Cormorant", "EB Garamond", Garamond, "Times New Roman", serif;
+  --font-sans:    "Manrope", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+
+  --weight-display: 300;  /* the publication sets every headline in Light */
+  --weight-heading: 400;
+  --weight-heading-strong: 500;
+  --weight-body: 400;
+  --weight-label: 600;
+
+  /* Fluid scale: 360px → 1440px viewports */
+  --step-display-xl: clamp(3.25rem, 2.1rem + 5.1vw, 6rem);     /* 52 → 96 */
+  --step-display-l:  clamp(2.75rem, 1.95rem + 3.55vw, 4.75rem); /* 44 → 76 */
+  --step-display-m:  clamp(2.25rem, 1.75rem + 2.2vw, 3.5rem);   /* 36 → 56 */
+  --step-h1: clamp(2.125rem, 1.7rem + 1.9vw, 3.25rem);          /* 34 → 52 */
+  --step-h2: clamp(1.875rem, 1.55rem + 1.45vw, 2.75rem);        /* 30 → 44 */
+  --step-h3: clamp(1.5rem, 1.3rem + 0.9vw, 2.125rem);           /* 24 → 34 */
+  --step-h4: clamp(1.3125rem, 1.2rem + 0.5vw, 1.625rem);        /* 21 → 26 */
+  --step-h5: 1.25rem;                                           /* 20 serif */
+  --step-h6: 0.8125rem;                                         /* 13 sans label */
+  --step-lead: clamp(1.125rem, 1.05rem + 0.35vw, 1.3125rem);    /* 18 → 21 */
+  --step-body-l: 1.125rem;
+  --step-body: 1rem;
+  --step-body-s: 0.875rem;
+  --step-caption: 0.8125rem;
+  --step-label: 0.75rem;     /* running heads, eyebrow labels */
+  --step-stat: clamp(2.5rem, 1.9rem + 2.6vw, 4rem);
+
+  --leading-display: 1.02;
+  --leading-heading: 1.12;
+  --leading-body: 1.65;
+  --leading-tight: 1.35;
+  --tracking-display: -0.012em;
+  --tracking-label: 0.18em;
+  --tracking-button: 0.14em;
+  --measure: 68ch;
+  --measure-narrow: 52ch;
+
+  /* ---- 9. Space (4px base, editorial jumps) -------------------------- */
+  --space-1: 0.25rem;  --space-2: 0.5rem;  --space-3: 0.75rem;
+  --space-4: 1rem;     --space-5: 1.5rem;  --space-6: 2rem;
+  --space-7: 3rem;     --space-8: 4rem;    --space-9: 6rem;
+  --space-10: 8rem;
+  --section-y: clamp(4rem, 2.6rem + 6vw, 8.5rem);
+  --gutter: clamp(1rem, 0.6rem + 1.8vw, 2rem);
+  --page-margin: clamp(1rem, -0.2rem + 5.4vw, 5rem);
+  --content-max: 82rem;
+
+  /* ---- 10. Frame, lines, shape --------------------------------------- */
+  --hairline: 1px;
+  --rule: 1px;
+  --frame-inset: clamp(0.75rem, 0.4rem + 1.4vw, 1.75rem); /* cover inset frame */
+  --frame-gap: 6px;      /* double-frame spacing */
+  --radius: 0;           /* square corners throughout, as in print */
+  --tick: 9px;           /* dimension-line end tick */
+
+  /* ---- 11. Elevation (used sparingly; print has none) ----------------- */
+  --shadow-1: 0 1px 2px rgb(7 29 45 / 0.06), 0 6px 18px -10px rgb(7 29 45 / 0.18);
+  --shadow-2: 0 2px 6px rgb(7 29 45 / 0.08), 0 24px 48px -24px rgb(7 29 45 / 0.35);
+
+  /* ---- 12. Motion ---------------------------------------------------- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);       /* exponential settle */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 160ms;
+  --dur-base: 280ms;
+  --dur-slow: 720ms;
+  --dur-reveal: 1100ms;
+
+  /* ---- 13. Layout ---------------------------------------------------- */
+  --grid-columns: 12;
+  --z-nav: 50; --z-overlay: 80; --z-modal: 90;
+}
+
+/* Dark (navy) sections: re-map the semantic layer, keep primitives. */
+.surface-inverse,
+[data-surface="navy"] {
+  --surface-page: var(--ot-navy);
+  --surface-raised: var(--ot-navy-800);
+  --surface-muted: var(--ot-navy-800);
+  --text-display: var(--ot-ivory);
+  --text-body: #E4E0D8;            /* 13.0:1 on navy */
+  --text-muted: var(--ot-mist);
+  --text-accent: var(--ot-gold);
+  --text-link: var(--ot-ivory);
+  --text-link-hover: var(--ot-gold-pale);
+  --rule-hair: color-mix(in srgb, var(--ot-gold) 45%, var(--ot-navy));
+  --border-subtle: var(--ot-navy-700);
+  --border-strong: var(--ot-ivory);
+  --border-input: #6F8090;
+  --focus-ring: var(--ot-gold-pale);
+  --hover-tint: var(--hover-tint-inverse);
+  --input-bg: var(--ot-navy-800);
+  --input-fg: var(--ot-ivory);
+  --input-placeholder: #9AA6AC;
+  --input-border: #6F8090;
+  --input-border-hover: var(--ot-ivory);
+  --input-border-focus: var(--ot-gold-pale);
+  background-color: var(--surface-page);
+  color: var(--text-body);
+}
+
+.surface-muted,
+[data-surface="sandstone"] {
+  --surface-page: var(--ot-sandstone);
+  --border-subtle: var(--ot-sandstone-2);
+  --text-muted: #525D62;           /* slate deepened to keep 5.3:1 on sand */
+  --text-accent: #6E5930;          /* gold ink deepened: 5.2:1 on sand */
+  background-color: var(--surface-page);
+}
+
+/* Navy regions that are not full .surface-inverse sections still need
+   on-navy link colors. */
+.doc-cover, .ov-cover, .cta-panel, .hero-cover, .site-footer, .site-header:not(.site-header--light) {
+  --text-link: var(--ot-ivory);
+  --text-link-hover: var(--ot-gold-pale);
+  --focus-ring: var(--ot-gold-pale);
+}

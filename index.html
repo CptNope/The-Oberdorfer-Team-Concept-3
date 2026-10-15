@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Oberdorfer Team · Brand and Website Project</title>
+<meta name="description" content="Project overview for The Oberdorfer Team: discovery, brand book, design system and the example website, evolved from Wakefield at Home.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="The Oberdorfer Team · Brand and Website Project">
+<meta property="og:description" content="Luxury at every price point. Brand book, design system and website concept.">
+<meta property="og:image" content="assets/logo/social-avatar.png">
+<link rel="icon" href="assets/logo/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/logo/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/docs.css">
+<style>
+  .ov-cover { background: var(--ot-navy); color: var(--ot-ivory); min-height: 100svh; display: grid; position: relative; overflow: hidden; }
+  .ov-cover__photo { position: absolute; inset: 0 0 0 auto; width: min(46%, 44rem); }
+  .ov-cover__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; }
+  .ov-cover__photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--ot-navy) 0%, rgb(7 29 45 / 0.55) 30%, rgb(7 29 45 / 0.15) 60%, rgb(7 29 45 / 0.55) 100%); }
+  .ov-cover__inner { position: relative; z-index: 3; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-template-rows: auto 1fr auto; column-gap: var(--gutter); row-gap: var(--space-7);
+    padding: calc(var(--frame-inset) + clamp(1.5rem, 1rem + 2vw, 3rem)) calc(var(--frame-inset) + clamp(1.25rem, 0.25rem + 3.4vw, 4.25rem)); }
+  .ov-masthead { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center; gap: var(--space-5); flex-wrap: wrap; }
+  .ov-masthead img { width: clamp(15rem, 10rem + 14vw, 26rem); }
+  .ov-issue { font: 600 0.6875rem/1.5 var(--font-sans); letter-spacing: 0.22em; text-transform: uppercase; color: var(--ot-ivory); }
+  .ov-title { grid-column: 1 / span 7; align-self: center; display: grid; gap: var(--space-5); }
+  .ov-title .display-xl { color: var(--ot-ivory); }
+  .ov-title .lead { color: #D9D5CC; max-width: 44ch; }
+  .ov-toc { grid-column: 1 / span 6; align-self: end; }
+  .ov-toc .toc { columns: 1; }
+  .ov-toc .toc li { border-top-color: rgb(180 154 101 / 0.45); }
+  .ov-toc .toc a { color: var(--ot-ivory); grid-template-columns: 2.5rem 1fr auto; padding-block: 0.95rem; }
+  .ov-toc .toc__num { color: var(--ot-gold); }
+  .ov-toc .toc__note { color: var(--ot-mist); }
+  .ov-toc .toc__title { font-size: clamp(1.4rem, 1.1rem + 1vw, 1.875rem); }
+  .ov-toc .is-soon a { color: var(--ot-mist); }
+  .ov-toc .is-soon .toc__title { color: #B9C0C3; font-style: italic; }
+  .ov-toc .toc a .arrow { width: 1.6rem; height: 0.6rem; color: var(--ot-gold); transition: transform var(--dur-base) var(--ease-out); }
+  .ov-toc .toc a:hover .arrow { transform: translateX(4px); }
+  .ov-foot { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-4); flex-wrap: wrap; border-top: 1px solid var(--ot-gold); padding-top: var(--space-4); }
+  .ov-foot p { font-size: var(--step-caption); color: var(--ot-mist); }
+  @media (max-width: 60rem) {
+    .ov-cover__photo { width: 100%; height: min(60%, 34rem); inset: 7.5rem 0 auto 0; }
+    .ov-cover__photo::after { background: linear-gradient(180deg, var(--ot-navy) 0%, rgb(7 29 45 / 0.1) 18%, rgb(7 29 45 / 0.15) 55%, var(--ot-navy) 100%); }
+    .ov-title { grid-column: 1 / -1; margin-top: clamp(10rem, 30vh, 18rem); }
+    .ov-toc { grid-column: 1 / -1; }
+  }
+  .deliv { display: grid; grid-template-columns: 4rem minmax(0, 5fr) minmax(0, 5fr) auto; gap: var(--space-4) var(--gutter); align-items: start; padding-block: var(--space-6); border-top: 1px solid var(--border-subtle); }
+  .deliv:first-child { border-top: 1px solid var(--rule-gold); }
+  .deliv__num { font: 300 2.75rem/0.9 var(--font-display); color: var(--text-accent); }
+  .deliv h3 { font-size: var(--step-h3); }
+  .deliv h3 a { text-decoration: none; color: inherit; }
+  .deliv h3 a:hover { text-decoration: underline; text-decoration-color: var(--ot-gold); text-decoration-thickness: 1px; text-underline-offset: 0.16em; }
+  .deliv__status { justify-self: end; }
+  @media (max-width: 52rem) { .deliv { grid-template-columns: 3rem 1fr; } .deliv > :nth-child(3), .deliv__status { grid-column: 2; justify-self: start; } }
+  .site-teaser { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--gutter); align-items: center; }
+  .site-teaser__art { grid-column: 1 / span 6; color: var(--ot-gold); background: var(--ot-navy); aspect-ratio: 4 / 3; display: grid; place-items: center; position: relative; }
+  .site-teaser__art::before { content: ""; position: absolute; inset: 0.9rem; border: 1px solid var(--ot-gold); }
+  .site-teaser__art svg { width: 78%; }
+  .site-teaser__body { grid-column: 8 / span 5; }
+  @media (max-width: 52rem) { .site-teaser__art, .site-teaser__body { grid-column: 1 / -1; } }
+  .phase { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--rule-gold); }
+  .phase li { list-style: none; padding: var(--space-4) var(--space-4) var(--space-4) 0; border-right: 1px solid var(--border-subtle); display: grid; gap: var(--space-2); align-content: start; }
+  .phase li:last-child { border-right: 0; }
+  .phase li + li { padding-left: var(--space-4); }
+  .phase b { font: 400 1.25rem/1.15 var(--font-display); color: var(--text-display); font-weight: 400; }
+  .phase span { font-size: var(--step-caption); color: var(--text-muted); }
+  .phase .done b::after { content: ""; display: inline-block; width: 0.55rem; height: 0.55rem; background: var(--success); margin-left: 0.5rem; vertical-align: 0.2rem; }
+  .phase .next b::after { content: ""; display: inline-block; width: 0.55rem; height: 0.55rem; border: 1px solid var(--ot-gold-ink); margin-left: 0.5rem; vertical-align: 0.2rem; }
+  @media (max-width: 52rem) { .phase { grid-template-columns: 1fr; } .phase li { border-right: 0; border-bottom: 1px solid var(--border-subtle); padding-left: 0 !important; } }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<main id="main">
+
+<section class="ov-cover folio-frame" aria-labelledby="ov-title">
+  <div class="ov-cover__photo"><img src="assets/img/photo/cover-portrait.webp" alt="Brandon and Kaitlyn Oberdorfer" width="1103" height="1426" fetchpriority="high"></div>
+  <div class="ov-cover__inner">
+    <div class="ov-masthead">
+      <img src="assets/logo/logo-primary-gold.svg" alt="The Oberdorfer Team" width="900" height="120">
+      <p class="ov-issue">Brand &amp; website project · Concept 3 · October 2026</p>
+    </div>
+    <div class="ov-title">
+      <h1 class="display-xl answer" id="ov-title"><span>Luxury at</span><span>every price point.</span></h1>
+      <p class="lead">The brand identity, design system and website for a husband-and-wife Massachusetts real estate team, evolved from <em>Wakefield at Home</em>.</p>
+    </div>
+    <nav class="ov-toc" aria-label="Project documents">
+      <ol class="toc" role="list">
+        <li><a href="discovery/"><span class="toc__num">01</span><span class="toc__title">Discovery</span><svg class="arrow" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow"/></svg></a></li>
+        <li><a href="brand-book/"><span class="toc__num">02</span><span class="toc__title">Brand Book</span><svg class="arrow" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow"/></svg></a></li>
+        <li><a href="design-system/"><span class="toc__num">03</span><span class="toc__title">Design System</span><svg class="arrow" viewBox="0 0 34 12" fill="none" stroke="currentColor" stroke-width="1.25" aria-hidden="true"><use href="assets/img/icons.svg#i-arrow"/></svg></a></li>
+        <li class="is-soon"><a href="#website"><span class="toc__num">04</span><span class="toc__title">Example Website</span><span class="toc__note">In production</span></a></li>
+      </ol>
+    </nav>
+    <div class="ov-foot"><p>Prepared for Brandon &amp; Kaitlyn Oberdorfer · Powered by Real Estate Wealth Acquisition and Preservation Brokerage</p><span class="badge badge--proposed">Proposals awaiting approval</span></div>
+  </div>
+</section>
+
+<section class="section" id="documents" aria-labelledby="h-docs">
+  <div class="container">
+    <div class="chapter__head" style="margin-bottom:var(--space-7)">
+      <div class="chapter__run running-head label"><span>The project</span><span class="label--quiet">The Oberdorfer Team</span></div>
+      <h2 class="chapter__title display-m answer" id="h-docs" style="grid-column:1/span 9"><span>Read in this order.</span><span>Approve as you go.</span></h2>
+    </div>
+    <div>
+      <article class="deliv">
+        <p class="deliv__num" aria-hidden="true">01</p>
+        <div class="stack" style="--stack:var(--space-2)"><h3><a href="discovery/">Discovery</a></h3><p class="body-s muted">Deliverables 1 and 3</p></div>
+        <p class="body-s">A page-by-page audit of <em>Wakefield at Home</em>, with fonts confirmed from the PDF and colors sampled from it, a review of REWAP Brokerage, and three magazine-based directions with the recommendation.</p>
+        <span class="deliv__status badge badge--source">Ready</span>
+      </article>
+      <article class="deliv">
+        <p class="deliv__num" aria-hidden="true">02</p>
+        <div class="stack" style="--stack:var(--space-2)"><h3><a href="brand-book/">Brand Book</a></h3><p class="body-s muted">Deliverables 2 and 4</p></div>
+        <p class="body-s">Twenty chapters: brand story, mission and vision, positioning, audiences, voice, messaging, logo system, color, type, photography, layout, and applications (social, print, signage and agent materials) with governance.</p>
+        <span class="deliv__status badge badge--proposed">Ready for review</span>
+      </article>
+      <article class="deliv">
+        <p class="deliv__num" aria-hidden="true">03</p>
+        <div class="stack" style="--stack:var(--space-2)"><h3><a href="design-system/">Design System</a></h3><p class="body-s muted">Deliverable 5</p></div>
+        <p class="body-s">Tokens, type scale, grid, icons and every website component with its states: navigation, hero, search, cards, market statistics, forms, footer and attribution. Each one is mapped to a WordPress block.</p>
+        <span class="deliv__status badge badge--proposed">Ready for review</span>
+      </article>
+      <article class="deliv" id="website">
+        <p class="deliv__num" aria-hidden="true">04</p>
+        <div class="stack" style="--stack:var(--space-2)"><h3>Example Website</h3><p class="body-s muted">Deliverables 6–8</p></div>
+        <p class="body-s">A working, responsive prototype: home, buy, sell, communities, team directory, agent page, journal, join our team, office and contact. It uses clearly labeled demo listings and no live MLS data.</p>
+        <span class="deliv__status badge badge--demo">Next</span>
+      </article>
+      <article class="deliv">
+        <p class="deliv__num" aria-hidden="true">05</p>
+        <div class="stack" style="--stack:var(--space-2)"><h3>WordPress, IDX and launch checklist</h3><p class="body-s muted">Deliverables 9–10</p></div>
+        <p class="body-s">Theme architecture, content models, IDX options, lead routing, SEO, and the client review and production checklist.</p>
+        <span class="deliv__status badge">Planned</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section surface-muted" aria-labelledby="h-site">
+  <div class="container site-teaser">
+    <div class="site-teaser__art" aria-hidden="true"><svg viewBox="0 0 400 260"><use href="assets/img/illustrations.svg#colonial"/></svg></div>
+    <div class="site-teaser__body stack" style="--stack:var(--space-5)">
+      <p class="label">Coming next</p>
+      <h2 class="h1 answer" id="h-site"><span>The example site.</span><span><em>Built from these pages.</em></span></h2>
+      <p class="body-s">Every page of the example website will be assembled from the design system's components, so what you approve in the brand book is exactly what ships. A preview of the homepage is in the brand book.</p>
+      <a class="link-arrow" href="brand-book/#website">See the homepage preview <svg class="icon" aria-hidden="true" viewBox="0 0 34 12"><use href="assets/img/icons.svg#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="h-status">
+  <div class="container stack" style="--stack:var(--space-7)">
+    <h2 class="h2 answer" id="h-status"><span>Where the project stands.</span></h2>
+    <ol class="phase" role="list">
+      <li class="done"><b>Discovery</b><span>Audit, REWAP review, directions</span></li>
+      <li class="done"><b>Direction</b><span>A + B chosen, Oct 15</span></li>
+      <li class="done"><b>Brand and system</b><span>Brand book, tokens, components</span></li>
+      <li class="next"><b>Example website</b><span>Responsive prototype</span></li>
+      <li><b>Production</b><span>WordPress, IDX, launch</span></li>
+    </ol>
+    <div class="cols">
+      <div class="note note--verify"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-alert"/></svg><p><strong>Waiting on the team:</strong> approval of the direction and logo; confirmation of the phone number and portrait photography; team email, domain and license details; "Top Producer" documentation; office details; REWAP disclosures. <a href="brand-book/#governance">Full list</a>.</p></div>
+      <div class="stack body-s"><p><strong>Files:</strong> the source publication is archived at <a href="source/Wakefield_At_Home_8_Page_Print_Ready.pdf">source/Wakefield_At_Home_8_Page_Print_Ready.pdf</a> (32 MB). The product brief is in <code>PRODUCT.md</code> and the visual system in <code>DESIGN.md</code>.</p><p><strong>Contact:</strong> Brandon &amp; Kaitlyn Oberdorfer, <a href="tel:+14062507620">406-250-7620</a>.</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer" style="padding-block:var(--space-8) var(--space-6)">
+  <div class="container">
+    <div class="attribution" style="margin-top:0;border-top:0;padding-top:0">
+      <div class="attribution__plate"><img src="assets/img/rewap-logo.webp" alt="REWAP Brokerage" width="900" height="300"><small>Real Estate Wealth Acquisition and Preservation Brokerage</small></div>
+      <div class="stack" style="--stack:var(--space-3)">
+        <img src="assets/logo/logo-primary-gold.svg" alt="The Oberdorfer Team" width="300" height="40" style="width:15rem">
+        <p class="disclosure">The Oberdorfer Team is a real estate team operating under <strong>REWAP Brokerage LLC</strong>. This is a design concept for internal review. It is not public advertising, and all listings and agents shown are demonstrations.</p>
+        <p class="eho"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#i-eho"/></svg>Equal Housing Opportunity</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>

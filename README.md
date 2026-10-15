@@ -1,1 +1,52 @@
-# The-Oberdorfer-Team-Concept-3
+# The Oberdorfer Team: Concept 3
+
+Brand identity, brand book, design system and (next) example website for **The Oberdorfer Team**, a husband-and-wife Massachusetts real estate team led by Brandon and Kaitlyn Oberdorfer and operating under REWAP Brokerage LLC.
+
+The visual direction evolves the team's print publication, *Wakefield at Home*, Fall 2026, into a system for the web, print and signage.
+
+## Open it
+
+Start at **`index.html`**, the project overview. It links to:
+
+| Page | What it is |
+|---|---|
+| `discovery/` | Page-by-page PDF audit, REWAP review, three visual directions and the recommendation |
+| `brand-book/` | Twenty chapters covering strategy, voice, logo, color, type, photography, layout, applications and governance |
+| `design-system/` | Tokens, type scale, grid, icons and every website component with its states, mapped to WordPress blocks |
+| *Example website* | Coming next |
+
+This is a static site with no build step. To preview it locally, run:
+
+```sh
+python3 -m http.server 8000
+```
+
+## Structure
+
+```
+assets/css/tokens.css      design tokens (source of truth)
+assets/css/base.css        reset, type, layout primitives, page furniture
+assets/css/components.css  components → planned ot/* Gutenberg blocks
+assets/css/docs.css        documentation "issue" layout
+assets/css/mockups.css     brand-application mockups
+assets/js/site.js          small progressive enhancement (menus, reveals, demo forms)
+assets/logo/               outlined SVG logo system + PNG icons
+assets/img/                photography, page renders, icon and illustration sprites
+source/                    original PDF and creative brief
+PRODUCT.md / DESIGN.md     product truth and visual system
+```
+
+## Content integrity
+
+The following are labeled placeholders. None of them are presented as real:
+
+- demo listings, future agents and the office details
+- any unverified claims
+
+The open items are listed in the brand book's Governance chapter.
+
+## Credits
+
+- **Fonts:** Cormorant Garamond and Manrope, both SIL Open Font License, loaded from Google Fonts.
+- **Lake Quannapowitt Panorama:** RedSoxFan274 / Wikimedia Commons, CC BY-SA 4.0.
+- **Breakheart Reservation:** Joseph Reagle / Wikimedia Commons, CC BY-SA 4.0.

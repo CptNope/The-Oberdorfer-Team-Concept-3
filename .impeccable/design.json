@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "source": "assets/css/tokens.css",
+  "direction": "Editorial Heritage on an architectural grid (A+B)",
+  "colors": {
+    "navy": "#071D2D",
+    "ivory": "#F7F3EC",
+    "ink": "#142A38",
+    "gold": "#B49A65",
+    "goldInk": "#7A6438",
+    "sandstone": "#E9E2D5",
+    "slate": "#59656A",
+    "mist": "#A3AEB3"
+  },
+  "fonts": {
+    "display": "Cormorant Garamond",
+    "text": "Manrope"
+  },
+  "radius": 0,
+  "grid": 12
+}
