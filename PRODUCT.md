@@ -108,20 +108,19 @@ Two things set the team apart:
   - Photos: Lake Quannapowitt and Breakheart images are Wikimedia CC BY-SA 4.0 and need attribution. The p.6 food image is AI-generated and must not be presented as photography of real people or places.
   - Market figures: Wakefield only, Redfin, accessed 2026-10-10. Median sale price $786,979 (3 months ending Aug 2026); 21 median days on market (Aug 2026); $483/sq ft (rolling 3-month); 103.3% sale-to-list (Aug 2026). These are historical, Wakefield only, and not live.
 - `source/creative-brief.md`: the full creative and technical brief.
-- **Published phone:** 406-250-7620. It has a Montana area code; confirm it is the intended public number.
+- **Confirmed 2026-10-15:** the user confirmed that all data in the publication is correct, including the phone number 406-250-7620, "Top Producer" and the market figures. Brandon produced the publication with ChatGPT.
 
 **Absent, so use labeled placeholders only:**
 - Additional team photography
 - Team email and MA license numbers or titles
 - Client testimonials
 - Years of experience and production statistics
-- Documentation for "Top Producer"
 - Agent profiles beyond Brandon and Kaitlyn
 - Office address
 - Recruiting terms, commissions, benefits and training details
 - Awards
 
-None of these may be fabricated. "Top Producer" appears in the source but needs verification before reuse.
+None of these may be fabricated. "Top Producer" is confirmed and may be used as it appears in the publication.
 
 ## Product Principles
 

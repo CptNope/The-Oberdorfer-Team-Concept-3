@@ -84,7 +84,7 @@
   });
 
   /* Save-listing toggles (demo). */
-  document.querySelectorAll("[data-save]").forEach(function (b) {
+  document.querySelectorAll("[data-save]:not([data-save-id])").forEach(function (b) {
     b.addEventListener("click", function (e) {
       e.preventDefault();
       var on = b.getAttribute("aria-pressed") !== "true";

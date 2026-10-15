@@ -183,12 +183,13 @@
   --border-subtle: var(--ot-sandstone-2);
   --text-muted: #525D62;           /* slate deepened to keep 5.3:1 on sand */
   --text-accent: #6E5930;          /* gold ink deepened: 5.2:1 on sand */
+  --text-link-hover: #6E5930;
   background-color: var(--surface-page);
 }
 
 /* Navy regions that are not full .surface-inverse sections still need
    on-navy link colors. */
-.doc-cover, .ov-cover, .cta-panel, .hero-cover, .site-footer, .site-header:not(.site-header--light) {
+.doc-cover, .ov-cover, .cta-panel, .hero-cover, .site-footer, .mobile-menu, .site-header:not(.site-header--light) {
   --text-link: var(--ot-ivory);
   --text-link-hover: var(--ot-gold-pale);
   --focus-ring: var(--ot-gold-pale);

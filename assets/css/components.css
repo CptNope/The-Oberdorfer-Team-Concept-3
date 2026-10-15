@@ -162,7 +162,7 @@
 .listing-card__address { font-size: var(--step-body-s); }
 .listing-card__specs { display: flex; flex-wrap: wrap; gap: 0 1.25rem; font-size: var(--step-caption); color: var(--text-muted); letter-spacing: 0.04em; border-top: 1px solid var(--border-subtle); padding-top: var(--space-3); }
 .listing-card__specs b { color: var(--text-body); font-weight: 600; }
-.listing-card__courtesy { font-size: 0.6875rem; color: var(--text-muted); }
+.listing-card__courtesy { font-size: 0.75rem; color: var(--text-muted); }
 
 /* ---- Gallery ----------------------------------------------------------- */
 .gallery { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr; gap: var(--space-2); }
@@ -376,3 +376,10 @@
   .stat__value { font-size: 2.125rem; }
 }
 .table-scroll:focus-visible { outline: var(--focus-width) solid var(--focus-ring); outline-offset: 4px; }
+
+/* ---- Line-illustration placeholder plate (stands in for photography) ---- */
+.demo-illu { color: var(--ot-gold); background: var(--ot-navy); display: grid; place-items: center; }
+.demo-illu svg { width: 82%; height: auto !important; }
+.demo-illu--light { color: var(--ot-navy); background: var(--ot-sandstone); }
+.listing-card__media.demo-illu svg, .article-card__media .demo-illu svg { width: 82%; height: auto; object-fit: initial; }
+.empty-state[hidden] { display: none; }
