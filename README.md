@@ -34,7 +34,14 @@ The visual direction evolves the team's print publication, *Wakefield at Home*, 
 
 ## View it
 
-Once GitHub Pages is enabled, everything is online at **https://cptnope.github.io/The-Oberdorfer-Team-Concept-3/**. To enable it, go to Settings → Pages → *Deploy from a branch* → `main` / `(root)`.
+Everything is online at **https://cptnope.github.io/The-Oberdorfer-Team-Concept-3/**.
+
+Each push to `main` deploys automatically through [`.github/workflows/pages.yml`](.github/workflows/pages.yml) (Settings → Pages → Source: *GitHub Actions*). The workflow publishes only what visitors need, about 5 MB:
+
+- `index.html`, `assets/`, `discovery/`, `brand-book/`, `design-system/` and `site/` are published.
+- The print PDF, tools, docs and Markdown files stay in the repository only.
+
+It can also be run by hand from the Actions tab.
 
 | | Live (GitHub Pages) | In the repo |
 |---|---|---|
@@ -159,13 +166,15 @@ assets/js/site.js          Menus, reveals, copy buttons, demo form validation
 assets/js/site-demo.js     Listing search, saved homes, tabs, filters
 assets/logo/               Outlined SVG logo system + PNG icons
 assets/img/                Photos, publication page renders, icon and illustration sprites
+assets/publications/       Web editions of the At Home issues (downloadable, ~3 MB)
 
 tools/build_site.py        Generates site/ (shared header, footer, cards, forms)
 tools/build_logos.py       Generates assets/logo/*.svg from the PDF's glyphs
 tools/screenshot.py        Playwright screenshots for design review
 tools/fonts/               Font subsets extracted from the PDF (OFL)
 
-source/                    Original publication PDF and creative brief
+source/                    Original print PDF (32 MB, repo only) and creative brief
+.github/workflows/pages.yml  GitHub Pages deploy (publishes the site folders only)
 docs/screenshots/          Images used in this README
 PRODUCT.md                 Product truth (users, positioning, evidence, constraints)
 DESIGN.md                  Visual system record
@@ -259,7 +268,9 @@ The full checklist is in [Brand book › Governance](brand-book/index.html#gover
 
 ## Credits and licenses
 
-- **Publication:** *Wakefield at Home*, Fall 2026, © The Oberdorfer Team. Archived in [`source/`](source/Wakefield_At_Home_8_Page_Print_Ready.pdf).
+- **Publication:** *Wakefield at Home*, Fall 2026, © The Oberdorfer Team.
+  - Print file: [`source/`](source/Wakefield_At_Home_8_Page_Print_Ready.pdf).
+  - Web edition: [`assets/publications/`](assets/publications/wakefield-at-home-fall-2026.pdf), downloadable from the journal.
 - **Fonts:** Cormorant Garamond and Manrope, SIL Open Font License 1.1. They are loaded from Google Fonts, and subsets are in `tools/fonts/`.
 - **Lake Quannapowitt Panorama:** RedSoxFan274 / Wikimedia Commons, CC BY-SA 4.0, cropped.
 - **Breakheart Reservation:** Joseph Reagle / Wikimedia Commons, CC BY-SA 4.0, cropped.

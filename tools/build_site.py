@@ -682,7 +682,7 @@ def page_journal():
 <section class="section surface-muted" id="archive"><div class="container split" style="align-items:center">
   <div style="grid-column:1/span 6" class="stack"><p class="label">The publication archive</p><h2 class="display-m answer"><span>At Home,</span><span>in print and online.</span></h2><p>Each issue is written for one community and one season. Download past issues, or subscribe to receive the next one.</p>
     <form class="newsletter" data-newsletter aria-label="Subscribe to the At Home publications"><label class="visually-hidden" for="j-news">Email address</label><input class="input" id="j-news" type="email" autocomplete="email" placeholder="Email address"><button class="btn btn--small" type="submit">Subscribe</button></form></div>
-  <div style="grid-column:8/span 5" class="archive-card"><img src="{R}assets/img/source-pages/page-1.webp" alt="Wakefield at Home, Fall 2026 cover" width="900" height="1157" loading="lazy"><div class="stack" style="--stack:var(--space-3)"><p class="h4">Wakefield at Home</p><p class="body-s muted">Fall 2026 · 8 pages</p><a class="link-arrow" href="{R}source/Wakefield_At_Home_8_Page_Print_Ready.pdf" download>Download PDF (32 MB) {icon(R,"download")}</a></div></div>
+  <div style="grid-column:8/span 5" class="archive-card"><img src="{R}assets/img/source-pages/page-1.webp" alt="Wakefield at Home, Fall 2026 cover" width="900" height="1157" loading="lazy"><div class="stack" style="--stack:var(--space-3)"><p class="h4">Wakefield at Home</p><p class="body-s muted">Fall 2026 · 8 pages</p><a class="link-arrow" href="{R}assets/publications/wakefield-at-home-fall-2026.pdf" download>Download PDF (3 MB) {icon(R,"download")}</a></div></div>
 </div></section>'''
     write("journal", R, "Journal · At Home · The Oberdorfer Team", "Local living, real estate insight, seasonal guides and recipes from The Oberdorfer Team and the At Home publications.", "Journal", body, ld=[crumbs_ld(trail)])
 
@@ -707,7 +707,7 @@ def page_article():
   <aside class="article__aside" aria-label="About this article">
     <p class="label">Wakefield at Home</p><p class="body-s">Fall 2026 issue, page 5.</p>
     <a class="link-arrow" href="{R}site/communities/wakefield/">Wakefield community guide {arrow(R)}</a>
-    <a class="link-arrow" href="{R}source/Wakefield_At_Home_8_Page_Print_Ready.pdf" download>Download the issue {icon(R,"download")}</a>
+    <a class="link-arrow" href="{R}assets/publications/wakefield-at-home-fall-2026.pdf" download>Download the issue {icon(R,"download")}</a>
   </aside>
 </div></section>
 {cta_panel(R, "Buying, selling, or simply curious <em>about Wakefield?</em>", "Wakefield and nearby towns", "Call Brandon and Kaitlyn, or ask for a property-specific market review.")}'''

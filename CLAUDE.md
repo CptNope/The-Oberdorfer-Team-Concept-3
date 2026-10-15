@@ -52,6 +52,10 @@ The visual language evolves the team's print publication, *Wakefield at Home*, F
 - **To preview,** run `python3 -m http.server 8765` and open <http://localhost:8765/>.
 - **To take screenshots,** run `python3 tools/screenshot.py http://localhost:8765/site/ out.png 1440 --full`. Check desktop at 1440 and mobile at 390, and confirm that `scrollWidth` equals `clientWidth`.
 - **Keep links relative.** The site is served from a GitHub Pages project subpath, so root-relative `/` links break.
+- **Deploys run on every push to `main`** through `.github/workflows/pages.yml`. Only `index.html`, `assets/`, `discovery/`, `brand-book/`, `design-system/` and `site/` are published.
+  - Never link pages to `source/`, `tools/`, `docs/` or Markdown files; they are not on the live site.
+  - Downloadable PDFs belong in `assets/publications/`, as web-compressed copies.
+  - If you add a new top-level folder that pages need, add it to the workflow's `cp` line.
 - **Design workflow:** the Impeccable design skill was used. `PRODUCT.md`, `DESIGN.md` and `.impeccable/` are its project files.
 
 ## Commits

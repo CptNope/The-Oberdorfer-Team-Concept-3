@@ -1,0 +1,50 @@
+# Publishes the site to GitHub Pages (Settings → Pages → Source: GitHub Actions).
+# Only the files visitors need are deployed. The repo-only material (source/
+# print PDF, tools/, docs/, Markdown, design-tool files) stays out of the
+# artifact so deploys stay small and fast.
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Assemble the published site
+        run: |
+          mkdir -p _site
+          cp index.html .nojekyll _site/
+          cp -r assets discovery brand-book design-system site _site/
+          echo "Published size:" && du -sh _site
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          timeout: 1200000
