@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 tools/build_site.py)",
+      "Bash(python3 tools/build_logos.py)",
+      "Bash(python3 tools/screenshot.py:*)",
+      "Bash(python3 -m http.server:*)",
+      "Bash(git status)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)"
+    ]
+  }
+}
