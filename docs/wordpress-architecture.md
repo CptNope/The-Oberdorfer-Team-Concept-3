@@ -24,10 +24,10 @@ The production site for oberdorferteam.com is a custom block theme plus a small 
 | Patterns | Theme | The pattern names on the FSE boards' blue chips |
 | CPTs: agent, community, office, testimonial, publication | `ot-core` | Taxonomies: region, specialty, language, service area |
 | Custom fields | `ot-core` | `register_post_meta` with `show_in_rest`; no ACF or other fields plugin |
-| Field display in templates | `ot-core` + theme | `ot-core` registers Block Bindings sources; the theme's templates bind core blocks to them |
+| Field display in templates | `ot-core` + theme | `ot-core` registers Block Bindings sources; the theme's templates bind core blocks to them. Bindings reach only some attributes of a few core blocks (paragraph, heading, image, button and a few others), and `core/post-meta` needs `show_in_rest` and a key without a leading underscore. Structured fields go through `ot/*` blocks. |
 | JSON-LD (RealEstateAgent, Person, ProfilePage, City, WebPage, BreadcrumbList, Dataset) | `ot-core` | Same graph as the prototype, with `@id` links; no FAQPage on new templates |
 | Titles, meta descriptions, canonicals, robots | `ot-core` | A title and description field on every post type; no SEO plugin needed. An SEO plugin is optional, but only one may output meta tags. |
-| XML sitemap | WordPress core + `ot-core` | Core's `wp-sitemap.xml`, with CPTs included and demo or unpublished items excluded |
+| XML sitemap | WordPress core + `ot-core` | Core's `wp-sitemap.xml` includes public CPTs automatically; `ot-core` excludes demo items with `wp_sitemaps_posts_query_args` (unpublished items are never listed) |
 | `llms.txt` | `ot-core` | Generated route; same content rules as the prototype |
 | Custom blocks `ot/*` | `ot-blocks` | Built with `@wordpress/scripts`; server-rendered where SEO matters |
 | Forms, including `ot/inquiry-form` | `ot-leads` | No form plugin. Spam protection: Cloudflare Turnstile, a honeypot and rate limiting. |
@@ -60,5 +60,9 @@ wp-content/
   plugins/ot-blocks/           src/<block>/block.json, build/
   plugins/ot-leads/            src/ (PHP), admin/ (React), migrations/, connectors/, modules/
 ```
+
+**Must-use plugin caveats:** WordPress does not auto-update must-use plugins and runs no activation hooks for them. `ot-core` keeps a stored schema version and flushes rewrite rules and runs migrations when that version changes. Deployments update it with the theme.
+
+**Sitemap:** remove core's users (author) provider; the agent CPT pages are the people pages, and author archives would expose usernames.
 
 Each first-party plugin has its own version, changelog and database migrations, so the plugins and the theme can ship on separate schedules.

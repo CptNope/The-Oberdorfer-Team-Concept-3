@@ -49,7 +49,7 @@ Leads are stored in custom database tables, not as posts. That keeps personal da
 
 **Duplicates:** a new form submission with the same email or phone is attached to the existing lead as an event, not created again. The lead's towns and interests are merged.
 
-**Never collected:** Social Security numbers, financial account numbers, driver's license numbers, dates of birth. Forms must not ask for them; that keeps the site clear of Massachusetts' 201 CMR 17.00 duties for that class of personal information.
+**Never collected:** Social Security numbers, driver's license or state ID numbers, and financial account, credit or debit card numbers. Combined with a name, these are the "personal information" that 201 CMR 17.00 covers. Forms must not ask for them, which keeps the lead data out of the regulation's scope (a lead's name, email and phone alone are not covered). Dates of birth are not collected either.
 
 ## 4. Capture
 
@@ -58,7 +58,7 @@ Leads are stored in custom database tables, not as posts. That keeps personal da
 - **Consent:**
   - The email marketing consent checkbox is separate and unchecked by default. Replying to an inquiry does not need it; nurture sequences and the newsletter do.
   - The SMS consent checkbox appears only once the SMS module is on. Its wording is approved by the broker and versioned in `ot_consents`.
-- **Spam:** Cloudflare Turnstile, a hidden honeypot field, and a per-IP rate limit. Spam never reaches the inbox and never triggers alerts.
+- **Spam:** Cloudflare Turnstile (each token is verified server-side through Siteverify; tokens are single-use and expire after 5 minutes), a hidden honeypot field, and a per-IP rate limit. Spam never reaches the inbox and never triggers alerts.
 - **After submitting:** the existing inline success state (as on the prototype), and an optional confirmation email to the lead from the assigned agent.
 
 ## 5. Routing and alerts
@@ -113,7 +113,7 @@ Rules run in this order; the first match wins.
 
 **Connectors:**
 - **Webhook (phase 1):** a signed JSON POST (HMAC header) to any URL. It covers Zapier, Make and most CRMs: Lofty, kvCORE, HubSpot, BoomTown and others.
-- **Follow Up Boss (phase 2):** native, using its documented lead API. The lead's source, type, town or agent, and message are mapped. Confirm the endpoint and field mapping against Follow Up Boss's current API docs at build time.
+- **Follow Up Boss (phase 2):** native, using its public API. New leads go to `POST /v1/events`, which Follow Up Boss recommends over `POST /v1/people` because it de-duplicates, runs lead flow and action plans, and alerts the agent. Requests carry the `X-System` and `X-System-Key` headers from registering the integration with Follow Up Boss. The lead's source, type, town or agent, and message are mapped. Confirm the field mapping against the current API docs at build time.
 - **Later:** two-way sync, where a stage change in the CRM comes back to the site. This is only needed if the team works in both places.
 
 ## 8. Nurture
@@ -139,8 +139,8 @@ Rules run in this order; the first match wins.
 
 **Email delivery requirements:**
 - A dedicated email service (Amazon SES, Postmark or Mailgun), with SPF, DKIM and DMARC published for oberdorferteam.com.
-- A one-click `List-Unsubscribe` header and a visible unsubscribe link. Unsubscribes take effect immediately.
-- The physical postal address of the office in every marketing email (CAN-SPAM). **The Worcester street address is therefore a launch blocker for nurture.**
+- One-click unsubscribe (RFC 8058): a `List-Unsubscribe` HTTPS URL plus `List-Unsubscribe-Post: List-Unsubscribe=One-Click`, both covered by the DKIM signature, and a visible unsubscribe link. The endpoint unsubscribes on POST only, without a login or confirmation; a GET (link scanners prefetch) never unsubscribes. Unsubscribes take effect immediately (Gmail and Yahoo allow at most two days).
+- A valid physical postal address in every marketing email (CAN-SPAM): a street address, or a P.O. box or private mailbox registered to the business. **The Worcester street address, or a registered box, is therefore a launch blocker for nurture.**
 - Bounces and complaints from the provider's webhooks go to `ot_suppressions` automatically.
 
 ## 9. AI module
@@ -195,9 +195,9 @@ Rules run in this order; the first match wins.
 - **Consent:**
   - Texts go only to leads with recorded SMS consent (prior express written consent for marketing texts under the TCPA).
   - STOP and HELP are handled automatically.
-  - Quiet hours apply.
-- **Do not call:** check federal and Massachusetts do-not-call rules before any outbound marketing calls or texts.
-- **No AI voice calls:** the FCC treats AI-generated voices as artificial voice under the TCPA, which needs prior consent.
+  - Quiet hours apply: no marketing calls or texts before 8 a.m. or after 8 p.m. at the recipient's location (Massachusetts, M.G.L. c. 159C § 3; the federal window is 8 a.m. to 9 p.m.).
+- **Do not call:** check the National Do Not Call Registry and the Massachusetts registry (M.G.L. c. 159C, 201 CMR 12.00) before any outbound marketing calls or texts.
+- **No AI voice calls:** since the FCC's February 2024 declaratory ruling, AI-generated voices count as "artificial" voices under the TCPA, so such calls need prior express consent (written consent for marketing).
 
 ## 11. Privacy, security and retention
 
@@ -212,9 +212,26 @@ Rules run in this order; the first match wins.
 - **Requests:** "export my data" and "delete my data" are handled from the lead screen, and the actions are logged.
 - **Before launch:** the privacy policy (an open item) must describe lead storage, forwarding to a CRM, the email and AI providers, and retention.
 
+## 11a. Engineering notes from the technical review
+
+| Area | Requirement |
+|---|---|
+| Page cache and forms | Public forms post to a REST endpoint that does not depend on a WordPress nonce (Varnish would serve stale nonces). Protection comes from Turnstile (validated server-side, single-use token), the honeypot and the rate limit. |
+| "I'm on it" links in alerts | Signed, expiring token that opens a confirmation page; the lead changes only on POST, so email security scanners that open links cannot mark leads contacted. |
+| IP records | Store `ip_hash` as a keyed HMAC with a secret in `wp-config.php`, not a plain hash. |
+| Webhook security | The HMAC signature covers a timestamp and a unique id; receivers reject old or repeated requests. |
+| WordPress privacy tools | Register personal-data exporters and erasers, so Tools → Export / Erase Personal Data covers the `ot-leads` tables. |
+| Backups | Cloudways backups contain lead data: restrict who can download them, and include them in the retention policy. |
+| AI data minimum | Strip phone numbers and email addresses from events and replies before any AI call. |
+| Intent signals | Do not rely on email opens (Apple Mail Privacy Protection inflates them); weight return visits, form submissions and replies. |
+| Duplicates | Merge automatically on email; a phone-only match is suggested to the agent, not merged. |
+| Confirmation emails | Rate-limit per address, so the form cannot be used to send mail to someone else. |
+| Scheduling | Set `DISABLE_WP_CRON` and run a system cron that executes `wp action-scheduler run` every minute. |
+| Consent revocation | Accept opt-outs by any reasonable means (reply, email, call), not only STOP or the unsubscribe link; agents can record them on the lead. |
+
 ## 12. Admin screens
 
-They use WordPress admin components (`@wordpress/components` and DataViews), so they look native and accessible. The team's navy and gold appear as accents only.
+They use WordPress admin components (`@wordpress/components` and DataViews), so they look native and accessible. DataViews is installed from npm (`@wordpress/dataviews/wp`) and bundled into the plugin's build; it is still marked experimental, so pin its version. The team's navy and gold appear as accents only.
 
 | Screen | Purpose | Canvas board |
 |---|---|---|
@@ -231,7 +248,7 @@ They use WordPress admin components (`@wordpress/components` and DataViews), so 
 |---|---|---|
 | 1 | Capture, inbox, routing and alerts, spam protection, consent records, CSV export, webhook connector | Yes |
 | 2 | Pipeline board, tasks and reminders, roles, audit log, Follow Up Boss connector | No |
-| 3 | Email service, template sequences, suppressions, newsletter, monthly town updates without AI | Needs the office street address |
+| 3 | Email service, template sequences, suppressions, newsletter, monthly town updates without AI | Needs a postal address (the office street address or a registered P.O. box) |
 | 4 | AI drafting, validator, approval queue, summaries and intent signals | No |
 | 5 | SMS (after 10DLC), inbound email parsing, two-way CRM sync | No |
 
