@@ -1,0 +1,77 @@
+{
+  "slug": "falmouth",
+  "name": "Falmouth",
+  "county": "Barnstable County",
+  "region": "Cape Cod (Upper Cape, Buzzards Bay to Vineyard Sound)",
+  "population_2020": 32517,
+  "population_source": "https://en.wikipedia.org/wiki/Falmouth,_Massachusetts",
+  "official_site": "https://www.falmouthma.gov/",
+  "headline": ["A village green, a seaside bikeway,", "and the ferry to the Vineyard at Woods Hole."],
+  "answer": "Falmouth is an Upper Cape town of 32,517 people (2020 Census) in Barnstable County, bordered by Buzzards Bay to the west and Vineyard Sound to the south. Its 2024 Housing Production Plan counts 22,817 housing units, about 86 percent of them detached single-family homes, with 30 percent counted as seasonal units. Falmouth has no rail station: Steamship Authority ferries leave Woods Hole for Martha's Vineyard, and buses link the town to Hyannis and to Boston and Logan Airport. The median single-family sale price was $804,000 in 2025, across 424 sales.",
+  "overview": [
+    "English colonists settled Falmouth in 1660, and the town was incorporated in 1686. Its center has gathered around a triangular village green since 1756, when the meeting house moved there, and late Colonial and Federal houses still frame it with the 1796 First Congregational Church on its north side. Katharine Lee Bates, who wrote the words to \"America the Beautiful\", was born on Main Street in 1859. Woods Hole was raided by British forces in 1779, and the Falmouth Heights shore was bombarded by British frigates in the War of 1812. By 1872 the railroad had reached Falmouth and Woods Hole.",
+    "That rail line is now the Shining Sea Bikeway, 10.7 miles from Route 151 in North Falmouth to the Steamship Authority dock in Woods Hole, with a stretch along the water. Woods Hole is a working science village: the Marine Biological Laboratory dates to 1888 and the Woods Hole Oceanographic Institution to 1930, around the drawbridge at Eel Pond, with Nobska Light on the point above Vineyard Sound. Along the south shore, a run of closely spaced coastal ponds and necks leads east to the Waquoit Bay reserve, while West and North Falmouth face Buzzards Bay with harbors and public beaches such as Old Silver Beach."
+  ],
+  "housing": {
+    "text": "Falmouth's March 2024 Housing Production Plan counts 22,817 housing units in 2020, up from 18,168 in 1990. An estimated 86 percent are detached single-family homes, and 70 percent are counted as year-round units, with 30 percent counted as seasonal. The plan aims to direct new housing to areas that are already developed and to maximize affordable units on town-owned land.",
+    "source": "https://www.mass.gov/doc/falmouth-housing-production-plan-march-2024/download"
+  },
+  "villages": [
+    {"name": "Falmouth Village", "line": "The town center on Main Street (Route 28), around the triangular Falmouth Village Green, a historic district listed on the National Register in 1996.", "source": "https://en.wikipedia.org/wiki/Falmouth_Village_Green_Historic_District"},
+    {"name": "Woods Hole", "line": "The village at the southwestern tip of the Cape, around Eel Pond and its drawbridge, home to the Steamship Authority terminal, WHOI, the Marine Biological Laboratory and a USGS coastal and marine center.", "source": "https://en.wikipedia.org/wiki/Woods_Hole,_Massachusetts"},
+    {"name": "West Falmouth", "line": "A Buzzards Bay village with West Falmouth Harbor and the West Falmouth Village Historic District, which includes the Quaker Meeting House and carriage sheds.", "source": "https://en.wikipedia.org/wiki/West_Falmouth,_Massachusetts"},
+    {"name": "North Falmouth", "line": "The northwest village on Buzzards Bay, with two public beaches: Old Silver Beach off Quaker Road and Megansett Beach on Megansett Harbor.", "source": "https://en.wikipedia.org/wiki/North_Falmouth,_Massachusetts"},
+    {"name": "East Falmouth and Waquoit", "line": "The south-shore area of necks between tidal ponds (Great, Green, Bournes and Eel ponds), with Hatchville to the north on Route 151 and Waquoit to the east on Waquoit Bay.", "source": "https://en.wikipedia.org/wiki/East_Falmouth,_Massachusetts"}
+  ],
+  "commute": {
+    "rail": [
+      {"line": "CapeFLYER (seasonal weekends, Memorial Day weekend to Labor Day, in neighboring Bourne)", "stations": ["Bourne", "Buzzards Bay"]}
+    ],
+    "rail_source": "https://capeflyer.com/",
+    "highways": ["Route 28", "Route 151"],
+    "text": "Falmouth has no rail station. The seasonal CapeFLYER, weekends only from Memorial Day weekend through Labor Day, stops in neighboring Bourne and Buzzards Bay on its way between Boston's South Station and Hyannis. Peter Pan buses run from Logan Airport and downtown Boston to the Falmouth Bus Depot. The Cape Cod Regional Transit Authority's Sealine connects the Hyannis Transportation Center with Falmouth Center and the Woods Hole ferry docks along Route 28, and from late June to Labor Day the Whoosh Trolley runs from the Falmouth Mall through Falmouth Center to Woods Hole. Steamship Authority ferries to Martha's Vineyard leave Woods Hole year-round, and the seasonal, passenger-only Island Queen crosses from Falmouth Harbor to Oak Bluffs in about 35 minutes. Route 28 runs south from Bourne as the town's main road, and Route 151 crosses the north of town.",
+    "sources": [
+      "https://capeflyer.com/",
+      "https://www.whoi.edu/what-we-do/educate/student-life/student-life-campus/transportation",
+      "https://www.capecodrta.org/sealine/",
+      "https://www.capecodrta.org/whoosh-trolley/",
+      "https://www.steamshipauthority.com/about",
+      "https://www.islandqueen.com/",
+      "https://en.wikipedia.org/wiki/Falmouth,_Massachusetts"
+    ]
+  },
+  "schools": {"district": "Falmouth Public Schools", "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=00960000&orgtypecode=5"},
+  "places": [
+    {"name": "Shining Sea Bikeway", "line": "A 10.7-mile rail-trail from County Road (Route 151) in North Falmouth to the Steamship Authority on Crane Street in Woods Hole, named for a line of \"America the Beautiful\".", "source": "https://www.traillink.com/trail/shining-sea-bikeway/"},
+    {"name": "Nobska Light", "line": "A lighthouse on Nobska Road in Woods Hole, a station since 1828 with its present tower from 1876, overlooking Martha's Vineyard and Nonamesset Island.", "source": "https://en.wikipedia.org/wiki/Nobska_Light"},
+    {"name": "Waquoit Bay National Estuarine Research Reserve", "line": "About 2,700 acres of open water, barrier beach, marsh and upland in East Falmouth, with trails, a visitor center and boat-access campsites on Washburn Island.", "source": "https://www.mass.gov/locations/waquoit-bay-national-estuarine-research-reserve"},
+    {"name": "Falmouth Village Green", "line": "The triangular green formed by Main Street, West Main Street and Hewins Street, the town center since 1756.", "source": "https://en.wikipedia.org/wiki/Falmouth_Village_Green_Historic_District"},
+    {"name": "Woods Hole and Eel Pond", "line": "The village harbor of Eel Pond, crossed by a bascule drawbridge that opens on a posted schedule, ringed by the Marine Biological Laboratory and WHOI.", "source": "https://en.wikipedia.org/wiki/Woods_Hole,_Massachusetts"},
+    {"name": "Old Silver Beach", "line": "A public beach on Buzzards Bay off Quaker Road in North Falmouth.", "source": "https://en.wikipedia.org/wiki/North_Falmouth,_Massachusetts"}
+  ],
+  "history": [
+    {"year": "1686", "text": "First settled by English colonists in 1660, Falmouth was incorporated as a town.", "source": "https://en.wikipedia.org/wiki/Falmouth,_Massachusetts"},
+    {"year": "1756", "text": "The meeting house moved to the village green, which has been the town center since.", "source": "https://en.wikipedia.org/wiki/Falmouth_Village_Green_Historic_District"},
+    {"year": "1859", "text": "Katharine Lee Bates, author of \"America the Beautiful\", was born in Falmouth on August 12.", "source": "https://en.wikipedia.org/wiki/Katharine_Lee_Bates"},
+    {"year": "1872", "text": "The railroad reached Falmouth and Woods Hole; its right-of-way later became the Shining Sea Bikeway.", "source": "https://en.wikipedia.org/wiki/Falmouth,_Massachusetts"}
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 424, "sf_sales_2024": 428,
+    "sf_median_2025": 804000, "sf_median_2024": 740500,
+    "condo_sales_2025": null, "condo_median_2025": null, "condo_median_2024": null,
+    "reading_1": "FALMOUTH (single-family; Dec 2024, Dec 2025, Percent Change): Number of Sales 40 47 17.5%; YTD Number of Sales 428 424 -0.9%; Median Sale Price $772,500 $740,000 -4.2%; YTD Median Sale Price $740,500 $804,000 8.6%",
+    "reading_2": "FALMOUTH (single-family): YTD Number of Sales 428 424 -0.9%; YTD Median Sale Price $740,500 $804,000 8.6%"
+  },
+  "nearby": ["bourne", "mashpee", "sandwich", "barnstable"],
+  "search_notes": "'Moving to Falmouth MA' returns Redfin housing-market pages for Falmouth, East Falmouth and West Falmouth, Livability, and mover marketplaces (HireAHelper, uShip, MoveAdvisor, the last for Falmouth, Maine). No result explains the villages, the seasonal transit options (Whoosh Trolley, Island Queen, CapeFLYER via Bourne) or the town's housing plan with sources, which a sourced guide could cover.",
+  "faq": [
+    {"q": "What is the median home price in Falmouth, MA?", "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, the median single-family sale price in Falmouth for calendar year 2025 was $804,000, across 424 sales. In 2024 it was $740,500, across 428 sales."},
+    {"q": "Does Falmouth have commuter rail?", "a": "No. Falmouth has no rail station. The seasonal CapeFLYER stops in neighboring Bourne and Buzzards Bay on summer weekends, and Peter Pan buses run from the Falmouth Bus Depot to downtown Boston and Logan Airport."},
+    {"q": "How do you get from Falmouth to Martha's Vineyard?", "a": "Steamship Authority ferries leave Woods Hole for Martha's Vineyard year-round, and the seasonal, passenger-only Island Queen sails from Falmouth Harbor to Oak Bluffs in about 35 minutes."},
+    {"q": "Which school district serves Falmouth?", "a": "Falmouth Public Schools. Review its profile with DESE."}
+  ],
+  "notes": "Both Warren Group readings agreed on the single-family row. Condo fields null: the condo table text truncates at Brookline, before Falmouth. The Warren Group lists no separate rows for Falmouth villages, so the FALMOUTH row is treated as town-wide. The housing plan figures are from the March 2024 Housing Production Plan on mass.gov; owner-occupancy was not in the extracted text, so it is left out. Wikipedia's Falmouth page says Woods Hole ferries serve Nantucket as well as Martha's Vineyard; the Steamship Authority's own site says Martha's Vineyard ferries leave Woods Hole and Nantucket ferries leave Hyannis, so the record follows the Authority. Peter Pan service to the Falmouth Bus Depot is sourced to a WHOI transportation page, because peterpanbus.com's home page does not list stops; the depot is at 50 Depot Avenue per the Falmouth EDIC. A Falmouth to Edgartown ferry (M/V Pied Piper) is mentioned on the WHOI page but was not verified on the operator's site and is left out. The Island Queen's 2027 opening day is May 28 per its site. Route 28A is not named on the Wikipedia pages fetched, so it is not listed. The Waquoit Bay page's street address extracted as '131 Waquoit, East Falmouth', apparently truncated, so the street address is left out. The town history page on falmouthma.gov failed to load, so history uses Wikipedia. The Shining Sea Bikeway length is 10.7 miles on TrailLink (Wikipedia's Bates article says 11). Highfield Hall was left out because its Wikipedia page did not load. 'nearby' includes Barnstable, which does not border Falmouth (Mashpee lies between). commute.sources is an extra key listing the pages behind commute.text."
+}
