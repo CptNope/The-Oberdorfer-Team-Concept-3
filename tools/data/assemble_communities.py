@@ -19,9 +19,18 @@ PLAN = [
     ("stoneham", "north", 2), ("lowell", "north", 2),
     ("newton", "boston", 2), ("quincy", "boston", 2),
     ("springfield", "west", 2),
+    # Tier 3, added 2026-10-22 at the team's request: one Boston city guide (neighborhood
+    # guides later) and anchor towns for the remaining regions.
+    ("boston", "boston", 3), ("cambridge", "boston", 3), ("somerville", "boston", 3),
+    ("plymouth", "southshore", 3), ("braintree", "southshore", 3),
+    ("barnstable", "cape", 3), ("falmouth", "cape", 3),
+    ("new-bedford", "southcoast", 3), ("fall-river", "southcoast", 3),
+    ("pittsfield", "berkshires", 3), ("great-barrington", "berkshires", 3),
 ]
 REGION_NAMES = {"central": "Central Massachusetts", "metrowest": "MetroWest", "north": "North of Boston",
-                "boston": "Greater Boston", "west": "Pioneer Valley"}
+                "boston": "Greater Boston", "southshore": "South Shore",
+                "cape": "Cape Cod", "southcoast": "South Coast", "west": "Pioneer Valley",
+                "berkshires": "The Berkshires"}
 # Editorial extras that are not part of the research records.
 EXTRA = {
     "wakefield": {
@@ -33,7 +42,10 @@ EXTRA = {
 ART = {"worcester": "triple-decker", "lowell": "townscape", "springfield": "triple-decker", "quincy": "townscape",
        "newton": "colonial", "framingham": "colonial", "marlborough": "cape", "leominster": "cape",
        "shrewsbury": "colonial", "grafton": "cape", "westborough": "colonial", "holden": "cape",
-       "reading": "colonial", "melrose": "townscape", "stoneham": "cape"}
+       "reading": "colonial", "melrose": "townscape", "stoneham": "cape",
+       "boston": "townscape", "cambridge": "colonial", "somerville": "triple-decker", "plymouth": "cape",
+       "braintree": "colonial", "barnstable": "cape", "falmouth": "cape", "new-bedford": "triple-decker",
+       "fall-river": "triple-decker", "pittsfield": "colonial", "great-barrington": "townscape"}
 
 def main(src):
     out = []

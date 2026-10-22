@@ -34,7 +34,7 @@ The visual language evolves the team's print publication, *Wakefield at Home*, F
    - REWAP disclosures
    - privacy policy
    - IDX/MLS provider (options in `docs/idx-options.md`); outside CRM (optional; the built-in `ot-leads` is planned)
-   - final community list (the 16 guides in `tools/data/communities.json` are a proposed list)
+   - final community list (the 27 guides in `tools/data/communities.json`, Tiers 1 to 3, are a proposed list; Boston neighborhood guides are planned)
    - Brandon's and Kaitlyn's individual biographies, titles, direct lines, emails, specialties, languages and headshots (their profiles use placeholders and interim crops of the team portrait)
 4. **Market data:** always show the source, period and geography. Never present the Wakefield figures as live or statewide. Town figures are The Warren Group's calendar-year 2025 single-family table; the statewide figures are its January 20, 2026 release.
 5. **Community guides follow fair housing rules.** Describe places, housing, transit, history and amenities. Never describe who lives somewhere, never call an area "safe", "exclusive" or "family-friendly", and never rate schools: link to the district's DESE profile instead. Every fact carries a source in the town's record.

@@ -26,7 +26,7 @@ Set up 2026-10-22 with the HarborRank `seo-project-setup` workflow, in **web-evi
 ## Goals
 
 1. More qualified buyer and seller leads across Massachusetts, starting around the new Worcester office.
-2. Within 6 months of launch: all 16 town guides indexed, earning impressions for "living in / moving to (town) MA".
+2. Within 6 months of launch: all 27 town guides indexed, earning impressions for "living in / moving to (town) MA".
 3. Within 12 months: in the Google Maps local pack for "real estate agent Worcester" and "realtor Worcester MA".
 4. Leads attributed by source: the form lead types `community:<town>`, `agent:<slug>`, `buyer`, `seller`.
 
@@ -70,6 +70,6 @@ These are web-search observations only, not rankings (October 22, 2026):
 
 **`keyword-research`**, to replace estimates with real search data.
 
-- **Seeds:** the 16 town names × "homes for sale", "real estate agent", "realtor", "living in", "moving to".
+- **Seeds:** the 27 town names × "homes for sale", "real estate agent", "realtor", "living in", "moving to".
 - **Plus:** "real estate agent Worcester MA", "first time home buyer Massachusetts", "offer to purchase MA", "Title 5 inspection", "smoke detector certificate MA".
 - **Then:** `competitive-landscape` for the Worcester market, to name the competitors this README leaves open.

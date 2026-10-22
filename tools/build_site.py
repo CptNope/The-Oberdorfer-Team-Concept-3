@@ -232,7 +232,7 @@ def header(R, active, overlay=False):
   <div class="mobile-menu__foot"><a class="btn btn--gold" href="tel:{TEL}">Call {PHONE}</a><p class="caption" style="color:var(--ot-mist)">Brandon &amp; Kaitlyn Oberdorfer · Husband-and-wife team</p></div>
 </div>'''
 
-FOOTER_TOWNS = [("worcester", "Worcester"), ("shrewsbury", "Shrewsbury"), ("framingham", "Framingham"), ("wakefield", "Wakefield"), ("newton", "Newton"), ("springfield", "Springfield")]
+FOOTER_TOWNS = [("worcester", "Worcester"), ("shrewsbury", "Shrewsbury"), ("framingham", "Framingham"), ("wakefield", "Wakefield"), ("boston", "Boston"), ("springfield", "Springfield")]
 
 def footer(R):
     return f'''<footer class="site-footer">
@@ -589,8 +589,12 @@ REGIONS = [
     ("central", "Central Massachusetts", "Worcester and the towns around it, home base for the team."),
     ("metrowest", "MetroWest", "Between Worcester and Boston, along the Massachusetts Turnpike and the Framingham/Worcester Line."),
     ("north", "North of Boston", "Wakefield, where the team publishes <em>At Home</em>, its neighbors, and the Merrimack Valley."),
-    ("boston", "Greater Boston", "The city's neighbors, from the villages of Newton to the Quincy shore."),
+    ("boston", "Greater Boston", "Boston itself and its neighbors, from Cambridge and Somerville to the villages of Newton and the Quincy shore."),
+    ("southshore", "South Shore", "South of Boston along the coast and the Old Colony lines, from Braintree to Plymouth."),
+    ("cape", "Cape Cod", "The Cape's villages and harbors, from Falmouth on Buzzards Bay to Barnstable and Hyannis."),
+    ("southcoast", "South Coast", "The mill cities and working harbors of Bristol County, now on the commuter rail."),
     ("west", "Pioneer Valley", "The Connecticut River valley in Western Massachusetts."),
+    ("berkshires", "The Berkshires", "The hill towns and mill towns of Berkshire County, from Pittsfield to the southern Berkshires."),
 ]
 WARREN = "The Warren Group, MA December 2025 Sales, Prices by Town (single-family, calendar year 2025)"
 WARREN_URL = "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf"
@@ -640,14 +644,14 @@ def page_communities():
 <section class="section--tight"><div class="container"><nav aria-label="Regions"><ul class="toc-mini" style="display:flex;flex-wrap:wrap;gap:var(--space-3) var(--space-6)">{toc}</ul></nav></div></section>
 {regions}
 <section class="section"><div class="container split" style="align-items:start">
-  <div class="stack" style="grid-column:1/span 6"><p class="label">Elsewhere in Massachusetts</p><h2 class="h2">Not seeing your town?</h2><p>The team helps clients across the state, from the South Shore and Cape Cod to the Berkshires. Guides are added one at a time, each researched and sourced, never generated in bulk.</p>{link_arrow(R, R+"site/contact/", "Ask about your town")}</div>
+  <div class="stack" style="grid-column:1/span 6"><p class="label">Elsewhere in Massachusetts</p><h2 class="h2">Not seeing your town?</h2><p>The team helps clients across the state. Guides are added one at a time as the team works in a town, each researched and sourced, never generated in bulk. Boston neighborhood guides are next.</p>{link_arrow(R, R+"site/contact/", "Ask about your town")}</div>
   <div class="stack" style="grid-column:8/span 5"><p class="caption">Line drawings stand in for community photography still to be commissioned. Wakefield photo: Lake Quannapowitt Panorama, RedSoxFan274 / Wikimedia Commons, CC BY-SA 4.0, cropped.</p><p class="caption">Home prices: {WARREN}. <a href="{R}site/market/">All towns compared</a>.</p></div>
 </div></section>
 {cta_panel(R, "Exploring a move? <em>Let's compare towns together.</em>", "Relocating within Massachusetts")}'''
     item_list = {"@context": "https://schema.org", "@type": "ItemList", "name": "Massachusetts community guides",
                  "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": f"{t['name']}, Massachusetts", "url": prod(f"site/communities/{t['slug']}/")} for i, t in enumerate(TOWNS)]}
     write("communities", R, "Massachusetts Town Guides: Homes, Commutes and Prices | The Oberdorfer Team",
-          f"Local guides to {len(TOWNS)} Massachusetts communities, from Worcester and Shrewsbury to Wakefield, Newton and Springfield: housing, commuting, schools and 2025 home prices.",
+          f"Local guides to {len(TOWNS)} Massachusetts communities, from Worcester and Boston to Cape Cod and the Berkshires: housing, commuting, schools and 2025 home prices.",
           "Communities", body, ld=[crumbs_ld(trail), item_list])
 
 def fmt_people(n): return f"{n:,}"
@@ -958,7 +962,7 @@ def agent_faq(a):
         (f"How do I contact {n}?",
          f"Call or text The Oberdorfer Team at {PHONE}, or send a message from this page. Messages sent here go to {g} and are attributed to {g} in the team's lead routing."),
         (f"Which areas does {n} serve?",
-         f"{g} helps buyers and sellers across Massachusetts. The team works from Worcester, and its community guides cover Central Massachusetts, MetroWest, Greater Boston, North of Boston and the Pioneer Valley, including Wakefield, where the team publishes <em>Wakefield at Home</em>."),
+         f"{g} helps buyers and sellers across Massachusetts. The team works from Worcester, and its community guides run from Central Massachusetts and MetroWest to Boston, the South Shore, Cape Cod, the South Coast and the Berkshires, including Wakefield, where the team publishes <em>Wakefield at Home</em>."),
         (f"Which brokerage is {n} with?",
          f"{g} is part of The Oberdorfer Team, a real estate team operating under REWAP Brokerage LLC in Massachusetts."),
     ]
