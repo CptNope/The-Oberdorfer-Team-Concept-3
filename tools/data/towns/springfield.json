@@ -1,0 +1,166 @@
+{
+  "slug": "springfield",
+  "name": "Springfield",
+  "county": "Hampden County",
+  "region": "Western Massachusetts (Pioneer Valley)",
+  "population_2020": 155929,
+  "population_source": "https://en.wikipedia.org/wiki/Springfield,_Massachusetts",
+  "official_site": "https://www.springfield-ma.gov/cos/",
+  "headline": [
+    "Porches, parks and river light,",
+    "in a city that knows its neighborhoods."
+  ],
+  "answer": "Springfield is the seat of Hampden County, on the eastern bank of the Connecticut River about 24 miles north of Hartford. Sixty-eight percent of its housing is single-family homes and duplexes, and 41 percent was built before 1940. Union Station offers Amtrak and Hartford Line trains, and I-91 and I-291 run through the city.",
+  "overview": [
+    "Springfield sits on the eastern bank of the Connecticut River, about 24 miles north of Hartford, and serves as the Hampden County seat. William Pynchon founded it in 1636 as Agawam Plantation, and it became a city in 1852. The federal armory here began making small arms in 1794 and closed in 1968; its Main Arsenal now holds the National Park Service's collection of historic military firearms. James Naismith invented basketball in Springfield in 1891, and the Hall of Fame stands on the riverfront.",
+    "The city calls itself the City of Homes, a name tied to its Victorian houses. The McKnight Historic District, planned in 1881, has more than 900 of them, and the neighborhood around Forest Park has more than 600. Sixteen Acres holds much of the city's post-World War II building, and Indian Orchard grew up as its own mill town on the Chicopee River. Forest Park covers about 735 acres, with a zoo, Porter Lake and the Bright Nights holiday display. Union Station handles Amtrak, Hartford Line trains and intercity buses."
+  ],
+  "housing": {
+    "text": "The city's 2018 Housing Study found that 68 percent of Springfield's housing stock is single-family homes and duplexes, and that only 10 percent of units are in buildings with 20 or more units. It also found that 41 percent of units were built before 1940 and only 14 percent since 1980.",
+    "source": "https://www.springfield-ma.gov/housing/fileadmin/housing/Housing_Study/Housing_Study_June_2018.pdf"
+  },
+  "villages": [
+    {
+      "name": "Forest Park",
+      "line": "Garden district around the park of the same name, with more than 600 Victorian houses.",
+      "source": "https://en.wikipedia.org/wiki/Springfield,_Massachusetts"
+    },
+    {
+      "name": "McKnight",
+      "line": "Primarily residential; its historic district, planned in 1881, has more than 900 Victorian houses.",
+      "source": "https://en.wikipedia.org/wiki/Springfield,_Massachusetts"
+    },
+    {
+      "name": "Six Corners",
+      "line": "Urban and residential, including Mulberry Street in the Ridgewood Historic District.",
+      "source": "https://en.wikipedia.org/wiki/Springfield,_Massachusetts"
+    },
+    {
+      "name": "Sixteen Acres",
+      "line": "Suburban in character, with much of the city's post-World War II housing.",
+      "source": "https://en.wikipedia.org/wiki/Springfield,_Massachusetts"
+    },
+    {
+      "name": "Indian Orchard",
+      "line": "Former mill town on the Chicopee River that grew separately before joining Springfield.",
+      "source": "https://en.wikipedia.org/wiki/Springfield,_Massachusetts"
+    },
+    {
+      "name": "Metro Center",
+      "line": "Downtown, separated from the Connecticut River riverfront by I-91.",
+      "source": "https://en.wikipedia.org/wiki/Springfield,_Massachusetts"
+    }
+  ],
+  "commute": {
+    "rail": [
+      {
+        "line": "Amtrak (Northeast Regional, Valley Flyer, Vermonter, Lake Shore Limited)",
+        "stations": [
+          "Springfield Union Station"
+        ]
+      },
+      {
+        "line": "CTrail Hartford Line",
+        "stations": [
+          "Springfield Union Station"
+        ]
+      }
+    ],
+    "rail_source": "https://en.wikipedia.org/wiki/Springfield_Union_Station_(Massachusetts)",
+    "highways": [
+      "I-91",
+      "I-291",
+      "US Route 20"
+    ],
+    "text": "Springfield has no MBTA commuter rail. Union Station on Frank B. Murray Street serves Amtrak, the CTrail Hartford Line to New Haven, PVTA local buses and Peter Pan intercity buses. I-91 follows the riverfront, I-291 loops northeast from downtown to the Massachusetts Turnpike, and the Turnpike itself runs just north of the city through Chicopee."
+  },
+  "schools": {
+    "district": "Springfield Public Schools",
+    "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=02810000&orgtypecode=5"
+  },
+  "places": [
+    {
+      "name": "Forest Park",
+      "line": "About 735 acres, established in 1884, with the Zoo at Forest Park, Porter Lake and the Bright Nights holiday display.",
+      "source": "https://en.wikipedia.org/wiki/Forest_Park_(Springfield,_Massachusetts)"
+    },
+    {
+      "name": "Springfield Museums",
+      "line": "Five museums of art, history, science and Dr. Seuss at 21 Edwards Street, including the Springfield Science Museum.",
+      "source": "https://springfieldmuseums.org/"
+    },
+    {
+      "name": "Springfield Armory National Historic Site",
+      "line": "The nation's first armory, now a National Park Service site holding a large collection of historic US military small arms.",
+      "source": "https://www.nps.gov/spar/index.htm"
+    },
+    {
+      "name": "Naismith Basketball Hall of Fame",
+      "line": "The Hall of Fame at 1000 Hall of Fame Avenue, beside the Connecticut River, in a building opened in 2002.",
+      "source": "https://en.wikipedia.org/wiki/Naismith_Basketball_Hall_of_Fame"
+    },
+    {
+      "name": "Springfield Union Station",
+      "line": "The 1926 station, redeveloped as the city's rail and bus hub on Frank B. Murray Street.",
+      "source": "https://en.wikipedia.org/wiki/Springfield_Union_Station_(Massachusetts)"
+    }
+  ],
+  "history": [
+    {
+      "year": "1636",
+      "text": "Founded by William Pynchon as Agawam Plantation.",
+      "source": "https://en.wikipedia.org/wiki/Springfield,_Massachusetts"
+    },
+    {
+      "year": "1852",
+      "text": "Incorporated as a city on May 25.",
+      "source": "https://en.wikipedia.org/wiki/Springfield,_Massachusetts"
+    },
+    {
+      "year": "1891",
+      "text": "James Naismith invented basketball in Springfield.",
+      "source": "https://en.wikipedia.org/wiki/Springfield,_Massachusetts"
+    }
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 1040,
+    "sf_sales_2024": 1030,
+    "sf_median_2025": 290000,
+    "sf_median_2024": 280000,
+    "condo_sales_2025": null,
+    "condo_median_2025": null,
+    "condo_median_2024": null,
+    "reading_1": "Springfield (single-family), columns Dec 2024 | Dec 2025 | Percent Change. YTD Number of Sales: 1,030 | 1,040 | 1.0%. YTD Median Sale Price: $280,000 | $290,000 | 3.6%.",
+    "reading_2": "SPRINGFIELD: \"YTD Number of Sales 1,030 1,040 1.0%\"; \"YTD Median Sale Price $280,000 $290,000 3.6%\""
+  },
+  "nearby": [
+    "chicopee",
+    "west-springfield",
+    "longmeadow",
+    "ludlow",
+    "wilbraham"
+  ],
+  "search_notes": "For 'Springfield MA real estate agent', results are directories and referral sites (Ramsey Solutions, BiggerPockets, HomeLight pages for East Springfield, Liberty Heights and Indian Orchard, Clever), one agent profile and a brokerage job listing; Zillow and Redfin did not surface in these results. 'Moving to Springfield MA' returns only moving companies (All My Sons, Allied) and templated city-to-city mover pages. There is no ranking local guide that walks through the neighborhoods, Union Station rail options and sourced sale figures.",
+  "faq": [
+    {
+      "q": "What is the median home price in Springfield, MA?",
+      "a": "For calendar year 2025, The Warren Group reports a single-family median sale price of $290,000 in Springfield, across 1,040 sales. In 2024 the median was $280,000 on 1,030 sales. Source: The Warren Group, MA December 2025 Sales, Prices by Town."
+    },
+    {
+      "q": "Does Springfield have commuter rail?",
+      "a": "Not MBTA commuter rail. Springfield Union Station is served by Amtrak (Northeast Regional, Valley Flyer, Vermonter and Lake Shore Limited) and by the CTrail Hartford Line to Hartford and New Haven."
+    },
+    {
+      "q": "Which school district serves Springfield?",
+      "a": "Springfield Public Schools. Review its profile with DESE."
+    },
+    {
+      "q": "Why is Springfield called the City of Homes?",
+      "a": "The nickname comes from its Victorian residential architecture. The McKnight Historic District alone has more than 900 Victorian houses."
+    }
+  ],
+  "notes": "The Warren Group condo table could not be read: both fetches returned text cut off partway through Brookline, so all condo fields are null. Springfield is outside the MBTA commuter rail system, so the rail fields list Amtrak and CTrail at Union Station, sourced from Wikipedia; mbta.com has nothing to cite here. I-291 and the Turnpike's route north of the city come from AARoads (https://www.aaroads.com/guides/i-291-ma); the Turnpike is not listed as passing through the city. US Route 20 is mentioned on the same AARoads page near Indian Orchard. The 2018 Housing Study uses 2016 ACS data. Wikipedia gives both 1968 and 1969 for the Armory's closing; the NPS site says 1968. 'City of Homes' is confirmed on springfield-ma.gov. Population is from Wikipedia, citing the 2020 Census."
+}

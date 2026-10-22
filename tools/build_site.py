@@ -23,14 +23,6 @@ LISTINGS = [
     dict(slug="demo-residence-five", name="Demo Residence Five", town="Melrose", county="Middlesex", price=1250000, beds=5, baths="3.5", sqft=3200, kind="Single-family", style="Colonial", art="colonial", dark=False, open_house=False, rail=True, new=False, reduced=False, year="1906", lot="0.33 acres"),
     dict(slug="demo-residence-six", name="Demo Residence Six", town="Stoneham", county="Middlesex", price=549000, beds=3, baths="1.5", sqft=1400, kind="Single-family", style="Cape", art="cape", dark=True, open_house=False, rail=False, new=True, reduced=False, year="1948", lot="0.18 acres"),
 ]
-COMMUNITIES = [
-    dict(slug="wakefield", name="Wakefield", county="Middlesex County", ready=True),
-    dict(slug=None, name="Worcester", county="Worcester County", ready=False, art="triple-decker"),
-    dict(slug=None, name="Boston", county="Suffolk County", ready=False, art="townscape"),
-    dict(slug=None, name="Reading", county="Middlesex County", ready=False, art="cape"),
-    dict(slug=None, name="Stoneham", county="Middlesex County", ready=False, art="colonial"),
-    dict(slug=None, name="Melrose", county="Middlesex County", ready=False, art="townscape"),
-]
 NAV = [("Buy", "buy/"), ("Sell", "sell/"), ("Communities", "communities/"), ("Our Team", "team/"),
        ("Journal", "journal/"), ("Join Our Team", "join/"), ("Contact", "contact/")]
 
@@ -69,9 +61,11 @@ def breadcrumbs(R, trail):
 
 def crumbs_ld(trail):
     return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-        {"@type": "ListItem", "position": i + 1, "name": html.unescape(l)} for i, (l, _) in enumerate(trail)]}
+        {"@type": "ListItem", "position": i + 1, "name": html.unescape(l), "item": SITE + h} for i, (l, h) in enumerate(trail)]}
 
-def page_hero(R, trail, title_lines, lead=None, aside=None, navy=False, photo=None, photo_alt="", focal="50% 50%"):
+def page_hero(R, trail, title_lines, lead=None, aside=None, navy=False, photo=None, photo_alt="", focal="50% 50%", h1=None):
+    """h1: the search-facing page heading (e.g. "Living in Worcester, MA"). When given, it is
+    the page's <h1>, set as the kicker above the display line, and the brand line becomes a <p>."""
     spans = "".join(f"<span>{t}</span>" for t in title_lines)
     cls = "page-hero"
     img = ""
@@ -81,7 +75,11 @@ def page_hero(R, trail, title_lines, lead=None, aside=None, navy=False, photo=No
         img = f'<img src="{R}{photo}" alt="{e(photo_alt)}" style="object-position:{focal}" fetchpriority="high">'
     out = f'<section class="{cls}" aria-labelledby="page-title">{img}<div class="container page-hero__grid">'
     out += breadcrumbs(R, trail)
-    out += f'<h1 class="page-hero__title display-l answer" id="page-title">{spans}</h1>'
+    if h1:
+        out += f'<h1 class="label page-hero__kicker" id="page-title">{h1}</h1>'
+        out += f'<p class="page-hero__title display-l answer">{spans}</p>'
+    else:
+        out += f'<h1 class="page-hero__title display-l answer" id="page-title">{spans}</h1>'
     if aside: out += f'<div class="page-hero__aside">{aside}</div>'
     if lead: out += f'<p class="page-hero__lead lead">{lead}</p>'
     return out + "</div></section>"
@@ -115,11 +113,6 @@ def agent_card_bk(R):
 
 def seat_card(R):
     return f'''<div class="seat"><div class="stack" style="--stack:var(--space-3);display:grid;justify-items:center">{icon(R, 'user', 'icon')}<p class="h4">Your seat at the table</p><p class="body-s">The team is growing. New agent profiles appear here as they join.</p>{link_arrow(R, R + "site/join/", "Join our team")}</div></div>'''
-
-def community_card(R, c):
-    if c["ready"]:
-        return f'''<a class="community-card" href="{R}site/communities/{c['slug']}/"><img src="{R}assets/img/photo/lake-quannapowitt.webp" alt="" loading="lazy" style="object-position:30% 50%"><div class="community-card__body"><span class="community-card__meta">{c['county']}</span><span class="community-card__name">{c['name']}</span></div></a>'''
-    return f'''<div class="community-card" aria-label="{c['name']}, guide in preparation"><div class="demo-illu" style="position:absolute;inset:0">{art(R, c['art'])}</div><div class="community-card__body"><span class="community-card__meta">{c['county']} · Guide in preparation</span><span class="community-card__name">{c['name']}</span></div></div>'''
 
 ARTICLES = [
     dict(slug="the-best-plans-are-close-to-home", cat="Seasonal features", title="The best plans are close to home", dek="Six ways to enjoy Wakefield and the surrounding area this season.", img="assets/img/photo/breakheart-reservation.webp", issue="Wakefield at Home · Fall 2026", full=True),
@@ -187,6 +180,7 @@ WRITTEN = []   # every page path, for sitemap.xml and llms.txt
 def head(R, title, desc, extra_ld=None, canonical_path="", og_type="website", og_image=None):
     ld = {"@context": "https://schema.org", "@type": "RealEstateAgent", "@id": TEAM_ID, "name": "The Oberdorfer Team",
           "telephone": PHONE, "areaServed": {"@type": "State", "name": "Massachusetts"},
+          "address": {"@type": "PostalAddress", "addressLocality": "Worcester", "addressRegion": "MA", "addressCountry": "US"},
           "slogan": "Luxury at every price point.",
           "parentOrganization": {"@type": "Organization", "@id": BROKER_ID, "name": "REWAP Brokerage LLC", "url": "https://rewapbrokerage.com/"}}
     blocks = [ld] + (extra_ld or [])
@@ -234,17 +228,20 @@ def header(R, active, overlay=False):
   <div class="mobile-menu__foot"><a class="btn btn--gold" href="tel:{TEL}">Call {PHONE}</a><p class="caption" style="color:var(--ot-mist)">Brandon &amp; Kaitlyn Oberdorfer · Husband-and-wife team</p></div>
 </div>'''
 
+FOOTER_TOWNS = [("worcester", "Worcester"), ("shrewsbury", "Shrewsbury"), ("framingham", "Framingham"), ("wakefield", "Wakefield"), ("newton", "Newton"), ("springfield", "Springfield")]
+
 def footer(R):
     return f'''<footer class="site-footer">
   <div class="container">
     <div class="site-footer__grid">
       <div class="stack" style="--stack:var(--space-5)">
         <img src="{R}assets/logo/logo-primary-gold.svg" alt="The Oberdorfer Team" width="300" height="40" style="width:17rem">
-        <p class="body-s" style="max-width:30ch">Luxury at every price point. For the home you have. For the life you are building.</p>
+        <p class="body-s" style="max-width:30ch">Luxury at every price point. A husband-and-wife real estate team based in Worcester, serving all of Massachusetts.</p>
         <a class="cta-panel__phone" href="tel:{TEL}" style="font-size:2rem">{PHONE}</a>
         <form class="newsletter" style="color:var(--ot-ivory)" data-newsletter aria-label="Seasonal publication sign-up"><label class="visually-hidden" for="f-news">Email address</label><input class="input" id="f-news" type="email" autocomplete="email" placeholder="Email for the At Home issues" style="color:var(--ot-ivory)"><button class="btn btn--small" type="submit">Subscribe</button></form>
       </div>
       <div><h2>Explore</h2><ul><li><a href="{R}site/buy/">Buy a home</a></li><li><a href="{R}site/sell/">Sell your home</a></li><li><a href="{R}site/market/">Market insights</a></li><li><a href="{R}site/communities/">Communities</a></li></ul></div>
+      <div><h2>Communities</h2><ul>{"".join(f'<li><a href="{R}site/communities/{k}/">{n}, MA</a></li>' for k, n in FOOTER_TOWNS)}<li><a href="{R}site/communities/">All town guides</a></li></ul></div>
       <div><h2>Team</h2><ul><li><a href="{R}site/team/">Meet the team</a></li><li><a href="{R}site/agents/brandon-kaitlyn-oberdorfer/">Brandon &amp; Kaitlyn</a></li><li><a href="{R}site/agents/brandon-oberdorfer/">Brandon Oberdorfer</a></li><li><a href="{R}site/agents/kaitlyn-oberdorfer/">Kaitlyn Oberdorfer</a></li><li><a href="{R}site/join/">Join our team</a></li><li><a href="{R}site/office/">Team office</a></li></ul></div>
       <div><h2>Read</h2><ul><li><a href="{R}site/journal/">Journal</a></li><li><a href="{R}site/journal/#archive">At Home archive</a></li><li><a href="{R}site/contact/">Contact</a></li></ul></div>
     </div>
@@ -277,19 +274,28 @@ def cta_panel(R, heading_html="For the home you have. <em>For the life you are b
 <div class="stack" style="grid-column:9/span 4;--stack:var(--space-4)"><a class="cta-panel__phone" href="tel:{TEL}">{PHONE}</a><p class="caption" style="color:var(--ot-mist)">Brandon &amp; Kaitlyn Oberdorfer · Husband-and-wife team · Top Producer</p><div class="cluster"><a class="btn" href="{R}{cta[1]}">{cta[0]}</a></div></div></div></div></div></section>'''
 
 # =========================================================================== PAGES
+def home_town_stats(R):
+    out = ""
+    for k in ("worcester", "wakefield"):
+        t = TOWN_BY_SLUG.get(k)
+        m = (t or {}).get("market") or {}
+        if m.get("sf_median_2025"):
+            out += f'<div class="stat"><span class="stat__value tabular">{money(m["sf_median_2025"])}</span><span class="stat__label">{t["name"]} single-family median</span><span class="stat__period">2025 · <a href="{R}site/communities/{k}/">{t["name"]} guide</a></span></div>'
+    return out
+
 def page_home():
     R = "../"
     feat = "".join(listing_card(R, l, f"{R}site/buy/{l['slug']}/") for l in LISTINGS[:3])
-    comm = "".join(community_card(R, c) for c in COMMUNITIES[:4])
+    comm = "".join(community_card(R, t, i) for i, t in enumerate([TOWN_BY_SLUG[k] for k in ("worcester", "shrewsbury", "wakefield", "framingham") if k in TOWN_BY_SLUG]))
     arts = "".join(article_card(R, a) for a in ARTICLES[:3])
     body = f'''
 <section class="hero-cover home-hero folio-frame" aria-labelledby="home-title">
   <div class="hero-cover__media"><img src="{R}assets/img/photo/cover-portrait.webp" alt="Brandon and Kaitlyn Oberdorfer outside a Massachusetts home in autumn" width="1103" height="1426" fetchpriority="high"></div>
   <div class="hero-cover__inner">
     <div class="home-hero__copy">
-      <p class="label home-hero__issue">Massachusetts real estate · Husband-and-wife team</p>
-      <h1 class="display-xl answer" id="home-title"><span>Luxury at</span><span>every price point.</span></h1>
-      <p class="lead">Thoughtful service. Creative marketing. A personal connection to every move.</p>
+      <h1 class="label home-hero__issue" id="home-title">Massachusetts real estate team · Based in Worcester</h1>
+      <p class="display-xl answer"><span>Luxury at</span><span>every price point.</span></p>
+      <p class="lead">Brandon and Kaitlyn Oberdorfer are a husband-and-wife real estate team based in Worcester, helping buyers and sellers across Massachusetts. Thoughtful service. Creative marketing. A personal connection to every move.</p>
     </div>
     <form class="search-bar" role="search" action="{R}site/buy/" method="get" aria-label="Search homes">
       <div class="field"><label class="field__label" for="h-q">Location</label><input class="input" id="h-q" name="q" type="text" placeholder="Town, neighborhood or ZIP" autocomplete="off"></div>
@@ -351,28 +357,27 @@ def page_home():
 
 <section class="section surface-muted" aria-labelledby="comm-title">
   <div class="container">
-    {section_head("Communities", "Across Massachusetts", ["Close to home,", "wherever home is."], lead="Local guides written the way we write <em>At Home</em>: researched, credited and useful.", aside=link_arrow(R, R+"site/communities/", "All communities"), title_id="comm-title")}
+    {section_head("Communities", "Across Massachusetts", ["Close to home,", "wherever home is."], lead=f"{len(TOWNS)} town guides, from Worcester to Wakefield, written the way we write <em>At Home</em>: researched, credited and useful.", aside=link_arrow(R, R+"site/communities/", "All town guides"), title_id="comm-title")}
     <div class="card-grid-4">{comm}</div>
-    <p class="caption" style="margin-top:var(--space-4)">Lake Quannapowitt Panorama, RedSoxFan274 / Wikimedia Commons, CC BY-SA 4.0, cropped.</p>
+    <p class="caption" style="margin-top:var(--space-4)">Lake Quannapowitt Panorama, RedSoxFan274 / Wikimedia Commons, CC BY-SA 4.0, cropped. Line drawings stand in for community photography still to be commissioned.</p>
   </div>
 </section>
 
 <section class="section" aria-labelledby="mkt-title">
   <div class="container split" style="align-items:center">
     <div style="grid-column:1/span 5" class="stack">
-      <p class="label">Market insight · Wakefield</p>
+      <p class="label">Market insight · Massachusetts, 2025</p>
       <h2 class="display-m answer" id="mkt-title"><span>Know the market.</span><span>Love the home.</span></h2>
-      <p>A useful snapshot helps you ask better questions. A thoughtful comparison helps you make better decisions.</p>
-      {link_arrow(R, R+"site/market/", "Read the market insight")}
+      <p>The Massachusetts single-family median sale price was $638,000 in 2025. Town by town it ranges widely, which is why every plan starts with comparable closed sales.</p>
+      {link_arrow(R, R+"site/market/", "Compare 2025 prices by town")}
     </div>
     <div style="grid-column:7/span 6">
       <div class="stat-panel">
-        <div class="stat"><span class="stat__value tabular">$786,979</span><span class="stat__label">Median sale price</span><span class="stat__period">3 months ending August 2026</span></div>
-        <div class="stat"><span class="stat__value tabular">21</span><span class="stat__label">Median days on market</span><span class="stat__period">August 2026</span></div>
-        <div class="stat"><span class="stat__value tabular">$483</span><span class="stat__label">Median sold price / sq. ft.</span><span class="stat__period">Rolling 3-month snapshot</span></div>
-        <div class="stat"><span class="stat__value tabular">103.3%</span><span class="stat__label">Sale-to-list price</span><span class="stat__period">August 2026</span></div>
+        <div class="stat"><span class="stat__value tabular">$638,000</span><span class="stat__label">Massachusetts single-family median</span><span class="stat__period">2025, up 3.7% from 2024</span></div>
+        <div class="stat"><span class="stat__value tabular">$537,000</span><span class="stat__label">Massachusetts condominium median</span><span class="stat__period">2025</span></div>
+        {home_town_stats(R)}
       </div>
-      <p class="stat-source">Source: Redfin, Wakefield Housing Market, accessed October 10, 2026. Wakefield town, all home types. Figures may be revised; not a valuation of any home.</p>
+      <p class="stat-source">Source: The Warren Group, MA December 2025 Sales (statewide) and Prices by Town (single-family, calendar year 2025). Not live data and not a valuation of any home.</p>
     </div>
   </div>
 </section>
@@ -382,7 +387,7 @@ def page_home():
     <div style="grid-column:1/span 6" class="stack">
       <p class="label">A growing team</p>
       <h2 class="display-m answer" id="team-title"><span>One standard,</span><span>shared by every agent.</span></h2>
-      <p>The Oberdorfer Team is preparing to open a team office and welcome new agents who share its care for clients and presentation.</p>
+      <p>The Oberdorfer Team works from Worcester and is welcoming new agents who share its care for clients and presentation.</p>
       <div class="cluster">{link_arrow(R, R+"site/team/", "Meet the team")}{link_arrow(R, R+"site/join/", "Join our team")}</div>
     </div>
     <div style="grid-column:8/span 5" class="cols">{agent_card_bk(R).replace('class="agent-card"','class="agent-card" style="grid-column:1/-1"')}</div>
@@ -396,13 +401,13 @@ def page_home():
   </div>
 </section>
 {cta_panel(R)}'''
-    write("", R, "The Oberdorfer Team · Luxury at every price point", "Brandon and Kaitlyn Oberdorfer, a husband-and-wife Massachusetts real estate team. Thoughtful service, creative marketing and a personal connection to every move.", "Home", body, overlay=False)
+    write("", R, "The Oberdorfer Team | Massachusetts Real Estate, Based in Worcester", "Brandon and Kaitlyn Oberdorfer are a husband-and-wife real estate team based in Worcester, helping buyers and sellers across Massachusetts. Call 406-250-7620.", "Home", body, overlay=False)
 
 def page_buy():
     R = "../../"
     cards = "".join(listing_card(R, l, f"{R}site/buy/{l['slug']}/") for l in LISTINGS)
     trail = [("Home", "site/"), ("Buy", "site/buy/")]
-    body = page_hero(R, trail, ["Find the home", "that fits your life."], lead="Search homes across Massachusetts, then test the routine as well as the floor plan.", aside=f'<span class="saved-count" data-saved-count>{icon(R,"heart")}<span>0 saved</span></span>') + f'''
+    body = page_hero(R, trail, ["Find the home", "that fits your life."], h1="Buy a home in Massachusetts", lead="Search homes across Massachusetts, then test the routine as well as the floor plan.", aside=f'<span class="saved-count" data-saved-count>{icon(R,"heart")}<span>0 saved</span></span>') + f'''
 <section class="section--tight" id="search" aria-label="Property search">
   <div class="container">
     <form class="search-bar" role="search" data-listing-search aria-label="Search homes (demo data)">
@@ -441,6 +446,28 @@ def page_buy():
   </div>
 </section>
 
+<section class="section" id="massachusetts" aria-labelledby="ma-buy-title">
+  <div class="container split" style="align-items:start">
+    <div class="stack" style="grid-column:1/span 5;--stack:var(--space-5)">
+      <p class="label">Buying in Massachusetts</p>
+      <h2 class="display-m answer" id="ma-buy-title"><span>What is different</span><span>about buying here.</span></h2>
+      <p>In Massachusetts, a signed offer to purchase is usually a binding contract, a longer purchase and sale agreement follows the home inspection, and an attorney conducts the closing. Older homes and homes on septic systems come with their own required paperwork.</p>
+    </div>
+    <ol class="steps" style="grid-column:7/span 6">
+      <li><div><h3>The offer to purchase</h3><p class="body-s">A short standard form sets the price, deposit and contingencies, such as the home inspection and financing. Because the signed offer is usually binding on its own, the contingencies belong in it from the start.</p></div></li>
+      <li><div><h3>The home inspection</h3><p class="body-s">The inspection period is set in the offer, often about a week to ten days. Repairs or credits are negotiated before the next contract is signed.</p></div></li>
+      <li><div><h3>The purchase and sale agreement</h3><p class="body-s">The longer, detailed contract, usually drafted or reviewed by attorneys. It becomes the final agreement between buyer and seller.</p></div></li>
+      <li><div><h3>An attorney-led closing</h3><p class="body-s">Massachusetts closings are conducted by attorneys. The closing attorney searches the title, prepares the closing documents and records the deed and mortgage at the county registry of deeds.</p></div></li>
+      <li><div><h3>Homes built before 1978</h3><p class="body-s">Before you sign a purchase and sale agreement, the seller gives you the state's Property Transfer Lead Paint Notification and any lead reports for the home.</p></div></li>
+      <li><div><h3>Homes on a septic system</h3><p class="body-s">A Title 5 inspection is generally required within two years before the sale. Ask for the report early.</p></div></li>
+    </ol>
+  </div>
+  <div class="container" style="margin-top:var(--space-7)">
+    <div class="panel"><p class="label">First-time buyers</p><p class="body-s" style="margin-top:var(--space-2)">The Massachusetts Housing Partnership's ONE+ Mortgage offers discounted fixed rates, no private mortgage insurance and up to $50,000 in down payment and closing cost assistance to eligible first-time buyers in the 26 Gateway Cities, Framingham, Randolph and Boston. Income, asset and credit limits apply, and a homebuyer class is required.</p><p class="caption" style="margin-top:var(--space-3)">Source: <a href="https://www.mhp.net/news/2024/one-plus-launch">Massachusetts Housing Partnership</a>. Check current terms with MHP and a participating lender.</p></div>
+    <p class="caption" style="margin-top:var(--space-5)">Sources: <a href="https://www.nolo.com/legal-encyclopedia/relocating-what-know-before-buying-home-massachusetts.html">Nolo, Relocating to Massachusetts</a>; <a href="https://www.mass.gov/service-details/property-transfer-lead-paint-notification">Mass.gov, Property Transfer Lead Paint Notification</a>; <a href="https://www.mass.gov/guides/buying-or-selling-property-with-a-septic-system">Mass.gov, Buying or selling property with a septic system</a>. General information, not legal advice; your attorney confirms the details for your purchase.</p>
+  </div>
+</section>
+
 <section class="section" aria-labelledby="buyer-form-title">
   <div class="container split" style="align-items:start">
     <div class="stack" style="grid-column:1/span 5;--stack:var(--space-5)">
@@ -454,7 +481,7 @@ def page_buy():
     </div>
   </div>
 </section>'''
-    write("buy", R, "Buy a home in Massachusetts · The Oberdorfer Team", "Search homes across Massachusetts and plan your purchase with Brandon and Kaitlyn Oberdorfer: preapproval, priorities and the true cost of ownership.", "Buy", body, ld=[crumbs_ld(trail)])
+    write("buy", R, "Buy a Home in Massachusetts | The Oberdorfer Team", "How buying a home works in Massachusetts, from preapproval to the offer, the purchase and sale agreement and an attorney-led closing. Search homes and plan with Brandon and Kaitlyn.", "Buy", body, ld=[crumbs_ld(trail)])
 
 def page_listing(l):
     R = "../../../"
@@ -503,7 +530,7 @@ def page_sell():
            ("What does the marketing include?", "Professional photography, a written property story and editorial presentation across the website, print and social channels. The specific package is confirmed in your consultation.")]
     faq_html = "".join(f'<details{" open" if i==0 else ""}><summary>{q}</summary><div class="accordion__body body-s"><p>{a}</p></div></details>' for i,(q,a) in enumerate(faq))
     faq_ld = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in faq]}
-    body = page_hero(R, trail, ["Make your home", "feel exceptional."], lead="Thoughtful presentation. Clear pricing. A plan that fits your life.", navy=True, aside=f'<a class="btn btn--gold" href="#consult">Request a market review</a>') + f'''
+    body = page_hero(R, trail, ["Make your home", "feel exceptional."], h1="Sell your home in Massachusetts", lead="Thoughtful presentation. Clear pricing. A plan that fits your life.", navy=True, aside=f'<a class="btn btn--gold" href="#consult">Request a market review</a>') + f'''
 <section class="section"><div class="container">
   {section_head("If you are selling", "Sell", ["Three decisions", "that shape a sale."], title_id="steps-title")}
   <ol class="steps" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));display:grid;gap:var(--space-7) var(--gutter)">
@@ -529,33 +556,279 @@ def page_sell():
     <div><h3 class="h4">Launch</h3><p class="body-s" style="margin-top:var(--space-2)">A launch date chosen around your calendar, with showing preferences agreed up front.</p></div>
   </div>
 </div></section>
-<section class="section surface-muted" id="consult"><div class="container split" style="align-items:start">
+<section class="section surface-muted" id="massachusetts" aria-labelledby="ma-sell-title"><div class="container split" style="align-items:start">
+  <div style="grid-column:1/span 5" class="stack"><p class="label">Selling in Massachusetts</p><h2 class="display-m answer" id="ma-sell-title"><span>What sellers here</span><span>need before closing.</span></h2><p>Massachusetts sellers usually need a smoke and carbon monoxide certificate from the local fire department, a Title 5 report if the home has a septic system, and the state lead paint notification if the home was built before 1978. The deed excise is paid at closing.</p></div>
+  <div style="grid-column:7/span 6"><table class="spec-table"><tbody>
+    <tr><th scope="row">Smoke and CO certificate</th><td>The local fire department inspects the smoke and carbon monoxide alarms and issues a Certificate of Compliance before the sale (M.G.L. c. 148, §§ 26F and 26F½). Book it early; buyers and lenders expect it at closing.</td></tr>
+    <tr><th scope="row">Title 5 septic inspection</th><td>For homes on a septic system, an inspection within two years before the sale. If weather prevents it, it can take place up to six months after.</td></tr>
+    <tr><th scope="row">Lead paint notification</th><td>For homes built before 1978, give buyers the Property Transfer Lead Paint Notification and any lead reports before the purchase and sale agreement is signed.</td></tr>
+    <tr><th scope="row">Deed excise</th><td>Under M.G.L. c. 64D, $2 for each $500 of the price; Barnstable County has its own rate. Your closing attorney confirms the exact amount.</td></tr>
+  </tbody></table>
+  <p class="caption" style="margin-top:var(--space-4)">Sources: <a href="https://www.mass.gov/doc/consumer-guide-to-smoke-detectors-when-selling-home/download">Mass.gov, Consumer guide to smoke detectors when selling a home</a>; <a href="https://www.mass.gov/guides/buying-or-selling-property-with-a-septic-system">Mass.gov, septic systems</a>; <a href="https://www.mass.gov/service-details/property-transfer-lead-paint-notification">Mass.gov, lead paint notification</a>; <a href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIX/Chapter64D/Section1">M.G.L. c. 64D, § 1</a>. General information, not legal advice.</p></div>
+</div></section>
+<section class="section " id="consult"><div class="container split" style="align-items:start">
   <div style="grid-column:1/span 5" class="stack"><p class="label">Seller consultation</p><h2 class="display-m answer" id="consult-title"><span>Ask for a</span><span>property-specific review.</span></h2><p>The townwide median is a starting point. Your best comparisons are recent closed sales that resemble your home. We prepare them before we meet.</p><div class="accordion" style="margin-top:var(--space-5)">{faq_html}</div></div>
   <div style="grid-column:7/span 6" class="panel">{form(R, "seller", "Request a market review", contact_fields("sf") + field("sf-address","Property address",req=True,auto="street-address",hint="Used only to prepare comparable sales for your home.") + '<div class="form__row">' + select("sf-type","Home type",["Single-family","Condominium","Multi-family","Other"]) + select("sf-timing","Timing",["Within 3 months","3–6 months","6–12 months","Just curious"]) + '</div>' + reach_pref("sf") + field("sf-msg","Anything we should know?","textarea",opt=True,ph="Recent updates, timing, your next move…"), "Request my market review", "seller", "h3")}</div>
 </div></section>
 {cta_panel(R)}'''
-    write("sell", R, "Sell your home · The Oberdorfer Team", "Pricing strategy, preparation, photography and launch. Request a property-specific market review from Brandon and Kaitlyn Oberdorfer.", "Sell", body, ld=[crumbs_ld(trail), faq_ld])
+    write("sell", R, "Sell Your Home in Massachusetts | The Oberdorfer Team", "Pricing from comparable closed sales, the certificates Massachusetts sellers need, preparation, photography and launch. Request a market review from Brandon and Kaitlyn.", "Sell", body, ld=[crumbs_ld(trail), faq_ld])
+
+# --------------------------------------------------------------------------- communities and market
+# Town data lives in tools/data/communities.json: one record per guide, researched and sourced
+# (see tools/data/README.md). Region order and tiers come from REGIONS below. The tiers are the
+# proposed priority from the October 2026 SEO review; the team has not confirmed the final list.
+DATA = os.path.join(ROOT, "tools", "data")
+with open(os.path.join(DATA, "communities.json")) as _f:
+    TOWNS = json.load(_f)
+TOWN_BY_SLUG = {t["slug"]: t for t in TOWNS}
+REGIONS = [
+    ("central", "Central Massachusetts", "Worcester and the towns around it, home base for the team."),
+    ("metrowest", "MetroWest", "Between Worcester and Boston, along the Massachusetts Turnpike and the Framingham/Worcester Line."),
+    ("north", "North of Boston", "Wakefield, where the team publishes <em>At Home</em>, its neighbors, and the Merrimack Valley."),
+    ("boston", "Greater Boston", "The city's neighbors, from the villages of Newton to the Quincy shore."),
+    ("west", "Pioneer Valley", "The Connecticut River valley in Western Massachusetts."),
+]
+WARREN = "The Warren Group, MA December 2025 Sales, Prices by Town (single-family, calendar year 2025)"
+WARREN_URL = "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf"
+ART_CYCLE = ["colonial", "cape", "triple-decker", "townscape"]
+
+def pct(a, b):
+    if not a or not b: return None
+    return (b - a) / a * 100
+
+def fmt_pct(ch):
+    if ch is None: return "n/a"
+    return "No change" if abs(ch) < 0.05 else f"{ch:+.1f}%"
+
+def town_art(t, i=0):
+    return t.get("art") or ART_CYCLE[i % len(ART_CYCLE)]
+
+def community_card(R, t, i=0):
+    m = t.get("market") or {}
+    med = f" · 2025 median {money(m['sf_median_2025'])}" if m.get("sf_median_2025") else ""
+    if t["slug"] == "wakefield":
+        media = f'<img src="{R}assets/img/photo/lake-quannapowitt.webp" alt="" loading="lazy" style="object-position:30% 50%">'
+    else:
+        media = f'<div class="demo-illu" style="position:absolute;inset:0">{art(R, town_art(t, i))}</div>'
+    return f'''<a class="community-card" href="{R}site/communities/{t['slug']}/">{media}<div class="community-card__body"><span class="community-card__meta">{t['county']}{med}</span><span class="community-card__name">{t['name']}</span></div></a>'''
+
+def towns_in(region_key):
+    return [t for t in TOWNS if t["region_key"] == region_key]
+
+def page_communities():
+    R = "../../"
+    trail = [("Home", "site/"), ("Communities", "site/communities/")]
+    regions = ""
+    for i, (key, name, blurb) in enumerate(REGIONS):
+        ts = towns_in(key)
+        if not ts: continue
+        cards = "".join(community_card(R, t, j) for j, t in enumerate(ts))
+        muted = " surface-muted" if i % 2 else ""
+        regions += f'''<section class="section{muted}" id="{key}" aria-labelledby="{key}-title"><div class="container">
+  {section_head(name, f"{len(ts)} guide{'s' if len(ts) != 1 else ''}", [name + "."], lead=blurb, title_id=key + "-title")}
+  <div class="card-grid-3" style="gap:var(--gutter)">{cards}</div>
+</div></section>'''
+    toc = "".join(f'<li><a href="#{k}">{n}</a></li>' for k, n, _ in REGIONS if towns_in(k))
+    names = ", ".join(t["name"] for t in TOWNS)
+    body = page_hero(R, trail, ["Close to home,", "wherever home is."], h1="Massachusetts community guides",
+                     lead=f"The Oberdorfer Team works from Worcester and helps buyers and sellers across Massachusetts. These {len(TOWNS)} guides cover housing, neighborhoods, commuting, schools and 2025 home prices, each with its sources.",
+                     aside='<span class="badge badge--proposed">Proposed list · team to confirm</span>') + f'''
+<section class="section--tight"><div class="container"><nav aria-label="Regions"><ul class="toc-mini" style="display:flex;flex-wrap:wrap;gap:var(--space-3) var(--space-6)">{toc}</ul></nav></div></section>
+{regions}
+<section class="section"><div class="container split" style="align-items:start">
+  <div class="stack" style="grid-column:1/span 6"><p class="label">Elsewhere in Massachusetts</p><h2 class="h2">Not seeing your town?</h2><p>The team helps clients across the state, from the South Shore and Cape Cod to the Berkshires. Guides are added one at a time, each researched and sourced, never generated in bulk.</p>{link_arrow(R, R+"site/contact/", "Ask about your town")}</div>
+  <div class="stack" style="grid-column:8/span 5"><p class="caption">Line drawings stand in for community photography still to be commissioned. Wakefield photo: Lake Quannapowitt Panorama, RedSoxFan274 / Wikimedia Commons, CC BY-SA 4.0, cropped.</p><p class="caption">Home prices: {WARREN}. <a href="{R}site/market/">All towns compared</a>.</p></div>
+</div></section>
+{cta_panel(R, "Exploring a move? <em>Let's compare towns together.</em>", "Relocating within Massachusetts")}'''
+    item_list = {"@context": "https://schema.org", "@type": "ItemList", "name": "Massachusetts community guides",
+                 "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": f"{t['name']}, Massachusetts", "url": SITE + f"site/communities/{t['slug']}/"} for i, t in enumerate(TOWNS)]}
+    write("communities", R, "Massachusetts Town Guides: Homes, Commutes and Prices | The Oberdorfer Team",
+          f"Local guides to {len(TOWNS)} Massachusetts communities, from Worcester and Shrewsbury to Wakefield, Newton and Springfield: housing, commuting, schools and 2025 home prices.",
+          "Communities", body, ld=[crumbs_ld(trail), item_list])
+
+def fmt_people(n): return f"{n:,}"
+
+def page_town(t):
+    R = "../../../"
+    slug, name = t["slug"], t["name"]
+    url_rel = f"site/communities/{slug}/"
+    trail = [("Home", "site/"), ("Communities", "site/communities/"), (name, url_rel)]
+    m = t.get("market") or {}
+    c = t.get("commute") or {}
+    sch = t.get("schools") or {}
+    rail = c.get("rail") or []
+    rail_txt = "; ".join(f"{r['line']} ({', '.join(r['stations'])})" for r in rail) if rail else "No commuter rail station in town"
+    facts = [("County", t["county"]), ("Region", t["region"])]
+    if t.get("population_2020"): facts.append(("Population", f"{fmt_people(t['population_2020'])} (2020 Census)"))
+    facts.append(("Rail", rail_txt))
+    if c.get("highways"): facts.append(("Highways", ", ".join(c["highways"][:4])))
+    if sch.get("district"): facts.append(("Schools", f'<a href="{sch["dese_url"]}">{sch["district"]}</a> (DESE profile)'))
+    if m.get("sf_median_2025"): facts.append(("Single-family median", f"{money(m['sf_median_2025'])} in 2025 <span class=\"badge badge--source\">Warren Group</span>"))
+    facts.append(("Guide updated", f'<time datetime="{UPDATED}">October 22, 2026</time>'))
+    facts_html = "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in facts)
+    overview = "".join(f"<p>{p}</p>" for p in t["overview"])
+    housing = ""
+    if t.get("housing") and t["housing"].get("text"):
+        hs = t["housing"].get("source")
+        housing = f'<h3 class="h4" style="margin-top:var(--space-6)">Homes in {name}</h3><p>{t["housing"]["text"]}</p>'
+    villages = ""
+    if t.get("villages"):
+        items = "".join(f'<div><h3 class="h4">{v["name"]}</h3><p class="body-s" style="margin-top:var(--space-2)">{v["line"]}</p></div>' for v in t["villages"])
+        villages = f'''<section class="section surface-muted" id="neighborhoods" aria-labelledby="nb-title"><div class="container">
+  {section_head("Neighborhoods and villages", name, ["Where you might", f"live in {name}."], title_id="nb-title")}
+  <div class="cols cols--3 col-rule">{items}</div>
+</div></section>'''
+    rail_list = "".join(f"<li><b>{r['line']}</b>: {', '.join(r['stations'])}</li>" for r in rail)
+    rail_block = f'<ul class="body-s" style="padding-left:1.1rem;display:grid;gap:var(--space-2)">{rail_list}</ul>' if rail else ""
+    places = "".join(f'<div><h3 class="h4">{p["name"]}</h3><p class="body-s" style="margin-top:var(--space-2)">{p["line"]}</p></div>' for p in t.get("places", []))
+    hist = ""
+    if t.get("history"):
+        hist = '<div class="history">' + "".join(f'<div><b>{h["year"]}</b><p class="body-s">{h["text"]}</p></div>' for h in t["history"][:3]) + "</div>"
+    # market table
+    rows = ""
+    if m.get("sf_median_2025"):
+        ch = pct(m.get("sf_median_2024"), m["sf_median_2025"])
+        chs = fmt_pct(ch)
+        rows += f'<tr><th scope="row">Single-family median sale price</th><td class="tabular">{money(m["sf_median_2024"]) if m.get("sf_median_2024") else "n/a"}</td><td class="tabular">{money(m["sf_median_2025"])}</td><td class="tabular">{chs}</td></tr>'
+    if m.get("sf_sales_2025"):
+        ch = pct(m.get("sf_sales_2024"), m["sf_sales_2025"])
+        chs = fmt_pct(ch)
+        rows += f'<tr><th scope="row">Single-family sales</th><td class="tabular">{fmt_people(m["sf_sales_2024"]) if m.get("sf_sales_2024") else "n/a"}</td><td class="tabular">{fmt_people(m["sf_sales_2025"])}</td><td class="tabular">{chs}</td></tr>'
+    if m.get("condo_median_2025"):
+        ch = pct(m.get("condo_median_2024"), m["condo_median_2025"])
+        chs = fmt_pct(ch)
+        rows += f'<tr><th scope="row">Condominium median sale price</th><td class="tabular">{money(m["condo_median_2024"]) if m.get("condo_median_2024") else "n/a"}</td><td class="tabular">{money(m["condo_median_2025"])}</td><td class="tabular">{chs}</td></tr>'
+    market_html = ""
+    if rows:
+        market_html = f'''<table class="spec-table market-table"><thead><tr><th scope="col">Calendar year</th><th scope="col">2024</th><th scope="col">2025</th><th scope="col">Change</th></tr></thead><tbody>{rows}</tbody></table>
+<p class="stat-source">Source: <a href="{WARREN_URL}">The Warren Group, MA December 2025 Sales, Prices by Town</a>. Geography: town of {name}. Year-to-date figures through December, so calendar years 2024 and 2025. Not live data and not a valuation of any home.</p>'''
+    else:
+        market_html = '<p class="placeholder-block">Town-level sale prices to be added from a dated, sourced report.</p>'
+    extra_market = t.get("extra_market_html", "")
+    # FAQ (visible; no FAQPage markup: Google retired FAQ rich results in May 2026)
+    faq = t.get("faq", [])
+    faq_html = "".join(f'<details{" open" if i == 0 else ""}><summary>{f["q"]}</summary><div class="accordion__body body-s"><p>{f["a"]}</p></div></details>' for i, f in enumerate(faq))
+    # nearby guides
+    near = []
+    for n in t.get("nearby", []):
+        k = n.lower().replace(" ", "-")
+        if k in TOWN_BY_SLUG and k != slug: near.append(TOWN_BY_SLUG[k])
+    near_html = ""
+    if near:
+        near_html = "".join(f'<li><a href="{R}site/communities/{x["slug"]}/">{x["name"]}</a></li>' for x in near[:4])
+        near_html = f'<p class="label" style="margin-top:var(--space-6)">Nearby guides</p><ul class="toc-mini">{near_html}</ul>'
+    homes = [l for l in LISTINGS if l["town"] == name]
+    homes_html = ""
+    if homes:
+        homes_html = f'''<section class="section" id="homes"><div class="container">{section_head("Homes for sale", "Demonstration listings", [f"Homes in {name}."], aside=link_arrow(R, R+f"site/buy/?q={slug}", f"Search {name}"), title_id="homes-title")}<div class="listing-grid">{"".join(listing_card(R, l, f"{R}site/buy/{l['slug']}/") for l in homes)}</div></div></section>'''
+    # sources
+    srcs = []
+    def addsrc(label, u):
+        if u and u not in [x[1] for x in srcs]: srcs.append((label, u))
+    addsrc(f"Town of {name}" if "city" not in t.get("official_site", "") else f"City of {name}", t.get("official_site"))
+    addsrc("2020 Census population", t.get("population_source"))
+    addsrc("MBTA commuter rail", c.get("rail_source"))
+    addsrc("Massachusetts DESE district profile", sch.get("dese_url"))
+    addsrc("The Warren Group, 2025 sales by town", WARREN_URL)
+    if t.get("housing"): addsrc("Housing", t["housing"].get("source"))
+    for v in t.get("villages", []): addsrc(v["name"], v.get("source"))
+    for p in t.get("places", []): addsrc(p["name"], p.get("source"))
+    for h in t.get("history", []): addsrc(f"History ({h['year']})", h.get("source"))
+    src_html = "".join(f'<li><a href="{u}">{e(l)}</a></li>' for l, u in srcs)
+    photo = t.get("photo")
+    hero = page_hero(R, trail, t["headline"], h1=f"Living in {name}, MA", lead=t["answer"],
+                     photo=photo, photo_alt=t.get("photo_alt", ""), focal=t.get("focal", "50% 50%"))
+    commute_txt = c.get("text", "")
+    body = hero + f'''
+<section class="section" aria-labelledby="about-title"><div class="container split" style="align-items:start">
+  <div class="stack prose" style="grid-column:1/span 7;--stack:var(--space-4)">
+    {f'<p class="caption caption--serif">{t["photo_credit"]}</p>' if t.get("photo_credit") else ""}
+    <h2 class="h2" id="about-title">About {name}</h2>
+    {overview}
+    {housing}
+  </div>
+  <aside class="stack" style="grid-column:9/span 4;--stack:var(--space-5)" aria-label="{name} at a glance">
+    <dl class="quick-facts quick-facts--aside">{facts_html}</dl>
+    <div class="panel"><p class="h5">Your {name} guides</p><p class="body-s">Brandon &amp; Kaitlyn Oberdorfer · Based in Worcester</p><div class="cluster"><a class="btn btn--small" href="#contact-town">Ask about {name}</a><a class="link-arrow" href="tel:{TEL}">{PHONE}</a></div></div>
+  </aside>
+</div></section>
+{villages}
+<section class="section" id="commute" aria-labelledby="commute-title"><div class="container split" style="align-items:start">
+  <div class="stack" style="grid-column:1/span 6;--stack:var(--space-4)"><p class="label">Getting around</p><h2 class="h2" id="commute-title">Commuting from {name}</h2><p>{commute_txt}</p>{rail_block}<p class="caption">Check current schedules with the <a href="https://www.mbta.com/schedules/commuter-rail">MBTA</a>; compare the trip from each address before you buy.</p></div>
+  <div class="stack" style="grid-column:8/span 5;--stack:var(--space-4)"><p class="label">Schools</p><h2 class="h2">Public schools</h2><p>{name} is served by {sch.get("district", "[district to confirm]")}. Review the district's profile with the Massachusetts Department of Elementary and Secondary Education, and confirm school assignment for any address with the district.</p>{link_arrow(R, sch.get("dese_url", "#"), "DESE district profile")}</div>
+</div></section>
+<section class="section surface-muted" id="places" aria-labelledby="places-title"><div class="container">
+  {section_head("Things to do", name, ["Places to know", f"in {name}."], title_id="places-title")}
+  <div class="cols cols--3 col-rule">{places}</div>
+  {f'<h2 class="h3" style="margin-top:var(--space-8);margin-bottom:var(--space-5)">History</h2>{hist}' if hist else ""}
+</div></section>
+<section class="section" id="market" aria-labelledby="market-title"><div class="container split" style="align-items:start">
+  <div class="stack" style="grid-column:1/span 7;--stack:var(--space-4)"><p class="label">Home prices</p><h2 class="h2" id="market-title">The {name} housing market</h2>{market_html}{extra_market}</div>
+  <div class="stack" style="grid-column:9/span 4;--stack:var(--space-4)"><h3 class="h4">Read it for your own home</h3><p class="body-s">A townwide median is a starting point. Your best comparisons are recent closed sales that resemble your home in location, size, condition and style.</p>{link_arrow(R, R+"site/sell/#consult", "Request a market review")}{link_arrow(R, R+"site/market/", "Compare all towns")}</div>
+</div></section>
+{homes_html}
+<section class="section surface-muted" id="questions" aria-labelledby="faq-title"><div class="container split" style="align-items:start">
+  <div class="stack" style="grid-column:1/span 5"><p class="label">Questions</p><h2 class="display-m answer" id="faq-title"><span>Asked about</span><span>{name}.</span></h2>{near_html}</div>
+  <div class="accordion" style="grid-column:7/span 6">{faq_html}</div>
+</div></section>
+<section class="section" id="contact-town" aria-labelledby="ct-title"><div class="container split" style="align-items:start">
+  <div class="stack" style="grid-column:1/span 5;--stack:var(--space-5)"><p class="label">Thinking about {name}?</p><h2 class="display-m answer" id="ct-title"><span>Let's talk about</span><span>your move.</span></h2><p>Buying in {name}, selling here, or comparing it with nearby towns: tell us what you are planning and we will reply by your preferred method.</p><a class="cta-panel__phone" href="tel:{TEL}" style="color:var(--ot-navy);font-size:var(--step-h2)">{PHONE}</a></div>
+  <div class="panel" style="grid-column:7/span 6">{form(R, "town", f"Ask about {name}", contact_fields("tw") + select("tw-topic", "I'm interested in", [f"Buying in {name}", f"Selling in {name}", "Both", "Comparing towns"]) + field("tw-msg", "Message", "textarea", opt=True) + reach_pref("tw"), "Send my question", f"community:{slug}", "h3")}</div>
+</div></section>
+<section class="section--tight" aria-labelledby="src-title"><div class="container"><h2 class="label" id="src-title">Sources for this guide</h2><ul class="source-list caption">{src_html}</ul><p class="caption" style="margin-top:var(--space-3)">Researched by The Oberdorfer Team. Updated <time datetime="{UPDATED}">October 22, 2026</time>. Places and facts can change; check with the source before you rely on them.</p></div></section>'''
+    city = {"@type": "City", "name": f"{name}, Massachusetts",
+            "containedInPlace": [{"@type": "AdministrativeArea", "name": f"{t['county']}, Massachusetts"}, {"@type": "State", "name": "Massachusetts"}]}
+    if t.get("official_site"): city["sameAs"] = [t["official_site"]]
+    page_ld = {"@context": "https://schema.org", "@type": "WebPage", "@id": SITE + url_rel + "#page", "url": SITE + url_rel,
+               "name": f"Living in {name}, MA", "about": city, "dateModified": UPDATED, "inLanguage": "en-US",
+               "publisher": {"@id": TEAM_ID}, "mainEntityOfPage": SITE + url_rel}
+    title = f"{name}, MA Town Guide: Homes, Commute and Prices | Oberdorfer Team"
+    desc = t.get("meta") or f"Living in {name}, Massachusetts: neighborhoods, commuter rail, schools, things to do and 2025 home prices, with sources. A guide from The Oberdorfer Team."
+    write(f"communities/{slug}", R, title, desc, "Communities", body, ld=[crumbs_ld(trail), page_ld])
 
 def page_market():
     R = "../../"
     trail = [("Home", "site/"), ("Market insights", "site/market/")]
-    body = page_hero(R, trail, ["Know the market.", "Love the home."], lead="A useful snapshot helps you ask better questions. A thoughtful comparison helps you make better decisions.") + f'''
+    rows = ""
+    for t in sorted(TOWNS, key=lambda x: (x.get("market") or {}).get("sf_median_2025") or 0, reverse=True):
+        m = t.get("market") or {}
+        if not m.get("sf_median_2025"): continue
+        ch = pct(m.get("sf_median_2024"), m["sf_median_2025"])
+        rows += f'<tr><th scope="row"><a href="{R}site/communities/{t["slug"]}/">{t["name"]}</a></th><td>{t["region"]}</td><td class="tabular">{fmt_people(m["sf_sales_2025"]) if m.get("sf_sales_2025") else "n/a"}</td><td class="tabular">{money(m["sf_median_2025"])}</td><td class="tabular">{fmt_pct(ch)}</td></tr>'
+    body = page_hero(R, trail, ["Know the market.", "Love the home."], h1="Massachusetts housing market insights",
+                     lead="The statewide median single-family sale price was $638,000 in 2025, up 3.7% from 2024, and the condominium median was $537,000, according to The Warren Group. Town by town, the picture varies widely.") + f'''
 <section class="section"><div class="container split" style="align-items:start">
   <div style="grid-column:1/span 7">
-    <p class="label" style="margin-bottom:var(--space-3)">Data through August 2026 / All home types / Wakefield</p>
+    <p class="label" style="margin-bottom:var(--space-3)">Calendar year 2025 · Massachusetts statewide</p>
+    <div class="stat-panel">
+      <div class="stat"><span class="stat__value tabular">$638,000</span><span class="stat__label">Single-family median sale price</span><span class="stat__period">2025, up 3.7% from $615,000 in 2024</span></div>
+      <div class="stat"><span class="stat__value tabular">$537,000</span><span class="stat__label">Condominium median sale price</span><span class="stat__period">2025, $535,000 in 2024</span></div>
+    </div>
+    <p class="stat-source">Source: <a href="https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales.pdf">The Warren Group, MA Median Home Sale Price Reaches $638K in 2025</a>, January 20, 2026. Geography: Massachusetts statewide. Not live data.</p>
+  </div>
+  <div style="grid-column:9/span 4" class="stack">
+    <h2 class="h3">What these numbers can tell you</h2>
+    <p class="body-s">A statewide or townwide median is a starting point. Your best comparisons are recent closed sales that resemble your property in location, size, condition, and style. A condo, an older single-family home, and a newly built residence can tell very different stories.</p>
+  </div>
+</div></section>
+<section class="section surface-muted" id="towns" aria-labelledby="towns-title"><div class="container">
+  {section_head("Town by town", "Calendar year 2025", ["Single-family prices", "in our guide towns."], title_id="towns-title")}
+  <div class="table-scroll" tabindex="0" role="region" aria-labelledby="towns-title"><table class="spec-table market-table"><thead><tr><th scope="col">Town</th><th scope="col">Region</th><th scope="col">Sales, 2025</th><th scope="col">Median, 2025</th><th scope="col">Median vs. 2024</th></tr></thead><tbody>{rows}</tbody></table></div>
+  <p class="stat-source">Source: <a href="{WARREN_URL}">{WARREN}</a>. Single-family homes; year-to-date figures through December. Not live data and not a valuation of any home.</p>
+</div></section>
+<section class="section" id="wakefield" aria-labelledby="wk-title"><div class="container split" style="align-items:start">
+  <div style="grid-column:1/span 7">
+    <p class="label" style="margin-bottom:var(--space-3)">Spotlight · Wakefield · Data through August 2026 · All home types</p>
+    <h2 class="h3" id="wk-title" style="margin-bottom:var(--space-4)">Wakefield, from <em>Wakefield at Home</em></h2>
     <div class="stat-panel">
       <div class="stat"><span class="stat__value tabular">$786,979</span><span class="stat__label">Median sale price</span><span class="stat__period">3 months ending August 2026</span></div>
       <div class="stat"><span class="stat__value tabular">21</span><span class="stat__label">Median days on market</span><span class="stat__period">August 2026</span></div>
       <div class="stat"><span class="stat__value tabular">$483</span><span class="stat__label">Median sold price / sq. ft.</span><span class="stat__period">Redfin rolling 3-month snapshot</span></div>
       <div class="stat"><span class="stat__value tabular">103.3%</span><span class="stat__label">Sale-to-list price</span><span class="stat__period">August 2026</span></div>
     </div>
-    <p class="stat-source">Source: Redfin, Wakefield Housing Market, accessed October 10, 2026. Geography: Wakefield town; all home types. Price and price-per-square-foot use the site's rolling snapshot; days on market and sale-to-list are displayed for August 2026. Figures may be revised; this is not a valuation of an individual home.</p>
+    <p class="stat-source">Source: Redfin, Wakefield Housing Market, accessed October 10, 2026. Geography: Wakefield town; all home types. Figures may be revised; this is not a valuation of an individual home.</p>
   </div>
-  <div style="grid-column:9/span 4" class="stack" >
-    <h2 class="h3">What these numbers can tell you</h2>
-    <p class="body-s">The townwide median is a starting point. Your best comparisons are recent closed sales that resemble your property in location, size, condition, and style. A condo, an older single-family home, and a newly built residence can tell very different stories.</p>
-    <p class="caption">Market reports for other Massachusetts communities will be added as the team publishes them, each with its own source and date.</p>
-  </div>
+  <div style="grid-column:9/span 4" class="stack"><p class="body-s">Different sources measure different things: the Warren Group table counts single-family sales for a full calendar year, while this Redfin snapshot covers all home types over recent months. Compare like with like.</p>{link_arrow(R, R+"site/communities/wakefield/", "The Wakefield guide")}</div>
 </div></section>
 <section class="section surface-muted"><div class="container"><div class="cols cols--3 col-rule">
   <div><h2 class="h4">Sold vs. asking</h2><p class="body-s" style="margin-top:var(--space-2)">A listing price is a seller's starting point. A closed sale shows what a buyer actually paid.</p></div>
@@ -563,58 +836,18 @@ def page_market():
   <div><h2 class="h4">Your next step</h2><p class="body-s" style="margin-top:var(--space-2)">Ask for a property-specific market review before deciding what to offer or where to price.</p>{link_arrow(R, R+"site/sell/#consult", "Request a review")}</div>
 </div></div></section>
 {cta_panel(R, "Ready for a personal plan? <em>Call Brandon and Kaitlyn.</em>", "Property-specific market review")}'''
-    write("market", R, "Market insights · Wakefield, August 2026 · The Oberdorfer Team", "Wakefield housing market snapshot through August 2026 (Redfin), and how to read it for your own home.", "", body, ld=[crumbs_ld(trail)])
-
-def page_communities():
-    R = "../../"
-    trail = [("Home", "site/"), ("Communities", "site/communities/")]
-    cards = "".join(community_card(R, c) for c in COMMUNITIES)
-    body = page_hero(R, trail, ["Close to home,", "wherever home is."], lead="Guides to the Massachusetts communities we serve, written the way we write <em>At Home</em>: researched, credited and useful.") + f'''
-<section class="section"><div class="container">
-  <div class="card-grid-3" style="gap:var(--gutter)">{cards}</div>
-  <p class="caption" style="margin-top:var(--space-4)">Lake Quannapowitt Panorama, RedSoxFan274 / Wikimedia Commons, CC BY-SA 4.0, cropped. Line drawings stand in for community photography still to be commissioned.</p>
-  <p class="form-note" style="margin-top:var(--space-5)">Each guide is published when it is ready, never generated in bulk. The final list of communities is being confirmed by the team.</p>
-</div></section>
-{cta_panel(R, "Exploring a move? <em>Let's compare towns together.</em>", "Relocating within Massachusetts")}'''
-    write("communities", R, "Massachusetts communities · The Oberdorfer Team", "Local guides to the Massachusetts communities served by The Oberdorfer Team.", "Communities", body, ld=[crumbs_ld(trail)])
-
-def page_wakefield():
-    R = "../../../"
-    trail = [("Home", "site/"), ("Communities", "site/communities/"), ("Wakefield", "site/communities/wakefield/")]
-    homes = "".join(listing_card(R, l, f"{R}site/buy/{l['slug']}/") for l in LISTINGS if l["town"] in ("Wakefield", "Reading", "Stoneham"))
-    body = page_hero(R, trail, ["Close to Boston.", "Closer to what matters."], lead="A lakeside walk, a downtown errand, a train into the city. Wakefield brings those everyday moments together.", photo="assets/img/photo/lake-quannapowitt.webp", photo_alt="Lake Quannapowitt at dusk", focal="35% 55%") + f'''
-<section class="section"><div class="container article">
-  <div class="article__body">
-    <p class="caption caption--serif">An evening on Lake Quannapowitt. Photo: RedSoxFan274 / Wikimedia Commons, CC BY-SA 4.0, cropped.</p>
-    <h2 id="rhythm">Find your rhythm</h2>
-    <div class="cols cols--3 col-rule" style="margin-top:var(--space-5)">
-      <div><h3 class="h4">Lakeside moments</h3><p class="body-s" style="margin-top:var(--space-2)">Lake Quannapowitt is one of Wakefield's signature gathering places. Its shoreline offers a setting for walking, running, and community events.</p></div>
-      <div><h3 class="h4">A town center</h3><p class="body-s" style="margin-top:var(--space-2)">The Common, Main Street, and Albion Street help anchor downtown life. Walk the area, browse the local businesses, and see how the streets fit into your day.</p></div>
-      <div><h3 class="h4" id="transit">Room to explore</h3><p class="body-s" style="margin-top:var(--space-2)">Wakefield and Greenwood offer commuter rail access. Compare the trip from each home, then explore nearby Reading, Stoneham, and Melrose.</p></div>
-    </div>
-    <h2 id="history">History is part of the appeal</h2>
-    <div class="history"><div><b>1812</b><p class="body-s">Established as South Reading.</p></div><div><b>1868</b><p class="body-s">Renamed in honor of industrialist Cyrus Wakefield.</p></div><div><p class="body-s">Look up the story of a street, a landmark, or a home before your next walk.</p></div></div>
-    <p class="caption">Sources: Town of Wakefield, About Wakefield; Wakefield Historical Society, Anniversary Thinking.</p>
-    <h2 id="market">The market</h2>
-    <p>The median sale price was $786,979 for the three months ending August 2026, with a median of 21 days on market and a 103.3% sale-to-list ratio in August (Redfin, accessed October 10, 2026). {link_arrow(R, R+"site/market/", "Full market insight")}</p>
-    <h2 id="season">This season</h2>
-    <p>Six ways to enjoy Wakefield this fall, from the farmers market at Hall Park to the trails of Breakheart Reservation. {link_arrow(R, R+"site/journal/the-best-plans-are-close-to-home/", "The fall field guide")}</p>
-  </div>
-  <aside class="article__aside" aria-label="On this page">
-    <p class="label">On this page</p>
-    <ul class="toc-mini"><li><a href="#rhythm">Find your rhythm</a></li><li><a href="#history">History</a></li><li><a href="#market">The market</a></li><li><a href="#season">This season</a></li><li><a href="#homes">Homes nearby</a></li></ul>
-    <div class="panel"><p class="h5">Your Wakefield guides</p><p class="body-s">Brandon &amp; Kaitlyn Oberdorfer</p><a class="btn btn--small" href="tel:{TEL}">{PHONE}</a></div>
-  </aside>
-</div></section>
-<section class="section surface-muted" id="homes"><div class="container">{section_head("Homes nearby", "Demonstration listings", ["Homes in and", "around Wakefield."], aside=link_arrow(R, R+"site/buy/?q=wakefield", "Search Wakefield"), title_id="homes-title")}<div class="listing-grid">{homes}</div></div></section>
-{cta_panel(R, "Buying, selling, or simply curious <em>about Wakefield?</em>", "Wakefield and nearby towns", "Call Brandon and Kaitlyn, or ask for a property-specific market review.")}'''
-    place = {"@context":"https://schema.org","@type":"Place","name":"Wakefield, Massachusetts"}
-    write("communities/wakefield", R, "Living in Wakefield, MA · The Oberdorfer Team", "Lake Quannapowitt, the town center, commuter rail and history: a local guide to Wakefield, Massachusetts.", "Communities", body, ld=[crumbs_ld(trail), place])
+    dataset = {"@context": "https://schema.org", "@type": "Dataset", "name": "Single-family home sales and median prices by town, Massachusetts, 2025",
+               "description": "Calendar-year 2025 single-family sales counts and median sale prices for the towns covered by The Oberdorfer Team's community guides, as published by The Warren Group.",
+               "temporalCoverage": "2025", "spatialCoverage": {"@type": "State", "name": "Massachusetts"},
+               "isBasedOn": WARREN_URL, "creator": {"@id": TEAM_ID}}
+    write("market", R, "Massachusetts Housing Market 2025, Town by Town | The Oberdorfer Team",
+          "Massachusetts single-family median sale price was $638,000 in 2025 (The Warren Group). Compare 2025 sales and medians for Worcester, Shrewsbury, Wakefield, Newton and more.",
+          "", body, ld=[crumbs_ld(trail), dataset])
 
 def page_team():
     R = "../../"
     trail = [("Home", "site/"), ("Our Team", "site/team/")]
-    body = page_hero(R, trail, ["A husband-and-wife team.", "A shared commitment."], lead="Brandon and Kaitlyn lead The Oberdorfer Team. As the team grows, every agent shares the same standard of service.") + f'''
+    body = page_hero(R, trail, ["A husband-and-wife team.", "A shared commitment."], h1="Meet The Oberdorfer Team", lead="Brandon and Kaitlyn lead The Oberdorfer Team. As the team grows, every agent shares the same standard of service.") + f'''
 <section class="section"><div class="container">
   <form class="directory-bar" data-directory aria-label="Filter the team">
     {select("d-spec","Specialty",["All specialties","Buyers","Sellers","First-time buyers","Move-up"])}
@@ -627,7 +860,7 @@ def page_team():
   <p class="caption" style="margin-top:var(--space-5)">Every new agent receives the same profile: <a href="{R}site/agents/agent-template/">see the template</a>.</p>
 </div></section>
 {cta_panel(R, "Grow with a team that <em>presents every home like a feature.</em>", "Join our team", "The team is growing. Start with a confidential conversation with Brandon and Kaitlyn.", ("Start a conversation", "site/join/#recruit"))}'''
-    write("team", R, "Meet the team · The Oberdorfer Team", "Brandon and Kaitlyn Oberdorfer lead The Oberdorfer Team, a husband-and-wife real estate team serving Massachusetts.", "Our Team", body, ld=[crumbs_ld(trail)])
+    write("team", R, "Our Massachusetts Real Estate Team | The Oberdorfer Team", "Brandon and Kaitlyn Oberdorfer lead The Oberdorfer Team, a husband-and-wife real estate team based in Worcester and serving all of Massachusetts.", "Our Team", body, ld=[crumbs_ld(trail)])
 
 def page_agent():
     R = "../../../"
@@ -721,7 +954,7 @@ def agent_faq(a):
         (f"How do I contact {n}?",
          f"Call or text The Oberdorfer Team at {PHONE}, or send a message from this page. Messages sent here go to {g} and are attributed to {g} in the team's lead routing."),
         (f"Which areas does {n} serve?",
-         f"{g} helps buyers and sellers across Massachusetts, including Greater Boston, Worcester and the Wakefield and North Shore area where the team publishes <em>Wakefield at Home</em>."),
+         f"{g} helps buyers and sellers across Massachusetts. The team works from Worcester, and its community guides cover Central Massachusetts, MetroWest, Greater Boston, North of Boston and the Pioneer Valley, including Wakefield, where the team publishes <em>Wakefield at Home</em>."),
         (f"Which brokerage is {n} with?",
          f"{g} is part of The Oberdorfer Team, a real estate team operating under REWAP Brokerage LLC in Massachusetts."),
     ]
@@ -770,7 +1003,7 @@ def page_profile(a):
 
     summary = (f"[One-sentence summary: who {g} is, what they help clients do, and where. For example: “{g} is a Massachusetts real estate agent on The Oberdorfer Team who helps first-time buyers in Worcester County.”]"
                if tpl else
-               f"{a['name']} is a Massachusetts real estate agent who leads The Oberdorfer Team with {a['relation']}, {partner['name']}. The husband-and-wife team helps buyers and sellers across the state and operates under REWAP Brokerage LLC.")
+               f"{a['name']} is a Massachusetts real estate agent who leads The Oberdorfer Team with {a['relation']}, {partner['name']}. The husband-and-wife team works from Worcester, helps buyers and sellers across the state and operates under REWAP Brokerage LLC.")
     facts = [
         ("Role", f"{a['role']}, The Oberdorfer Team" if not tpl else ph("Role on the team")),
         ("Title", ph("Professional title to confirm")),
@@ -880,9 +1113,9 @@ def write_discovery_files():
     with open(os.path.join(OUT, "llms.txt"), "w") as f:
         f.write(f"""# The Oberdorfer Team
 
-> A husband-and-wife real estate team led by Brandon and Kaitlyn Oberdorfer, serving buyers and sellers across Massachusetts. The team operates under REWAP Brokerage LLC. Phone: {PHONE}. Promise: "Luxury at every price point."
+> A husband-and-wife real estate team led by Brandon and Kaitlyn Oberdorfer. The team works from Worcester, Massachusetts, serves buyers and sellers across the state, and operates under REWAP Brokerage LLC. Phone: {PHONE}. Promise: "Luxury at every price point."
 
-Facts on this site are sourced and dated. Market figures are for Wakefield, Massachusetts only (Redfin, accessed October 10, 2026) and are not live. Listings on this prototype are demonstrations.
+Facts on this site are sourced and dated. Town market figures are calendar-year 2025 single-family sales and medians from The Warren Group (MA December 2025 Sales, Prices by Town). The Wakefield snapshot is from Redfin, accessed October 10, 2026. None of the figures are live. Community guides describe places, housing, transit and history; school information is limited to links to each district's Massachusetts DESE profile. Listings on this prototype are demonstrations.
 
 ## People
 {people}
@@ -898,7 +1131,7 @@ def page_journal():
     cards = "".join(article_card(R, a) for a in ARTICLES[1:])
     cats = ["All", "Local living", "Real estate insights", "Seasonal features", "Recipes and entertaining", "Home inspiration", "Market updates", "Community guides"]
     chips = "".join(f'<button type="button" data-cat-filter="{c}" aria-pressed="{"true" if c=="All" else "false"}">{c}</button>' for c in cats)
-    body = page_hero(R, trail, ["Local living.", "Beautiful homes."], lead="Real estate insight, community guides, seasonal adventures and recipes to share. The online home of the <em>At Home</em> publications.") + f'''
+    body = page_hero(R, trail, ["Local living.", "Beautiful homes."], h1="The journal: Massachusetts living and real estate", lead="Real estate insight, community guides, seasonal adventures and recipes to share. The online home of the <em>At Home</em> publications.") + f'''
 <section class="section"><div class="container stack" style="--stack:var(--space-8)">
   <a class="feature-article" href="{R}site/journal/the-best-plans-are-close-to-home/"><div class="feature-article__media"><img src="{R}assets/img/photo/breakheart-reservation.webp" alt="Autumn at Breakheart Reservation"></div><div class="feature-article__body"><p class="label">Seasonal features · Fall field guide</p><h2 class="display-m">The best plans are close to home.</h2><p>Six ways to enjoy Wakefield and the surrounding area this season.</p><span class="link-arrow">Read the guide {arrow(R)}</span></div></a>
   <div class="stack" style="--stack:var(--space-6)"><div class="chip-filter" role="group" aria-label="Filter by category">{chips}</div>
@@ -910,7 +1143,7 @@ def page_journal():
     <form class="newsletter" data-newsletter aria-label="Subscribe to the At Home publications"><label class="visually-hidden" for="j-news">Email address</label><input class="input" id="j-news" type="email" autocomplete="email" placeholder="Email address"><button class="btn btn--small" type="submit">Subscribe</button></form></div>
   <div style="grid-column:8/span 5" class="archive-card"><img src="{R}assets/img/source-pages/page-1.webp" alt="Wakefield at Home, Fall 2026 cover" width="900" height="1157" loading="lazy"><div class="stack" style="--stack:var(--space-3)"><p class="h4">Wakefield at Home</p><p class="body-s muted">Fall 2026 · 8 pages</p><a class="link-arrow" href="{R}assets/publications/wakefield-at-home-fall-2026.pdf" download>Download PDF (3 MB) {icon(R,"download")}</a></div></div>
 </div></section>'''
-    write("journal", R, "Journal · At Home · The Oberdorfer Team", "Local living, real estate insight, seasonal guides and recipes from The Oberdorfer Team and the At Home publications.", "Journal", body, ld=[crumbs_ld(trail)])
+    write("journal", R, "Massachusetts Living and Real Estate Journal | The Oberdorfer Team", "Local living, real estate insight, seasonal guides and recipes from The Oberdorfer Team and the At Home publications.", "Journal", body, ld=[crumbs_ld(trail)])
 
 def page_article():
     R = "../../../"
@@ -943,7 +1176,7 @@ def page_article():
 def page_join():
     R = "../../"
     trail = [("Home", "site/"), ("Join Our Team", "site/join/")]
-    body = page_hero(R, trail, ["Grow with a team", "that cares how it shows up."], lead="The Oberdorfer Team is growing. We are looking for agents who believe every client deserves luxury-level service, at every price point.", navy=True) + f'''
+    body = page_hero(R, trail, ["Grow with a team", "that cares how it shows up."], h1="Join The Oberdorfer Team", lead="The Oberdorfer Team is growing. We are looking for agents who believe every client deserves luxury-level service, at every price point.", navy=True) + f'''
 <section class="section"><div class="container split" style="align-items:start">
   <div style="grid-column:1/span 7" class="letter">
     <p class="label">A letter from Brandon and Kaitlyn</p>
@@ -958,7 +1191,7 @@ def page_join():
   {section_head("What you would join", "Join Our Team", ["A brand built", "on presentation."], title_id="j-title")}
   <div class="cols cols--4 col-rule">
     <div><h3 class="h4">The brand</h3><p class="body-s" style="margin-top:var(--space-2)">The Oberdorfer Team identity and the <em>At Home</em> publications. [What agents receive to be confirmed by the team.]</p></div>
-    <div><h3 class="h4">The office</h3><p class="body-s" style="margin-top:var(--space-2)">A planned team office under REWAP Brokerage. Location and timing are being confirmed.</p></div>
+    <div><h3 class="h4">The office</h3><p class="body-s" style="margin-top:var(--space-2)">The team works from Worcester under REWAP Brokerage. The street address is being confirmed.</p></div>
     <div><h3 class="h4">Marketing and technology</h3><p class="body-s" style="margin-top:var(--space-2)">[Support details to be confirmed by the team before publication.]</p></div>
     <div><h3 class="h4">Training and mentorship</h3><p class="body-s" style="margin-top:var(--space-2)">[Program details to be confirmed by the team before publication.]</p></div>
   </div>
@@ -968,12 +1201,12 @@ def page_join():
   <div style="grid-column:1/span 5" class="stack"><p class="label">Confidential conversation</p><h2 class="display-m answer"><span>Start with</span><span>a conversation.</span></h2><p>Your inquiry goes only to Brandon and Kaitlyn and is kept confidential.</p></div>
   <div style="grid-column:7/span 6" class="panel">{form(R, "recruit", "Recruiting inquiry", contact_fields("rf") + '<div class="form__row">' + select("rf-licensed","Are you licensed in Massachusetts?",["Yes, salesperson","Yes, broker","In progress","Not yet"]) + select("rf-years","Years in real estate",["New to real estate","1–3","4–10","10+"]) + '</div>' + field("rf-area","Where you work or live",opt=True,ph="e.g. Worcester County") + field("rf-msg","What are you looking for in a team?","textarea",opt=True), "Start the conversation", "recruiting", "h3", note="Your inquiry is confidential and goes only to Brandon and Kaitlyn.")}</div>
 </div></section>'''
-    write("join", R, "Join our team · The Oberdorfer Team", "The Oberdorfer Team is growing. A confidential conversation with Brandon and Kaitlyn about joining a Massachusetts real estate team.", "Join Our Team", body, ld=[crumbs_ld(trail)])
+    write("join", R, "Join a Massachusetts Real Estate Team | The Oberdorfer Team", "The Oberdorfer Team is growing. A confidential conversation with Brandon and Kaitlyn about joining a Massachusetts real estate team.", "Join Our Team", body, ld=[crumbs_ld(trail)])
 
 def page_office():
     R = "../../"
     trail = [("Home", "site/"), ("Team office", "site/office/")]
-    body = page_hero(R, trail, ["A place to sit down", "and plan your move."], lead="The Oberdorfer Team is preparing to open its own team office. Details will appear here once they are confirmed.", aside='<span class="badge badge--verify">Planned · details to be confirmed</span>') + f'''
+    body = page_hero(R, trail, ["A place to sit down", "and plan your move."], h1="Our office in Worcester, Massachusetts", lead="The Oberdorfer Team works from Worcester and serves clients across Massachusetts. Visits are by appointment.", aside='<span class="badge badge--verify">Street address and hours to be confirmed</span>') + f'''
 <section class="section"><div class="container split" style="align-items:start">
   <div style="grid-column:1/span 7" class="stack" >
     <div class="map-frame"><svg viewBox="0 0 800 500" role="img" aria-label="Illustrative map placeholder"><rect width="800" height="500" fill="#E9E2D5"/><g stroke="#FBF9F5" stroke-width="10" fill="none" stroke-linecap="round"><path d="M0 300C200 280 360 330 800 260"/><path d="M300 0C320 160 280 340 330 500"/><path d="M800 420C600 400 450 440 300 500"/></g><g transform="translate(338 284)"><circle r="20" fill="#071D2D"/><circle r="27" fill="none" stroke="#B49A65"/></g></svg><p class="map-frame__note"><span class="badge badge--demo">Illustrative map · no real location</span></p></div>
@@ -982,12 +1215,12 @@ def page_office():
   <div style="grid-column:9/span 4" class="stack" >
     <div class="office-card">
       <h2 class="h4">The Oberdorfer Team Office</h2>
-      <dl><dt>Address</dt><dd>To be confirmed</dd><dt>Phone</dt><dd><a href="tel:{TEL}">{PHONE}</a></dd><dt>Hours</dt><dd>To be confirmed</dd><dt>Brokerage</dt><dd>A team office of REWAP Brokerage LLC (formal status to be confirmed)</dd><dt>Agents</dt><dd><a href="{R}site/agents/brandon-kaitlyn-oberdorfer/">Brandon &amp; Kaitlyn Oberdorfer</a></dd></dl>
+      <dl><dt>City</dt><dd>Worcester, Massachusetts</dd><dt>Address</dt><dd><span class="placeholder-value">[Street address to be confirmed]</span></dd><dt>Phone</dt><dd><a href="tel:{TEL}">{PHONE}</a></dd><dt>Hours</dt><dd><span class="placeholder-value">[Hours to be confirmed]</span></dd><dt>Brokerage</dt><dd>A team office of REWAP Brokerage LLC (formal status to be confirmed)</dd><dt>Agents</dt><dd><a href="{R}site/agents/brandon-kaitlyn-oberdorfer/">Brandon &amp; Kaitlyn Oberdorfer</a></dd></dl>
     </div>
     <div class="panel">{form(R, "appt", "Request an appointment", contact_fields("ap") + select("ap-topic","Topic",["Buying","Selling","Joining the team","Other"]), "Request an appointment", "office", "h3")}</div>
   </div>
 </div></section>'''
-    write("office", R, "Team office · The Oberdorfer Team", "The Oberdorfer Team is preparing to open a team office under REWAP Brokerage. Request an appointment.", "", body, ld=[crumbs_ld(trail)])
+    write("office", R, "Worcester, MA Office | The Oberdorfer Team", "The Oberdorfer Team works from Worcester, Massachusetts, under REWAP Brokerage LLC, and serves buyers and sellers statewide. Request an appointment.", "", body, ld=[crumbs_ld(trail)])
 
 def page_contact():
     R = "../../"
@@ -1001,14 +1234,14 @@ def page_contact():
       "recruit": form(R,"cr","Recruiting inquiry",contact_fields("cr") + select("cr-licensed","Are you licensed in Massachusetts?",["Yes, salesperson","Yes, broker","In progress","Not yet"]) + field("cr-msg","Tell us about yourself","textarea",opt=True),"Start the conversation","recruiting","h2",note="Confidential. Goes only to Brandon and Kaitlyn."),
     }
     panels = "".join(f'<div class="tabpanel" role="tabpanel" id="panel-{k}" aria-labelledby="tab-{k}"{"" if i==0 else " hidden"}>{forms[k]}</div>' for i,(k,_) in enumerate(tabs))
-    body = page_hero(R, trail, ["We would love", "to hear from you."], lead="Call, text or send a message. Your inquiry goes to Brandon and Kaitlyn.") + f'''
+    body = page_hero(R, trail, ["We would love", "to hear from you."], h1="Contact The Oberdorfer Team", lead="Call, text or send a message. Your inquiry goes to Brandon and Kaitlyn.") + f'''
 <section class="section"><div class="container contact-grid">
   <div class="stack" style="--stack:var(--space-6)">
     <a class="cta-panel__phone" href="tel:{TEL}" style="color:var(--ot-navy);font-size:var(--step-display-m)">{PHONE}</a>
     <div>
       <div class="contact-line">{icon(R,'phone')}<div><p class="h5">Call or text</p><p class="body-s">Brandon &amp; Kaitlyn Oberdorfer · <a href="tel:{TEL}">{PHONE}</a></p></div></div>
       <div class="contact-line">{icon(R,'mail')}<div><p class="h5">Email</p><p class="body-s">[Team email to be confirmed]</p></div></div>
-      <div class="contact-line">{icon(R,'door')}<div><p class="h5">Team office</p><p class="body-s">Planned. <a href="{R}site/office/">Details as they are confirmed</a>.</p></div></div>
+      <div class="contact-line">{icon(R,'door')}<div><p class="h5">Team office</p><p class="body-s">Worcester, Massachusetts. By appointment. <a href="{R}site/office/">Office details</a></p></div></div>
       <div class="contact-line">{icon(R,'pin')}<div><p class="h5">Service area</p><p class="body-s">Massachusetts</p></div></div>
     </div>
   </div>
@@ -1019,11 +1252,11 @@ def page_contact():
   <div id="accessibility"><h2 class="h4">Accessibility</h2><p style="margin-top:var(--space-2)">This site is designed to meet WCAG 2.2 AA. If anything is hard to use, call {PHONE} and we will help.</p></div>
   <div id="fair-housing"><h2 class="h4">Fair housing</h2><p style="margin-top:var(--space-2)">The Oberdorfer Team and REWAP Brokerage LLC are committed to the Fair Housing Act and Equal Housing Opportunity. [Required Massachusetts notices to be supplied by the principal broker.]</p></div>
 </div></section>'''
-    write("contact", R, "Contact · The Oberdorfer Team", "Contact Brandon and Kaitlyn Oberdorfer at 406-250-7620, or send a buyer, seller, recruiting or general inquiry.", "Contact", body, ld=[crumbs_ld(trail)])
+    write("contact", R, "Contact The Oberdorfer Team | Worcester, MA Real Estate", "Call or text Brandon and Kaitlyn Oberdorfer at 406-250-7620, or send a buyer, seller, recruiting or general inquiry. Based in Worcester, serving all of Massachusetts.", "Contact", body, ld=[crumbs_ld(trail)])
 
 if __name__ == "__main__":
     page_home(); page_buy(); [page_listing(l) for l in LISTINGS]; page_sell(); page_market()
-    page_communities(); page_wakefield(); page_team(); page_agent(); page_journal(); page_article()
+    page_communities(); [page_town(t) for t in TOWNS]; page_team(); page_agent(); page_journal(); page_article()
     page_join(); page_office(); page_contact()
     for a in AGENTS: page_profile(a)
     page_profile(TEMPLATE_AGENT)

@@ -21,20 +21,21 @@ The visual language evolves the team's print publication, *Wakefield at Home*, F
 ## Ground rules
 
 1. **Never invent facts.** This covers listings, testimonials, awards, production statistics, agent profiles, license numbers, office addresses, brokerage approvals, commissions and recruiting benefits. Anything unconfirmed is shown as a `[bracketed placeholder]` or carries a badge: `.badge--demo`, `--verify`, `--proposed` or `--source`.
-2. **Confirmed by the client on 2026-10-15:** all data in the publication is correct. That includes the phone **406-250-7620**, **"Top Producer"**, and the Wakefield market figures (Redfin, accessed Oct 10, 2026).
+2. **Confirmed by the client on 2026-10-15:** all data in the publication is correct. That includes the phone **406-250-7620**, **"Top Producer"**, and the Wakefield market figures (Redfin, accessed Oct 10, 2026). **Confirmed 2026-10-22:** the team's office is in **Worcester**, and the team serves all of Massachusetts.
 3. **Still unconfirmed:**
    - whether the portraits are real photographs or AI-generated (the publication was made with ChatGPT)
    - team email and domain
    - MA license numbers
-   - office address and status
+   - office street address, hours and status (the city, Worcester, is confirmed)
    - REWAP disclosures
    - privacy policy
    - IDX/MLS provider and CRM
-   - final community list
+   - final community list (the 16 guides in `tools/data/communities.json` are a proposed list)
    - Brandon's and Kaitlyn's individual biographies, titles, direct lines, emails, specialties, languages and headshots (their profiles use placeholders and interim crops of the team portrait)
-4. **Market data:** always show the source, period and geography. Never present the Wakefield figures as live or statewide.
-5. **The team and the brokerage are separate brands.** Never redraw the REWAP logo. Show it only on its own ivory plate, or use the typographic "Powered by" lockup.
-6. **Accessibility:** WCAG 2.2 AA.
+4. **Market data:** always show the source, period and geography. Never present the Wakefield figures as live or statewide. Town figures are The Warren Group's calendar-year 2025 single-family table; the statewide figures are its January 20, 2026 release.
+5. **Community guides follow fair housing rules.** Describe places, housing, transit, history and amenities. Never describe who lives somewhere, never call an area "safe", "exclusive" or "family-friendly", and never rate schools: link to the district's DESE profile instead. Every fact carries a source in the town's record.
+6. **The team and the brokerage are separate brands.** Never redraw the REWAP logo. Show it only on its own ivory plate, or use the typographic "Powered by" lockup.
+7. **Accessibility:** WCAG 2.2 AA.
    - Gold `#B49A65` is **not** a text color on ivory. Use `--ot-gold-ink` there.
    - Respect `prefers-reduced-motion`.
    - Keep focus rings visible.
@@ -49,6 +50,8 @@ The visual language evolves the team's print publication, *Wakefield at Home*, F
   - `mockups.css`: brand-book mockups
   - `site.css`: example-site page layouts
 - **The example site is generated.** Edit `tools/build_site.py`, never `site/**/index.html` by hand. Then run `python3 tools/build_site.py`.
+- **Community guides are data.** Each town is a researched record in `tools/data/towns/<slug>.json` (every fact with its source URL). Edit the record, then run `python3 tools/data/assemble_communities.py` and rebuild the site. Region order and tiers live in that script.
+- **SEO conventions:** every page passes an `h1=` to `page_hero` (the search-facing heading; the brand line stays as the display text), a title ending in "The Oberdorfer Team", and a meta description of about 150 to 160 characters. Google retired FAQ rich results on May 7, 2026: keep visible FAQs, but don't add new FAQPage markup.
 - **Logos are generated.** Edit `tools/build_logos.py`, then run `python3 tools/build_logos.py`. It outlines the Cormorant Garamond glyphs from `tools/fonts/`.
 - **House illustrations are generated.** Edit `tools/build_illustrations.py`, then run `python3 tools/build_illustrations.py`. It writes the colonial, triple-decker, Cape and townscape symbols to `assets/img/illustrations.svg` with three stroke weights (1.2 outlines, 0.8 trim, 0.55 detail).
 - **Token exports are generated.** After you change `tokens.css`, run `python3 tools/export_tokens.py`. It rewrites `assets/tokens/tokens.json` and `assets/tokens/theme.json`.

@@ -1,0 +1,64 @@
+{
+  "slug": "framingham",
+  "name": "Framingham",
+  "county": "Middlesex County",
+  "region": "MetroWest",
+  "population_2020": 72362,
+  "population_source": "https://en.wikipedia.org/wiki/Framingham,_Massachusetts",
+  "official_site": "https://www.framinghamma.gov/",
+  "headline": ["Several old centers, one city,", "on the road and rail line west of Boston."],
+  "answer": "Framingham is a city of 72,362 people (2020 Census) in Middlesex County, on the main western corridor out of Boston. It grew from separate centers, including Saxonville, Framingham Centre and South Framingham, and its housing runs from mill-era double houses to two-families and suburban homes. Framingham station serves the Framingham/Worcester Line, and the Massachusetts Turnpike crosses the city.",
+  "overview": [
+    "Framingham never had a single village at its heart. John Stone settled near the Sudbury River falls in 1647 and built a gristmill there, the start of what became the mill village of Saxonville. The town was incorporated in 1700, and Framingham Centre grew up as the civic focus on the old Boston turnpike. When the Boston and Worcester railroad reached South Framingham in 1834, that area became the industrial center. Voters approved a city charter in 2017, and Framingham became a city on January 1, 2018.",
+    "Those separate centers still shape the map. Saxonville keeps mid-1800s mill housing near the falls, and the Framingham Centre Common Historic District holds 28 buildings around the old common, including the Village Hall and First Parish Church. The Danforth Art Museum and School is now part of Framingham State University. Green space comes in several forms: Callahan State Park has more than 800 acres and seven miles of marked trails, Garden in the Woods shows New England native plants on 45 acres, and the Cochituate Rail Trail runs from Concord Street toward Natick."
+  ],
+  "housing": {
+    "text": "The Massachusetts Historical Commission's survey of Framingham records central-chimney double houses built for mill workers at Saxonville around 1825 to 1835, wood-frame tenements and row houses in South Framingham and Coburnville, and two-family houses that became common there in the early 1900s, with relatively few three-deckers. Larger suburban houses were built around Framingham Centre on Park Street, Prospect Street and Salem Road.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/frm.pdf"
+  },
+  "villages": [
+    {"name": "Framingham Centre", "line": "The historic civic center around the old common, with large older houses on hillside streets near the Sudbury River.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/frm.pdf"},
+    {"name": "Saxonville", "line": "The former mill village at the Sudbury River falls in northern Framingham, where mid-1800s workers' housing remains.", "source": "https://en.wikipedia.org/wiki/Saxonville,_Massachusetts"},
+    {"name": "South Framingham", "line": "The railroad and industrial center that grew up on the Boston line, with Farm Pond to its south.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/frm.pdf"},
+    {"name": "Coburnville", "line": "A former industrial and residential area near South Framingham with tenements and two-family houses.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/frm.pdf"},
+    {"name": "Nobscot", "line": "An area in the north of the city named for Nobscot Hill, on the old road toward Sudbury.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/frm.pdf"},
+    {"name": "Salem End", "line": "A western area reached by the old roads from Framingham Centre.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/frm.pdf"}
+  ],
+  "commute": {
+    "rail": [{"line": "Framingham/Worcester Line", "stations": ["Framingham (417 Waverly Street)"]}],
+    "rail_source": "https://www.mbta.com/stops/place-WML-0214",
+    "highways": ["Massachusetts Turnpike (I-90)", "Route 9", "Route 30", "Route 126", "Route 135"],
+    "text": "Framingham station, on Waverly Street, is a stop on the MBTA Framingham/Worcester Line between Worcester and South Station in Boston. The Massachusetts Turnpike, Route 9 and Routes 30, 126 and 135 all pass through the city."
+  },
+  "schools": {"district": "Framingham Public Schools", "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=01000000&orgtypecode=5"},
+  "places": [
+    {"name": "Callahan State Park", "line": "More than 800 acres of fields, ponds and seven miles of marked trails for hiking, riding, biking and cross-country skiing, at 1048 Edmands Road.", "source": "https://www.mass.gov/locations/callahan-state-park"},
+    {"name": "Garden in the Woods", "line": "Native Plant Trust's 45-acre botanic garden of New England native plants at 180 Hemenway Road.", "source": "https://www.nativeplanttrust.org/visit/garden-in-the-woods/"},
+    {"name": "Danforth Art Museum and School", "line": "An art museum and school that opened in 1975 and joined Framingham State University in 2018.", "source": "https://danforth.framingham.edu/meet-us/history-of-the-danforth/"},
+    {"name": "Cochituate Rail Trail", "line": "A paved trail of about 3.3 miles from Concord Street in Framingham to Washington Avenue in Natick.", "source": "https://www.traillink.com/trail/cochituate-rail-trail"},
+    {"name": "Framingham Centre Common Historic District", "line": "The old town common and 28 surrounding buildings, listed on the National Register of Historic Places in 1990.", "source": "https://en.wikipedia.org/wiki/Framingham_Centre_Common_Historic_District"}
+  ],
+  "history": [
+    {"year": "1647", "text": "John Stone settled near the Sudbury River falls, in what became Saxonville.", "source": "https://en.wikipedia.org/wiki/Saxonville,_Massachusetts"},
+    {"year": "1700", "text": "Incorporated as the Town of Framingham.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/frm.pdf"},
+    {"year": "2018", "text": "Became a city on January 1, after voters approved a charter in 2017.", "source": "https://en.wikipedia.org/wiki/Framingham,_Massachusetts"}
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 442, "sf_sales_2024": 428,
+    "sf_median_2025": 700000, "sf_median_2024": 655000,
+    "condo_sales_2025": null, "condo_median_2025": null, "condo_median_2024": null,
+    "reading_1": "FRAMINGHAM | YTD Number of Sales 428 442 3.3% | YTD Median Sale Price $655,000 $700,000 6.9% (columns: Dec 2024, Dec 2025, Percent Change)",
+    "reading_2": "FRAMINGHAM | YTD Number of Sales 428 442 3.3% | YTD Median Sale Price $655,000 $700,000 6.9% (columns: Dec 2024, Dec 2025, Percent Change)"
+  },
+  "nearby": ["natick", "ashland", "southborough", "sudbury", "wayland", "marlborough"],
+  "search_notes": "'Framingham MA real estate agent' returns agent directories and profiles (RealTrends, Ramsey Solutions, HomeLight) plus real estate attorney listings, with one generic realtor-guide page. 'Moving to Framingham MA' is led by a storage company's blog posts (UNITS) and mover sites (Lugg, All My Sons, MoveAdvisor). Neither search surfaces a sourced guide to the villages, the rail station or the city's history, which a local community page could supply.",
+  "faq": [
+    {"q": "What is the median home price in Framingham, MA?", "a": "The median single-family sale price in Framingham was $700,000 in calendar year 2025, up from $655,000 in 2024, across 442 sales (428 in 2024), according to The Warren Group's MA December 2025 Sales, Prices by Town report."},
+    {"q": "Does Framingham have commuter rail?", "a": "Yes. Framingham station, at 417 Waverly Street, is on the MBTA Framingham/Worcester Line, which runs between Worcester and South Station in Boston."},
+    {"q": "Which school district serves Framingham?", "a": "Framingham Public Schools. Review its profile with DESE."}
+  ],
+  "notes": "Condo fields are null: in both WebFetch readings the converted PDF text of the condo table ended at 'BROOKLI', so Framingham's condo rows could not be read. The Cochituate Rail Trail length is given as 3.3 miles in TrailLink's facts but 'almost 4 miles' in its description. The MHC survey is from the 1980s; Nobscot and Salem End are named there mainly as landmarks and routes. The city's 2014 draft Housing Plan Update describes 'a wide range of housing types' and notes about 46 percent of units are rented (https://framinghamma.gov/DocumentCenter/View/15491/DRAFT-Housing-Action-Plan-62414), but that figure is dated and was not used. Wikipedia credits the population figure to a Census Bureau profile."
+}

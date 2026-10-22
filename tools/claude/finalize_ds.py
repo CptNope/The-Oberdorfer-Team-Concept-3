@@ -172,7 +172,7 @@ index = {
  "sections": {}, "groups": groups, "assetGroups": ag, "blobs": {},
  "docs": {"readme": "project/README.md", "sections": []},
  "lastChange": {"by": "Claude", "via": "Claude Code · CptNope/The-Oberdorfer-Team-Concept-3@87e58c4", "at": NOW,
-                "note": "Built from the repo: tokens, brand book, 48 component cards, 62 assets and the cover."},
+                "note": "Built from the repo: tokens, brand book, 49 component cards, 62 assets and the cover."},
 }
 w("design-system.json", json.dumps(index, indent=2))
 print("ok")

@@ -1,0 +1,65 @@
+{
+  "slug": "stoneham",
+  "name": "Stoneham",
+  "county": "Middlesex County",
+  "region": "Greater Boston (north suburbs)",
+  "population_2020": 23244,
+  "population_source": "https://en.wikipedia.org/wiki/Stoneham,_Massachusetts",
+  "official_site": "https://www.stoneham-ma.gov/",
+  "headline": ["A shoe town's square, a zoo by the pond,", "and a third of the map left to the Fells."],
+  "answer": "Stoneham is a Middlesex County town of 23,244 people (2020 Census), less than 10 miles northwest of Boston. About a third of its land lies in the Middlesex Fells Reservation. Slightly more than half its homes are single-family. I-93 runs through town, and Boston-bound rail stations sit in Melrose, Winchester and Malden next door.",
+  "overview": [
+    "Early explorers called this land Charlestown End, and Governor Winthrop's party is said to have lunched by Spot Pond in 1632. Farmers settled slowly, and the town broke from Charlestown on December 17, 1725. A stagecoach line on the Medford to Andover Turnpike in 1833 brought house lots, and shoemaking grew from home workshops into more than forty manufacturers. That era left Central Square, with its Second Empire commercial blocks, the 1904 library, and churches lining the north side at Common Street.",
+    "A few blocks west of the square, Nobility Hill keeps Italianate, Stick and Queen Anne houses from about 1860 to 1920. The Middlesex Fells covers roughly a third of the town, with Spot Pond, Bear Hill and the Stone Zoo, founded in 1905. Stoneham's housing plan counts slightly more than half its homes as single-family, with much of the rest in larger buildings. The Tri-Community Greenway runs from Gould Street toward Woburn and Winchester."
+  ],
+  "housing": {
+    "text": "Stoneham's Housing Production Plan reports that 57.1% of housing units are single-family homes, and nearly half of the remaining multifamily units are in buildings of 20 or more units. About 65% of homes are owner-occupied. The plan points to the town center around Main Street as the area best suited for new housing.",
+    "source": "https://www.mass.gov/doc/stoneham-plan/download"
+  },
+  "villages": [
+    {"name": "Central Square", "line": "The business district bounded roughly by Main, Central, Church, Winter and Common Streets, with 19th- and early-20th-century commercial blocks.", "source": "https://en.wikipedia.org/wiki/Central_Square_Historic_District_(Stoneham,_Massachusetts)"},
+    {"name": "Nobility Hill", "line": "A residential historic district a few blocks west of Main Street, with houses built between about 1860 and 1920.", "source": "https://en.wikipedia.org/wiki/Nobility_Hill_Historic_District"},
+    {"name": "Farm Hill", "line": "A hill outside the Fells settled by farmers in the mid-1600s.", "source": "https://bostonbasinhills.org/pages/stoneham-hills.html"}
+  ],
+  "commute": {
+    "rail": [
+      {"line": "Haverhill Line (in neighboring Melrose)", "stations": ["Melrose Highlands"]},
+      {"line": "Lowell Line (in neighboring Winchester)", "stations": ["Wedgemere"]},
+      {"line": "Orange Line (subway, in Malden)", "stations": ["Oak Grove"]}
+    ],
+    "rail_source": "https://www.mbta.com/schedules/CR-Haverhill/timetable",
+    "highways": ["I-93", "Route 28"],
+    "text": "Stoneham has no rail station of its own; commuter rail stations in Melrose, Winchester, Wakefield and Woburn serve Boston's North Station, and Oak Grove on the Orange Line is about 3.8 miles from Stoneham Center. I-93 runs through town, I-95/Route 128 passes just to the north, and MBTA bus 132 runs between Redstone Shopping Center and Malden Center Station."
+  },
+  "schools": {"district": "Stoneham Public Schools", "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=02840000&orgtypecode=5"},
+  "places": [
+    {"name": "Stone Zoo", "line": "A zoo of about 26 acres near Spot Pond, founded in 1905 and run by Zoo New England.", "source": "https://zoonewengland.org/about-us/"},
+    {"name": "Middlesex Fells Reservation", "line": "A DCR reservation with more than 100 miles of trails, a visitor center and an off-leash area at Sheepfold Meadow.", "source": "https://www.mass.gov/locations/middlesex-fells-reservation"},
+    {"name": "Spot Pond", "line": "The pond inside the Fells where canoes and kayaks can be rented.", "source": "https://www.mass.gov/locations/middlesex-fells-reservation"},
+    {"name": "Tri-Community Greenway", "line": "A paved rail-trail along the Aberjona River from Gould Street in Stoneham to Wedgemere Station in Winchester.", "source": "https://www.traillink.com/trail/tri-community-greenway/"},
+    {"name": "Central Square", "line": "The historic downtown, with Second Empire blocks, the 1904 Stoneham Public Library and the 1939 town hall.", "source": "https://en.wikipedia.org/wiki/Central_Square_Historic_District_(Stoneham,_Massachusetts)"}
+  ],
+  "history": [
+    {"year": "1645", "text": "First settlement of the area known as Charlestown End.", "source": "https://stoneham-ma.gov/354/About-Stoneham"},
+    {"year": "1725", "text": "The General Court granted separation from Charlestown on December 17, 1725.", "source": "https://stoneham-ma.gov/354/About-Stoneham"},
+    {"year": "1833", "text": "A stagecoach line began serving the Medford to Andover Turnpike, and nearby farmland was divided into house lots.", "source": "https://stoneham-ma.gov/354/About-Stoneham"}
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 130, "sf_sales_2024": 140,
+    "sf_median_2025": 805000, "sf_median_2024": 784000,
+    "condo_sales_2025": null, "condo_median_2025": null, "condo_median_2024": null,
+    "reading_1": "STONEHAM (single-family; Dec 2024, Dec 2025, Percent Change): YTD Number of Sales 140 130 -7.1%; YTD Median Sale Price $784,000 $805,000 2.7%",
+    "reading_2": "STONEHAM (single-family): YTD Number of Sales 140 130 -7.1%; YTD Median Sale Price $784,000 $805,000 2.7%"
+  },
+  "nearby": ["melrose", "wakefield", "woburn", "winchester"],
+  "search_notes": "'Stoneham MA real estate agent' returns HomeLight, BiggerPockets, Experience.com and RealTrends profiles, Bean Group and Redfin, plus scattered individual agent pages. 'Moving to Stoneham MA' mixes movers (All My Sons, MoveAdvisor) with a Boston Moms 'Moving to Greater Boston' post, a BMN Boston page and Livability. Few results explain the town's lack of a rail station, the Fells or the historic square, which a sourced guide could cover.",
+  "faq": [
+    {"q": "What is the median home price in Stoneham, MA?", "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, the median single-family sale price in Stoneham for calendar year 2025 was $805,000, across 130 sales. In 2024 it was $784,000, across 140 sales."},
+    {"q": "Does Stoneham have commuter rail?", "a": "No station is located in Stoneham itself. Commuter rail stations in neighboring Melrose, Winchester, Wakefield and Woburn serve Boston's North Station, and Oak Grove on the Orange Line is in Malden."},
+    {"q": "Which school district serves Stoneham?", "a": "Stoneham Public Schools. Review its profile with DESE."}
+  ],
+  "notes": "Condo figures set to null: the PDF's extracted text ends partway through the condo table (at Brookline), so Stoneham's condo rows could not be read. Settlement year conflicts (the town site says 1645, Wikipedia body says 1634), so the history uses the town site. The undated Housing Production Plan appears to date from about 2018, and its statement that most housing was built after 1960 was left out because it reads oddly against the town's history. The rail stations listed are representative stations in neighboring towns; Wikipedia names neighboring towns with stations but not specific nearest stations. Farm Hill is sourced to an independent local history site (bostonbasinhills.org), not an official one. Route 28 is listed from Wikipedia's note of a Route 28 exit and the Fells Reservoirs district boundary."
+}

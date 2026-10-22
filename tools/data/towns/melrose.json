@@ -1,0 +1,68 @@
+{
+  "slug": "melrose",
+  "name": "Melrose",
+  "county": "Middlesex County",
+  "region": "Greater Boston (north suburbs)",
+  "population_2020": 29817,
+  "population_source": "https://en.wikipedia.org/wiki/Melrose,_Massachusetts",
+  "official_site": "https://www.cityofmelrose.org/",
+  "headline": ["Three train stops, one pond in the middle,", "and Victorian streets that lead to the Fells."],
+  "answer": "Melrose is a Middlesex County city of 29,817 people (2020 Census), about seven miles north of Boston. More than half its homes predate World War II, many Victorian near downtown and the rail line. Three MBTA Haverhill Line stations serve the city, and Oak Grove on the Orange Line sits just over the Malden border.",
+  "overview": [
+    "Melrose was part of Charlestown and then Malden before it was incorporated as a town in 1850. When the Boston and Maine Railroad built three stops through it in 1845, houses followed the tracks, and in 1853 the town annexed the highlands from Stoneham. Melrose became a city in 1900. Its downtown, listed on the National Register of Historic Places in 1982, runs along Main Street, and Ell Pond, the city's largest body of water, sits near the center with a gazebo and a new fountain.",
+    "The housing tells the city's history in layers. A 2022 housing plan found that most homes built before World War II cluster near downtown and the rail corridor, often in Victorian styles, while the eastern side filled in after the war with ranches and Capes. Larger buildings are concentrated downtown and along Main Street. At the edges are big green spaces: the eastern reaches of the Middlesex Fells, the Olmsted-designed Pine Banks Park on the Malden line, and Mount Hood, a city park and golf course with views toward Boston."
+  ],
+  "housing": {
+    "text": "Melrose's 2022 Housing Production Plan reports that 55% of homes are detached single-family and 11% are two-family, with 16% in buildings of 20 or more units. Over half were built before World War II, often in Victorian styles near downtown and the rail corridor; the eastern parts of the city saw more mid-century ranch and Cape houses after the war.",
+    "source": "https://www.mass.gov/doc/melrose-plan/download"
+  },
+  "villages": [
+    {"name": "Downtown Melrose", "line": "The Main Street business district, listed on the National Register in 1982, where most buildings of five or more units are found.", "source": "https://www.mass.gov/doc/melrose-plan/download"},
+    {"name": "Melrose Highlands", "line": "The northern section annexed from Stoneham in 1853, served by its own Haverhill Line station.", "source": "https://en.wikipedia.org/wiki/Melrose,_Massachusetts"},
+    {"name": "Cedar Park", "line": "A neighborhood along the rail corridor around the Melrose/Cedar Park station.", "source": "https://en.wikipedia.org/wiki/Melrose,_Massachusetts"},
+    {"name": "Wyoming", "line": "The southern neighborhood around Wyoming Hill station, closest to Malden.", "source": "https://en.wikipedia.org/wiki/Melrose,_Massachusetts"},
+    {"name": "East Side", "line": "The eastern part of the city, built up mostly after World War II with ranch and Cape houses.", "source": "https://www.mass.gov/doc/melrose-plan/download"},
+    {"name": "Mount Hood", "line": "The east-side area around Mount Hood Park and its golf course.", "source": "https://en.wikipedia.org/wiki/Melrose,_Massachusetts"},
+    {"name": "Oak Grove and Pine Banks", "line": "The southern edge near the Malden line, next to Pine Banks Park and the Oak Grove station.", "source": "https://en.wikipedia.org/wiki/Melrose,_Massachusetts"}
+  ],
+  "commute": {
+    "rail": [
+      {"line": "Haverhill Line", "stations": ["Melrose Highlands", "Melrose/Cedar Park", "Wyoming Hill"]},
+      {"line": "Orange Line (subway, in Malden near the Melrose border)", "stations": ["Oak Grove"]}
+    ],
+    "rail_source": "https://www.mbta.com/schedules/CR-Haverhill/timetable",
+    "highways": ["Route 99 (short section)"],
+    "text": "Three Haverhill Line stations run to Boston's North Station, and Oak Grove, the Orange Line terminal, is just over the line in Malden. Only a short stretch of Route 99 lies within the city; I-93 is reached in Stoneham, Route 1 in Saugus and I-95/Route 128 in Wakefield."
+  },
+  "schools": {"district": "Melrose Public Schools", "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=01780000&orgtypecode=5"},
+  "places": [
+    {"name": "Middlesex Fells Reservation", "line": "A DCR reservation with more than 100 miles of trails, whose eastern reaches extend into Melrose.", "source": "https://www.mass.gov/locations/middlesex-fells-reservation"},
+    {"name": "Ell Pond Park", "line": "The city's largest pond, near the center, with a gazebo and a fountain that helps keep the water healthy.", "source": "https://ma-melrose.civicplus.com/191/Park-Department"},
+    {"name": "Pine Banks Park", "line": "A 107.5-acre park designed by Frederick Law Olmsted and shared with Malden, with cliffs, a pond, fields and a playground.", "source": "https://en.wikipedia.org/wiki/Pine_Banks"},
+    {"name": "Mount Hood Park and Golf Course", "line": "A wooded city park of about 300 acres with an 18-hole course built under the WPA and winter sledding.", "source": "https://en.wikipedia.org/wiki/Mount_Hood_Golf_Club"},
+    {"name": "Downtown Melrose", "line": "A Main Street district on the National Register of Historic Places since 1982.", "source": "https://en.wikipedia.org/wiki/Melrose,_Massachusetts"}
+  ],
+  "history": [
+    {"year": "1850", "text": "Incorporated as the Town of Melrose, having been part of Charlestown and then Malden.", "source": "https://en.wikipedia.org/wiki/Melrose,_Massachusetts"},
+    {"year": "1853", "text": "Annexed the highlands from neighboring Stoneham, setting today's borders.", "source": "https://en.wikipedia.org/wiki/Melrose,_Massachusetts"},
+    {"year": "1900", "text": "Became a city, the 33rd in Massachusetts, with Levi S. Gould as first mayor.", "source": "https://en.wikipedia.org/wiki/Melrose,_Massachusetts"}
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 187, "sf_sales_2024": 191,
+    "sf_median_2025": 965000, "sf_median_2024": 869000,
+    "condo_sales_2025": null, "condo_median_2025": null, "condo_median_2024": null,
+    "reading_1": "MELROSE (single-family; Dec 2024, Dec 2025, Percent Change): YTD Number of Sales 191 187 -2.1%; YTD Median Sale Price $869,000 $965,000 11.0%",
+    "reading_2": "MELROSE (single-family): YTD Number of Sales 191 187 -2.1%; YTD Median Sale Price $869,000 $965,000 11.0%"
+  },
+  "nearby": ["malden", "stoneham", "wakefield", "saugus"],
+  "search_notes": "'Melrose MA real estate agent' returns agent-matching and review directories (HomeLight, BiggerPockets, Experience.com), Bean Group and Redfin listings, with no strong local-guide content. 'Moving to Melrose MA' is almost entirely moving companies (All My Sons, Gentle Giant, HireAHelper, Lugg, MoveBuddha) plus Livability. A guide that explains the three train stops, the Victorian-to-postwar housing pattern and the parks would fill a clear gap.",
+  "faq": [
+    {"q": "What is the median home price in Melrose, MA?", "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, the median single-family sale price in Melrose for calendar year 2025 was $965,000, across 187 sales. In 2024 it was $869,000, across 191 sales."},
+    {"q": "Does Melrose have commuter rail?", "a": "Yes. Melrose has three MBTA Haverhill Line stations: Melrose Highlands, Melrose/Cedar Park and Wyoming Hill. Oak Grove, on the Orange Line, is just across the border in Malden."},
+    {"q": "Which school district serves Melrose?", "a": "Melrose Public Schools. Review its profile with DESE."}
+  ],
+  "notes": "Condo figures set to null: the PDF's extracted text ends partway through the condo table (at Brookline), so Melrose's condo rows could not be read. Wikipedia gives both 1628 and 1629 as the settlement date, so neither is used. Neighborhood lines for Cedar Park, Wyoming and Oak Grove/Pine Banks are inferred from station and park locations named on Wikipedia, not from a dedicated neighborhood source. The Ell Pond source is the city Park Department page on the CivicPlus host (ma-melrose.civicplus.com), which serves the same site as cityofmelrose.org."
+}

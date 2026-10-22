@@ -1,0 +1,187 @@
+{
+  "slug": "quincy",
+  "name": "Quincy",
+  "county": "Norfolk County",
+  "region": "Greater Boston (South Shore)",
+  "population_2020": 101636,
+  "population_source": "https://en.wikipedia.org/wiki/Quincy,_Massachusetts",
+  "official_site": "https://www.quincyma.gov/",
+  "headline": [
+    "Between the harbor and the hills,",
+    "a city with deep roots."
+  ],
+  "answer": "Quincy is a coastal city in Norfolk County, on Boston Harbor, and the birthplace of John Adams and John Quincy Adams. About a third of its homes are detached single-family houses, and most of the rest are in buildings with two or more units. Four Red Line stations and three commuter rail lines connect it to Boston.",
+  "overview": [
+    "Quincy calls itself the City of Presidents, and the reason is on Franklin Street: the houses where John Adams was born in 1735 and John Quincy Adams in 1767 still stand side by side there. The family's later home, the Old House at Peacefield, and its Stone Library are part of Adams National Historical Park. Quincy split from Braintree as a town in 1792 and became a city in 1888. Granite quarrying was its major industry for more than a century, and in 1826 the Granite Railway carried stone for the Bunker Hill Monument.",
+    "The shoreline runs from Squantum and Marina Bay around to Houghs Neck, with Wollaston Beach stretching about 2.3 miles along Quincy Shore Drive. Inland, the Blue Hills Reservation covers roughly a quarter of the city's land, and the old quarries in West Quincy are now a state reservation that climbers use. Four Red Line stations, North Quincy, Wollaston, Quincy Center and Quincy Adams, connect the city to Boston, and the Kingston, Greenbush and Fall River/New Bedford commuter rail lines all stop at Quincy Center."
+  ],
+  "housing": {
+    "text": "Housing Quincy, a 2022 study by the Metropolitan Area Planning Council, found that about a third of the city's housing units are detached single-family homes, two-thirds are in buildings with two or more units, and 63 percent were built after 1940. It describes the oceanfront areas of Squantum, Merrymount, Adams Shore and Houghs Neck as having predominantly older single-family housing.",
+    "source": "https://www.mapc.org/wp-content/uploads/2022/12/Housing-Quincy-Executive-Summary_FINAL.pdf"
+  },
+  "villages": [
+    {
+      "name": "Quincy Center",
+      "line": "The downtown, with the city's main Red Line and commuter rail station and few single-family homes.",
+      "source": "https://www.mapc.org/wp-content/uploads/2022/12/Housing-Quincy-Executive-Summary_FINAL.pdf"
+    },
+    {
+      "name": "Wollaston",
+      "line": "Neighborhood with its own Red Line station between North Quincy and Quincy Center.",
+      "source": "https://en.wikipedia.org/wiki/Quincy,_Massachusetts"
+    },
+    {
+      "name": "North Quincy",
+      "line": "Northern neighborhood with a Red Line station at Hancock and Hunt Streets.",
+      "source": "https://www.mbta.com/stops/place-nqncy"
+    },
+    {
+      "name": "Squantum",
+      "line": "Oceanfront peninsula with mostly older single-family homes.",
+      "source": "https://www.mapc.org/wp-content/uploads/2022/12/Housing-Quincy-Executive-Summary_FINAL.pdf"
+    },
+    {
+      "name": "Marina Bay",
+      "line": "Waterfront residential and commercial area with a large marina, built on the former Naval Air Station Squantum.",
+      "source": "https://en.wikipedia.org/wiki/Quincy,_Massachusetts"
+    },
+    {
+      "name": "Houghs Neck",
+      "line": "Oceanfront neighborhood on the city's eastern end with mostly older single-family homes.",
+      "source": "https://www.mapc.org/wp-content/uploads/2022/12/Housing-Quincy-Executive-Summary_FINAL.pdf"
+    },
+    {
+      "name": "West Quincy",
+      "line": "Area with a mix of single-family and multifamily housing.",
+      "source": "https://www.mapc.org/wp-content/uploads/2022/12/Housing-Quincy-Executive-Summary_FINAL.pdf"
+    }
+  ],
+  "commute": {
+    "rail": [
+      {
+        "line": "Kingston Line",
+        "stations": [
+          "Quincy Center"
+        ]
+      },
+      {
+        "line": "Greenbush Line",
+        "stations": [
+          "Quincy Center"
+        ]
+      },
+      {
+        "line": "Fall River/New Bedford Line",
+        "stations": [
+          "Quincy Center"
+        ]
+      },
+      {
+        "line": "Red Line (subway)",
+        "stations": [
+          "North Quincy",
+          "Wollaston",
+          "Quincy Center",
+          "Quincy Adams"
+        ]
+      }
+    ],
+    "rail_source": "https://www.mbta.com/schedules/CR-Kingston/timetable",
+    "highways": [
+      "I-93 and US Route 1 (Southeast Expressway)",
+      "Route 3",
+      "Route 3A",
+      "Route 28",
+      "Route 53"
+    ],
+    "text": "Quincy Center is a stop on three commuter rail lines and the Red Line, which has three more stations in the city. I-93 and US Route 1 run together through Quincy, joined by Route 3 at the Braintree Split, where the road becomes the Southeast Expressway."
+  },
+  "schools": {
+    "district": "Quincy Public Schools",
+    "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=02430000&orgtypecode=5"
+  },
+  "places": [
+    {
+      "name": "Adams National Historical Park",
+      "line": "The Adams birthplaces on Franklin Street, the Old House at Peacefield and its Stone Library.",
+      "source": "https://www.nps.gov/adam/index.htm"
+    },
+    {
+      "name": "Wollaston Beach and Quincy Shores Reservation",
+      "line": "About 2.3 miles of beach along Quincy Shore Drive, with Caddy Park and a jogging and biking path.",
+      "source": "https://mass.gov/locations/quincy-shores-reservation"
+    },
+    {
+      "name": "Quincy Quarries Reservation",
+      "line": "Inactive granite quarries where large-scale American quarrying began, now used for hiking and top-rope climbing.",
+      "source": "https://www.mass.gov/locations/quincy-quarries-reservation"
+    },
+    {
+      "name": "Blue Hills Reservation",
+      "line": "More than 7,000 acres and 125 miles of trails, stretching from Quincy to Dedham and from Milton to Randolph.",
+      "source": "https://www.mass.gov/locations/blue-hills-reservation"
+    },
+    {
+      "name": "Thomas Crane Public Library",
+      "line": "The main library, designed by H. H. Richardson and completed in 1882, is a National Historic Landmark.",
+      "source": "https://en.wikipedia.org/wiki/Thomas_Crane_Public_Library"
+    }
+  ],
+  "history": [
+    {
+      "year": "1792",
+      "text": "Incorporated as the Town of Quincy, separated from Braintree and named for Col. John Quincy.",
+      "source": "https://en.wikipedia.org/wiki/Quincy,_Massachusetts"
+    },
+    {
+      "year": "1826",
+      "text": "The Granite Railway was built to carry Quincy granite for the Bunker Hill Monument.",
+      "source": "https://en.wikipedia.org/wiki/Quincy,_Massachusetts"
+    },
+    {
+      "year": "1888",
+      "text": "Incorporated as a city.",
+      "source": "https://en.wikipedia.org/wiki/Quincy,_Massachusetts"
+    }
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 418,
+    "sf_sales_2024": 364,
+    "sf_median_2025": 706250,
+    "sf_median_2024": 700000,
+    "condo_sales_2025": null,
+    "condo_median_2025": null,
+    "condo_median_2024": null,
+    "reading_1": "Quincy (single-family), columns Dec 2024 | Dec 2025 | Percent Change. YTD Number of Sales: 364 | 418 | 14.8%. YTD Median Sale Price: $700,000 | $706,250 | 0.9%.",
+    "reading_2": "QUINCY: \"YTD Number of Sales 364 418 14.8%\"; \"YTD Median Sale Price $700,000 $706,250 0.9%\""
+  },
+  "nearby": [
+    "milton",
+    "braintree",
+    "weymouth",
+    "boston"
+  ],
+  "search_notes": "For 'Quincy MA real estate agent', results are directories and profile aggregators (BiggerPockets, Experience.com, HomeLight neighborhood pages for North Quincy and West Quincy, RealTrends), one NextHome agent page and a brokerage job listing; Zillow and Redfin did not surface in these results. 'Moving to Quincy MA' is almost entirely moving companies and quote sites (All My Sons, Allied, MoveBuddha, uShip, Lugg, Bekins), plus a storage company's neighborhood post. A sourced guide covering the neighborhoods, the Red Line and commuter rail options, the shoreline and the Warren Group figures would stand out.",
+  "faq": [
+    {
+      "q": "What is the median home price in Quincy, MA?",
+      "a": "For calendar year 2025, The Warren Group reports a single-family median sale price of $706,250 in Quincy, across 418 sales. In 2024 the median was $700,000 on 364 sales. Source: The Warren Group, MA December 2025 Sales, Prices by Town."
+    },
+    {
+      "q": "Does Quincy have commuter rail?",
+      "a": "Yes. The MBTA Kingston, Greenbush and Fall River/New Bedford lines stop at Quincy Center. The Red Line also serves North Quincy, Wollaston, Quincy Center and Quincy Adams."
+    },
+    {
+      "q": "Which school district serves Quincy?",
+      "a": "Quincy Public Schools. Review its profile with DESE."
+    },
+    {
+      "q": "Is there a beach in Quincy?",
+      "a": "Yes. Wollaston Beach runs about 2.3 miles along Quincy Shore Drive and is part of the state's Quincy Shores Reservation."
+    }
+  ],
+  "notes": "The Warren Group condo table could not be read: both fetches returned text cut off partway through Brookline, so all condo fields are null. Commuter rail lines at Quincy Center are confirmed from the mbta.com timetables for the Kingston (cited), Greenbush (https://www.mbta.com/schedules/CR-Greenbush/timetable) and Fall River/New Bedford (https://www.mbta.com/schedules/CR-Middleborough/timetable) lines. The Red Line station list comes from Wikipedia plus mbta.com stop pages for North Quincy and Quincy Adams, because the Red Line page did not render its stops. Blue Hills covering about 23 percent of the city's land is from Wikipedia. The Thomas Crane completion year is 1882 in the article text but 1881 in the infobox. Population is from Wikipedia, citing the 2020 Census."
+}

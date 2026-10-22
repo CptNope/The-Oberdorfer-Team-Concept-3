@@ -1,0 +1,66 @@
+{
+  "slug": "worcester",
+  "name": "Worcester",
+  "county": "Worcester County",
+  "region": "Central Massachusetts",
+  "population_2020": 206518,
+  "population_source": "https://en.wikipedia.org/wiki/Worcester,_Massachusetts",
+  "official_site": "https://www.worcesterma.gov/",
+  "headline": ["Getting to know Worcester,", "street by street and hill by hill."],
+  "answer": "Worcester is a city of 206,518 people (2020 Census) in Central Massachusetts and the historic seat of Worcester County. Its housing ranges from 19th-century triple-deckers to single-family homes, with 884 single-family sales in 2025. Worcester station at Union Station is the western end of the MBTA Framingham/Worcester Line to Boston, and I-290 runs through the city.",
+  "overview": [
+    "Worcester was incorporated as a town in 1722 and became a city in 1848, and it has served as the seat of Worcester County since 1731. That long run shows in the streets: Victorian-era mill buildings, lunch-car diners and a large stock of triple-decker houses, a building type the city is often credited with originating. Downtown gathers around Worcester Common and Union Station in Washington Square, where the Framingham/Worcester Line begins its run east to Boston's South Station.",
+    "Open space threads through the city. Elm Park, bought in 1854, carries a plaque calling it the first purchase of land for a public park in the United States. Mass Audubon's Broad Meadow Brook covers more than 400 acres of woods, fields and marsh, and Quinsigamond State Park offers swimming beaches and a 2,000-meter rowing course on Lake Quinsigamond. The Worcester Art Museum, open since 1898, holds nearly 40,000 objects, and colleges including Clark, Holy Cross and WPI sit across the city's hills."
+  ],
+  "housing": {
+    "text": "Worcester has many 19th-century triple-decker houses, a building type that likely originated in the city, along with Victorian-era mill buildings. Single-family homes are also traded in volume: The Warren Group counted 884 single-family sales in 2025.",
+    "source": "https://en.wikipedia.org/wiki/Worcester,_Massachusetts"
+  },
+  "villages": [
+    {"name": "Downtown", "line": "The city center around Lincoln Square, Federal Square, Worcester Common and Union Station in Washington Square.", "source": "https://en.wikipedia.org/wiki/Neighborhoods_in_Worcester,_Massachusetts"},
+    {"name": "Canal District", "line": "A neighborhood in South Worcester.", "source": "https://en.wikipedia.org/wiki/Neighborhoods_in_Worcester,_Massachusetts"},
+    {"name": "Shrewsbury Street", "line": "A neighborhood on the city's East Side.", "source": "https://en.wikipedia.org/wiki/Neighborhoods_in_Worcester,_Massachusetts"},
+    {"name": "Main South", "line": "A neighborhood in South Worcester.", "source": "https://en.wikipedia.org/wiki/Neighborhoods_in_Worcester,_Massachusetts"},
+    {"name": "Grafton Hill", "line": "An East Side neighborhood on one of the city's named hills.", "source": "https://en.wikipedia.org/wiki/Neighborhoods_in_Worcester,_Massachusetts"},
+    {"name": "Tatnuck", "line": "A West Side neighborhood.", "source": "https://en.wikipedia.org/wiki/Neighborhoods_in_Worcester,_Massachusetts"},
+    {"name": "Greendale", "line": "A neighborhood in North Worcester.", "source": "https://en.wikipedia.org/wiki/Neighborhoods_in_Worcester,_Massachusetts"},
+    {"name": "Quinsigamond Village", "line": "A South Worcester neighborhood near Lake Avenue and Lake Quinsigamond.", "source": "https://en.wikipedia.org/wiki/Neighborhoods_in_Worcester,_Massachusetts"}
+  ],
+  "commute": {
+    "rail": [{"line": "Framingham/Worcester Line", "stations": ["Worcester (Union Station, 2 Washington Square)"]}],
+    "rail_source": "https://www.mbta.com/stops/place-WML-0442",
+    "highways": ["I-290", "I-190", "Route 146", "Route 9", "Route 12"],
+    "text": "Worcester station is the western end of the Framingham/Worcester Line, with stops through Grafton, Westborough and Framingham to Boston's South Station. I-290 runs through the city and meets the Massachusetts Turnpike (I-90) and I-395 just south in Auburn."
+  },
+  "schools": {"district": "Worcester Public Schools", "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=03480000&orgtypecode=5"},
+  "places": [
+    {"name": "Elm Park", "line": "About 58 acres with Newton Hill, ponds, trails, a disc golf course and summer concerts; its land was bought in 1854.", "source": "https://worcesterma.gov/city-parks/elm-park"},
+    {"name": "Worcester Art Museum", "line": "Open since 1898 at 55 Salisbury Street, with a collection of nearly 40,000 objects.", "source": "https://www.worcesterart.org/about/"},
+    {"name": "Broad Meadow Brook Wildlife Sanctuary", "line": "Mass Audubon's large urban sanctuary at 414 Massasoit Road, with trails through woods, fields, streams and marsh.", "source": "https://www.massaudubon.org/places-to-explore/wildlife-sanctuaries/broad-meadow-brook"},
+    {"name": "Quinsigamond State Park", "line": "Two DCR sites on Lake Quinsigamond, Regatta Point and Lake Park, with swimming, sailing, picnicking and a 2,000-meter rowing course.", "source": "https://www.mass.gov/locations/quinsigamond-state-park"},
+    {"name": "Green Hill Park", "line": "The city's largest park.", "source": "https://en.wikipedia.org/wiki/Worcester,_Massachusetts"}
+  ],
+  "history": [
+    {"year": "1722", "text": "Incorporated as a town on June 14.", "source": "https://en.wikipedia.org/wiki/Worcester,_Massachusetts"},
+    {"year": "1776", "text": "Isaiah Thomas gave the first public reading of the Declaration of Independence in Massachusetts on July 14.", "source": "https://en.wikipedia.org/wiki/Worcester,_Massachusetts"},
+    {"year": "1848", "text": "Incorporated as a city on February 29.", "source": "https://en.wikipedia.org/wiki/Worcester,_Massachusetts"}
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 884, "sf_sales_2024": 904,
+    "sf_median_2025": 430000, "sf_median_2024": 420000,
+    "condo_sales_2025": null, "condo_median_2025": null, "condo_median_2024": null,
+    "reading_1": "Worcester (single-family, Dec 2024 / Dec 2025 / % change): \"YTD Number of Sales 904 884 -2.2%\"; \"YTD Median Sale Price $420,000 $430,000 2.4%\"",
+    "reading_2": "WORCESTER (single-family): \"Number of Sales 97 74 -23.7%\"; \"YTD Number of Sales 904 884 -2.2%\"; \"Median Sale Price $422,000 $412,600 -2.2%\"; \"YTD Median Sale Price $420,000 $430,000 2.4%\""
+  },
+  "nearby": ["shrewsbury", "grafton", "auburn", "millbury"],
+  "search_notes": "For 'Worcester MA real estate agent', results are agent directories and profiles (RE/MAX, RealTrends, Ramsey Solutions, BiggerPockets, HomeLight, Experience.com) plus a brokerage hiring post; no neighborhood content ranks. 'Moving to Worcester MA' returns a Livability listicle and national mover pages (UPack, Great Guys Moving, North American). A sourced, neighborhood-by-neighborhood guide with transit, parks and history is the clear gap.",
+  "faq": [
+    {"q": "What is the median home price in Worcester, MA?", "a": "The median single-family sale price in Worcester for calendar year 2025 was $430,000, across 884 sales, up from $420,000 in 2024, according to The Warren Group's MA December 2025 Sales, Prices by Town report."},
+    {"q": "Does Worcester have commuter rail?", "a": "Yes. Worcester station at Union Station, 2 Washington Square, is the western end of the MBTA Framingham/Worcester Line, which runs to Boston's South Station."},
+    {"q": "Which school district serves Worcester?", "a": "Worcester Public Schools. Review its profile with DESE."}
+  ],
+  "notes": "Condo rows could not be read: both condo fetches of the Warren Group PDF were truncated at 'BROOKLI', before Worcester, so condo fields are null. I-90 is listed among Worcester's highways on Wikipedia, but the Turnpike's exit list places the nearby exits in Auburn and Millbury, so I-90 is described as reached via I-290 in Auburn rather than listed as passing through. Green Hill Park acreage omitted (Wikipedia gives 549 acres; other sources differ). The neighborhood list on Wikipedia gives location only, so village lines are kept to geography."
+}

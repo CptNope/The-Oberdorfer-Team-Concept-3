@@ -523,7 +523,7 @@ a:hover { color: var(--text-link-hover); text-decoration-color: currentColor; }
 .site-footer { background: var(--ot-navy); color: var(--ot-mist); padding-block: var(--space-9) var(--space-6); }
 .site-footer a { color: var(--ot-ivory); text-decoration: none; }
 .site-footer a:hover { color: var(--ot-gold-pale); text-decoration: underline; }
-.site-footer__grid { display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: var(--space-7) var(--gutter); }
+.site-footer__grid { display: grid; grid-template-columns: 1.4fr repeat(4, 1fr); gap: var(--space-7) var(--gutter); }
 .site-footer__grid h2 { font: 600 0.6875rem/1.3 var(--font-sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ot-gold); margin-bottom: var(--space-4); }
 .site-footer__grid ul { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-2); font-size: var(--step-body-s); }
 @media (max-width: 52rem) { .site-footer__grid { grid-template-columns: 1fr 1fr; } .site-footer__grid > :first-child { grid-column: 1 / -1; } }
@@ -840,6 +840,25 @@ a:hover { color: var(--text-link-hover); text-decoration-color: currentColor; }
 .profile__trust { letter-spacing: 0.04em; }
 .quick-facts dd .badge { margin-left: var(--space-2); vertical-align: middle; }
 @media (max-width: 52rem) { .profile-hero .profile__photo img, .profile-hero .headshot-pending { aspect-ratio: 1 / 1; } .profile-hero .profile { gap: var(--space-5); } }
+
+/* ---- Search-facing page heading (h1 set as a kicker above the display line) -- */
+.page-hero__kicker { grid-column: 1 / -1; margin-bottom: calc(var(--space-3) * -1); }
+.page-hero--navy .page-hero__kicker { color: var(--text-on-inverse-accent); }
+
+/* ---- Community guides and market tables ------------------------------------ */
+.source-list { list-style: none; padding: 0; margin: var(--space-3) 0 0; columns: 2 18rem; column-gap: var(--gutter); }
+.source-list li { break-inside: avoid; padding-block: 0.2rem; }
+.market-table th, .market-table td { padding-right: var(--space-4); }
+.market-table thead th { color: var(--text-muted); font-weight: 500; font-size: var(--step-caption); letter-spacing: 0.04em; }
+.market-table tbody th { width: auto; color: var(--text-body); }
+.market-table td.tabular { white-space: nowrap; }
+.table-scroll .market-table { min-width: 34rem; }
+/* Quick facts beside a town guide: the same rhythm as .profile dl */
+.quick-facts--aside { display: grid; grid-template-columns: minmax(0, 8.5rem) minmax(0, 1fr); gap: var(--space-3) var(--space-5); font-size: var(--step-body-s); border-top: 1px solid var(--rule-gold); padding-top: var(--space-5); }
+.quick-facts--aside dt { font: 600 0.6875rem/1.6 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-accent); }
+.quick-facts--aside dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
+.quick-facts--aside dd .badge { margin: var(--space-1) 0 0; }
+.surface-muted .history { background: var(--surface-page); }
 
 /* ---- docs.css ---- */
 /* ---- Slim issue bar ----------------------------------------------------- */

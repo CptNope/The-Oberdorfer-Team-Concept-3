@@ -11,7 +11,8 @@ names=sys.argv[1:] or [c["name"] for c in json.load(open(f"{CK}/cards.json"))]+[
 async def main():
     async with async_playwright() as p:
         b=await p.chromium.launch(); pg=await b.new_page(viewport={"width":960,"height":40})
-        res={}
+        hp=f"{CK}/heights.json"
+        res=json.load(open(hp)) if os.path.exists(hp) else {}   # merge: checking a few cards keeps the rest
         for n in names:
             src=open(f"{CK}/{n}.html").read() if n!="Cover" else open(f"{OUT}/project/components/Cover/preview.html").read()
             theme="light"

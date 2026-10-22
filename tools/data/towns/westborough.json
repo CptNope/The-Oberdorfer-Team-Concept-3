@@ -1,0 +1,62 @@
+{
+  "slug": "westborough",
+  "name": "Westborough",
+  "county": "Worcester County",
+  "region": "Central Massachusetts",
+  "population_2020": 21567,
+  "population_source": "https://en.wikipedia.org/wiki/Westborough,_Massachusetts",
+  "official_site": "https://www.westboroughma.gov/",
+  "headline": ["Westborough, mapped out:", "the center, the lake and the trails."],
+  "answer": "Westborough is a Worcester County town of 21,567 people (2020 Census), incorporated in 1717. Its center keeps colonial and 19th-century homes, and The Warren Group counted 134 single-family sales in 2025. Westborough station is on the MBTA Framingham/Worcester Line, and the Massachusetts Turnpike, I-495 and Route 9 cross the town, linking it east to Boston and west to Worcester.",
+  "overview": [
+    "Westborough was incorporated in 1717 as the hundredth town in Massachusetts, set off from Marlborough with twenty-seven families. Eli Whitney, later the inventor of the cotton gin, was born here in 1765, and a stone on Eli Whitney Street marks the spot. In 1810 the road between Boston and Worcester became an official turnpike through town, today's Route 9. Once the railroad came through the center, the commercial life of the town followed it, leaving brick blocks downtown and quieter turnpike villages like Wessonville.",
+    "The land is a broad central plain ringed by rounded hills, with a large cedar swamp at its eastern end and the Assabet River along part of the northern edge. Lake Chauncy, in the north, has a public beach and is used for swimming, boating and fishing. The Westborough Charm Bracelet, a roughly 28-mile loop trail developed since 2000 by the Westborough Community Land Trust and the town's Open Space Preservation Committee, links most of the major open spaces, and side trails reach schools and neighborhoods."
+  ],
+  "housing": {
+    "text": "The Massachusetts Historical Commission notes two-story, center-chimney colonial houses, worker cottages grouped in the center and Italianate, Second Empire and Queen Anne houses on High Street. The Vintonville Historic District, just east of the center, is made up of modest houses on smaller lots, largely built between 1860 and 1890.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/wbo.pdf"
+  },
+  "villages": [
+    {"name": "Westborough Center", "line": "The downtown, with multi-story brick commercial blocks near the railroad and the former meetinghouse site.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/wbo.pdf"},
+    {"name": "Vintonville", "line": "A 20-acre historic district east of the center with about 80 modest 1860 to 1890 houses on streets such as Cottage, Elm and South.", "source": "https://en.wikipedia.org/wiki/Vintonville_Historic_District"},
+    {"name": "Wessonville", "line": "A former turnpike village on Route 9 that once had a tavern, store and thread factory.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/wbo.pdf"},
+    {"name": "Lake Chauncy area", "line": "The northern part of town around Lake Chauncy, once home to the state reform school and state hospital grounds.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/wbo.pdf"}
+  ],
+  "commute": {
+    "rail": [{"line": "Framingham/Worcester Line", "stations": ["Westborough (Smith Parkway and Fisher Street)"]}],
+    "rail_source": "https://www.mbta.com/stops/place-WML-0340",
+    "highways": ["Massachusetts Turnpike (I-90)", "I-495", "Route 9", "Route 30", "Route 135"],
+    "text": "Westborough station, at Smith Parkway and Fisher Street with 448 parking spaces, sits between Grafton and Southborough on the Framingham/Worcester Line. The Turnpike and I-495 meet at the Hopkinton line, and Route 9 follows the old Boston-Worcester turnpike."
+  },
+  "schools": {"district": "Westborough Public Schools", "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=03210000&orgtypecode=5"},
+  "places": [
+    {"name": "Lake Chauncy", "line": "A lake in the north of town with a public beach, swimming, boating and fishing.", "source": "https://en.wikipedia.org/wiki/Westborough,_Massachusetts"},
+    {"name": "Westborough Charm Bracelet", "line": "A roughly 28-mile loop trail linking most of the town's major open spaces, with side trails to schools and neighborhoods.", "source": "https://westboroughlandtrust.org/charm"},
+    {"name": "Assabet Reservoir", "line": "A reservoir with hiking trails.", "source": "https://en.wikipedia.org/wiki/Westborough,_Massachusetts"},
+    {"name": "Vintonville Historic District", "line": "A walkable National Register district of 1860 to 1890 houses just east of downtown.", "source": "https://en.wikipedia.org/wiki/Vintonville_Historic_District"},
+    {"name": "Eli Whitney birthplace", "line": "A commemorative stone on Eli Whitney Street marks where the inventor was born in 1765.", "source": "https://en.wikipedia.org/wiki/Westborough,_Massachusetts"}
+  ],
+  "history": [
+    {"year": "1717", "text": "Incorporated as the hundredth town in Massachusetts, set off from Marlborough.", "source": "https://en.wikipedia.org/wiki/Westborough,_Massachusetts"},
+    {"year": "1765", "text": "Eli Whitney, inventor of the cotton gin, was born in Westborough.", "source": "https://en.wikipedia.org/wiki/Westborough,_Massachusetts"},
+    {"year": "1810", "text": "The Boston-to-Worcester road through town became an official turnpike, today's Route 9.", "source": "https://en.wikipedia.org/wiki/Westborough,_Massachusetts"}
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 134, "sf_sales_2024": 119,
+    "sf_median_2025": 752000, "sf_median_2024": 780000,
+    "condo_sales_2025": null, "condo_median_2025": null, "condo_median_2024": null,
+    "reading_1": "Westborough (single-family, Dec 2024 / Dec 2025 / % change): \"YTD Number of Sales 119 134 12.6%\"; \"YTD Median Sale Price $780,000 $752,000 -3.6%\"",
+    "reading_2": "WESTBOROUGH (single-family): \"Number of Sales5 14 180.0%\"; \"YTD Number of Sales 119 134 12.6%\"; \"Median Sale Price $788,000 $715,000 -9.3%\"; \"YTD Median Sale Price $780,000 $752,000 -3.6%\""
+  },
+  "nearby": ["northborough", "shrewsbury", "grafton", "hopkinton"],
+  "search_notes": "For 'Westborough MA real estate agent', results are a Google Business profile, a Century 21 North East office page, Bean Group and Redfin pages, and directories (Ramsey Solutions, HomeLight, BiggerPockets, Max Real Estate Exposure). 'Moving to Westborough MA' returns only moving-company pages (Allied, HireAHelper, MoveBuddha, MoveAdvisor). Nothing ranking explains the town's layout, its station or the Charm Bracelet trails, which a sourced local guide could cover.",
+  "faq": [
+    {"q": "What is the median home price in Westborough, MA?", "a": "The median single-family sale price in Westborough for calendar year 2025 was $752,000, across 134 sales, down from $780,000 in 2024, according to The Warren Group's MA December 2025 Sales, Prices by Town report."},
+    {"q": "Does Westborough have commuter rail?", "a": "Yes. Westborough station, at Smith Parkway and Fisher Street, is on the MBTA Framingham/Worcester Line between Grafton and Southborough."},
+    {"q": "Which school district serves Westborough?", "a": "Westborough Public Schools. Review its profile with DESE."}
+  ],
+  "notes": "Condo rows could not be read (both condo fetches truncated at 'BROOKLI'), so condo fields are null. Wikipedia dates the railroad's arrival to 1824 while the 1983 MHC report gives 1834-35, so the overview gives no date for it. The MHC report is from 1983 and OCR-scanned. Hopkinton as a neighbor rests on the Turnpike exit list ('Hopkinton-Westborough line'). The official site www.town.westborough.ma.us redirects to www.westboroughma.gov."
+}

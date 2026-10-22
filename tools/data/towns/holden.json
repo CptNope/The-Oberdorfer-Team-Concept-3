@@ -1,0 +1,158 @@
+{
+  "slug": "holden",
+  "name": "Holden",
+  "county": "Worcester County",
+  "region": "Central Massachusetts",
+  "population_2020": 19905,
+  "population_source": "https://en.wikipedia.org/wiki/Holden,_Massachusetts",
+  "official_site": "https://www.holdenma.gov/",
+  "headline": [
+    "Old mill villages and open hills,",
+    "just over the line from Worcester."
+  ],
+  "answer": "Holden is a town of 19,905 people (2020 Census) in Worcester County, set in rolling hills just north of Worcester. Its houses range from 1800s mill-village homes to suburban streets that grew after World War II. Routes 122A, 31 and 68 cross the town, and the commuter rail stops at Worcester station next door.",
+  "overview": [
+    "Holden covers about thirty-six square miles of rolling upland just north of Worcester, and the town notes that a good portion of that land is protected open space, watershed and recreation area. Settlement began around 1723, and Holden was incorporated on January 9, 1741, from what had been the north half of Worcester. Through the 1800s, mills grew up along the Quinapoxet River in villages such as Chaffin, Springdale and Dawsonville, while Jefferson became the industrial village in the south of town.",
+    "The landscape shifted again around 1900, when reservoirs built for Worcester and the Wachusett Reservoir project cleared most of the river mills. After World War II, Holden became largely residential. Holden Center is still the civic heart along Main Street, where the Gale Free Library has used the Damon Memorial building since 1888. For time outside, the 660-acre Trout Brook Recreation Area and the town beach at Eagle Lake are within town lines, and the Mass Central Rail Trail follows the Quinapoxet River into Holden from Oakdale in West Boylston."
+  ],
+  "housing": {
+    "text": "The Massachusetts Historical Commission's survey of Holden records one-story center-chimney Federal houses, mid-1800s side-passage houses with Greek Revival or Italianate trim, company tenements in Jefferson, and Bungalow and Four Square houses from 1915 to 1940, with suburban growth tied to Worcester after the 1920s. The town notes further residential growth after World War II.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/hol.pdf"
+  },
+  "villages": [
+    {
+      "name": "Holden Center",
+      "line": "The civic center of town on the central upland, with houses strung along Main Street.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/hol.pdf"
+    },
+    {
+      "name": "Jefferson",
+      "line": "The former industrial village in the south of town, where the mill company once owned dozens of tenements; it has its own ZIP code, 01522.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/hol.pdf"
+    },
+    {
+      "name": "Eagleville",
+      "line": "A southern mill village next to Jefferson, recorded in the 1830s as \"Brick City.\"",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/hol.pdf"
+    },
+    {
+      "name": "Chaffin",
+      "line": "One of the villages that grew up around Holden's 19th-century mills.",
+      "source": "https://www.holdenma.gov/node/55651"
+    },
+    {
+      "name": "Dawsonville",
+      "line": "A former mill site in the Quinapoxet River corridor; its mill was removed in 1926.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/hol.pdf"
+    }
+  ],
+  "commute": {
+    "rail": [
+      {
+        "line": "Framingham/Worcester Line (in Worcester)",
+        "stations": [
+          "Worcester Union Station"
+        ]
+      },
+      {
+        "line": "Fitchburg Line (in Fitchburg)",
+        "stations": [
+          "Wachusett"
+        ]
+      }
+    ],
+    "rail_source": "https://www.mbta.com/stops/place-WML-0442",
+    "highways": [
+      "Route 122A",
+      "Route 31",
+      "Route 68"
+    ],
+    "text": "Holden has no commuter rail station of its own. The nearest MBTA stations are Worcester, on the Framingham/Worcester Line in the neighboring city, and Wachusett, the end of the Fitchburg Line, in Fitchburg."
+  },
+  "schools": {
+    "district": "Wachusett Regional School District",
+    "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=07750000&orgtypecode=5"
+  },
+  "places": [
+    {
+      "name": "Trout Brook Recreation Area",
+      "line": "660 acres of town conservation land with trails for walking, cross-country skiing and mountain biking, a pond, a picnic pavilion and a rentable lodge.",
+      "source": "https://www.holdenma.gov/node/2901"
+    },
+    {
+      "name": "Eagle Lake",
+      "line": "A town lake with a lifeguarded municipal beach, fishing and room for canoes and other non-motorized boats.",
+      "source": "https://www.holdenma.gov/node/4081"
+    },
+    {
+      "name": "Mass Central Rail Trail",
+      "line": "Stone-dust trail sections run about three miles along the Quinapoxet River from Oakdale in West Boylston to River Street, plus a 2.2-mile connector from River Street to Manning and Mill Streets.",
+      "source": "https://www.wachusettgreenways.org/wordpress/?p=175"
+    },
+    {
+      "name": "Gale Free Library",
+      "line": "The town library in the Damon Memorial building, dedicated in 1888, with a Local History Room.",
+      "source": "https://www.galefreelibrary.org/Pages/Index/121426/local-history"
+    },
+    {
+      "name": "Dawson Recreation Area",
+      "line": "A town recreation site with a playground and baseball field, with expansion planned at 18 Industrial Drive.",
+      "source": "https://www.holdenma.gov/print/99386"
+    }
+  ],
+  "history": [
+    {
+      "year": "1723",
+      "text": "First European settlement, near a lime quarry in the southeast of present-day Holden.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/hol.pdf"
+    },
+    {
+      "year": "1741",
+      "text": "Incorporated on January 9 from the north half of Worcester.",
+      "source": "https://www.holdenma.gov/node/55651"
+    },
+    {
+      "year": "1954",
+      "text": "Joined the first regional school district in Massachusetts.",
+      "source": "https://www.holdenma.gov/node/55651"
+    }
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 200,
+    "sf_sales_2024": 174,
+    "sf_median_2025": 550000,
+    "sf_median_2024": 550000,
+    "condo_sales_2025": null,
+    "condo_median_2025": null,
+    "condo_median_2024": null,
+    "reading_1": "HOLDEN | YTD Number of Sales 174 200 14.9% | YTD Median Sale Price $550,000 $550,000 0.0% (columns: Dec 2024, Dec 2025, Percent Change)",
+    "reading_2": "HOLDEN | YTD Number of Sales 174 200 14.9% | YTD Median Sale Price $550,000 $550,000 0.0% (columns: Dec 2024, Dec 2025, Percent Change)"
+  },
+  "nearby": [
+    "worcester",
+    "paxton",
+    "rutland",
+    "west-boylston",
+    "sterling",
+    "princeton"
+  ],
+  "search_notes": "For 'Holden MA real estate agent', results are dominated by agent directories (HomeLight, Ramsey Solutions, Experience.com), Redfin filter pages, and Compass agent pages that match only because the agent's first name is Holden. 'Moving to Holden MA' returns Redfin's housing-market page and mover marketplaces (MoveBuddha, HireAHelper, uShip). No local guide explains the villages, the reservoir history or how Holden connects to Worcester, which is the gap a sourced community page can fill.",
+  "faq": [
+    {
+      "q": "What is the median home price in Holden, MA?",
+      "a": "The median single-family sale price in Holden was $550,000 in calendar year 2025, unchanged from 2024, across 200 sales (174 in 2024), according to The Warren Group's MA December 2025 Sales, Prices by Town report."
+    },
+    {
+      "q": "Does Holden have commuter rail?",
+      "a": "Not within town lines. The nearest MBTA stations are Worcester, on the Framingham/Worcester Line in neighboring Worcester, and Wachusett, the end of the Fitchburg Line, in Fitchburg."
+    },
+    {
+      "q": "Which school district serves Holden?",
+      "a": "Holden is part of the Wachusett Regional School District. Review its profile with DESE."
+    }
+  ],
+  "notes": "Condo fields are null: in both WebFetch readings the converted PDF text of the condo table ended at 'BROOKLI', so Holden's condo rows could not be read. Holden is not on a station list for either line; Worcester borders Holden to the southeast per Wikipedia. The MHC survey dates from 1984. Wikipedia credits the population figure to a Census Bureau profile. Routes 122A, 31 and 68 come from the MHC report; no interstate is listed because none was sourced as passing through town."
+}

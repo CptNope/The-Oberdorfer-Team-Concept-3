@@ -1,0 +1,2634 @@
+[
+ {
+  "slug": "worcester",
+  "name": "Worcester",
+  "county": "Worcester County",
+  "region": "Central Massachusetts",
+  "population_2020": 206518,
+  "population_source": "https://en.wikipedia.org/wiki/Worcester,_Massachusetts",
+  "official_site": "https://www.worcesterma.gov/",
+  "headline": [
+   "Getting to know Worcester,",
+   "street by street and hill by hill."
+  ],
+  "answer": "Worcester is a city of 206,518 people (2020 Census) in Central Massachusetts and the historic seat of Worcester County. Its housing ranges from 19th-century triple-deckers to single-family homes, with 884 single-family sales in 2025. Worcester station at Union Station is the western end of the MBTA Framingham/Worcester Line to Boston, and I-290 runs through the city.",
+  "overview": [
+   "Worcester was incorporated as a town in 1722 and became a city in 1848, and it has served as the seat of Worcester County since 1731. That long run shows in the streets: Victorian-era mill buildings, lunch-car diners and a large stock of triple-decker houses, a building type the city is often credited with originating. Downtown gathers around Worcester Common and Union Station in Washington Square, where the Framingham/Worcester Line begins its run east to Boston's South Station.",
+   "Open space threads through the city. Elm Park, bought in 1854, carries a plaque calling it the first purchase of land for a public park in the United States. Mass Audubon's Broad Meadow Brook covers more than 400 acres of woods, fields and marsh, and Quinsigamond State Park offers swimming beaches and a 2,000-meter rowing course on Lake Quinsigamond. The Worcester Art Museum, open since 1898, holds nearly 40,000 objects, and colleges including Clark, Holy Cross and WPI sit across the city's hills."
+  ],
+  "housing": {
+   "text": "Worcester has many 19th-century triple-decker houses, a building type that likely originated in the city, along with Victorian-era mill buildings. Single-family homes are also traded in volume: The Warren Group counted 884 single-family sales in 2025.",
+   "source": "https://en.wikipedia.org/wiki/Worcester,_Massachusetts"
+  },
+  "villages": [
+   {
+    "name": "Downtown",
+    "line": "The city center around Lincoln Square, Federal Square, Worcester Common and Union Station in Washington Square.",
+    "source": "https://en.wikipedia.org/wiki/Neighborhoods_in_Worcester,_Massachusetts"
+   },
+   {
+    "name": "Canal District",
+    "line": "A neighborhood in South Worcester.",
+    "source": "https://en.wikipedia.org/wiki/Neighborhoods_in_Worcester,_Massachusetts"
+   },
+   {
+    "name": "Shrewsbury Street",
+    "line": "A neighborhood on the city's East Side.",
+    "source": "https://en.wikipedia.org/wiki/Neighborhoods_in_Worcester,_Massachusetts"
+   },
+   {
+    "name": "Main South",
+    "line": "A neighborhood in South Worcester.",
+    "source": "https://en.wikipedia.org/wiki/Neighborhoods_in_Worcester,_Massachusetts"
+   },
+   {
+    "name": "Grafton Hill",
+    "line": "An East Side neighborhood on one of the city's named hills.",
+    "source": "https://en.wikipedia.org/wiki/Neighborhoods_in_Worcester,_Massachusetts"
+   },
+   {
+    "name": "Tatnuck",
+    "line": "A West Side neighborhood.",
+    "source": "https://en.wikipedia.org/wiki/Neighborhoods_in_Worcester,_Massachusetts"
+   },
+   {
+    "name": "Greendale",
+    "line": "A neighborhood in North Worcester.",
+    "source": "https://en.wikipedia.org/wiki/Neighborhoods_in_Worcester,_Massachusetts"
+   },
+   {
+    "name": "Quinsigamond Village",
+    "line": "A South Worcester neighborhood near Lake Avenue and Lake Quinsigamond.",
+    "source": "https://en.wikipedia.org/wiki/Neighborhoods_in_Worcester,_Massachusetts"
+   }
+  ],
+  "commute": {
+   "rail": [
+    {
+     "line": "Framingham/Worcester Line",
+     "stations": [
+      "Worcester (Union Station, 2 Washington Square)"
+     ]
+    }
+   ],
+   "rail_source": "https://www.mbta.com/stops/place-WML-0442",
+   "highways": [
+    "I-290",
+    "I-190",
+    "Route 146",
+    "Route 9",
+    "Route 12"
+   ],
+   "text": "Worcester station is the western end of the Framingham/Worcester Line, with stops through Grafton, Westborough and Framingham to Boston's South Station. I-290 runs through the city and meets the Massachusetts Turnpike (I-90) and I-395 just south in Auburn."
+  },
+  "schools": {
+   "district": "Worcester Public Schools",
+   "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=03480000&orgtypecode=5"
+  },
+  "places": [
+   {
+    "name": "Elm Park",
+    "line": "About 58 acres with Newton Hill, ponds, trails, a disc golf course and summer concerts; its land was bought in 1854.",
+    "source": "https://worcesterma.gov/city-parks/elm-park"
+   },
+   {
+    "name": "Worcester Art Museum",
+    "line": "Open since 1898 at 55 Salisbury Street, with a collection of nearly 40,000 objects.",
+    "source": "https://www.worcesterart.org/about/"
+   },
+   {
+    "name": "Broad Meadow Brook Wildlife Sanctuary",
+    "line": "Mass Audubon's large urban sanctuary at 414 Massasoit Road, with trails through woods, fields, streams and marsh.",
+    "source": "https://www.massaudubon.org/places-to-explore/wildlife-sanctuaries/broad-meadow-brook"
+   },
+   {
+    "name": "Quinsigamond State Park",
+    "line": "Two DCR sites on Lake Quinsigamond, Regatta Point and Lake Park, with swimming, sailing, picnicking and a 2,000-meter rowing course.",
+    "source": "https://www.mass.gov/locations/quinsigamond-state-park"
+   },
+   {
+    "name": "Green Hill Park",
+    "line": "The city's largest park.",
+    "source": "https://en.wikipedia.org/wiki/Worcester,_Massachusetts"
+   }
+  ],
+  "history": [
+   {
+    "year": "1722",
+    "text": "Incorporated as a town on June 14.",
+    "source": "https://en.wikipedia.org/wiki/Worcester,_Massachusetts"
+   },
+   {
+    "year": "1776",
+    "text": "Isaiah Thomas gave the first public reading of the Declaration of Independence in Massachusetts on July 14.",
+    "source": "https://en.wikipedia.org/wiki/Worcester,_Massachusetts"
+   },
+   {
+    "year": "1848",
+    "text": "Incorporated as a city on February 29.",
+    "source": "https://en.wikipedia.org/wiki/Worcester,_Massachusetts"
+   }
+  ],
+  "market": {
+   "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+   "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+   "period": "Calendar year 2025",
+   "sf_sales_2025": 884,
+   "sf_sales_2024": 904,
+   "sf_median_2025": 430000,
+   "sf_median_2024": 420000,
+   "condo_sales_2025": null,
+   "condo_median_2025": null,
+   "condo_median_2024": null,
+   "reading_1": "Worcester (single-family, Dec 2024 / Dec 2025 / % change): \"YTD Number of Sales 904 884 -2.2%\"; \"YTD Median Sale Price $420,000 $430,000 2.4%\"",
+   "reading_2": "WORCESTER (single-family): \"Number of Sales 97 74 -23.7%\"; \"YTD Number of Sales 904 884 -2.2%\"; \"Median Sale Price $422,000 $412,600 -2.2%\"; \"YTD Median Sale Price $420,000 $430,000 2.4%\""
+  },
+  "nearby": [
+   "shrewsbury",
+   "grafton",
+   "auburn",
+   "millbury"
+  ],
+  "search_notes": "For 'Worcester MA real estate agent', results are agent directories and profiles (RE/MAX, RealTrends, Ramsey Solutions, BiggerPockets, HomeLight, Experience.com) plus a brokerage hiring post; no neighborhood content ranks. 'Moving to Worcester MA' returns a Livability listicle and national mover pages (UPack, Great Guys Moving, North American). A sourced, neighborhood-by-neighborhood guide with transit, parks and history is the clear gap.",
+  "faq": [
+   {
+    "q": "What is the median home price in Worcester, MA?",
+    "a": "The median single-family sale price in Worcester for calendar year 2025 was $430,000, across 884 sales, up from $420,000 in 2024, according to The Warren Group's MA December 2025 Sales, Prices by Town report."
+   },
+   {
+    "q": "Does Worcester have commuter rail?",
+    "a": "Yes. Worcester station at Union Station, 2 Washington Square, is the western end of the MBTA Framingham/Worcester Line, which runs to Boston's South Station."
+   },
+   {
+    "q": "Which school district serves Worcester?",
+    "a": "Worcester Public Schools. Review its profile with DESE."
+   }
+  ],
+  "notes": "Condo rows could not be read: both condo fetches of the Warren Group PDF were truncated at 'BROOKLI', before Worcester, so condo fields are null. I-90 is listed among Worcester's highways on Wikipedia, but the Turnpike's exit list places the nearby exits in Auburn and Millbury, so I-90 is described as reached via I-290 in Auburn rather than listed as passing through. Green Hill Park acreage omitted (Wikipedia gives 549 acres; other sources differ). The neighborhood list on Wikipedia gives location only, so village lines are kept to geography.",
+  "region_key": "central",
+  "tier": 1,
+  "art": "triple-decker"
+ },
+ {
+  "slug": "shrewsbury",
+  "name": "Shrewsbury",
+  "county": "Worcester County",
+  "region": "Central Massachusetts",
+  "population_2020": 38325,
+  "population_source": "https://en.wikipedia.org/wiki/Shrewsbury,_Massachusetts",
+  "official_site": "https://www.shrewsburyma.gov/",
+  "headline": [
+   "A closer look at Shrewsbury,",
+   "from the lakeshore to Main Street."
+  ],
+  "answer": "Shrewsbury is a Worcester County town of 38,325 people (2020 Census), across Lake Quinsigamond from Worcester. Single-family homes grew along its 19th-century streetcar routes, and The Warren Group counted 234 single-family sales in 2025. I-290, Route 9, Route 20 and Route 140 cross the town; the nearest commuter rail stops are in neighboring Worcester, Grafton and Westborough.",
+  "overview": [
+   "Shrewsbury sits just east of Worcester, with Lake Quinsigamond between them; I-290 crosses the water into town. Shrewsbury was incorporated in 1727 and grew along the old Boston Post Road, where two milestones from 1767 still stand. In the 19th century, streetcar lines helped single-family housing spread outward from the center, while the lakeshore filled with cottages and a summer resort season. The White City amusement park once stood by the lake; a shopping plaza holds the site today.",
+   "Main Street is the town's historic spine. The General Artemas Ward House Museum, a Harvard-affiliated house museum at 786 Main Street, opens for free guided tours from mid-April through November, across the road from Dean Park and its trails. Prospect Park adds 71 acres of forest paths, Jordan Pond has a loop trail of just under a mile, and Ski Ward at 1000 Main Street runs skiing, snowboarding and tubing through the year. The public library moved into a new 42,000-square-foot building in 2016."
+  ],
+  "housing": {
+   "text": "Streetcar routes in the 19th century propelled the growth of single-family housing in Shrewsbury, and lakeside cottages were built along Lake Quinsigamond. The Warren Group recorded 234 single-family sales in town in 2025.",
+   "source": "https://en.wikipedia.org/wiki/Shrewsbury,_Massachusetts"
+  },
+  "villages": [
+   {
+    "name": "Town Center",
+    "line": "The historic center along Main Street.",
+    "source": "https://www.mass.gov/doc/master-plan-part-1/download"
+   },
+   {
+    "name": "Lakeway District",
+    "line": "The district along Route 9.",
+    "source": "https://www.mass.gov/doc/master-plan-part-1/download"
+   },
+   {
+    "name": "White City",
+    "line": "A commercial area reached via South Quinsigamond Avenue and Lake Street, on the site of a former amusement park.",
+    "source": "https://www.mass.gov/doc/master-plan-part-1/download"
+   },
+   {
+    "name": "Edgemere",
+    "line": "The area around Edgemere Boulevard along the Route 20 corridor.",
+    "source": "https://www.mass.gov/doc/master-plan-part-1/download"
+   },
+   {
+    "name": "Shrewsbury Village",
+    "line": "The Old Shrewsbury Village area near Valente Drive on the Route 20 corridor.",
+    "source": "https://www.mass.gov/doc/master-plan-part-1/download"
+   }
+  ],
+  "commute": {
+   "rail": [
+    {
+     "line": "Framingham/Worcester Line (in neighboring towns)",
+     "stations": [
+      "Grafton (North Grafton)",
+      "Westborough",
+      "Worcester"
+     ]
+    }
+   ],
+   "rail_source": "https://www.mbta.com/schedules/CR-Worcester/timetable",
+   "highways": [
+    "I-290",
+    "Route 9",
+    "Route 20",
+    "Route 140"
+   ],
+   "text": "Shrewsbury has no commuter rail station of its own; the Framingham/Worcester Line stops in neighboring Worcester, Grafton and Westborough. I-290 has two Shrewsbury exits, at Main Street and Route 140, and Route 9, Route 20 and Route 140 also cross the town."
+  },
+  "schools": {
+   "district": "Shrewsbury Public Schools",
+   "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=02710000&orgtypecode=5"
+  },
+  "places": [
+   {
+    "name": "General Artemas Ward House Museum",
+    "line": "Historic house museum at 786 Main Street with free guided tours, mid-April through November.",
+    "source": "https://wardhouse.harvard.edu/visit-us"
+   },
+   {
+    "name": "Dean Park",
+    "line": "Town park on Main Street with about 1.8 miles of hiking trails, across from the Ward House.",
+    "source": "https://en.wikipedia.org/wiki/Shrewsbury,_Massachusetts"
+   },
+   {
+    "name": "Prospect Park",
+    "line": "A 71-acre forest with trails for walking, running and biking.",
+    "source": "https://en.wikipedia.org/wiki/Shrewsbury,_Massachusetts"
+   },
+   {
+    "name": "Jordan Pond Recreational Area",
+    "line": "About 0.8 miles of trails around Jordan Pond.",
+    "source": "https://en.wikipedia.org/wiki/Shrewsbury,_Massachusetts"
+   },
+   {
+    "name": "Ski Ward",
+    "line": "Year-round hill at 1000 Main Street with skiing, snowboarding, snow tubing and summer tubing.",
+    "source": "https://www.skiward.com/"
+   },
+   {
+    "name": "Lake Quinsigamond",
+    "line": "The lake on the Worcester line, crossed by I-290, with a long history of lakeside cottages.",
+    "source": "https://en.wikipedia.org/wiki/Shrewsbury,_Massachusetts"
+   }
+  ],
+  "history": [
+   {
+    "year": "1727",
+    "text": "Incorporated as a town.",
+    "source": "https://en.wikipedia.org/wiki/Shrewsbury,_Massachusetts"
+   },
+   {
+    "year": "1872",
+    "text": "The Shrewsbury Public Library was established.",
+    "source": "https://en.wikipedia.org/wiki/Shrewsbury,_Massachusetts"
+   },
+   {
+    "year": "2016",
+    "text": "A new 42,000-square-foot public library opened.",
+    "source": "https://en.wikipedia.org/wiki/Shrewsbury,_Massachusetts"
+   }
+  ],
+  "market": {
+   "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+   "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+   "period": "Calendar year 2025",
+   "sf_sales_2025": 234,
+   "sf_sales_2024": 299,
+   "sf_median_2025": 716500,
+   "sf_median_2024": 675000,
+   "condo_sales_2025": null,
+   "condo_median_2025": null,
+   "condo_median_2024": null,
+   "reading_1": "Shrewsbury (single-family, Dec 2024 / Dec 2025 / % change): \"YTD Number of Sales 299 234 -21.7%\"; \"YTD Median Sale Price $675,000 $716,500 6.1%\"",
+   "reading_2": "SHREWSBURY (single-family): \"Number of Sales 15 20 33.3%\"; \"YTD Number of Sales 299 234 -21.7%\"; \"Median Sale Price $685,500 $687,500 0.3%\"; \"YTD Median Sale Price $675,000 $716,500 6.1%\""
+  },
+  "nearby": [
+   "worcester",
+   "grafton",
+   "westborough",
+   "northborough",
+   "boylston"
+  ],
+  "search_notes": "For 'Shrewsbury MA real estate agent', results are agent profile directories (RealTrends profiles for Berkshire Hathaway HomeServices agents, BiggerPockets, Ramsey Solutions, Experience.com), a Max Real Estate Exposure town page and a syndicated agent press release. 'Moving to Shrewsbury MA' returns one rental-site blog comparing it with Worcester, Redfin's market page and mover directories (HireAHelper, MoveAdvisor). A guide covering the lakeshore, Main Street landmarks, Route 9 and Route 20 areas and the nearby rail options is missing.",
+  "faq": [
+   {
+    "q": "What is the median home price in Shrewsbury, MA?",
+    "a": "The median single-family sale price in Shrewsbury for calendar year 2025 was $716,500, across 234 sales, compared with $675,000 in 2024, according to The Warren Group's MA December 2025 Sales, Prices by Town report."
+   },
+   {
+    "q": "Does Shrewsbury have commuter rail?",
+    "a": "Not within town. The MBTA Framingham/Worcester Line stops in neighboring Worcester, Grafton (at 1 Pine Street in North Grafton) and Westborough."
+   },
+   {
+    "q": "Which school district serves Shrewsbury?",
+    "a": "Shrewsbury Public Schools. Review its profile with DESE."
+   }
+  ],
+  "notes": "Condo rows could not be read (both condo fetches truncated at 'BROOKLI'), so condo fields are null. The village and area names come from the MassDOT Shrewsbury Route 20 Corridor Master Plan, which names them but gives little description, so lines are kept to location. Wikipedia names no villages. Single-family sales fell 21.7 percent from 2024 to 2025 per the Warren Group; the reason is not given. Ward House operator is inferred from Harvard branding on wardhouse.harvard.edu, hence 'Harvard-affiliated'. Northborough and Boylston as neighbors come from the Route 20 corridor study and the I-290 route description.",
+  "region_key": "central",
+  "tier": 1,
+  "art": "colonial"
+ },
+ {
+  "slug": "grafton",
+  "name": "Grafton",
+  "county": "Worcester County",
+  "region": "Central Massachusetts",
+  "population_2020": 19664,
+  "population_source": "https://en.wikipedia.org/wiki/Grafton,_Massachusetts",
+  "official_site": "https://www.grafton-ma.gov/",
+  "headline": [
+   "Grafton, village by village,",
+   "from the common to the river."
+  ],
+  "answer": "Grafton is a Worcester County town of 19,664 people (2020 Census) bordering Worcester, established in 1735. Its housing runs from the 19th-century homes around Grafton Common to worker housing in its Blackstone River mill villages. Grafton station in North Grafton is on the MBTA Framingham/Worcester Line, and Routes 122, 140 and 30 cross the town.",
+  "overview": [
+   "Grafton's story begins with Hassanamisco, a Christian Indian plantation established in 1654; the town itself was established in 1735. Hassanamesitt Woods, about 200 acres on Keith Hill, is believed to hold the core of that Nipmuc village, and the Trust for Public Land bought it in 2004 for transfer to the town. Grafton Common, landscaped into an elliptical park in 1843 and 1844, is still ringed by a temple-front store, a mansard-roofed store and a Second Empire commercial block.",
+   "Away from the common, Grafton spreads into villages built on water power. North Grafton, once New England Village, sits where the Quinsigamond River falls more than 50 feet in a short distance, and Saundersville, Fisherville and Farnumsville line the Blackstone River in the southwest. Benjamin Willard began making clocks in a North Grafton workshop in 1766, a legacy now kept at the Willard House and Clock Museum. Grafton station on Pine Street puts the town on the Framingham/Worcester Line, and Tufts University's Cummings School of Veterinary Medicine has its campus here."
+  ],
+  "housing": {
+   "text": "The Massachusetts Historical Commission describes Grafton Center as possibly the best-preserved 19th-century residential and institutional village in its study area, while the Blackstone River villages retain much of their 19th-century worker housing, including duplexes, boardinghouses and double-deckers. Craftsman bungalows and Colonial Revival homes followed in the early 20th century.",
+   "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"
+  },
+  "villages": [
+   {
+    "name": "Grafton Center",
+    "line": "The crossroads village around Grafton Common, with 19th-century homes, stores and civic buildings.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"
+   },
+   {
+    "name": "North Grafton",
+    "line": "Includes the former New England Village on the Quinsigamond River, with worker housing near Factory and Second Streets; home to Grafton station.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"
+   },
+   {
+    "name": "South Grafton",
+    "line": "One of the town's three postal villages, each with its own ZIP code.",
+    "source": "https://en.wikipedia.org/wiki/Grafton,_Massachusetts"
+   },
+   {
+    "name": "Farnumsville",
+    "line": "A Blackstone River mill village in the southwest of town.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"
+   },
+   {
+    "name": "Fisherville",
+    "line": "A Blackstone River mill village that keeps much of its 19th-century worker housing.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"
+   },
+   {
+    "name": "Saundersville",
+    "line": "A Blackstone River mill village where a cotton mill was built in 1829.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"
+   },
+   {
+    "name": "Centerville",
+    "line": "A former mill site on the Quinsigamond River west of Grafton Center.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"
+   }
+  ],
+  "commute": {
+   "rail": [
+    {
+     "line": "Framingham/Worcester Line",
+     "stations": [
+      "Grafton (1 Pine Street, North Grafton)"
+     ]
+    }
+   ],
+   "rail_source": "https://www.mbta.com/stops/place-WML-0364",
+   "highways": [
+    "Route 122",
+    "Route 140",
+    "Route 30"
+   ],
+   "text": "Grafton station sits between Worcester and Westborough on the Framingham/Worcester Line, with a 382-space parking lot. Route 140 runs through Grafton Center, Route 122 crosses toward Worcester and Providence, and Route 30 links North Grafton with Westborough."
+  },
+  "schools": {
+   "district": "Grafton Public Schools",
+   "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=01100000&orgtypecode=5"
+  },
+  "places": [
+   {
+    "name": "Grafton Common",
+    "line": "The town's central green, landscaped as an elliptical park in 1843 and 1844 and framed by 19th-century buildings.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"
+   },
+   {
+    "name": "Willard House and Clock Museum",
+    "line": "The Willard clockmakers' home at 11 Willard Street, North Grafton, showing more than 90 Willard clocks by guided tour.",
+    "source": "https://www.willardhouse.org/"
+   },
+   {
+    "name": "Hassanamesitt Woods",
+    "line": "About 200 wooded acres on Keith Hill, believed to hold the core of the 17th-century Nipmuc village, with trails for hiking, skiing and birdwatching.",
+    "source": "https://www.tpl.org/media-room/hassanamesitt-woods-protection-moves-forward-ma"
+   },
+   {
+    "name": "Grafton Land Trust properties",
+    "line": "More than two dozen protected parcels with trails, including Brigham Hill, Fletcher Reserve and Williams Woods.",
+    "source": "https://graftonland.org/openspaces.properties.php"
+   },
+   {
+    "name": "Cummings School of Veterinary Medicine",
+    "line": "Tufts University's veterinary school campus in North Grafton.",
+    "source": "https://en.wikipedia.org/wiki/Grafton,_Massachusetts"
+   }
+  ],
+  "history": [
+   {
+    "year": "1654",
+    "text": "The Christian Indian plantation of Hassanamisco was established.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"
+   },
+   {
+    "year": "1735",
+    "text": "Incorporated as the Town of Grafton.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"
+   },
+   {
+    "year": "1766",
+    "text": "Benjamin Willard began making clocks in his North Grafton workshop.",
+    "source": "https://www.willardhouse.org/"
+   }
+  ],
+  "market": {
+   "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+   "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+   "period": "Calendar year 2025",
+   "sf_sales_2025": 153,
+   "sf_sales_2024": 143,
+   "sf_median_2025": 610000,
+   "sf_median_2024": 610000,
+   "condo_sales_2025": null,
+   "condo_median_2025": null,
+   "condo_median_2024": null,
+   "reading_1": "Grafton (single-family, Dec 2024 / Dec 2025 / % change): \"YTD Number of Sales 143 153 7.0%\"; \"YTD Median Sale Price $610,000 $610,000 0.0%\"",
+   "reading_2": "GRAFTON (single-family): \"Number of Sales9 15 66.7%\"; \"YTD Number of Sales 143 153 7.0%\"; \"Median Sale Price $550,000 $500,000 -9.1%\"; \"YTD Median Sale Price $610,000 $610,000 0.0%\""
+  },
+  "nearby": [
+   "worcester",
+   "shrewsbury",
+   "westborough",
+   "millbury",
+   "upton"
+  ],
+  "search_notes": "For 'Grafton MA real estate agent', results are BiggerPockets, a Max Real Estate Exposure page, William Raveis and Redfin listing pages, and a HomeLight page that is actually for Worcester's Grafton Hill neighborhood, showing name confusion. 'Moving to Grafton MA' returns only mover directories and cost pages (uShip, MoveBuddha, MoveAdvisor). There is no real local guide ranking, and a page that explains Grafton's villages, the common and the North Grafton station would stand alone.",
+  "faq": [
+   {
+    "q": "What is the median home price in Grafton, MA?",
+    "a": "The median single-family sale price in Grafton for calendar year 2025 was $610,000, across 153 sales, unchanged from $610,000 in 2024, according to The Warren Group's MA December 2025 Sales, Prices by Town report."
+   },
+   {
+    "q": "Does Grafton have commuter rail?",
+    "a": "Yes. Grafton station, at 1 Pine Street in North Grafton, is on the MBTA Framingham/Worcester Line between Worcester and Westborough."
+   },
+   {
+    "q": "Which school district serves Grafton?",
+    "a": "Grafton Public Schools. Review its profile with DESE."
+   }
+  ],
+  "notes": "Condo rows could not be read (both condo fetches truncated at 'BROOKLI'), so condo fields are null. The MHC town report dates from 1984 and warns that it is dated; its route descriptions (Routes 122, 140, 30) and village character are historic. I could not confirm that I-90 passes through Grafton (the Turnpike exit list names Millbury and Westborough only), so it is left out. Hassanamesitt Woods was bought by the Trust for Public Land in 2004 for transfer to the town; I did not confirm the transfer was completed. Grafton Land Trust acreage is not stated on its site. The district's DESE name is 'Grafton'; 'Grafton Public Schools' is the common name.",
+  "region_key": "central",
+  "tier": 1,
+  "art": "cape"
+ },
+ {
+  "slug": "westborough",
+  "name": "Westborough",
+  "county": "Worcester County",
+  "region": "Central Massachusetts",
+  "population_2020": 21567,
+  "population_source": "https://en.wikipedia.org/wiki/Westborough,_Massachusetts",
+  "official_site": "https://www.westboroughma.gov/",
+  "headline": [
+   "Westborough, mapped out:",
+   "the center, the lake and the trails."
+  ],
+  "answer": "Westborough is a Worcester County town of 21,567 people (2020 Census), incorporated in 1717. Its center keeps colonial and 19th-century homes, and The Warren Group counted 134 single-family sales in 2025. Westborough station is on the MBTA Framingham/Worcester Line, and the Massachusetts Turnpike, I-495 and Route 9 cross the town, linking it east to Boston and west to Worcester.",
+  "overview": [
+   "Westborough was incorporated in 1717 as the hundredth town in Massachusetts, set off from Marlborough with twenty-seven families. Eli Whitney, later the inventor of the cotton gin, was born here in 1765, and a stone on Eli Whitney Street marks the spot. In 1810 the road between Boston and Worcester became an official turnpike through town, today's Route 9. Once the railroad came through the center, the commercial life of the town followed it, leaving brick blocks downtown and quieter turnpike villages like Wessonville.",
+   "The land is a broad central plain ringed by rounded hills, with a large cedar swamp at its eastern end and the Assabet River along part of the northern edge. Lake Chauncy, in the north, has a public beach and is used for swimming, boating and fishing. The Westborough Charm Bracelet, a roughly 28-mile loop trail developed since 2000 by the Westborough Community Land Trust and the town's Open Space Preservation Committee, links most of the major open spaces, and side trails reach schools and neighborhoods."
+  ],
+  "housing": {
+   "text": "The Massachusetts Historical Commission notes two-story, center-chimney colonial houses, worker cottages grouped in the center and Italianate, Second Empire and Queen Anne houses on High Street. The Vintonville Historic District, just east of the center, is made up of modest houses on smaller lots, largely built between 1860 and 1890.",
+   "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/wbo.pdf"
+  },
+  "villages": [
+   {
+    "name": "Westborough Center",
+    "line": "The downtown, with multi-story brick commercial blocks near the railroad and the former meetinghouse site.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/wbo.pdf"
+   },
+   {
+    "name": "Vintonville",
+    "line": "A 20-acre historic district east of the center with about 80 modest 1860 to 1890 houses on streets such as Cottage, Elm and South.",
+    "source": "https://en.wikipedia.org/wiki/Vintonville_Historic_District"
+   },
+   {
+    "name": "Wessonville",
+    "line": "A former turnpike village on Route 9 that once had a tavern, store and thread factory.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/wbo.pdf"
+   },
+   {
+    "name": "Lake Chauncy area",
+    "line": "The northern part of town around Lake Chauncy, once home to the state reform school and state hospital grounds.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/wbo.pdf"
+   }
+  ],
+  "commute": {
+   "rail": [
+    {
+     "line": "Framingham/Worcester Line",
+     "stations": [
+      "Westborough (Smith Parkway and Fisher Street)"
+     ]
+    }
+   ],
+   "rail_source": "https://www.mbta.com/stops/place-WML-0340",
+   "highways": [
+    "Massachusetts Turnpike (I-90)",
+    "I-495",
+    "Route 9",
+    "Route 30",
+    "Route 135"
+   ],
+   "text": "Westborough station, at Smith Parkway and Fisher Street with 448 parking spaces, sits between Grafton and Southborough on the Framingham/Worcester Line. The Turnpike and I-495 meet at the Hopkinton line, and Route 9 follows the old Boston-Worcester turnpike."
+  },
+  "schools": {
+   "district": "Westborough Public Schools",
+   "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=03210000&orgtypecode=5"
+  },
+  "places": [
+   {
+    "name": "Lake Chauncy",
+    "line": "A lake in the north of town with a public beach, swimming, boating and fishing.",
+    "source": "https://en.wikipedia.org/wiki/Westborough,_Massachusetts"
+   },
+   {
+    "name": "Westborough Charm Bracelet",
+    "line": "A roughly 28-mile loop trail linking most of the town's major open spaces, with side trails to schools and neighborhoods.",
+    "source": "https://westboroughlandtrust.org/charm"
+   },
+   {
+    "name": "Assabet Reservoir",
+    "line": "A reservoir with hiking trails.",
+    "source": "https://en.wikipedia.org/wiki/Westborough,_Massachusetts"
+   },
+   {
+    "name": "Vintonville Historic District",
+    "line": "A walkable National Register district of 1860 to 1890 houses just east of downtown.",
+    "source": "https://en.wikipedia.org/wiki/Vintonville_Historic_District"
+   },
+   {
+    "name": "Eli Whitney birthplace",
+    "line": "A commemorative stone on Eli Whitney Street marks where the inventor was born in 1765.",
+    "source": "https://en.wikipedia.org/wiki/Westborough,_Massachusetts"
+   }
+  ],
+  "history": [
+   {
+    "year": "1717",
+    "text": "Incorporated as the hundredth town in Massachusetts, set off from Marlborough.",
+    "source": "https://en.wikipedia.org/wiki/Westborough,_Massachusetts"
+   },
+   {
+    "year": "1765",
+    "text": "Eli Whitney, inventor of the cotton gin, was born in Westborough.",
+    "source": "https://en.wikipedia.org/wiki/Westborough,_Massachusetts"
+   },
+   {
+    "year": "1810",
+    "text": "The Boston-to-Worcester road through town became an official turnpike, today's Route 9.",
+    "source": "https://en.wikipedia.org/wiki/Westborough,_Massachusetts"
+   }
+  ],
+  "market": {
+   "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+   "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+   "period": "Calendar year 2025",
+   "sf_sales_2025": 134,
+   "sf_sales_2024": 119,
+   "sf_median_2025": 752000,
+   "sf_median_2024": 780000,
+   "condo_sales_2025": null,
+   "condo_median_2025": null,
+   "condo_median_2024": null,
+   "reading_1": "Westborough (single-family, Dec 2024 / Dec 2025 / % change): \"YTD Number of Sales 119 134 12.6%\"; \"YTD Median Sale Price $780,000 $752,000 -3.6%\"",
+   "reading_2": "WESTBOROUGH (single-family): \"Number of Sales5 14 180.0%\"; \"YTD Number of Sales 119 134 12.6%\"; \"Median Sale Price $788,000 $715,000 -9.3%\"; \"YTD Median Sale Price $780,000 $752,000 -3.6%\""
+  },
+  "nearby": [
+   "northborough",
+   "shrewsbury",
+   "grafton",
+   "hopkinton"
+  ],
+  "search_notes": "For 'Westborough MA real estate agent', results are a Google Business profile, a Century 21 North East office page, Bean Group and Redfin pages, and directories (Ramsey Solutions, HomeLight, BiggerPockets, Max Real Estate Exposure). 'Moving to Westborough MA' returns only moving-company pages (Allied, HireAHelper, MoveBuddha, MoveAdvisor). Nothing ranking explains the town's layout, its station or the Charm Bracelet trails, which a sourced local guide could cover.",
+  "faq": [
+   {
+    "q": "What is the median home price in Westborough, MA?",
+    "a": "The median single-family sale price in Westborough for calendar year 2025 was $752,000, across 134 sales, down from $780,000 in 2024, according to The Warren Group's MA December 2025 Sales, Prices by Town report."
+   },
+   {
+    "q": "Does Westborough have commuter rail?",
+    "a": "Yes. Westborough station, at Smith Parkway and Fisher Street, is on the MBTA Framingham/Worcester Line between Grafton and Southborough."
+   },
+   {
+    "q": "Which school district serves Westborough?",
+    "a": "Westborough Public Schools. Review its profile with DESE."
+   }
+  ],
+  "notes": "Condo rows could not be read (both condo fetches truncated at 'BROOKLI'), so condo fields are null. Wikipedia dates the railroad's arrival to 1824 while the 1983 MHC report gives 1834-35, so the overview gives no date for it. The MHC report is from 1983 and OCR-scanned. Hopkinton as a neighbor rests on the Turnpike exit list ('Hopkinton-Westborough line'). The official site www.town.westborough.ma.us redirects to www.westboroughma.gov.",
+  "region_key": "central",
+  "tier": 1,
+  "art": "colonial"
+ },
+ {
+  "slug": "holden",
+  "name": "Holden",
+  "county": "Worcester County",
+  "region": "Central Massachusetts",
+  "population_2020": 19905,
+  "population_source": "https://en.wikipedia.org/wiki/Holden,_Massachusetts",
+  "official_site": "https://www.holdenma.gov/",
+  "headline": [
+   "Old mill villages and open hills,",
+   "just over the line from Worcester."
+  ],
+  "answer": "Holden is a town of 19,905 people (2020 Census) in Worcester County, set in rolling hills just north of Worcester. Its houses range from 1800s mill-village homes to suburban streets that grew after World War II. Routes 122A, 31 and 68 cross the town, and the commuter rail stops at Worcester station next door.",
+  "overview": [
+   "Holden covers about thirty-six square miles of rolling upland just north of Worcester, and the town notes that a good portion of that land is protected open space, watershed and recreation area. Settlement began around 1723, and Holden was incorporated on January 9, 1741, from what had been the north half of Worcester. Through the 1800s, mills grew up along the Quinapoxet River in villages such as Chaffin, Springdale and Dawsonville, while Jefferson became the industrial village in the south of town.",
+   "The landscape shifted again around 1900, when reservoirs built for Worcester and the Wachusett Reservoir project cleared most of the river mills. After World War II, Holden became largely residential. Holden Center is still the civic heart along Main Street, where the Gale Free Library has used the Damon Memorial building since 1888. For time outside, the 660-acre Trout Brook Recreation Area and the town beach at Eagle Lake are within town lines, and the Mass Central Rail Trail follows the Quinapoxet River into Holden from Oakdale in West Boylston."
+  ],
+  "housing": {
+   "text": "The Massachusetts Historical Commission's survey of Holden records one-story center-chimney Federal houses, mid-1800s side-passage houses with Greek Revival or Italianate trim, company tenements in Jefferson, and Bungalow and Four Square houses from 1915 to 1940, with suburban growth tied to Worcester after the 1920s. The town notes further residential growth after World War II.",
+   "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/hol.pdf"
+  },
+  "villages": [
+   {
+    "name": "Holden Center",
+    "line": "The civic center of town on the central upland, with houses strung along Main Street.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/hol.pdf"
+   },
+   {
+    "name": "Jefferson",
+    "line": "The former industrial village in the south of town, where the mill company once owned dozens of tenements; it has its own ZIP code, 01522.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/hol.pdf"
+   },
+   {
+    "name": "Eagleville",
+    "line": "A southern mill village next to Jefferson, recorded in the 1830s as \"Brick City.\"",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/hol.pdf"
+   },
+   {
+    "name": "Chaffin",
+    "line": "One of the villages that grew up around Holden's 19th-century mills.",
+    "source": "https://www.holdenma.gov/node/55651"
+   },
+   {
+    "name": "Dawsonville",
+    "line": "A former mill site in the Quinapoxet River corridor; its mill was removed in 1926.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/hol.pdf"
+   }
+  ],
+  "commute": {
+   "rail": [
+    {
+     "line": "Framingham/Worcester Line (in Worcester)",
+     "stations": [
+      "Worcester Union Station"
+     ]
+    },
+    {
+     "line": "Fitchburg Line (in Fitchburg)",
+     "stations": [
+      "Wachusett"
+     ]
+    }
+   ],
+   "rail_source": "https://www.mbta.com/stops/place-WML-0442",
+   "highways": [
+    "Route 122A",
+    "Route 31",
+    "Route 68"
+   ],
+   "text": "Holden has no commuter rail station of its own. The nearest MBTA stations are Worcester, on the Framingham/Worcester Line in the neighboring city, and Wachusett, the end of the Fitchburg Line, in Fitchburg."
+  },
+  "schools": {
+   "district": "Wachusett Regional School District",
+   "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=07750000&orgtypecode=5"
+  },
+  "places": [
+   {
+    "name": "Trout Brook Recreation Area",
+    "line": "660 acres of town conservation land with trails for walking, cross-country skiing and mountain biking, a pond, a picnic pavilion and a rentable lodge.",
+    "source": "https://www.holdenma.gov/node/2901"
+   },
+   {
+    "name": "Eagle Lake",
+    "line": "A town lake with a lifeguarded municipal beach, fishing and room for canoes and other non-motorized boats.",
+    "source": "https://www.holdenma.gov/node/4081"
+   },
+   {
+    "name": "Mass Central Rail Trail",
+    "line": "Stone-dust trail sections run about three miles along the Quinapoxet River from Oakdale in West Boylston to River Street, plus a 2.2-mile connector from River Street to Manning and Mill Streets.",
+    "source": "https://www.wachusettgreenways.org/wordpress/?p=175"
+   },
+   {
+    "name": "Gale Free Library",
+    "line": "The town library in the Damon Memorial building, dedicated in 1888, with a Local History Room.",
+    "source": "https://www.galefreelibrary.org/Pages/Index/121426/local-history"
+   },
+   {
+    "name": "Dawson Recreation Area",
+    "line": "A town recreation site with a playground and baseball field, with expansion planned at 18 Industrial Drive.",
+    "source": "https://www.holdenma.gov/print/99386"
+   }
+  ],
+  "history": [
+   {
+    "year": "1723",
+    "text": "First European settlement, near a lime quarry in the southeast of present-day Holden.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/hol.pdf"
+   },
+   {
+    "year": "1741",
+    "text": "Incorporated on January 9 from the north half of Worcester.",
+    "source": "https://www.holdenma.gov/node/55651"
+   },
+   {
+    "year": "1954",
+    "text": "Joined the first regional school district in Massachusetts.",
+    "source": "https://www.holdenma.gov/node/55651"
+   }
+  ],
+  "market": {
+   "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+   "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+   "period": "Calendar year 2025",
+   "sf_sales_2025": 200,
+   "sf_sales_2024": 174,
+   "sf_median_2025": 550000,
+   "sf_median_2024": 550000,
+   "condo_sales_2025": null,
+   "condo_median_2025": null,
+   "condo_median_2024": null,
+   "reading_1": "HOLDEN | YTD Number of Sales 174 200 14.9% | YTD Median Sale Price $550,000 $550,000 0.0% (columns: Dec 2024, Dec 2025, Percent Change)",
+   "reading_2": "HOLDEN | YTD Number of Sales 174 200 14.9% | YTD Median Sale Price $550,000 $550,000 0.0% (columns: Dec 2024, Dec 2025, Percent Change)"
+  },
+  "nearby": [
+   "worcester",
+   "paxton",
+   "rutland",
+   "west-boylston",
+   "sterling",
+   "princeton"
+  ],
+  "search_notes": "For 'Holden MA real estate agent', results are dominated by agent directories (HomeLight, Ramsey Solutions, Experience.com), Redfin filter pages, and Compass agent pages that match only because the agent's first name is Holden. 'Moving to Holden MA' returns Redfin's housing-market page and mover marketplaces (MoveBuddha, HireAHelper, uShip). No local guide explains the villages, the reservoir history or how Holden connects to Worcester, which is the gap a sourced community page can fill.",
+  "faq": [
+   {
+    "q": "What is the median home price in Holden, MA?",
+    "a": "The median single-family sale price in Holden was $550,000 in calendar year 2025, unchanged from 2024, across 200 sales (174 in 2024), according to The Warren Group's MA December 2025 Sales, Prices by Town report."
+   },
+   {
+    "q": "Does Holden have commuter rail?",
+    "a": "Not within town lines. The nearest MBTA stations are Worcester, on the Framingham/Worcester Line in neighboring Worcester, and Wachusett, the end of the Fitchburg Line, in Fitchburg."
+   },
+   {
+    "q": "Which school district serves Holden?",
+    "a": "Holden is part of the Wachusett Regional School District. Review its profile with DESE."
+   }
+  ],
+  "notes": "Condo fields are null: in both WebFetch readings the converted PDF text of the condo table ended at 'BROOKLI', so Holden's condo rows could not be read. Holden is not on a station list for either line; Worcester borders Holden to the southeast per Wikipedia. The MHC survey dates from 1984. Wikipedia credits the population figure to a Census Bureau profile. Routes 122A, 31 and 68 come from the MHC report; no interstate is listed because none was sourced as passing through town.",
+  "region_key": "central",
+  "tier": 1,
+  "art": "cape"
+ },
+ {
+  "slug": "leominster",
+  "name": "Leominster",
+  "county": "Worcester County",
+  "region": "Central Massachusetts",
+  "population_2020": 43782,
+  "population_source": "https://en.wikipedia.org/wiki/Leominster,_Massachusetts",
+  "official_site": "https://www.leominster-ma.gov/",
+  "headline": [
+   "A city that once made combs,",
+   "with a state forest at its back door."
+  ],
+  "answer": "Leominster is a city of 43,782 people (2020 Census) in northern Worcester County, just south of Fitchburg. Its housing includes worker cottages, three-deckers and duplexes from its comb and plastics years. Route 2 and I-190 pass through, and North Leominster station is on the MBTA Fitchburg Line to Boston's North Station.",
+  "overview": [
+   "Leominster grew out of Lancaster. Permanent settlement began around 1725, the town was established in 1740, and it became a city in 1915. Its factories gave it a distinct story: comb shops lined Exchange Street in Morse Hollow, and after celluloid was invented in 1868 Leominster became known as the Comb City. Plastics followed, and the plastic pink flamingo lawn ornament was invented here in 1956. John Chapman, the orchard planter known as Johnny Appleseed, was born here in 1774; a granite marker stands on Johnny Appleseed Lane.",
+   "Monument Square has been the civic and commercial center since the 1800s, and the railroad has run through North Leominster since 1841, where the commuter rail station now sits on Nashua Street. Open land is close. Leominster State Forest offers swimming at Crow Hill Pond, the Crow Hill Ledges and a stretch of the Midstate Trail. Sholan Farms, bought with the city's help, grows apples, berries and pumpkins on Pleasant Street. Phase One of the Twin Cities Rail Trail now links the business districts of Leominster and Fitchburg."
+  ],
+  "housing": {
+   "text": "The Massachusetts Historical Commission's survey of Leominster records worker cottages east of the center along Water, Spruce and Mechanic Streets and in Lincoln Terrace, along with double houses, gable-end duplexes and three-deckers, which it notes were especially common in the early 1900s. Larger Queen Anne and Colonial Revival houses line the West Side and the hillside streets northwest of Main Street.",
+   "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"
+  },
+  "villages": [
+   {
+    "name": "Monument Square and the Center",
+    "line": "The historic civic and commercial center along Monoosnock Brook, around the old common.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"
+   },
+   {
+    "name": "North Leominster",
+    "line": "A secondary industrial and residential center on the North Nashua River and the railroad, home to the commuter rail station.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"
+   },
+   {
+    "name": "West Side",
+    "line": "A residential district west of Main Street and north of West Street.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"
+   },
+   {
+    "name": "Morse Hollow",
+    "line": "The former comb-factory area along Exchange Street, with a residential cluster around Elm and Exchange Streets.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"
+   },
+   {
+    "name": "Lincoln Terrace",
+    "line": "A neighborhood of early worker housing east of Central Street.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"
+   },
+   {
+    "name": "French Hill",
+    "line": "One of the city's commonly named neighborhoods.",
+    "source": "https://en.wikipedia.org/wiki/Leominster,_Massachusetts"
+   }
+  ],
+  "commute": {
+   "rail": [
+    {
+     "line": "Fitchburg Line",
+     "stations": [
+      "North Leominster (44 Nashua Street)"
+     ]
+    }
+   ],
+   "rail_source": "https://www.mbta.com/stops/place-FR-0451",
+   "highways": [
+    "Route 2",
+    "I-190",
+    "Route 12",
+    "Route 13",
+    "Route 117"
+   ],
+   "text": "North Leominster station is on the MBTA Fitchburg Line, which runs to North Station in Boston. Route 2, I-190 and Routes 12, 13 and 117 all pass through the city."
+  },
+  "schools": {
+   "district": "Leominster Public Schools",
+   "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=01530000&orgtypecode=5"
+  },
+  "places": [
+   {
+    "name": "Leominster State Forest",
+    "line": "A DCR forest with swimming and trout fishing at Crow Hill Pond, the Crow Hill Ledges, Paradise Pond and part of the Midstate Trail; the beach entrance is on Fitchburg Road in Westminster.",
+    "source": "https://www.mass.gov/locations/leominster-state-forest"
+   },
+   {
+    "name": "Sholan Farms",
+    "line": "A preserved orchard at 1125 Pleasant Street with pick-your-own fruit, crop fields and walking trails.",
+    "source": "https://freedomsway.org/?p=15335"
+   },
+   {
+    "name": "Doyle Community Park",
+    "line": "A former estate at 464 Abbott Avenue with landscaped grounds, including Pierce Park, and the Doyle Center.",
+    "source": "https://freedomsway.org/?p=6440"
+   },
+   {
+    "name": "Twin Cities Rail Trail",
+    "line": "Phase One runs from Carter Park in Leominster to First Street in Fitchburg, including a new bridge over Route 2.",
+    "source": "https://www.mass.gov/news/healey-driscoll-administration-celebrates-route-2-multimodal-bridge"
+   },
+   {
+    "name": "Johnny Appleseed birthplace marker",
+    "line": "A historical marker on Johnny Appleseed Lane noting John Chapman's birth nearby in 1774.",
+    "source": "https://www.hmdb.org/m.asp?m=32789"
+   }
+  ],
+  "history": [
+   {
+    "year": "1740",
+    "text": "Established as the town of Leominster, after settlement from Lancaster began around 1725.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"
+   },
+   {
+    "year": "1868",
+    "text": "Celluloid was invented, reshaping comb-making and earning Leominster the nickname Comb City.",
+    "source": "https://en.wikipedia.org/wiki/Leominster,_Massachusetts"
+   },
+   {
+    "year": "1915",
+    "text": "Incorporated as a city.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"
+   }
+  ],
+  "market": {
+   "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+   "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+   "period": "Calendar year 2025",
+   "sf_sales_2025": 258,
+   "sf_sales_2024": 257,
+   "sf_median_2025": 475500,
+   "sf_median_2024": 462000,
+   "condo_sales_2025": null,
+   "condo_median_2025": null,
+   "condo_median_2024": null,
+   "reading_1": "LEOMINSTER | YTD Number of Sales 257 258 0.4% | YTD Median Sale Price $462,000 $475,500 2.9% (columns: Dec 2024, Dec 2025, Percent Change)",
+   "reading_2": "LEOMINSTER | YTD Number of Sales 257 258 0.4% | YTD Median Sale Price $462,000 $475,500 2.9% (columns: Dec 2024, Dec 2025, Percent Change)"
+  },
+  "nearby": [
+   "fitchburg",
+   "lunenburg",
+   "lancaster",
+   "sterling",
+   "princeton",
+   "westminster"
+  ],
+  "search_notes": "'Leominster MA real estate agent' returns individual agent profiles on directories (RealTrends, HomeLight, Experience.com) rather than any town page. 'Moving to Leominster MA' is led by mover sites (Allied, HireAHelper, MoveAdvisor, Wheaton), Redfin's housing-market page and Livability. Nothing ranking explains the neighborhoods, the Fitchburg Line stop or the comb-and-plastics history, so a sourced local guide has clear room.",
+  "faq": [
+   {
+    "q": "What is the median home price in Leominster, MA?",
+    "a": "The median single-family sale price in Leominster was $475,500 in calendar year 2025, up from $462,000 in 2024, across 258 sales (257 in 2024), according to The Warren Group's MA December 2025 Sales, Prices by Town report."
+   },
+   {
+    "q": "Does Leominster have commuter rail?",
+    "a": "Yes. North Leominster station, at 44 Nashua Street, is on the MBTA Fitchburg Line, which runs to North Station in Boston."
+   },
+   {
+    "q": "Which school district serves Leominster?",
+    "a": "Leominster Public Schools. Review its profile with DESE."
+   }
+  ],
+  "notes": "Condo fields are null: in both WebFetch readings the converted PDF text of the condo table ended at 'BROOKLI', so Leominster's condo rows could not be read. Doyle Community Park acreage differs by source (157 acres on Freedom's Way, 167 on Wikipedia), so it is omitted. The Freedom's Way page credits The Trustees at the Doyle Center but does not state current ownership. French Hill is listed on Wikipedia only. The MHC survey is from the 1980s. Wikipedia credits the population figure to the 2020 Census.",
+  "region_key": "central",
+  "tier": 2,
+  "art": "cape"
+ },
+ {
+  "slug": "framingham",
+  "name": "Framingham",
+  "county": "Middlesex County",
+  "region": "MetroWest",
+  "population_2020": 72362,
+  "population_source": "https://en.wikipedia.org/wiki/Framingham,_Massachusetts",
+  "official_site": "https://www.framinghamma.gov/",
+  "headline": [
+   "Several old centers, one city,",
+   "on the road and rail line west of Boston."
+  ],
+  "answer": "Framingham is a city of 72,362 people (2020 Census) in Middlesex County, on the main western corridor out of Boston. It grew from separate centers, including Saxonville, Framingham Centre and South Framingham, and its housing runs from mill-era double houses to two-families and suburban homes. Framingham station serves the Framingham/Worcester Line, and the Massachusetts Turnpike crosses the city.",
+  "overview": [
+   "Framingham never had a single village at its heart. John Stone settled near the Sudbury River falls in 1647 and built a gristmill there, the start of what became the mill village of Saxonville. The town was incorporated in 1700, and Framingham Centre grew up as the civic focus on the old Boston turnpike. When the Boston and Worcester railroad reached South Framingham in 1834, that area became the industrial center. Voters approved a city charter in 2017, and Framingham became a city on January 1, 2018.",
+   "Those separate centers still shape the map. Saxonville keeps mid-1800s mill housing near the falls, and the Framingham Centre Common Historic District holds 28 buildings around the old common, including the Village Hall and First Parish Church. The Danforth Art Museum and School is now part of Framingham State University. Green space comes in several forms: Callahan State Park has more than 800 acres and seven miles of marked trails, Garden in the Woods shows New England native plants on 45 acres, and the Cochituate Rail Trail runs from Concord Street toward Natick."
+  ],
+  "housing": {
+   "text": "The Massachusetts Historical Commission's survey of Framingham records central-chimney double houses built for mill workers at Saxonville around 1825 to 1835, wood-frame tenements and row houses in South Framingham and Coburnville, and two-family houses that became common there in the early 1900s, with relatively few three-deckers. Larger suburban houses were built around Framingham Centre on Park Street, Prospect Street and Salem Road.",
+   "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/frm.pdf"
+  },
+  "villages": [
+   {
+    "name": "Framingham Centre",
+    "line": "The historic civic center around the old common, with large older houses on hillside streets near the Sudbury River.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/frm.pdf"
+   },
+   {
+    "name": "Saxonville",
+    "line": "The former mill village at the Sudbury River falls in northern Framingham, where mid-1800s workers' housing remains.",
+    "source": "https://en.wikipedia.org/wiki/Saxonville,_Massachusetts"
+   },
+   {
+    "name": "South Framingham",
+    "line": "The railroad and industrial center that grew up on the Boston line, with Farm Pond to its south.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/frm.pdf"
+   },
+   {
+    "name": "Coburnville",
+    "line": "A former industrial and residential area near South Framingham with tenements and two-family houses.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/frm.pdf"
+   },
+   {
+    "name": "Nobscot",
+    "line": "An area in the north of the city named for Nobscot Hill, on the old road toward Sudbury.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/frm.pdf"
+   },
+   {
+    "name": "Salem End",
+    "line": "A western area reached by the old roads from Framingham Centre.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/frm.pdf"
+   }
+  ],
+  "commute": {
+   "rail": [
+    {
+     "line": "Framingham/Worcester Line",
+     "stations": [
+      "Framingham (417 Waverly Street)"
+     ]
+    }
+   ],
+   "rail_source": "https://www.mbta.com/stops/place-WML-0214",
+   "highways": [
+    "Massachusetts Turnpike (I-90)",
+    "Route 9",
+    "Route 30",
+    "Route 126",
+    "Route 135"
+   ],
+   "text": "Framingham station, on Waverly Street, is a stop on the MBTA Framingham/Worcester Line between Worcester and South Station in Boston. The Massachusetts Turnpike, Route 9 and Routes 30, 126 and 135 all pass through the city."
+  },
+  "schools": {
+   "district": "Framingham Public Schools",
+   "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=01000000&orgtypecode=5"
+  },
+  "places": [
+   {
+    "name": "Callahan State Park",
+    "line": "More than 800 acres of fields, ponds and seven miles of marked trails for hiking, riding, biking and cross-country skiing, at 1048 Edmands Road.",
+    "source": "https://www.mass.gov/locations/callahan-state-park"
+   },
+   {
+    "name": "Garden in the Woods",
+    "line": "Native Plant Trust's 45-acre botanic garden of New England native plants at 180 Hemenway Road.",
+    "source": "https://www.nativeplanttrust.org/visit/garden-in-the-woods/"
+   },
+   {
+    "name": "Danforth Art Museum and School",
+    "line": "An art museum and school that opened in 1975 and joined Framingham State University in 2018.",
+    "source": "https://danforth.framingham.edu/meet-us/history-of-the-danforth/"
+   },
+   {
+    "name": "Cochituate Rail Trail",
+    "line": "A paved trail of about 3.3 miles from Concord Street in Framingham to Washington Avenue in Natick.",
+    "source": "https://www.traillink.com/trail/cochituate-rail-trail"
+   },
+   {
+    "name": "Framingham Centre Common Historic District",
+    "line": "The old town common and 28 surrounding buildings, listed on the National Register of Historic Places in 1990.",
+    "source": "https://en.wikipedia.org/wiki/Framingham_Centre_Common_Historic_District"
+   }
+  ],
+  "history": [
+   {
+    "year": "1647",
+    "text": "John Stone settled near the Sudbury River falls, in what became Saxonville.",
+    "source": "https://en.wikipedia.org/wiki/Saxonville,_Massachusetts"
+   },
+   {
+    "year": "1700",
+    "text": "Incorporated as the Town of Framingham.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/frm.pdf"
+   },
+   {
+    "year": "2018",
+    "text": "Became a city on January 1, after voters approved a charter in 2017.",
+    "source": "https://en.wikipedia.org/wiki/Framingham,_Massachusetts"
+   }
+  ],
+  "market": {
+   "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+   "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+   "period": "Calendar year 2025",
+   "sf_sales_2025": 442,
+   "sf_sales_2024": 428,
+   "sf_median_2025": 700000,
+   "sf_median_2024": 655000,
+   "condo_sales_2025": null,
+   "condo_median_2025": null,
+   "condo_median_2024": null,
+   "reading_1": "FRAMINGHAM | YTD Number of Sales 428 442 3.3% | YTD Median Sale Price $655,000 $700,000 6.9% (columns: Dec 2024, Dec 2025, Percent Change)",
+   "reading_2": "FRAMINGHAM | YTD Number of Sales 428 442 3.3% | YTD Median Sale Price $655,000 $700,000 6.9% (columns: Dec 2024, Dec 2025, Percent Change)"
+  },
+  "nearby": [
+   "natick",
+   "ashland",
+   "southborough",
+   "sudbury",
+   "wayland",
+   "marlborough"
+  ],
+  "search_notes": "'Framingham MA real estate agent' returns agent directories and profiles (RealTrends, Ramsey Solutions, HomeLight) plus real estate attorney listings, with one generic realtor-guide page. 'Moving to Framingham MA' is led by a storage company's blog posts (UNITS) and mover sites (Lugg, All My Sons, MoveAdvisor). Neither search surfaces a sourced guide to the villages, the rail station or the city's history, which a local community page could supply.",
+  "faq": [
+   {
+    "q": "What is the median home price in Framingham, MA?",
+    "a": "The median single-family sale price in Framingham was $700,000 in calendar year 2025, up from $655,000 in 2024, across 442 sales (428 in 2024), according to The Warren Group's MA December 2025 Sales, Prices by Town report."
+   },
+   {
+    "q": "Does Framingham have commuter rail?",
+    "a": "Yes. Framingham station, at 417 Waverly Street, is on the MBTA Framingham/Worcester Line, which runs between Worcester and South Station in Boston."
+   },
+   {
+    "q": "Which school district serves Framingham?",
+    "a": "Framingham Public Schools. Review its profile with DESE."
+   }
+  ],
+  "notes": "Condo fields are null: in both WebFetch readings the converted PDF text of the condo table ended at 'BROOKLI', so Framingham's condo rows could not be read. The Cochituate Rail Trail length is given as 3.3 miles in TrailLink's facts but 'almost 4 miles' in its description. The MHC survey is from the 1980s; Nobscot and Salem End are named there mainly as landmarks and routes. The city's 2014 draft Housing Plan Update describes 'a wide range of housing types' and notes about 46 percent of units are rented (https://framinghamma.gov/DocumentCenter/View/15491/DRAFT-Housing-Action-Plan-62414), but that figure is dated and was not used. Wikipedia credits the population figure to a Census Bureau profile.",
+  "region_key": "metrowest",
+  "tier": 2,
+  "art": "colonial"
+ },
+ {
+  "slug": "marlborough",
+  "name": "Marlborough",
+  "county": "Middlesex County",
+  "region": "MetroWest",
+  "population_2020": 41793,
+  "population_source": "https://en.wikipedia.org/wiki/Marlborough,_Massachusetts",
+  "official_site": "https://www.marlborough-ma.gov/",
+  "headline": [
+   "A shoe-making city at the crossroads",
+   "of I-495 and I-290."
+  ],
+  "answer": "Marlborough is a city of 41,793 people (2020 Census) in Middlesex County, where I-495 meets the eastern end of I-290. Its downtown grew from two 1800s shoe-making villages, and its housing includes three-deckers, double houses and converted factory condominiums. The city has no rail station; buses connect to Southborough and Framingham on the Framingham/Worcester Line.",
+  "overview": [
+   "Families from Sudbury petitioned for a new town in 1656, and Marlborough was incorporated in 1660. The early settlement was largely destroyed during King Philip's War, then rebuilt along the Post Road, where George Washington stopped at Williams Tavern in 1789. Shoemaking defined the 1800s. Samuel and Joseph Boyd opened the first shoe business in 1836, factory output rose into the millions of dollars by 1865, and Marlborough incorporated as a city in 1890. Its land once also included today's Northborough, Southborough, Westborough, Berlin and Hudson.",
+   "Downtown took shape from two villages, an East Village along Main and Maple Streets and a West Village along Pleasant and Main, which grew together once the railroad ran between them. In 2014 the city created a 50-acre Downtown Village district to encourage mixed-use building, and some old shoe factories and churches nearby are now condominiums. The Assabet River Rail Trail heads north toward Hudson past an overlook above Fort Meadow Reservoir, and the 615-acre Desert Natural Area protects pitch pine and scrub forest on the Sudbury line."
+  ],
+  "housing": {
+   "text": "The Massachusetts Historical Commission's survey of Marlborough records central-chimney Colonial houses, Greek Revival and Italianate side-hall houses and cottages, wood-frame row and double houses, and three-deckers and apartment houses in the West Village and along Mechanic Street, with Dutch Colonial and bungalow houses from the early 1900s. The city's economic development office lists former factories and churches converted to condominiums.",
+   "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/mrb.pdf"
+  },
+  "villages": [
+   {
+    "name": "Downtown Village",
+    "line": "A 50-acre mixed-use district the city created downtown in 2014.",
+    "source": "https://marlboroughedc.com/housing"
+   },
+   {
+    "name": "East Village",
+    "line": "The 1800s village along Main and Maple Streets that grew into the east side of downtown.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/mrb.pdf"
+   },
+   {
+    "name": "West Village",
+    "line": "The 1800s village along Pleasant and Main Streets, with three-deckers and apartment houses.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/mrb.pdf"
+   },
+   {
+    "name": "French Hill",
+    "line": "One of the city's oldest areas, with large older buildings still standing.",
+    "source": "https://marlboroughedc.com/housing"
+   },
+   {
+    "name": "Lake Williams",
+    "line": "The lake area on the old Post Road, once the site of early taverns, now with a walking trail.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/mrb.pdf"
+   }
+  ],
+  "commute": {
+   "rail": [
+    {
+     "line": "Framingham/Worcester Line (in neighboring towns)",
+     "stations": [
+      "Southborough",
+      "Framingham"
+     ]
+    }
+   ],
+   "rail_source": "https://www.mbta.com/stops/place-WML-0274",
+   "highways": [
+    "I-495",
+    "I-290",
+    "US Route 20",
+    "Route 85"
+   ],
+   "text": "Marlborough has no commuter rail station of its own; MWRTA bus routes connect to the Southborough and Framingham stations on the MBTA Framingham/Worcester Line. I-495, US Route 20 and Route 85 pass through the city, and I-290 has its eastern end here."
+  },
+  "schools": {
+   "district": "Marlborough Public Schools",
+   "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=01700000&orgtypecode=5"
+  },
+  "places": [
+   {
+    "name": "Assabet River Rail Trail",
+    "line": "A paved trail from Lincoln Street north into Hudson, passing under Route 85 and over an overlook above Fort Meadow Reservoir; parking at 56 Jefferson Street.",
+    "source": "https://www.traillink.com/trail/assabet-river-rail-trail/"
+   },
+   {
+    "name": "Desert Natural Area",
+    "line": "A 615-acre reservation on the Sudbury line with rare pitch pine and scrub forest on sandy glacial soils, reached from Route 20 by Concord Road.",
+    "source": "https://www.marlborough-ma.gov/node/939"
+   },
+   {
+    "name": "Ghiloni Nature Trail and State Forest",
+    "line": "Pine woods along Broadmeadow Brook with an interpretive loop, reached from Ghiloni Park off Concord Road.",
+    "source": "https://www.marlborough-ma.gov/node/950"
+   },
+   {
+    "name": "Callahan State Park",
+    "line": "More than 800 acres of fields, ponds and marked trails shared with Framingham, listed among Marlborough's conservation lands.",
+    "source": "https://www.mass.gov/locations/callahan-state-park"
+   },
+   {
+    "name": "Lake Williams Trail",
+    "line": "One of the city's mapped conservation trails, at the lake on the old Post Road.",
+    "source": "https://www.marlborough-ma.gov/node/934"
+   }
+  ],
+  "history": [
+   {
+    "year": "1660",
+    "text": "Incorporated as the Town of Marlborough, after Sudbury families petitioned for it in 1656.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/mrb.pdf"
+   },
+   {
+    "year": "1836",
+    "text": "Samuel and Joseph Boyd opened the town's first shoe manufacturing business.",
+    "source": "https://en.wikipedia.org/wiki/Marlborough,_Massachusetts"
+   },
+   {
+    "year": "1890",
+    "text": "Incorporated as the City of Marlborough.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/mrb.pdf"
+   }
+  ],
+  "market": {
+   "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+   "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+   "period": "Calendar year 2025",
+   "sf_sales_2025": 230,
+   "sf_sales_2024": 233,
+   "sf_median_2025": 606500,
+   "sf_median_2024": 592000,
+   "condo_sales_2025": null,
+   "condo_median_2025": null,
+   "condo_median_2024": null,
+   "reading_1": "MARLBOROUGH | YTD Number of Sales 233 230 -1.3% | YTD Median Sale Price $592,000 $606,500 2.4% (columns: Dec 2024, Dec 2025, Percent Change)",
+   "reading_2": "MARLBOROUGH | YTD Number of Sales 233 230 -1.3% | YTD Median Sale Price $592,000 $606,500 2.4% (columns: Dec 2024, Dec 2025, Percent Change)"
+  },
+  "nearby": [
+   "hudson",
+   "sudbury",
+   "framingham",
+   "southborough",
+   "northborough",
+   "berlin"
+  ],
+  "search_notes": "'Marlborough MA real estate agent' is dominated by HomeLight agent rankings, BiggerPockets and Ramsey Solutions directories, an Experience.com review page and a paid press release for one local brokerage. 'Moving to Marlborough MA' returns mover and storage sites (UNITS, uShip, Lugg, MoveBuddha) and Livability. No result gives a sourced picture of downtown's history, the rail trail or how to reach commuter rail without a station in the city, which is the gap a local guide can fill.",
+  "faq": [
+   {
+    "q": "What is the median home price in Marlborough, MA?",
+    "a": "The median single-family sale price in Marlborough was $606,500 in calendar year 2025, up from $592,000 in 2024, across 230 sales (233 in 2024), according to The Warren Group's MA December 2025 Sales, Prices by Town report."
+   },
+   {
+    "q": "Does Marlborough have commuter rail?",
+    "a": "Not within the city. MWRTA bus routes connect Marlborough to the Southborough and Framingham stations on the MBTA Framingham/Worcester Line."
+   },
+   {
+    "q": "Which school district serves Marlborough?",
+    "a": "Marlborough Public Schools. Review its profile with DESE."
+   }
+  ],
+  "notes": "Condo fields are null: in both WebFetch readings the converted PDF text of the condo table ended at 'BROOKLI', so Marlborough's condo rows could not be read. Wikipedia lists the Massachusetts Turnpike among Marlborough's highways, but it was left out because no source confirmed it passes through city limits. The MWRTA bus connection comes from Wikipedia, not from MWRTA. Callahan State Park's mass.gov page lists only a Framingham address; Marlborough's conservation page lists it among the city's lands. The MHC survey dates from 1980. Wikipedia credits the population figure to the 2020 Decennial Census. The I-290 'begins here' wording rests on Wikipedia's note that its eastern terminus is in Marlborough.",
+  "region_key": "metrowest",
+  "tier": 2,
+  "art": "cape"
+ },
+ {
+  "slug": "wakefield",
+  "name": "Wakefield",
+  "county": "Middlesex County",
+  "region": "North of Boston",
+  "population_2020": 27090,
+  "population_source": "https://en.wikipedia.org/wiki/Wakefield,_Massachusetts",
+  "official_site": "https://www.wakefieldma.gov/",
+  "headline": [
+   "A lake to walk around,",
+   "a town to come home to."
+  ],
+  "answer": "Wakefield is a Middlesex County town about 10 miles north of Boston, centered on Lake Quannapowitt and a downtown along Main Street. Single-family detached homes make up 55 percent of its housing, and about a third of its structures predate World War II. The Haverhill Line stops at Wakefield and Greenwood stations.",
+  "overview": [
+   "Wakefield is a town of about 27,000 people, 10 miles north of Boston, and it is laid out around Lake Quannapowitt. A paved loop of about 3.6 miles circles the lake, and Wakefield Common sits at its southern end. From there, downtown runs south along Main Street toward Crystal Lake, the town's drinking-water reservoir. The town began as part of Reading. Its South Parish broke off as South Reading in 1812, and in 1868 the town took the name of Cyrus Wakefield, who gave land and money for a new town hall.",
+   "Two Haverhill Line stations, Wakefield and Greenwood, serve the town, and I-95/Route 128 runs along its northwest edge. Greenwood covers nearly all of southern Wakefield, while Montrose, Woodville and Lakeside fill in the east and north. On Saturdays from June through October, the farmers market sets up on North Avenue by Hall Park, on the lake's shore. Breakheart Reservation, a state park with two lakes and a swimming beach at Pearce Lake, has an entrance on Hemlock Road, the one closer to the beach."
+  ],
+  "housing": {
+   "text": "The town's Housing Production Plan for FY2026-2030 reports that single-family detached homes are 55 percent of all housing units, down from 62 percent in 2011, and that about a third of structures were built before World War II. Two-family homes, buildings of 20 to 49 units, and three- and four-unit buildings are the next most common types.",
+   "source": "https://www.mass.gov/doc/wakefield-housing-production-plan/download"
+  },
+  "villages": [
+   {
+    "name": "Downtown (Wakefield Square)",
+    "line": "Runs from Wakefield Junction, north of Crystal Lake, to the southern shore of Lake Quannapowitt.",
+    "source": "https://en.wikipedia.org/wiki/Wakefield,_Massachusetts"
+   },
+   {
+    "name": "Greenwood",
+    "line": "Covers nearly all of southern Wakefield and has its own commuter rail station.",
+    "source": "https://en.wikipedia.org/wiki/Wakefield,_Massachusetts"
+   },
+   {
+    "name": "Lakeside",
+    "line": "North-central Wakefield, along the eastern shore of Lake Quannapowitt.",
+    "source": "https://en.wikipedia.org/wiki/Wakefield,_Massachusetts"
+   },
+   {
+    "name": "Montrose",
+    "line": "Much of northeastern Wakefield, bordering Lynnfield.",
+    "source": "https://en.wikipedia.org/wiki/Wakefield,_Massachusetts"
+   },
+   {
+    "name": "Woodville",
+    "line": "Much of central-eastern Wakefield.",
+    "source": "https://en.wikipedia.org/wiki/Wakefield,_Massachusetts"
+   }
+  ],
+  "commute": {
+   "rail": [
+    {
+     "line": "Haverhill Line",
+     "stations": [
+      "Wakefield",
+      "Greenwood"
+     ]
+    }
+   ],
+   "rail_source": "https://www.mbta.com/schedules/CR-Haverhill/timetable",
+   "highways": [
+    "I-95/Route 128",
+    "Route 129"
+   ],
+   "text": "The Haverhill Line stops at Wakefield and Greenwood on the way to North Station, and MBTA bus route 137 also serves the town. I-95/Route 128 runs along the northwest border with exits in town, Route 129 runs through as Main Street, and the town notes that it sits near the junction of I-93 and I-95/128."
+  },
+  "schools": {
+   "district": "Wakefield Public Schools",
+   "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=03050000&orgtypecode=5"
+  },
+  "places": [
+   {
+    "name": "Lake Quannapowitt",
+    "line": "A lake with a paved loop of about 3.6 miles, popular for walking, running and recreation.",
+    "source": "https://www.wakefieldma.gov/469/About-Wakefield"
+   },
+   {
+    "name": "Wakefield Common",
+    "line": "The town green on the south shore of Lake Quannapowitt, where downtown begins.",
+    "source": "https://en.wikipedia.org/wiki/Wakefield,_Massachusetts"
+   },
+   {
+    "name": "Hall Park and the Wakefield Farmers Market",
+    "line": "A lakeshore park on North Avenue; the market runs Saturdays, 9 a.m. to 1 p.m., from mid-June through October.",
+    "source": "https://marketspread.com/market/11522/wakefield-farmers-market"
+   },
+   {
+    "name": "Breakheart Reservation",
+    "line": "A DCR park with two lakes, a beach at Pearce Lake and an extensive trail system, entered from Hemlock Road.",
+    "source": "https://www.mass.gov/locations/breakheart-reservation"
+   },
+   {
+    "name": "Lucius Beebe Memorial Library",
+    "line": "The public library at Main and Avon Streets downtown, opened in 1923.",
+    "source": "https://en.wikipedia.org/wiki/Lucius_Beebe_Memorial_Library"
+   }
+  ],
+  "history": [
+   {
+    "year": "1644",
+    "text": "Incorporated as part of the town of Reading, after first settlement in 1638 as Lynn Village.",
+    "source": "https://en.wikipedia.org/wiki/Wakefield,_Massachusetts"
+   },
+   {
+    "year": "1812",
+    "text": "The South Parish separated from Reading and was incorporated as South Reading on February 25.",
+    "source": "https://en.wikipedia.org/wiki/Wakefield,_Massachusetts"
+   },
+   {
+    "year": "1868",
+    "text": "Renamed Wakefield after Cyrus Wakefield donated land and money for a new town hall.",
+    "source": "https://en.wikipedia.org/wiki/Wakefield,_Massachusetts"
+   }
+  ],
+  "market": {
+   "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+   "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+   "period": "Calendar year 2025",
+   "sf_sales_2025": 195,
+   "sf_sales_2024": 178,
+   "sf_median_2025": 830000,
+   "sf_median_2024": 822500,
+   "condo_sales_2025": null,
+   "condo_median_2025": null,
+   "condo_median_2024": null,
+   "reading_1": "Wakefield (single-family), columns Dec 2024 | Dec 2025 | Percent Change. YTD Number of Sales: 178 | 195 | 9.6%. YTD Median Sale Price: $822,500 | $830,000 | 0.9%.",
+   "reading_2": "WAKEFIELD: \"YTD Number of Sales 178 195 9.6%\"; \"YTD Median Sale Price $822,500 $830,000 0.9%\""
+  },
+  "nearby": [
+   "reading",
+   "lynnfield",
+   "melrose",
+   "stoneham",
+   "saugus"
+  ],
+  "search_notes": "For 'Wakefield MA real estate agent', HomeLight's town and downtown pages lead, followed by BiggerPockets, Experience.com, Ramsey Solutions, RealTrends and a broker-ranking directory, with Bean Group as the only brokerage site; Zillow and Redfin did not surface in these results. 'Moving to Wakefield MA' returns moving companies and quote sites (Lugg, MoveAdvisor, MoveBuddha) plus Livability. A guide that ties the lake, downtown, Greenwood and both rail stations to the town's Housing Production Plan and the Warren Group figures would fill a clear gap.",
+  "faq": [
+   {
+    "q": "What is the median home price in Wakefield, MA?",
+    "a": "For calendar year 2025, The Warren Group reports a single-family median sale price of $830,000 in Wakefield, across 195 sales. In 2024 the median was $822,500 on 178 sales. Source: The Warren Group, MA December 2025 Sales, Prices by Town."
+   },
+   {
+    "q": "Does Wakefield have commuter rail?",
+    "a": "Yes. The MBTA Haverhill Line stops at Wakefield and Greenwood stations on its way to North Station in Boston."
+   },
+   {
+    "q": "Which school district serves Wakefield?",
+    "a": "Wakefield Public Schools. Review its profile with DESE."
+   },
+   {
+    "q": "How long is the walk around Lake Quannapowitt?",
+    "a": "The town describes the paved loop around the lake as approximately 3.6 miles."
+   }
+  ],
+  "notes": "The Warren Group condo table could not be read: both fetches returned text cut off partway through Brookline, so all condo fields are null. The marketspread listing gives the market's address (468 North Ave) and describes Hall Park in its location notes, but does not say outright that the market is held in Hall Park; the existing Wakefield guide already confirms the Hall Park market. Lake acreage (247) is from Wikipedia; the 3.6-mile loop is from the town site. I-93 does not pass through Wakefield; the town site describes Wakefield as at the intersection of I-93 and I-95/128, so it is mentioned only in the commute text. Wikipedia also names the West Side and East Side but gives no description, so they are omitted. The Housing Production Plan's chart labels appear reversed in one place (38/61 percent), so only the text figures (55 percent single-family, 33 percent pre-war) are used. Albion Street is not mentioned because no source opened here named it. Population is from Wikipedia, citing the 2020 Census.",
+  "region_key": "north",
+  "tier": 1,
+  "photo": "assets/img/photo/lake-quannapowitt.webp",
+  "photo_alt": "Lake Quannapowitt at dusk",
+  "focal": "35% 55%",
+  "photo_credit": "An evening on Lake Quannapowitt. Photo: RedSoxFan274 / Wikimedia Commons, CC BY-SA 4.0, cropped.",
+  "extra_market_html": "<p class=\"body-s\" style=\"margin-top:var(--space-4)\">More recent, all home types: the median sale price was $786,979 for the three months ending August 2026, with a median of 21 days on market and a 103.3% sale-to-list ratio in August (Redfin, accessed October 10, 2026). <a href=\"../../../site/journal/the-best-plans-are-close-to-home/\">Six ways to enjoy Wakefield this fall</a>.</p>"
+ },
+ {
+  "slug": "reading",
+  "name": "Reading",
+  "county": "Middlesex County",
+  "region": "North of Boston",
+  "population_2020": 25518,
+  "population_source": "https://en.wikipedia.org/wiki/Reading,_Massachusetts",
+  "official_site": "https://www.readingma.gov/",
+  "headline": [
+   "A town common, a commuter line,",
+   "and woods a short walk from the front door."
+  ],
+  "answer": "Reading is a Middlesex County town of 25,518 people (2020 Census) whose housing is mostly single-family, with a large share built before 1960. It grew around a traditional New England common and keeps conservation land such as the Town Forest. Reading station on the MBTA Haverhill Line runs to Boston's North Station, and I-93 and I-95/Route 128 cross the town.",
+  "overview": [
+   "Reading began as an inland plantation for settlers from Lynn and was incorporated in 1644. Over the next two centuries it gave up land to form its neighbors: the parish to the south became South Reading and was renamed Wakefield in 1868, and the land north of the Ipswich River became North Reading in 1853. What remains centers on the Common, where Main and Salem Streets meet, framed by the First Congregational Church, the public library and the town hall.",
+   "The railroad reached Reading in 1845, and Woburn Street shows what followed: Queen Anne and Colonial Revival houses on large, tree-lined lots, now a historic district. Around the built-up streets, Reading keeps a web of conservation land, from the Town Forest, its largest, to Bare Meadow and the Aberjona River Headwaters Trail through the Maillet Conservation Area."
+  ],
+  "housing": {
+   "text": "Reading's 2023 Housing Production Plan describes the housing stock as primarily single-family, at 76.7% of units, with 84.6% owner occupied. Over half of the homes were built before 1960, and about a third before 1940. The downtown area holds a number of multi-family, affordable and public housing developments.",
+   "source": "https://www.mass.gov/doc/hpp-reading-2023/download"
+  },
+  "villages": [
+   {
+    "name": "Reading Center and the Common",
+    "line": "The civic core where Main and Salem Streets meet, with churches, the library, the town hall and a row of 19th-century houses on Harnden and Salem Streets.",
+    "source": "https://en.wikipedia.org/wiki/Common_Historic_District_(Reading,_Massachusetts)"
+   },
+   {
+    "name": "Woburn Street Historic District",
+    "line": "Two blocks of Woburn Street between Summer Street and Temple Street, with sixteen houses on large lots, mostly Queen Anne and Colonial Revival.",
+    "source": "https://en.wikipedia.org/wiki/Woburn_Street_Historic_District"
+   },
+   {
+    "name": "Downtown",
+    "line": "The retail and service center of town, where most of Reading's multi-family and affordable housing developments are located.",
+    "source": "https://www.mass.gov/doc/hpp-reading-2023/download"
+   }
+  ],
+  "commute": {
+   "rail": [
+    {
+     "line": "Haverhill Line",
+     "stations": [
+      "Reading"
+     ]
+    }
+   ],
+   "rail_source": "https://www.mbta.com/schedules/CR-Haverhill/timetable",
+   "highways": [
+    "I-93",
+    "I-95/Route 128",
+    "Route 28"
+   ],
+   "text": "Reading station is on the MBTA Haverhill Line, which ends at Boston's North Station. I-93 and I-95/Route 128 pass through the town, and Route 28 follows the old Andover-Medford Turnpike, built in 1806 and 1807."
+  },
+  "schools": {
+   "district": "Reading Public Schools",
+   "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=02460000&orgtypecode=5"
+  },
+  "places": [
+   {
+    "name": "Reading Town Forest",
+    "line": "The town's largest conservation area, with a network of trails mapped by the town.",
+    "source": "https://www.readingma.gov/227/Trail-Map-Library"
+   },
+   {
+    "name": "Bare Meadow Conservation Area",
+    "line": "Conservation land with a trail map recently updated by the Trails Committee and volunteers, alongside the Mattera Conservation Area.",
+    "source": "https://www.readingma.gov/227/Trail-Map-Library"
+   },
+   {
+    "name": "Aberjona River Headwaters Trail",
+    "line": "A trail through the Maillet Conservation Area from Lowell Street to Willow Street, with bridges and boardwalks added through a state DCR grant.",
+    "source": "https://www.readingma.gov/227/Trail-Map-Library"
+   },
+   {
+    "name": "Parker Tavern",
+    "line": "A house built in 1694 at 103 Washington Street, run as a historic house museum by the Reading Antiquarian Society.",
+    "source": "https://en.wikipedia.org/wiki/Parker_Tavern"
+   },
+   {
+    "name": "Reading Common",
+    "line": "A town common held in common since at least 1737, the center of the Common Historic District.",
+    "source": "https://en.wikipedia.org/wiki/Common_Historic_District_(Reading,_Massachusetts)"
+   }
+  ],
+  "history": [
+   {
+    "year": "1644",
+    "text": "Incorporated as a town on June 10, 1644, after residents of Lynn sought land for an inland plantation.",
+    "source": "https://en.wikipedia.org/wiki/Reading,_Massachusetts"
+   },
+   {
+    "year": "1853",
+    "text": "Land granted north of the Ipswich River in 1651 became the separate town of North Reading.",
+    "source": "https://en.wikipedia.org/wiki/Reading,_Massachusetts"
+   },
+   {
+    "year": "1868",
+    "text": "The South Reading parish, which had separated in 1812, was renamed Wakefield.",
+    "source": "https://en.wikipedia.org/wiki/Reading,_Massachusetts"
+   }
+  ],
+  "market": {
+   "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+   "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+   "period": "Calendar year 2025",
+   "sf_sales_2025": 187,
+   "sf_sales_2024": 203,
+   "sf_median_2025": 900000,
+   "sf_median_2024": 855000,
+   "condo_sales_2025": null,
+   "condo_median_2025": null,
+   "condo_median_2024": null,
+   "reading_1": "READING (single-family; Dec 2024, Dec 2025, Percent Change): YTD Number of Sales 203 187 -7.9%; YTD Median Sale Price $855,000 $900,000 5.3%",
+   "reading_2": "READING (single-family): YTD Number of Sales 203 187 -7.9%; YTD Median Sale Price $855,000 $900,000 5.3%"
+  },
+  "nearby": [
+   "wakefield",
+   "north-reading",
+   "wilmington",
+   "stoneham"
+  ],
+  "search_notes": "For 'Reading MA real estate agent', results are directories and agent profiles (Ramsey Solutions, BiggerPockets, RealTrends, William Raveis agent pages) plus one local brokerage blog (Verani) on choosing a Realtor. 'Moving to Reading MA' is dominated by mover sites (Lugg, uShip, MoveBuddha) and Livability, with Verani's 'reasons to move' post the only local guide. There is room for a sourced guide covering the Common, the Woburn Street district, the conservation trail network and the Haverhill Line.",
+  "faq": [
+   {
+    "q": "What is the median home price in Reading, MA?",
+    "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, the median single-family sale price in Reading for calendar year 2025 was $900,000, across 187 sales. In 2024 it was $855,000, across 203 sales."
+   },
+   {
+    "q": "Does Reading have commuter rail?",
+    "a": "Yes. Reading station is on the MBTA Haverhill Line, which runs to Boston's North Station."
+   },
+   {
+    "q": "Which school district serves Reading?",
+    "a": "Reading Public Schools. Review its profile with DESE."
+   }
+  ],
+  "notes": "Condo figures set to null: the PDF's extracted text ends partway through the condo table (at Brookline), so Reading's condo rows could not be read in either fetch. Reading's recognized neighborhoods are thinly documented in official sources; only the two historic districts and the downtown area are listed. The 2023 HPP gives 76.7% single-family in its text but a 2020 table shows 72.5% one-unit detached, so the housing text uses the plan's own headline figure. Lake Quannapowitt was left out of places because it lies in Wakefield.",
+  "region_key": "north",
+  "tier": 1,
+  "art": "colonial"
+ },
+ {
+  "slug": "melrose",
+  "name": "Melrose",
+  "county": "Middlesex County",
+  "region": "North of Boston",
+  "population_2020": 29817,
+  "population_source": "https://en.wikipedia.org/wiki/Melrose,_Massachusetts",
+  "official_site": "https://www.cityofmelrose.org/",
+  "headline": [
+   "Three train stops, one pond in the middle,",
+   "and Victorian streets that lead to the Fells."
+  ],
+  "answer": "Melrose is a Middlesex County city of 29,817 people (2020 Census), about seven miles north of Boston. More than half its homes predate World War II, many Victorian near downtown and the rail line. Three MBTA Haverhill Line stations serve the city, and Oak Grove on the Orange Line sits just over the Malden border.",
+  "overview": [
+   "Melrose was part of Charlestown and then Malden before it was incorporated as a town in 1850. When the Boston and Maine Railroad built three stops through it in 1845, houses followed the tracks, and in 1853 the town annexed the highlands from Stoneham. Melrose became a city in 1900. Its downtown, listed on the National Register of Historic Places in 1982, runs along Main Street, and Ell Pond, the city's largest body of water, sits near the center with a gazebo and a new fountain.",
+   "The housing tells the city's history in layers. A 2022 housing plan found that most homes built before World War II cluster near downtown and the rail corridor, often in Victorian styles, while the eastern side filled in after the war with ranches and Capes. Larger buildings are concentrated downtown and along Main Street. At the edges are big green spaces: the eastern reaches of the Middlesex Fells, the Olmsted-designed Pine Banks Park on the Malden line, and Mount Hood, a city park and golf course with views toward Boston."
+  ],
+  "housing": {
+   "text": "Melrose's 2022 Housing Production Plan reports that 55% of homes are detached single-family and 11% are two-family, with 16% in buildings of 20 or more units. Over half were built before World War II, often in Victorian styles near downtown and the rail corridor; the eastern parts of the city saw more mid-century ranch and Cape houses after the war.",
+   "source": "https://www.mass.gov/doc/melrose-plan/download"
+  },
+  "villages": [
+   {
+    "name": "Downtown Melrose",
+    "line": "The Main Street business district, listed on the National Register in 1982, where most buildings of five or more units are found.",
+    "source": "https://www.mass.gov/doc/melrose-plan/download"
+   },
+   {
+    "name": "Melrose Highlands",
+    "line": "The northern section annexed from Stoneham in 1853, served by its own Haverhill Line station.",
+    "source": "https://en.wikipedia.org/wiki/Melrose,_Massachusetts"
+   },
+   {
+    "name": "Cedar Park",
+    "line": "A neighborhood along the rail corridor around the Melrose/Cedar Park station.",
+    "source": "https://en.wikipedia.org/wiki/Melrose,_Massachusetts"
+   },
+   {
+    "name": "Wyoming",
+    "line": "The southern neighborhood around Wyoming Hill station, closest to Malden.",
+    "source": "https://en.wikipedia.org/wiki/Melrose,_Massachusetts"
+   },
+   {
+    "name": "East Side",
+    "line": "The eastern part of the city, built up mostly after World War II with ranch and Cape houses.",
+    "source": "https://www.mass.gov/doc/melrose-plan/download"
+   },
+   {
+    "name": "Mount Hood",
+    "line": "The east-side area around Mount Hood Park and its golf course.",
+    "source": "https://en.wikipedia.org/wiki/Melrose,_Massachusetts"
+   },
+   {
+    "name": "Oak Grove and Pine Banks",
+    "line": "The southern edge near the Malden line, next to Pine Banks Park and the Oak Grove station.",
+    "source": "https://en.wikipedia.org/wiki/Melrose,_Massachusetts"
+   }
+  ],
+  "commute": {
+   "rail": [
+    {
+     "line": "Haverhill Line",
+     "stations": [
+      "Melrose Highlands",
+      "Melrose/Cedar Park",
+      "Wyoming Hill"
+     ]
+    },
+    {
+     "line": "Orange Line (subway, in Malden near the Melrose border)",
+     "stations": [
+      "Oak Grove"
+     ]
+    }
+   ],
+   "rail_source": "https://www.mbta.com/schedules/CR-Haverhill/timetable",
+   "highways": [
+    "Route 99 (short section)"
+   ],
+   "text": "Three Haverhill Line stations run to Boston's North Station, and Oak Grove, the Orange Line terminal, is just over the line in Malden. Only a short stretch of Route 99 lies within the city; I-93 is reached in Stoneham, Route 1 in Saugus and I-95/Route 128 in Wakefield."
+  },
+  "schools": {
+   "district": "Melrose Public Schools",
+   "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=01780000&orgtypecode=5"
+  },
+  "places": [
+   {
+    "name": "Middlesex Fells Reservation",
+    "line": "A DCR reservation with more than 100 miles of trails, whose eastern reaches extend into Melrose.",
+    "source": "https://www.mass.gov/locations/middlesex-fells-reservation"
+   },
+   {
+    "name": "Ell Pond Park",
+    "line": "The city's largest pond, near the center, with a gazebo and a fountain that helps keep the water healthy.",
+    "source": "https://ma-melrose.civicplus.com/191/Park-Department"
+   },
+   {
+    "name": "Pine Banks Park",
+    "line": "A 107.5-acre park designed by Frederick Law Olmsted and shared with Malden, with cliffs, a pond, fields and a playground.",
+    "source": "https://en.wikipedia.org/wiki/Pine_Banks"
+   },
+   {
+    "name": "Mount Hood Park and Golf Course",
+    "line": "A wooded city park of about 300 acres with an 18-hole course built under the WPA and winter sledding.",
+    "source": "https://en.wikipedia.org/wiki/Mount_Hood_Golf_Club"
+   },
+   {
+    "name": "Downtown Melrose",
+    "line": "A Main Street district on the National Register of Historic Places since 1982.",
+    "source": "https://en.wikipedia.org/wiki/Melrose,_Massachusetts"
+   }
+  ],
+  "history": [
+   {
+    "year": "1850",
+    "text": "Incorporated as the Town of Melrose, having been part of Charlestown and then Malden.",
+    "source": "https://en.wikipedia.org/wiki/Melrose,_Massachusetts"
+   },
+   {
+    "year": "1853",
+    "text": "Annexed the highlands from neighboring Stoneham, setting today's borders.",
+    "source": "https://en.wikipedia.org/wiki/Melrose,_Massachusetts"
+   },
+   {
+    "year": "1900",
+    "text": "Became a city, the 33rd in Massachusetts, with Levi S. Gould as first mayor.",
+    "source": "https://en.wikipedia.org/wiki/Melrose,_Massachusetts"
+   }
+  ],
+  "market": {
+   "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+   "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+   "period": "Calendar year 2025",
+   "sf_sales_2025": 187,
+   "sf_sales_2024": 191,
+   "sf_median_2025": 965000,
+   "sf_median_2024": 869000,
+   "condo_sales_2025": null,
+   "condo_median_2025": null,
+   "condo_median_2024": null,
+   "reading_1": "MELROSE (single-family; Dec 2024, Dec 2025, Percent Change): YTD Number of Sales 191 187 -2.1%; YTD Median Sale Price $869,000 $965,000 11.0%",
+   "reading_2": "MELROSE (single-family): YTD Number of Sales 191 187 -2.1%; YTD Median Sale Price $869,000 $965,000 11.0%"
+  },
+  "nearby": [
+   "malden",
+   "stoneham",
+   "wakefield",
+   "saugus"
+  ],
+  "search_notes": "'Melrose MA real estate agent' returns agent-matching and review directories (HomeLight, BiggerPockets, Experience.com), Bean Group and Redfin listings, with no strong local-guide content. 'Moving to Melrose MA' is almost entirely moving companies (All My Sons, Gentle Giant, HireAHelper, Lugg, MoveBuddha) plus Livability. A guide that explains the three train stops, the Victorian-to-postwar housing pattern and the parks would fill a clear gap.",
+  "faq": [
+   {
+    "q": "What is the median home price in Melrose, MA?",
+    "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, the median single-family sale price in Melrose for calendar year 2025 was $965,000, across 187 sales. In 2024 it was $869,000, across 191 sales."
+   },
+   {
+    "q": "Does Melrose have commuter rail?",
+    "a": "Yes. Melrose has three MBTA Haverhill Line stations: Melrose Highlands, Melrose/Cedar Park and Wyoming Hill. Oak Grove, on the Orange Line, is just across the border in Malden."
+   },
+   {
+    "q": "Which school district serves Melrose?",
+    "a": "Melrose Public Schools. Review its profile with DESE."
+   }
+  ],
+  "notes": "Condo figures set to null: the PDF's extracted text ends partway through the condo table (at Brookline), so Melrose's condo rows could not be read. Wikipedia gives both 1628 and 1629 as the settlement date, so neither is used. Neighborhood lines for Cedar Park, Wyoming and Oak Grove/Pine Banks are inferred from station and park locations named on Wikipedia, not from a dedicated neighborhood source. The Ell Pond source is the city Park Department page on the CivicPlus host (ma-melrose.civicplus.com), which serves the same site as cityofmelrose.org.",
+  "region_key": "north",
+  "tier": 1,
+  "art": "townscape"
+ },
+ {
+  "slug": "stoneham",
+  "name": "Stoneham",
+  "county": "Middlesex County",
+  "region": "North of Boston",
+  "population_2020": 23244,
+  "population_source": "https://en.wikipedia.org/wiki/Stoneham,_Massachusetts",
+  "official_site": "https://www.stoneham-ma.gov/",
+  "headline": [
+   "A shoe town's square, a zoo by the pond,",
+   "and a third of the map left to the Fells."
+  ],
+  "answer": "Stoneham is a Middlesex County town of 23,244 people (2020 Census), less than 10 miles northwest of Boston. About a third of its land lies in the Middlesex Fells Reservation. Slightly more than half its homes are single-family. I-93 runs through town, and Boston-bound rail stations sit in Melrose, Winchester and Malden next door.",
+  "overview": [
+   "Early explorers called this land Charlestown End, and Governor Winthrop's party is said to have lunched by Spot Pond in 1632. Farmers settled slowly, and the town broke from Charlestown on December 17, 1725. A stagecoach line on the Medford to Andover Turnpike in 1833 brought house lots, and shoemaking grew from home workshops into more than forty manufacturers. That era left Central Square, with its Second Empire commercial blocks, the 1904 library, and churches lining the north side at Common Street.",
+   "A few blocks west of the square, Nobility Hill keeps Italianate, Stick and Queen Anne houses from about 1860 to 1920. The Middlesex Fells covers roughly a third of the town, with Spot Pond, Bear Hill and the Stone Zoo, founded in 1905. Stoneham's housing plan counts slightly more than half its homes as single-family, with much of the rest in larger buildings. The Tri-Community Greenway runs from Gould Street toward Woburn and Winchester."
+  ],
+  "housing": {
+   "text": "Stoneham's Housing Production Plan reports that 57.1% of housing units are single-family homes, and nearly half of the remaining multifamily units are in buildings of 20 or more units. About 65% of homes are owner-occupied. The plan points to the town center around Main Street as the area best suited for new housing.",
+   "source": "https://www.mass.gov/doc/stoneham-plan/download"
+  },
+  "villages": [
+   {
+    "name": "Central Square",
+    "line": "The business district bounded roughly by Main, Central, Church, Winter and Common Streets, with 19th- and early-20th-century commercial blocks.",
+    "source": "https://en.wikipedia.org/wiki/Central_Square_Historic_District_(Stoneham,_Massachusetts)"
+   },
+   {
+    "name": "Nobility Hill",
+    "line": "A residential historic district a few blocks west of Main Street, with houses built between about 1860 and 1920.",
+    "source": "https://en.wikipedia.org/wiki/Nobility_Hill_Historic_District"
+   },
+   {
+    "name": "Farm Hill",
+    "line": "A hill outside the Fells settled by farmers in the mid-1600s.",
+    "source": "https://bostonbasinhills.org/pages/stoneham-hills.html"
+   }
+  ],
+  "commute": {
+   "rail": [
+    {
+     "line": "Haverhill Line (in neighboring Melrose)",
+     "stations": [
+      "Melrose Highlands"
+     ]
+    },
+    {
+     "line": "Lowell Line (in neighboring Winchester)",
+     "stations": [
+      "Wedgemere"
+     ]
+    },
+    {
+     "line": "Orange Line (subway, in Malden)",
+     "stations": [
+      "Oak Grove"
+     ]
+    }
+   ],
+   "rail_source": "https://www.mbta.com/schedules/CR-Haverhill/timetable",
+   "highways": [
+    "I-93",
+    "Route 28"
+   ],
+   "text": "Stoneham has no rail station of its own; commuter rail stations in Melrose, Winchester, Wakefield and Woburn serve Boston's North Station, and Oak Grove on the Orange Line is about 3.8 miles from Stoneham Center. I-93 runs through town, I-95/Route 128 passes just to the north, and MBTA bus 132 runs between Redstone Shopping Center and Malden Center Station."
+  },
+  "schools": {
+   "district": "Stoneham Public Schools",
+   "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=02840000&orgtypecode=5"
+  },
+  "places": [
+   {
+    "name": "Stone Zoo",
+    "line": "A zoo of about 26 acres near Spot Pond, founded in 1905 and run by Zoo New England.",
+    "source": "https://zoonewengland.org/about-us/"
+   },
+   {
+    "name": "Middlesex Fells Reservation",
+    "line": "A DCR reservation with more than 100 miles of trails, a visitor center and an off-leash area at Sheepfold Meadow.",
+    "source": "https://www.mass.gov/locations/middlesex-fells-reservation"
+   },
+   {
+    "name": "Spot Pond",
+    "line": "The pond inside the Fells where canoes and kayaks can be rented.",
+    "source": "https://www.mass.gov/locations/middlesex-fells-reservation"
+   },
+   {
+    "name": "Tri-Community Greenway",
+    "line": "A paved rail-trail along the Aberjona River from Gould Street in Stoneham to Wedgemere Station in Winchester.",
+    "source": "https://www.traillink.com/trail/tri-community-greenway/"
+   },
+   {
+    "name": "Central Square",
+    "line": "The historic downtown, with Second Empire blocks, the 1904 Stoneham Public Library and the 1939 town hall.",
+    "source": "https://en.wikipedia.org/wiki/Central_Square_Historic_District_(Stoneham,_Massachusetts)"
+   }
+  ],
+  "history": [
+   {
+    "year": "1645",
+    "text": "First settlement of the area known as Charlestown End.",
+    "source": "https://stoneham-ma.gov/354/About-Stoneham"
+   },
+   {
+    "year": "1725",
+    "text": "The General Court granted separation from Charlestown on December 17, 1725.",
+    "source": "https://stoneham-ma.gov/354/About-Stoneham"
+   },
+   {
+    "year": "1833",
+    "text": "A stagecoach line began serving the Medford to Andover Turnpike, and nearby farmland was divided into house lots.",
+    "source": "https://stoneham-ma.gov/354/About-Stoneham"
+   }
+  ],
+  "market": {
+   "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+   "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+   "period": "Calendar year 2025",
+   "sf_sales_2025": 130,
+   "sf_sales_2024": 140,
+   "sf_median_2025": 805000,
+   "sf_median_2024": 784000,
+   "condo_sales_2025": null,
+   "condo_median_2025": null,
+   "condo_median_2024": null,
+   "reading_1": "STONEHAM (single-family; Dec 2024, Dec 2025, Percent Change): YTD Number of Sales 140 130 -7.1%; YTD Median Sale Price $784,000 $805,000 2.7%",
+   "reading_2": "STONEHAM (single-family): YTD Number of Sales 140 130 -7.1%; YTD Median Sale Price $784,000 $805,000 2.7%"
+  },
+  "nearby": [
+   "melrose",
+   "wakefield",
+   "woburn",
+   "winchester"
+  ],
+  "search_notes": "'Stoneham MA real estate agent' returns HomeLight, BiggerPockets, Experience.com and RealTrends profiles, Bean Group and Redfin, plus scattered individual agent pages. 'Moving to Stoneham MA' mixes movers (All My Sons, MoveAdvisor) with a Boston Moms 'Moving to Greater Boston' post, a BMN Boston page and Livability. Few results explain the town's lack of a rail station, the Fells or the historic square, which a sourced guide could cover.",
+  "faq": [
+   {
+    "q": "What is the median home price in Stoneham, MA?",
+    "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, the median single-family sale price in Stoneham for calendar year 2025 was $805,000, across 130 sales. In 2024 it was $784,000, across 140 sales."
+   },
+   {
+    "q": "Does Stoneham have commuter rail?",
+    "a": "No station is located in Stoneham itself. Commuter rail stations in neighboring Melrose, Winchester, Wakefield and Woburn serve Boston's North Station, and Oak Grove on the Orange Line is in Malden."
+   },
+   {
+    "q": "Which school district serves Stoneham?",
+    "a": "Stoneham Public Schools. Review its profile with DESE."
+   }
+  ],
+  "notes": "Condo figures set to null: the PDF's extracted text ends partway through the condo table (at Brookline), so Stoneham's condo rows could not be read. Settlement year conflicts (the town site says 1645, Wikipedia body says 1634), so the history uses the town site. The undated Housing Production Plan appears to date from about 2018, and its statement that most housing was built after 1960 was left out because it reads oddly against the town's history. The rail stations listed are representative stations in neighboring towns; Wikipedia names neighboring towns with stations but not specific nearest stations. Farm Hill is sourced to an independent local history site (bostonbasinhills.org), not an official one. Route 28 is listed from Wikipedia's note of a Route 28 exit and the Fells Reservoirs district boundary.",
+  "region_key": "north",
+  "tier": 2,
+  "art": "cape"
+ },
+ {
+  "slug": "lowell",
+  "name": "Lowell",
+  "county": "Middlesex County",
+  "region": "North of Boston",
+  "population_2020": 115554,
+  "population_source": "https://en.wikipedia.org/wiki/Lowell,_Massachusetts",
+  "official_site": "https://www.lowellma.gov/",
+  "headline": [
+   "Brick mills, working canals,",
+   "and a city still built around its river."
+  ],
+  "answer": "Lowell is a Middlesex County city of 115,554 people (2020 Census), founded as a textile mill town and incorporated in 1826. Most of its housing was built before 1960, with a mix of multi-family buildings, duplexes, single-family homes and converted mills. The MBTA Lowell Line runs from Lowell station to Boston's North Station, and I-495 and US-3 cross the city.",
+  "overview": [
+   "The first large textile mill went up in 1822 on land that would become Lowell, and the town of Lowell was incorporated on March 1, 1826, then chartered as a city in 1836. By the 1850s it had the largest industrial complex in the United States. Much of that landscape survives: Lowell National Historical Park, created in 1978, runs boat tours through the canal system and recreates 19th-century textile work in the Boott Cotton Mills Museum. Along the river, the Vandenberg Esplanade is part of the state's Lowell Heritage State Park.",
+   "Lowell's neighborhoods differ widely. Downtown, the Acre and Back Central hold most of the city's rental housing, while parts of Belvidere, Pawtucketville and the Highlands are mostly single-family streets. Beyond the mill core, the Lowell-Dracut-Tyngsboro State Forest, shared with two neighboring towns, adds about six miles of trails."
+  ],
+  "housing": {
+   "text": "Lowell's Housing Production Plan for 2024 to 2028 reports that 77% of the city's housing was built before 1960, with nearly a third predating 1900, and that 45% of units are in buildings of three or more units. Conversions of downtown buildings and mills account for much of recent production, and parts of Belvidere, Pawtucketville and the Highlands are predominantly single-family.",
+   "source": "https://www.nmcog.org/DocumentCenter/View/583/Lowell-Housing-Production-Plan-2024-to-2028-PDF"
+  },
+  "villages": [
+   {
+    "name": "Downtown",
+    "line": "The mill and canal core, where many older commercial buildings and mills have been converted to housing.",
+    "source": "https://www.nmcog.org/DocumentCenter/View/583/Lowell-Housing-Production-Plan-2024-to-2028-PDF"
+   },
+   {
+    "name": "The Acre",
+    "line": "A neighborhood where most homes are rentals, the highest renter share outside downtown.",
+    "source": "https://www.nmcog.org/DocumentCenter/View/583/Lowell-Housing-Production-Plan-2024-to-2028-PDF"
+   },
+   {
+    "name": "Back Central",
+    "line": "One of the neighborhoods with the highest concentration of rental housing, alongside downtown and the Acre.",
+    "source": "https://www.nmcog.org/DocumentCenter/View/583/Lowell-Housing-Production-Plan-2024-to-2028-PDF"
+   },
+   {
+    "name": "Belvidere",
+    "line": "Includes the Belvidere Hill Neighborhood District, a local historic district; parts of the neighborhood are predominantly single-family.",
+    "source": "https://www.lowellma.gov/DocumentCenter/View/955"
+   },
+   {
+    "name": "Centralville",
+    "line": "Formerly part of Dracut, brought within Lowell in 1851.",
+    "source": "https://libguides.uml.edu/early_lowell/time_line"
+   },
+   {
+    "name": "Pawtucketville",
+    "line": "Holds the greatest share of newer housing among Lowell's neighborhoods, and parts are mostly single-family.",
+    "source": "https://www.nmcog.org/DocumentCenter/View/583/Lowell-Housing-Production-Plan-2024-to-2028-PDF"
+   },
+   {
+    "name": "The Highlands",
+    "line": "Divided into the Upper and Lower Highlands, with the lower section closer to downtown.",
+    "source": "https://en.wikipedia.org/wiki/Lowell,_Massachusetts"
+   },
+   {
+    "name": "South Lowell",
+    "line": "A section at the city's edge with some of its larger multi-family developments.",
+    "source": "https://www.nmcog.org/DocumentCenter/View/583/Lowell-Housing-Production-Plan-2024-to-2028-PDF"
+   }
+  ],
+  "commute": {
+   "rail": [
+    {
+     "line": "Lowell Line",
+     "stations": [
+      "Lowell"
+     ]
+    }
+   ],
+   "rail_source": "https://www.mbta.com/stops/place-NHRML-0254",
+   "highways": [
+    "I-495",
+    "US-3",
+    "Lowell Connector",
+    "Route 3A",
+    "Route 38",
+    "Route 110",
+    "Route 113",
+    "Route 133"
+   ],
+   "text": "Lowell station, at 101 Thorndike Street, is the outer terminal of the MBTA Lowell Line to Boston's North Station. I-495 and US-3 pass through the city, and the Lowell Connector links them to downtown."
+  },
+  "schools": {
+   "district": "Lowell Public Schools",
+   "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=01600000&orgtypecode=5"
+  },
+  "places": [
+   {
+    "name": "Lowell National Historical Park",
+    "line": "A National Park Service site created in 1978, with the Boott Cotton Mills Museum, canal boat tours and the Mogan Cultural Center.",
+    "source": "https://en.wikipedia.org/wiki/Lowell_National_Historical_Park"
+   },
+   {
+    "name": "Lowell Heritage State Park and the Vandenberg Esplanade",
+    "line": "A DCR park established in 1974 that includes the riverside Vandenberg Esplanade.",
+    "source": "https://en.wikipedia.org/wiki/Lowell_Heritage_State_Park"
+   },
+   {
+    "name": "Lowell-Dracut-Tyngsboro State Forest",
+    "line": "More than 1,000 acres across three towns, with about six miles of trails, ponds and wetlands, entered from Trotting Park Road.",
+    "source": "https://mass.gov/locations/lowell-dracut-tyngsboro-state-forest"
+   },
+   {
+    "name": "Whistler House Museum of Art",
+    "line": "The circa 1825 house at 243 Worthen Street where James McNeill Whistler was born in 1834, now run by the Lowell Art Association.",
+    "source": "https://whistlerhouse.org/index.php/en/about/historic-house"
+   },
+   {
+    "name": "Lowell Folk Festival",
+    "line": "A free festival held downtown on the last full weekend of July, with stages at Boarding House Park and along Market Street.",
+    "source": "https://lowellfolkfestival.org/pages/faq"
+   }
+  ],
+  "history": [
+   {
+    "year": "1826",
+    "text": "The Town of Lowell was incorporated on March 1, 1826.",
+    "source": "https://libguides.uml.edu/early_lowell/time_line"
+   },
+   {
+    "year": "1836",
+    "text": "Lowell adopted a city charter and was incorporated as a city on April 1, 1836.",
+    "source": "https://libguides.uml.edu/early_lowell/time_line"
+   },
+   {
+    "year": "1978",
+    "text": "Congress established Lowell National Historical Park on June 5, 1978.",
+    "source": "https://en.wikipedia.org/wiki/Lowell_National_Historical_Park"
+   }
+  ],
+  "market": {
+   "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+   "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+   "period": "Calendar year 2025",
+   "sf_sales_2025": 412,
+   "sf_sales_2024": 414,
+   "sf_median_2025": 510000,
+   "sf_median_2024": 500000,
+   "condo_sales_2025": null,
+   "condo_median_2025": null,
+   "condo_median_2024": null,
+   "reading_1": "LOWELL (single-family; Dec 2024, Dec 2025, Percent Change): YTD Number of Sales 414 412 -0.5%; YTD Median Sale Price $500,000 $510,000 2.0%",
+   "reading_2": "LOWELL (single-family): YTD Number of Sales 414 412 -0.5%; YTD Median Sale Price $500,000 $510,000 2.0%"
+  },
+  "nearby": [
+   "dracut",
+   "chelmsford",
+   "tewksbury",
+   "billerica"
+  ],
+  "search_notes": "'Lowell MA real estate agent' is led by agent-matching directories (HomeLight, including neighborhood pages for Back Central and Centralville, Clever, Ramsey Solutions, BiggerPockets) and a brokerage hiring page. 'Moving to Lowell MA' is almost entirely national and local movers (North American, Lugg, MoveBuddha, MoveAdvisor, All My Sons) plus Livability. No result explains the neighborhoods, mill-conversion housing or the Lowell Line in a sourced way, which is the gap a local guide could fill.",
+  "faq": [
+   {
+    "q": "What is the median home price in Lowell, MA?",
+    "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, the median single-family sale price in Lowell for calendar year 2025 was $510,000, across 412 sales. In 2024 it was $500,000, across 414 sales."
+   },
+   {
+    "q": "Does Lowell have commuter rail?",
+    "a": "Yes. Lowell station on Thorndike Street is the end of the MBTA Lowell Line, which runs to Boston's North Station."
+   },
+   {
+    "q": "Which school district serves Lowell?",
+    "a": "Lowell Public Schools. Review its profile with DESE."
+   }
+  ],
+  "notes": "Condo figures set to null: the PDF's extracted text ends partway through the condo table (at Brookline), so Lowell's condo rows could not be read. Wikipedia gives both 1823 and 1826 for incorporation; the UMass Lowell library timeline confirms March 1, 1826, which is used. The Highlands line comes from Wikipedia; the HPP also names Middlesex Village within the Highlands. The HPP gives 57% of units as renter-occupied in 2020; tenure is mentioned only at the neighborhood level. The Lowell Folk Festival is an annual event rather than a fixed place, and it is included because it occupies downtown public spaces.",
+  "region_key": "north",
+  "tier": 2,
+  "art": "townscape"
+ },
+ {
+  "slug": "newton",
+  "name": "Newton",
+  "county": "Middlesex County",
+  "region": "Greater Boston",
+  "population_2020": 88923,
+  "population_source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts",
+  "official_site": "https://www.newtonma.gov/",
+  "headline": [
+   "Learn the villages first,",
+   "then find the street that fits."
+  ],
+  "answer": "Newton is a city of thirteen villages in Middlesex County, about eight miles west of downtown Boston. Much of its housing is older: as of the 2000 Census, only 19 percent of its homes had been built after 1960. The Green Line D branch and the Framingham/Worcester commuter rail line connect it to Boston.",
+  "overview": [
+   "Newton sits about eight miles west of downtown Boston and has no single center. Instead it is a patchwork of thirteen villages, from Auburndale and Waban to Nonantum and Chestnut Hill, and many of them have a small downtown of their own. The villages have no legal boundaries, so addresses can puzzle first-time visitors. The city goes by The Garden City. It began as Cambridge Village in 1681, took the name Newton in 1766 and became a city in 1874.",
+   "Water and transit shape the map. The Charles River runs along the city's north and west sides, past Newton Lower Falls and Newton Upper Falls, both former small industrial sites, and under Echo Bridge at Hemlock Gorge. The Green Line D branch runs through the middle of the city, with stops including Newton Centre and Riverside, while the Framingham/Worcester Line stops at Newtonville, West Newton and Auburndale. Commonwealth Avenue carries the Boston Marathon over Heartbreak Hill, between Walnut Street and Boston College."
+  ],
+  "housing": {
+   "text": "A 2003 city survey of mid-20th-century housing reported that, as of the 1960 Census, 70.5 percent of Newton's housing units were single-family dwellings and 20.5 percent were two-family homes. It also noted that, as of the 2000 Census, only 19 percent of the city's dwellings had been built after 1960.",
+   "source": "https://newtonma.gov/home/showpublisheddocument/78011/637738815000930000"
+  },
+  "villages": [
+   {
+    "name": "Newton Centre",
+    "line": "Village built around the Green Line station of the same name, near Crystal Lake.",
+    "source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts"
+   },
+   {
+    "name": "Newtonville",
+    "line": "Northern village with a stop on the Framingham/Worcester commuter rail line.",
+    "source": "https://www.mbta.com/schedules/CR-Worcester/timetable"
+   },
+   {
+    "name": "West Newton",
+    "line": "Northern village with its own commuter rail stop on the Framingham/Worcester Line.",
+    "source": "https://www.mbta.com/schedules/CR-Worcester/timetable"
+   },
+   {
+    "name": "Auburndale",
+    "line": "Village on the Charles River, once home to Norumbega Park, with a commuter rail stop.",
+    "source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts"
+   },
+   {
+    "name": "Newton Lower Falls",
+    "line": "Former small industrial site on the Charles River, near the end of the Green Line D branch.",
+    "source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts"
+   },
+   {
+    "name": "Newton Upper Falls",
+    "line": "Former small industrial site on the Charles River.",
+    "source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts"
+   },
+   {
+    "name": "Chestnut Hill",
+    "line": "Unincorporated village near the Boston line, crossed north to south by Hammond Pond Parkway.",
+    "source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts"
+   },
+   {
+    "name": "Oak Hill",
+    "line": "Southern village that was farmland until the 1950s, when Newton grew more densely settled.",
+    "source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts"
+   }
+  ],
+  "commute": {
+   "rail": [
+    {
+     "line": "Framingham/Worcester Line",
+     "stations": [
+      "Newtonville",
+      "West Newton",
+      "Auburndale"
+     ]
+    },
+    {
+     "line": "Green Line D branch (subway)",
+     "stations": [
+      "Newton Centre",
+      "Riverside"
+     ]
+    }
+   ],
+   "rail_source": "https://www.mbta.com/schedules/CR-Worcester/timetable",
+   "highways": [
+    "Massachusetts Turnpike (I-90)",
+    "I-95/Route 128",
+    "Route 9",
+    "Route 30 (Commonwealth Avenue)",
+    "Route 16"
+   ],
+   "text": "The Framingham/Worcester commuter rail line stops at three northern villages, and the Green Line D branch runs through the city's center to Riverside. The Massachusetts Turnpike crosses the northern villages, and I-95/Route 128 runs along the western edge near Lower Falls."
+  },
+  "schools": {
+   "district": "Newton Public Schools",
+   "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=02070000&orgtypecode=5"
+  },
+  "places": [
+   {
+    "name": "Crystal Lake",
+    "line": "A natural lake in Newton Centre with a city-run swim beach, bathhouse and summer lifeguards.",
+    "source": "https://www.newtonma.gov/government/parks-recreation-culture/aquatics/crystal-lake"
+   },
+   {
+    "name": "Jackson Homestead and Museum",
+    "line": "Historic Newton's museum at 527 Washington Street, with exhibits on city history and the Underground Railroad.",
+    "source": "https://www.newtonma.gov/government/historic-newton/visit-museum/jackson-homestead-and-museum"
+   },
+   {
+    "name": "Hammond Pond Reservation",
+    "line": "A DCR reservation off Hammond Pond Parkway with trails, rock formations to climb and paddling on the pond.",
+    "source": "https://mass.gov/locations/hammond-pond-reservation"
+   },
+   {
+    "name": "Hemlock Gorge Reservation",
+    "line": "A 23-acre DCR reservation on the Charles River, known for Echo Bridge and its echo.",
+    "source": "https://mass.gov/locations/hemlock-gorge-reservation"
+   },
+   {
+    "name": "Heartbreak Hill",
+    "line": "The Boston Marathon's climb on Commonwealth Avenue between Walnut Street and Boston College.",
+    "source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts"
+   }
+  ],
+  "history": [
+   {
+    "year": "1681",
+    "text": "Incorporated as a town under the name Cambridge Village, on December 15.",
+    "source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts"
+   },
+   {
+    "year": "1766",
+    "text": "Took the name Newton, after being called Newtown from 1691.",
+    "source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts"
+   },
+   {
+    "year": "1874",
+    "text": "Incorporated as a city on January 5.",
+    "source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts"
+   }
+  ],
+  "market": {
+   "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+   "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+   "period": "Calendar year 2025",
+   "sf_sales_2025": 525,
+   "sf_sales_2024": 482,
+   "sf_median_2025": 1825000,
+   "sf_median_2024": 1690000,
+   "condo_sales_2025": null,
+   "condo_median_2025": null,
+   "condo_median_2024": null,
+   "reading_1": "Newton (single-family), columns Dec 2024 | Dec 2025 | Percent Change. YTD Number of Sales: 482 | 525 | 8.9%. YTD Median Sale Price: $1,690,000 | $1,825,000 | 8.0%.",
+   "reading_2": "NEWTON: \"YTD Number of Sales 482 525 8.9%\"; \"YTD Median Sale Price $1,690,000 $1,825,000 8.0%\""
+  },
+  "nearby": [
+   "waltham",
+   "wellesley",
+   "needham",
+   "brookline",
+   "watertown"
+  ],
+  "search_notes": "For 'Newton MA real estate agent', results are individual agent profiles (RE/MAX, William Raveis), directories (HomeLight village pages, BiggerPockets), a brokerage job listing and paid press releases; Zillow and Redfin did not surface in these results. 'Moving to Newton MA' is dominated by moving companies (North American, All My Sons, Allied, MoveBuddha) plus Livability and one brokerage blog post. Nothing ranking explains the thirteen villages side by side with sourced transit, parks and sale data, which is the gap a real guide can fill.",
+  "faq": [
+   {
+    "q": "What is the median home price in Newton, MA?",
+    "a": "For calendar year 2025, The Warren Group reports a single-family median sale price of $1,825,000 in Newton, across 525 sales. In 2024 the median was $1,690,000 on 482 sales. Source: The Warren Group, MA December 2025 Sales, Prices by Town."
+   },
+   {
+    "q": "Does Newton have commuter rail?",
+    "a": "Yes. The MBTA Framingham/Worcester Line stops at Newtonville, West Newton and Auburndale. The Green Line D branch also runs through the city, with stops including Newton Centre and Riverside."
+   },
+   {
+    "q": "Which school district serves Newton?",
+    "a": "Newton Public Schools. Review its profile with DESE."
+   },
+   {
+    "q": "What are Newton's villages?",
+    "a": "Newton has thirteen villages: Auburndale, Chestnut Hill, Newton Centre, Newton Corner, Newton Highlands, Newton Lower Falls, Newton Upper Falls, Newtonville, Nonantum, Oak Hill, Thompsonville, Waban and West Newton. They have no legal boundaries."
+   }
+  ],
+  "notes": "The Warren Group condo table could not be read: both fetches returned text cut off partway through Brookline, so all condo fields are null. The housing source is a 2003 city report that uses 1960 and 2000 Census figures, not current data; no newer sourced breakdown was found. The MBTA stop page for Newton Centre and Riverside confirms Newton addresses; the D branch line assignment comes from Wikipedia because the mbta.com line page did not render its stop list. The Green Line B branch ends at Boston College, just across the line, and is not listed. Population is from Wikipedia, citing the 2020 Census.",
+  "region_key": "boston",
+  "tier": 2,
+  "art": "colonial"
+ },
+ {
+  "slug": "quincy",
+  "name": "Quincy",
+  "county": "Norfolk County",
+  "region": "Greater Boston",
+  "population_2020": 101636,
+  "population_source": "https://en.wikipedia.org/wiki/Quincy,_Massachusetts",
+  "official_site": "https://www.quincyma.gov/",
+  "headline": [
+   "Between the harbor and the hills,",
+   "a city with deep roots."
+  ],
+  "answer": "Quincy is a coastal city in Norfolk County, on Boston Harbor, and the birthplace of John Adams and John Quincy Adams. About a third of its homes are detached single-family houses, and most of the rest are in buildings with two or more units. Four Red Line stations and three commuter rail lines connect it to Boston.",
+  "overview": [
+   "Quincy calls itself the City of Presidents, and the reason is on Franklin Street: the houses where John Adams was born in 1735 and John Quincy Adams in 1767 still stand side by side there. The family's later home, the Old House at Peacefield, and its Stone Library are part of Adams National Historical Park. Quincy split from Braintree as a town in 1792 and became a city in 1888. Granite quarrying was its major industry for more than a century, and in 1826 the Granite Railway carried stone for the Bunker Hill Monument.",
+   "The shoreline runs from Squantum and Marina Bay around to Houghs Neck, with Wollaston Beach stretching about 2.3 miles along Quincy Shore Drive. Inland, the Blue Hills Reservation covers roughly a quarter of the city's land, and the old quarries in West Quincy are now a state reservation that climbers use. Four Red Line stations, North Quincy, Wollaston, Quincy Center and Quincy Adams, connect the city to Boston, and the Kingston, Greenbush and Fall River/New Bedford commuter rail lines all stop at Quincy Center."
+  ],
+  "housing": {
+   "text": "Housing Quincy, a 2022 study by the Metropolitan Area Planning Council, found that about a third of the city's housing units are detached single-family homes, two-thirds are in buildings with two or more units, and 63 percent were built after 1940. It describes the oceanfront areas of Squantum, Merrymount, Adams Shore and Houghs Neck as having predominantly older single-family housing.",
+   "source": "https://www.mapc.org/wp-content/uploads/2022/12/Housing-Quincy-Executive-Summary_FINAL.pdf"
+  },
+  "villages": [
+   {
+    "name": "Quincy Center",
+    "line": "The downtown, with the city's main Red Line and commuter rail station and few single-family homes.",
+    "source": "https://www.mapc.org/wp-content/uploads/2022/12/Housing-Quincy-Executive-Summary_FINAL.pdf"
+   },
+   {
+    "name": "Wollaston",
+    "line": "Neighborhood with its own Red Line station between North Quincy and Quincy Center.",
+    "source": "https://en.wikipedia.org/wiki/Quincy,_Massachusetts"
+   },
+   {
+    "name": "North Quincy",
+    "line": "Northern neighborhood with a Red Line station at Hancock and Hunt Streets.",
+    "source": "https://www.mbta.com/stops/place-nqncy"
+   },
+   {
+    "name": "Squantum",
+    "line": "Oceanfront peninsula with mostly older single-family homes.",
+    "source": "https://www.mapc.org/wp-content/uploads/2022/12/Housing-Quincy-Executive-Summary_FINAL.pdf"
+   },
+   {
+    "name": "Marina Bay",
+    "line": "Waterfront residential and commercial area with a large marina, built on the former Naval Air Station Squantum.",
+    "source": "https://en.wikipedia.org/wiki/Quincy,_Massachusetts"
+   },
+   {
+    "name": "Houghs Neck",
+    "line": "Oceanfront neighborhood on the city's eastern end with mostly older single-family homes.",
+    "source": "https://www.mapc.org/wp-content/uploads/2022/12/Housing-Quincy-Executive-Summary_FINAL.pdf"
+   },
+   {
+    "name": "West Quincy",
+    "line": "Area with a mix of single-family and multifamily housing.",
+    "source": "https://www.mapc.org/wp-content/uploads/2022/12/Housing-Quincy-Executive-Summary_FINAL.pdf"
+   }
+  ],
+  "commute": {
+   "rail": [
+    {
+     "line": "Kingston Line",
+     "stations": [
+      "Quincy Center"
+     ]
+    },
+    {
+     "line": "Greenbush Line",
+     "stations": [
+      "Quincy Center"
+     ]
+    },
+    {
+     "line": "Fall River/New Bedford Line",
+     "stations": [
+      "Quincy Center"
+     ]
+    },
+    {
+     "line": "Red Line (subway)",
+     "stations": [
+      "North Quincy",
+      "Wollaston",
+      "Quincy Center",
+      "Quincy Adams"
+     ]
+    }
+   ],
+   "rail_source": "https://www.mbta.com/schedules/CR-Kingston/timetable",
+   "highways": [
+    "I-93 and US Route 1 (Southeast Expressway)",
+    "Route 3",
+    "Route 3A",
+    "Route 28",
+    "Route 53"
+   ],
+   "text": "Quincy Center is a stop on three commuter rail lines and the Red Line, which has three more stations in the city. I-93 and US Route 1 run together through Quincy, joined by Route 3 at the Braintree Split, where the road becomes the Southeast Expressway."
+  },
+  "schools": {
+   "district": "Quincy Public Schools",
+   "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=02430000&orgtypecode=5"
+  },
+  "places": [
+   {
+    "name": "Adams National Historical Park",
+    "line": "The Adams birthplaces on Franklin Street, the Old House at Peacefield and its Stone Library.",
+    "source": "https://www.nps.gov/adam/index.htm"
+   },
+   {
+    "name": "Wollaston Beach and Quincy Shores Reservation",
+    "line": "About 2.3 miles of beach along Quincy Shore Drive, with Caddy Park and a jogging and biking path.",
+    "source": "https://mass.gov/locations/quincy-shores-reservation"
+   },
+   {
+    "name": "Quincy Quarries Reservation",
+    "line": "Inactive granite quarries where large-scale American quarrying began, now used for hiking and top-rope climbing.",
+    "source": "https://www.mass.gov/locations/quincy-quarries-reservation"
+   },
+   {
+    "name": "Blue Hills Reservation",
+    "line": "More than 7,000 acres and 125 miles of trails, stretching from Quincy to Dedham and from Milton to Randolph.",
+    "source": "https://www.mass.gov/locations/blue-hills-reservation"
+   },
+   {
+    "name": "Thomas Crane Public Library",
+    "line": "The main library, designed by H. H. Richardson and completed in 1882, is a National Historic Landmark.",
+    "source": "https://en.wikipedia.org/wiki/Thomas_Crane_Public_Library"
+   }
+  ],
+  "history": [
+   {
+    "year": "1792",
+    "text": "Incorporated as the Town of Quincy, separated from Braintree and named for Col. John Quincy.",
+    "source": "https://en.wikipedia.org/wiki/Quincy,_Massachusetts"
+   },
+   {
+    "year": "1826",
+    "text": "The Granite Railway was built to carry Quincy granite for the Bunker Hill Monument.",
+    "source": "https://en.wikipedia.org/wiki/Quincy,_Massachusetts"
+   },
+   {
+    "year": "1888",
+    "text": "Incorporated as a city.",
+    "source": "https://en.wikipedia.org/wiki/Quincy,_Massachusetts"
+   }
+  ],
+  "market": {
+   "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+   "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+   "period": "Calendar year 2025",
+   "sf_sales_2025": 418,
+   "sf_sales_2024": 364,
+   "sf_median_2025": 706250,
+   "sf_median_2024": 700000,
+   "condo_sales_2025": null,
+   "condo_median_2025": null,
+   "condo_median_2024": null,
+   "reading_1": "Quincy (single-family), columns Dec 2024 | Dec 2025 | Percent Change. YTD Number of Sales: 364 | 418 | 14.8%. YTD Median Sale Price: $700,000 | $706,250 | 0.9%.",
+   "reading_2": "QUINCY: \"YTD Number of Sales 364 418 14.8%\"; \"YTD Median Sale Price $700,000 $706,250 0.9%\""
+  },
+  "nearby": [
+   "milton",
+   "braintree",
+   "weymouth",
+   "boston"
+  ],
+  "search_notes": "For 'Quincy MA real estate agent', results are directories and profile aggregators (BiggerPockets, Experience.com, HomeLight neighborhood pages for North Quincy and West Quincy, RealTrends), one NextHome agent page and a brokerage job listing; Zillow and Redfin did not surface in these results. 'Moving to Quincy MA' is almost entirely moving companies and quote sites (All My Sons, Allied, MoveBuddha, uShip, Lugg, Bekins), plus a storage company's neighborhood post. A sourced guide covering the neighborhoods, the Red Line and commuter rail options, the shoreline and the Warren Group figures would stand out.",
+  "faq": [
+   {
+    "q": "What is the median home price in Quincy, MA?",
+    "a": "For calendar year 2025, The Warren Group reports a single-family median sale price of $706,250 in Quincy, across 418 sales. In 2024 the median was $700,000 on 364 sales. Source: The Warren Group, MA December 2025 Sales, Prices by Town."
+   },
+   {
+    "q": "Does Quincy have commuter rail?",
+    "a": "Yes. The MBTA Kingston, Greenbush and Fall River/New Bedford lines stop at Quincy Center. The Red Line also serves North Quincy, Wollaston, Quincy Center and Quincy Adams."
+   },
+   {
+    "q": "Which school district serves Quincy?",
+    "a": "Quincy Public Schools. Review its profile with DESE."
+   },
+   {
+    "q": "Is there a beach in Quincy?",
+    "a": "Yes. Wollaston Beach runs about 2.3 miles along Quincy Shore Drive and is part of the state's Quincy Shores Reservation."
+   }
+  ],
+  "notes": "The Warren Group condo table could not be read: both fetches returned text cut off partway through Brookline, so all condo fields are null. Commuter rail lines at Quincy Center are confirmed from the mbta.com timetables for the Kingston (cited), Greenbush (https://www.mbta.com/schedules/CR-Greenbush/timetable) and Fall River/New Bedford (https://www.mbta.com/schedules/CR-Middleborough/timetable) lines. The Red Line station list comes from Wikipedia plus mbta.com stop pages for North Quincy and Quincy Adams, because the Red Line page did not render its stops. Blue Hills covering about 23 percent of the city's land is from Wikipedia. The Thomas Crane completion year is 1882 in the article text but 1881 in the infobox. Population is from Wikipedia, citing the 2020 Census.",
+  "region_key": "boston",
+  "tier": 2,
+  "art": "townscape"
+ },
+ {
+  "slug": "springfield",
+  "name": "Springfield",
+  "county": "Hampden County",
+  "region": "Pioneer Valley",
+  "population_2020": 155929,
+  "population_source": "https://en.wikipedia.org/wiki/Springfield,_Massachusetts",
+  "official_site": "https://www.springfield-ma.gov/cos/",
+  "headline": [
+   "Porches, parks and river light,",
+   "in a city that knows its neighborhoods."
+  ],
+  "answer": "Springfield is the seat of Hampden County, on the eastern bank of the Connecticut River about 24 miles north of Hartford. Sixty-eight percent of its housing is single-family homes and duplexes, and 41 percent was built before 1940. Union Station offers Amtrak and Hartford Line trains, and I-91 and I-291 run through the city.",
+  "overview": [
+   "Springfield sits on the eastern bank of the Connecticut River, about 24 miles north of Hartford, and serves as the Hampden County seat. William Pynchon founded it in 1636 as Agawam Plantation, and it became a city in 1852. The federal armory here began making small arms in 1794 and closed in 1968; its Main Arsenal now holds the National Park Service's collection of historic military firearms. James Naismith invented basketball in Springfield in 1891, and the Hall of Fame stands on the riverfront.",
+   "The city calls itself the City of Homes, a name tied to its Victorian houses. The McKnight Historic District, planned in 1881, has more than 900 of them, and the neighborhood around Forest Park has more than 600. Sixteen Acres holds much of the city's post-World War II building, and Indian Orchard grew up as its own mill town on the Chicopee River. Forest Park covers about 735 acres, with a zoo, Porter Lake and the Bright Nights holiday display. Union Station handles Amtrak, Hartford Line trains and intercity buses."
+  ],
+  "housing": {
+   "text": "The city's 2018 Housing Study found that 68 percent of Springfield's housing stock is single-family homes and duplexes, and that only 10 percent of units are in buildings with 20 or more units. It also found that 41 percent of units were built before 1940 and only 14 percent since 1980.",
+   "source": "https://www.springfield-ma.gov/housing/fileadmin/housing/Housing_Study/Housing_Study_June_2018.pdf"
+  },
+  "villages": [
+   {
+    "name": "Forest Park",
+    "line": "Garden district around the park of the same name, with more than 600 Victorian houses.",
+    "source": "https://en.wikipedia.org/wiki/Springfield,_Massachusetts"
+   },
+   {
+    "name": "McKnight",
+    "line": "Primarily residential; its historic district, planned in 1881, has more than 900 Victorian houses.",
+    "source": "https://en.wikipedia.org/wiki/Springfield,_Massachusetts"
+   },
+   {
+    "name": "Six Corners",
+    "line": "Urban and residential, including Mulberry Street in the Ridgewood Historic District.",
+    "source": "https://en.wikipedia.org/wiki/Springfield,_Massachusetts"
+   },
+   {
+    "name": "Sixteen Acres",
+    "line": "Suburban in character, with much of the city's post-World War II housing.",
+    "source": "https://en.wikipedia.org/wiki/Springfield,_Massachusetts"
+   },
+   {
+    "name": "Indian Orchard",
+    "line": "Former mill town on the Chicopee River that grew separately before joining Springfield.",
+    "source": "https://en.wikipedia.org/wiki/Springfield,_Massachusetts"
+   },
+   {
+    "name": "Metro Center",
+    "line": "Downtown, separated from the Connecticut River riverfront by I-91.",
+    "source": "https://en.wikipedia.org/wiki/Springfield,_Massachusetts"
+   }
+  ],
+  "commute": {
+   "rail": [
+    {
+     "line": "Amtrak (Northeast Regional, Valley Flyer, Vermonter, Lake Shore Limited)",
+     "stations": [
+      "Springfield Union Station"
+     ]
+    },
+    {
+     "line": "CTrail Hartford Line",
+     "stations": [
+      "Springfield Union Station"
+     ]
+    }
+   ],
+   "rail_source": "https://en.wikipedia.org/wiki/Springfield_Union_Station_(Massachusetts)",
+   "highways": [
+    "I-91",
+    "I-291",
+    "US Route 20"
+   ],
+   "text": "Springfield has no MBTA commuter rail. Union Station on Frank B. Murray Street serves Amtrak, the CTrail Hartford Line to New Haven, PVTA local buses and Peter Pan intercity buses. I-91 follows the riverfront, I-291 loops northeast from downtown to the Massachusetts Turnpike, and the Turnpike itself runs just north of the city through Chicopee."
+  },
+  "schools": {
+   "district": "Springfield Public Schools",
+   "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=02810000&orgtypecode=5"
+  },
+  "places": [
+   {
+    "name": "Forest Park",
+    "line": "About 735 acres, established in 1884, with the Zoo at Forest Park, Porter Lake and the Bright Nights holiday display.",
+    "source": "https://en.wikipedia.org/wiki/Forest_Park_(Springfield,_Massachusetts)"
+   },
+   {
+    "name": "Springfield Museums",
+    "line": "Five museums of art, history, science and Dr. Seuss at 21 Edwards Street, including the Springfield Science Museum.",
+    "source": "https://springfieldmuseums.org/"
+   },
+   {
+    "name": "Springfield Armory National Historic Site",
+    "line": "The nation's first armory, now a National Park Service site holding a large collection of historic US military small arms.",
+    "source": "https://www.nps.gov/spar/index.htm"
+   },
+   {
+    "name": "Naismith Basketball Hall of Fame",
+    "line": "The Hall of Fame at 1000 Hall of Fame Avenue, beside the Connecticut River, in a building opened in 2002.",
+    "source": "https://en.wikipedia.org/wiki/Naismith_Basketball_Hall_of_Fame"
+   },
+   {
+    "name": "Springfield Union Station",
+    "line": "The 1926 station, redeveloped as the city's rail and bus hub on Frank B. Murray Street.",
+    "source": "https://en.wikipedia.org/wiki/Springfield_Union_Station_(Massachusetts)"
+   }
+  ],
+  "history": [
+   {
+    "year": "1636",
+    "text": "Founded by William Pynchon as Agawam Plantation.",
+    "source": "https://en.wikipedia.org/wiki/Springfield,_Massachusetts"
+   },
+   {
+    "year": "1852",
+    "text": "Incorporated as a city on May 25.",
+    "source": "https://en.wikipedia.org/wiki/Springfield,_Massachusetts"
+   },
+   {
+    "year": "1891",
+    "text": "James Naismith invented basketball in Springfield.",
+    "source": "https://en.wikipedia.org/wiki/Springfield,_Massachusetts"
+   }
+  ],
+  "market": {
+   "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+   "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+   "period": "Calendar year 2025",
+   "sf_sales_2025": 1040,
+   "sf_sales_2024": 1030,
+   "sf_median_2025": 290000,
+   "sf_median_2024": 280000,
+   "condo_sales_2025": null,
+   "condo_median_2025": null,
+   "condo_median_2024": null,
+   "reading_1": "Springfield (single-family), columns Dec 2024 | Dec 2025 | Percent Change. YTD Number of Sales: 1,030 | 1,040 | 1.0%. YTD Median Sale Price: $280,000 | $290,000 | 3.6%.",
+   "reading_2": "SPRINGFIELD: \"YTD Number of Sales 1,030 1,040 1.0%\"; \"YTD Median Sale Price $280,000 $290,000 3.6%\""
+  },
+  "nearby": [
+   "chicopee",
+   "west-springfield",
+   "longmeadow",
+   "ludlow",
+   "wilbraham"
+  ],
+  "search_notes": "For 'Springfield MA real estate agent', results are directories and referral sites (Ramsey Solutions, BiggerPockets, HomeLight pages for East Springfield, Liberty Heights and Indian Orchard, Clever), one agent profile and a brokerage job listing; Zillow and Redfin did not surface in these results. 'Moving to Springfield MA' returns only moving companies (All My Sons, Allied) and templated city-to-city mover pages. There is no ranking local guide that walks through the neighborhoods, Union Station rail options and sourced sale figures.",
+  "faq": [
+   {
+    "q": "What is the median home price in Springfield, MA?",
+    "a": "For calendar year 2025, The Warren Group reports a single-family median sale price of $290,000 in Springfield, across 1,040 sales. In 2024 the median was $280,000 on 1,030 sales. Source: The Warren Group, MA December 2025 Sales, Prices by Town."
+   },
+   {
+    "q": "Does Springfield have commuter rail?",
+    "a": "Not MBTA commuter rail. Springfield Union Station is served by Amtrak (Northeast Regional, Valley Flyer, Vermonter and Lake Shore Limited) and by the CTrail Hartford Line to Hartford and New Haven."
+   },
+   {
+    "q": "Which school district serves Springfield?",
+    "a": "Springfield Public Schools. Review its profile with DESE."
+   },
+   {
+    "q": "Why is Springfield called the City of Homes?",
+    "a": "The nickname comes from its Victorian residential architecture. The McKnight Historic District alone has more than 900 Victorian houses."
+   }
+  ],
+  "notes": "The Warren Group condo table could not be read: both fetches returned text cut off partway through Brookline, so all condo fields are null. Springfield is outside the MBTA commuter rail system, so the rail fields list Amtrak and CTrail at Union Station, sourced from Wikipedia; mbta.com has nothing to cite here. I-291 and the Turnpike's route north of the city come from AARoads (https://www.aaroads.com/guides/i-291-ma); the Turnpike is not listed as passing through the city. US Route 20 is mentioned on the same AARoads page near Indian Orchard. The 2018 Housing Study uses 2016 ACS data. Wikipedia gives both 1968 and 1969 for the Armory's closing; the NPS site says 1968. 'City of Homes' is confirmed on springfield-ma.gov. Population is from Wikipedia, citing the 2020 Census.",
+  "region_key": "west",
+  "tier": 2,
+  "art": "triple-decker"
+ }
+]

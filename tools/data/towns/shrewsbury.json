@@ -1,0 +1,159 @@
+{
+  "slug": "shrewsbury",
+  "name": "Shrewsbury",
+  "county": "Worcester County",
+  "region": "Central Massachusetts",
+  "population_2020": 38325,
+  "population_source": "https://en.wikipedia.org/wiki/Shrewsbury,_Massachusetts",
+  "official_site": "https://www.shrewsburyma.gov/",
+  "headline": [
+    "A closer look at Shrewsbury,",
+    "from the lakeshore to Main Street."
+  ],
+  "answer": "Shrewsbury is a Worcester County town of 38,325 people (2020 Census), across Lake Quinsigamond from Worcester. Single-family homes grew along its 19th-century streetcar routes, and The Warren Group counted 234 single-family sales in 2025. I-290, Route 9, Route 20 and Route 140 cross the town; the nearest commuter rail stops are in neighboring Worcester, Grafton and Westborough.",
+  "overview": [
+    "Shrewsbury sits just east of Worcester, with Lake Quinsigamond between them; I-290 crosses the water into town. Shrewsbury was incorporated in 1727 and grew along the old Boston Post Road, where two milestones from 1767 still stand. In the 19th century, streetcar lines helped single-family housing spread outward from the center, while the lakeshore filled with cottages and a summer resort season. The White City amusement park once stood by the lake; a shopping plaza holds the site today.",
+    "Main Street is the town's historic spine. The General Artemas Ward House Museum, a Harvard-affiliated house museum at 786 Main Street, opens for free guided tours from mid-April through November, across the road from Dean Park and its trails. Prospect Park adds 71 acres of forest paths, Jordan Pond has a loop trail of just under a mile, and Ski Ward at 1000 Main Street runs skiing, snowboarding and tubing through the year. The public library moved into a new 42,000-square-foot building in 2016."
+  ],
+  "housing": {
+    "text": "Streetcar routes in the 19th century propelled the growth of single-family housing in Shrewsbury, and lakeside cottages were built along Lake Quinsigamond. The Warren Group recorded 234 single-family sales in town in 2025.",
+    "source": "https://en.wikipedia.org/wiki/Shrewsbury,_Massachusetts"
+  },
+  "villages": [
+    {
+      "name": "Town Center",
+      "line": "The historic center along Main Street.",
+      "source": "https://www.mass.gov/doc/master-plan-part-1/download"
+    },
+    {
+      "name": "Lakeway District",
+      "line": "The district along Route 9.",
+      "source": "https://www.mass.gov/doc/master-plan-part-1/download"
+    },
+    {
+      "name": "White City",
+      "line": "A commercial area reached via South Quinsigamond Avenue and Lake Street, on the site of a former amusement park.",
+      "source": "https://www.mass.gov/doc/master-plan-part-1/download"
+    },
+    {
+      "name": "Edgemere",
+      "line": "The area around Edgemere Boulevard along the Route 20 corridor.",
+      "source": "https://www.mass.gov/doc/master-plan-part-1/download"
+    },
+    {
+      "name": "Shrewsbury Village",
+      "line": "The Old Shrewsbury Village area near Valente Drive on the Route 20 corridor.",
+      "source": "https://www.mass.gov/doc/master-plan-part-1/download"
+    }
+  ],
+  "commute": {
+    "rail": [
+      {
+        "line": "Framingham/Worcester Line (in neighboring towns)",
+        "stations": [
+          "Grafton (North Grafton)",
+          "Westborough",
+          "Worcester"
+        ]
+      }
+    ],
+    "rail_source": "https://www.mbta.com/schedules/CR-Worcester/timetable",
+    "highways": [
+      "I-290",
+      "Route 9",
+      "Route 20",
+      "Route 140"
+    ],
+    "text": "Shrewsbury has no commuter rail station of its own; the Framingham/Worcester Line stops in neighboring Worcester, Grafton and Westborough. I-290 has two Shrewsbury exits, at Main Street and Route 140, and Route 9, Route 20 and Route 140 also cross the town."
+  },
+  "schools": {
+    "district": "Shrewsbury Public Schools",
+    "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=02710000&orgtypecode=5"
+  },
+  "places": [
+    {
+      "name": "General Artemas Ward House Museum",
+      "line": "Historic house museum at 786 Main Street with free guided tours, mid-April through November.",
+      "source": "https://wardhouse.harvard.edu/visit-us"
+    },
+    {
+      "name": "Dean Park",
+      "line": "Town park on Main Street with about 1.8 miles of hiking trails, across from the Ward House.",
+      "source": "https://en.wikipedia.org/wiki/Shrewsbury,_Massachusetts"
+    },
+    {
+      "name": "Prospect Park",
+      "line": "A 71-acre forest with trails for walking, running and biking.",
+      "source": "https://en.wikipedia.org/wiki/Shrewsbury,_Massachusetts"
+    },
+    {
+      "name": "Jordan Pond Recreational Area",
+      "line": "About 0.8 miles of trails around Jordan Pond.",
+      "source": "https://en.wikipedia.org/wiki/Shrewsbury,_Massachusetts"
+    },
+    {
+      "name": "Ski Ward",
+      "line": "Year-round hill at 1000 Main Street with skiing, snowboarding, snow tubing and summer tubing.",
+      "source": "https://www.skiward.com/"
+    },
+    {
+      "name": "Lake Quinsigamond",
+      "line": "The lake on the Worcester line, crossed by I-290, with a long history of lakeside cottages.",
+      "source": "https://en.wikipedia.org/wiki/Shrewsbury,_Massachusetts"
+    }
+  ],
+  "history": [
+    {
+      "year": "1727",
+      "text": "Incorporated as a town.",
+      "source": "https://en.wikipedia.org/wiki/Shrewsbury,_Massachusetts"
+    },
+    {
+      "year": "1872",
+      "text": "The Shrewsbury Public Library was established.",
+      "source": "https://en.wikipedia.org/wiki/Shrewsbury,_Massachusetts"
+    },
+    {
+      "year": "2016",
+      "text": "A new 42,000-square-foot public library opened.",
+      "source": "https://en.wikipedia.org/wiki/Shrewsbury,_Massachusetts"
+    }
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 234,
+    "sf_sales_2024": 299,
+    "sf_median_2025": 716500,
+    "sf_median_2024": 675000,
+    "condo_sales_2025": null,
+    "condo_median_2025": null,
+    "condo_median_2024": null,
+    "reading_1": "Shrewsbury (single-family, Dec 2024 / Dec 2025 / % change): \"YTD Number of Sales 299 234 -21.7%\"; \"YTD Median Sale Price $675,000 $716,500 6.1%\"",
+    "reading_2": "SHREWSBURY (single-family): \"Number of Sales 15 20 33.3%\"; \"YTD Number of Sales 299 234 -21.7%\"; \"Median Sale Price $685,500 $687,500 0.3%\"; \"YTD Median Sale Price $675,000 $716,500 6.1%\""
+  },
+  "nearby": [
+    "worcester",
+    "grafton",
+    "westborough",
+    "northborough",
+    "boylston"
+  ],
+  "search_notes": "For 'Shrewsbury MA real estate agent', results are agent profile directories (RealTrends profiles for Berkshire Hathaway HomeServices agents, BiggerPockets, Ramsey Solutions, Experience.com), a Max Real Estate Exposure town page and a syndicated agent press release. 'Moving to Shrewsbury MA' returns one rental-site blog comparing it with Worcester, Redfin's market page and mover directories (HireAHelper, MoveAdvisor). A guide covering the lakeshore, Main Street landmarks, Route 9 and Route 20 areas and the nearby rail options is missing.",
+  "faq": [
+    {
+      "q": "What is the median home price in Shrewsbury, MA?",
+      "a": "The median single-family sale price in Shrewsbury for calendar year 2025 was $716,500, across 234 sales, compared with $675,000 in 2024, according to The Warren Group's MA December 2025 Sales, Prices by Town report."
+    },
+    {
+      "q": "Does Shrewsbury have commuter rail?",
+      "a": "Not within town. The MBTA Framingham/Worcester Line stops in neighboring Worcester, Grafton (at 1 Pine Street in North Grafton) and Westborough."
+    },
+    {
+      "q": "Which school district serves Shrewsbury?",
+      "a": "Shrewsbury Public Schools. Review its profile with DESE."
+    }
+  ],
+  "notes": "Condo rows could not be read (both condo fetches truncated at 'BROOKLI'), so condo fields are null. The village and area names come from the MassDOT Shrewsbury Route 20 Corridor Master Plan, which names them but gives little description, so lines are kept to location. Wikipedia names no villages. Single-family sales fell 21.7 percent from 2024 to 2025 per the Warren Group; the reason is not given. Ward House operator is inferred from Harvard branding on wardhouse.harvard.edu, hence 'Harvard-affiliated'. Northborough and Boylston as neighbors come from the Route 20 corridor study and the I-290 route description."
+}

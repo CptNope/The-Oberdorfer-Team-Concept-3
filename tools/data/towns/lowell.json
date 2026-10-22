@@ -1,0 +1,170 @@
+{
+  "slug": "lowell",
+  "name": "Lowell",
+  "county": "Middlesex County",
+  "region": "Merrimack Valley",
+  "population_2020": 115554,
+  "population_source": "https://en.wikipedia.org/wiki/Lowell,_Massachusetts",
+  "official_site": "https://www.lowellma.gov/",
+  "headline": [
+    "Brick mills, working canals,",
+    "and a city still built around its river."
+  ],
+  "answer": "Lowell is a Middlesex County city of 115,554 people (2020 Census), founded as a textile mill town and incorporated in 1826. Most of its housing was built before 1960, with a mix of multi-family buildings, duplexes, single-family homes and converted mills. The MBTA Lowell Line runs from Lowell station to Boston's North Station, and I-495 and US-3 cross the city.",
+  "overview": [
+    "The first large textile mill went up in 1822 on land that would become Lowell, and the town of Lowell was incorporated on March 1, 1826, then chartered as a city in 1836. By the 1850s it had the largest industrial complex in the United States. Much of that landscape survives: Lowell National Historical Park, created in 1978, runs boat tours through the canal system and recreates 19th-century textile work in the Boott Cotton Mills Museum. Along the river, the Vandenberg Esplanade is part of the state's Lowell Heritage State Park.",
+    "Lowell's neighborhoods differ widely. Downtown, the Acre and Back Central hold most of the city's rental housing, while parts of Belvidere, Pawtucketville and the Highlands are mostly single-family streets. Beyond the mill core, the Lowell-Dracut-Tyngsboro State Forest, shared with two neighboring towns, adds about six miles of trails."
+  ],
+  "housing": {
+    "text": "Lowell's Housing Production Plan for 2024 to 2028 reports that 77% of the city's housing was built before 1960, with nearly a third predating 1900, and that 45% of units are in buildings of three or more units. Conversions of downtown buildings and mills account for much of recent production, and parts of Belvidere, Pawtucketville and the Highlands are predominantly single-family.",
+    "source": "https://www.nmcog.org/DocumentCenter/View/583/Lowell-Housing-Production-Plan-2024-to-2028-PDF"
+  },
+  "villages": [
+    {
+      "name": "Downtown",
+      "line": "The mill and canal core, where many older commercial buildings and mills have been converted to housing.",
+      "source": "https://www.nmcog.org/DocumentCenter/View/583/Lowell-Housing-Production-Plan-2024-to-2028-PDF"
+    },
+    {
+      "name": "The Acre",
+      "line": "A neighborhood where most homes are rentals, the highest renter share outside downtown.",
+      "source": "https://www.nmcog.org/DocumentCenter/View/583/Lowell-Housing-Production-Plan-2024-to-2028-PDF"
+    },
+    {
+      "name": "Back Central",
+      "line": "One of the neighborhoods with the highest concentration of rental housing, alongside downtown and the Acre.",
+      "source": "https://www.nmcog.org/DocumentCenter/View/583/Lowell-Housing-Production-Plan-2024-to-2028-PDF"
+    },
+    {
+      "name": "Belvidere",
+      "line": "Includes the Belvidere Hill Neighborhood District, a local historic district; parts of the neighborhood are predominantly single-family.",
+      "source": "https://www.lowellma.gov/DocumentCenter/View/955"
+    },
+    {
+      "name": "Centralville",
+      "line": "Formerly part of Dracut, brought within Lowell in 1851.",
+      "source": "https://libguides.uml.edu/early_lowell/time_line"
+    },
+    {
+      "name": "Pawtucketville",
+      "line": "Holds the greatest share of newer housing among Lowell's neighborhoods, and parts are mostly single-family.",
+      "source": "https://www.nmcog.org/DocumentCenter/View/583/Lowell-Housing-Production-Plan-2024-to-2028-PDF"
+    },
+    {
+      "name": "The Highlands",
+      "line": "Divided into the Upper and Lower Highlands, with the lower section closer to downtown.",
+      "source": "https://en.wikipedia.org/wiki/Lowell,_Massachusetts"
+    },
+    {
+      "name": "South Lowell",
+      "line": "A section at the city's edge with some of its larger multi-family developments.",
+      "source": "https://www.nmcog.org/DocumentCenter/View/583/Lowell-Housing-Production-Plan-2024-to-2028-PDF"
+    }
+  ],
+  "commute": {
+    "rail": [
+      {
+        "line": "Lowell Line",
+        "stations": [
+          "Lowell"
+        ]
+      }
+    ],
+    "rail_source": "https://www.mbta.com/stops/place-NHRML-0254",
+    "highways": [
+      "I-495",
+      "US-3",
+      "Lowell Connector",
+      "Route 3A",
+      "Route 38",
+      "Route 110",
+      "Route 113",
+      "Route 133"
+    ],
+    "text": "Lowell station, at 101 Thorndike Street, is the outer terminal of the MBTA Lowell Line to Boston's North Station. I-495 and US-3 pass through the city, and the Lowell Connector links them to downtown."
+  },
+  "schools": {
+    "district": "Lowell Public Schools",
+    "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=01600000&orgtypecode=5"
+  },
+  "places": [
+    {
+      "name": "Lowell National Historical Park",
+      "line": "A National Park Service site created in 1978, with the Boott Cotton Mills Museum, canal boat tours and the Mogan Cultural Center.",
+      "source": "https://en.wikipedia.org/wiki/Lowell_National_Historical_Park"
+    },
+    {
+      "name": "Lowell Heritage State Park and the Vandenberg Esplanade",
+      "line": "A DCR park established in 1974 that includes the riverside Vandenberg Esplanade.",
+      "source": "https://en.wikipedia.org/wiki/Lowell_Heritage_State_Park"
+    },
+    {
+      "name": "Lowell-Dracut-Tyngsboro State Forest",
+      "line": "More than 1,000 acres across three towns, with about six miles of trails, ponds and wetlands, entered from Trotting Park Road.",
+      "source": "https://mass.gov/locations/lowell-dracut-tyngsboro-state-forest"
+    },
+    {
+      "name": "Whistler House Museum of Art",
+      "line": "The circa 1825 house at 243 Worthen Street where James McNeill Whistler was born in 1834, now run by the Lowell Art Association.",
+      "source": "https://whistlerhouse.org/index.php/en/about/historic-house"
+    },
+    {
+      "name": "Lowell Folk Festival",
+      "line": "A free festival held downtown on the last full weekend of July, with stages at Boarding House Park and along Market Street.",
+      "source": "https://lowellfolkfestival.org/pages/faq"
+    }
+  ],
+  "history": [
+    {
+      "year": "1826",
+      "text": "The Town of Lowell was incorporated on March 1, 1826.",
+      "source": "https://libguides.uml.edu/early_lowell/time_line"
+    },
+    {
+      "year": "1836",
+      "text": "Lowell adopted a city charter and was incorporated as a city on April 1, 1836.",
+      "source": "https://libguides.uml.edu/early_lowell/time_line"
+    },
+    {
+      "year": "1978",
+      "text": "Congress established Lowell National Historical Park on June 5, 1978.",
+      "source": "https://en.wikipedia.org/wiki/Lowell_National_Historical_Park"
+    }
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 412,
+    "sf_sales_2024": 414,
+    "sf_median_2025": 510000,
+    "sf_median_2024": 500000,
+    "condo_sales_2025": null,
+    "condo_median_2025": null,
+    "condo_median_2024": null,
+    "reading_1": "LOWELL (single-family; Dec 2024, Dec 2025, Percent Change): YTD Number of Sales 414 412 -0.5%; YTD Median Sale Price $500,000 $510,000 2.0%",
+    "reading_2": "LOWELL (single-family): YTD Number of Sales 414 412 -0.5%; YTD Median Sale Price $500,000 $510,000 2.0%"
+  },
+  "nearby": [
+    "dracut",
+    "chelmsford",
+    "tewksbury",
+    "billerica"
+  ],
+  "search_notes": "'Lowell MA real estate agent' is led by agent-matching directories (HomeLight, including neighborhood pages for Back Central and Centralville, Clever, Ramsey Solutions, BiggerPockets) and a brokerage hiring page. 'Moving to Lowell MA' is almost entirely national and local movers (North American, Lugg, MoveBuddha, MoveAdvisor, All My Sons) plus Livability. No result explains the neighborhoods, mill-conversion housing or the Lowell Line in a sourced way, which is the gap a local guide could fill.",
+  "faq": [
+    {
+      "q": "What is the median home price in Lowell, MA?",
+      "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, the median single-family sale price in Lowell for calendar year 2025 was $510,000, across 412 sales. In 2024 it was $500,000, across 414 sales."
+    },
+    {
+      "q": "Does Lowell have commuter rail?",
+      "a": "Yes. Lowell station on Thorndike Street is the end of the MBTA Lowell Line, which runs to Boston's North Station."
+    },
+    {
+      "q": "Which school district serves Lowell?",
+      "a": "Lowell Public Schools. Review its profile with DESE."
+    }
+  ],
+  "notes": "Condo figures set to null: the PDF's extracted text ends partway through the condo table (at Brookline), so Lowell's condo rows could not be read. Wikipedia gives both 1823 and 1826 for incorporation; the UMass Lowell library timeline confirms March 1, 1826, which is used. The Highlands line comes from Wikipedia; the HPP also names Middlesex Village within the Highlands. The HPP gives 57% of units as renter-occupied in 2020; tenure is mentioned only at the neighborhood level. The Lowell Folk Festival is an annual event rather than a fixed place, and it is included because it occupies downtown public spaces."
+}

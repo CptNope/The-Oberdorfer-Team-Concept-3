@@ -1,0 +1,155 @@
+{
+  "slug": "wakefield",
+  "name": "Wakefield",
+  "county": "Middlesex County",
+  "region": "Greater Boston (North)",
+  "population_2020": 27090,
+  "population_source": "https://en.wikipedia.org/wiki/Wakefield,_Massachusetts",
+  "official_site": "https://www.wakefieldma.gov/",
+  "headline": [
+    "A lake to walk around,",
+    "a town to come home to."
+  ],
+  "answer": "Wakefield is a Middlesex County town about 10 miles north of Boston, centered on Lake Quannapowitt and a downtown along Main Street. Single-family detached homes make up 55 percent of its housing, and about a third of its structures predate World War II. The Haverhill Line stops at Wakefield and Greenwood stations.",
+  "overview": [
+    "Wakefield is a town of about 27,000 people, 10 miles north of Boston, and it is laid out around Lake Quannapowitt. A paved loop of about 3.6 miles circles the lake, and Wakefield Common sits at its southern end. From there, downtown runs south along Main Street toward Crystal Lake, the town's drinking-water reservoir. The town began as part of Reading. Its South Parish broke off as South Reading in 1812, and in 1868 the town took the name of Cyrus Wakefield, who gave land and money for a new town hall.",
+    "Two Haverhill Line stations, Wakefield and Greenwood, serve the town, and I-95/Route 128 runs along its northwest edge. Greenwood covers nearly all of southern Wakefield, while Montrose, Woodville and Lakeside fill in the east and north. On Saturdays from June through October, the farmers market sets up on North Avenue by Hall Park, on the lake's shore. Breakheart Reservation, a state park with two lakes and a swimming beach at Pearce Lake, has an entrance on Hemlock Road, the one closer to the beach."
+  ],
+  "housing": {
+    "text": "The town's Housing Production Plan for FY2026-2030 reports that single-family detached homes are 55 percent of all housing units, down from 62 percent in 2011, and that about a third of structures were built before World War II. Two-family homes, buildings of 20 to 49 units, and three- and four-unit buildings are the next most common types.",
+    "source": "https://www.mass.gov/doc/wakefield-housing-production-plan/download"
+  },
+  "villages": [
+    {
+      "name": "Downtown (Wakefield Square)",
+      "line": "Runs from Wakefield Junction, north of Crystal Lake, to the southern shore of Lake Quannapowitt.",
+      "source": "https://en.wikipedia.org/wiki/Wakefield,_Massachusetts"
+    },
+    {
+      "name": "Greenwood",
+      "line": "Covers nearly all of southern Wakefield and has its own commuter rail station.",
+      "source": "https://en.wikipedia.org/wiki/Wakefield,_Massachusetts"
+    },
+    {
+      "name": "Lakeside",
+      "line": "North-central Wakefield, along the eastern shore of Lake Quannapowitt.",
+      "source": "https://en.wikipedia.org/wiki/Wakefield,_Massachusetts"
+    },
+    {
+      "name": "Montrose",
+      "line": "Much of northeastern Wakefield, bordering Lynnfield.",
+      "source": "https://en.wikipedia.org/wiki/Wakefield,_Massachusetts"
+    },
+    {
+      "name": "Woodville",
+      "line": "Much of central-eastern Wakefield.",
+      "source": "https://en.wikipedia.org/wiki/Wakefield,_Massachusetts"
+    }
+  ],
+  "commute": {
+    "rail": [
+      {
+        "line": "Haverhill Line",
+        "stations": [
+          "Wakefield",
+          "Greenwood"
+        ]
+      }
+    ],
+    "rail_source": "https://www.mbta.com/schedules/CR-Haverhill/timetable",
+    "highways": [
+      "I-95/Route 128",
+      "Route 129"
+    ],
+    "text": "The Haverhill Line stops at Wakefield and Greenwood on the way to North Station, and MBTA bus route 137 also serves the town. I-95/Route 128 runs along the northwest border with exits in town, Route 129 runs through as Main Street, and the town notes that it sits near the junction of I-93 and I-95/128."
+  },
+  "schools": {
+    "district": "Wakefield Public Schools",
+    "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=03050000&orgtypecode=5"
+  },
+  "places": [
+    {
+      "name": "Lake Quannapowitt",
+      "line": "A lake with a paved loop of about 3.6 miles, popular for walking, running and recreation.",
+      "source": "https://www.wakefieldma.gov/469/About-Wakefield"
+    },
+    {
+      "name": "Wakefield Common",
+      "line": "The town green on the south shore of Lake Quannapowitt, where downtown begins.",
+      "source": "https://en.wikipedia.org/wiki/Wakefield,_Massachusetts"
+    },
+    {
+      "name": "Hall Park and the Wakefield Farmers Market",
+      "line": "A lakeshore park on North Avenue; the market runs Saturdays, 9 a.m. to 1 p.m., from mid-June through October.",
+      "source": "https://marketspread.com/market/11522/wakefield-farmers-market"
+    },
+    {
+      "name": "Breakheart Reservation",
+      "line": "A DCR park with two lakes, a beach at Pearce Lake and an extensive trail system, entered from Hemlock Road.",
+      "source": "https://www.mass.gov/locations/breakheart-reservation"
+    },
+    {
+      "name": "Lucius Beebe Memorial Library",
+      "line": "The public library at Main and Avon Streets downtown, opened in 1923.",
+      "source": "https://en.wikipedia.org/wiki/Lucius_Beebe_Memorial_Library"
+    }
+  ],
+  "history": [
+    {
+      "year": "1644",
+      "text": "Incorporated as part of the town of Reading, after first settlement in 1638 as Lynn Village.",
+      "source": "https://en.wikipedia.org/wiki/Wakefield,_Massachusetts"
+    },
+    {
+      "year": "1812",
+      "text": "The South Parish separated from Reading and was incorporated as South Reading on February 25.",
+      "source": "https://en.wikipedia.org/wiki/Wakefield,_Massachusetts"
+    },
+    {
+      "year": "1868",
+      "text": "Renamed Wakefield after Cyrus Wakefield donated land and money for a new town hall.",
+      "source": "https://en.wikipedia.org/wiki/Wakefield,_Massachusetts"
+    }
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 195,
+    "sf_sales_2024": 178,
+    "sf_median_2025": 830000,
+    "sf_median_2024": 822500,
+    "condo_sales_2025": null,
+    "condo_median_2025": null,
+    "condo_median_2024": null,
+    "reading_1": "Wakefield (single-family), columns Dec 2024 | Dec 2025 | Percent Change. YTD Number of Sales: 178 | 195 | 9.6%. YTD Median Sale Price: $822,500 | $830,000 | 0.9%.",
+    "reading_2": "WAKEFIELD: \"YTD Number of Sales 178 195 9.6%\"; \"YTD Median Sale Price $822,500 $830,000 0.9%\""
+  },
+  "nearby": [
+    "reading",
+    "lynnfield",
+    "melrose",
+    "stoneham",
+    "saugus"
+  ],
+  "search_notes": "For 'Wakefield MA real estate agent', HomeLight's town and downtown pages lead, followed by BiggerPockets, Experience.com, Ramsey Solutions, RealTrends and a broker-ranking directory, with Bean Group as the only brokerage site; Zillow and Redfin did not surface in these results. 'Moving to Wakefield MA' returns moving companies and quote sites (Lugg, MoveAdvisor, MoveBuddha) plus Livability. A guide that ties the lake, downtown, Greenwood and both rail stations to the town's Housing Production Plan and the Warren Group figures would fill a clear gap.",
+  "faq": [
+    {
+      "q": "What is the median home price in Wakefield, MA?",
+      "a": "For calendar year 2025, The Warren Group reports a single-family median sale price of $830,000 in Wakefield, across 195 sales. In 2024 the median was $822,500 on 178 sales. Source: The Warren Group, MA December 2025 Sales, Prices by Town."
+    },
+    {
+      "q": "Does Wakefield have commuter rail?",
+      "a": "Yes. The MBTA Haverhill Line stops at Wakefield and Greenwood stations on its way to North Station in Boston."
+    },
+    {
+      "q": "Which school district serves Wakefield?",
+      "a": "Wakefield Public Schools. Review its profile with DESE."
+    },
+    {
+      "q": "How long is the walk around Lake Quannapowitt?",
+      "a": "The town describes the paved loop around the lake as approximately 3.6 miles."
+    }
+  ],
+  "notes": "The Warren Group condo table could not be read: both fetches returned text cut off partway through Brookline, so all condo fields are null. The marketspread listing gives the market's address (468 North Ave) and describes Hall Park in its location notes, but does not say outright that the market is held in Hall Park; the existing Wakefield guide already confirms the Hall Park market. Lake acreage (247) is from Wikipedia; the 3.6-mile loop is from the town site. I-93 does not pass through Wakefield; the town site describes Wakefield as at the intersection of I-93 and I-95/128, so it is mentioned only in the commute text. Wikipedia also names the West Side and East Side but gives no description, so they are omitted. The Housing Production Plan's chart labels appear reversed in one place (38/61 percent), so only the text figures (55 percent single-family, 33 percent pre-war) are used. Albion Street is not mentioned because no source opened here named it. Population is from Wikipedia, citing the 2020 Census."
+}

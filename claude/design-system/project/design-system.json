@@ -1,169 +1,174 @@
 {
   "v": 3,
+  "layout": "files",
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-10-22T16:43:15Z"
+  },
+  "title": "The-Oberdorfer-Team-Concept-3",
+  "namespace": "OberdorferTeam",
+  "libraries": [],
+  "sections": {},
+  "groups": [
+    "Logos",
+    "Icons",
+    "Illustrations",
+    "Photography",
+    "Publication",
+    "Brokerage"
+  ],
   "assetGroups": {
-    "Brokerage": {
-      "files": {
-        "rewap-logo.webp": {
-          "blob": "63a8432249aefea1f63e3ca0b0f07e81",
-          "name": "rewap-logo.webp",
-          "size": 74262,
-          "type": "image/webp"
-        }
-      },
-      "name": "Brokerage",
+    "Logos": {
+      "name": "Logos",
+      "tile": "m",
       "order": [
-        "rewap-logo.webp"
+        "logo-primary-navy.svg",
+        "logo-primary-ivory.svg",
+        "logo-primary-gold.svg",
+        "logo-primary-mono.svg",
+        "logo-stacked-navy.svg",
+        "logo-stacked-ivory.svg",
+        "logo-stacked-mono.svg",
+        "logo-compact-navy.svg",
+        "logo-compact-ivory.svg",
+        "logo-compact-mono.svg",
+        "monogram-navy.svg",
+        "monogram-ivory.svg",
+        "monogram-mono.svg",
+        "lockup-brokerage-navy.svg",
+        "lockup-brokerage-ivory.svg",
+        "favicon.svg",
+        "favicon-32.png",
+        "apple-touch-icon.png",
+        "social-avatar.svg",
+        "social-avatar.png"
       ],
-      "tile": "m"
+      "files": {
+        "logo-primary-navy.svg": {
+          "name": "logo-primary-navy.svg",
+          "blob": "900b27fcadb612d57842c9ecf3aa8605",
+          "size": 13556,
+          "type": "image/svg+xml"
+        },
+        "logo-primary-ivory.svg": {
+          "name": "logo-primary-ivory.svg",
+          "blob": "a416dc01bd11396f91132b4ca8a05e8a",
+          "size": 13556,
+          "type": "image/svg+xml"
+        },
+        "logo-primary-gold.svg": {
+          "name": "logo-primary-gold.svg",
+          "blob": "b50e7005721491805e4a4405a3968cd6",
+          "size": 13556,
+          "type": "image/svg+xml"
+        },
+        "logo-primary-mono.svg": {
+          "name": "logo-primary-mono.svg",
+          "blob": "48655227f928b9c313407c65c70e2428",
+          "size": 13561,
+          "type": "image/svg+xml"
+        },
+        "logo-stacked-navy.svg": {
+          "name": "logo-stacked-navy.svg",
+          "blob": "74c64179975506242c49d08dc3641e37",
+          "size": 15297,
+          "type": "image/svg+xml"
+        },
+        "logo-stacked-ivory.svg": {
+          "name": "logo-stacked-ivory.svg",
+          "blob": "f7844cfecfb24c4fdb84613edeaacbf4",
+          "size": 15297,
+          "type": "image/svg+xml"
+        },
+        "logo-stacked-mono.svg": {
+          "name": "logo-stacked-mono.svg",
+          "blob": "53e21bf3f3dcb5082ad6577cf5ba92d4",
+          "size": 15317,
+          "type": "image/svg+xml"
+        },
+        "logo-compact-navy.svg": {
+          "name": "logo-compact-navy.svg",
+          "blob": "66c0c45e0e7ac17e7d5e8428aa495dde",
+          "size": 17011,
+          "type": "image/svg+xml"
+        },
+        "logo-compact-ivory.svg": {
+          "name": "logo-compact-ivory.svg",
+          "blob": "ce0fb29dda2e1a4932cbcfd13f0c8b69",
+          "size": 17011,
+          "type": "image/svg+xml"
+        },
+        "logo-compact-mono.svg": {
+          "name": "logo-compact-mono.svg",
+          "blob": "a55012f0e5d5784a4ca510899c7c6d18",
+          "size": 17031,
+          "type": "image/svg+xml"
+        },
+        "monogram-navy.svg": {
+          "name": "monogram-navy.svg",
+          "blob": "763b01b2f5e5576f91144b73969fb2f7",
+          "size": 966,
+          "type": "image/svg+xml"
+        },
+        "monogram-ivory.svg": {
+          "name": "monogram-ivory.svg",
+          "blob": "8d06ebfdaac5f0bb2c729047383308c4",
+          "size": 966,
+          "type": "image/svg+xml"
+        },
+        "monogram-mono.svg": {
+          "name": "monogram-mono.svg",
+          "blob": "f518376868fea5b9497dc5ef244ccfa3",
+          "size": 981,
+          "type": "image/svg+xml"
+        },
+        "lockup-brokerage-navy.svg": {
+          "name": "lockup-brokerage-navy.svg",
+          "blob": "b518a2aae423aa15dc40ebb6c358a160",
+          "size": 72161,
+          "type": "image/svg+xml"
+        },
+        "lockup-brokerage-ivory.svg": {
+          "name": "lockup-brokerage-ivory.svg",
+          "blob": "121c52dc97952f42fe885218f8ec613b",
+          "size": 72161,
+          "type": "image/svg+xml"
+        },
+        "favicon.svg": {
+          "name": "favicon.svg",
+          "blob": "f19fe22e128ee81eea82cc789bbe8fd9",
+          "size": 902,
+          "type": "image/svg+xml"
+        },
+        "favicon-32.png": {
+          "name": "favicon-32.png",
+          "blob": "c1066388235c0ae923a2a6b5c4f3dea9",
+          "size": 688,
+          "type": "image/png"
+        },
+        "apple-touch-icon.png": {
+          "name": "apple-touch-icon.png",
+          "blob": "9314018d35809dc7b029f1b0fdf60571",
+          "size": 1180,
+          "type": "image/png"
+        },
+        "social-avatar.svg": {
+          "name": "social-avatar.svg",
+          "blob": "3a00395ac4e781f5cda250c4e10c2f63",
+          "size": 1124,
+          "type": "image/svg+xml"
+        },
+        "social-avatar.png": {
+          "name": "social-avatar.png",
+          "blob": "68ea78f37099ad3381dda882f586b514",
+          "size": 4405,
+          "type": "image/png"
+        }
+      }
     },
     "Icons": {
-      "files": {
-        "alert.svg": {
-          "blob": "67c5281be4078129be174dc9cc9e7209",
-          "name": "alert.svg",
-          "size": 213,
-          "type": "image/svg+xml"
-        },
-        "area.svg": {
-          "blob": "a573c07e3f39f454859fb76243b18ff1",
-          "name": "area.svg",
-          "size": 231,
-          "type": "image/svg+xml"
-        },
-        "arrow.svg": {
-          "blob": "53d99991bff8ebc04fc6362a2dbf72f9",
-          "name": "arrow.svg",
-          "size": 180,
-          "type": "image/svg+xml"
-        },
-        "bath.svg": {
-          "blob": "79ecc47ba547ff157b53fa9c9b0152d7",
-          "name": "bath.svg",
-          "size": 268,
-          "type": "image/svg+xml"
-        },
-        "bed.svg": {
-          "blob": "6d96561c34cfb26a1ec79b3ea4db8a87",
-          "name": "bed.svg",
-          "size": 216,
-          "type": "image/svg+xml"
-        },
-        "calendar.svg": {
-          "blob": "aaba0be3cec5c208411b4629c7b6c59f",
-          "name": "calendar.svg",
-          "size": 191,
-          "type": "image/svg+xml"
-        },
-        "check.svg": {
-          "blob": "1990caf8e4d9f1edac69d54d28149f23",
-          "name": "check.svg",
-          "size": 184,
-          "type": "image/svg+xml"
-        },
-        "chevron.svg": {
-          "blob": "c33e191a9ae348ab5cb9af949327e663",
-          "name": "chevron.svg",
-          "size": 172,
-          "type": "image/svg+xml"
-        },
-        "close.svg": {
-          "blob": "de4e25ddd296c22e2a807bb8c009d360",
-          "name": "close.svg",
-          "size": 177,
-          "type": "image/svg+xml"
-        },
-        "copy.svg": {
-          "blob": "fd6a6a71ff8c4ba8870d3aafcb8b9220",
-          "name": "copy.svg",
-          "size": 202,
-          "type": "image/svg+xml"
-        },
-        "door.svg": {
-          "blob": "71ca248943f697f21a61cae09c0eba5f",
-          "name": "door.svg",
-          "size": 205,
-          "type": "image/svg+xml"
-        },
-        "download.svg": {
-          "blob": "b6ebd7439c5a9870fa8a37aeec263594",
-          "name": "download.svg",
-          "size": 190,
-          "type": "image/svg+xml"
-        },
-        "eho.svg": {
-          "blob": "33e71a1f53ed39f1b122977d435d4129",
-          "name": "eho.svg",
-          "size": 225,
-          "type": "image/svg+xml"
-        },
-        "external.svg": {
-          "blob": "c5619832daec2f06134c5e88ffa794b6",
-          "name": "external.svg",
-          "size": 195,
-          "type": "image/svg+xml"
-        },
-        "grid.svg": {
-          "blob": "2b4569ed0483ce49bb707a9fce7f2b87",
-          "name": "grid.svg",
-          "size": 215,
-          "type": "image/svg+xml"
-        },
-        "heart.svg": {
-          "blob": "037a9e0278fd3b2cfda3900330e4ec81",
-          "name": "heart.svg",
-          "size": 247,
-          "type": "image/svg+xml"
-        },
-        "info.svg": {
-          "blob": "27b0c286ce115373fcde4fde4b03a851",
-          "name": "info.svg",
-          "size": 212,
-          "type": "image/svg+xml"
-        },
-        "mail.svg": {
-          "blob": "7df663854e3a1553904616f544c67e27",
-          "name": "mail.svg",
-          "size": 207,
-          "type": "image/svg+xml"
-        },
-        "map.svg": {
-          "blob": "76784713982aded8da522e492443790b",
-          "name": "map.svg",
-          "size": 228,
-          "type": "image/svg+xml"
-        },
-        "menu.svg": {
-          "blob": "4ad11bc75266c441e8d1997b83b99e41",
-          "name": "menu.svg",
-          "size": 180,
-          "type": "image/svg+xml"
-        },
-        "phone.svg": {
-          "blob": "41225728bef5b47c4bd132054fd94771",
-          "name": "phone.svg",
-          "size": 252,
-          "type": "image/svg+xml"
-        },
-        "pin.svg": {
-          "blob": "f135334329094eb66c6db4aee635d74a",
-          "name": "pin.svg",
-          "size": 262,
-          "type": "image/svg+xml"
-        },
-        "search.svg": {
-          "blob": "b87f1bf3d6cc3521d654f8744eff5141",
-          "name": "search.svg",
-          "size": 218,
-          "type": "image/svg+xml"
-        },
-        "user.svg": {
-          "blob": "1779267c4086e86fb42c490ff0b57ef0",
-          "name": "user.svg",
-          "size": 234,
-          "type": "image/svg+xml"
-        }
-      },
       "name": "Icons",
+      "tile": "xs",
       "order": [
         "alert.svg",
         "area.svg",
@@ -190,232 +195,192 @@
         "search.svg",
         "user.svg"
       ],
-      "tile": "xs"
-    },
-    "Illustrations": {
       "files": {
-        "cape.svg": {
-          "blob": "7ac0256b4cc12535ff7ea2428b8ba92f",
-          "name": "cape.svg",
-          "size": 2911,
+        "alert.svg": {
+          "name": "alert.svg",
+          "blob": "67c5281be4078129be174dc9cc9e7209",
+          "size": 213,
           "type": "image/svg+xml"
         },
-        "colonial.svg": {
-          "blob": "67dfdc3e43d69221c840df96a6f7e619",
-          "name": "colonial.svg",
-          "size": 3968,
+        "area.svg": {
+          "name": "area.svg",
+          "blob": "a573c07e3f39f454859fb76243b18ff1",
+          "size": 231,
           "type": "image/svg+xml"
         },
-        "townscape.svg": {
-          "blob": "144ec48431ba63867ebcc27a8217d796",
-          "name": "townscape.svg",
-          "size": 2373,
+        "arrow.svg": {
+          "name": "arrow.svg",
+          "blob": "53d99991bff8ebc04fc6362a2dbf72f9",
+          "size": 180,
           "type": "image/svg+xml"
         },
-        "triple-decker.svg": {
-          "blob": "dbbfe6ae6195e4ae9d53870a0ae87cc2",
-          "name": "triple-decker.svg",
-          "size": 3972,
+        "bath.svg": {
+          "name": "bath.svg",
+          "blob": "79ecc47ba547ff157b53fa9c9b0152d7",
+          "size": 268,
+          "type": "image/svg+xml"
+        },
+        "bed.svg": {
+          "name": "bed.svg",
+          "blob": "6d96561c34cfb26a1ec79b3ea4db8a87",
+          "size": 216,
+          "type": "image/svg+xml"
+        },
+        "calendar.svg": {
+          "name": "calendar.svg",
+          "blob": "aaba0be3cec5c208411b4629c7b6c59f",
+          "size": 191,
+          "type": "image/svg+xml"
+        },
+        "check.svg": {
+          "name": "check.svg",
+          "blob": "1990caf8e4d9f1edac69d54d28149f23",
+          "size": 184,
+          "type": "image/svg+xml"
+        },
+        "chevron.svg": {
+          "name": "chevron.svg",
+          "blob": "c33e191a9ae348ab5cb9af949327e663",
+          "size": 172,
+          "type": "image/svg+xml"
+        },
+        "close.svg": {
+          "name": "close.svg",
+          "blob": "de4e25ddd296c22e2a807bb8c009d360",
+          "size": 177,
+          "type": "image/svg+xml"
+        },
+        "copy.svg": {
+          "name": "copy.svg",
+          "blob": "fd6a6a71ff8c4ba8870d3aafcb8b9220",
+          "size": 202,
+          "type": "image/svg+xml"
+        },
+        "door.svg": {
+          "name": "door.svg",
+          "blob": "71ca248943f697f21a61cae09c0eba5f",
+          "size": 205,
+          "type": "image/svg+xml"
+        },
+        "download.svg": {
+          "name": "download.svg",
+          "blob": "b6ebd7439c5a9870fa8a37aeec263594",
+          "size": 190,
+          "type": "image/svg+xml"
+        },
+        "eho.svg": {
+          "name": "eho.svg",
+          "blob": "33e71a1f53ed39f1b122977d435d4129",
+          "size": 225,
+          "type": "image/svg+xml"
+        },
+        "external.svg": {
+          "name": "external.svg",
+          "blob": "c5619832daec2f06134c5e88ffa794b6",
+          "size": 195,
+          "type": "image/svg+xml"
+        },
+        "grid.svg": {
+          "name": "grid.svg",
+          "blob": "2b4569ed0483ce49bb707a9fce7f2b87",
+          "size": 215,
+          "type": "image/svg+xml"
+        },
+        "heart.svg": {
+          "name": "heart.svg",
+          "blob": "037a9e0278fd3b2cfda3900330e4ec81",
+          "size": 247,
+          "type": "image/svg+xml"
+        },
+        "info.svg": {
+          "name": "info.svg",
+          "blob": "27b0c286ce115373fcde4fde4b03a851",
+          "size": 212,
+          "type": "image/svg+xml"
+        },
+        "mail.svg": {
+          "name": "mail.svg",
+          "blob": "7df663854e3a1553904616f544c67e27",
+          "size": 207,
+          "type": "image/svg+xml"
+        },
+        "map.svg": {
+          "name": "map.svg",
+          "blob": "76784713982aded8da522e492443790b",
+          "size": 228,
+          "type": "image/svg+xml"
+        },
+        "menu.svg": {
+          "name": "menu.svg",
+          "blob": "4ad11bc75266c441e8d1997b83b99e41",
+          "size": 180,
+          "type": "image/svg+xml"
+        },
+        "phone.svg": {
+          "name": "phone.svg",
+          "blob": "41225728bef5b47c4bd132054fd94771",
+          "size": 252,
+          "type": "image/svg+xml"
+        },
+        "pin.svg": {
+          "name": "pin.svg",
+          "blob": "f135334329094eb66c6db4aee635d74a",
+          "size": 262,
+          "type": "image/svg+xml"
+        },
+        "search.svg": {
+          "name": "search.svg",
+          "blob": "b87f1bf3d6cc3521d654f8744eff5141",
+          "size": 218,
+          "type": "image/svg+xml"
+        },
+        "user.svg": {
+          "name": "user.svg",
+          "blob": "1779267c4086e86fb42c490ff0b57ef0",
+          "size": 234,
           "type": "image/svg+xml"
         }
-      },
+      }
+    },
+    "Illustrations": {
       "name": "Illustrations",
+      "tile": "m",
       "order": [
         "colonial.svg",
         "triple-decker.svg",
         "cape.svg",
         "townscape.svg"
       ],
-      "tile": "m"
-    },
-    "Logos": {
       "files": {
-        "apple-touch-icon.png": {
-          "blob": "9314018d35809dc7b029f1b0fdf60571",
-          "name": "apple-touch-icon.png",
-          "size": 1180,
-          "type": "image/png"
-        },
-        "favicon-32.png": {
-          "blob": "c1066388235c0ae923a2a6b5c4f3dea9",
-          "name": "favicon-32.png",
-          "size": 688,
-          "type": "image/png"
-        },
-        "favicon.svg": {
-          "blob": "f19fe22e128ee81eea82cc789bbe8fd9",
-          "name": "favicon.svg",
-          "size": 902,
+        "colonial.svg": {
+          "name": "colonial.svg",
+          "blob": "67dfdc3e43d69221c840df96a6f7e619",
+          "size": 3968,
           "type": "image/svg+xml"
         },
-        "lockup-brokerage-ivory.svg": {
-          "blob": "121c52dc97952f42fe885218f8ec613b",
-          "name": "lockup-brokerage-ivory.svg",
-          "size": 72161,
+        "triple-decker.svg": {
+          "name": "triple-decker.svg",
+          "blob": "dbbfe6ae6195e4ae9d53870a0ae87cc2",
+          "size": 3972,
           "type": "image/svg+xml"
         },
-        "lockup-brokerage-navy.svg": {
-          "blob": "b518a2aae423aa15dc40ebb6c358a160",
-          "name": "lockup-brokerage-navy.svg",
-          "size": 72161,
+        "cape.svg": {
+          "name": "cape.svg",
+          "blob": "7ac0256b4cc12535ff7ea2428b8ba92f",
+          "size": 2911,
           "type": "image/svg+xml"
         },
-        "logo-compact-ivory.svg": {
-          "blob": "ce0fb29dda2e1a4932cbcfd13f0c8b69",
-          "name": "logo-compact-ivory.svg",
-          "size": 17011,
-          "type": "image/svg+xml"
-        },
-        "logo-compact-mono.svg": {
-          "blob": "a55012f0e5d5784a4ca510899c7c6d18",
-          "name": "logo-compact-mono.svg",
-          "size": 17031,
-          "type": "image/svg+xml"
-        },
-        "logo-compact-navy.svg": {
-          "blob": "66c0c45e0e7ac17e7d5e8428aa495dde",
-          "name": "logo-compact-navy.svg",
-          "size": 17011,
-          "type": "image/svg+xml"
-        },
-        "logo-primary-gold.svg": {
-          "blob": "b50e7005721491805e4a4405a3968cd6",
-          "name": "logo-primary-gold.svg",
-          "size": 13556,
-          "type": "image/svg+xml"
-        },
-        "logo-primary-ivory.svg": {
-          "blob": "a416dc01bd11396f91132b4ca8a05e8a",
-          "name": "logo-primary-ivory.svg",
-          "size": 13556,
-          "type": "image/svg+xml"
-        },
-        "logo-primary-mono.svg": {
-          "blob": "48655227f928b9c313407c65c70e2428",
-          "name": "logo-primary-mono.svg",
-          "size": 13561,
-          "type": "image/svg+xml"
-        },
-        "logo-primary-navy.svg": {
-          "blob": "900b27fcadb612d57842c9ecf3aa8605",
-          "name": "logo-primary-navy.svg",
-          "size": 13556,
-          "type": "image/svg+xml"
-        },
-        "logo-stacked-ivory.svg": {
-          "blob": "f7844cfecfb24c4fdb84613edeaacbf4",
-          "name": "logo-stacked-ivory.svg",
-          "size": 15297,
-          "type": "image/svg+xml"
-        },
-        "logo-stacked-mono.svg": {
-          "blob": "53e21bf3f3dcb5082ad6577cf5ba92d4",
-          "name": "logo-stacked-mono.svg",
-          "size": 15317,
-          "type": "image/svg+xml"
-        },
-        "logo-stacked-navy.svg": {
-          "blob": "74c64179975506242c49d08dc3641e37",
-          "name": "logo-stacked-navy.svg",
-          "size": 15297,
-          "type": "image/svg+xml"
-        },
-        "monogram-ivory.svg": {
-          "blob": "8d06ebfdaac5f0bb2c729047383308c4",
-          "name": "monogram-ivory.svg",
-          "size": 966,
-          "type": "image/svg+xml"
-        },
-        "monogram-mono.svg": {
-          "blob": "f518376868fea5b9497dc5ef244ccfa3",
-          "name": "monogram-mono.svg",
-          "size": 981,
-          "type": "image/svg+xml"
-        },
-        "monogram-navy.svg": {
-          "blob": "763b01b2f5e5576f91144b73969fb2f7",
-          "name": "monogram-navy.svg",
-          "size": 966,
-          "type": "image/svg+xml"
-        },
-        "social-avatar.png": {
-          "blob": "68ea78f37099ad3381dda882f586b514",
-          "name": "social-avatar.png",
-          "size": 4405,
-          "type": "image/png"
-        },
-        "social-avatar.svg": {
-          "blob": "3a00395ac4e781f5cda250c4e10c2f63",
-          "name": "social-avatar.svg",
-          "size": 1124,
+        "townscape.svg": {
+          "name": "townscape.svg",
+          "blob": "144ec48431ba63867ebcc27a8217d796",
+          "size": 2373,
           "type": "image/svg+xml"
         }
-      },
-      "name": "Logos",
-      "order": [
-        "logo-primary-navy.svg",
-        "logo-primary-ivory.svg",
-        "logo-primary-gold.svg",
-        "logo-primary-mono.svg",
-        "logo-stacked-navy.svg",
-        "logo-stacked-ivory.svg",
-        "logo-stacked-mono.svg",
-        "logo-compact-navy.svg",
-        "logo-compact-ivory.svg",
-        "logo-compact-mono.svg",
-        "monogram-navy.svg",
-        "monogram-ivory.svg",
-        "monogram-mono.svg",
-        "lockup-brokerage-navy.svg",
-        "lockup-brokerage-ivory.svg",
-        "favicon.svg",
-        "favicon-32.png",
-        "apple-touch-icon.png",
-        "social-avatar.svg",
-        "social-avatar.png"
-      ],
-      "tile": "m"
+      }
     },
     "Photography": {
-      "files": {
-        "breakheart-reservation.webp": {
-          "blob": "ffde6985e21d53da640ae46d8813e7e2",
-          "name": "breakheart-reservation.webp",
-          "size": 164876,
-          "type": "image/webp"
-        },
-        "cover-portrait.webp": {
-          "blob": "7b3edaba86933ff9b3064ad5bae180eb",
-          "name": "cover-portrait.webp",
-          "size": 90898,
-          "type": "image/webp"
-        },
-        "lake-quannapowitt.webp": {
-          "blob": "90072d8245d159003d593c9a75b9da68",
-          "name": "lake-quannapowitt.webp",
-          "size": 205504,
-          "type": "image/webp"
-        },
-        "team-portrait.webp": {
-          "blob": "e3f4aa39f75938c511bb17bc607b4886",
-          "name": "team-portrait.webp",
-          "size": 94690,
-          "type": "image/webp"
-        },
-        "brandon-oberdorfer.webp": {
-          "blob": "a53598f943eb4f6a155462c458a46606",
-          "name": "brandon-oberdorfer.webp",
-          "size": 15272,
-          "type": "image/webp"
-        },
-        "kaitlyn-oberdorfer.webp": {
-          "blob": "8c768877ce0a2923f03b158fe515701d",
-          "name": "kaitlyn-oberdorfer.webp",
-          "size": 26358,
-          "type": "image/webp"
-        }
-      },
       "name": "Photography",
+      "tile": "l",
       "order": [
         "cover-portrait.webp",
         "team-portrait.webp",
@@ -424,66 +389,48 @@
         "lake-quannapowitt.webp",
         "breakheart-reservation.webp"
       ],
-      "tile": "l"
+      "files": {
+        "cover-portrait.webp": {
+          "name": "cover-portrait.webp",
+          "blob": "7b3edaba86933ff9b3064ad5bae180eb",
+          "size": 90898,
+          "type": "image/webp"
+        },
+        "team-portrait.webp": {
+          "name": "team-portrait.webp",
+          "blob": "e3f4aa39f75938c511bb17bc607b4886",
+          "size": 94690,
+          "type": "image/webp"
+        },
+        "brandon-oberdorfer.webp": {
+          "name": "brandon-oberdorfer.webp",
+          "blob": "a53598f943eb4f6a155462c458a46606",
+          "size": 15272,
+          "type": "image/webp"
+        },
+        "kaitlyn-oberdorfer.webp": {
+          "name": "kaitlyn-oberdorfer.webp",
+          "blob": "8c768877ce0a2923f03b158fe515701d",
+          "size": 26358,
+          "type": "image/webp"
+        },
+        "lake-quannapowitt.webp": {
+          "name": "lake-quannapowitt.webp",
+          "blob": "90072d8245d159003d593c9a75b9da68",
+          "size": 205504,
+          "type": "image/webp"
+        },
+        "breakheart-reservation.webp": {
+          "name": "breakheart-reservation.webp",
+          "blob": "ffde6985e21d53da640ae46d8813e7e2",
+          "size": 164876,
+          "type": "image/webp"
+        }
+      }
     },
     "Publication": {
-      "files": {
-        "page-1.webp": {
-          "blob": "275198efba41f11342da6bf6edbe3dac",
-          "name": "page-1.webp",
-          "size": 73096,
-          "type": "image/webp"
-        },
-        "page-2.webp": {
-          "blob": "a3fb80b3a2289f357ae0f79a087aaf31",
-          "name": "page-2.webp",
-          "size": 74528,
-          "type": "image/webp"
-        },
-        "page-3.webp": {
-          "blob": "9507df07de71d6cefa3c9355ef02bb89",
-          "name": "page-3.webp",
-          "size": 89754,
-          "type": "image/webp"
-        },
-        "page-4.webp": {
-          "blob": "b11f273a87ee3cbc8d322dfd055a55e7",
-          "name": "page-4.webp",
-          "size": 62628,
-          "type": "image/webp"
-        },
-        "page-5.webp": {
-          "blob": "87a75642604a98caf15b42fbf26da151",
-          "name": "page-5.webp",
-          "size": 85512,
-          "type": "image/webp"
-        },
-        "page-6.webp": {
-          "blob": "329f1f2f091ad2a964b89275a32fe8a1",
-          "name": "page-6.webp",
-          "size": 106666,
-          "type": "image/webp"
-        },
-        "page-7.webp": {
-          "blob": "6684e7e831f75dfef93e3fdf149e0f3b",
-          "name": "page-7.webp",
-          "size": 79048,
-          "type": "image/webp"
-        },
-        "page-8.webp": {
-          "blob": "6e8166da69ed8e6e2545ab17d3354403",
-          "name": "page-8.webp",
-          "size": 41110,
-          "type": "image/webp"
-        },
-        "wakefield-at-home-fall-2026.pdf": {
-          "blob": "1434fd5acfa21fa4851cc489d7ab1c4e",
-          "name": "wakefield-at-home-fall-2026.pdf",
-          "size": 3098063,
-          "type": "application/pdf"
-        }
-      },
       "name": "Publication",
+      "tile": "m",
       "order": [
         "wakefield-at-home-fall-2026.pdf",
         "page-1.webp",
@@ -495,35 +442,88 @@
         "page-7.webp",
         "page-8.webp"
       ],
-      "tile": "m"
+      "files": {
+        "wakefield-at-home-fall-2026.pdf": {
+          "name": "wakefield-at-home-fall-2026.pdf",
+          "blob": "1434fd5acfa21fa4851cc489d7ab1c4e",
+          "size": 3098063,
+          "type": "application/pdf"
+        },
+        "page-1.webp": {
+          "name": "page-1.webp",
+          "blob": "275198efba41f11342da6bf6edbe3dac",
+          "size": 73096,
+          "type": "image/webp"
+        },
+        "page-2.webp": {
+          "name": "page-2.webp",
+          "blob": "a3fb80b3a2289f357ae0f79a087aaf31",
+          "size": 74528,
+          "type": "image/webp"
+        },
+        "page-3.webp": {
+          "name": "page-3.webp",
+          "blob": "9507df07de71d6cefa3c9355ef02bb89",
+          "size": 89754,
+          "type": "image/webp"
+        },
+        "page-4.webp": {
+          "name": "page-4.webp",
+          "blob": "b11f273a87ee3cbc8d322dfd055a55e7",
+          "size": 62628,
+          "type": "image/webp"
+        },
+        "page-5.webp": {
+          "name": "page-5.webp",
+          "blob": "87a75642604a98caf15b42fbf26da151",
+          "size": 85512,
+          "type": "image/webp"
+        },
+        "page-6.webp": {
+          "name": "page-6.webp",
+          "blob": "329f1f2f091ad2a964b89275a32fe8a1",
+          "size": 106666,
+          "type": "image/webp"
+        },
+        "page-7.webp": {
+          "name": "page-7.webp",
+          "blob": "6684e7e831f75dfef93e3fdf149e0f3b",
+          "size": 79048,
+          "type": "image/webp"
+        },
+        "page-8.webp": {
+          "name": "page-8.webp",
+          "blob": "6e8166da69ed8e6e2545ab17d3354403",
+          "size": 41110,
+          "type": "image/webp"
+        }
+      }
+    },
+    "Brokerage": {
+      "name": "Brokerage",
+      "tile": "m",
+      "order": [
+        "rewap-logo.webp"
+      ],
+      "files": {
+        "rewap-logo.webp": {
+          "name": "rewap-logo.webp",
+          "blob": "63a8432249aefea1f63e3ca0b0f07e81",
+          "size": 74262,
+          "type": "image/webp"
+        }
+      }
     }
   },
   "blobs": {},
-  "createdOnFiles": {
-    "at": "2026-10-22T16:43:15Z",
-    "v": 1
-  },
   "docs": {
     "readme": "project/README.md",
     "sections": []
   },
-  "groups": [
-    "Logos",
-    "Icons",
-    "Illustrations",
-    "Photography",
-    "Publication",
-    "Brokerage"
-  ],
   "lastChange": {
     "by": "Claude",
-    "via": "Claude Code \u00b7 CptNope/The-Oberdorfer-Team-Concept-3",
-    "at": "2026-10-22T17:58:00Z",
-    "note": "Added the agent profile component and Brandon's and Kaitlyn's interim headshots."
-  },
-  "layout": "files",
-  "libraries": [],
-  "namespace": "OberdorferTeam",
-  "sections": {},
-  "title": "The-Oberdorfer-Team-Concept-3"
+    "via": "Claude Code · CptNope/The-Oberdorfer-Team-Concept-3",
+    "at": "2026-10-22T19:30:00Z",
+    "note": "Added the community guide component (town guides, market table, sources list) and the search-facing page heading."
+  }
 }

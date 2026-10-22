@@ -1,0 +1,64 @@
+{
+  "slug": "leominster",
+  "name": "Leominster",
+  "county": "Worcester County",
+  "region": "North Central Massachusetts",
+  "population_2020": 43782,
+  "population_source": "https://en.wikipedia.org/wiki/Leominster,_Massachusetts",
+  "official_site": "https://www.leominster-ma.gov/",
+  "headline": ["A city that once made combs,", "with a state forest at its back door."],
+  "answer": "Leominster is a city of 43,782 people (2020 Census) in northern Worcester County, just south of Fitchburg. Its housing includes worker cottages, three-deckers and duplexes from its comb and plastics years. Route 2 and I-190 pass through, and North Leominster station is on the MBTA Fitchburg Line to Boston's North Station.",
+  "overview": [
+    "Leominster grew out of Lancaster. Permanent settlement began around 1725, the town was established in 1740, and it became a city in 1915. Its factories gave it a distinct story: comb shops lined Exchange Street in Morse Hollow, and after celluloid was invented in 1868 Leominster became known as the Comb City. Plastics followed, and the plastic pink flamingo lawn ornament was invented here in 1956. John Chapman, the orchard planter known as Johnny Appleseed, was born here in 1774; a granite marker stands on Johnny Appleseed Lane.",
+    "Monument Square has been the civic and commercial center since the 1800s, and the railroad has run through North Leominster since 1841, where the commuter rail station now sits on Nashua Street. Open land is close. Leominster State Forest offers swimming at Crow Hill Pond, the Crow Hill Ledges and a stretch of the Midstate Trail. Sholan Farms, bought with the city's help, grows apples, berries and pumpkins on Pleasant Street. Phase One of the Twin Cities Rail Trail now links the business districts of Leominster and Fitchburg."
+  ],
+  "housing": {
+    "text": "The Massachusetts Historical Commission's survey of Leominster records worker cottages east of the center along Water, Spruce and Mechanic Streets and in Lincoln Terrace, along with double houses, gable-end duplexes and three-deckers, which it notes were especially common in the early 1900s. Larger Queen Anne and Colonial Revival houses line the West Side and the hillside streets northwest of Main Street.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"
+  },
+  "villages": [
+    {"name": "Monument Square and the Center", "line": "The historic civic and commercial center along Monoosnock Brook, around the old common.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"},
+    {"name": "North Leominster", "line": "A secondary industrial and residential center on the North Nashua River and the railroad, home to the commuter rail station.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"},
+    {"name": "West Side", "line": "A residential district west of Main Street and north of West Street.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"},
+    {"name": "Morse Hollow", "line": "The former comb-factory area along Exchange Street, with a residential cluster around Elm and Exchange Streets.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"},
+    {"name": "Lincoln Terrace", "line": "A neighborhood of early worker housing east of Central Street.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"},
+    {"name": "French Hill", "line": "One of the city's commonly named neighborhoods.", "source": "https://en.wikipedia.org/wiki/Leominster,_Massachusetts"}
+  ],
+  "commute": {
+    "rail": [{"line": "Fitchburg Line", "stations": ["North Leominster (44 Nashua Street)"]}],
+    "rail_source": "https://www.mbta.com/stops/place-FR-0451",
+    "highways": ["Route 2", "I-190", "Route 12", "Route 13", "Route 117"],
+    "text": "North Leominster station is on the MBTA Fitchburg Line, which runs to North Station in Boston. Route 2, I-190 and Routes 12, 13 and 117 all pass through the city."
+  },
+  "schools": {"district": "Leominster Public Schools", "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=01530000&orgtypecode=5"},
+  "places": [
+    {"name": "Leominster State Forest", "line": "A DCR forest with swimming and trout fishing at Crow Hill Pond, the Crow Hill Ledges, Paradise Pond and part of the Midstate Trail; the beach entrance is on Fitchburg Road in Westminster.", "source": "https://www.mass.gov/locations/leominster-state-forest"},
+    {"name": "Sholan Farms", "line": "A preserved orchard at 1125 Pleasant Street with pick-your-own fruit, crop fields and walking trails.", "source": "https://freedomsway.org/?p=15335"},
+    {"name": "Doyle Community Park", "line": "A former estate at 464 Abbott Avenue with landscaped grounds, including Pierce Park, and the Doyle Center.", "source": "https://freedomsway.org/?p=6440"},
+    {"name": "Twin Cities Rail Trail", "line": "Phase One runs from Carter Park in Leominster to First Street in Fitchburg, including a new bridge over Route 2.", "source": "https://www.mass.gov/news/healey-driscoll-administration-celebrates-route-2-multimodal-bridge"},
+    {"name": "Johnny Appleseed birthplace marker", "line": "A historical marker on Johnny Appleseed Lane noting John Chapman's birth nearby in 1774.", "source": "https://www.hmdb.org/m.asp?m=32789"}
+  ],
+  "history": [
+    {"year": "1740", "text": "Established as the town of Leominster, after settlement from Lancaster began around 1725.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"},
+    {"year": "1868", "text": "Celluloid was invented, reshaping comb-making and earning Leominster the nickname Comb City.", "source": "https://en.wikipedia.org/wiki/Leominster,_Massachusetts"},
+    {"year": "1915", "text": "Incorporated as a city.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"}
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 258, "sf_sales_2024": 257,
+    "sf_median_2025": 475500, "sf_median_2024": 462000,
+    "condo_sales_2025": null, "condo_median_2025": null, "condo_median_2024": null,
+    "reading_1": "LEOMINSTER | YTD Number of Sales 257 258 0.4% | YTD Median Sale Price $462,000 $475,500 2.9% (columns: Dec 2024, Dec 2025, Percent Change)",
+    "reading_2": "LEOMINSTER | YTD Number of Sales 257 258 0.4% | YTD Median Sale Price $462,000 $475,500 2.9% (columns: Dec 2024, Dec 2025, Percent Change)"
+  },
+  "nearby": ["fitchburg", "lunenburg", "lancaster", "sterling", "princeton", "westminster"],
+  "search_notes": "'Leominster MA real estate agent' returns individual agent profiles on directories (RealTrends, HomeLight, Experience.com) rather than any town page. 'Moving to Leominster MA' is led by mover sites (Allied, HireAHelper, MoveAdvisor, Wheaton), Redfin's housing-market page and Livability. Nothing ranking explains the neighborhoods, the Fitchburg Line stop or the comb-and-plastics history, so a sourced local guide has clear room.",
+  "faq": [
+    {"q": "What is the median home price in Leominster, MA?", "a": "The median single-family sale price in Leominster was $475,500 in calendar year 2025, up from $462,000 in 2024, across 258 sales (257 in 2024), according to The Warren Group's MA December 2025 Sales, Prices by Town report."},
+    {"q": "Does Leominster have commuter rail?", "a": "Yes. North Leominster station, at 44 Nashua Street, is on the MBTA Fitchburg Line, which runs to North Station in Boston."},
+    {"q": "Which school district serves Leominster?", "a": "Leominster Public Schools. Review its profile with DESE."}
+  ],
+  "notes": "Condo fields are null: in both WebFetch readings the converted PDF text of the condo table ended at 'BROOKLI', so Leominster's condo rows could not be read. Doyle Community Park acreage differs by source (157 acres on Freedom's Way, 167 on Wikipedia), so it is omitted. The Freedom's Way page credits The Trustees at the Doyle Center but does not state current ownership. French Hill is listed on Wikipedia only. The MHC survey is from the 1980s. Wikipedia credits the population figure to the 2020 Census."
+}

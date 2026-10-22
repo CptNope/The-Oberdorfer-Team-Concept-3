@@ -1,0 +1,140 @@
+{
+  "slug": "reading",
+  "name": "Reading",
+  "county": "Middlesex County",
+  "region": "Greater Boston (north suburbs)",
+  "population_2020": 25518,
+  "population_source": "https://en.wikipedia.org/wiki/Reading,_Massachusetts",
+  "official_site": "https://www.readingma.gov/",
+  "headline": [
+    "A town common, a commuter line,",
+    "and woods a short walk from the front door."
+  ],
+  "answer": "Reading is a Middlesex County town of 25,518 people (2020 Census) whose housing is mostly single-family, with a large share built before 1960. It grew around a traditional New England common and keeps conservation land such as the Town Forest. Reading station on the MBTA Haverhill Line runs to Boston's North Station, and I-93 and I-95/Route 128 cross the town.",
+  "overview": [
+    "Reading began as an inland plantation for settlers from Lynn and was incorporated in 1644. Over the next two centuries it gave up land to form its neighbors: the parish to the south became South Reading and was renamed Wakefield in 1868, and the land north of the Ipswich River became North Reading in 1853. What remains centers on the Common, where Main and Salem Streets meet, framed by the First Congregational Church, the public library and the town hall.",
+    "The railroad reached Reading in 1845, and Woburn Street shows what followed: Queen Anne and Colonial Revival houses on large, tree-lined lots, now a historic district. Around the built-up streets, Reading keeps a web of conservation land, from the Town Forest, its largest, to Bare Meadow and the Aberjona River Headwaters Trail through the Maillet Conservation Area."
+  ],
+  "housing": {
+    "text": "Reading's 2023 Housing Production Plan describes the housing stock as primarily single-family, at 76.7% of units, with 84.6% owner occupied. Over half of the homes were built before 1960, and about a third before 1940. The downtown area holds a number of multi-family, affordable and public housing developments.",
+    "source": "https://www.mass.gov/doc/hpp-reading-2023/download"
+  },
+  "villages": [
+    {
+      "name": "Reading Center and the Common",
+      "line": "The civic core where Main and Salem Streets meet, with churches, the library, the town hall and a row of 19th-century houses on Harnden and Salem Streets.",
+      "source": "https://en.wikipedia.org/wiki/Common_Historic_District_(Reading,_Massachusetts)"
+    },
+    {
+      "name": "Woburn Street Historic District",
+      "line": "Two blocks of Woburn Street between Summer Street and Temple Street, with sixteen houses on large lots, mostly Queen Anne and Colonial Revival.",
+      "source": "https://en.wikipedia.org/wiki/Woburn_Street_Historic_District"
+    },
+    {
+      "name": "Downtown",
+      "line": "The retail and service center of town, where most of Reading's multi-family and affordable housing developments are located.",
+      "source": "https://www.mass.gov/doc/hpp-reading-2023/download"
+    }
+  ],
+  "commute": {
+    "rail": [
+      {
+        "line": "Haverhill Line",
+        "stations": [
+          "Reading"
+        ]
+      }
+    ],
+    "rail_source": "https://www.mbta.com/schedules/CR-Haverhill/timetable",
+    "highways": [
+      "I-93",
+      "I-95/Route 128",
+      "Route 28"
+    ],
+    "text": "Reading station is on the MBTA Haverhill Line, which ends at Boston's North Station. I-93 and I-95/Route 128 pass through the town, and Route 28 follows the old Andover-Medford Turnpike, built in 1806 and 1807."
+  },
+  "schools": {
+    "district": "Reading Public Schools",
+    "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=02460000&orgtypecode=5"
+  },
+  "places": [
+    {
+      "name": "Reading Town Forest",
+      "line": "The town's largest conservation area, with a network of trails mapped by the town.",
+      "source": "https://www.readingma.gov/227/Trail-Map-Library"
+    },
+    {
+      "name": "Bare Meadow Conservation Area",
+      "line": "Conservation land with a trail map recently updated by the Trails Committee and volunteers, alongside the Mattera Conservation Area.",
+      "source": "https://www.readingma.gov/227/Trail-Map-Library"
+    },
+    {
+      "name": "Aberjona River Headwaters Trail",
+      "line": "A trail through the Maillet Conservation Area from Lowell Street to Willow Street, with bridges and boardwalks added through a state DCR grant.",
+      "source": "https://www.readingma.gov/227/Trail-Map-Library"
+    },
+    {
+      "name": "Parker Tavern",
+      "line": "A house built in 1694 at 103 Washington Street, run as a historic house museum by the Reading Antiquarian Society.",
+      "source": "https://en.wikipedia.org/wiki/Parker_Tavern"
+    },
+    {
+      "name": "Reading Common",
+      "line": "A town common held in common since at least 1737, the center of the Common Historic District.",
+      "source": "https://en.wikipedia.org/wiki/Common_Historic_District_(Reading,_Massachusetts)"
+    }
+  ],
+  "history": [
+    {
+      "year": "1644",
+      "text": "Incorporated as a town on June 10, 1644, after residents of Lynn sought land for an inland plantation.",
+      "source": "https://en.wikipedia.org/wiki/Reading,_Massachusetts"
+    },
+    {
+      "year": "1853",
+      "text": "Land granted north of the Ipswich River in 1651 became the separate town of North Reading.",
+      "source": "https://en.wikipedia.org/wiki/Reading,_Massachusetts"
+    },
+    {
+      "year": "1868",
+      "text": "The South Reading parish, which had separated in 1812, was renamed Wakefield.",
+      "source": "https://en.wikipedia.org/wiki/Reading,_Massachusetts"
+    }
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 187,
+    "sf_sales_2024": 203,
+    "sf_median_2025": 900000,
+    "sf_median_2024": 855000,
+    "condo_sales_2025": null,
+    "condo_median_2025": null,
+    "condo_median_2024": null,
+    "reading_1": "READING (single-family; Dec 2024, Dec 2025, Percent Change): YTD Number of Sales 203 187 -7.9%; YTD Median Sale Price $855,000 $900,000 5.3%",
+    "reading_2": "READING (single-family): YTD Number of Sales 203 187 -7.9%; YTD Median Sale Price $855,000 $900,000 5.3%"
+  },
+  "nearby": [
+    "wakefield",
+    "north-reading",
+    "wilmington",
+    "stoneham"
+  ],
+  "search_notes": "For 'Reading MA real estate agent', results are directories and agent profiles (Ramsey Solutions, BiggerPockets, RealTrends, William Raveis agent pages) plus one local brokerage blog (Verani) on choosing a Realtor. 'Moving to Reading MA' is dominated by mover sites (Lugg, uShip, MoveBuddha) and Livability, with Verani's 'reasons to move' post the only local guide. There is room for a sourced guide covering the Common, the Woburn Street district, the conservation trail network and the Haverhill Line.",
+  "faq": [
+    {
+      "q": "What is the median home price in Reading, MA?",
+      "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, the median single-family sale price in Reading for calendar year 2025 was $900,000, across 187 sales. In 2024 it was $855,000, across 203 sales."
+    },
+    {
+      "q": "Does Reading have commuter rail?",
+      "a": "Yes. Reading station is on the MBTA Haverhill Line, which runs to Boston's North Station."
+    },
+    {
+      "q": "Which school district serves Reading?",
+      "a": "Reading Public Schools. Review its profile with DESE."
+    }
+  ],
+  "notes": "Condo figures set to null: the PDF's extracted text ends partway through the condo table (at Brookline), so Reading's condo rows could not be read in either fetch. Reading's recognized neighborhoods are thinly documented in official sources; only the two historic districts and the downtown area are listed. The 2023 HPP gives 76.7% single-family in its text but a 2020 table shows 72.5% one-unit detached, so the housing text uses the plan's own headline figure. Lake Quannapowitt was left out of places because it lies in Wakefield."
+}

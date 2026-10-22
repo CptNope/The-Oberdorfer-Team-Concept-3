@@ -1,0 +1,154 @@
+{
+  "slug": "marlborough",
+  "name": "Marlborough",
+  "county": "Middlesex County",
+  "region": "MetroWest",
+  "population_2020": 41793,
+  "population_source": "https://en.wikipedia.org/wiki/Marlborough,_Massachusetts",
+  "official_site": "https://www.marlborough-ma.gov/",
+  "headline": [
+    "A shoe-making city at the crossroads",
+    "of I-495 and I-290."
+  ],
+  "answer": "Marlborough is a city of 41,793 people (2020 Census) in Middlesex County, where I-495 meets the eastern end of I-290. Its downtown grew from two 1800s shoe-making villages, and its housing includes three-deckers, double houses and converted factory condominiums. The city has no rail station; buses connect to Southborough and Framingham on the Framingham/Worcester Line.",
+  "overview": [
+    "Families from Sudbury petitioned for a new town in 1656, and Marlborough was incorporated in 1660. The early settlement was largely destroyed during King Philip's War, then rebuilt along the Post Road, where George Washington stopped at Williams Tavern in 1789. Shoemaking defined the 1800s. Samuel and Joseph Boyd opened the first shoe business in 1836, factory output rose into the millions of dollars by 1865, and Marlborough incorporated as a city in 1890. Its land once also included today's Northborough, Southborough, Westborough, Berlin and Hudson.",
+    "Downtown took shape from two villages, an East Village along Main and Maple Streets and a West Village along Pleasant and Main, which grew together once the railroad ran between them. In 2014 the city created a 50-acre Downtown Village district to encourage mixed-use building, and some old shoe factories and churches nearby are now condominiums. The Assabet River Rail Trail heads north toward Hudson past an overlook above Fort Meadow Reservoir, and the 615-acre Desert Natural Area protects pitch pine and scrub forest on the Sudbury line."
+  ],
+  "housing": {
+    "text": "The Massachusetts Historical Commission's survey of Marlborough records central-chimney Colonial houses, Greek Revival and Italianate side-hall houses and cottages, wood-frame row and double houses, and three-deckers and apartment houses in the West Village and along Mechanic Street, with Dutch Colonial and bungalow houses from the early 1900s. The city's economic development office lists former factories and churches converted to condominiums.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/mrb.pdf"
+  },
+  "villages": [
+    {
+      "name": "Downtown Village",
+      "line": "A 50-acre mixed-use district the city created downtown in 2014.",
+      "source": "https://marlboroughedc.com/housing"
+    },
+    {
+      "name": "East Village",
+      "line": "The 1800s village along Main and Maple Streets that grew into the east side of downtown.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/mrb.pdf"
+    },
+    {
+      "name": "West Village",
+      "line": "The 1800s village along Pleasant and Main Streets, with three-deckers and apartment houses.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/mrb.pdf"
+    },
+    {
+      "name": "French Hill",
+      "line": "One of the city's oldest areas, with large older buildings still standing.",
+      "source": "https://marlboroughedc.com/housing"
+    },
+    {
+      "name": "Lake Williams",
+      "line": "The lake area on the old Post Road, once the site of early taverns, now with a walking trail.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/mrb.pdf"
+    }
+  ],
+  "commute": {
+    "rail": [
+      {
+        "line": "Framingham/Worcester Line (in neighboring towns)",
+        "stations": [
+          "Southborough",
+          "Framingham"
+        ]
+      }
+    ],
+    "rail_source": "https://www.mbta.com/stops/place-WML-0274",
+    "highways": [
+      "I-495",
+      "I-290",
+      "US Route 20",
+      "Route 85"
+    ],
+    "text": "Marlborough has no commuter rail station of its own; MWRTA bus routes connect to the Southborough and Framingham stations on the MBTA Framingham/Worcester Line. I-495, US Route 20 and Route 85 pass through the city, and I-290 has its eastern end here."
+  },
+  "schools": {
+    "district": "Marlborough Public Schools",
+    "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=01700000&orgtypecode=5"
+  },
+  "places": [
+    {
+      "name": "Assabet River Rail Trail",
+      "line": "A paved trail from Lincoln Street north into Hudson, passing under Route 85 and over an overlook above Fort Meadow Reservoir; parking at 56 Jefferson Street.",
+      "source": "https://www.traillink.com/trail/assabet-river-rail-trail/"
+    },
+    {
+      "name": "Desert Natural Area",
+      "line": "A 615-acre reservation on the Sudbury line with rare pitch pine and scrub forest on sandy glacial soils, reached from Route 20 by Concord Road.",
+      "source": "https://www.marlborough-ma.gov/node/939"
+    },
+    {
+      "name": "Ghiloni Nature Trail and State Forest",
+      "line": "Pine woods along Broadmeadow Brook with an interpretive loop, reached from Ghiloni Park off Concord Road.",
+      "source": "https://www.marlborough-ma.gov/node/950"
+    },
+    {
+      "name": "Callahan State Park",
+      "line": "More than 800 acres of fields, ponds and marked trails shared with Framingham, listed among Marlborough's conservation lands.",
+      "source": "https://www.mass.gov/locations/callahan-state-park"
+    },
+    {
+      "name": "Lake Williams Trail",
+      "line": "One of the city's mapped conservation trails, at the lake on the old Post Road.",
+      "source": "https://www.marlborough-ma.gov/node/934"
+    }
+  ],
+  "history": [
+    {
+      "year": "1660",
+      "text": "Incorporated as the Town of Marlborough, after Sudbury families petitioned for it in 1656.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/mrb.pdf"
+    },
+    {
+      "year": "1836",
+      "text": "Samuel and Joseph Boyd opened the town's first shoe manufacturing business.",
+      "source": "https://en.wikipedia.org/wiki/Marlborough,_Massachusetts"
+    },
+    {
+      "year": "1890",
+      "text": "Incorporated as the City of Marlborough.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/mrb.pdf"
+    }
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 230,
+    "sf_sales_2024": 233,
+    "sf_median_2025": 606500,
+    "sf_median_2024": 592000,
+    "condo_sales_2025": null,
+    "condo_median_2025": null,
+    "condo_median_2024": null,
+    "reading_1": "MARLBOROUGH | YTD Number of Sales 233 230 -1.3% | YTD Median Sale Price $592,000 $606,500 2.4% (columns: Dec 2024, Dec 2025, Percent Change)",
+    "reading_2": "MARLBOROUGH | YTD Number of Sales 233 230 -1.3% | YTD Median Sale Price $592,000 $606,500 2.4% (columns: Dec 2024, Dec 2025, Percent Change)"
+  },
+  "nearby": [
+    "hudson",
+    "sudbury",
+    "framingham",
+    "southborough",
+    "northborough",
+    "berlin"
+  ],
+  "search_notes": "'Marlborough MA real estate agent' is dominated by HomeLight agent rankings, BiggerPockets and Ramsey Solutions directories, an Experience.com review page and a paid press release for one local brokerage. 'Moving to Marlborough MA' returns mover and storage sites (UNITS, uShip, Lugg, MoveBuddha) and Livability. No result gives a sourced picture of downtown's history, the rail trail or how to reach commuter rail without a station in the city, which is the gap a local guide can fill.",
+  "faq": [
+    {
+      "q": "What is the median home price in Marlborough, MA?",
+      "a": "The median single-family sale price in Marlborough was $606,500 in calendar year 2025, up from $592,000 in 2024, across 230 sales (233 in 2024), according to The Warren Group's MA December 2025 Sales, Prices by Town report."
+    },
+    {
+      "q": "Does Marlborough have commuter rail?",
+      "a": "Not within the city. MWRTA bus routes connect Marlborough to the Southborough and Framingham stations on the MBTA Framingham/Worcester Line."
+    },
+    {
+      "q": "Which school district serves Marlborough?",
+      "a": "Marlborough Public Schools. Review its profile with DESE."
+    }
+  ],
+  "notes": "Condo fields are null: in both WebFetch readings the converted PDF text of the condo table ended at 'BROOKLI', so Marlborough's condo rows could not be read. Wikipedia lists the Massachusetts Turnpike among Marlborough's highways, but it was left out because no source confirmed it passes through city limits. The MWRTA bus connection comes from Wikipedia, not from MWRTA. Callahan State Park's mass.gov page lists only a Framingham address; Marlborough's conservation page lists it among the city's lands. The MHC survey dates from 1980. Wikipedia credits the population figure to the 2020 Decennial Census. The I-290 'begins here' wording rests on Wikipedia's note that its eastern terminus is in Marlborough."
+}
