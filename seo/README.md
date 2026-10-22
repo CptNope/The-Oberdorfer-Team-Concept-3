@@ -2,7 +2,7 @@
 
 The working folder for SEO on **oberdorferteam.com**. Notes, exports, keyword lists, competitor research, briefs and reports live here, so each SEO workflow starts from this context, not from a blank page. This folder is not published to the site.
 
-Set up 2026-10-22 with the HarborRank `seo-project-setup` workflow, in **web-evidence-only** mode: HarborRank was not yet connected, so nothing here contains search volumes, difficulty, rankings or backlink counts.
+Set up 2026-10-22 with the HarborRank `seo-project-setup` workflow, in **web-evidence-only** mode: HarborRank was not yet connected, so nothing here contains search volumes, difficulty, rankings or backlink counts. Re-run the same day at 5:25 p.m. after Tier 3 was added: HarborRank still not connected; scope and assets updated.
 
 ## Status
 
@@ -14,7 +14,7 @@ Set up 2026-10-22 with the HarborRank `seo-project-setup` workflow, in **web-evi
 | 4. Positioning | Known | See Positioning below | None |
 | 5. HarborRank project | **Not connected** | One project on the trial plan: oberdorferteam.com | Connect HarborRank (Customize → Connectors), then create the project |
 | 6. Search Console | **Not connected** | Needs the live domain verified | At launch, verify oberdorferteam.com as a Domain property and connect it in HarborRank. Fallback: CSV exports into `gsc/` |
-| 7. Existing assets | Done | See Assets below | None |
+| 7. Existing assets | Done | 27 town guides in nine regions after Tier 3 (see Assets) | None |
 | 8. First workflow | Recommended | `keyword-research`, then `competitive-landscape` | Needs HarborRank |
 
 ## Sites in scope
@@ -50,7 +50,11 @@ These are web-search observations only, not rankings (October 22, 2026):
 
 ## Assets
 
-- 16 sourced town guides: data in `tools/data/towns/`, pages under `site/communities/`.
+- 27 sourced town guides in nine regions: data in `tools/data/towns/`, pages under `site/communities/`.
+  - Tier 1 (8): Worcester, Shrewsbury, Grafton, Westborough, Holden, Wakefield, Reading, Melrose.
+  - Tier 2 (8): Leominster, Framingham, Marlborough, Stoneham, Lowell, Newton, Quincy, Springfield.
+  - Tier 3 (11, added 2026-10-22): Boston, Cambridge, Somerville, Plymouth, Braintree, Barnstable, Falmouth, New Bedford, Fall River, Pittsfield, Great Barrington.
+  - Barnstable is priced by village (The Warren Group has no town-wide row), so it is not in the market page's town table.
 - A statewide market page with a 2025 town-by-town table (The Warren Group).
 - Massachusetts buying and selling explainers on the Buy and Sell pages.
 - Agent profile pages for Brandon and Kaitlyn, plus a template for future agents.
@@ -62,7 +66,7 @@ These are web-search observations only, not rankings (October 22, 2026):
 ## Preferences for SEO work on this project
 
 - Every figure has a source and date. Mark estimates as estimates; never invent volumes or rankings.
-- No mass-generated location pages: each town guide is researched and sourced (stay under 30).
+- No mass-generated location pages: each town guide is researched and sourced. The original cap was 30; Boston neighborhood guides (planned next) would pass it, so add them only as the team works there, and check each one earns impressions before adding more.
 - Keep visible FAQs, but no new FAQPage markup (Google retired FAQ rich results on May 7, 2026).
 - Save outputs here: keyword lists to `keywords/`, competitor notes to `competitors/`, briefs to `content/`, outreach to `outreach/`, reports to `reports/`, Search Console exports to `gsc/`.
 
@@ -70,6 +74,6 @@ These are web-search observations only, not rankings (October 22, 2026):
 
 **`keyword-research`**, to replace estimates with real search data.
 
-- **Seeds:** the 27 town names × "homes for sale", "real estate agent", "realtor", "living in", "moving to".
+- **Seeds:** `keywords/keyword-planner-paste.txt` (145 phrases): the 27 town names × "homes for sale", "real estate", "living in", "moving to", plus agent and statewide terms.
 - **Plus:** "real estate agent Worcester MA", "first time home buyer Massachusetts", "offer to purchase MA", "Title 5 inspection", "smoke detector certificate MA".
 - **Then:** `competitive-landscape` for the Worcester market, to name the competitors this README leaves open.
