@@ -5,7 +5,7 @@ This folder holds the source of the two Claude artifacts made for this project, 
 | Folder | Artifact | What it is |
 |---|---|---|
 | `design-system/` | [The-Oberdorfer-Team-Concept-3](https://claude.ai/artifact/YE21oQ5cfN4i2RqN51Wwj4) (Claude Design System) | Tokens, the brand book, 47 component previews and 62 assets, built from `assets/css/` and `design-system/index.html` |
-| `fse-templates/` | [Oberdorfer Team FSE Templates](https://claude.ai/artifact/Lzv2vEyR3YjDWmhdJZxZs6) (Claude Design canvas) | Annotated boards for the WordPress block theme: a template map, the header and footer parts, 14 page templates at 1440px and 7 phone boards at 390px |
+| `fse-templates/` | [Oberdorfer Team FSE Templates](https://claude.ai/artifact/Lzv2vEyR3YjDWmhdJZxZs6) (Claude Design canvas) | Annotated boards for the WordPress block theme: a template map, the header and footer parts, 14 page templates at 1440px, each paired with a 390px phone board, plus the phone overlay menu |
 
 Both artifacts are private until shared from their Share menu.
 
