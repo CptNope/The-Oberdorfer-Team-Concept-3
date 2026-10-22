@@ -1,0 +1,68 @@
+{
+  "slug": "plymouth",
+  "name": "Plymouth",
+  "county": "Plymouth County",
+  "region": "South Shore (southeastern Massachusetts)",
+  "population_2020": 61217,
+  "population_source": "https://en.wikipedia.org/wiki/Plymouth,_Massachusetts",
+  "official_site": "https://www.plymouth-ma.gov/",
+  "headline": ["A harbor town of 1620,", "with pine forest and ponds filling its western miles."],
+  "answer": "Plymouth is a Plymouth County town of 61,217 people (2020 Census) on Cape Cod Bay, about 40 miles south of Boston, and the largest municipality in Massachusetts by area. Founded by the Mayflower Pilgrims in 1620, it is one of the county's two seats. About 71 percent of its homes are detached single-family houses. Route 3 serves the town with six exits, and Plymouth's own commuter rail station has been suspended since 2021, so the nearest active stop is Kingston.",
+  "overview": [
+    "The Mayflower Pilgrims settled here in December 1620, and Plymouth served as the capital of Plymouth Colony until 1691. The old town center keeps that story close to the water: Plymouth Rock under its 1921 portico in Pilgrim Memorial State Park, the Mayflower II at the State Pier, Cole's Hill, and Burial Hill above Leyden Street, where the Pilgrims built a fort in 1621 and 1622. Pilgrim Hall, opened in 1824 on Court Street, is the oldest public museum in the United States in continuous operation.",
+    "Beyond downtown the town spreads across about 96 square miles of land. North Plymouth grew around the Plymouth Cordage Company, once the largest maker of rope and twine in the world, and much of its multifamily housing evolved from mill housing. West Plymouth filled with subdivisions in the 1970s, and South Plymouth drew new growth from the 1980s. Inland, Myles Standish State Forest has ponds and pine and oak woods, while Manomet and Ellisville Harbor sit along the Cape Cod Bay shore."
+  ],
+  "housing": {
+    "text": "Plymouth's 2024 Housing Production Plan reports that detached single-family homes make up 71.1 percent of housing units, with attached single-family homes another 7.4 percent. As of 2021, 80.9 percent of occupied homes were owner-occupied, and the town's housing units grew from 25,058 in 2010 to 28,353 in 2021. The plan expects most new residential development in the town's rural areas, with recent projects in the south and at Cordage Park in the north.",
+    "source": "https://www.mass.gov/doc/plymouth-hpp/download"
+  },
+  "villages": [
+    {"name": "Plymouth Center", "line": "The downtown, home to Plymouth Rock, the Mayflower II and Pilgrim Hall.", "source": "https://en.wikipedia.org/wiki/Plymouth,_Massachusetts"},
+    {"name": "North Plymouth", "line": "A waterfront village around the former Plymouth Cordage Company, whose multifamily housing largely evolved from mill housing.", "source": "https://www.mass.gov/doc/plymouth-hpp/download"},
+    {"name": "Manomet", "line": "A seaside village named for a Wampanoag village once among the Manomet Ponds, with White Horse Beach and Stage Point.", "source": "https://en.wikipedia.org/wiki/Manomet,_Massachusetts"},
+    {"name": "West Plymouth", "line": "The hilly, forested western section, where single-family subdivisions grew in the 1970s.", "source": "https://www.mass.gov/doc/plymouth-hpp/download"},
+    {"name": "Cedarville", "line": "A neighborhood in the southeast of town, linked to Manomet by a local bus route.", "source": "https://en.wikipedia.org/wiki/Plymouth,_Massachusetts"}
+  ],
+  "commute": {
+    "rail": [
+      {"line": "Kingston Line (in neighboring Kingston)", "stations": ["Kingston"]}
+    ],
+    "rail_source": "https://www.mbta.com/schedules/CR-Kingston/timetable",
+    "highways": ["Route 3 (Pilgrims Highway)", "Route 44"],
+    "text": "Plymouth station at Cordage Park was suspended indefinitely on April 5, 2021, and is not on the current Kingston Line timetable, so the nearest active stop is Kingston station at 134 Marion Drive, with trains to South Station. Route 3 runs through town with six exits, and Route 44 ends in Plymouth. GATRA runs local routes including the Liberty, Freedom, Mayflower and Manomet Links, Plymouth & Brockton buses run to Boston and Hyannis, and a seasonal ferry sails from State Wharf to Provincetown."
+  },
+  "schools": {"district": "Plymouth Public Schools", "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=02390000&orgtypecode=5"},
+  "places": [
+    {"name": "Pilgrim Memorial State Park", "line": "The waterfront park at 79 Water Street with Plymouth Rock under its portico, the Mayflower II, Cole's Hill Burial Ground and views of Plymouth Harbor.", "source": "https://www.mass.gov/locations/pilgrim-memorial-state-park"},
+    {"name": "Plimoth Patuxet Museums", "line": "A living history museum at 137 Warren Avenue with the Historic Patuxet Homesite, a re-created 17th-century English Village, the Plimoth Grist Mill and Mayflower II.", "source": "https://www.plimoth.org/plan-your-visit/explore-our-sites"},
+    {"name": "Pilgrim Hall Museum", "line": "A granite museum at 75 Court Street, designed by Alexander Parris and opened in 1824, holding a Plymouth Colony collection.", "source": "https://en.wikipedia.org/wiki/Pilgrim_Hall_Museum"},
+    {"name": "Burial Hill", "line": "The hillside burying ground off School Street, with marked graves from 1680, including that of Governor William Bradford.", "source": "https://en.wikipedia.org/wiki/Burial_Hill"},
+    {"name": "Myles Standish State Forest", "line": "A DCR forest of pine and oak with 13 miles of hiking trails, 35 miles of equestrian trails, camping and swimming at College Pond.", "source": "https://www.mass.gov/locations/myles-standish-state-forest"},
+    {"name": "Ellisville Harbor State Park", "line": "A Cape Cod Bay shore park at 1861 State Road with a beach, meadows, red pine forest and harbor seals offshore in winter.", "source": "https://www.mass.gov/locations/ellisville-harbor-state-park"}
+  ],
+  "history": [
+    {"year": "1620", "text": "The Mayflower Pilgrims founded the settlement in December, and Plymouth served as Plymouth Colony's capital until 1691.", "source": "https://en.wikipedia.org/wiki/Plymouth,_Massachusetts"},
+    {"year": "1621", "text": "After the fall harvest, the Pilgrims held a thanksgiving celebration with Wampanoag guests, remembered as the First Thanksgiving.", "source": "https://en.wikipedia.org/wiki/Plymouth,_Massachusetts"},
+    {"year": "1824", "text": "The Plymouth Cordage Company was founded in North Plymouth; it operated for more than 140 years before closing in 1964.", "source": "https://en.wikipedia.org/wiki/Plymouth_Cordage_Company"},
+    {"year": "1921", "text": "The present portico over Plymouth Rock was built.", "source": "https://en.wikipedia.org/wiki/Plymouth,_Massachusetts"}
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 606, "sf_sales_2024": 696,
+    "sf_median_2025": 654450, "sf_median_2024": 632000,
+    "condo_sales_2025": null, "condo_median_2025": null, "condo_median_2024": null,
+    "reading_1": "PLYMOUTH (single-family; Dec 2024, Dec 2025, Percent Change): YTD Number of Sales 696 606 -12.9%; YTD Median Sale Price $632,000 $654,450 3.6%",
+    "reading_2": "Plymouth (single-family): YTD Number of Sales 696 606 -12.9%; YTD Median Sale Price $632,000 $654,450 3.6%"
+  },
+  "nearby": ["kingston", "carver", "plympton", "wareham", "bourne"],
+  "search_notes": "'Plymouth MA real estate agent' returns individual brokerage agent pages (Coldwell Banker, William Raveis), a brokerage hiring post, BiggerPockets, HomeLight, Experience.com and RealTrends profiles. 'Moving to Plymouth MA' mixes movers (All My Sons, MoveBuddha, MoveAdvisor) with a Redfin pros-and-cons post, Redfin market data, Livability and a single agent blog. None explains the suspended Plymouth station, the village structure or the state forest, which a sourced guide could cover.",
+  "faq": [
+    {"q": "What is the median home price in Plymouth, MA?", "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, the median single-family sale price in Plymouth for calendar year 2025 was $654,450, across 606 sales. In 2024 it was $632,000, across 696 sales."},
+    {"q": "Does Plymouth have commuter rail?", "a": "Not at present. Plymouth station at Cordage Park was suspended indefinitely in April 2021. The nearest active stop is Kingston station in neighboring Kingston, at the end of the Kingston Line to South Station."},
+    {"q": "Is Plymouth the largest town in Massachusetts?", "a": "By area, yes. Plymouth is the largest municipality in Massachusetts by area, with about 134 square miles in total, of which about 96 are land."},
+    {"q": "Which school district serves Plymouth?", "a": "Plymouth Public Schools. Review its profile with DESE."}
+  ],
+  "notes": "Condo fields null: the PDF's extracted text ends partway through the condo table (at 'BROOKLI'), before Plymouth. Plymouth station status comes from Wikipedia (suspended April 5, 2021; planned July 2022 reopening did not happen) and from its absence on the current MBTA Kingston Line timetable; no MBTA notice was fetched, so recheck before publishing. Distance from Boston conflicts on Wikipedia (about 40 miles in the lead, about 44 miles in Geography); the answer uses 'about 40'. Pilgrim Hall's 'oldest public museum in continuous operation' claim is sourced to Wikipedia only; the museum's own About page failed to load. The Housing Production Plan's Appendix B naming the five village centers was cut off, so the village list mixes the HPP and Wikipedia; Cedarville's line is thin (Wikipedia gives location and a bus link only). The HPP gives two total unit counts (28,353 and 28,074 for SHI); the text uses the 2021 growth figure. Myles Standish acreage omitted: the DCR page gives none, and the 'second-largest state forest' claim (Wikipedia) was left out. GATRA route names come from GATRA's Plymouth/Wareham area list; Wikipedia's 'Plymouth Area Link' name does not appear on GATRA's page. The ferry and Plymouth & Brockton lines are sourced to Wikipedia. Route 3A not listed because no fetched page confirmed it. Kingston station is in Kingston; its distance from Plymouth Center was not sourced. Manomet's 'White Horse Beach is public' note: Wikipedia says parking there is private, so the beach is named without an access claim."
+}

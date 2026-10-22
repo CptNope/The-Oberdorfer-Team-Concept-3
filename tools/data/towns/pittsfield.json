@@ -1,0 +1,68 @@
+{
+  "slug": "pittsfield",
+  "name": "Pittsfield",
+  "county": "Berkshire County",
+  "region": "The Berkshires (Western Massachusetts)",
+  "population_2020": 43927,
+  "population_source": "https://en.wikipedia.org/wiki/Pittsfield,_Massachusetts",
+  "official_site": "https://www.pittsfieldma.gov/",
+  "headline": ["A county seat around Park Square,", "with two lakes and a state forest at its edges."],
+  "answer": "Pittsfield is a city of 43,927 people (2020 Census) and the seat of Berkshire County. A city housing analysis describes its homes as mostly single-family houses and small two- and three-unit buildings, and The Warren Group counted 434 single-family sales in 2025. Amtrak's Lake Shore Limited stops at the Joseph Scelsi Intermodal Transportation Center, and the seasonal Berkshire Flyer runs from there to New York. US 7 and US 20 meet in the city, and the Massachusetts Turnpike is about 10 miles south in Lee.",
+  "overview": [
+    "Settlement here dates to 1752, and the plantation of Pontoosuc was organized in 1753 before being incorporated as a town in 1761 and named for William Pitt. Park Square was laid out in 1790 on donated land, and the Old Town Hall, the county courthouse, the Berkshire Athenaeum and the First Church of Christ still face it. Late in the 19th century downtown pushed north along North Street, helped by an 1891 trolley line. In 1890 William Stanley Jr. founded the Stanley Electric Manufacturing Company here, and General Electric bought it in 1903. Pittsfield became a city in 1891.",
+    "Water and woods frame the city. Onota Lake, 617 acres and owned by the city, and Pontoosuc Lake are used for swimming, boating and fishing, and Pittsfield State Forest covers 11,000 acres with Berry Pond and 30 miles of trails. Herman Melville finished Moby-Dick at Arrowhead, his home on Holmes Road from 1850 to 1863. On West Housatonic Street, Hancock Shaker Village keeps 20 historic buildings, including a round stone barn from 1826. Downtown, the Colonial Theatre of 1903 reopened after restoration in 2006, and the Berkshire Museum, founded by Zenas Crane in 1903, holds more than 40,000 objects."
+  ],
+  "housing": {
+    "text": "A 2009 city housing analysis describes Pittsfield's housing stock as relatively old, made up mainly of single-family homes and small multifamily buildings of two or three units, and counted 21,633 units citywide in 2008. In the Westside and Morningside neighborhoods next to downtown, more than 80% of homes were built before 1969, and many larger houses from the 1890s to 1930s have been divided into apartments.",
+    "source": "https://www.pittsfieldma.gov/DocumentCenter/View/639/Housing-Needs-Analysis-for-Westside-and-Morningside-PDF"
+  },
+  "villages": [
+    {"name": "Park Square", "line": "The downtown green laid out in 1790, ringed by the Old Town Hall, the county courthouse, the Berkshire Athenaeum and the First Church of Christ; its historic district reaches roughly to East Housatonic, South, North and Fenn Streets and Wendell Avenue.", "source": "https://en.wikipedia.org/wiki/Park_Square_Historic_District_(Pittsfield,_Massachusetts)"},
+    {"name": "Upper North Street", "line": "Late-19th-century commercial blocks along North Street, built as downtown grew north from Park Square after an 1891 trolley line.", "source": "https://en.wikipedia.org/wiki/Upper_North_Street_Commercial_District"},
+    {"name": "Westside", "line": "The neighborhood just west of North Street, split by the West Branch of the Housatonic River, with denser older houses to the east and larger lots to the west.", "source": "https://www.pittsfieldma.gov/DocumentCenter/View/639/Housing-Needs-Analysis-for-Westside-and-Morningside-PDF"},
+    {"name": "Morningside", "line": "East of North Street between Springside Avenue and East Street, with one- and two-family homes, side-by-side duplexes and newer single-family homes on larger lots to the northeast.", "source": "https://www.pittsfieldma.gov/DocumentCenter/View/639/Housing-Needs-Analysis-for-Westside-and-Morningside-PDF"}
+  ],
+  "commute": {
+    "rail": [
+      {"line": "Amtrak Lake Shore Limited (Boston to Chicago, daily)", "stations": ["Pittsfield (Joseph Scelsi Intermodal Transportation Center, 1 Columbus Avenue)"]},
+      {"line": "Amtrak Berkshire Flyer (seasonal, to New York)", "stations": ["Pittsfield (Joseph Scelsi Intermodal Transportation Center, 1 Columbus Avenue)"]}
+    ],
+    "rail_source": "https://en.wikipedia.org/wiki/Lake_Shore_Limited",
+    "highways": ["US 7", "US 20", "Route 8", "Route 9"],
+    "text": "Pittsfield is outside the MBTA. Amtrak's Lake Shore Limited stops daily at the Joseph Scelsi Intermodal Transportation Center on its Boston section, with Massachusetts stops at Springfield, Worcester, Framingham and Boston. In 2026 the Berkshire Flyer ran from Pittsfield to New York's Moynihan Train Hall via Albany-Rensselaer on Fridays and Sundays from June 12 to September 19. The Berkshire Regional Transit Authority is based at the same center, with routes to North Adams, Lee, Dalton, Lanesborough and an express to Great Barrington. US 7 and US 20 meet in the city, and the Massachusetts Turnpike (I-90) is about 10 miles south in Lee."
+  },
+  "schools": {"district": "Pittsfield Public Schools", "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=02360000&orgtypecode=5"},
+  "places": [
+    {"name": "Pittsfield State Forest", "line": "An 11,000-acre DCR forest at 1041 Cascade Street with Berry Pond, 30 miles of trails, an accessible Tranquility Trail and three campgrounds.", "source": "https://www.mass.gov/locations/pittsfield-state-forest"},
+    {"name": "Onota Lake", "line": "A 617-acre lake owned by the city and used for fishing, swimming, water skiing and sailing.", "source": "https://en.wikipedia.org/wiki/Onota_Lake"},
+    {"name": "Arrowhead", "line": "The 1785 house at 780 Holmes Road where Herman Melville lived from 1850 to 1863 and finished Moby-Dick, run by the Berkshire County Historical Society.", "source": "https://en.wikipedia.org/wiki/Arrowhead_(Herman_Melville_House)"},
+    {"name": "Hancock Shaker Village", "line": "A living history museum at 1843 West Housatonic Street on the site of a Shaker community active from 1790 to 1960, with 20 historic buildings and a round stone barn from 1826.", "source": "https://en.wikipedia.org/wiki/Hancock_Shaker_Village"},
+    {"name": "Colonial Theatre", "line": "A 1903 theater at 111 South Street whose restoration was completed in 2006.", "source": "https://en.wikipedia.org/wiki/Colonial_Theatre_(Pittsfield,_Massachusetts)"},
+    {"name": "Berkshire Museum", "line": "Founded in 1903 by Zenas Crane, with art, natural history and ancient-civilization collections of more than 40,000 objects.", "source": "https://en.wikipedia.org/wiki/Berkshire_Museum"}
+  ],
+  "history": [
+    {"year": "1753", "text": "Organized as Pontoosuc Plantation, after settlement began in 1752.", "source": "https://en.wikipedia.org/wiki/Pittsfield,_Massachusetts"},
+    {"year": "1761", "text": "Incorporated as a town and named for William Pitt by Governor Sir Francis Bernard.", "source": "https://en.wikipedia.org/wiki/Pittsfield,_Massachusetts"},
+    {"year": "1791", "text": "A town bylaw barred playing \"baseball\" within 80 yards of the meeting house, a reference found by historian John Thorn in 2004.", "source": "https://en.wikipedia.org/wiki/Pittsfield,_Massachusetts"},
+    {"year": "1891", "text": "Incorporated as a city.", "source": "https://en.wikipedia.org/wiki/Pittsfield,_Massachusetts"}
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 434, "sf_sales_2024": 373,
+    "sf_median_2025": 293000, "sf_median_2024": 286000,
+    "condo_sales_2025": null, "condo_median_2025": null, "condo_median_2024": null,
+    "reading_1": "PITTSFIELD (single-family; Dec 2024, Dec 2025, Percent Change): Number of Sales 35 36 2.9%; YTD Number of Sales 373 434 16.4%; Median Sale Price $305,000 $334,450 9.7%; YTD Median Sale Price $286,000 $293,000 2.4%",
+    "reading_2": "PITTSFIELD (single-family): YTD Number of Sales 373 434 16.4%; YTD Median Sale Price $286,000 $293,000 2.4%"
+  },
+  "nearby": ["lenox", "dalton", "lanesborough", "richmond", "hancock"],
+  "search_notes": "'Pittsfield MA real estate agent' returns agent directories (Clever, Experience.com, a Century 21 profile) and a local brokerage's listing pages. 'Moving to Pittsfield MA' is almost entirely movers (Allied, moveBuddha, uShip, HireAHelper) plus a Livability page and a radio-station listicle. Nothing ranking explains the Amtrak and Berkshire Flyer service, BRTA routes, Park Square or the lakes and state forest with sources, which a guide could cover.",
+  "faq": [
+    {"q": "What is the median home price in Pittsfield, MA?", "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, the median single-family sale price in Pittsfield for calendar year 2025 was $293,000, across 434 sales. In 2024 it was $286,000, across 373 sales."},
+    {"q": "Does Pittsfield have train service?", "a": "Yes. Amtrak's Lake Shore Limited stops daily at the Joseph Scelsi Intermodal Transportation Center, 1 Columbus Avenue, on its Boston to Chicago run. The seasonal Berkshire Flyer runs from the same station to New York on summer weekends; in 2026 it ran Fridays and Sundays from June 12 to September 19. Pittsfield is not served by the MBTA."},
+    {"q": "Is there local bus service in Pittsfield?", "a": "Yes. The Berkshire Regional Transit Authority runs its buses from the Intermodal Transportation Center, with city routes and routes to North Adams, Lee, Dalton, Lanesborough and Great Barrington. The authority says its service is fare-free through June 2027."},
+    {"q": "Which school district serves Pittsfield?", "a": "Pittsfield Public Schools. Review its profile with DESE."}
+  ],
+  "notes": "Condo figures set to null: both fetches of the Warren Group PDF truncate the condo table at 'BROOKLI', before Pittsfield. Housing text comes from the city's August 2009 Housing Needs Analysis for Westside and Morningside (the most recent city housing document found); its 21,633-unit count is for 2008 (Wikipedia gives 21,738 units in 2020). The analysis also rates unit condition; that was left out. Village lines for Westside and Morningside use the 2009 report's boundaries and building types only. Berkshire Flyer facts come from the Commonwealth's May 14, 2026 release (https://www.mass.gov/news/amtraks-berkshire-flyer-returns-for-summer-service-with-expanded-weekend-trips-between-pittsfield-and-new-york-city), not the rail_source; it is a seasonal pilot, so dates will change yearly. Amtrak's own station page (https://www.amtrak.com/stations/pit) confirms the 1 Columbus Avenue address but did not list routes, so the Lake Shore Limited stop is sourced to Wikipedia. BRTA routes and fare-free note from https://berkshirerta.gov/plan-your-trip/ and https://berkshirerta.gov/. The Park Square historic district article calls the 1810 fair on the square the nation's first agricultural fair; left out as an unverified superlative. Wahconah Park was left out because its grandstand is being rebuilt and its build year conflicts (1892 vs 1919). Pontoosuc Lake is named from Wikipedia's city article without acreage. Nearby slugs are neighboring towns from general geography and are not checked against a source."
+}
