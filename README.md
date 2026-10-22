@@ -72,7 +72,7 @@ The numbers follow Phase 19 of the [creative brief](source/creative-brief.md).
 | 2 | Brand strategy | [Brand book ch. 02–08](brand-book/index.html#story): story, mission and vision, positioning, audiences, values, voice, messaging | ✅ Ready for review |
 | 3 | Three visual directions | [Discovery › Three directions](discovery/index.html#directions). **A + B chosen** on Oct 15, 2026 | ✅ Decided |
 | 4 | Complete brand book | [Brand book](brand-book/index.html): 20 chapters with mockups | ✅ Ready for review |
-| 5 | Design tokens and component library | [Design system](design-system/index.html) · [`tokens.css`](assets/css/tokens.css) · [`components.css`](assets/css/components.css) | ✅ Ready for review |
+| 5 | Design tokens and component library | [Design system](design-system/index.html) (v1.1, complete) · [`tokens.css`](assets/css/tokens.css) · [`tokens.json`](assets/tokens/tokens.json) · [`theme.json`](assets/tokens/theme.json) · [`components.css`](assets/css/components.css) | ✅ Ready for review |
 | 6 | Sitemap and user journeys | [Brand book › Website](brand-book/index.html#website) · [Audiences](brand-book/index.html#audience) · the [site](site/index.html) itself | ✅ Ready for review |
 | 7 | High-fidelity website design | [Example website](site/index.html), desktop and mobile | ✅ Ready for review |
 | 8 | Working prototype | [Example website](site/index.html): working search, filters, saved homes, forms and tabs | ✅ Ready for review |
@@ -93,7 +93,11 @@ The numbers follow Phase 19 of the [creative brief](source/creative-brief.md).
 
 ### Design system chapters
 
-[Color tokens](design-system/index.html#color) · [Type scale](design-system/index.html#type) · [Space, grid and lines](design-system/index.html#space) · [Icons](design-system/index.html#icons) · [Buttons](design-system/index.html#buttons) · [Navigation](design-system/index.html#navigation) · [Editorial hero](design-system/index.html#hero) · [Property search](design-system/index.html#search) · [Cards](design-system/index.html#cards) · [Market statistics](design-system/index.html#market) · [Forms](design-system/index.html#forms) · [Editorial content](design-system/index.html#editorial) · [Lead capture, office, map](design-system/index.html#conversion) · [Footer and attribution](design-system/index.html#footer) · [Motion and accessibility](design-system/index.html#motion) · [WordPress mapping](design-system/index.html#wordpress)
+Version 1.1, complete. It has 20 chapters, and every component used on the example site is documented and mapped to a WordPress block.
+
+[Color tokens](design-system/index.html#color) · [Type scale](design-system/index.html#type) · [Space, grid and lines](design-system/index.html#space) · [Layout and breakpoints](design-system/index.html#layout) · [Icons](design-system/index.html#icons) · [Buttons and links](design-system/index.html#buttons) · [Navigation](design-system/index.html#navigation) · [Page headers](design-system/index.html#hero) · [Search and results](design-system/index.html#search) · [Cards](design-system/index.html#cards) · [Listing detail](design-system/index.html#listing) · [Market statistics](design-system/index.html#market) · [Forms](design-system/index.html#forms) · [Feedback and overlays](design-system/index.html#feedback) · [Editorial content](design-system/index.html#editorial) · [Lead capture, office, map](design-system/index.html#conversion) · [Footer and attribution](design-system/index.html#footer) · [Motion and accessibility](design-system/index.html#motion) · [Token exports](design-system/index.html#exports) · [WordPress mapping](design-system/index.html#wordpress)
+
+**Token exports:** [`tokens.css`](assets/css/tokens.css) (source of truth) · [`tokens.json`](assets/tokens/tokens.json) (W3C Design Tokens, for Figma/Tokens Studio or Style Dictionary) · [`theme.json`](assets/tokens/theme.json) (WordPress v3 presets)
 
 ![Design system](docs/screenshots/design-system-desktop.webp)
 
@@ -166,10 +170,12 @@ assets/js/site.js          Menus, reveals, copy buttons, demo form validation
 assets/js/site-demo.js     Listing search, saved homes, tabs, filters
 assets/logo/               Outlined SVG logo system + PNG icons
 assets/img/                Photos, publication page renders, icon and illustration sprites
+assets/tokens/             tokens.json (W3C format) and theme.json (WordPress), exported from tokens.css
 assets/publications/       Web editions of the At Home issues (downloadable, ~3 MB)
 
 tools/build_site.py        Generates site/ (shared header, footer, cards, forms)
 tools/build_logos.py       Generates assets/logo/*.svg from the PDF's glyphs
+tools/export_tokens.py     Exports tokens.css to assets/tokens/ (tokens.json, theme.json)
 tools/screenshot.py        Playwright screenshots for design review
 tools/fonts/               Font subsets extracted from the PDF (OFL)
 
@@ -190,6 +196,7 @@ CLAUDE.md                  Instructions for Claude and other agents
 ```sh
 python3 tools/build_site.py      # rebuild site/ after editing the generator or its data
 python3 tools/build_logos.py     # rebuild the logo SVGs
+python3 tools/export_tokens.py   # re-export tokens.json and theme.json after editing tokens.css
 python3 -m http.server 8765      # preview
 python3 tools/screenshot.py http://localhost:8765/site/ home.png 1440 --full   # needs playwright
 ```

@@ -131,3 +131,36 @@
     });
   });
 })();
+
+/* ---- Dialogs, toasts and dismissible alerts (shared) ------------------------ */
+(function () {
+  "use strict";
+  document.querySelectorAll("[data-dialog-open]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var d = document.getElementById(b.getAttribute("data-dialog-open"));
+      if (d && d.showModal) { d.showModal(); }
+    });
+  });
+  document.querySelectorAll("dialog.dialog").forEach(function (d) {
+    d.addEventListener("click", function (e) {
+      if (e.target === d || e.target.closest("[data-dialog-close]")) d.close();
+    });
+  });
+  var region = null;
+  function toast(msg, icons) {
+    if (!region) { region = document.createElement("div"); region.className = "toast-region"; region.setAttribute("role", "status"); region.setAttribute("aria-live", "polite"); document.body.appendChild(region); }
+    var t = document.createElement("div"); t.className = "toast";
+    t.innerHTML = "<svg class='icon' aria-hidden='true'><use href='" + icons + "#i-check'/></svg><span></span><button type='button'>Dismiss</button>";
+    t.querySelector("span").textContent = msg;
+    function bye() { t.classList.add("is-leaving"); setTimeout(function () { t.remove(); }, 300); }
+    t.querySelector("button").addEventListener("click", bye);
+    region.appendChild(t); setTimeout(bye, 5000);
+  }
+  window.otToast = toast;
+  document.querySelectorAll("[data-toast]").forEach(function (b) {
+    b.addEventListener("click", function () { toast(b.getAttribute("data-toast"), b.getAttribute("data-icons") || "../assets/img/icons.svg"); });
+  });
+  document.querySelectorAll("[data-dismiss]").forEach(function (b) {
+    b.addEventListener("click", function () { var a = b.closest(".alert"); if (a) a.hidden = true; });
+  });
+})();

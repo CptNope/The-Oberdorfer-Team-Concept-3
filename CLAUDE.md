@@ -49,6 +49,8 @@ The visual language evolves the team's print publication, *Wakefield at Home*, F
   - `site.css`: example-site page layouts
 - **The example site is generated.** Edit `tools/build_site.py`, never `site/**/index.html` by hand. Then run `python3 tools/build_site.py`.
 - **Logos are generated.** Edit `tools/build_logos.py`, then run `python3 tools/build_logos.py`. It outlines the Cormorant Garamond glyphs from `tools/fonts/`.
+- **Token exports are generated.** After you change `tokens.css`, run `python3 tools/export_tokens.py`. It rewrites `assets/tokens/tokens.json` and `assets/tokens/theme.json`.
+- **New components** go in `components.css` and must be documented in `design-system/index.html`. Show every state, and add a row to the WordPress mapping and the component inventory.
 - **To preview,** run `python3 -m http.server 8765` and open <http://localhost:8765/>.
 - **To take screenshots,** run `python3 tools/screenshot.py http://localhost:8765/site/ out.png 1440 --full`. Check desktop at 1440 and mobile at 390, and confirm that `scrollWidth` equals `clientWidth`.
 - **Keep links relative.** The site is served from a GitHub Pages project subpath, so root-relative `/` links break.

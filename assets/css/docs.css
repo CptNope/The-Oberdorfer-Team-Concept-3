@@ -186,3 +186,7 @@
 .kv { display: grid; grid-template-columns: 9rem 1fr; gap: var(--space-3) var(--space-5); }
 @media (max-width: 34rem) { .kv { grid-template-columns: 1fr; gap: var(--space-1); } .kv dd { margin-bottom: var(--space-3); } }
 @media (max-width: 40rem) { .doc-cover__top .label { letter-spacing: 0.14em; } }
+
+/* Tables keep a readable width and scroll sideways on phones. */
+.table-scroll > table { min-width: 36rem; }
+@media (max-width: 40rem) { .tokens code { white-space: normal; overflow-wrap: anywhere; } }

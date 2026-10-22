@@ -184,3 +184,4 @@
 @media (max-width: 36rem) { .community-card { aspect-ratio: 4 / 3; } }
 .site-footer .newsletter .input::placeholder { color: var(--ot-mist); }
 .article-card[hidden], .agent-card[hidden], .seat[hidden] { display: none; }
+.empty-state { align-content: start; }

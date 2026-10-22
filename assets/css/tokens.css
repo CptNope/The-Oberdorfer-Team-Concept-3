@@ -146,7 +146,13 @@
 
   /* ---- 13. Layout ---------------------------------------------------- */
   --grid-columns: 12;
-  --z-nav: 50; --z-overlay: 80; --z-modal: 90;
+  --z-nav: 50; --z-overlay: 80; --z-modal: 90; --z-toast: 95;
+
+  /* ---- 14. Breakpoints (reference values; media queries use them literally) */
+  --bp-sm: 36rem;   /*  576px  phones → large phones: cards go 1 → 2 up        */
+  --bp-md: 52rem;   /*  832px  tablets: 12-col splits collapse to one column    */
+  --bp-lg: 64rem;   /* 1024px  desktop nav appears; mobile menu retires         */
+  --bp-xl: 90rem;   /* 1440px  design reference width                          */
 }
 
 /* Dark (navy) sections: re-map the semantic layer, keep primitives. */

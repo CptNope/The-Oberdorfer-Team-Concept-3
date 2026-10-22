@@ -383,3 +383,68 @@
 .demo-illu--light { color: var(--ot-navy); background: var(--ot-sandstone); }
 .listing-card__media.demo-illu svg, .article-card__media .demo-illu svg { width: 82%; height: auto; object-fit: initial; }
 .empty-state[hidden] { display: none; }
+
+/* ==========================================================================
+   Feedback, navigation aids and loading states (ot/alert, ot/toast,
+   ot/dialog, ot/pagination, ot/skeleton, ot/agent-mini)
+   ========================================================================== */
+
+/* ---- Alert: page- or section-level message --------------------------------- */
+.alert { display: grid; grid-template-columns: auto 1fr auto; gap: var(--space-3) var(--space-4); align-items: start; padding: var(--space-4) var(--space-5); background: var(--info-bg); color: var(--ot-ink); border-top: 1px solid currentColor; font-size: var(--step-body-s); line-height: 1.55; }
+.alert .icon { margin-top: 0.15rem; }
+.alert strong { display: block; font-weight: 600; margin-bottom: 0.15rem; }
+.alert--success { background: var(--success-bg); color: var(--success); }
+.alert--warning { background: var(--warning-bg); color: var(--warning); }
+.alert--error { background: var(--error-bg); color: var(--error); }
+.alert--info { color: var(--ot-navy); }
+.alert p { color: var(--ot-ink); }
+.alert__close { appearance: none; border: 0; background: none; color: inherit; cursor: pointer; padding: 0.25rem; margin: -0.25rem -0.25rem 0 0; min-width: 2rem; min-height: 2rem; display: grid; place-items: center; }
+.alert__close:hover { background: rgb(0 0 0 / 0.05); }
+
+/* ---- Toast: brief confirmation, announced politely ----------------------------- */
+.toast-region { position: fixed; z-index: var(--z-toast); left: 50%; bottom: max(1.25rem, env(safe-area-inset-bottom)); transform: translateX(-50%); display: grid; gap: var(--space-2); width: min(28rem, calc(100vw - 2rem)); pointer-events: none; }
+.toast { pointer-events: auto; display: grid; grid-template-columns: auto 1fr auto; gap: var(--space-3); align-items: center; padding: var(--space-3) var(--space-3) var(--space-3) var(--space-4); background: var(--ot-navy); color: var(--ot-ivory); border-top: 1px solid var(--ot-gold); box-shadow: var(--shadow-2); font-size: var(--step-body-s); animation: ot-toast-in var(--dur-slow) var(--ease-out); }
+.toast .icon { color: var(--ot-gold); }
+.toast button { appearance: none; border: 0; background: none; color: var(--ot-gold-pale); font: 600 0.7rem/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; padding: 0.6rem; cursor: pointer; }
+.toast button:focus-visible { outline-color: var(--ot-gold-pale); }
+.toast.is-leaving { animation: ot-toast-out var(--dur-base) var(--ease-in-out) forwards; }
+@keyframes ot-toast-in { from { opacity: 0; transform: translateY(12px); } }
+@keyframes ot-toast-out { to { opacity: 0; transform: translateY(8px); } }
+
+/* ---- Dialog: native <dialog>, focus trapped by the browser --------------------- */
+.dialog { border: 0; padding: 0; width: min(36rem, calc(100vw - 2rem)); max-height: calc(100dvh - 2rem); background: var(--ot-ivory); color: var(--ot-ink); box-shadow: var(--shadow-2); }
+.dialog::backdrop { background: rgb(7 29 45 / 0.62); }
+.dialog[open] { animation: ot-dialog-in var(--dur-slow) var(--ease-out); }
+.dialog__inner { position: relative; padding: clamp(1.5rem, 1rem + 2vw, 2.5rem); display: grid; gap: var(--space-5); }
+.dialog__inner::before { content: ""; position: absolute; inset: 0.6rem; border: 1px solid var(--rule-hair); pointer-events: none; }
+.dialog__head { display: flex; justify-content: space-between; gap: var(--space-4); align-items: start; }
+.dialog__close { color: var(--ot-navy); position: relative; z-index: 1; }
+.dialog__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); justify-content: flex-end; }
+@keyframes ot-dialog-in { from { opacity: 0; transform: translateY(16px); } }
+
+/* ---- Pagination -------------------------------------------------------------- */
+.pagination { display: flex; justify-content: center; }
+.pagination ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-1); align-items: center; }
+.pagination a, .pagination span { display: inline-grid; place-items: center; min-width: 2.75rem; height: 2.75rem; padding: 0 0.6rem; font: 400 1.125rem/1 var(--font-display); color: var(--text-display); text-decoration: none; border-bottom: 1px solid transparent; font-variant-numeric: lining-nums; }
+.pagination a:hover { border-bottom-color: var(--rule-gold); color: var(--text-link-hover); }
+.pagination [aria-current="page"] { border-bottom: 1px solid var(--ot-gold); color: var(--text-display); font-weight: 500; }
+.pagination .pagination__step { font: 600 0.7rem/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; gap: 0.5rem; display: inline-flex; padding: 0 0.9rem; }
+.pagination .pagination__step[aria-disabled="true"] { color: var(--disabled-fg); pointer-events: none; }
+.pagination .pagination__gap { color: var(--text-muted); }
+
+/* ---- Skeleton (loading) -------------------------------------------------------- */
+.skeleton { display: grid; gap: var(--space-3); }
+.skeleton > i { display: block; background: linear-gradient(90deg, var(--ot-sandstone) 0%, #F1ECE3 45%, var(--ot-sandstone) 90%) 0 0 / 220% 100%; animation: ot-shimmer 1.6s ease-in-out infinite; }
+.skeleton__media { aspect-ratio: 4 / 3; }
+.skeleton__line { height: 0.85rem; }
+.skeleton__line--lg { height: 1.6rem; width: 45%; }
+.skeleton__line--sm { width: 70%; }
+@keyframes ot-shimmer { to { background-position: -120% 0; } }
+@media (prefers-reduced-motion: reduce) { .skeleton > i { animation: none; } }
+
+/* ---- Agent mini (listing aside, article byline) ---------------------------------- */
+.agent-mini { display: grid; grid-template-columns: 4.5rem 1fr; gap: var(--space-4); align-items: center; }
+.agent-mini img { width: 4.5rem; aspect-ratio: 1; object-fit: cover; object-position: 50% 15%; }
+.agent-mini__name { font: 400 1.25rem/1.15 var(--font-display); color: var(--text-display); }
+.agent-mini__meta { font-size: var(--step-caption); color: var(--text-muted); }
+.alert[hidden] { display: none; }
