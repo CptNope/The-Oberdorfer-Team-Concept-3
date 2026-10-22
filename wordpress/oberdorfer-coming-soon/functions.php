@@ -12,8 +12,33 @@
 
 defined( 'ABSPATH' ) || exit;
 
-const OT_CS_VERSION = '1.0.0';
+const OT_CS_VERSION = '1.0.1';
 const OT_CS_PHONE   = '406-250-7620';
+const OT_CS_HOST    = 'oberdorferteam.com';
+
+/**
+ * One domain. The team's other domains (theoberdorferteam.com, oberdorferhomes.com,
+ * oberdorferluxury.com, maluxuryhomes.com, maluxury.homes) and every www name point to
+ * this app, so any request for a host other than oberdorferteam.com is sent there with
+ * a permanent redirect, keeping the path. Let's Encrypt renewals are not affected: nginx
+ * serves /.well-known/acme-challenge/ before WordPress runs. The full build moves this
+ * rule to ot-core or the server config (docs/coming-soon-launch.md, section 2a).
+ */
+add_action( 'init', function () {
+	if ( is_admin() || wp_doing_cron() || ( defined( 'WP_CLI' ) && WP_CLI ) ) {
+		return;
+	}
+	$host = strtolower( preg_replace( '/:\d+$/', '', (string) ( $_SERVER['HTTP_HOST'] ?? '' ) ) );
+	if ( '' === $host || OT_CS_HOST === $host ) {
+		return;
+	}
+	$path = (string) ( $_SERVER['REQUEST_URI'] ?? '/' );
+	if ( str_starts_with( $path, '/wp-login.php' ) || str_starts_with( $path, '/wp-json/' ) ) {
+		return; // never strand a login or an API call mid-request
+	}
+	wp_redirect( 'https://' . OT_CS_HOST . $path, 301, 'The Oberdorfer Team' );
+	exit;
+}, 1 );
 
 /** Styles: the page CSS and the brand fonts (self-hosted in the full theme). */
 add_action( 'wp_enqueue_scripts', function () {

@@ -53,6 +53,8 @@ One domain is the site; every other domain sends visitors to it with a permanent
 
 Don't buy more variants such as `maluxuryhomes.net`. The six cover the names that matter.
 
+**Status, 2026-10-22:** all six domains point to the Cloudways app (45.55.88.148); oberdorferteam.com is the primary domain; one Let's Encrypt certificate covers all 12 names (auto-renew on, expires January 20, 2027); the five other domains have SPF `-all` and DMARC `p=reject`. The coming-soon theme (1.0.1 and later) sends every other host to `https://oberdorferteam.com` with a 301, so the `.htaccess` rule below is only needed if the theme is not active.
+
 **How to redirect (recommended: through Cloudways, so HTTPS works on every name)**
 1. At GoDaddy, for each redirect domain: open DNS. Set the `@` A record to the Cloudways server IP (replacing GoDaddy's "Parked" record), and point the `www` CNAME to `@`. Remove any GoDaddy Forwarding on the domain.
 2. In Cloudways → Domain Management, add each domain and its `www` as an additional domain. Then reissue the Let's Encrypt certificate so it covers every name. The free certificate allows up to 100 names, and here there are 12.
