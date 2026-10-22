@@ -175,6 +175,7 @@ assets/publications/       Web editions of the At Home issues (downloadable, ~3 
 
 tools/build_site.py        Generates site/ (shared header, footer, cards, forms)
 tools/build_logos.py       Generates assets/logo/*.svg from the PDF's glyphs
+tools/build_illustrations.py  Draws the house line illustrations (assets/img/illustrations.svg)
 tools/export_tokens.py     Exports tokens.css to assets/tokens/ (tokens.json, theme.json)
 tools/screenshot.py        Playwright screenshots for design review
 tools/fonts/               Font subsets extracted from the PDF (OFL)
@@ -196,6 +197,7 @@ CLAUDE.md                  Instructions for Claude and other agents
 ```sh
 python3 tools/build_site.py      # rebuild site/ after editing the generator or its data
 python3 tools/build_logos.py     # rebuild the logo SVGs
+python3 tools/build_illustrations.py  # redraw the house illustrations
 python3 tools/export_tokens.py   # re-export tokens.json and theme.json after editing tokens.css
 python3 -m http.server 8765      # preview
 python3 tools/screenshot.py http://localhost:8765/site/ home.png 1440 --full   # needs playwright

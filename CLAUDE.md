@@ -49,6 +49,7 @@ The visual language evolves the team's print publication, *Wakefield at Home*, F
   - `site.css`: example-site page layouts
 - **The example site is generated.** Edit `tools/build_site.py`, never `site/**/index.html` by hand. Then run `python3 tools/build_site.py`.
 - **Logos are generated.** Edit `tools/build_logos.py`, then run `python3 tools/build_logos.py`. It outlines the Cormorant Garamond glyphs from `tools/fonts/`.
+- **House illustrations are generated.** Edit `tools/build_illustrations.py`, then run `python3 tools/build_illustrations.py`. It writes the colonial, triple-decker, Cape and townscape symbols to `assets/img/illustrations.svg` with three stroke weights (1.2 outlines, 0.8 trim, 0.55 detail).
 - **Token exports are generated.** After you change `tokens.css`, run `python3 tools/export_tokens.py`. It rewrites `assets/tokens/tokens.json` and `assets/tokens/theme.json`.
 - **New components** go in `components.css` and must be documented in `design-system/index.html`. Show every state, and add a row to the WordPress mapping and the component inventory.
 - **To preview,** run `python3 -m http.server 8765` and open <http://localhost:8765/>.
