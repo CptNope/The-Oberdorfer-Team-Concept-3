@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>archive-agent.html · Team</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="oberdorfer-tokens.css">
+<link rel="stylesheet" href="ds/oberdorferteam/components/bundle.css">
+<link rel="stylesheet" href="fse.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&amp;family=Manrope:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#071d2d}a:hover{color:#7a6438}
+</style>
+</helmet>
+<div class="fse {{tagClass}}" style="width: 100%; background: var(--ot-ivory); color: var(--ot-ink); font-family: var(--font-sans);">
+<svg width="0" height="0" style="position: absolute;" aria-hidden="true"><defs>
+<symbol id="i-arrow" viewBox="0 0 34 12"><path d="M0 6H32M27 1L32 6L27 11"></path></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 21C4 16.6 7.6 14 12 14S20 16.6 20 21"></path></symbol>
+</defs></svg>
+
+<dc-import name="Header" show-tags="{{showTags}}" hint-size="100%,76px"></dc-import>
+
+<main id="main">
+<section class="page-hero fse-scope" aria-labelledby="page-title">
+<span class="fse-tag"><b>pattern</b> page-hero · ot/page-hero › core/breadcrumbs, core/query-title (.answer), core/paragraph</span>
+<div class="container page-hero__grid"><nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="#">Home</a></li><li aria-current="page">Our Team</li></ol></nav><h1 class="page-hero__title display-l answer" id="page-title"><span>A husband-and-wife team.</span><span>A shared commitment.</span></h1><p class="page-hero__lead lead">Brandon and Kaitlyn lead The Oberdorfer Team. As the team grows, every agent shares the same standard of service.</p></div>
+</section>
+
+<section class="section fse-scope">
+<span class="fse-tag"><b>pattern</b> agent-directory · directory filters (specialty, area, language taxonomies) · core/query (post type: agent) › ot/agent-card · open seats fill the last row (.seat)</span>
+<div class="container">
+<form class="directory-bar" aria-label="Filter the team">
+<div class="field"><label class="field__label" for="d-spec">Specialty</label><select class="select" id="d-spec" name="spec"><option>All specialties</option><option>Buyers</option><option>Sellers</option><option>First-time buyers</option><option>Move-up</option></select></div>
+<div class="field"><label class="field__label" for="d-area">Service area</label><select class="select" id="d-area" name="area"><option>All of Massachusetts</option><option>Wakefield</option><option>Worcester</option><option>Boston</option></select></div>
+<div class="field"><label class="field__label" for="d-lang">Language</label><select class="select" id="d-lang" name="lang"><option>Any language</option><option>English</option></select></div>
+<button class="btn btn--secondary" type="button">Reset</button>
+</form>
+<p class="results-bar__count" aria-live="polite" style="margin-bottom: var(--space-6);">1 team profile</p>
+<h2 class="visually-hidden">Team profiles</h2>
+<div class="card-grid-3">
+<article class="agent-card">
+<a class="agent-card__photo" href="#"><img src="/_blob/5b9c3391ef2958e39f5d3f554c757926" alt="Brandon and Kaitlyn Oberdorfer" width="1400" height="1680"></a>
+<div class="stack" style="--stack: var(--space-2);"><p class="agent-card__title">Team leaders · Top Producer</p><h3 class="agent-card__name"><a href="#" style="text-decoration: none; color: inherit;">Brandon &amp; Kaitlyn Oberdorfer</a></h3><p class="body-s muted">Husband. Wife. Your Team.</p></div>
+<div class="agent-card__meta"><span class="chip">Buyers</span><span class="chip">Sellers</span><span class="chip">Massachusetts</span></div>
+<div class="cluster" style="--cluster: var(--space-5);"><a class="link-arrow" href="#">View profile <svg class="icon" aria-hidden="true" viewBox="0 0 34 12"><use href="#i-arrow"></use></svg></a><a class="link-arrow" href="#">406-250-7620</a></div>
+</article>
+<div class="seat"><div class="stack" style="--stack: var(--space-3); display: grid; justify-items: center;"><svg class="icon" aria-hidden="true"><use href="#i-user"></use></svg><p class="h4">Your seat at the table</p><p class="body-s">The team is growing. New agent profiles appear here as they join.</p><a class="link-arrow" href="#">Join our team <svg class="icon" aria-hidden="true" viewBox="0 0 34 12"><use href="#i-arrow"></use></svg></a></div></div>
+<div class="seat"><div class="stack" style="--stack: var(--space-3); display: grid; justify-items: center;"><svg class="icon" aria-hidden="true"><use href="#i-user"></use></svg><p class="h4">Your seat at the table</p><p class="body-s">The team is growing. New agent profiles appear here as they join.</p><a class="link-arrow" href="#">Join our team <svg class="icon" aria-hidden="true" viewBox="0 0 34 12"><use href="#i-arrow"></use></svg></a></div></div>
+</div>
+</div>
+</section>
+
+<section class="section fse-scope">
+<span class="fse-tag"><b>pattern</b> join-teaser · ot/cta-panel (variant: recruiting)</span>
+<div class="container"><div class="cta-panel folio-frame" style="--frame-inset: .85rem;">
+<div class="split" style="align-items: end;"><div class="stack" style="grid-column: 1 / span 7; --stack: var(--space-5);"><p class="label" style="color: var(--ot-gold);">Join our team</p><h2 class="h1">Grow with a team that <em>presents every home like a feature.</em></h2><p class="body-l" style="color: #D9D5CC; max-width: 44ch;">The team is growing. Start with a confidential conversation with Brandon and Kaitlyn.</p></div>
+<div class="stack" style="grid-column: 9 / span 4; --stack: var(--space-4);"><a class="cta-panel__phone" href="#">406-250-7620</a><p class="caption" style="color: var(--ot-mist);">Brandon &amp; Kaitlyn Oberdorfer · Husband-and-wife team · Top Producer</p><div class="cluster"><a class="btn" href="#">Start a conversation</a></div></div></div>
+</div></div>
+</section>
+</main>
+
+<dc-import name="Footer" show-tags="{{showTags}}" hint-size="100%,631px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"showTags":{"editor":"boolean","default":true,"section":"Board"},"$preview":{"width":1440,"height":3026}}'>
+class Component extends DCLogic {
+renderVals() {
+const on = this.props.showTags ?? true;
+return { showTags: on, tagClass: on ? 'show-tags' : '' };
+}
+}
+</script>
+</body>
+</html>

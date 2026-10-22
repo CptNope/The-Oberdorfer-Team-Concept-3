@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>page-sell.html · Sell</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="oberdorfer-tokens.css">
+<link rel="stylesheet" href="ds/oberdorferteam/components/bundle.css">
+<link rel="stylesheet" href="fse.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&amp;family=Manrope:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#071d2d}a:hover{color:#7a6438}
+</style>
+</helmet>
+<div class="fse {{tagClass}}" style="width: 100%; background: var(--ot-ivory); color: var(--ot-ink); font-family: var(--font-sans);">
+
+<dc-import name="Header" show-tags="{{showTags}}" hint-size="100%,76px"></dc-import>
+
+<main id="main">
+<section class="page-hero page-hero--navy surface-inverse fse-scope" aria-labelledby="page-title">
+<span class="fse-tag"><b>pattern</b> page-hero-navy · ot/page-hero (Navy style) › core/breadcrumbs, core/post-title (.answer), core/paragraph, core/buttons (gold)</span>
+<div class="container page-hero__grid"><nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="#">Home</a></li><li aria-current="page">Sell</li></ol></nav><h1 class="page-hero__title display-l answer" id="page-title"><span>Make your home</span><span>feel exceptional.</span></h1><div class="page-hero__aside"><a class="btn btn--gold" href="#">Request a market review</a></div><p class="page-hero__lead lead">Thoughtful presentation. Clear pricing. A plan that fits your life.</p></div>
+</section>
+
+<section class="section fse-scope">
+<span class="fse-tag"><b>pattern</b> seller-steps · ot/section-head + ot/steps (numbered list, 3)</span>
+<div class="container">
+<div class="section-head"><div class="running-head label"><span>If you are selling</span><span class="label--quiet">Sell</span></div><h2 class="section-head__title display-m answer" id="steps-title"><span>Three decisions</span><span>that shape a sale.</span></h2></div>
+<ol class="steps" style="grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); display: grid; gap: var(--space-7) var(--gutter);">
+<li><div><h3>Start with the right comparisons.</h3><p class="body-s">Review recent closed sales with similar location, style, condition, and living area. Agree on a pricing strategy before choosing a launch date.</p></div></li>
+<li><div><h3>Create a strong first impression.</h3><p class="body-s">Clear the entry, simplify the rooms, and show the home in good light. Let professional photography and a thoughtful property story lead the presentation.</p></div></li>
+<li><div><h3>Build a plan around your life.</h3><p class="body-s">Discuss your timing, showing preferences, and next move. A clear preparation calendar makes the many decisions easier to manage.</p></div></li>
+</ol>
+</div>
+</section>
+
+<section class="section surface-muted fse-scope" id="prepare">
+<span class="fse-tag"><b>pattern</b> fall-edit · Sandstone style · core/columns (6 + 6) › core/heading · ot/triad</span>
+<div class="container split" style="align-items: center;">
+<div style="grid-column: 1 / span 6;" class="stack"><p class="label">Preparation</p><h2 class="display-m answer"><span>The 30-minute</span><span>fall edit.</span></h2><p>Small, seasonal changes before photography and showings.</p></div>
+<div style="grid-column: 7 / span 6;" class="triad">
+<div><p class="label">The welcome</p><p class="h5">Sweep the entry and style one simple seasonal planter.</p></div>
+<div><p class="label">The light</p><p class="h5">Open the shades and give the windows a quick clean.</p></div>
+<div><p class="label">The calm</p><p class="h5">Clear one surface and add a warm, soft layer.</p></div>
+</div>
+</div>
+</section>
+
+<section class="section fse-scope">
+<span class="fse-tag"><b>pattern</b> presentation-feature · ot/section-head + core/columns ×4 (rule between)</span>
+<div class="container">
+<div class="section-head"><div class="running-head label"><span>Marketing and launch</span><span class="label--quiet">Sell</span></div><h2 class="section-head__title display-m answer" id="mkt-title"><span>Every home,</span><span>presented like a feature.</span></h2><p class="section-head__lead lead">The same editorial care that goes into our <em>At Home</em> publications goes into every listing.</p></div>
+<div class="cols cols--4 col-rule">
+<div><h3 class="h4">Pricing strategy</h3><p class="body-s" style="margin-top: var(--space-2);">Comparable closed sales, not headlines, with the reasoning shared in writing.</p></div>
+<div><h3 class="h4">Photography</h3><p class="body-s" style="margin-top: var(--space-2);">Professional photography in natural light, with straight lines and lights on.</p></div>
+<div><h3 class="h4">Property story</h3><p class="body-s" style="margin-top: var(--space-2);">A concrete, written story of how the home lives, with no generic superlatives.</p></div>
+<div><h3 class="h4">Launch</h3><p class="body-s" style="margin-top: var(--space-2);">A launch date chosen around your calendar, with showing preferences agreed up front.</p></div>
+</div>
+</div>
+</section>
+
+<section class="section surface-muted fse-scope" id="consult">
+<span class="fse-tag"><b>pattern</b> review-form · Sandstone style · core/columns (5 + 6) › core/heading, ot/faq (core/details ×4, FAQPage schema) · ot/inquiry-form (seller)</span>
+<div class="container split" style="align-items: start;">
+<div style="grid-column: 1 / span 5;" class="stack"><p class="label">Seller consultation</p><h2 class="display-m answer" id="consult-title"><span>Ask for a</span><span>property-specific review.</span></h2><p>The townwide median is a starting point. Your best comparisons are recent closed sales that resemble your home. We prepare them before we meet.</p>
+<div class="accordion" style="margin-top: var(--space-5);">
+<details open><summary>When should I list?</summary><div class="accordion__body body-s"><p>Agree on a pricing strategy before choosing a launch date. Your timing, showing preferences and next move shape the calendar, and a clear preparation plan makes the many decisions easier to manage.</p></div></details>
+<details><summary>How do you price a home?</summary><div class="accordion__body body-s"><p>With recent closed sales that resemble your property in location, size, condition and style. Lot size, renovation quality, layout, parking and condominium fees all belong in the comparison. A listing price is a starting point; a closed sale shows what a buyer actually paid.</p></div></details>
+<details><summary>Do I need to stage?</summary><div class="accordion__body body-s"><p>Usually a few small changes matter most: clear the entry, simplify the rooms, and show the home in good light. We help you decide what is worth doing and what is not.</p></div></details>
+<details><summary>What does the marketing include?</summary><div class="accordion__body body-s"><p>Professional photography, a written property story and editorial presentation across the website, print and social channels. The specific package is confirmed in your consultation.</p></div></details>
+</div>
+</div>
+<div style="grid-column: 7 / span 6;" class="panel"><form class="form" id="seller" aria-labelledby="seller-title">
+<h3 class="h3" id="seller-title">Request a market review</h3>
+<div class="form__row"><div class="field"><label class="field__label" for="sf-name">Full name <span class="req">(required)</span></label><input class="input" id="sf-name" name="name" type="text" required autocomplete="name"></div><div class="field"><label class="field__label" for="sf-email">Email <span class="req">(required)</span></label><input class="input" id="sf-email" name="email" type="email" required autocomplete="email"></div></div>
+<div class="form__row"><div class="field"><label class="field__label" for="sf-phone">Phone <span class="opt">(optional)</span></label><input class="input" id="sf-phone" name="phone" type="tel" autocomplete="tel"></div></div>
+<div class="field"><label class="field__label" for="sf-address">Property address <span class="req">(required)</span></label><input class="input" id="sf-address" name="address" type="text" required autocomplete="street-address" aria-describedby="sf-address-h"><p class="field__hint" id="sf-address-h">Used only to prepare comparable sales for your home.</p></div>
+<div class="form__row"><div class="field"><label class="field__label" for="sf-type">Home type</label><select class="select" id="sf-type" name="type"><option>Single-family</option><option>Condominium</option><option>Multi-family</option><option>Other</option></select></div><div class="field"><label class="field__label" for="sf-timing">Timing</label><select class="select" id="sf-timing" name="timing"><option>Within 3 months</option><option>3–6 months</option><option>6–12 months</option><option>Just curious</option></select></div></div>
+<fieldset class="choice-group"><legend class="field__label">Best way to reach you</legend><div class="choices">
+<label class="choice"><input type="radio" name="sf-pref" value="call" checked><span>Call</span></label>
+<label class="choice"><input type="radio" name="sf-pref" value="text"><span>Text</span></label>
+<label class="choice"><input type="radio" name="sf-pref" value="email"><span>Email</span></label></div></fieldset>
+<div class="field"><label class="field__label" for="sf-msg">Anything we should know? <span class="opt">(optional)</span></label><textarea class="textarea" id="sf-msg" name="msg" placeholder="Recent updates, timing, your next move…"></textarea></div>
+<p class="form-note">Your inquiry goes to Brandon and Kaitlyn and is used only to respond to your request. [Privacy policy to be published before launch.]</p>
+<div><button class="btn" type="button">Request my market review</button></div>
+</form></div>
+</div>
+</section>
+
+<section class="section fse-scope">
+<span class="fse-tag"><b>pattern</b> closing-cta (synced) · ot/cta-panel › core/heading, core/paragraph, phone, core/buttons</span>
+<div class="container"><div class="cta-panel folio-frame" style="--frame-inset: .85rem;">
+<div class="split" style="align-items: end;"><div class="stack" style="grid-column: 1 / span 7; --stack: var(--space-5);"><p class="label" style="color: var(--ot-gold);">A personal standard of service</p><h2 class="h1">For the home you have. <em>For the life you are building.</em></h2><p class="body-l" style="color: #D9D5CC; max-width: 44ch;">Buying, selling, or simply curious about your next move? We would love to be a resource.</p></div>
+<div class="stack" style="grid-column: 9 / span 4; --stack: var(--space-4);"><a class="cta-panel__phone" href="#">406-250-7620</a><p class="caption" style="color: var(--ot-mist);">Brandon &amp; Kaitlyn Oberdorfer · Husband-and-wife team · Top Producer</p><div class="cluster"><a class="btn" href="#">Request a consultation</a></div></div></div>
+</div></div>
+</section>
+</main>
+
+<dc-import name="Footer" show-tags="{{showTags}}" hint-size="100%,631px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"showTags":{"editor":"boolean","default":true,"section":"Board"},"$preview":{"width":1440,"height":4688}}'>
+class Component extends DCLogic {
+renderVals() {
+const on = this.props.showTags ?? true;
+return { showTags: on, tagClass: on ? 'show-tags' : '' };
+}
+}
+</script>
+</body>
+</html>

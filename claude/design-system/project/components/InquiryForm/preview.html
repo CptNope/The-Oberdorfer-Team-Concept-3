@@ -1,0 +1,36 @@
+<!-- @dsCard group="Forms" height=749 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>InquiryForm</title></head>
+<body class="pv-body">
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7V13M12 16V17"/></symbol></svg>
+<div class="pv">
+<div class="block__body">
+<form aria-labelledby="f-title" class="form" data-demo-form="" style="max-width:44rem">
+<h3 class="h3" id="f-title">Request a seller consultation</h3>
+<div class="form__row">
+<div class="field"><label class="field__label" for="f-name">Full name <span class="req">(required)</span></label><input aria-describedby="f-name-e" autocomplete="name" class="input" data-label="Your name" id="f-name" name="name" required=""/><p class="field__error" hidden="" id="f-name-e"><svg aria-hidden="true" class="icon"><use href="#i-alert"></use></svg><span></span></p></div>
+<div class="field"><label class="field__label" for="f-email">Email <span class="req">(required)</span></label><input aria-describedby="f-email-e" autocomplete="email" class="input" data-label="Email" id="f-email" name="email" required="" type="email"/><p class="field__error" hidden="" id="f-email-e"><svg aria-hidden="true" class="icon"><use href="#i-alert"></use></svg><span></span></p></div>
+</div>
+<div class="form__row">
+<div class="field"><label class="field__label" for="f-phone">Phone <span class="opt">(optional)</span></label><input aria-describedby="f-phone-e" autocomplete="tel" class="input" data-pattern-msg="Use digits, spaces or dashes, for example 406-250-7620." id="f-phone" name="phone" pattern="[0-9()+\-\s.]{7,}" type="tel"/><p class="field__error" hidden="" id="f-phone-e"><svg aria-hidden="true" class="icon"><use href="#i-alert"></use></svg><span></span></p></div>
+<div class="field"><label class="field__label" for="f-town">Property town</label><input autocomplete="address-level2" class="input" id="f-town" name="town" placeholder="e.g. Worcester"/></div>
+</div>
+<fieldset class="choice-group">
+<legend class="field__label">Best way to reach you</legend>
+<div class="choices">
+<label class="choice"><input checked="" name="pref" type="radio" value="call"/><span>Call</span></label>
+<label class="choice"><input name="pref" type="radio" value="text"/><span>Text</span></label>
+<label class="choice"><input name="pref" type="radio" value="email"/><span>Email</span></label>
+</div>
+</fieldset>
+<div class="field"><label class="field__label" for="f-msg">Your timing and goals <span class="opt">(optional)</span></label><textarea class="textarea" id="f-msg" name="message" placeholder="When would you like to move? Anything we should know about the home?"></textarea></div>
+<label class="check"><input name="news" type="checkbox"/><span>Also send me the seasonal <em>At Home</em> publication. Unsubscribe any time.</span></label>
+<p class="form-note">We use these details only to respond to your request. Your inquiry goes to Brandon and Kaitlyn and is not sold or shared. <span class="badge badge--verify">Privacy policy to be written</span></p>
+<div><button class="btn" type="submit">Request my consultation</button></div>
+<div data-form-status="" hidden="" role="status" tabindex="-1"></div>
+</form>
+</div>
+</div>
+</body>
+</html>

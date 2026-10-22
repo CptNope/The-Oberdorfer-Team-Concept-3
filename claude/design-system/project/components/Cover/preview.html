@@ -1,0 +1,52 @@
+<!-- @dsCard height=336 -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The-Oberdorfer-Team-Concept-3</title>
+<style>
+  html, body { margin:0; height:100%; }
+  body { background:var(--surface-page); color:var(--text-display); font-family:var(--font-sans); overflow:hidden; padding:0; }
+  .cover { position:relative; width:960px; height:336px; overflow:hidden; background:var(--surface-page); }
+  .band { position:absolute; top:0; left:0; width:960px; height:112px; }
+  .band svg { display:block; width:960px; height:112px; }
+  .deep { fill:var(--text-display); }
+  .sand { fill:var(--ot-sandstone); }
+  .gold { fill:var(--ot-gold); }
+  .pale { fill:var(--ot-gold-pale); }
+  .blk { rx:var(--radius); }
+  .frame { fill:none; stroke:var(--rule-gold); stroke-width:var(--rule); }
+  .frame.inner { opacity:.45; }
+  .dim { fill:none; stroke:var(--ot-gold-ink); stroke-width:var(--rule); }
+  .words { position:absolute; left:var(--space-6); right:var(--space-6); bottom:var(--space-6); }
+  .name { margin:0; font-family:var(--font-display); font-weight:var(--weight-display); font-size:64px; line-height:.95; letter-spacing:-0.012em; color:var(--text-display); }
+  .name span { display:block; }
+  .tag { margin:var(--space-2) 0 0 2px; font-size:14px; line-height:20px; color:var(--text-muted); max-width:440px; }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="band" aria-hidden="true">
+<svg viewBox="0 0 960 112" width="960" height="112">
+<!--
+  blocks      deep ink (text-display: ot-navy on ivory, ot-ivory on navy) 448×112 · ot-sandstone 320×112 · ot-gold 48×112 · ot-gold-pale 144×112 — a full-width band 112 tall (space-9 + space-4), 39% of 960×336
+  arrangement a strip of unequal bands bleeding off the top, the way the publication stacks its navy cover over ivory pages; widths 7 × space-8, 5 × space-8, space-7, 3 × space-7
+  pattern     editorial row ("borders not shadows", Cormorant Light, a 1px gold rule language): the folio frame (rule-gold, inset space-4 with the 6px frame-gap, inner line at .45) on the deep block, and one dimension rule with tick-high end ticks across the sandstone (ot-gold-ink) — three rules, from the p1 cover and the p7 house drawing
+  scales      space-4 / space-6 / space-7 / space-8 / space-9, frame-gap 6, tick 9, rule 1px, radius 0 (square, as in print)
+-->
+<rect class="deep blk" x="0" y="0" width="448" height="112"/>
+<rect class="sand blk" x="448" y="0" width="320" height="112"/>
+<rect class="gold blk" x="768" y="0" width="48" height="112"/>
+<rect class="pale blk" x="816" y="0" width="144" height="112"/>
+<rect class="frame" x="16.5" y="16.5" width="415" height="79"/>
+<rect class="frame inner" x="22.5" y="22.5" width="403" height="67"/>
+<path class="dim" d="M480.5 56.5H736.5M480.5 52v9M736.5 52v9"/>
+</svg>
+</div>
+<div class="words">
+<h1 class="name"><span>The-Oberdorfer-</span><span>Team-Concept-3</span></h1>
+<p class="tag">Luxury at every price point.</p>
+</div>
+</div>
+</body>
+</html>

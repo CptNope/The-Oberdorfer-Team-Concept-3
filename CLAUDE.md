@@ -61,6 +61,15 @@ The visual language evolves the team's print publication, *Wakefield at Home*, F
   - If you add a new top-level folder that pages need, add it to the workflow's `cp` line.
 - **Design workflow:** the Impeccable design skill was used. `PRODUCT.md`, `DESIGN.md` and `.impeccable/` are its project files.
 
+## Claude artifacts
+
+Two Claude artifacts are built from this repo. Their source lives in `claude/` (see `claude/README.md`); it is not published to Pages.
+
+- **Design system** ([artifact](https://claude.ai/artifact/YE21oQ5cfN4i2RqN51Wwj4)), in `claude/design-system/project/`. Rebuild it with `tools/claude/build_ds.py`, `check_ds.py` and `finalize_ds.py` after changing `tokens.css`, `components.css` or `design-system/index.html`, then republish only the changed files.
+- **FSE template boards** ([canvas](https://claude.ai/artifact/Lzv2vEyR3YjDWmhdJZxZs6)), in `claude/fse-templates/project/`. There is one board per block-theme template, annotated with its patterns and blocks. When a site page changes, update its board too; the phone boards follow the desktop ones automatically.
+- Keep the artifacts and the repo in step: a change made on an artifact's page should be read back into `claude/`, and a change here should be republished.
+- The same ground rules apply on the boards: placeholders and badges for anything unconfirmed, and sources on every market figure.
+
 ## Commits
 
 Use short imperative subjects and explain the *why* in the body. Don't commit `.impeccable/review/`, which holds local screenshots.

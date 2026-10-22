@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Header template part</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="oberdorfer-tokens.css">
+<link rel="stylesheet" href="ds/oberdorferteam/components/bundle.css">
+<link rel="stylesheet" href="fse.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&amp;family=Manrope:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="fse {{tagClass}}" style="width: 100%; font-family: var(--font-sans); color: var(--ot-ivory);">
+<header class="site-header fse-scope">
+<span class="fse-tag"><b>part</b> header · ot/site-header › core/site-logo, core/navigation (overlay menu below 1024px), core/buttons</span>
+<div class="container site-header__inner">
+<a class="site-header__brand" href="#"><img src="/_blob/8de911e34a584b74b4bda6b17d2da822" alt="The Oberdorfer Team, home" width="320" height="68" style="height: 2.1rem; width: auto;"></a>
+<nav class="nav" aria-label="Primary"><a href="#" aria-current="page">Buy</a><a href="#">Sell</a><a href="#">Communities</a><a href="#">Our Team</a><a href="#">Journal</a><a href="#">Contact</a></nav>
+<div class="site-header__actions">
+<a class="icon-btn" href="#" aria-label="Search properties"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M15.2 15.2L21 21"></path></svg></a>
+<a class="btn btn--gold btn--small" href="#">406-250-7620</a>
+<button class="icon-btn nav-toggle" type="button" aria-label="Open menu"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7H21M3 12H21M9 17H21"></path></svg></button>
+</div>
+</div>
+</header>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"showTags":{"editor":"boolean","default":true,"section":"Board"},"$preview":{"width":1440,"height":76}}'>
+class Component extends DCLogic {
+renderVals() {
+const on = this.props.showTags ?? true;
+return { tagClass: on ? 'show-tags' : '' };
+}
+}
+</script>
+</body>
+</html>

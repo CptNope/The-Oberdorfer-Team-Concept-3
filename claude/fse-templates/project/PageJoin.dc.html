@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>page-join.html · Join our team</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="oberdorfer-tokens.css">
+<link rel="stylesheet" href="ds/oberdorferteam/components/bundle.css">
+<link rel="stylesheet" href="fse.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&amp;family=Manrope:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#071d2d}a:hover{color:#7a6438}
+</style>
+</helmet>
+<div class="fse {{tagClass}}" style="width: 100%; background: var(--ot-ivory); color: var(--ot-ink); font-family: var(--font-sans);">
+
+<dc-import name="Header" show-tags="{{showTags}}" hint-size="100%,76px"></dc-import>
+
+<main id="main">
+<section class="page-hero page-hero--navy surface-inverse fse-scope" aria-labelledby="page-title">
+<span class="fse-tag"><b>pattern</b> page-hero-navy · ot/page-hero (Navy style) › core/breadcrumbs, core/post-title (.answer), core/paragraph</span>
+<div class="container page-hero__grid"><nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="#">Home</a></li><li aria-current="page">Join Our Team</li></ol></nav><h1 class="page-hero__title display-l answer" id="page-title"><span>Grow with a team</span><span>that cares how it shows up.</span></h1><p class="page-hero__lead lead">The Oberdorfer Team is growing. We are looking for agents who believe every client deserves luxury-level service, at every price point.</p></div>
+</section>
+
+<section class="section fse-scope">
+<span class="fse-tag"><b>pattern</b> leadership-letter · core/columns (7 + 4) › ot/letter (drop cap, signature) · values list</span>
+<div class="container split" style="align-items: start;">
+<div style="grid-column: 1 / span 7;" class="letter">
+<p class="label">A letter from Brandon and Kaitlyn</p>
+<p class="body-l letter__first">When we started The Oberdorfer Team, we built it on what we bring to our own family: care, honesty, hard work, and showing up for the people who count on us. As we prepare to open our team office, we want to share that standard with agents who feel the same way.</p>
+<p>Our clients range from first-time buyers to families selling a home they have loved for decades. Every one of them gets the same thoughtful presentation, clear guidance and personal attention. If that is how you want to work, we would love to talk.</p>
+<p class="signature">Brandon &amp; Kaitlyn</p>
+<p class="caption">Draft copy for the team to edit and approve.</p>
+</div>
+<div style="grid-column: 9 / span 4;" class="stack"><p class="label">What we value</p><ul class="toc-mini values-list" style="font-size: 1rem;"><li><span>Care</span></li><li><span>Honesty</span></li><li><span>Hard work</span></li><li><span>Personal service</span></li><li><span>Thoughtful guidance</span></li><li><span>Attention to detail</span></li><li><span>Creative marketing</span></li></ul></div>
+</div>
+</section>
+
+<section class="section surface-muted fse-scope">
+<span class="fse-tag"><b>pattern</b> brand-presentation · Sandstone style · ot/section-head + core/columns ×4 · bracketed placeholders until the team confirms</span>
+<div class="container">
+<div class="section-head"><div class="running-head label"><span>What you would join</span><span class="label--quiet">Join Our Team</span></div><h2 class="section-head__title display-m answer" id="j-title"><span>A brand built</span><span>on presentation.</span></h2></div>
+<div class="cols cols--4 col-rule">
+<div><h3 class="h4">The brand</h3><p class="body-s" style="margin-top: var(--space-2);">The Oberdorfer Team identity and the <em>At Home</em> publications. [What agents receive to be confirmed by the team.]</p></div>
+<div><h3 class="h4">The office</h3><p class="body-s" style="margin-top: var(--space-2);">A planned team office under REWAP Brokerage. Location and timing are being confirmed.</p></div>
+<div><h3 class="h4">Marketing and technology</h3><p class="body-s" style="margin-top: var(--space-2);">[Support details to be confirmed by the team before publication.]</p></div>
+<div><h3 class="h4">Training and mentorship</h3><p class="body-s" style="margin-top: var(--space-2);">[Program details to be confirmed by the team before publication.]</p></div>
+</div>
+<p class="form-note" style="margin-top: var(--space-6);">Compensation, splits and fees are discussed privately and are never stated on this site.</p>
+</div>
+</section>
+
+<section class="section fse-scope">
+<span class="fse-tag"><b>pattern</b> recruiting-form · core/columns (5 + 6) › core/heading · ot/inquiry-form (recruiting, confidential routing)</span>
+<div class="container split" style="align-items: start;">
+<div style="grid-column: 1 / span 5;" class="stack"><p class="label">Confidential conversation</p><h2 class="display-m answer"><span>Start with</span><span>a conversation.</span></h2><p>Your inquiry goes only to Brandon and Kaitlyn and is kept confidential.</p></div>
+<div style="grid-column: 7 / span 6;" class="panel"><form class="form" id="recruit" aria-labelledby="recruit-title">
+<h3 class="h3" id="recruit-title">Recruiting inquiry</h3>
+<div class="form__row"><div class="field"><label class="field__label" for="rf-name">Full name <span class="req">(required)</span></label><input class="input" id="rf-name" name="name" type="text" required autocomplete="name"></div><div class="field"><label class="field__label" for="rf-email">Email <span class="req">(required)</span></label><input class="input" id="rf-email" name="email" type="email" required autocomplete="email"></div></div>
+<div class="form__row"><div class="field"><label class="field__label" for="rf-phone">Phone <span class="opt">(optional)</span></label><input class="input" id="rf-phone" name="phone" type="tel" autocomplete="tel"></div></div>
+<div class="form__row"><div class="field"><label class="field__label" for="rf-licensed">Are you licensed in Massachusetts?</label><select class="select" id="rf-licensed" name="licensed"><option>Yes, salesperson</option><option>Yes, broker</option><option>In progress</option><option>Not yet</option></select></div><div class="field"><label class="field__label" for="rf-years">Years in real estate</label><select class="select" id="rf-years" name="years"><option>New to real estate</option><option>1–3</option><option>4–10</option><option>10+</option></select></div></div>
+<div class="field"><label class="field__label" for="rf-area">Where you work or live <span class="opt">(optional)</span></label><input class="input" id="rf-area" name="area" type="text" placeholder="e.g. Worcester County"></div>
+<div class="field"><label class="field__label" for="rf-msg">What are you looking for in a team? <span class="opt">(optional)</span></label><textarea class="textarea" id="rf-msg" name="msg"></textarea></div>
+<p class="form-note">Your inquiry is confidential and goes only to Brandon and Kaitlyn.</p>
+<div><button class="btn" type="button">Start the conversation</button></div>
+</form></div>
+</div>
+</section>
+</main>
+
+<dc-import name="Footer" show-tags="{{showTags}}" hint-size="100%,631px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"showTags":{"editor":"boolean","default":true,"section":"Board"},"$preview":{"width":1440,"height":3629}}'>
+class Component extends DCLogic {
+renderVals() {
+const on = this.props.showTags ?? true;
+return { showTags: on, tagClass: on ? 'show-tags' : '' };
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Phone · overlay menu</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="oberdorfer-tokens.css">
+<link rel="stylesheet" href="ds/oberdorferteam/components/bundle.css">
+<link rel="stylesheet" href="fse.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&amp;family=Manrope:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#f7f3ec}a:hover{color:#d9c9a5}
+</style>
+</helmet>
+<div class="{{tagClass}}" style="position: relative; width: 390px; height: 844px; overflow: hidden; background: var(--ot-navy); color: var(--ot-ivory); font-family: var(--font-sans);">
+<div class="mobile-menu is-open fse-scope" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu" style="position: absolute; inset: 0; display: block; clip-path: none; visibility: visible; padding: 5rem 1.25rem 1.5rem;">
+<span class="fse-tag"><b>part</b> header · core/navigation overlay (below 1024px) › nav links with sub-labels, gold call button · Escape and the close button return focus to the toggle</span>
+<button class="icon-btn mobile-menu__close" type="button" aria-label="Close menu" style="color: var(--ot-ivory);"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5L19 19M19 5L5 19"></path></svg></button>
+<ul>
+<li><a href="#">Buy <span>Search homes</span></a></li>
+<li><a href="#">Sell <span>Market review</span></a></li>
+<li><a href="#">Communities</a></li>
+<li><a href="#">Our Team</a></li>
+<li><a href="#">Journal</a></li>
+<li><a href="#">Join Our Team</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+<div class="mobile-menu__foot"><a class="btn btn--gold" href="#">Call 406-250-7620</a><p class="caption" style="color: var(--ot-mist);">Brandon &amp; Kaitlyn Oberdorfer · Husband-and-wife team</p></div>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"showTags":{"editor":"boolean","default":false,"section":"Board"},"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+const on = this.props.showTags ?? false;
+return { tagClass: on ? 'fse show-tags' : 'fse' };
+}
+}
+</script>
+</body>
+</html>

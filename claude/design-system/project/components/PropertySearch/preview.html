@@ -1,0 +1,25 @@
+<!-- @dsCard group="Search" height=327 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>PropertySearch</title></head>
+<body class="pv-body">
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.2 15.2L21 21"/></symbol></svg>
+<div class="pv">
+<div class="pv-stack"><div><form aria-label="Property search (demo)" class="search-bar" onsubmit="return false" role="search">
+<div class="field"><label class="field__label" for="q">Location</label><input autocomplete="off" class="input" id="q" placeholder="Town, neighborhood or ZIP" type="text"/></div>
+<div class="field"><label class="field__label" for="pmin">Price</label><select class="select" id="pmin"><option>Any price</option><option>Up to $500k</option><option>$500k – $800k</option><option>$800k – $1.2M</option><option>$1.2M +</option></select></div>
+<div class="field"><label class="field__label" for="beds">Beds</label><select class="select" id="beds"><option>Any</option><option>2+</option><option>3+</option><option>4+</option></select></div>
+<div class="field"><label class="field__label" for="type">Home type</label><select class="select" id="type"><option>All types</option><option>Single-family</option><option>Condominium</option><option>Multi-family</option></select></div>
+<button class="btn" type="submit"><svg aria-hidden="true" class="icon"><use href="#i-search"></use></svg>Search</button>
+</form></div>
+<div><div aria-label="Quick filters (demo)" class="filters" role="group" style="margin-top:var(--space-5)">
+<span class="caption" style="margin-right:var(--space-2)">Refine</span>
+<label class="choice"><input checked="" type="checkbox"/><span>Open houses</span></label>
+<label class="choice"><input type="checkbox"/><span>New this week</span></label>
+<label class="choice"><input type="checkbox"/><span>Near commuter rail</span></label>
+<label class="choice"><input type="checkbox"/><span>Price reduced</span></label>
+</div></div>
+<div><p class="form-note" style="margin-top:var(--space-5)">The IDX provider has not been selected yet, and the team cannot assume it may use the principal brokerage's MLS permissions. Styling flexibility varies by provider.</p></div></div>
+</div>
+</body>
+</html>

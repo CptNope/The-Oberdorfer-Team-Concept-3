@@ -187,6 +187,8 @@ PRODUCT.md                 Product truth (users, positioning, evidence, constrai
 DESIGN.md                  Visual system record
 CLAUDE.md                  Instructions for Claude and other agents
 .claude/settings.json      Claude Code project permissions
+claude/                    Source of the Claude artifacts (design system, FSE template boards)
+tools/claude/              Rebuild scripts for the design-system artifact
 .impeccable/               Design-tool project files (direction contract, tokens)
 ```
 
@@ -267,6 +269,10 @@ The full checklist is in [Brand book › Governance](brand-book/index.html#gover
 |---|---|
 | [`CLAUDE.md`](CLAUDE.md) | Ground rules and how-to for any Claude session or agent working here |
 | [`.claude/settings.json`](.claude/settings.json) | Claude Code permissions for the build, preview and screenshot commands |
+| [`claude/`](claude/README.md) | Source of the two Claude artifacts, kept in step with the repo |
+| [`claude/design-system/`](claude/design-system/) | The [Claude Design System](https://claude.ai/artifact/YE21oQ5cfN4i2RqN51Wwj4): tokens, brand book, 47 component previews, asset notes |
+| [`claude/fse-templates/`](claude/fse-templates/) | The [FSE template boards](https://claude.ai/artifact/Lzv2vEyR3YjDWmhdJZxZs6): template map, header and footer parts, 14 templates at 1440px, 7 phone boards |
+| [`tools/claude/`](tools/claude/) | Scripts that rebuild the design-system artifact from the CSS and documentation |
 | [`PRODUCT.md`](PRODUCT.md) | Product context: users, positioning, confirmed facts, what must not be invented |
 | [`DESIGN.md`](DESIGN.md) | Visual system record |
 | [`.impeccable/design.json`](.impeccable/design.json) | Machine-readable token summary |

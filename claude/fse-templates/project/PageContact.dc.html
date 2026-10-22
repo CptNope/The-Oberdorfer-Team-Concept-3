@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>page-contact.html · Contact</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="oberdorfer-tokens.css">
+<link rel="stylesheet" href="ds/oberdorferteam/components/bundle.css">
+<link rel="stylesheet" href="fse.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&amp;family=Manrope:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#071d2d}a:hover{color:#7a6438}
+</style>
+</helmet>
+<div class="fse {{tagClass}}" style="width: 100%; background: var(--ot-ivory); color: var(--ot-ink); font-family: var(--font-sans);">
+<svg width="0" height="0" style="position: absolute;" aria-hidden="true"><defs>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M7.5 3H4.5V5.5C4.5 13.5 10.5 19.5 18.5 19.5H21V16.5L17 15L15.2 16.8C12 15.4 8.6 12 7.2 8.8L9 7Z"></path></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 5.5H21V18.5H3Z"></path><path d="M3 6L12 13L21 6"></path></symbol>
+<symbol id="i-door" viewBox="0 0 24 24"><path d="M5 21V3H19V21M3 21H21"></path><path d="M15 12V13"></path></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21C12 21 5 14.5 5 9.5A7 7 0 0 1 19 9.5C19 14.5 12 21 12 21Z"></path><circle cx="12" cy="9.5" r="2.5"></circle></symbol>
+</defs></svg>
+
+<dc-import name="Header" show-tags="{{showTags}}" hint-size="100%,76px"></dc-import>
+
+<main id="main">
+<section class="page-hero fse-scope" aria-labelledby="page-title">
+<span class="fse-tag"><b>pattern</b> page-hero · ot/page-hero › core/breadcrumbs, core/post-title (.answer), core/paragraph</span>
+<div class="container page-hero__grid"><nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="#">Home</a></li><li aria-current="page">Contact</li></ol></nav><h1 class="page-hero__title display-l answer" id="page-title"><span>We would love</span><span>to hear from you.</span></h1><p class="page-hero__lead lead">Call, text or send a message. Your inquiry goes to Brandon and Kaitlyn.</p></div>
+</section>
+
+<section class="section fse-scope">
+<span class="fse-tag"><b>pattern</b> contact-tabs · core/columns › phone, ot/contact-lines ×4 · ot/tabs (General, Buying, Selling, Joining) › ot/inquiry-form per tab, each routed separately</span>
+<div class="container contact-grid">
+<div class="stack" style="--stack: var(--space-6);">
+<a class="cta-panel__phone" href="#" style="color: var(--ot-navy); font-size: var(--step-display-m);">406-250-7620</a>
+<div>
+<div class="contact-line"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg><div><p class="h5">Call or text</p><p class="body-s">Brandon &amp; Kaitlyn Oberdorfer · <a href="#">406-250-7620</a></p></div></div>
+<div class="contact-line"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg><div><p class="h5">Email</p><p class="body-s">[Team email to be confirmed]</p></div></div>
+<div class="contact-line"><svg class="icon" aria-hidden="true"><use href="#i-door"></use></svg><div><p class="h5">Team office</p><p class="body-s">Planned. <a href="#">Details as they are confirmed</a>.</p></div></div>
+<div class="contact-line"><svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg><div><p class="h5">Service area</p><p class="body-s">Massachusetts</p></div></div>
+</div>
+</div>
+<div class="panel">
+<div class="tabs" role="tablist" aria-label="Type of inquiry"><button role="tab" id="tab-general" aria-controls="panel-general" aria-selected="true" tabindex="0" type="button">General</button><button role="tab" id="tab-buyer" aria-selected="false" tabindex="-1" type="button">Buying</button><button role="tab" id="tab-seller" aria-selected="false" tabindex="-1" type="button">Selling</button><button role="tab" id="tab-recruit" aria-selected="false" tabindex="-1" type="button">Joining the team</button></div>
+<div class="tabpanel" role="tabpanel" id="panel-general" aria-labelledby="tab-general"><form class="form" id="cg" aria-labelledby="cg-title">
+<h2 class="h3" id="cg-title">Send a message</h2>
+<div class="form__row"><div class="field"><label class="field__label" for="cg-name">Full name <span class="req">(required)</span></label><input class="input" id="cg-name" name="name" type="text" required autocomplete="name"></div><div class="field"><label class="field__label" for="cg-email">Email <span class="req">(required)</span></label><input class="input" id="cg-email" name="email" type="email" required autocomplete="email"></div></div>
+<div class="form__row"><div class="field"><label class="field__label" for="cg-phone">Phone <span class="opt">(optional)</span></label><input class="input" id="cg-phone" name="phone" type="tel" autocomplete="tel"></div></div>
+<div class="field"><label class="field__label" for="cg-msg">How can we help? <span class="req">(required)</span></label><textarea class="textarea" id="cg-msg" name="msg" required></textarea></div>
+<fieldset class="choice-group"><legend class="field__label">Best way to reach you</legend><div class="choices">
+<label class="choice"><input type="radio" name="cg-pref" value="call" checked><span>Call</span></label>
+<label class="choice"><input type="radio" name="cg-pref" value="text"><span>Text</span></label>
+<label class="choice"><input type="radio" name="cg-pref" value="email"><span>Email</span></label></div></fieldset>
+<p class="form-note">Your inquiry goes to Brandon and Kaitlyn and is used only to respond to your request. [Privacy policy to be published before launch.]</p>
+<div><button class="btn" type="button">Send my message</button></div>
+</form></div>
+</div>
+</div>
+</section>
+
+<section class="section surface-muted fse-scope">
+<span class="fse-tag"><b>pattern</b> privacy-notes · Sandstone style · core/columns ×3 (anchors #privacy, #accessibility, #fair-housing linked from the footer)</span>
+<div class="container cols cols--3 col-rule body-s">
+<div id="privacy"><h2 class="h4">Privacy</h2><p style="margin-top: var(--space-2);">Form details are used only to respond to your request and are never sold. [Full privacy policy to be written and approved before launch.]</p></div>
+<div id="accessibility"><h2 class="h4">Accessibility</h2><p style="margin-top: var(--space-2);">This site is designed to meet WCAG 2.2 AA. If anything is hard to use, call 406-250-7620 and we will help.</p></div>
+<div id="fair-housing"><h2 class="h4">Fair housing</h2><p style="margin-top: var(--space-2);">The Oberdorfer Team and REWAP Brokerage LLC are committed to the Fair Housing Act and Equal Housing Opportunity. [Required Massachusetts notices to be supplied by the principal broker.]</p></div>
+</div>
+</section>
+</main>
+
+<dc-import name="Footer" show-tags="{{showTags}}" hint-size="100%,631px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"showTags":{"editor":"boolean","default":true,"section":"Board"},"$preview":{"width":1440,"height":2631}}'>
+class Component extends DCLogic {
+renderVals() {
+const on = this.props.showTags ?? true;
+return { showTags: on, tagClass: on ? 'show-tags' : '' };
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>page-market.html · Market insights</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="oberdorfer-tokens.css">
+<link rel="stylesheet" href="ds/oberdorferteam/components/bundle.css">
+<link rel="stylesheet" href="fse.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&amp;family=Manrope:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#071d2d}a:hover{color:#7a6438}
+</style>
+</helmet>
+<div class="fse {{tagClass}}" style="width: 100%; background: var(--ot-ivory); color: var(--ot-ink); font-family: var(--font-sans);">
+<svg width="0" height="0" style="position: absolute;" aria-hidden="true"><defs>
+<symbol id="i-arrow" viewBox="0 0 34 12"><path d="M0 6H32M27 1L32 6L27 11"></path></symbol>
+</defs></svg>
+
+<dc-import name="Header" show-tags="{{showTags}}" hint-size="100%,76px"></dc-import>
+
+<main id="main">
+<section class="page-hero fse-scope" aria-labelledby="page-title">
+<span class="fse-tag"><b>pattern</b> page-hero · ot/page-hero › core/breadcrumbs, core/post-title (.answer), core/paragraph</span>
+<div class="container page-hero__grid"><nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="#">Home</a></li><li aria-current="page">Market insights</li></ol></nav><h1 class="page-hero__title display-l answer" id="page-title"><span>Know the market.</span><span>Love the home.</span></h1><p class="page-hero__lead lead">A useful snapshot helps you ask better questions. A thoughtful comparison helps you make better decisions.</p></div>
+</section>
+
+<section class="section fse-scope">
+<span class="fse-tag"><b>pattern</b> market-stats · core/columns (7 + 4) › ot/market-stats (source, period, geography fields required) · core/heading, core/paragraph</span>
+<div class="container split" style="align-items: start;">
+<div style="grid-column: 1 / span 7;">
+<p class="label" style="margin-bottom: var(--space-3);">Data through August 2026 / All home types / Wakefield</p>
+<div class="stat-panel">
+<div class="stat"><span class="stat__value tabular">$786,979</span><span class="stat__label">Median sale price</span><span class="stat__period">3 months ending August 2026</span></div>
+<div class="stat"><span class="stat__value tabular">21</span><span class="stat__label">Median days on market</span><span class="stat__period">August 2026</span></div>
+<div class="stat"><span class="stat__value tabular">$483</span><span class="stat__label">Median sold price / sq. ft.</span><span class="stat__period">Redfin rolling 3-month snapshot</span></div>
+<div class="stat"><span class="stat__value tabular">103.3%</span><span class="stat__label">Sale-to-list price</span><span class="stat__period">August 2026</span></div>
+</div>
+<p class="stat-source">Source: Redfin, Wakefield Housing Market, accessed October 10, 2026. Geography: Wakefield town; all home types. Price and price-per-square-foot use the site's rolling snapshot; days on market and sale-to-list are displayed for August 2026. Figures may be revised; this is not a valuation of an individual home.</p>
+</div>
+<div style="grid-column: 9 / span 4;" class="stack">
+<h2 class="h3">What these numbers can tell you</h2>
+<p class="body-s">The townwide median is a starting point. Your best comparisons are recent closed sales that resemble your property in location, size, condition, and style. A condo, an older single-family home, and a newly built residence can tell very different stories.</p>
+<p class="caption">Market reports for other Massachusetts communities will be added as the team publishes them, each with its own source and date.</p>
+</div>
+</div>
+</section>
+
+<section class="section surface-muted fse-scope">
+<span class="fse-tag"><b>pattern</b> sold-vs-asking · Sandstone style · core/columns ×3 (rule between) › core/heading, core/paragraph, core/buttons</span>
+<div class="container"><div class="cols cols--3 col-rule">
+<div><h2 class="h4">Sold vs. asking</h2><p class="body-s" style="margin-top: var(--space-2);">A listing price is a seller's starting point. A closed sale shows what a buyer actually paid.</p></div>
+<div><h2 class="h4">Beyond square feet</h2><p class="body-s" style="margin-top: var(--space-2);">Lot size, renovation quality, layout, parking, and condominium fees all belong in the comparison.</p></div>
+<div><h2 class="h4">Your next step</h2><p class="body-s" style="margin-top: var(--space-2);">Ask for a property-specific market review before deciding what to offer or where to price.</p><a class="link-arrow" href="#">Request a review <svg class="icon" aria-hidden="true" viewBox="0 0 34 12"><use href="#i-arrow"></use></svg></a></div>
+</div></div>
+</section>
+
+<section class="section fse-scope">
+<span class="fse-tag"><b>pattern</b> closing-cta (variant: market review) · ot/cta-panel</span>
+<div class="container"><div class="cta-panel folio-frame" style="--frame-inset: .85rem;">
+<div class="split" style="align-items: end;"><div class="stack" style="grid-column: 1 / span 7; --stack: var(--space-5);"><p class="label" style="color: var(--ot-gold);">Property-specific market review</p><h2 class="h1">Ready for a personal plan? <em>Call Brandon and Kaitlyn.</em></h2><p class="body-l" style="color: #D9D5CC; max-width: 44ch;">Buying, selling, or simply curious about your next move? We would love to be a resource.</p></div>
+<div class="stack" style="grid-column: 9 / span 4; --stack: var(--space-4);"><a class="cta-panel__phone" href="#">406-250-7620</a><p class="caption" style="color: var(--ot-mist);">Brandon &amp; Kaitlyn Oberdorfer · Husband-and-wife team · Top Producer</p><div class="cluster"><a class="btn" href="#">Request a consultation</a></div></div></div>
+</div></div>
+</section>
+</main>
+
+<dc-import name="Footer" show-tags="{{showTags}}" hint-size="100%,631px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"showTags":{"editor":"boolean","default":true,"section":"Board"},"$preview":{"width":1440,"height":2925}}'>
+class Component extends DCLogic {
+renderVals() {
+const on = this.props.showTags ?? true;
+return { showTags: on, tagClass: on ? 'show-tags' : '' };
+}
+}
+</script>
+</body>
+</html>

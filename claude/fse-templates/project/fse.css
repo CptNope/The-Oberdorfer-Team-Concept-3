@@ -1,0 +1,18 @@
+/* Board furniture: block annotations for the FSE template boards. Not part of the theme. */
+.fse { position: relative; }
+.fse-scope { position: relative; outline: 1px dashed rgba(31, 79, 209, 0.6); outline-offset: -1px; }
+.fse-tag {
+  position: absolute; top: 8px; left: 8px; z-index: 40;
+  display: inline-flex; flex-wrap: wrap; gap: 4px 8px; align-items: baseline;
+  max-width: calc(100% - 16px); padding: 5px 9px;
+  background: #1f4fd1; color: #ffffff;
+  font: 600 11px/1.35 ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  letter-spacing: 0; text-transform: none; text-align: left; white-space: normal;
+  pointer-events: none;
+}
+.fse-tag b { font-weight: 700; color: #dfe7ff; }
+.fse:not(.show-tags) .fse-tag { display: none; }
+.fse:not(.show-tags) .fse-scope { outline: 0; }
+.fse .site-header { position: relative; }
+.fse .mobile-menu { display: none; }
+.fse .reveal, .fse .reveal-rule { opacity: 1; transform: none; }

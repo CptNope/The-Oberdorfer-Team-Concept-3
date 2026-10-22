@@ -1,2 +1,9 @@
 .impeccable/review/
 .DS_Store
+
+# Claude artifact build scratch (render checks, uploaded binary copies)
+claude/design-system/check/
+claude/design-system/project/assets/**/*.svg
+claude/design-system/project/assets/**/*.webp
+claude/design-system/project/assets/**/*.png
+claude/design-system/project/assets/**/*.pdf

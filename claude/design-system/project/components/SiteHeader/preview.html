@@ -1,0 +1,72 @@
+<!-- @dsCard group="Navigation" height=1376 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>SiteHeader</title></head>
+<body class="pv-body">
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 7H21M3 12H21M9 17H21"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.2 15.2L21 21"/></symbol></svg>
+<div class="pv">
+<div class="block block--wide"><div class="block__body stack" style="--stack:var(--space-6)">
+<figure class="stack" style="--stack:var(--space-2)"><figcaption class="caption">Solid navy · default</figcaption>
+<div class="header-demo">
+<header aria-label="Example header, solid" class="site-header">
+<div class="container site-header__inner">
+<a class="site-header__brand" href="#navigation"><img alt="The Oberdorfer Team" height="68" src="/_blob/ce0fb29dda2e1a4932cbcfd13f0c8b69" style="height:2.2rem" width="320"/></a>
+<nav aria-label="Example primary" class="nav"><a aria-current="page" href="#navigation">Buy</a><a href="#navigation">Sell</a><a href="#navigation">Communities</a><a href="#navigation">Our Team</a><a href="#navigation">Journal</a><a href="#navigation">Join Our Team</a><a href="#navigation">Contact</a></nav>
+<div class="site-header__actions">
+<button aria-label="Search properties" class="icon-btn" type="button"><svg aria-hidden="true" class="icon"><use href="#i-search"></use></svg></button>
+<a class="btn btn--gold btn--small" href="tel:+14062507620">406-250-7620</a>
+<button aria-label="Open menu" class="icon-btn nav-toggle" type="button"><svg aria-hidden="true" class="icon"><use href="#i-menu"></use></svg></button>
+</div>
+</div>
+</header>
+</div>
+</figure>
+<figure class="stack" style="--stack:var(--space-2)"><figcaption class="caption">Transparent over hero (<code>.site-header--overlay</code>), turns solid after 40px of scroll</figcaption>
+<div class="header-demo overlay-demo">
+<header aria-label="Example header, overlay" class="site-header">
+<div class="container site-header__inner">
+<a class="site-header__brand" href="#navigation"><img alt="The Oberdorfer Team" height="40" src="/_blob/a416dc01bd11396f91132b4ca8a05e8a" style="height:1.6rem" width="300"/></a>
+<nav aria-label="Example overlay" class="nav"><a href="#navigation">Buy</a><a href="#navigation">Sell</a><a href="#navigation">Communities</a><a href="#navigation">Our Team</a><a href="#navigation">Journal</a><a href="#navigation">Contact</a></nav>
+<div class="site-header__actions"><button aria-label="Search properties" class="icon-btn" type="button"><svg aria-hidden="true" class="icon"><use href="#i-search"></use></svg></button><button aria-label="Open menu" class="icon-btn nav-toggle" type="button"><svg aria-hidden="true" class="icon"><use href="#i-menu"></use></svg></button></div>
+</div>
+</header>
+</div>
+</figure>
+<figure class="stack" style="--stack:var(--space-2)"><figcaption class="caption">Light (<code>.site-header--light</code>), for editorial and journal pages</figcaption>
+<div class="header-demo">
+<header aria-label="Example header, light" class="site-header site-header--light">
+<div class="container site-header__inner">
+<a class="site-header__brand" href="#navigation"><img alt="The Oberdorfer Team" height="68" src="/_blob/66c0c45e0e7ac17e7d5e8428aa495dde" style="height:2.2rem" width="320"/></a>
+<nav aria-label="Example light" class="nav"><a href="#navigation">Buy</a><a href="#navigation">Sell</a><a href="#navigation">Communities</a><a href="#navigation">Our Team</a><a aria-current="page" href="#navigation">Journal</a><a href="#navigation">Contact</a></nav>
+<div class="site-header__actions"><button aria-label="Search properties" class="icon-btn" type="button"><svg aria-hidden="true" class="icon"><use href="#i-search"></use></svg></button><a class="btn btn--small" href="#navigation">Contact</a><button aria-label="Open menu" class="icon-btn nav-toggle" type="button"><svg aria-hidden="true" class="icon"><use href="#i-menu"></use></svg></button></div>
+</div>
+</header>
+</div>
+</figure>
+<div class="cols" style="align-items:start">
+<div aria-label="Mobile menu preview" class="phone" role="img">
+<div class="phone__screen">
+<div aria-hidden="true" class="mobile-menu is-open">
+<ul>
+<li><a href="#navigation" tabindex="-1">Buy <span>Search homes</span></a></li>
+<li><a href="#navigation" tabindex="-1">Sell <span>Market review</span></a></li>
+<li><a href="#navigation" tabindex="-1">Communities</a></li>
+<li><a href="#navigation" tabindex="-1">Our Team</a></li>
+<li><a href="#navigation" tabindex="-1">Journal</a></li>
+<li><a href="#navigation" tabindex="-1">Join Our Team</a></li>
+<li><a href="#navigation" tabindex="-1">Contact</a></li>
+</ul>
+<div class="mobile-menu__foot"><span class="btn btn--gold">Call 406-250-7620</span></div>
+</div>
+</div>
+</div>
+<div class="prose body-s">
+<h3 class="h4">Mobile menu</h3>
+<p>A full-screen navy sheet that opens with a top-down clip reveal. Links are set at 30px Cormorant, so the menu reads like a table of contents rather than a list of buttons.</p>
+<ul><li>The toggle has <code>aria-expanded</code>. Escape closes the menu and returns focus to the toggle.</li><li>Content behind the menu is made <code>inert</code> while it is open.</li><li>The call button stays in the thumb zone at the bottom.</li><li>Under reduced motion, the menu appears without the wipe.</li></ul>
+</div>
+</div>
+</div></div>
+</div>
+</body>
+</html>

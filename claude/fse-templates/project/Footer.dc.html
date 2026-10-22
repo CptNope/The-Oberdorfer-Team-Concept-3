@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Footer template part</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="oberdorfer-tokens.css">
+<link rel="stylesheet" href="ds/oberdorferteam/components/bundle.css">
+<link rel="stylesheet" href="fse.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&amp;family=Manrope:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="fse {{tagClass}}" style="width: 100%; font-family: var(--font-sans); color: #e4e0d8;">
+<footer class="site-footer fse-scope">
+<span class="fse-tag"><b>part</b> footer · ot/site-footer › core/columns: core/image (logo), core/paragraph, ot/newsletter · core/navigation ×3 (Explore, Team, Read) · ot/attribution (REWAP plate, disclosures, EHO)</span>
+<div class="container">
+<div class="site-footer__grid">
+<div class="stack" style="--stack: var(--space-5);">
+<img src="/_blob/d66616dec874ee4eed1cd5e5e7342802" alt="The Oberdorfer Team" width="300" height="40" style="width: 17rem; height: auto;">
+<p class="body-s" style="max-width: 30ch;">Luxury at every price point. For the home you have. For the life you are building.</p>
+<a class="cta-panel__phone" href="#" style="font-size: 2rem;">406-250-7620</a>
+<form class="newsletter" style="color: var(--ot-ivory);" aria-label="Seasonal publication sign-up"><label class="visually-hidden" for="f-news">Email address</label><input class="input" id="f-news" type="email" autocomplete="email" placeholder="Email for the At Home issues" style="color: var(--ot-ivory);"><button class="btn btn--small" type="button">Subscribe</button></form>
+</div>
+<div><h2>Explore</h2><ul><li><a href="#">Buy a home</a></li><li><a href="#">Sell your home</a></li><li><a href="#">Market insights</a></li><li><a href="#">Communities</a></li></ul></div>
+<div><h2>Team</h2><ul><li><a href="#">Meet the team</a></li><li><a href="#">Brandon &amp; Kaitlyn</a></li><li><a href="#">Join our team</a></li><li><a href="#">Team office</a></li></ul></div>
+<div><h2>Read</h2><ul><li><a href="#">Journal</a></li><li><a href="#">At Home archive</a></li><li><a href="#">Contact</a></li></ul></div>
+</div>
+<div class="attribution">
+<div class="attribution__plate"><img src="/_blob/7ea1d8564b51015dbe9061435f252bec" alt="REWAP Brokerage" width="900" height="300"><small>Real Estate Wealth Acquisition and Preservation Brokerage</small></div>
+<div class="stack" style="--stack: var(--space-3);">
+<p class="disclosure"><strong>The Oberdorfer Team</strong> is a real estate team operating under <strong>REWAP Brokerage LLC</strong>, Massachusetts. Brokerage license number, required team disclosures and office address [to be supplied and approved by the principal broker]. Listing information is provided by [MLS name] and is deemed reliable but not guaranteed.</p>
+<p class="eho"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11L12 4L21 11M5 9.5V20H19V9.5"></path><path d="M9 12H15M9 15.5H15"></path></svg>Equal Housing Opportunity</p>
+<p class="disclosure">© 2026 The Oberdorfer Team · <a href="#">Privacy</a> · <a href="#">Accessibility</a> · <a href="#">Fair housing</a></p>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"showTags":{"editor":"boolean","default":true,"section":"Board"},"$preview":{"width":1440,"height":631}}'>
+class Component extends DCLogic {
+renderVals() {
+const on = this.props.showTags ?? true;
+return { tagClass: on ? 'show-tags' : '' };
+}
+}
+</script>
+</body>
+</html>
