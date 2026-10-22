@@ -13,7 +13,8 @@
   "answer": "Shrewsbury is a Worcester County town of 38,325 people (2020 Census), across Lake Quinsigamond from Worcester. Single-family homes grew along its 19th-century streetcar routes, and The Warren Group counted 234 single-family sales in 2025. I-290, Route 9, Route 20 and Route 140 cross the town; the nearest commuter rail stops are in neighboring Worcester, Grafton and Westborough.",
   "overview": [
     "Shrewsbury sits just east of Worcester, with Lake Quinsigamond between them; I-290 crosses the water into town. Shrewsbury was incorporated in 1727 and grew along the old Boston Post Road, where two milestones from 1767 still stand. In the 19th century, streetcar lines helped single-family housing spread outward from the center, while the lakeshore filled with cottages and a summer resort season. The White City amusement park once stood by the lake; a shopping plaza holds the site today.",
-    "Main Street is the town's historic spine. The General Artemas Ward House Museum, a Harvard-affiliated house museum at 786 Main Street, opens for free guided tours from mid-April through November, across the road from Dean Park and its trails. Prospect Park adds 71 acres of forest paths, Jordan Pond has about 0.8 miles of trails, and Ski Ward at 1000 Main Street runs skiing, snowboarding and tubing through the year. The public library moved into a new 42,000-square-foot building in 2016."
+    "Main Street is the town's historic spine. The General Artemas Ward House Museum, a Harvard-affiliated house museum at 786 Main Street, opens for free guided tours from mid-April through November, across the road from Dean Park and its trails. Prospect Park adds 71 acres of forest paths, Jordan Pond has about 0.8 miles of trails, and Ski Ward at 1000 Main Street runs skiing, snowboarding and tubing through the year. The public library moved into a new 42,000-square-foot building in 2016.",
+    "Lake Quinsigamond, about 4 miles long and 772 acres, lies between Shrewsbury and Worcester, and getting across it shaped the town. A floating bridge served from 1817 to 1861, an earthen causeway opened in 1863, and a stone, cement and steel bridge replaced the causeway in 1919; most building on the lake's southern shores came after the causeway was finished. Competitive rowing on the lake dates to 1857, and it hosts college regattas including the Eastern Sprints. On the Shrewsbury side, the town lists the Donahue Rowing Center and the Corazzini Boat Ramp on North Quinsigamond Avenue and a second ramp at Oak Island on Route 20."
   ],
   "housing": {
     "text": "Streetcar routes in the 19th century propelled the growth of single-family housing in Shrewsbury, and lakeside cottages were built along Lake Quinsigamond. The Warren Group recorded 234 single-family sales in town in 2025.",
@@ -44,6 +45,11 @@
       "name": "Shrewsbury Village",
       "line": "The Old Shrewsbury Village area near Valente Drive on the Route 20 corridor.",
       "source": "https://www.mass.gov/doc/master-plan-part-1/download"
+    },
+    {
+      "name": "Shrewsbury Historic District",
+      "line": "About 14 acres around the common laid out in 1721 at Main and Prospect Streets, with the 1766 First Congregational Church, an 1830 brick schoolhouse now used for town offices and the historical society, the 1797 Sumner House and the 1903 library building; listed on the National Register in 1976.",
+      "source": "https://en.wikipedia.org/wiki/Shrewsbury_Historic_District_(Shrewsbury,_Massachusetts)"
     }
   ],
   "commute": {
@@ -100,6 +106,16 @@
       "name": "Lake Quinsigamond",
       "line": "The lake on the Worcester line, crossed by I-290, with a long history of lakeside cottages.",
       "source": "https://en.wikipedia.org/wiki/Shrewsbury,_Massachusetts"
+    },
+    {
+      "name": "Corazzini Boat Ramp and Donahue Rowing Center",
+      "line": "Town-listed lake facilities on North Quinsigamond Avenue, on the Shrewsbury shore of Lake Quinsigamond.",
+      "source": "https://shrewsburyma.gov/413/Parks-Recreation-Facilities"
+    },
+    {
+      "name": "Oak Island Boat Ramp",
+      "line": "A second town boat ramp on the lake, on Route 20 across from Edgemere Boulevard.",
+      "source": "https://shrewsburyma.gov/413/Parks-Recreation-Facilities"
     }
   ],
   "history": [
@@ -153,7 +169,11 @@
     {
       "q": "Which school district serves Shrewsbury?",
       "a": "Shrewsbury Public Schools. Review its profile with DESE."
+    },
+    {
+      "q": "How do you cross Lake Quinsigamond between Shrewsbury and Worcester?",
+      "a": "Route 9 crosses on the Kenneth F. Burns Memorial Bridge, a pair of steel arch structures that opened in 2015, and I-290 crosses on its own bridge at the north end of the lake."
     }
   ],
-  "notes": "Condo rows could not be read (both condo fetches truncated at 'BROOKLI'), so condo fields are null. The village and area names come from the MassDOT Shrewsbury Route 20 Corridor Master Plan, which names them but gives little description, so lines are kept to location. Wikipedia names no villages. Single-family sales fell 21.7 percent from 2024 to 2025 per the Warren Group; the reason is not given. Ward House operator is inferred from Harvard branding on wardhouse.harvard.edu, hence 'Harvard-affiliated'. Northborough and Boylston as neighbors come from the Route 20 corridor study and the I-290 route description."
+  "notes": "Condo rows could not be read (both condo fetches truncated at 'BROOKLI'), so condo fields are null. The village and area names come from the MassDOT Shrewsbury Route 20 Corridor Master Plan, which names them but gives little description, so lines are kept to location. Wikipedia names no villages. Single-family sales fell 21.7 percent from 2024 to 2025 per the Warren Group; the reason is not given. Ward House operator is inferred from Harvard branding on wardhouse.harvard.edu, hence 'Harvard-affiliated'. Northborough and Boylston as neighbors come from the Route 20 corridor study and the I-290 route description. Deepened 2026-10-22: added an overview paragraph on Lake Quinsigamond's crossings, shoreline and rowing (source: https://en.wikipedia.org/wiki/Lake_Quinsigamond, plus the town parks list at https://shrewsburyma.gov/413/Parks-Recreation-Facilities for the facilities); places Corazzini Boat Ramp and Donahue Rowing Center, and Oak Island Boat Ramp; the Shrewsbury Historic District as a village; an FAQ on the lake crossings (source: Lake Quinsigamond Wikipedia article). Unverified: the town parks page gives addresses only, no descriptions or hours, so the lines are kept to location; whether the 2016 library replaced or incorporated the 1903 building is not stated in the district article. MBTA Communities status was not added because no town or state page confirming it could be opened."
 }

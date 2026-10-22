@@ -13,7 +13,8 @@
   "answer": "Reading is a Middlesex County town of 25,518 people (2020 Census) whose housing is mostly single-family, with a large share built before 1960. It grew around a traditional New England common and keeps conservation land such as the Town Forest. Reading station on the MBTA Haverhill Line runs to Boston's North Station, and I-93 and I-95/Route 128 cross the town.",
   "overview": [
     "Reading began as an inland plantation for settlers from Lynn and was incorporated in 1644. Over the next two centuries it gave up land to form its neighbors: the parish to the south became South Reading and was renamed Wakefield in 1868, and the land north of the Ipswich River became North Reading in 1853. What remains centers on the Common, where Main and Salem Streets meet, framed by the First Congregational Church, the public library and the town hall.",
-    "The railroad reached Reading in 1845, and Woburn Street shows what followed: Queen Anne and Colonial Revival houses on well-proportioned lots along a tree-lined stretch, now a historic district. Around the built-up streets, Reading keeps a web of conservation land, from the Town Forest, its largest, to Bare Meadow and the Aberjona River Headwaters Trail through the Maillet Conservation Area."
+    "The railroad reached Reading in 1845, and Woburn Street shows what followed: Queen Anne and Colonial Revival houses on well-proportioned lots along a tree-lined stretch, now a historic district. Around the built-up streets, Reading keeps a web of conservation land, from the Town Forest, its largest, to Bare Meadow and the Aberjona River Headwaters Trail through the Maillet Conservation Area.",
+    "Downtown Reading has been zoned for housing above and beside its shops since November 2009, when the town adopted a Downtown Smart Growth District under the state's Chapter 40R; Town Meeting added about 21 acres to it in 2017. Projects built under it include Oaktree on Haven Street, with 53 units over ground-floor retail, Postmark Square, which turned the historic post office into 50 ownership units, and 55 units at 20-24 Gould Street, completed in 2021. A second 40R district, the Gateway district at the southern town line near I-95 and Main Street, holds Reading Woods, 424 units on a former Addison-Wesley office site. In November 2024 Town Meeting approved zoning under the state's MBTA Communities law covering downtown and a smaller area near Summit Towers."
   ],
   "housing": {
     "text": "Reading's 2023 Housing Production Plan describes the housing stock as primarily single-family, at 76.7% of units, with 84.6% owner occupied. Over half of the homes were built before 1960, and about a third before 1940. The downtown area holds a number of multi-family, affordable and public housing developments.",
@@ -33,6 +34,11 @@
     {
       "name": "Downtown",
       "line": "The retail and service center of town, where most of Reading's multi-family and affordable housing developments are located.",
+      "source": "https://www.mass.gov/doc/hpp-reading-2023/download"
+    },
+    {
+      "name": "Gateway district",
+      "line": "The southern edge of town near I-95/Route 128 and Main Street (Route 28), zoned as a 40R district in 2007, where a former Addison-Wesley office site became the 424-unit Reading Woods.",
       "source": "https://www.mass.gov/doc/hpp-reading-2023/download"
     }
   ],
@@ -82,6 +88,16 @@
       "name": "Reading Common",
       "line": "A town common held in common since at least 1737, the center of the Common Historic District.",
       "source": "https://en.wikipedia.org/wiki/Common_Historic_District_(Reading,_Massachusetts)"
+    },
+    {
+      "name": "Boston and Maine Railroad Depot",
+      "line": "The 1870 Queen Anne depot at Reading station, on Lincoln Street at High Street, with paneled pilasters, large knee braces and wide hip-roof eaves; it was listed on the National Register in 1984.",
+      "source": "https://en.wikipedia.org/wiki/Reading_station_(MBTA)"
+    },
+    {
+      "name": "Biller Conservation Area",
+      "line": "Town conservation land that takes in the Lobs Pound Mill site and Marion Woods, with a trail map published by the town.",
+      "source": "https://www.readingma.gov/227/Trail-Map-Library"
     }
   ],
   "history": [
@@ -134,7 +150,11 @@
     {
       "q": "Which school district serves Reading?",
       "a": "Reading Public Schools. Review its profile with DESE."
+    },
+    {
+      "q": "What kinds of housing are in downtown Reading?",
+      "a": "Downtown holds a number of Reading's multi-family, affordable and public housing developments. Since 2009 it has been a Chapter 40R Downtown Smart Growth District, and projects there include Oaktree on Haven Street, with 53 units above shops, and Postmark Square, with 50 ownership units in the former post office, according to the town's 2023 Housing Production Plan."
     }
   ],
-  "notes": "Condo figures set to null: the PDF's extracted text ends partway through the condo table (at Brookline), so Reading's condo rows could not be read in either fetch. Reading's recognized neighborhoods are thinly documented in official sources; only the two historic districts and the downtown area are listed. The 2023 HPP gives 76.7% single-family in its text but a 2020 table shows 72.5% one-unit detached, so the housing text uses the plan's own headline figure. Lake Quannapowitt was left out of places because it lies in Wakefield."
+  "notes": "Condo figures set to null: the PDF's extracted text ends partway through the condo table (at Brookline), so Reading's condo rows could not be read in either fetch. Reading's recognized neighborhoods are thinly documented in official sources; only the two historic districts and the downtown area are listed. The 2023 HPP gives 76.7% single-family in its text but a 2020 table shows 72.5% one-unit detached, so the housing text uses the plan's own headline figure. Lake Quannapowitt was left out of places because it lies in Wakefield. Deepened 2026-10-22: added a third overview paragraph on downtown 40R zoning, Reading Woods and the 2024 MBTA Communities vote (sources: the 2023 HPP at https://www.mass.gov/doc/hpp-reading-2023/download and The Reading Post, https://thereadingpost.com/2024/11/18/town-meeting-approves-mbta-communities-plan/); places Boston and Maine Railroad Depot and Biller Conservation Area; the Gateway district as a village; an FAQ on downtown housing. Unverified or to check: the MBTA Communities vote rests on a local news report (Reading Post, Nov 18, 2024: Article 17 passed 129-32, downtown plus an area near Summit Towers), not a town or state page; the depot's current use is not stated in the source. Wikipedia's station page also reports an August 2026 federal grant to double-track Reading to Andover and rebuild Reading station in 2029 and 2030; it was left out until confirmed on an MBTA page."
 }
