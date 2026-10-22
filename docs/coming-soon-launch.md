@@ -38,6 +38,54 @@ Find the server's public IP under Server → Master Credentials.
 - If the registrar offers DNSSEC, turn it on after the records settle.
 - Check propagation with `dig oberdorferteam.com +short` before issuing the SSL certificate.
 
+## 2a. The other domains (all registered at GoDaddy, renewing October 19 to 20, 2027)
+
+One domain is the site; every other domain sends visitors to it with a permanent (301) redirect. Several live domains with the same content would split search signals and look like duplicates.
+
+| Domain | Role | Setup |
+|---|---|---|
+| `oberdorferteam.com` | **Primary**: the site, email and Search Console | A and CNAME records to Cloudways (section 2) |
+| `theoberdorferteam.com` | Redirect | 301 to `https://oberdorferteam.com/`, keeping the path |
+| `oberdorferhomes.com` | Redirect | 301 to the same |
+| `oberdorferluxury.com` | Redirect | 301 to the same |
+| `maluxuryhomes.com` | Redirect for now (possible future brand) | 301 to the same; any other use is a team decision |
+| `maluxury.homes` | Redirect for now (possible future brand) | 301 to the same |
+
+Don't buy more variants such as `maluxuryhomes.net`. The six cover the names that matter.
+
+**How to redirect (recommended: through Cloudways, so HTTPS works on every name)**
+1. At GoDaddy, for each redirect domain: open DNS. Set the `@` A record to the Cloudways server IP (replacing GoDaddy's "Parked" record), and point the `www` CNAME to `@`. Remove any GoDaddy Forwarding on the domain.
+2. In Cloudways → Domain Management, add each domain and its `www` as an additional domain. Then reissue the Let's Encrypt certificate so it covers every name. The free certificate allows up to 100 names, and here there are 12.
+3. In the application's `.htaccess` (above the `# BEGIN WordPress` block), add:
+
+   ```apache
+   # Send every other domain (and www) to the primary domain, keeping the path.
+   RewriteEngine On
+   RewriteCond %{HTTP_HOST} !^oberdorferteam\.com$ [NC]
+   RewriteRule ^ https://oberdorferteam.com%{REQUEST_URI} [R=301,L]
+   ```
+
+4. Test each one: `curl -sI https://theoberdorferteam.com/anything` should return `301` with `location: https://oberdorferteam.com/anything`, with no certificate warning, and likewise for `http://` and `www.`.
+
+**Simpler alternative: GoDaddy Forwarding.** On each redirect domain, set Forwarding to `https://oberdorferteam.com`, type **Permanent (301)**, "Forward only" (not masking). It needs no Cloudways setup, but check `https://` on each domain afterwards. If the browser shows a certificate warning, use the Cloudways method instead.
+
+**Protect the domains that don't send email.** Anyone can forge mail "from" a domain that has no email records. On each redirect domain, add:
+
+| Type | Name | Value |
+|---|---|---|
+| TXT | `@` | `v=spf1 -all` |
+| TXT | `_dmarc` | `v=DMARC1; p=reject;` |
+| MX | `@` | none (delete any default GoDaddy MX records) |
+
+Leave `oberdorferteam.com` without these. It gets the Google Workspace records instead (section 2).
+
+**At GoDaddy, for all six:**
+- Auto-renew stays **on**.
+- Domain lock **on**.
+- Privacy protection **on**.
+- The account has two-step verification.
+- The registrant contact is the business, with an email the team controls.
+
 ## 3. WordPress settings
 
 | Screen | Setting | Value |
