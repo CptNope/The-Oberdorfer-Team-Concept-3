@@ -24,7 +24,7 @@ a{color:#071d2d}a:hover{color:#7a6438}
 <main id="main">
 <section class="page-hero page-hero--navy surface-inverse fse-scope" aria-labelledby="page-title">
 <span class="fse-tag"><b>pattern</b> page-hero-navy · ot/page-hero (Navy style) › core/breadcrumbs, core/post-title (.answer), core/paragraph, core/buttons (gold)</span>
-<div class="container page-hero__grid"><nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="#">Home</a></li><li aria-current="page">Sell</li></ol></nav><h1 class="page-hero__title display-l answer" id="page-title"><span>Make your home</span><span>feel exceptional.</span></h1><div class="page-hero__aside"><a class="btn btn--gold" href="#">Request a market review</a></div><p class="page-hero__lead lead">Thoughtful presentation. Clear pricing. A plan that fits your life.</p></div>
+<div class="container page-hero__grid"><nav class="breadcrumbs" aria-label="Breadcrumb"><ol><li><a href="#">Home</a></li><li aria-current="page">Sell</li></ol></nav><h1 class="label page-hero__kicker" id="page-title">Sell your home in Massachusetts</h1><p class="page-hero__title display-l answer"><span>Make your home</span><span>feel exceptional.</span></p><div class="page-hero__aside"><a class="btn btn--gold" href="#">Request a market review</a></div><p class="page-hero__lead lead">Thoughtful presentation. Clear pricing. A plan that fits your life.</p></div>
 </section>
 
 <section class="section fse-scope">
@@ -64,8 +64,20 @@ a{color:#071d2d}a:hover{color:#7a6438}
 </div>
 </section>
 
-<section class="section surface-muted fse-scope" id="consult">
-<span class="fse-tag"><b>pattern</b> review-form · Sandstone style · core/columns (5 + 6) › core/heading, ot/faq (core/details ×4, FAQPage schema) · ot/inquiry-form (seller)</span>
+<section class="section surface-muted fse-scope" id="massachusetts" aria-labelledby="ma-sell-title">
+<span class="fse-tag"><b>pattern</b> selling-in-massachusetts · Sandstone style · core/columns (5 + 6) › core/heading, answer paragraph · core/table (4 requirements) · sources caption</span><div class="container split" style="align-items:start">
+  <div style="grid-column:1/span 5" class="stack"><p class="label">Selling in Massachusetts</p><h2 class="display-m answer" id="ma-sell-title"><span>What sellers here</span><span>need before closing.</span></h2><p>Massachusetts sellers usually need a smoke and carbon monoxide certificate from the local fire department, a Title 5 report if the home has a septic system, and the state lead paint notification if the home was built before 1978. The deed excise is paid at closing.</p></div>
+  <div style="grid-column:7/span 6"><table class="spec-table"><tbody>
+    <tr><th scope="row">Smoke and CO certificate</th><td>The local fire department inspects the smoke and carbon monoxide alarms and issues a Certificate of Compliance before the sale (M.G.L. c. 148, §§ 26F and 26F½). Book it early; buyers and lenders expect it at closing.</td></tr>
+    <tr><th scope="row">Title 5 septic inspection</th><td>For homes on a septic system, an inspection within two years before the sale. If weather prevents it, it can take place up to six months after.</td></tr>
+    <tr><th scope="row">Lead paint notification</th><td>For homes built before 1978, give buyers the Property Transfer Lead Paint Notification and any lead reports before the purchase and sale agreement is signed.</td></tr>
+    <tr><th scope="row">Deed excise</th><td>Under M.G.L. c. 64D, $2 for each $500 of the price; Barnstable County has its own rate. Your closing attorney confirms the exact amount.</td></tr>
+  </tbody></table>
+  <p class="caption" style="margin-top:var(--space-4)">Sources: <a href="https://www.mass.gov/doc/consumer-guide-to-smoke-detectors-when-selling-home/download">Mass.gov, Consumer guide to smoke detectors when selling a home</a>; <a href="https://www.mass.gov/guides/buying-or-selling-property-with-a-septic-system">Mass.gov, septic systems</a>; <a href="https://www.mass.gov/service-details/property-transfer-lead-paint-notification">Mass.gov, lead paint notification</a>; <a href="https://malegislature.gov/Laws/GeneralLaws/PartI/TitleIX/Chapter64D/Section1">M.G.L. c. 64D, § 1</a>. General information, not legal advice.</p></div>
+</div></section>
+
+<section class="section fse-scope" id="consult">
+<span class="fse-tag"><b>pattern</b> review-form · core/columns (5 + 6) › core/heading, ot/faq (core/details ×4, FAQPage schema) · ot/inquiry-form (seller)</span>
 <div class="container split" style="align-items: start;">
 <div style="grid-column: 1 / span 5;" class="stack"><p class="label">Seller consultation</p><h2 class="display-m answer" id="consult-title"><span>Ask for a</span><span>property-specific review.</span></h2><p>The townwide median is a starting point. Your best comparisons are recent closed sales that resemble your home. We prepare them before we meet.</p>
 <div class="accordion" style="margin-top: var(--space-5);">
@@ -101,10 +113,10 @@ a{color:#071d2d}a:hover{color:#7a6438}
 </section>
 </main>
 
-<dc-import name="Footer" show-tags="{{showTags}}" hint-size="100%,631px"></dc-import>
+<dc-import name="Footer" show-tags="{{showTags}}" hint-size="100%,653px"></dc-import>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"showTags":{"editor":"boolean","default":true,"section":"Board"},"$preview":{"width":1440,"height":4688}}'>
+<script type="text/x-dc" data-dc-script data-props='{"showTags":{"editor":"boolean","default":true,"section":"Board"},"$preview":{"width":1440,"height":5444}}'>
 class Component extends DCLogic {
 renderVals() {
 const on = this.props.showTags ?? true;

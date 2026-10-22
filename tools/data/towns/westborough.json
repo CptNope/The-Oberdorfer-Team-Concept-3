@@ -9,8 +9,8 @@
   "headline": ["Westborough, mapped out:", "the center, the lake and the trails."],
   "answer": "Westborough is a Worcester County town of 21,567 people (2020 Census), incorporated in 1717. Its center keeps colonial and 19th-century homes, and The Warren Group counted 134 single-family sales in 2025. Westborough station is on the MBTA Framingham/Worcester Line, and the Massachusetts Turnpike, I-495 and Route 9 cross the town, linking it east to Boston and west to Worcester.",
   "overview": [
-    "Westborough was incorporated in 1717 as the hundredth town in Massachusetts, set off from Marlborough with twenty-seven families. Eli Whitney, later the inventor of the cotton gin, was born here in 1765, and a stone on Eli Whitney Street marks the spot. In 1810 the road between Boston and Worcester became an official turnpike through town, today's Route 9. Once the railroad came through the center, the commercial life of the town followed it, leaving brick blocks downtown and quieter turnpike villages like Wessonville.",
-    "The land is a broad central plain ringed by rounded hills, with a large cedar swamp at its eastern end and the Assabet River along part of the northern edge. Lake Chauncy, in the north, has a public beach and is used for swimming, boating and fishing. The Westborough Charm Bracelet, a roughly 28-mile loop trail developed since 2000 by the Westborough Community Land Trust and the town's Open Space Preservation Committee, links most of the major open spaces, and side trails reach schools and neighborhoods."
+    "Westborough was incorporated in 1717 as the hundredth town in Massachusetts, set off from Marlborough with twenty-seven families. Eli Whitney, later the inventor of the cotton gin, was born here in 1765, and a stone on Eli Whitney Street marks the spot. In 1810 the road between Boston and Worcester became an official turnpike through town, today's Route 9. Once the railroad came through the center, the commercial life of the town followed it, leaving brick blocks downtown and smaller turnpike villages like Wessonville.",
+    "The land is a broad central plain ringed by rounded hills, with a large cedar swamp at its eastern end and the Assabet River along part of the northern edge. Lake Chauncy, in the north, has a summer beach open to Westborough and Northborough residents and is used for swimming, boating and fishing. The Westborough Charm Bracelet, a roughly 28-mile loop trail developed since 2000 by the Westborough Community Land Trust and the town's Open Space Preservation Committee, links most of the major open spaces, with side trails planned to reach schools and neighborhoods."
   ],
   "housing": {
     "text": "The Massachusetts Historical Commission notes two-story, center-chimney colonial houses, worker cottages grouped in the center and Italianate, Second Empire and Queen Anne houses on High Street. The Vintonville Historic District, just east of the center, is made up of modest houses on smaller lots, largely built between 1860 and 1890.",
@@ -18,7 +18,7 @@
   },
   "villages": [
     {"name": "Westborough Center", "line": "The downtown, with multi-story brick commercial blocks near the railroad and the former meetinghouse site.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/wbo.pdf"},
-    {"name": "Vintonville", "line": "A 20-acre historic district east of the center with about 80 modest 1860 to 1890 houses on streets such as Cottage, Elm and South.", "source": "https://en.wikipedia.org/wiki/Vintonville_Historic_District"},
+    {"name": "Vintonville", "line": "A 20-acre historic district east of the center with about 80 properties, mostly modest houses from 1860 to 1890, on streets such as Cottage, Elm and South.", "source": "https://en.wikipedia.org/wiki/Vintonville_Historic_District"},
     {"name": "Wessonville", "line": "A former turnpike village on Route 9 that once had a tavern, store and thread factory.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/wbo.pdf"},
     {"name": "Lake Chauncy area", "line": "The northern part of town around Lake Chauncy, once home to the state reform school and state hospital grounds.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/wbo.pdf"}
   ],
@@ -30,8 +30,8 @@
   },
   "schools": {"district": "Westborough Public Schools", "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=03210000&orgtypecode=5"},
   "places": [
-    {"name": "Lake Chauncy", "line": "A lake in the north of town with a public beach, swimming, boating and fishing.", "source": "https://en.wikipedia.org/wiki/Westborough,_Massachusetts"},
-    {"name": "Westborough Charm Bracelet", "line": "A roughly 28-mile loop trail linking most of the town's major open spaces, with side trails to schools and neighborhoods.", "source": "https://westboroughlandtrust.org/charm"},
+    {"name": "Lake Chauncy", "line": "A lake in the north of town with a summer beach for Westborough and Northborough residents, plus boating and fishing.", "source": "https://en.wikipedia.org/wiki/Westborough,_Massachusetts"},
+    {"name": "Westborough Charm Bracelet", "line": "A roughly 28-mile loop trail linking most of the town's major open spaces, with side trails planned to schools and neighborhoods.", "source": "https://westboroughlandtrust.org/charm"},
     {"name": "Assabet Reservoir", "line": "A reservoir with hiking trails.", "source": "https://en.wikipedia.org/wiki/Westborough,_Massachusetts"},
     {"name": "Vintonville Historic District", "line": "A walkable National Register district of 1860 to 1890 houses just east of downtown.", "source": "https://en.wikipedia.org/wiki/Vintonville_Historic_District"},
     {"name": "Eli Whitney birthplace", "line": "A commemorative stone on Eli Whitney Street marks where the inventor was born in 1765.", "source": "https://en.wikipedia.org/wiki/Westborough,_Massachusetts"}

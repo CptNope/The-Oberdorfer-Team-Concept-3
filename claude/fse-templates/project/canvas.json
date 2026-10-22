@@ -28,7 +28,7 @@
    "x": 2030,
    "y": 196,
    "w": 1440,
-   "h": 631,
+   "h": 653,
    "title": "parts/footer.html"
   },
   "MobileMenu.dc.html": {
@@ -42,7 +42,7 @@
    "x": 0,
    "y": 1600,
    "w": 1440,
-   "h": 9250,
+   "h": 9362,
    "expand": "fill",
    "title": "front-page.html · Home"
   },
@@ -50,14 +50,14 @@
    "x": 1520,
    "y": 1600,
    "w": 390,
-   "h": 13280,
+   "h": 13677,
    "title": "Phone · front-page.html"
   },
   "ArchiveListing.dc.html": {
    "x": 2030,
    "y": 1600,
    "w": 1440,
-   "h": 4445,
+   "h": 5686,
    "expand": "fill",
    "title": "page-buy.html · Buy (IDX search)"
   },
@@ -65,14 +65,14 @@
    "x": 3550,
    "y": 1600,
    "w": 390,
-   "h": 7890,
+   "h": 9897,
    "title": "Phone · page-buy.html"
   },
   "SingleListing.dc.html": {
    "x": 4060,
    "y": 1600,
    "w": 1440,
-   "h": 4266,
+   "h": 4289,
    "expand": "fill",
    "title": "single-listing.html · Listing detail (IDX)"
   },
@@ -80,14 +80,14 @@
    "x": 5580,
    "y": 1600,
    "w": 390,
-   "h": 6198,
+   "h": 6345,
    "title": "Phone · single-listing.html"
   },
   "PageSell.dc.html": {
    "x": 6090,
    "y": 1600,
    "w": 1440,
-   "h": 4688,
+   "h": 5444,
    "expand": "fill",
    "title": "page-sell.html · Sell"
   },
@@ -95,202 +95,202 @@
    "x": 7610,
    "y": 1600,
    "w": 390,
-   "h": 6621,
+   "h": 7970,
    "title": "Phone · page-sell.html"
   },
   "PageMarket.dc.html": {
    "x": 8120,
    "y": 1600,
    "w": 1440,
-   "h": 2925,
+   "h": 4975,
    "expand": "fill",
-   "title": "page-market.html · Market insights"
+   "title": "page-market.html · Massachusetts market, town by town"
   },
   "MobileMarket.dc.html": {
    "x": 9640,
    "y": 1600,
    "w": 390,
-   "h": 3733,
+   "h": 5862,
    "title": "Phone · page-market.html"
   },
   "ArchiveCommunity.dc.html": {
    "x": 0,
-   "y": 15240,
+   "y": 15700,
    "w": 1440,
-   "h": 3293,
+   "h": 8971,
    "expand": "fill",
-   "title": "archive-community.html · Communities"
+   "title": "archive-community.html · Communities hub (5 regions)"
   },
   "MobileCommunities.dc.html": {
    "x": 1520,
-   "y": 15240,
+   "y": 15700,
    "w": 390,
-   "h": 4353,
+   "h": 9556,
    "title": "Phone · archive-community.html"
   },
   "SingleCommunity.dc.html": {
    "x": 2030,
-   "y": 15240,
+   "y": 15700,
    "w": 1440,
-   "h": 4315,
+   "h": 8449,
    "expand": "fill",
-   "title": "single-community.html · Wakefield"
+   "title": "single-community.html · Worcester (one template, 16 town guides)"
   },
   "MobileCommunity.dc.html": {
    "x": 3550,
-   "y": 15240,
+   "y": 15700,
    "w": 390,
-   "h": 6406,
-   "title": "Phone · single-community.html"
+   "h": 11633,
+   "title": "Phone · single-community.html (Worcester)"
   },
   "ArchiveAgent.dc.html": {
    "x": 0,
-   "y": 22070,
+   "y": 27760,
    "w": 1440,
-   "h": 3069,
+   "h": 3142,
    "expand": "fill",
    "title": "archive-agent.html · Team"
   },
   "MobileTeam.dc.html": {
    "x": 1520,
-   "y": 22070,
+   "y": 27760,
    "w": 390,
-   "h": 4908,
+   "h": 5102,
    "title": "Phone · archive-agent.html"
   },
   "SingleAgent.dc.html": {
    "x": 6090,
-   "y": 22070,
+   "y": 27760,
    "w": 1440,
-   "h": 7389,
+   "h": 7412,
    "expand": "fill",
    "title": "single-agent.html · Kaitlyn Oberdorfer"
   },
   "MobileAgent.dc.html": {
    "x": 7610,
-   "y": 22070,
+   "y": 27760,
    "w": 390,
-   "h": 11273,
+   "h": 11420,
    "title": "Phone · single-agent.html (Kaitlyn)"
   },
   "PageJoin.dc.html": {
    "x": 4060,
-   "y": 15240,
+   "y": 15700,
    "w": 1440,
-   "h": 3629,
+   "h": 3701,
    "expand": "fill",
    "title": "page-join.html · Join our team"
   },
   "MobileJoin.dc.html": {
    "x": 5580,
-   "y": 15240,
+   "y": 15700,
    "w": 390,
-   "h": 5069,
+   "h": 5263,
    "title": "Phone · page-join.html"
   },
   "Home.dc.html": {
    "x": 0,
-   "y": 33820,
+   "y": 39660,
    "w": 1440,
-   "h": 3533,
+   "h": 3605,
    "expand": "fill",
    "title": "home.html · Journal"
   },
   "MobileJournal.dc.html": {
    "x": 1520,
-   "y": 33820,
+   "y": 39660,
    "w": 390,
-   "h": 5429,
+   "h": 5640,
    "title": "Phone · home.html"
   },
   "Single.dc.html": {
    "x": 2030,
-   "y": 33820,
+   "y": 39660,
    "w": 1440,
-   "h": 3549,
+   "h": 3571,
    "expand": "fill",
    "title": "single.html · Article"
   },
   "MobileArticle.dc.html": {
    "x": 3550,
-   "y": 33820,
+   "y": 39660,
    "w": 390,
-   "h": 4272,
+   "h": 4419,
    "title": "Phone · single.html"
   },
   "SingleOffice.dc.html": {
    "x": 4060,
-   "y": 33820,
+   "y": 39660,
    "w": 1440,
-   "h": 2430,
+   "h": 2514,
    "expand": "fill",
    "title": "single-office.html · Team office"
   },
   "MobileOffice.dc.html": {
    "x": 5580,
-   "y": 33820,
+   "y": 39660,
    "w": 390,
-   "h": 3302,
+   "h": 3560,
    "title": "Phone · single-office.html"
   },
   "PageContact.dc.html": {
    "x": 6090,
-   "y": 33820,
+   "y": 39660,
    "w": 1440,
-   "h": 2631,
+   "h": 2703,
    "expand": "fill",
    "title": "page-contact.html · Contact"
   },
   "MobileContact.dc.html": {
    "x": 7610,
-   "y": 33820,
+   "y": 39660,
    "w": 390,
-   "h": 3799,
+   "h": 4016,
    "title": "Phone · page-contact.html"
   },
   "TeamLeaders.dc.html": {
    "x": 2030,
-   "y": 22070,
+   "y": 27760,
    "w": 1440,
-   "h": 6325,
+   "h": 6348,
    "expand": "fill",
    "title": "page-brandon-kaitlyn.html · Brandon & Kaitlyn"
   },
   "MobileTeamLeaders.dc.html": {
    "x": 3550,
-   "y": 22070,
+   "y": 27760,
    "w": 390,
-   "h": 9875,
+   "h": 10022,
    "title": "Phone · page-brandon-kaitlyn.html"
   },
   "AgentBrandon.dc.html": {
    "x": 4060,
-   "y": 22070,
+   "y": 27760,
    "w": 1440,
-   "h": 7411,
+   "h": 7434,
    "expand": "fill",
    "title": "single-agent.html · Brandon Oberdorfer"
   },
   "MobileAgentBrandon.dc.html": {
    "x": 5580,
-   "y": 22070,
+   "y": 27760,
    "w": 390,
-   "h": 11326,
+   "h": 11473,
    "title": "Phone · single-agent.html (Brandon)"
   },
   "AgentTemplate.dc.html": {
    "x": 8120,
-   "y": 22070,
+   "y": 27760,
    "w": 1440,
-   "h": 7248,
+   "h": 7271,
    "expand": "fill",
    "title": "single-agent.html · New team member (template)"
   },
   "MobileAgentTemplate.dc.html": {
    "x": 9640,
-   "y": 22070,
+   "y": 27760,
    "w": 390,
-   "h": 11125,
+   "h": 11272,
    "title": "Phone · single-agent.html (template)"
   }
  },
@@ -351,14 +351,14 @@
   },
   "t2": {
    "x": 0,
-   "y": 14980,
+   "y": 15440,
    "text": "Communities and recruiting",
    "kind": "title1",
    "maxW": 10030
   },
   "t3": {
    "x": 0,
-   "y": 33560,
+   "y": 39400,
    "text": "Journal, office and contact",
    "kind": "title1",
    "maxW": 10030
@@ -381,18 +381,26 @@
   },
   "t4": {
    "x": 0,
-   "y": 21810,
+   "y": 27500,
    "text": "Our team: the team page, the joint page and one profile per agent",
    "kind": "title1",
    "maxW": 10030
   },
   "s3": {
    "x": 10150,
-   "y": 22070,
+   "y": 27760,
    "w": 420,
    "fill": "blue",
    "size": "m",
    "text": "Agent profiles\n\nOne single-agent.html template serves every agent: Brandon, Kaitlyn and anyone who joins later. Switch the board's Agent tweak between brandon, kaitlyn and template.\n\nBuilt for search and answer engines from the start: ProfilePage + Person JSON-LD linked by @id to the team and REWAP, FAQPage, BreadcrumbList, an answer-first summary, quick facts and a dated update line.\n\nBuilt for conversion: message and call above the fold, a fixed phone action bar, service links and a form attributed to the agent.\n\nUnconfirmed facts stay as [bracketed placeholders]; photos are interim crops of the team portrait."
+  },
+  "s4": {
+   "x": 6090,
+   "y": 15700,
+   "w": 420,
+   "fill": "blue",
+   "size": "m",
+   "text": "Community guides\n\nOne single-community.html template serves all 16 town guides, from a researched record per town (tools/data/towns). Every fact carries its source URL; the guide lists them at the foot.\n\nBuilt for search and answer engines: an h1 of \"Living in (town), MA\", a 40 to 60 word answer as the lead, quick facts, a dated market table (The Warren Group, 2025), WebPage + City JSON-LD.\n\nFair housing: describe places, housing, transit and history; never who lives there; schools are a DESE link, never a rating.\n\nThe list of towns is proposed until the team confirms it."
   }
  },
  "designSystems": [

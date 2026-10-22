@@ -14,7 +14,7 @@
   "answer": "Worcester is a city of 206,518 people (2020 Census) in Central Massachusetts and the historic seat of Worcester County. Its housing ranges from 19th-century triple-deckers to single-family homes, with 884 single-family sales in 2025. Worcester station at Union Station is the western end of the MBTA Framingham/Worcester Line to Boston, and I-290 runs through the city.",
   "overview": [
    "Worcester was incorporated as a town in 1722 and became a city in 1848, and it has served as the seat of Worcester County since 1731. That long run shows in the streets: Victorian-era mill buildings, lunch-car diners and a large stock of triple-decker houses, a building type the city is often credited with originating. Downtown gathers around Worcester Common and Union Station in Washington Square, where the Framingham/Worcester Line begins its run east to Boston's South Station.",
-   "Open space threads through the city. Elm Park, bought in 1854, carries a plaque calling it the first purchase of land for a public park in the United States. Mass Audubon's Broad Meadow Brook covers more than 400 acres of woods, fields and marsh, and Quinsigamond State Park offers swimming beaches and a 2,000-meter rowing course on Lake Quinsigamond. The Worcester Art Museum, open since 1898, holds nearly 40,000 objects, and colleges including Clark, Holy Cross and WPI sit across the city's hills."
+   "Open space threads through the city. Elm Park, whose first 27 acres were bought in 1854, carries a plaque calling it the first purchase of land for a public park in the United States. Mass Audubon's Broad Meadow Brook covers more than 400 acres of woods, fields and marsh, and Quinsigamond State Park offers swimming beaches and a 2,000-meter rowing course on Lake Quinsigamond. The Worcester Art Museum, open since 1898, holds nearly 40,000 objects, and colleges including Clark, Holy Cross and WPI sit across the city's hills."
   ],
   "housing": {
    "text": "Worcester has many 19th-century triple-decker houses, a building type that likely originated in the city, along with Victorian-era mill buildings. Single-family homes are also traded in volume: The Warren Group counted 884 single-family sales in 2025.",
@@ -88,7 +88,7 @@
   "places": [
    {
     "name": "Elm Park",
-    "line": "About 58 acres with Newton Hill, ponds, trails, a disc golf course and summer concerts; its land was bought in 1854.",
+    "line": "About 58 acres with Newton Hill, ponds, trails, a disc golf course and summer concerts; its original 27 acres were bought in 1854.",
     "source": "https://worcesterma.gov/city-parks/elm-park"
    },
    {
@@ -184,7 +184,7 @@
   "answer": "Shrewsbury is a Worcester County town of 38,325 people (2020 Census), across Lake Quinsigamond from Worcester. Single-family homes grew along its 19th-century streetcar routes, and The Warren Group counted 234 single-family sales in 2025. I-290, Route 9, Route 20 and Route 140 cross the town; the nearest commuter rail stops are in neighboring Worcester, Grafton and Westborough.",
   "overview": [
    "Shrewsbury sits just east of Worcester, with Lake Quinsigamond between them; I-290 crosses the water into town. Shrewsbury was incorporated in 1727 and grew along the old Boston Post Road, where two milestones from 1767 still stand. In the 19th century, streetcar lines helped single-family housing spread outward from the center, while the lakeshore filled with cottages and a summer resort season. The White City amusement park once stood by the lake; a shopping plaza holds the site today.",
-   "Main Street is the town's historic spine. The General Artemas Ward House Museum, a Harvard-affiliated house museum at 786 Main Street, opens for free guided tours from mid-April through November, across the road from Dean Park and its trails. Prospect Park adds 71 acres of forest paths, Jordan Pond has a loop trail of just under a mile, and Ski Ward at 1000 Main Street runs skiing, snowboarding and tubing through the year. The public library moved into a new 42,000-square-foot building in 2016."
+   "Main Street is the town's historic spine. The General Artemas Ward House Museum, a Harvard-affiliated house museum at 786 Main Street, opens for free guided tours from mid-April through November, across the road from Dean Park and its trails. Prospect Park adds 71 acres of forest paths, Jordan Pond has about 0.8 miles of trails, and Ski Ward at 1000 Main Street runs skiing, snowboarding and tubing through the year. The public library moved into a new 42,000-square-foot building in 2016."
   ],
   "housing": {
    "text": "Streetcar routes in the 19th century propelled the growth of single-family housing in Shrewsbury, and lakeside cottages were built along Lake Quinsigamond. The Warren Group recorded 234 single-family sales in town in 2025.",
@@ -509,8 +509,8 @@
   ],
   "answer": "Westborough is a Worcester County town of 21,567 people (2020 Census), incorporated in 1717. Its center keeps colonial and 19th-century homes, and The Warren Group counted 134 single-family sales in 2025. Westborough station is on the MBTA Framingham/Worcester Line, and the Massachusetts Turnpike, I-495 and Route 9 cross the town, linking it east to Boston and west to Worcester.",
   "overview": [
-   "Westborough was incorporated in 1717 as the hundredth town in Massachusetts, set off from Marlborough with twenty-seven families. Eli Whitney, later the inventor of the cotton gin, was born here in 1765, and a stone on Eli Whitney Street marks the spot. In 1810 the road between Boston and Worcester became an official turnpike through town, today's Route 9. Once the railroad came through the center, the commercial life of the town followed it, leaving brick blocks downtown and quieter turnpike villages like Wessonville.",
-   "The land is a broad central plain ringed by rounded hills, with a large cedar swamp at its eastern end and the Assabet River along part of the northern edge. Lake Chauncy, in the north, has a public beach and is used for swimming, boating and fishing. The Westborough Charm Bracelet, a roughly 28-mile loop trail developed since 2000 by the Westborough Community Land Trust and the town's Open Space Preservation Committee, links most of the major open spaces, and side trails reach schools and neighborhoods."
+   "Westborough was incorporated in 1717 as the hundredth town in Massachusetts, set off from Marlborough with twenty-seven families. Eli Whitney, later the inventor of the cotton gin, was born here in 1765, and a stone on Eli Whitney Street marks the spot. In 1810 the road between Boston and Worcester became an official turnpike through town, today's Route 9. Once the railroad came through the center, the commercial life of the town followed it, leaving brick blocks downtown and smaller turnpike villages like Wessonville.",
+   "The land is a broad central plain ringed by rounded hills, with a large cedar swamp at its eastern end and the Assabet River along part of the northern edge. Lake Chauncy, in the north, has a summer beach open to Westborough and Northborough residents and is used for swimming, boating and fishing. The Westborough Charm Bracelet, a roughly 28-mile loop trail developed since 2000 by the Westborough Community Land Trust and the town's Open Space Preservation Committee, links most of the major open spaces, with side trails planned to reach schools and neighborhoods."
   ],
   "housing": {
    "text": "The Massachusetts Historical Commission notes two-story, center-chimney colonial houses, worker cottages grouped in the center and Italianate, Second Empire and Queen Anne houses on High Street. The Vintonville Historic District, just east of the center, is made up of modest houses on smaller lots, largely built between 1860 and 1890.",
@@ -524,7 +524,7 @@
    },
    {
     "name": "Vintonville",
-    "line": "A 20-acre historic district east of the center with about 80 modest 1860 to 1890 houses on streets such as Cottage, Elm and South.",
+    "line": "A 20-acre historic district east of the center with about 80 properties, mostly modest houses from 1860 to 1890, on streets such as Cottage, Elm and South.",
     "source": "https://en.wikipedia.org/wiki/Vintonville_Historic_District"
    },
    {
@@ -564,12 +564,12 @@
   "places": [
    {
     "name": "Lake Chauncy",
-    "line": "A lake in the north of town with a public beach, swimming, boating and fishing.",
+    "line": "A lake in the north of town with a summer beach for Westborough and Northborough residents, plus boating and fishing.",
     "source": "https://en.wikipedia.org/wiki/Westborough,_Massachusetts"
    },
    {
     "name": "Westborough Charm Bracelet",
-    "line": "A roughly 28-mile loop trail linking most of the town's major open spaces, with side trails to schools and neighborhoods.",
+    "line": "A roughly 28-mile loop trail linking most of the town's major open spaces, with side trails planned to schools and neighborhoods.",
     "source": "https://westboroughlandtrust.org/charm"
    },
    {
@@ -1282,7 +1282,7 @@
     "a": "Marlborough Public Schools. Review its profile with DESE."
    }
   ],
-  "notes": "Condo fields are null: in both WebFetch readings the converted PDF text of the condo table ended at 'BROOKLI', so Marlborough's condo rows could not be read. Wikipedia lists the Massachusetts Turnpike among Marlborough's highways, but it was left out because no source confirmed it passes through city limits. The MWRTA bus connection comes from Wikipedia, not from MWRTA. Callahan State Park's mass.gov page lists only a Framingham address; Marlborough's conservation page lists it among the city's lands. The MHC survey dates from 1980. Wikipedia credits the population figure to the 2020 Decennial Census. The I-290 'begins here' wording rests on Wikipedia's note that its eastern terminus is in Marlborough.",
+  "notes": "Condo fields are null: in both WebFetch readings the converted PDF text of the condo table ended at 'BROOKLI', so Marlborough's condo rows could not be read. Wikipedia lists the Massachusetts Turnpike among Marlborough's highways, but it was left out because no source confirmed it passes through city limits. The MWRTA bus connection is confirmed on MWRTA's site: Route 7 runs from Marlborough to the Framingham station's north lot (https://www.mwrta.com/application/files/1017/0690/7593/Route_7_FULL.pdf), and the Marlborough Commuter Shuttle, run by MWRTA since July 1, 2026, serves Southborough station (https://mwrta.com/routes/commuter-shuttles). Callahan State Park's mass.gov page lists only a Framingham address; Marlborough's conservation page lists it among the city's lands. The MHC survey dates from 1980. Wikipedia credits the population figure to the 2020 Decennial Census. The I-290 'begins here' wording rests on Wikipedia's note that its eastern terminus is in Marlborough.",
   "region_key": "metrowest",
   "tier": 2,
   "art": "cape"
@@ -1464,7 +1464,7 @@
   "answer": "Reading is a Middlesex County town of 25,518 people (2020 Census) whose housing is mostly single-family, with a large share built before 1960. It grew around a traditional New England common and keeps conservation land such as the Town Forest. Reading station on the MBTA Haverhill Line runs to Boston's North Station, and I-93 and I-95/Route 128 cross the town.",
   "overview": [
    "Reading began as an inland plantation for settlers from Lynn and was incorporated in 1644. Over the next two centuries it gave up land to form its neighbors: the parish to the south became South Reading and was renamed Wakefield in 1868, and the land north of the Ipswich River became North Reading in 1853. What remains centers on the Common, where Main and Salem Streets meet, framed by the First Congregational Church, the public library and the town hall.",
-   "The railroad reached Reading in 1845, and Woburn Street shows what followed: Queen Anne and Colonial Revival houses on large, tree-lined lots, now a historic district. Around the built-up streets, Reading keeps a web of conservation land, from the Town Forest, its largest, to Bare Meadow and the Aberjona River Headwaters Trail through the Maillet Conservation Area."
+   "The railroad reached Reading in 1845, and Woburn Street shows what followed: Queen Anne and Colonial Revival houses on well-proportioned lots along a tree-lined stretch, now a historic district. Around the built-up streets, Reading keeps a web of conservation land, from the Town Forest, its largest, to Bare Meadow and the Aberjona River Headwaters Trail through the Maillet Conservation Area."
   ],
   "housing": {
    "text": "Reading's 2023 Housing Production Plan describes the housing stock as primarily single-family, at 76.7% of units, with 84.6% owner occupied. Over half of the homes were built before 1960, and about a third before 1940. The downtown area holds a number of multi-family, affordable and public housing developments.",
@@ -1478,7 +1478,7 @@
    },
    {
     "name": "Woburn Street Historic District",
-    "line": "Two blocks of Woburn Street between Summer Street and Temple Street, with sixteen houses on large lots, mostly Queen Anne and Colonial Revival.",
+    "line": "Two blocks of Woburn Street between Summer Street and Temple Street, with sixteen houses on well-proportioned lots, mostly Queen Anne and Colonial Revival.",
     "source": "https://en.wikipedia.org/wiki/Woburn_Street_Historic_District"
    },
    {
