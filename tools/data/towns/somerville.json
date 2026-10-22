@@ -1,0 +1,68 @@
+{
+  "slug": "somerville",
+  "name": "Somerville",
+  "county": "Middlesex County",
+  "region": "Greater Boston (inner core, north of Cambridge)",
+  "population_2020": 81045,
+  "population_source": "https://en.wikipedia.org/wiki/Somerville,_Massachusetts",
+  "official_site": "https://www.somervillema.gov/",
+  "headline": ["A powder house, a hilltop castle,", "and five Green Line stops opened in 2022."],
+  "answer": "Somerville is a Middlesex County city of 81,045 people (2020 Census) on about 4.1 square miles of land just north of Cambridge and Boston, often described as the most densely populated municipality in New England. Its housing is mostly small multi-unit buildings, and since November 2023 three-unit buildings have been allowed citywide by right. The Warren Group counted only 72 single-family sales in 2025. Davis Square is on the Red Line, Assembly on the Orange Line, and five Green Line stations opened in 2022.",
+  "overview": [
+    "Somerville was settled in 1629 as part of Charlestown and became its own town in 1842 and a city in 1872. Its hills played a part in the Revolution: British troops emptied the Old Powder House of gunpowder on September 1, 1774, setting off the Powder Alarm, and Prospect Hill was a Continental Army position during the siege of Boston, where tradition says Washington raised a flag on January 1, 1776. Brickmaking, meatpacking and a Ford assembly plant, open from 1926 to 1958, followed.",
+    "The city is organized around its squares. Davis Square, a six-point intersection named for grain dealer Person Davis, gained a Red Line station in 1984, and the Somerville Community Path runs from there on an old railroad right-of-way. Union Square, named for its Civil War recruiting role, and Ball Square have Green Line stations that opened in 2022, and Assembly Square on the Mystic River grew from the old Ford plant site into the Assembly Row development. The 2020 Census counted 36,269 housing units in the city."
+  ],
+  "housing": {
+    "text": "Somerville is known for its triple-deckers. In November 2023 the City Council made any three-unit building legal citywide by right, without zoning board approval, replacing 2019 rules that required a new triple-decker to sit next to an existing one and include an income-restricted unit. Single-family homes are a small part of the market: The Warren Group counted 72 single-family sales in 2025.",
+    "source": "https://www.bostonglobe.com/2023/12/11/business/somerville-triple-decker-construction-city-council"
+  },
+  "villages": [
+    {"name": "Davis Square", "line": "A six-point intersection in northwestern Somerville, named a square in 1883, with the 1914 Somerville Theatre and a Red Line station opened in December 1984.", "source": "https://en.wikipedia.org/wiki/Davis_Square"},
+    {"name": "Union Square", "line": "The southeastern square at Washington Street, Webster Avenue and Somerville Avenue, once called Sand Pit Square, with Prospect Hill nearby and a Green Line station opened March 21, 2022.", "source": "https://en.wikipedia.org/wiki/Union_Square,_Somerville"},
+    {"name": "Ball Square", "line": "A square on the Somerville-Medford line with a Green Line Extension station opened December 12, 2022.", "source": "https://en.wikipedia.org/wiki/Green_Line_Extension"},
+    {"name": "Assembly Square", "line": "Named for a Ford assembly plant that ran from 1926 to 1958, on the west bank of the Mystic River between I-93 and the river, now the 45-acre Assembly Row development with an Orange Line station.", "source": "https://en.wikipedia.org/wiki/Assembly_Square"}
+  ],
+  "commute": {
+    "rail": [
+      {"line": "Red Line (subway)", "stations": ["Davis"]},
+      {"line": "Orange Line (subway)", "stations": ["Assembly"]},
+      {"line": "Green Line (subway, Union Square and Medford branches)", "stations": ["Union Square", "East Somerville", "Gilman Square", "Magoun Square", "Ball Square"]},
+      {"line": "Fitchburg Line (commuter rail, in neighboring Cambridge)", "stations": ["Porter"]}
+    ],
+    "rail_source": "https://en.wikipedia.org/wiki/Green_Line_Extension",
+    "highways": ["I-93", "Route 28", "Route 38"],
+    "text": "Somerville has no commuter rail station of its own; passenger rail service in the city ended by 1958, and the nearest stop is Porter in Cambridge on the Fitchburg Line. Rapid transit has returned in stages: Davis on the Red Line in 1984, Assembly on the Orange Line, and the Green Line Extension in 2022, with Union Square on one branch and East Somerville, Gilman Square, Magoun Square and Ball Square on the branch to Medford/Tufts. I-93 crosses the city on an elevated highway, Route 28 runs as McGrath Highway and Route 38 as Mystic Avenue."
+  },
+  "schools": {"district": "Somerville Public Schools", "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=02740000&orgtypecode=5"},
+  "places": [
+    {"name": "Old Powder House", "line": "Built as a windmill around 1703 or 1704 and later a powder magazine, it overlooks Powder House Square from Nathan Tufts Park; both were listed on the National Register in 1975.", "source": "https://en.wikipedia.org/wiki/Old_Powder_House"},
+    {"name": "Prospect Hill Monument", "line": "A castle-like tower dedicated in 1903 atop Prospect Hill, a Continental Army position during the siege of Boston.", "source": "https://en.wikipedia.org/wiki/Prospect_Hill_(Somerville,_Massachusetts)"},
+    {"name": "Somerville Community Path", "line": "A walking and biking path on a former Boston and Maine right-of-way from Davis Square, extended 1.9 miles beside the Green Line to North Point in Cambridge in June 2023.", "source": "https://en.wikipedia.org/wiki/Green_Line_Extension"},
+    {"name": "Somerville Theatre", "line": "A Davis Square theater opened in 1914 that shows films and live performances.", "source": "https://en.wikipedia.org/wiki/Davis_Square"},
+    {"name": "Assembly Row", "line": "A 45-acre mixed-use development on the Mystic River, opened in 2014, with shops, restaurants, a 12-screen cinema and a hotel.", "source": "https://en.wikipedia.org/wiki/Assembly_Square"}
+  ],
+  "history": [
+    {"year": "1629", "text": "First European settlement, as part of Charlestown.", "source": "https://en.wikipedia.org/wiki/Somerville,_Massachusetts"},
+    {"year": "1774", "text": "British regulars removed gunpowder from the Old Powder House on September 1, setting off the Powder Alarm.", "source": "https://en.wikipedia.org/wiki/Old_Powder_House"},
+    {"year": "1842", "text": "Somerville separated from Charlestown and was incorporated as a town.", "source": "https://en.wikipedia.org/wiki/Somerville,_Massachusetts"},
+    {"year": "1872", "text": "Somerville was incorporated as a city.", "source": "https://en.wikipedia.org/wiki/Somerville,_Massachusetts"}
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 72, "sf_sales_2024": 93,
+    "sf_median_2025": 1287500, "sf_median_2024": 1160000,
+    "condo_sales_2025": null, "condo_median_2025": null, "condo_median_2024": null,
+    "reading_1": "SOMERVILLE (single-family; Dec 2024, Dec 2025, Percent Change): YTD Number of Sales 93 72 -22.6%; YTD Median Sale Price $1,160,000 $1,287,500 11.0%",
+    "reading_2": "SOMERVILLE (single-family): YTD Number of Sales 93 72 -22.6%; YTD Median Sale Price $1,160,000 $1,287,500 11.0%"
+  },
+  "nearby": ["cambridge", "boston", "medford", "arlington"],
+  "search_notes": "'Somerville MA real estate agent' returns Berkshire Hathaway Verani blog posts and award news, Bankrate, BiggerPockets, Experience.com and RealTrends profiles, a HomeLight Ten Hills page and Redfin open houses. Few results explain the Green Line Extension, the 2023 triple-decker zoning change or how small the single-family market is, which a sourced guide could cover.",
+  "faq": [
+    {"q": "What is the median home price in Somerville, MA?", "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, the median single-family sale price in Somerville for calendar year 2025 was $1,287,500, across 72 sales. In 2024 it was $1,160,000, across 93 sales. With so few single-family sales, these figures describe a small part of the city's market."},
+    {"q": "Does Somerville have commuter rail?", "a": "No station is located in Somerville itself; the nearest is Porter in Cambridge on the Fitchburg Line. Somerville has Davis on the Red Line, Assembly on the Orange Line, and five Green Line stations: Union Square, East Somerville, Gilman Square, Magoun Square and Ball Square."},
+    {"q": "Which school district serves Somerville?", "a": "Somerville Public Schools. Review its profile with DESE."}
+  ],
+  "notes": "Condo fields null: the Warren PDF's extracted condo table is truncated at 'BROOKLI', before Somerville. I could not find a current official breakdown of Somerville housing units by building type (searches turned up only a 2009 Somerville Times summary and blogs), so the housing text relies on the Boston Globe (December 2023) for the zoning change and GBH (September 2024) for 'known for triple-deckers'; the claim that housing is 'mostly small multi-unit buildings' in the answer rests on a March 2022 Somerville Times summary of the city's Needs Based Housing Assessment ('small multifamily buildings ... make up a large portion of available housing units'), and a fact-checker may want an official source. The 'most densely populated municipality in New England' line and land area are from Wikipedia, whose density figures are internally inconsistent. The Prospect Hill flag is given as tradition; Wikipedia notes scholars dispute it and calls it the Continental Union Flag, so the copy says only 'a flag'. Assembly station's opening year is not stated on the Assembly Square page, so no year is given; Assembly Row's 2014 opening is from that page. Ball Square straddles Somerville and Medford. Route 16 omitted: not confirmed in the sources fetched. The DCR Mystic River Reservation page failed to load, so it is not listed as a place."
+}
