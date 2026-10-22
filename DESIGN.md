@@ -65,6 +65,7 @@ The components live in `assets/css/components.css`, and each one maps to a plann
 - Cover hero
 - Property search bar
 - Cards: listing, agent, community and article
+- Agent profile (`ot/agent-profile`): one page per person at `/agents/agent-name/`, with placeholder values, a pending headshot, a publish checklist and a phone action bar
 - Market statistics panel
 - Forms, including validation states
 - Editorial furniture: triad, steps, pull quote, testimonial, FAQ and breadcrumbs
@@ -72,6 +73,16 @@ The components live in `assets/css/components.css`, and each one maps to a plann
 - Footer with brokerage attribution
 
 The REWAP logo is never redrawn. It always sits on its own ivory plate.
+
+## Agent profiles, search and conversion
+
+Brandon and Kaitlyn each have a profile (`site/agents/brandon-oberdorfer/`, `site/agents/kaitlyn-oberdorfer/`); the joint page `site/agents/brandon-kaitlyn-oberdorfer/` tells their story together and links to both. `site/agents/agent-template/` is the profile every future agent receives, unpublished until its checklist is complete. All three come from one data model (`AGENTS` in `tools/build_site.py`).
+
+- **SEO:** one person per page, named in the title, `h1` and meta description; breadcrumbs; a canonical URL; internal links from the team page, the joint page, the footer and the partner card.
+- **AEO:** an answer-first summary sentence, a quick-facts list, an FAQ in plain language, and a visible "profile updated" date.
+- **GEO:** consistent entity facts across pages; JSON-LD `ProfilePage` > `Person`, linked by `@id` to the team (`RealEstateAgent`) and the brokerage, with `spouse` between Brandon and Kaitlyn; `FAQPage`; `site/llms.txt` summarising the team, its people and its pages; `site/sitemap.xml`.
+- **Conversion:** message and call above the fold, a fixed action bar on phones, services linking into Buy and Sell, and a form whose lead type names the agent (`agent:<slug>`).
+- **Integrity:** unconfirmed fields (title, license, direct line, email, specialties, languages, biography) render as `[placeholders]`. The individual photos are interim crops of the team portrait. No review or rating markup until real, permitted reviews exist.
 
 ## Motion
 

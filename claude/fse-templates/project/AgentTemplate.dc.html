@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>single-agent.html · New team member (template)</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="oberdorfer-tokens.css">
+<link rel="stylesheet" href="ds/oberdorferteam/components/bundle.css">
+<link rel="stylesheet" href="fse.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&amp;family=Manrope:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="width: 100%; min-height: 7248px; background: var(--ot-ivory);">
+<dc-import name="SingleAgent" agent="template" show-tags="{{showTags}}" hint-size="100%,7248px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"showTags":{"editor":"boolean","default":true,"section":"Board"},"$preview":{"width":1440,"height":7248}}'>
+class Component extends DCLogic {
+renderVals() {
+return { showTags: this.props.showTags ?? true };
+}
+}
+</script>
+</body>
+</html>

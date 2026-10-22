@@ -629,6 +629,26 @@ a:hover { color: var(--text-link-hover); text-decoration-color: currentColor; }
 .agent-mini__meta { font-size: var(--step-caption); color: var(--text-muted); }
 .alert[hidden] { display: none; }
 
+/* ---- Agent profile furniture (ot/agent-profile) -----------------------------------
+   Placeholder values, the biography placeholder, the pending headshot, the template
+   ribbon and the phone action bar. The profile layout itself lives in site.css. */
+.placeholder-value { color: var(--text-muted); font-style: italic; }
+.placeholder-block { display: grid; gap: var(--space-3); justify-items: start; padding: var(--space-5); border: 1px dashed var(--border-input); background: var(--surface-raised); color: var(--text-muted); }
+.placeholder-block p:not(.label) { margin: 0; max-width: var(--measure); }
+.headshot-pending { display: grid; place-content: center; justify-items: center; gap: var(--space-3); aspect-ratio: 4 / 5; padding: var(--space-6); text-align: center; border: 1px dashed var(--border-input); background: var(--surface-raised); color: var(--text-muted); }
+.headshot-pending .icon { width: 2rem; height: 2rem; }
+.headshot-pending .h5 { color: var(--text-display); }
+.template-ribbon { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; padding: var(--space-3) var(--space-4); border: 1px solid var(--warning); background: var(--warning-bg); color: var(--warning); font-size: var(--step-body-s); }
+.checklist { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-2); }
+.checklist li { display: grid; grid-template-columns: 1rem 1fr; gap: var(--space-3); align-items: baseline; }
+.checklist li::before { content: ""; width: 0.75rem; height: 0.75rem; border: 1px solid var(--border-input); transform: translateY(0.1rem); }
+.action-bar { display: none; }
+@media (max-width: 52rem) {
+  .action-bar { position: fixed; inset: auto 0 0; z-index: var(--z-nav); display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2); padding: var(--space-2) var(--space-3) calc(var(--space-2) + env(safe-area-inset-bottom)); background: var(--ot-navy); border-top: 1px solid var(--ot-gold); box-shadow: var(--shadow-1); }
+  .action-bar .btn { min-height: 2.9rem; padding-inline: var(--space-3); }
+  body:has(.action-bar) .site-footer { padding-bottom: calc(var(--space-9) + 4rem); }
+}
+
 /* ---- site.css ---- */
 /* ---- Prototype notice ----------------------------------------------------- */
 .demo-ribbon { background: var(--ot-sandstone); color: var(--ot-ink); font-size: 0.75rem; line-height: 1.4; text-align: center; padding: 0.45rem var(--page-margin); border-bottom: 1px solid var(--border-subtle); }
@@ -813,6 +833,13 @@ a:hover { color: var(--text-link-hover); text-decoration-color: currentColor; }
 .site-footer .newsletter .input::placeholder { color: var(--ot-mist); }
 .article-card[hidden], .agent-card[hidden], .seat[hidden] { display: none; }
 .empty-state { align-content: start; }
+
+/* ---- Individual agent profile ---------------------------------------------------- */
+.profile__photo figcaption { margin-top: var(--space-3); }
+.profile__summary { max-width: 46ch; }
+.profile__trust { letter-spacing: 0.04em; }
+.quick-facts dd .badge { margin-left: var(--space-2); vertical-align: middle; }
+@media (max-width: 52rem) { .profile-hero .profile__photo img, .profile-hero .headshot-pending { aspect-ratio: 1 / 1; } .profile-hero .profile { gap: var(--space-5); } }
 
 /* ---- docs.css ---- */
 /* ---- Slim issue bar ----------------------------------------------------- */

@@ -67,6 +67,7 @@ Images from *Wakefield at Home*, Fall 2026. Credit every image beside it in a `.
 
 - `cover-portrait.webp`: Brandon and Kaitlyn, the publication's cover portrait. Home cover hero. Whether it is a real photograph or AI-generated is not yet confirmed: carry a Verify badge until the team confirms it.
 - `team-portrait.webp`: Brandon and Kaitlyn, the publication's team photo. Agent card and profile. Same caveat as the cover portrait.
+- `brandon-oberdorfer.webp`, `kaitlyn-oberdorfer.webp`: interim headshots for the individual agent profiles, cropped from `team-portrait.webp`. Same caveat as the team portrait; replace with individual headshots (4:5, natural light) when supplied.
 - `lake-quannapowitt.webp`: Lake Quannapowitt Panorama, RedSoxFan274 / Wikimedia Commons, CC BY-SA 4.0, cropped. Wakefield community and photo heroes.
 - `breakheart-reservation.webp`: Breakheart Reservation, Joseph Reagle / Wikimedia Commons, CC BY-SA 4.0, cropped. Seasonal features and journal.
 
@@ -153,7 +154,7 @@ ORDER = {
  "Logos": ["logo-primary-navy.svg", "logo-primary-ivory.svg", "logo-primary-gold.svg", "logo-primary-mono.svg", "logo-stacked-navy.svg", "logo-stacked-ivory.svg", "logo-stacked-mono.svg",
            "logo-compact-navy.svg", "logo-compact-ivory.svg", "logo-compact-mono.svg", "monogram-navy.svg", "monogram-ivory.svg", "monogram-mono.svg",
            "lockup-brokerage-navy.svg", "lockup-brokerage-ivory.svg", "favicon.svg", "favicon-32.png", "apple-touch-icon.png", "social-avatar.svg", "social-avatar.png"],
- "Photography": ["cover-portrait.webp", "team-portrait.webp", "lake-quannapowitt.webp", "breakheart-reservation.webp"],
+ "Photography": ["cover-portrait.webp", "team-portrait.webp", "brandon-oberdorfer.webp", "kaitlyn-oberdorfer.webp", "lake-quannapowitt.webp", "breakheart-reservation.webp"],
  "Illustrations": ["colonial.svg", "triple-decker.svg", "cape.svg", "townscape.svg"],
  "Publication": ["wakefield-at-home-fall-2026.pdf"] + [f"page-{i}.webp" for i in range(1, 9)],
 }
@@ -171,7 +172,7 @@ index = {
  "sections": {}, "groups": groups, "assetGroups": ag, "blobs": {},
  "docs": {"readme": "project/README.md", "sections": []},
  "lastChange": {"by": "Claude", "via": "Claude Code · CptNope/The-Oberdorfer-Team-Concept-3@87e58c4", "at": NOW,
-                "note": "Built from the repo: tokens, brand book, 47 component cards, 62 assets and the cover."},
+                "note": "Built from the repo: tokens, brand book, 48 component cards, 62 assets and the cover."},
 }
 w("design-system.json", json.dumps(index, indent=2))
 print("ok")

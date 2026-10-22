@@ -31,6 +31,7 @@ The visual language evolves the team's print publication, *Wakefield at Home*, F
    - privacy policy
    - IDX/MLS provider and CRM
    - final community list
+   - Brandon's and Kaitlyn's individual biographies, titles, direct lines, emails, specialties, languages and headshots (their profiles use placeholders and interim crops of the team portrait)
 4. **Market data:** always show the source, period and geography. Never present the Wakefield figures as live or statewide.
 5. **The team and the brokerage are separate brands.** Never redraw the REWAP logo. Show it only on its own ivory plate, or use the typographic "Powered by" lockup.
 6. **Accessibility:** WCAG 2.2 AA.

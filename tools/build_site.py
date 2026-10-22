@@ -178,11 +178,17 @@ def contact_fields(p, phone_opt=True):
             f'<div class="form__row">{field(p+"-phone","Phone","tel",auto="tel",opt=True,pattern="[0-9()+\\-\\s.]{7,}",pattern_msg="Use digits, spaces or dashes, for example 406-250-7620.")}</div>')
 
 # --------------------------------------------------------------------------- chrome
-def head(R, title, desc, extra_ld=None, canonical_path=""):
-    ld = {"@context": "https://schema.org", "@type": "RealEstateAgent", "name": "The Oberdorfer Team",
+SITE = "https://[domain-to-confirm]/"
+TEAM_ID = SITE + "#team"
+BROKER_ID = SITE + "#brokerage"
+UPDATED = "2026-10-22"
+WRITTEN = []   # every page path, for sitemap.xml and llms.txt
+
+def head(R, title, desc, extra_ld=None, canonical_path="", og_type="website", og_image=None):
+    ld = {"@context": "https://schema.org", "@type": "RealEstateAgent", "@id": TEAM_ID, "name": "The Oberdorfer Team",
           "telephone": PHONE, "areaServed": {"@type": "State", "name": "Massachusetts"},
           "slogan": "Luxury at every price point.",
-          "parentOrganization": {"@type": "Organization", "name": "REWAP Brokerage LLC"}}
+          "parentOrganization": {"@type": "Organization", "@id": BROKER_ID, "name": "REWAP Brokerage LLC", "url": "https://rewapbrokerage.com/"}}
     blocks = [ld] + (extra_ld or [])
     lds = "".join(f'<script type="application/ld+json">{json.dumps(b)}</script>' for b in blocks)
     return f'''<!doctype html>
@@ -194,7 +200,7 @@ def head(R, title, desc, extra_ld=None, canonical_path=""):
 <meta name="description" content="{e(desc)}">
 <meta name="robots" content="noindex">
 <link rel="canonical" href="https://[domain-to-confirm]/{canonical_path}">
-<meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:image" content="{R}assets/logo/social-avatar.png">
+<meta property="og:type" content="{og_type}"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:image" content="{R}{og_image or 'assets/logo/social-avatar.png'}"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="{R}assets/logo/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="{R}assets/logo/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap">
@@ -239,7 +245,7 @@ def footer(R):
         <form class="newsletter" style="color:var(--ot-ivory)" data-newsletter aria-label="Seasonal publication sign-up"><label class="visually-hidden" for="f-news">Email address</label><input class="input" id="f-news" type="email" autocomplete="email" placeholder="Email for the At Home issues" style="color:var(--ot-ivory)"><button class="btn btn--small" type="submit">Subscribe</button></form>
       </div>
       <div><h2>Explore</h2><ul><li><a href="{R}site/buy/">Buy a home</a></li><li><a href="{R}site/sell/">Sell your home</a></li><li><a href="{R}site/market/">Market insights</a></li><li><a href="{R}site/communities/">Communities</a></li></ul></div>
-      <div><h2>Team</h2><ul><li><a href="{R}site/team/">Meet the team</a></li><li><a href="{R}site/agents/brandon-kaitlyn-oberdorfer/">Brandon &amp; Kaitlyn</a></li><li><a href="{R}site/join/">Join our team</a></li><li><a href="{R}site/office/">Team office</a></li></ul></div>
+      <div><h2>Team</h2><ul><li><a href="{R}site/team/">Meet the team</a></li><li><a href="{R}site/agents/brandon-kaitlyn-oberdorfer/">Brandon &amp; Kaitlyn</a></li><li><a href="{R}site/agents/brandon-oberdorfer/">Brandon Oberdorfer</a></li><li><a href="{R}site/agents/kaitlyn-oberdorfer/">Kaitlyn Oberdorfer</a></li><li><a href="{R}site/join/">Join our team</a></li><li><a href="{R}site/office/">Team office</a></li></ul></div>
       <div><h2>Read</h2><ul><li><a href="{R}site/journal/">Journal</a></li><li><a href="{R}site/journal/#archive">At Home archive</a></li><li><a href="{R}site/contact/">Contact</a></li></ul></div>
     </div>
     <div class="attribution">
@@ -257,10 +263,11 @@ def footer(R):
 </body>
 </html>'''
 
-def write(rel, R, title, desc, active, body, overlay=False, ld=None):
+def write(rel, R, title, desc, active, body, overlay=False, ld=None, og_type="website", og_image=None, index=True):
     path = os.path.join(OUT, rel, "index.html")
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    doc = head(R, title, desc, ld, "site/" + rel) + header(R, active, overlay) + f'<main id="main">{body}</main>' + footer(R)
+    WRITTEN.append(dict(rel=rel, title=title, desc=desc, index=index))
+    doc = head(R, title, desc, ld, "site/" + rel, og_type, og_image) + header(R, active, overlay) + f'<main id="main">{body}</main>' + footer(R)
     with open(path, "w") as f: f.write(doc)
     print("wrote", os.path.relpath(path, ROOT))
 
@@ -485,7 +492,7 @@ def page_listing(l):
   </aside>
 </div></section>
 <section class="section surface-muted"><div class="container">{section_head("More homes", "Demonstration listings", ["You may also like"], title_id="more-title")}<div class="listing-grid">{more}</div></div></section>'''
-    write(f"buy/{l['slug']}", R, f"{l['name']} (demo) · {l['town']} · The Oberdorfer Team", f"Demonstration listing page: {l['style']} in {l['town']}, Massachusetts.", "Buy", body, ld=[crumbs_ld(trail)])
+    write(f"buy/{l['slug']}", R, f"{l['name']} (demo) · {l['town']} · The Oberdorfer Team", f"Demonstration listing page: {l['style']} in {l['town']}, Massachusetts.", "Buy", body, ld=[crumbs_ld(trail)], index=False)
 
 def page_sell():
     R = "../../"
@@ -615,8 +622,9 @@ def page_team():
     {select("d-lang","Language",["Any language","English"])}
     <button class="btn btn--secondary" type="reset">Reset</button>
   </form>
-  <p class="results-bar__count" data-team-count aria-live="polite" style="margin-bottom:var(--space-6)">1 team profile</p>
-  <h2 class="visually-hidden">Team profiles</h2><div class="card-grid-3" data-team-grid>{agent_card_bk(R)}{seat_card(R)}{seat_card(R)}</div>
+  <p class="results-bar__count" data-team-count aria-live="polite" style="margin-bottom:var(--space-6)">{len(AGENTS)} team profiles</p>
+  <h2 class="visually-hidden">Team profiles</h2><div class="card-grid-3" data-team-grid>{"".join(agent_card(R, a) for a in AGENTS)}{seat_card(R)}</div>
+  <p class="caption" style="margin-top:var(--space-5)">Every new agent receives the same profile: <a href="{R}site/agents/agent-template/">see the template</a>.</p>
 </div></section>
 {cta_panel(R, "Grow with a team that <em>presents every home like a feature.</em>", "Join our team", "The team is growing. Start with a confidential conversation with Brandon and Kaitlyn.", ("Start a conversation", "site/join/#recruit"))}'''
     write("team", R, "Meet the team · The Oberdorfer Team", "Brandon and Kaitlyn Oberdorfer lead The Oberdorfer Team, a husband-and-wife real estate team serving Massachusetts.", "Our Team", body, ld=[crumbs_ld(trail)])
@@ -657,14 +665,232 @@ def page_agent():
   <div><p class="label">Purposeful</p><p class="h3">A plan shaped around your home and life.</p></div>
   <div><p class="label">Prepared</p><p class="h3">Clear guidance and attention to the details.</p></div>
 </div></div></section>
-<section class="section"><div class="container">{section_head("Listings", "Demonstration", ["Homes we are", "presenting now."], title_id="al-title")}<div class="listing-grid">{homes}</div></div></section>
-<section class="section surface-muted"><div class="container">{section_head("From the journal", "Brandon &amp; Kaitlyn", ["Recent writing."], title_id="aj-title")}<div class="card-grid-3">{arts}</div></div></section>
-<section class="section" id="contact-agent"><div class="container split" style="align-items:start">
+<section class="section"><div class="container">{section_head("Meet each of us", "Individual profiles", ["Two partners,", "one standard."], title_id="each-title")}<div class="card-grid-3">{"".join(agent_card(R, a) for a in AGENTS)}</div></div></section>
+<section class="section surface-muted"><div class="container">{section_head("Listings", "Demonstration", ["Homes we are", "presenting now."], title_id="al-title")}<div class="listing-grid">{homes}</div></div></section>
+<section class="section"><div class="container">{section_head("From the journal", "Brandon &amp; Kaitlyn", ["Recent writing."], title_id="aj-title")}<div class="card-grid-3">{arts}</div></div></section>
+<section class="section surface-muted" id="contact-agent"><div class="container split" style="align-items:start">
   <div style="grid-column:1/span 5" class="stack"><p class="label">Contact</p><h2 class="display-m answer"><span>We would love</span><span>to be a resource.</span></h2><p>Messages from this page are attributed to Brandon and Kaitlyn in the team's lead routing.</p></div>
   <div style="grid-column:7/span 6" class="panel">{form(R, "agent", "Message Brandon &amp; Kaitlyn", contact_fields("af") + select("af-topic","I'm interested in",["Buying","Selling","Both","Something else"]) + field("af-msg","Message","textarea",opt=True) + reach_pref("af"), "Send my message", "agent:brandon-kaitlyn", "h3")}</div>
 </div></section>'''
-    person = {"@context":"https://schema.org","@type":"RealEstateAgent","name":"Brandon & Kaitlyn Oberdorfer","telephone":PHONE,"worksFor":{"@type":"Organization","name":"The Oberdorfer Team"},"areaServed":"Massachusetts"}
-    write("agents/brandon-kaitlyn-oberdorfer", R, "Brandon & Kaitlyn Oberdorfer · The Oberdorfer Team", "Meet Brandon and Kaitlyn Oberdorfer, the husband-and-wife team leaders and Top Producers of The Oberdorfer Team.", "Our Team", body, ld=[crumbs_ld(trail), person])
+    person = {"@context":"https://schema.org","@type":"AboutPage","url":SITE+"site/agents/brandon-kaitlyn-oberdorfer/","dateModified":UPDATED,
+              "mainEntity":{"@id":TEAM_ID},"mentions":[{"@id":SITE+f"site/agents/{a['slug']}/#person"} for a in AGENTS]}
+    write("agents/brandon-kaitlyn-oberdorfer", R, "Brandon & Kaitlyn Oberdorfer · Husband-and-Wife Real Estate Team, Massachusetts", "Meet Brandon and Kaitlyn Oberdorfer, the husband-and-wife team leaders and Top Producers of The Oberdorfer Team.", "Our Team", body, ld=[crumbs_ld(trail), person])
+
+# --------------------------------------------------------------------------- agent profiles
+# One record per agent. Only confirmed facts go in plain fields; anything not yet
+# supplied stays None and renders as a [bracketed placeholder] with a Verify badge.
+# The same record drives the page, its JSON-LD, the team card, sitemap.xml and llms.txt.
+AGENTS = [
+    dict(slug="brandon-oberdorfer", name="Brandon Oberdorfer", given="Brandon", family="Oberdorfer",
+         role="Team leader", partner="kaitlyn-oberdorfer", relation="his wife",
+         photo="assets/img/photo/brandon-oberdorfer.webp", photo_w=440, photo_h=550,
+         photo_note="Cropped from the team portrait in <em>Wakefield at Home</em>. Individual headshot to be supplied.",
+         title=None, license=None, email=None, direct=None, languages=None, specialties=None, bio=None, socials=None,
+         lead="agent:brandon-oberdorfer"),
+    dict(slug="kaitlyn-oberdorfer", name="Kaitlyn Oberdorfer", given="Kaitlyn", family="Oberdorfer",
+         role="Team leader", partner="brandon-oberdorfer", relation="her husband",
+         photo="assets/img/photo/kaitlyn-oberdorfer.webp", photo_w=440, photo_h=550,
+         photo_note="Cropped from the team portrait in <em>Wakefield at Home</em>. Individual headshot to be supplied.",
+         title=None, license=None, email=None, direct=None, languages=None, specialties=None, bio=None, socials=None,
+         lead="agent:kaitlyn-oberdorfer"),
+]
+TEMPLATE_AGENT = dict(slug="agent-template", name="[Agent name]", given="[First name]", family="[Last name]",
+         role="[Role on the team]", partner=None, relation=None, photo=None,
+         title=None, license=None, email=None, direct=None, languages=None, specialties=None, bio=None, socials=None,
+         lead="agent:[agent-slug]", template=True)
+AGENT_BY_SLUG = {a["slug"]: a for a in AGENTS}
+
+def ph(text):
+    """An unconfirmed value: bracketed, and flagged for verification."""
+    return f'<span class="placeholder-value">[{text}]</span>'
+
+def agent_card(R, a):
+    href = f"{R}site/agents/{a['slug']}/"
+    return f'''<article class="agent-card" data-specialty="buyers sellers first-time move-up" data-area="massachusetts wakefield worcester boston" data-lang="english">
+  <a class="agent-card__photo" href="{href}"><img src="{R}{a['photo']}" alt="{a['name']}" width="{a['photo_w']}" height="{a['photo_h']}" loading="lazy"></a>
+  <div class="stack" style="--stack:var(--space-2)"><p class="agent-card__title">{a['role']} · The Oberdorfer Team</p><h3 class="agent-card__name"><a href="{href}" style="text-decoration:none;color:inherit">{a['name']}</a></h3><p class="body-s muted">Husband. Wife. Your Team.</p></div>
+  <div class="agent-card__meta"><span class="chip">Buyers</span><span class="chip">Sellers</span><span class="chip">Massachusetts</span></div>
+  <div class="cluster" style="--cluster:var(--space-5)"><a class="link-arrow" href="{href}">Meet {a['given']} {arrow(R)}</a><a class="link-arrow" href="tel:{TEL}">{PHONE}</a></div>
+</article>'''
+
+def agent_faq(a):
+    """Answer-first questions people (and answer engines) ask about an agent. Confirmed facts only."""
+    g, n = a["given"], a["name"]
+    partner = AGENT_BY_SLUG.get(a.get("partner") or "", None)
+    qs = [
+        (f"How do I contact {n}?",
+         f"Call or text The Oberdorfer Team at {PHONE}, or send a message from this page. Messages sent here go to {g} and are attributed to {g} in the team's lead routing."),
+        (f"Which areas does {n} serve?",
+         f"{g} helps buyers and sellers across Massachusetts, including Greater Boston, Worcester and the Wakefield and North Shore area where the team publishes <em>Wakefield at Home</em>."),
+        (f"Which brokerage is {n} with?",
+         f"{g} is part of The Oberdorfer Team, a real estate team operating under REWAP Brokerage LLC in Massachusetts."),
+    ]
+    if partner:
+        qs.insert(1, (f"Do {g} and {partner['given']} work together?",
+                      f"Yes. {g} leads The Oberdorfer Team with {a['relation']}, {partner['name']}. The team describes itself as “Husband. Wife. Your Team.”: two partners invested in your goals."))
+    return qs
+
+def profile_ld(R, a, url, faq):
+    pid = SITE + f"site/agents/{a['slug']}/#person"
+    person = {"@type": "Person", "@id": pid, "name": a["name"], "givenName": a["given"], "familyName": a["family"],
+              "url": url, "image": SITE + a["photo"], "telephone": PHONE,
+              "jobTitle": "Real estate team leader",
+              "worksFor": {"@id": TEAM_ID}, "affiliation": {"@id": BROKER_ID},
+              "areaServed": {"@type": "State", "name": "Massachusetts"},
+              "knowsAbout": ["Buying a home in Massachusetts", "Selling a home in Massachusetts", "Wakefield, Massachusetts real estate"]}
+    if a.get("partner"):
+        person["spouse"] = {"@id": SITE + f"site/agents/{a['partner']}/#person"}
+    page = {"@context": "https://schema.org", "@type": "ProfilePage", "url": url, "dateModified": UPDATED,
+            "mainEntity": person}
+    faq_ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+        {"@type": "Question", "name": html.unescape(q), "acceptedAnswer": {"@type": "Answer", "text": re_tags(a_)}} for q, a_ in faq]}
+    return [page, faq_ld]
+
+def re_tags(t):
+    import re
+    return html.unescape(re.sub(r"<[^>]+>", "", t))
+
+def page_profile(a):
+    """Individual agent profile: /agents/<slug>/. Built for search (one entity per page,
+    answer-first summary, quick facts, FAQ, ProfilePage + FAQPage JSON-LD) and for
+    conversion (two actions above the fold, a mobile action bar, an attributed form)."""
+    R = "../../../"
+    tpl = a.get("template", False)
+    g = a["given"]
+    url = SITE + f"site/agents/{a['slug']}/"
+    trail = [("Home", "site/"), ("Our Team", "site/team/"), (a["name"], f"site/agents/{a['slug']}/")]
+    partner = AGENT_BY_SLUG.get(a.get("partner") or "", None)
+    faq = agent_faq(a)
+    verify = '<span class="badge badge--verify">To confirm</span>'
+
+    if tpl:
+        photo = f'''<figure class="profile__photo"><div class="headshot-pending">{icon(R, 'user')}<p class="h5">Headshot pending</p><p class="body-s">4:5, natural light, ivory or navy backdrop. Required before the profile is published.</p></div></figure>'''
+    else:
+        photo = f'''<figure class="profile__photo"><img src="{R}{a['photo']}" alt="{a['name']}, {a['role'].lower()} of The Oberdorfer Team" width="{a['photo_w']}" height="{a['photo_h']}"><figcaption class="caption">{a['photo_note']} <span class="badge badge--verify">Interim photo</span></figcaption></figure>'''
+
+    summary = (f"[One-sentence summary: who {g} is, what they help clients do, and where. For example: “{g} is a Massachusetts real estate agent on The Oberdorfer Team who helps first-time buyers in Worcester County.”]"
+               if tpl else
+               f"{a['name']} is a Massachusetts real estate agent who leads The Oberdorfer Team with {a['relation']}, {partner['name']}. The husband-and-wife team helps buyers and sellers across the state and operates under REWAP Brokerage LLC.")
+    facts = [
+        ("Role", f"{a['role']}, The Oberdorfer Team" if not tpl else ph("Role on the team")),
+        ("Title", ph("Professional title to confirm")),
+        ("Brokerage", "REWAP Brokerage LLC"),
+        ("Recognition", ph("Verified awards only") if tpl else 'Top Producer <span class="badge badge--source">Wakefield at Home, Fall 2026</span>'),
+        ("Service area", "Massachusetts" if not tpl else ph("Service areas")),
+        ("Specialties", ph("Specialties to confirm")),
+        ("Languages", ph("Languages to confirm")),
+        ("Phone", f'<a href="tel:{TEL}">{PHONE}</a> (team line) · direct line ' + ph("to confirm") if not tpl else ph("Direct phone")),
+        ("Email", ph("Email to confirm")),
+        ("License", ph("MA license number to be supplied and verified")),
+    ]
+    facts_html = "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in facts)
+
+    if tpl:
+        bio = f'''<div class="placeholder-block"><p class="label">Biography · 120 to 250 words, first person</p>
+<p>[Their story in their own words: how they came to real estate, the clients they serve best, a local detail only they would know, and one sentence on how they work with Brandon and Kaitlyn's standard of service. Facts only; nothing that cannot be verified.]</p>{verify}</div>'''
+    else:
+        bio = f'''<div class="placeholder-block"><p class="label">{g}'s biography · in {g}'s own words</p>
+<p>[{g}'s biography to be supplied: 120 to 250 words in the first person. How {g} came to real estate, the part of each move {g} leads for clients, and a Massachusetts place {g} knows well. Verified facts only.]</p>{verify}</div>
+<div class="prose"><p>What {g} and {partner['given']} share is written in <em>Wakefield at Home</em>: “Our work reflects the values we bring to our own family: care, honesty, hard work, and showing up for the people who count on us.”</p>
+<p>Whether you are buying your first home, making room for your next chapter, or preparing to sell, the goal is the same: that you feel heard, informed, and supported from the first conversation through closing.</p></div>'''
+
+    homes = "".join(listing_card(R, l, f"{R}site/buy/{l['slug']}/") for l in LISTINGS[:3])
+    arts = "".join(article_card(R, x) for x in ARTICLES[:3])
+    faq_html = "".join(f'<details{" open" if i == 0 else ""}><summary>{q}</summary><div class="accordion__body body-s"><p>{ans}</p></div></details>' for i, (q, ans) in enumerate(faq))
+
+    partner_html = ""
+    if partner:
+        partner_html = f'''<div class="panel"><p class="label">Works alongside</p><a class="agent-mini" href="{R}site/agents/{partner['slug']}/" style="text-decoration:none;color:inherit"><img src="{R}{partner['photo']}" alt="" width="{partner['photo_w']}" height="{partner['photo_h']}"><span><span class="agent-mini__name">{partner['name']}</span><br><span class="agent-mini__meta">{partner['role']} · {a['relation'][0].upper() + a['relation'][1:]}</span></span></a>{link_arrow(R, R + "site/agents/brandon-kaitlyn-oberdorfer/", "Their story together")}</div>'''
+    elif tpl:
+        partner_html = f'''<div class="panel"><p class="label">Profile checklist</p><ul class="checklist body-s"><li>Verified MA license number</li><li>Headshot, 4:5</li><li>Biography, 120 to 250 words</li><li>Specialties and service areas</li><li>Languages</li><li>Direct phone and email</li><li>Principal broker approval</li></ul><p class="caption">The profile stays unpublished until every item is complete.</p></div>'''
+
+    stories = ('<figure class="testimonial testimonial--placeholder"><span class="testimonial__mark"></span>'
+               f'<blockquote>Verified client words about {g} appear here, quoted exactly, with the client\u2019s written permission on file.</blockquote>'
+               '<figcaption class="caption">Client first name, town · Year <span class="badge badge--proposed">Empty state</span></figcaption></figure>'
+               '<p class="caption" style="margin-top:var(--space-4)">No review or rating markup is published until real, permitted reviews exist.</p>')
+
+    note = f"Your message goes to {g} and is used only to respond to your request. [Privacy policy to be published before launch.]"
+    contact_form = form(R, "pf", f"Message {g}" if not tpl else f"Message {g}",
+                        contact_fields("pf") + select("pf-topic", "I'm interested in", ["Buying", "Selling", "Both", "A market review", "Something else"]) + field("pf-msg", "Message", "textarea", opt=True) + reach_pref("pf"),
+                        f"Send to {g}" if not tpl else "Send my message", a["lead"], "h3", note=note)
+
+    ribbon = '<p class="template-ribbon"><span class="badge badge--demo">Template preview</span> Not a real agent. This is the profile every future team member receives, with the fields they must supply.</p>' if tpl else ""
+
+    body = f'''
+<section class="section profile-hero" style="padding-top:var(--space-7)"><div class="container stack" style="--stack:var(--space-6)">
+  {breadcrumbs(R, trail)}{ribbon}
+  <div class="profile">
+    {photo}
+    <div class="profile__body">
+      <p class="label">{a['role']} · The Oberdorfer Team</p>
+      <h1 class="display-l" id="page-title">{a['name']}</h1>
+      <p class="lead profile__summary">{summary}</p>
+      <div class="cluster profile__actions"><a class="btn" href="#contact-agent">Message {g}</a><a class="btn btn--secondary" href="tel:{TEL}">Call {PHONE}</a></div>
+      <p class="caption profile__trust">Husband. Wife. Your Team. · REWAP Brokerage LLC · Serving Massachusetts</p>
+      <dl class="quick-facts" aria-label="{g} at a glance">{facts_html}</dl>
+      <p class="caption">Profile updated <time datetime="{UPDATED}">October 22, 2026</time>.</p>
+    </div>
+  </div>
+</div></section>
+<section class="section surface-muted"><div class="container split" style="align-items:start">
+  <div class="stack" style="grid-column:1/span 7;--stack:var(--space-5)"><p class="label">About {g}</p><h2 class="display-m">Meet {g}.</h2>{bio}</div>
+  <aside class="stack" style="grid-column:9/span 4;--stack:var(--space-5)">{partner_html}</aside>
+</div></section>
+<section class="section"><div class="container">{section_head("How " + g + " can help", "Services", ["A plan for", "your next move."], title_id="help-title")}
+  <div class="cols cols--3 col-rule">
+    <div class="stack"><h3 class="h4">Buying a home</h3><p class="body-s">Preapproval, everyday priorities and the costs beyond the listing price, then showings shaped around your life.</p>{link_arrow(R, R + "site/buy/", "Start a home search")}</div>
+    <div class="stack"><h3 class="h4">Selling a home</h3><p class="body-s">Pricing from comparable closed sales, preparation, photography and a launch planned around your calendar.</p>{link_arrow(R, R + "site/sell/", "Plan your sale")}</div>
+    <div class="stack"><h3 class="h4">A market review</h3><p class="body-s">A property-specific look at recent closed sales before you decide what to offer or where to price.</p>{link_arrow(R, R + "site/sell/#consult", "Request a market review")}</div>
+  </div>
+</div></section>
+<section class="section surface-inverse"><div class="container split" style="align-items:center">
+  <div class="stack" style="grid-column:1/span 5"><p class="label">Client stories</p><h2 class="display-m answer"><span>In their</span><span>own words.</span></h2></div>
+  <div style="grid-column:7/span 6">{stories}</div>
+</div></section>
+<section class="section"><div class="container">{section_head("Listings", "Demonstration", ["Homes " + g + " is", "presenting now."], title_id="al-title")}<div class="listing-grid">{homes}</div><p class="form-note" style="margin-top:var(--space-6)">On the live site this shows only listings {g} is authorized to advertise, from the IDX feed, with MLS attribution.</p></div></section>
+<section class="section surface-muted"><div class="container">{section_head("From the journal", g, ["Recent writing."], title_id="aj-title")}<div class="card-grid-3">{arts}</div></div></section>
+<section class="section"><div class="container split" style="align-items:start">
+  <div class="stack" style="grid-column:1/span 5"><p class="label">Questions</p><h2 class="display-m answer"><span>Asked about</span><span>{g}.</span></h2><p class="body-s muted">Plain answers to the questions people ask before they call.</p></div>
+  <div class="accordion" style="grid-column:7/span 6">{faq_html}</div>
+</div></section>
+<section class="section surface-muted" id="contact-agent"><div class="container split" style="align-items:start">
+  <div style="grid-column:1/span 5" class="stack"><p class="label">Contact {g}</p><h2 class="display-m answer"><span>Start with</span><span>a conversation.</span></h2><p>Tell {g} what you are planning. Expect a reply by your preferred method; no account, no obligation.</p><a class="cta-panel__phone" href="tel:{TEL}" style="color:var(--ot-navy);font-size:var(--step-h2)">{PHONE}</a></div>
+  <div style="grid-column:7/span 6" class="panel">{contact_form}</div>
+</div></section>
+<nav class="action-bar" aria-label="Contact {g}"><a class="btn btn--gold" href="tel:{TEL}">{icon(R, 'phone')}Call</a><a class="btn" href="#contact-agent" style="--btn-bg:var(--ot-ivory);--btn-fg:var(--ot-navy);--btn-border:var(--ot-ivory)">Message {g}</a></nav>'''
+
+    if tpl:
+        write(f"agents/{a['slug']}", R, "[Agent name], Massachusetts Real Estate Agent · The Oberdorfer Team",
+              "[Meta description, 150 to 160 characters: name, role, areas served, and the one thing clients come to them for.]",
+              "Our Team", body, ld=[crumbs_ld(trail)], og_type="profile", index=False)
+    else:
+        title = f"{a['name']}, Massachusetts Real Estate Agent · The Oberdorfer Team"
+        desc = f"Meet {a['name']}, who leads The Oberdorfer Team with {a['relation']}, {partner['name']}. Helping buyers and sellers across Massachusetts. Call {PHONE}."
+        write(f"agents/{a['slug']}", R, title, desc, "Our Team", body,
+              ld=[crumbs_ld(trail)] + profile_ld(R, a, url, faq), og_type="profile", og_image=a["photo"])
+
+def write_discovery_files():
+    """sitemap.xml for search engines and llms.txt for answer engines. Both use the
+    production domain placeholder until the domain is confirmed."""
+    urls = "".join(f"  <url><loc>{SITE}site/{p['rel'] + '/' if p['rel'] else ''}</loc><lastmod>{UPDATED}</lastmod></url>\n" for p in WRITTEN if p["index"])
+    with open(os.path.join(OUT, "sitemap.xml"), "w") as f:
+        f.write(f'<?xml version="1.0" encoding="UTF-8"?>\n<!-- Prototype: replace [domain-to-confirm] with the production domain. WordPress generates this at launch. -->\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
+    people = "\n".join(f"- [{a['name']}]({SITE}site/agents/{a['slug']}/): {a['role']}, The Oberdorfer Team. Leads the team with {a['relation']}, {AGENT_BY_SLUG[a['partner']]['name']}." for a in AGENTS)
+    pages = "\n".join(f"- [{html.unescape(p['title'])}]({SITE}site/{p['rel'] + '/' if p['rel'] else ''}): {html.unescape(p['desc'])}" for p in WRITTEN if p["index"])
+    with open(os.path.join(OUT, "llms.txt"), "w") as f:
+        f.write(f"""# The Oberdorfer Team
+
+> A husband-and-wife real estate team led by Brandon and Kaitlyn Oberdorfer, serving buyers and sellers across Massachusetts. The team operates under REWAP Brokerage LLC. Phone: {PHONE}. Promise: "Luxury at every price point."
+
+Facts on this site are sourced and dated. Market figures are for Wakefield, Massachusetts only (Redfin, accessed October 10, 2026) and are not live. Listings on this prototype are demonstrations.
+
+## People
+{people}
+
+## Pages
+{pages}
+""")
+    print("wrote site/sitemap.xml and site/llms.txt")
 
 def page_journal():
     R = "../../"
@@ -799,3 +1025,6 @@ if __name__ == "__main__":
     page_home(); page_buy(); [page_listing(l) for l in LISTINGS]; page_sell(); page_market()
     page_communities(); page_wakefield(); page_team(); page_agent(); page_journal(); page_article()
     page_join(); page_office(); page_contact()
+    for a in AGENTS: page_profile(a)
+    page_profile(TEMPLATE_AGENT)
+    write_discovery_files()

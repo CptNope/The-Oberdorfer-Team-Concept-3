@@ -401,12 +401,26 @@
           "name": "team-portrait.webp",
           "size": 94690,
           "type": "image/webp"
+        },
+        "brandon-oberdorfer.webp": {
+          "blob": "a53598f943eb4f6a155462c458a46606",
+          "name": "brandon-oberdorfer.webp",
+          "size": 15272,
+          "type": "image/webp"
+        },
+        "kaitlyn-oberdorfer.webp": {
+          "blob": "8c768877ce0a2923f03b158fe515701d",
+          "name": "kaitlyn-oberdorfer.webp",
+          "size": 26358,
+          "type": "image/webp"
         }
       },
       "name": "Photography",
       "order": [
         "cover-portrait.webp",
         "team-portrait.webp",
+        "brandon-oberdorfer.webp",
+        "kaitlyn-oberdorfer.webp",
         "lake-quannapowitt.webp",
         "breakheart-reservation.webp"
       ],
@@ -503,9 +517,9 @@
   ],
   "lastChange": {
     "by": "Claude",
-    "via": "Claude Code \u00b7 CptNope/The-Oberdorfer-Team-Concept-3@01f4858",
-    "at": "2026-10-22T17:04:00Z",
-    "note": "Redrew the four house illustrations and refreshed the previews that use them."
+    "via": "Claude Code \u00b7 CptNope/The-Oberdorfer-Team-Concept-3",
+    "at": "2026-10-22T17:58:00Z",
+    "note": "Added the agent profile component and Brandon's and Kaitlyn's interim headshots."
   },
   "layout": "files",
   "libraries": [],

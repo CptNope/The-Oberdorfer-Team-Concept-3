@@ -1,0 +1,26 @@
+<!-- @dsCard group="Cards" height=989 -->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>AgentProfile</title></head>
+<body class="pv-body">
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-phone" viewBox="0 0 24 24"><path d="M7.5 3H4.5V5.5C4.5 13.5 10.5 19.5 18.5 19.5H21V16.5L17 15L15.2 16.8C12 15.4 8.6 12 7.2 8.8L9 7Z"/></symbol><symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21C4 16.6 7.6 14 12 14S20 16.6 20 21"/></symbol></svg>
+<div class="pv">
+<div class="block__body stack" style="--stack:var(--space-6)">
+<p class="template-ribbon"><span class="badge badge--demo">Template preview</span> Not a real agent. Shown only on the template page.</p>
+<div class="cols cols--3">
+<div class="stack" style="--stack:var(--space-3)"><p class="caption">Pending headshot, 4:5 (1:1 on phones)</p><div class="headshot-pending" style="aspect-ratio:4/3"><svg aria-hidden="true" class="icon"><use href="#i-user"></use></svg><p class="h5">Headshot pending</p></div></div>
+<div class="stack" style="--stack:var(--space-3)"><p class="caption">Biography placeholder</p><div class="placeholder-block"><p class="label">Biography · first person</p><p>[120 to 250 words, verified facts only.]</p><span class="badge badge--verify">To confirm</span></div></div>
+<div class="stack" style="--stack:var(--space-3)"><p class="caption">Publish checklist</p><ul class="checklist body-s"><li>Verified MA license number</li><li>Headshot, 4:5</li><li>Principal broker approval</li></ul></div>
+</div>
+<div class="cols cols--2">
+<div class="stack" style="--stack:var(--space-3)"><p class="caption">Quick facts, with a placeholder value</p><dl class="quick-facts" style="display:grid;grid-template-columns:8rem 1fr;gap:var(--space-2) var(--space-5);font-size:var(--step-body-s);border-top:1px solid var(--rule-gold);padding-top:var(--space-4)"><dt class="label">Brokerage</dt><dd style="margin:0">REWAP Brokerage LLC</dd><dt class="label">License</dt><dd style="margin:0"><span class="placeholder-value">[MA license number to be supplied]</span></dd></dl></div>
+<div class="stack" style="--stack:var(--space-3)"><p class="caption">Phone action bar (fixed below 832px; shown static here)</p><nav aria-label="Contact example" class="action-bar" style="position:static;box-shadow:none;display:grid;grid-template-columns:1fr 1fr;gap:var(--space-2);padding:var(--space-2) var(--space-3);background:var(--ot-navy);border-top:1px solid var(--ot-gold)"><a class="btn btn--gold" href="#cards"><svg aria-hidden="true" class="icon"><use href="#i-phone"></use></svg>Call</a><a class="btn" href="#cards" style="--btn-bg:var(--ot-ivory);--btn-fg:var(--ot-navy);--btn-border:var(--ot-ivory)">Message Kaitlyn</a></nav></div>
+</div>
+<div class="cols cols--2 col-rule body-s">
+<div><p class="h6">Search and answer engines</p><p>One person per page, named in the title and <code>h1</code>. An answer-first summary sentence, a quick-facts list, an FAQ and a visible "profile updated" date. JSON-LD: <code>ProfilePage</code> with a <code>Person</code> linked to the team and brokerage by <code>@id</code>, plus <code>FAQPage</code> and <code>BreadcrumbList</code>. No review or rating markup until real, permitted reviews exist.</p></div>
+<div><p class="h6">Conversion</p><p>Two actions above the fold (message, call), the action bar on phones, services that link into Buy and Sell, a partner card, and a form at the foot of the page whose lead type names the agent (<code>agent:&lt;slug&gt;</code>) for routing and attribution.</p></div>
+</div>
+</div>
+</div>
+</body>
+</html>

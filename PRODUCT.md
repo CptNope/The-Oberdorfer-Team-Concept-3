@@ -116,6 +116,7 @@ Two things set the team apart:
 - Client testimonials
 - Years of experience and production statistics
 - Agent profiles beyond Brandon and Kaitlyn
+- Brandon's and Kaitlyn's individual biographies, titles, direct lines, emails, specialties, languages and headshots (their profiles show placeholders and interim crops of the team portrait)
 - Office address
 - Recruiting terms, commissions, benefits and training details
 - Awards

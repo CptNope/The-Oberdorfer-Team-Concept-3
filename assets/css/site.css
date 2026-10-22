@@ -185,3 +185,10 @@
 .site-footer .newsletter .input::placeholder { color: var(--ot-mist); }
 .article-card[hidden], .agent-card[hidden], .seat[hidden] { display: none; }
 .empty-state { align-content: start; }
+
+/* ---- Individual agent profile ---------------------------------------------------- */
+.profile__photo figcaption { margin-top: var(--space-3); }
+.profile__summary { max-width: 46ch; }
+.profile__trust { letter-spacing: 0.04em; }
+.quick-facts dd .badge { margin-left: var(--space-2); vertical-align: middle; }
+@media (max-width: 52rem) { .profile-hero .profile__photo img, .profile-hero .headshot-pending { aspect-ratio: 1 / 1; } .profile-hero .profile { gap: var(--space-5); } }

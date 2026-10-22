@@ -32,7 +32,7 @@ a{color:#071d2d}a:hover{color:#7a6438}
 </section>
 
 <section class="section fse-scope">
-<span class="fse-tag"><b>pattern</b> agent-directory · directory filters (specialty, area, language taxonomies) · core/query (post type: agent) › ot/agent-card · open seats fill the last row (.seat)</span>
+<span class="fse-tag"><b>pattern</b> agent-directory · directory filters (specialty, area, language taxonomies) · core/query (post type: agent) › ot/agent-card · one card per agent profile (single-agent.html); open seats fill the last row (.seat); link to the new-member template</span>
 <div class="container">
 <form class="directory-bar" aria-label="Filter the team">
 <div class="field"><label class="field__label" for="d-spec">Specialty</label><select class="select" id="d-spec" name="spec"><option>All specialties</option><option>Buyers</option><option>Sellers</option><option>First-time buyers</option><option>Move-up</option></select></div>
@@ -40,18 +40,24 @@ a{color:#071d2d}a:hover{color:#7a6438}
 <div class="field"><label class="field__label" for="d-lang">Language</label><select class="select" id="d-lang" name="lang"><option>Any language</option><option>English</option></select></div>
 <button class="btn btn--secondary" type="button">Reset</button>
 </form>
-<p class="results-bar__count" aria-live="polite" style="margin-bottom: var(--space-6);">1 team profile</p>
+<p class="results-bar__count" aria-live="polite" style="margin-bottom: var(--space-6);">2 team profiles</p>
 <h2 class="visually-hidden">Team profiles</h2>
 <div class="card-grid-3">
 <article class="agent-card">
-<a class="agent-card__photo" href="#"><img src="/_blob/5b9c3391ef2958e39f5d3f554c757926" alt="Brandon and Kaitlyn Oberdorfer" width="1400" height="1680"></a>
-<div class="stack" style="--stack: var(--space-2);"><p class="agent-card__title">Team leaders · Top Producer</p><h3 class="agent-card__name"><a href="#" style="text-decoration: none; color: inherit;">Brandon &amp; Kaitlyn Oberdorfer</a></h3><p class="body-s muted">Husband. Wife. Your Team.</p></div>
+<a class="agent-card__photo" href="#"><img src="/_blob/580884f9c011d43c295ca9e660290e3d" alt="Brandon Oberdorfer" width="440" height="550"></a>
+<div class="stack" style="--stack: var(--space-2);"><p class="agent-card__title">Team leader · The Oberdorfer Team</p><h3 class="agent-card__name"><a href="#" style="text-decoration: none; color: inherit;">Brandon Oberdorfer</a></h3><p class="body-s muted">Husband. Wife. Your Team.</p></div>
 <div class="agent-card__meta"><span class="chip">Buyers</span><span class="chip">Sellers</span><span class="chip">Massachusetts</span></div>
-<div class="cluster" style="--cluster: var(--space-5);"><a class="link-arrow" href="#">View profile <svg class="icon" aria-hidden="true" viewBox="0 0 34 12"><use href="#i-arrow"></use></svg></a><a class="link-arrow" href="#">406-250-7620</a></div>
+<div class="cluster" style="--cluster: var(--space-5);"><a class="link-arrow" href="#">Meet Brandon <svg class="icon" aria-hidden="true" viewBox="0 0 34 12"><use href="#i-arrow"></use></svg></a><a class="link-arrow" href="#">406-250-7620</a></div>
+</article>
+<article class="agent-card">
+<a class="agent-card__photo" href="#"><img src="/_blob/beeffc56b18ce27c49180d106d48441d" alt="Kaitlyn Oberdorfer" width="440" height="550"></a>
+<div class="stack" style="--stack: var(--space-2);"><p class="agent-card__title">Team leader · The Oberdorfer Team</p><h3 class="agent-card__name"><a href="#" style="text-decoration: none; color: inherit;">Kaitlyn Oberdorfer</a></h3><p class="body-s muted">Husband. Wife. Your Team.</p></div>
+<div class="agent-card__meta"><span class="chip">Buyers</span><span class="chip">Sellers</span><span class="chip">Massachusetts</span></div>
+<div class="cluster" style="--cluster: var(--space-5);"><a class="link-arrow" href="#">Meet Kaitlyn <svg class="icon" aria-hidden="true" viewBox="0 0 34 12"><use href="#i-arrow"></use></svg></a><a class="link-arrow" href="#">406-250-7620</a></div>
 </article>
 <div class="seat"><div class="stack" style="--stack: var(--space-3); display: grid; justify-items: center;"><svg class="icon" aria-hidden="true"><use href="#i-user"></use></svg><p class="h4">Your seat at the table</p><p class="body-s">The team is growing. New agent profiles appear here as they join.</p><a class="link-arrow" href="#">Join our team <svg class="icon" aria-hidden="true" viewBox="0 0 34 12"><use href="#i-arrow"></use></svg></a></div></div>
-<div class="seat"><div class="stack" style="--stack: var(--space-3); display: grid; justify-items: center;"><svg class="icon" aria-hidden="true"><use href="#i-user"></use></svg><p class="h4">Your seat at the table</p><p class="body-s">The team is growing. New agent profiles appear here as they join.</p><a class="link-arrow" href="#">Join our team <svg class="icon" aria-hidden="true" viewBox="0 0 34 12"><use href="#i-arrow"></use></svg></a></div></div>
 </div>
+<p class="caption" style="margin-top: var(--space-5);">Every new agent receives the same profile: <a href="#">see the template</a>.</p>
 </div>
 </section>
 
@@ -67,7 +73,7 @@ a{color:#071d2d}a:hover{color:#7a6438}
 <dc-import name="Footer" show-tags="{{showTags}}" hint-size="100%,631px"></dc-import>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"showTags":{"editor":"boolean","default":true,"section":"Board"},"$preview":{"width":1440,"height":3026}}'>
+<script type="text/x-dc" data-dc-script data-props='{"showTags":{"editor":"boolean","default":true,"section":"Board"},"$preview":{"width":1440,"height":3069}}'>
 class Component extends DCLogic {
 renderVals() {
 const on = this.props.showTags ?? true;

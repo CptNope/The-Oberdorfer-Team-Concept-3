@@ -1,61 +1,407 @@
 {
-  "v": 3,
-  "createdOnFiles": {"v": 1, "at": "2026-10-22T17:20:00Z"},
-  "title": "Oberdorfer Team FSE Templates",
-  "launch": {"view": "canvas"},
-  "pages": [],
-  "boards": {
-    "Main.dc.html": {"x": 0, "y": 0, "w": 1440, "h": 1180, "title": "Template map · theme structure"},
-    "Header.dc.html": {"x": 2030, "y": 0, "w": 1440, "h": 76, "title": "parts/header.html"},
-    "Footer.dc.html": {"x": 2030, "y": 196, "w": 1440, "h": 631, "title": "parts/footer.html"},
-    "MobileMenu.dc.html": {"x": 3550, "y": 0, "w": 390, "h": 844, "title": "Phone · header overlay menu"},
-
-    "FrontPage.dc.html": {"x": 0, "y": 1600, "w": 1440, "h": 9250, "expand": "fill", "title": "front-page.html · Home"},
-    "MobileFrontPage.dc.html": {"x": 1520, "y": 1600, "w": 390, "h": 13218, "title": "Phone · front-page.html"},
-    "ArchiveListing.dc.html": {"x": 2030, "y": 1600, "w": 1440, "h": 4445, "expand": "fill", "title": "page-buy.html · Buy (IDX search)"},
-    "MobileBuy.dc.html": {"x": 3550, "y": 1600, "w": 390, "h": 7828, "title": "Phone · page-buy.html"},
-    "SingleListing.dc.html": {"x": 4060, "y": 1600, "w": 1440, "h": 4266, "expand": "fill", "title": "single-listing.html · Listing detail (IDX)"},
-    "MobileListing.dc.html": {"x": 5580, "y": 1600, "w": 390, "h": 6136, "title": "Phone · single-listing.html"},
-    "PageSell.dc.html": {"x": 6090, "y": 1600, "w": 1440, "h": 4688, "expand": "fill", "title": "page-sell.html · Sell"},
-    "MobileSell.dc.html": {"x": 7610, "y": 1600, "w": 390, "h": 6559, "title": "Phone · page-sell.html"},
-    "PageMarket.dc.html": {"x": 8120, "y": 1600, "w": 1440, "h": 2925, "expand": "fill", "title": "page-market.html · Market insights"},
-    "MobileMarket.dc.html": {"x": 9640, "y": 1600, "w": 390, "h": 3671, "title": "Phone · page-market.html"},
-
-    "ArchiveCommunity.dc.html": {"x": 0, "y": 15240, "w": 1440, "h": 3293, "expand": "fill", "title": "archive-community.html · Communities"},
-    "MobileCommunities.dc.html": {"x": 1520, "y": 15240, "w": 390, "h": 4291, "title": "Phone · archive-community.html"},
-    "SingleCommunity.dc.html": {"x": 2030, "y": 15240, "w": 1440, "h": 4315, "expand": "fill", "title": "single-community.html · Wakefield"},
-    "MobileCommunity.dc.html": {"x": 3550, "y": 15240, "w": 390, "h": 6344, "title": "Phone · single-community.html"},
-    "ArchiveAgent.dc.html": {"x": 4060, "y": 15240, "w": 1440, "h": 3026, "expand": "fill", "title": "archive-agent.html · Team"},
-    "MobileTeam.dc.html": {"x": 5580, "y": 15240, "w": 390, "h": 4587, "title": "Phone · archive-agent.html"},
-    "SingleAgent.dc.html": {"x": 6090, "y": 15240, "w": 1440, "h": 5127, "expand": "fill", "title": "single-agent.html · Agent profile"},
-    "MobileAgent.dc.html": {"x": 7610, "y": 15240, "w": 390, "h": 8200, "title": "Phone · single-agent.html"},
-    "PageJoin.dc.html": {"x": 8120, "y": 15240, "w": 1440, "h": 3629, "expand": "fill", "title": "page-join.html · Join our team"},
-    "MobileJoin.dc.html": {"x": 9640, "y": 15240, "w": 390, "h": 5007, "title": "Phone · page-join.html"},
-
-    "Home.dc.html": {"x": 0, "y": 23860, "w": 1440, "h": 3533, "expand": "fill", "title": "home.html · Journal"},
-    "MobileJournal.dc.html": {"x": 1520, "y": 23860, "w": 390, "h": 5367, "title": "Phone · home.html"},
-    "Single.dc.html": {"x": 2030, "y": 23860, "w": 1440, "h": 3549, "expand": "fill", "title": "single.html · Article"},
-    "MobileArticle.dc.html": {"x": 3550, "y": 23860, "w": 390, "h": 4210, "title": "Phone · single.html"},
-    "SingleOffice.dc.html": {"x": 4060, "y": 23860, "w": 1440, "h": 2430, "expand": "fill", "title": "single-office.html · Team office"},
-    "MobileOffice.dc.html": {"x": 5580, "y": 23860, "w": 390, "h": 3240, "title": "Phone · single-office.html"},
-    "PageContact.dc.html": {"x": 6090, "y": 23860, "w": 1440, "h": 2631, "expand": "fill", "title": "page-contact.html · Contact"},
-    "MobileContact.dc.html": {"x": 7610, "y": 23860, "w": 390, "h": 3737, "title": "Phone · page-contact.html"}
+ "v": 3,
+ "createdOnFiles": {
+  "v": 1,
+  "at": "2026-10-22T17:20:00Z"
+ },
+ "title": "Oberdorfer Team FSE Templates",
+ "launch": {
+  "view": "canvas"
+ },
+ "pages": [],
+ "boards": {
+  "Main.dc.html": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 1260,
+   "title": "Template map · theme structure"
   },
-  "order": [
-    "Main.dc.html", "Header.dc.html", "Footer.dc.html", "MobileMenu.dc.html",
-    "FrontPage.dc.html", "MobileFrontPage.dc.html", "ArchiveListing.dc.html", "MobileBuy.dc.html", "SingleListing.dc.html", "MobileListing.dc.html", "PageSell.dc.html", "MobileSell.dc.html", "PageMarket.dc.html", "MobileMarket.dc.html",
-    "ArchiveCommunity.dc.html", "MobileCommunities.dc.html", "SingleCommunity.dc.html", "MobileCommunity.dc.html", "ArchiveAgent.dc.html", "MobileTeam.dc.html", "SingleAgent.dc.html", "MobileAgent.dc.html", "PageJoin.dc.html", "MobileJoin.dc.html",
-    "Home.dc.html", "MobileJournal.dc.html", "Single.dc.html", "MobileArticle.dc.html", "SingleOffice.dc.html", "MobileOffice.dc.html", "PageContact.dc.html", "MobileContact.dc.html"
-  ],
-  "notes": {
-    "t0": {"x": 0, "y": -300, "text": "Theme structure and template parts", "kind": "title1", "maxW": 10030},
-    "t1": {"x": 0, "y": 1340, "text": "Home, buying and selling", "kind": "title1", "maxW": 10030},
-    "t2": {"x": 0, "y": 14980, "text": "Places and people", "kind": "title1", "maxW": 10030},
-    "t3": {"x": 0, "y": 23600, "text": "Journal, office and contact", "kind": "title1", "maxW": 10030},
-    "s1": {"x": 4060, "y": 0, "w": 420, "fill": "blue", "size": "m", "text": "How to read these boards\n\nEach board is one block-theme template at 1440px, built from the real design-system CSS. Columns follow the site's navigation, left to right, top to bottom.\n\nBlue chips name the pattern and blocks that build each section: core/* are WordPress core blocks, ot/* are the theme's custom blocks.\n\nThe header and footer boards are the two template parts; every page imports them.\n\nTurn the chips off with the Show blocks tweak on any board."},
-    "s2": {"x": 4560, "y": 0, "w": 420, "fill": "blue", "size": "m", "text": "Phone boards (390px)\n\nA phone board sits to the right of its desktop template and imports it, so the two never drift apart: edit the 1440px board and the 390px one follows.\n\nBelow 1024px the header swaps its navigation for the overlay menu; below 832px every split stacks to one column; cards go one-up below 576px.\n\nBlock chips are off by default on phone boards; turn them on with the Show blocks tweak."}
+  "Header.dc.html": {
+   "x": 2030,
+   "y": 0,
+   "w": 1440,
+   "h": 76,
+   "title": "parts/header.html"
   },
-  "designSystems": [
-    {"title": "The-Oberdorfer-Team-Concept-3", "namespace": "oberdorferteam", "artifact": "https://claude.ai/artifact/YE21oQ5cfN4i2RqN51Wwj4", "version": "1792688561-5b5f", "copiedAt": "2026-10-22T17:20:00Z"}
-  ]
+  "Footer.dc.html": {
+   "x": 2030,
+   "y": 196,
+   "w": 1440,
+   "h": 631,
+   "title": "parts/footer.html"
+  },
+  "MobileMenu.dc.html": {
+   "x": 3550,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "title": "Phone · header overlay menu"
+  },
+  "FrontPage.dc.html": {
+   "x": 0,
+   "y": 1600,
+   "w": 1440,
+   "h": 9250,
+   "expand": "fill",
+   "title": "front-page.html · Home"
+  },
+  "MobileFrontPage.dc.html": {
+   "x": 1520,
+   "y": 1600,
+   "w": 390,
+   "h": 13280,
+   "title": "Phone · front-page.html"
+  },
+  "ArchiveListing.dc.html": {
+   "x": 2030,
+   "y": 1600,
+   "w": 1440,
+   "h": 4445,
+   "expand": "fill",
+   "title": "page-buy.html · Buy (IDX search)"
+  },
+  "MobileBuy.dc.html": {
+   "x": 3550,
+   "y": 1600,
+   "w": 390,
+   "h": 7890,
+   "title": "Phone · page-buy.html"
+  },
+  "SingleListing.dc.html": {
+   "x": 4060,
+   "y": 1600,
+   "w": 1440,
+   "h": 4266,
+   "expand": "fill",
+   "title": "single-listing.html · Listing detail (IDX)"
+  },
+  "MobileListing.dc.html": {
+   "x": 5580,
+   "y": 1600,
+   "w": 390,
+   "h": 6198,
+   "title": "Phone · single-listing.html"
+  },
+  "PageSell.dc.html": {
+   "x": 6090,
+   "y": 1600,
+   "w": 1440,
+   "h": 4688,
+   "expand": "fill",
+   "title": "page-sell.html · Sell"
+  },
+  "MobileSell.dc.html": {
+   "x": 7610,
+   "y": 1600,
+   "w": 390,
+   "h": 6621,
+   "title": "Phone · page-sell.html"
+  },
+  "PageMarket.dc.html": {
+   "x": 8120,
+   "y": 1600,
+   "w": 1440,
+   "h": 2925,
+   "expand": "fill",
+   "title": "page-market.html · Market insights"
+  },
+  "MobileMarket.dc.html": {
+   "x": 9640,
+   "y": 1600,
+   "w": 390,
+   "h": 3733,
+   "title": "Phone · page-market.html"
+  },
+  "ArchiveCommunity.dc.html": {
+   "x": 0,
+   "y": 15240,
+   "w": 1440,
+   "h": 3293,
+   "expand": "fill",
+   "title": "archive-community.html · Communities"
+  },
+  "MobileCommunities.dc.html": {
+   "x": 1520,
+   "y": 15240,
+   "w": 390,
+   "h": 4353,
+   "title": "Phone · archive-community.html"
+  },
+  "SingleCommunity.dc.html": {
+   "x": 2030,
+   "y": 15240,
+   "w": 1440,
+   "h": 4315,
+   "expand": "fill",
+   "title": "single-community.html · Wakefield"
+  },
+  "MobileCommunity.dc.html": {
+   "x": 3550,
+   "y": 15240,
+   "w": 390,
+   "h": 6406,
+   "title": "Phone · single-community.html"
+  },
+  "ArchiveAgent.dc.html": {
+   "x": 0,
+   "y": 22070,
+   "w": 1440,
+   "h": 3069,
+   "expand": "fill",
+   "title": "archive-agent.html · Team"
+  },
+  "MobileTeam.dc.html": {
+   "x": 1520,
+   "y": 22070,
+   "w": 390,
+   "h": 4908,
+   "title": "Phone · archive-agent.html"
+  },
+  "SingleAgent.dc.html": {
+   "x": 6090,
+   "y": 22070,
+   "w": 1440,
+   "h": 7389,
+   "expand": "fill",
+   "title": "single-agent.html · Kaitlyn Oberdorfer"
+  },
+  "MobileAgent.dc.html": {
+   "x": 7610,
+   "y": 22070,
+   "w": 390,
+   "h": 11273,
+   "title": "Phone · single-agent.html (Kaitlyn)"
+  },
+  "PageJoin.dc.html": {
+   "x": 4060,
+   "y": 15240,
+   "w": 1440,
+   "h": 3629,
+   "expand": "fill",
+   "title": "page-join.html · Join our team"
+  },
+  "MobileJoin.dc.html": {
+   "x": 5580,
+   "y": 15240,
+   "w": 390,
+   "h": 5069,
+   "title": "Phone · page-join.html"
+  },
+  "Home.dc.html": {
+   "x": 0,
+   "y": 33820,
+   "w": 1440,
+   "h": 3533,
+   "expand": "fill",
+   "title": "home.html · Journal"
+  },
+  "MobileJournal.dc.html": {
+   "x": 1520,
+   "y": 33820,
+   "w": 390,
+   "h": 5429,
+   "title": "Phone · home.html"
+  },
+  "Single.dc.html": {
+   "x": 2030,
+   "y": 33820,
+   "w": 1440,
+   "h": 3549,
+   "expand": "fill",
+   "title": "single.html · Article"
+  },
+  "MobileArticle.dc.html": {
+   "x": 3550,
+   "y": 33820,
+   "w": 390,
+   "h": 4272,
+   "title": "Phone · single.html"
+  },
+  "SingleOffice.dc.html": {
+   "x": 4060,
+   "y": 33820,
+   "w": 1440,
+   "h": 2430,
+   "expand": "fill",
+   "title": "single-office.html · Team office"
+  },
+  "MobileOffice.dc.html": {
+   "x": 5580,
+   "y": 33820,
+   "w": 390,
+   "h": 3302,
+   "title": "Phone · single-office.html"
+  },
+  "PageContact.dc.html": {
+   "x": 6090,
+   "y": 33820,
+   "w": 1440,
+   "h": 2631,
+   "expand": "fill",
+   "title": "page-contact.html · Contact"
+  },
+  "MobileContact.dc.html": {
+   "x": 7610,
+   "y": 33820,
+   "w": 390,
+   "h": 3799,
+   "title": "Phone · page-contact.html"
+  },
+  "TeamLeaders.dc.html": {
+   "x": 2030,
+   "y": 22070,
+   "w": 1440,
+   "h": 6325,
+   "expand": "fill",
+   "title": "page-brandon-kaitlyn.html · Brandon & Kaitlyn"
+  },
+  "MobileTeamLeaders.dc.html": {
+   "x": 3550,
+   "y": 22070,
+   "w": 390,
+   "h": 9875,
+   "title": "Phone · page-brandon-kaitlyn.html"
+  },
+  "AgentBrandon.dc.html": {
+   "x": 4060,
+   "y": 22070,
+   "w": 1440,
+   "h": 7411,
+   "expand": "fill",
+   "title": "single-agent.html · Brandon Oberdorfer"
+  },
+  "MobileAgentBrandon.dc.html": {
+   "x": 5580,
+   "y": 22070,
+   "w": 390,
+   "h": 11326,
+   "title": "Phone · single-agent.html (Brandon)"
+  },
+  "AgentTemplate.dc.html": {
+   "x": 8120,
+   "y": 22070,
+   "w": 1440,
+   "h": 7248,
+   "expand": "fill",
+   "title": "single-agent.html · New team member (template)"
+  },
+  "MobileAgentTemplate.dc.html": {
+   "x": 9640,
+   "y": 22070,
+   "w": 390,
+   "h": 11125,
+   "title": "Phone · single-agent.html (template)"
+  }
+ },
+ "order": [
+  "Main.dc.html",
+  "Header.dc.html",
+  "Footer.dc.html",
+  "MobileMenu.dc.html",
+  "FrontPage.dc.html",
+  "MobileFrontPage.dc.html",
+  "ArchiveListing.dc.html",
+  "MobileBuy.dc.html",
+  "SingleListing.dc.html",
+  "MobileListing.dc.html",
+  "PageSell.dc.html",
+  "MobileSell.dc.html",
+  "PageMarket.dc.html",
+  "MobileMarket.dc.html",
+  "ArchiveCommunity.dc.html",
+  "MobileCommunities.dc.html",
+  "SingleCommunity.dc.html",
+  "MobileCommunity.dc.html",
+  "PageJoin.dc.html",
+  "MobileJoin.dc.html",
+  "ArchiveAgent.dc.html",
+  "MobileTeam.dc.html",
+  "TeamLeaders.dc.html",
+  "MobileTeamLeaders.dc.html",
+  "AgentBrandon.dc.html",
+  "MobileAgentBrandon.dc.html",
+  "SingleAgent.dc.html",
+  "MobileAgent.dc.html",
+  "AgentTemplate.dc.html",
+  "MobileAgentTemplate.dc.html",
+  "Home.dc.html",
+  "MobileJournal.dc.html",
+  "Single.dc.html",
+  "MobileArticle.dc.html",
+  "SingleOffice.dc.html",
+  "MobileOffice.dc.html",
+  "PageContact.dc.html",
+  "MobileContact.dc.html"
+ ],
+ "notes": {
+  "t0": {
+   "x": 0,
+   "y": -300,
+   "text": "Theme structure and template parts",
+   "kind": "title1",
+   "maxW": 10030
+  },
+  "t1": {
+   "x": 0,
+   "y": 1340,
+   "text": "Home, buying and selling",
+   "kind": "title1",
+   "maxW": 10030
+  },
+  "t2": {
+   "x": 0,
+   "y": 14980,
+   "text": "Communities and recruiting",
+   "kind": "title1",
+   "maxW": 10030
+  },
+  "t3": {
+   "x": 0,
+   "y": 33560,
+   "text": "Journal, office and contact",
+   "kind": "title1",
+   "maxW": 10030
+  },
+  "s1": {
+   "x": 4060,
+   "y": 0,
+   "w": 420,
+   "fill": "blue",
+   "size": "m",
+   "text": "How to read these boards\n\nEach board is one block-theme template at 1440px, built from the real design-system CSS. Columns follow the site's navigation, left to right, top to bottom.\n\nBlue chips name the pattern and blocks that build each section: core/* are WordPress core blocks, ot/* are the theme's custom blocks.\n\nThe header and footer boards are the two template parts; every page imports them.\n\nTurn the chips off with the Show blocks tweak on any board."
+  },
+  "s2": {
+   "x": 4560,
+   "y": 0,
+   "w": 420,
+   "fill": "blue",
+   "size": "m",
+   "text": "Phone boards (390px)\n\nA phone board sits to the right of its desktop template and imports it, so the two never drift apart: edit the 1440px board and the 390px one follows.\n\nBelow 1024px the header swaps its navigation for the overlay menu; below 832px every split stacks to one column; cards go one-up below 576px.\n\nBlock chips are off by default on phone boards; turn them on with the Show blocks tweak."
+  },
+  "t4": {
+   "x": 0,
+   "y": 21810,
+   "text": "Our team: the team page, the joint page and one profile per agent",
+   "kind": "title1",
+   "maxW": 10030
+  },
+  "s3": {
+   "x": 10150,
+   "y": 22070,
+   "w": 420,
+   "fill": "blue",
+   "size": "m",
+   "text": "Agent profiles\n\nOne single-agent.html template serves every agent: Brandon, Kaitlyn and anyone who joins later. Switch the board's Agent tweak between brandon, kaitlyn and template.\n\nBuilt for search and answer engines from the start: ProfilePage + Person JSON-LD linked by @id to the team and REWAP, FAQPage, BreadcrumbList, an answer-first summary, quick facts and a dated update line.\n\nBuilt for conversion: message and call above the fold, a fixed phone action bar, service links and a form attributed to the agent.\n\nUnconfirmed facts stay as [bracketed placeholders]; photos are interim crops of the team portrait."
+  }
+ },
+ "designSystems": [
+  {
+   "title": "The-Oberdorfer-Team-Concept-3",
+   "namespace": "oberdorferteam",
+   "artifact": "https://claude.ai/artifact/YE21oQ5cfN4i2RqN51Wwj4",
+   "version": "1792688561-5b5f",
+   "copiedAt": "2026-10-22T17:20:00Z"
+  }
+ ]
 }

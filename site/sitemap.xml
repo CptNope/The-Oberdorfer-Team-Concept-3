@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Prototype: replace [domain-to-confirm] with the production domain. WordPress generates this at launch. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://[domain-to-confirm]/site/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://[domain-to-confirm]/site/buy/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://[domain-to-confirm]/site/sell/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://[domain-to-confirm]/site/market/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://[domain-to-confirm]/site/communities/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://[domain-to-confirm]/site/communities/wakefield/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://[domain-to-confirm]/site/team/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://[domain-to-confirm]/site/agents/brandon-kaitlyn-oberdorfer/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://[domain-to-confirm]/site/journal/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://[domain-to-confirm]/site/journal/the-best-plans-are-close-to-home/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://[domain-to-confirm]/site/join/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://[domain-to-confirm]/site/office/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://[domain-to-confirm]/site/contact/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://[domain-to-confirm]/site/agents/brandon-oberdorfer/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://[domain-to-confirm]/site/agents/kaitlyn-oberdorfer/</loc><lastmod>2026-10-22</lastmod></url>
+</urlset>
