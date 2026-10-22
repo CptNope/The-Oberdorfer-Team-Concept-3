@@ -1,0 +1,85 @@
+{
+  "slug": "barnstable",
+  "name": "Barnstable",
+  "county": "Barnstable County",
+  "region": "Cape Cod (Mid-Cape, Cape Cod Bay to Nantucket Sound)",
+  "population_2020": 48916,
+  "population_source": "https://en.wikipedia.org/wiki/Barnstable,_Massachusetts",
+  "official_site": "https://barnstable.gov/",
+  "headline": ["Seven villages between two shores,", "from the Great Marsh to the Hyannis ferries."],
+  "answer": "Barnstable is the seat of Barnstable County, a town of 48,916 people (2020 Census) made up of seven villages that run from Cape Cod Bay to Nantucket Sound. Detached single-family homes make up 84.8 percent of its residential properties, and the town's housing plan counts at least 23 percent of its housing units as second homes. Hyannis is the Cape's transit hub: the seasonal CapeFLYER train from Boston ends at the Hyannis Transportation Center, and ferries leave Hyannis for Nantucket and Martha's Vineyard. U.S. Route 6 crosses the town as a four-lane freeway.",
+  "overview": [
+    "Bartholomew Gosnold explored this shore in 1602, and English settlers arrived on June 4, 1638, making Barnstable one of the first towns of Plymouth Colony; it was incorporated in 1639. The north side still follows the Old King's Highway, Route 6A, through Barnstable village and West Barnstable, where the 1644 house that forms the original part of the Sturgis Library is the oldest building housing a public library in the United States, and the Olde Colonial Courthouse recalls a 1774 protest led by James Otis and Samuel Adams. Behind them, Sandy Neck runs about six and a half miles along Cape Cod Bay, backed by salt marsh, with Sandy Neck Light at its tip.",
+    "The south side faces Nantucket Sound. Hyannis holds the historic Main Street, a large natural harbor and the ferry docks, along with Barnstable Municipal Airport and the Hyannis Transportation Center. West along Route 28, Centerville reaches Craigville Beach, Osterville keeps the Crosby boatbuilding story in its historical museum, and Cotuit sits on Cotuit Bay, the home water of the Cotuit oyster. Inland, Marstons Mills takes its name from Benjamin Marston's fulling mill and keeps a herring run, kettle ponds and a grass airfield dating to 1929."
+  ],
+  "housing": {
+    "text": "Barnstable's 2025 Housing Production Plan executive summary counts detached single-family homes as 84.8 percent of residential properties, and reports that at least 23 percent of the town's housing units are second homes. Hyannis holds about one-fifth of all housing units; single-family homes are 59 percent of its units, and most of its units are rented. The plan names town-owned sites in Marstons Mills, among others, for new year-round housing.",
+    "source": "https://barnstable.gov/Departments/planninganddevelopment/Projects/HousingProduction/2025%20Housing%20Production%20Plan%20Executive%20Summary.pdf"
+  },
+  "villages": [
+    {"name": "Hyannis", "line": "The largest village, with the historic Main Street, the harbor and ferry docks, the Hyannis Transportation Center and Barnstable Municipal Airport. It includes Hyannis Port.", "source": "https://en.wikipedia.org/wiki/Hyannis,_Massachusetts"},
+    {"name": "Barnstable Village", "line": "The north-side village along the Old King's Highway (Route 6A), with a working harbor, the county complex, the Sturgis Library and the Olde Colonial Courthouse.", "source": "https://en.wikipedia.org/wiki/Barnstable_(village),_Massachusetts"},
+    {"name": "West Barnstable", "line": "A northwestern village on Route 6A whose land is largely Sandy Neck, the Great Marsh and the West Barnstable Conservation Area, centered on the West Parish meetinghouse of 1717 to 1718.", "source": "https://en.wikipedia.org/wiki/West_Barnstable,_Massachusetts"},
+    {"name": "Centerville", "line": "A south-side village with the Centerville Historic District, the Centerville Historical Museum and Craigville Beach in its Craigville neighborhood.", "source": "https://en.wikipedia.org/wiki/Centerville,_Massachusetts"},
+    {"name": "Osterville", "line": "A village facing Nantucket Sound, with West Bay, the Wianno neighborhood by East Bay and the Crosby boatbuilding tradition.", "source": "https://en.wikipedia.org/wiki/Osterville,_Massachusetts"},
+    {"name": "Cotuit", "line": "The village on Cotuit Bay, midway between Falmouth and Hyannis, where the Cotuit Kettleers play Cape Cod Baseball League games at Lowell Park.", "source": "https://en.wikipedia.org/wiki/Cotuit,_Massachusetts"},
+    {"name": "Marstons Mills", "line": "An inland village on glacial plains, with the Marstons Mills River, a herring run, kettle ponds such as Mystic Lake and Hamblin Pond, and saltwater access only at Prince Cove.", "source": "https://en.wikipedia.org/wiki/Marstons_Mills,_Massachusetts"}
+  ],
+  "commute": {
+    "rail": [
+      {"line": "CapeFLYER (seasonal weekends, Memorial Day weekend to Labor Day)", "stations": ["Hyannis (Hyannis Transportation Center, 1 Transportation Avenue)"]}
+    ],
+    "rail_source": "https://capeflyer.com/",
+    "highways": ["U.S. Route 6", "Route 6A", "Route 28", "Route 132", "Route 149"],
+    "text": "Barnstable has no year-round passenger rail; the nearest year-round MBTA Commuter Rail stations are Middleborough and Kingston. In summer, the CapeFLYER runs weekends only from Memorial Day weekend through Labor Day between Boston's South Station and the Hyannis Transportation Center, with stops including Braintree, Brockton, Wareham Village, Buzzards Bay and Bourne. The Hyannis Transportation Center is also the terminal for Cape Cod Regional Transit Authority buses, including the Sealine to Falmouth and Woods Hole, and for Plymouth & Brockton and Peter Pan intercity buses. From Hyannis, the Steamship Authority runs year-round ferries to Nantucket and a seasonal high-speed passenger ferry, and Hy-Line runs passenger ferries to Nantucket and a seasonal catamaran to Martha's Vineyard. Barnstable Municipal Airport in Hyannis has scheduled flights to the islands and Boston. U.S. Route 6 crosses the town as a four-lane freeway, and Routes 132 and 149 link Route 6A to Route 28.",
+    "sources": [
+      "https://capeflyer.com/",
+      "https://en.wikipedia.org/wiki/Barnstable,_Massachusetts",
+      "https://en.wikipedia.org/wiki/Hyannis,_Massachusetts",
+      "https://www.capecodrta.org/sealine/",
+      "https://www.steamshipauthority.com/about"
+    ]
+  },
+  "schools": {"district": "Barnstable Public Schools", "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=00200000&orgtypecode=5"},
+  "places": [
+    {"name": "Sandy Neck", "line": "A public barrier beach about 6.5 miles long on Cape Cod Bay, backed by salt marsh, with Sandy Neck Light's 1857 brick tower at Beach Point.", "source": "https://en.wikipedia.org/wiki/Sandy_Neck_Beach"},
+    {"name": "John F. Kennedy Hyannis Museum", "line": "A museum at 397 Main Street, Hyannis, on President Kennedy, his family and their connection to Cape Cod; hours change by season.", "source": "https://www.jfkhyannismuseum.org/"},
+    {"name": "Sturgis Library", "line": "A library at 3090 Main Street (Route 6A) in Barnstable Village whose building is the oldest structure housing a public library in the United States.", "source": "https://www.sturgislibrary.org/"},
+    {"name": "Osterville Historical Museum", "line": "A museum at 155 West Bay Road, founded in 1931, with the Cammett, Parker and Jelly houses and more than a dozen full-sized Crosby wooden boats.", "source": "https://www.ostervillemuseum.org/"},
+    {"name": "Hyannis Harbor and Main Street", "line": "A large natural harbor, the Cape's largest recreational boating port, beside the historic downtown Main Street shopping district.", "source": "https://en.wikipedia.org/wiki/Hyannis,_Massachusetts"},
+    {"name": "Lowell Park, Cotuit", "line": "The summer home field of the Cotuit Kettleers of the Cape Cod Baseball League.", "source": "https://en.wikipedia.org/wiki/Cotuit,_Massachusetts"}
+  ],
+  "history": [
+    {"year": "1602", "text": "Bartholomew Gosnold became the first European to explore the area.", "source": "https://en.wikipedia.org/wiki/Barnstable,_Massachusetts"},
+    {"year": "1639", "text": "Settled on June 4, 1638, as one of the first towns of Plymouth Colony, Barnstable was incorporated the following September.", "source": "https://en.wikipedia.org/wiki/Barnstable,_Massachusetts"},
+    {"year": "1774", "text": "Protesters led by James Otis and Samuel Adams interrupted court proceedings at the Olde Colonial Courthouse, now a museum.", "source": "https://en.wikipedia.org/wiki/Barnstable_(village),_Massachusetts"},
+    {"year": "1854", "text": "The Cape Cod Branch Railroad reached West Barnstable, and a depot was built in the village.", "source": "https://en.wikipedia.org/wiki/West_Barnstable,_Massachusetts"}
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": null, "sf_sales_2024": null,
+    "sf_median_2025": null, "sf_median_2024": null,
+    "condo_sales_2025": null, "condo_median_2025": null, "condo_median_2024": null,
+    "village_rows": [
+      {"name": "Barnstable (row labeled BARNSTABLE)", "sf_sales_2025": 60, "sf_sales_2024": 79, "sf_median_2025": 885000, "sf_median_2024": 877500},
+      {"name": "Centerville", "sf_sales_2025": 142, "sf_sales_2024": 137, "sf_median_2025": 664450, "sf_median_2024": 619000},
+      {"name": "Cotuit", "sf_sales_2025": 68, "sf_sales_2024": 54, "sf_median_2025": 814162, "sf_median_2024": 907500},
+      {"name": "Hyannis", "sf_sales_2025": 131, "sf_sales_2024": 124, "sf_median_2025": 590000, "sf_median_2024": 550000},
+      {"name": "Marstons Mills", "sf_sales_2025": 101, "sf_sales_2024": 91, "sf_median_2025": 665000, "sf_median_2024": 659000},
+      {"name": "Osterville", "sf_sales_2025": 51, "sf_sales_2024": 56, "sf_median_2025": 1165000, "sf_median_2024": 1200000}
+    ],
+    "reading_1": "BARNSTABLE (single-family; Dec 2024, Dec 2025, Percent Change): YTD Number of Sales 79 60 -24.1%; YTD Median Sale Price $877,500 $885,000 0.9%. Village rows in the same pass: HYANNIS YTD Sales 124 131 5.6%, YTD Median $550,000 $590,000 7.3%; CENTERVILLE 137 142 3.6%, $619,000 $664,450 7.3%; OSTERVILLE 56 51 -8.9%, $1,200,000 $1,165,000 -2.9%; COTUIT 54 68 25.9%, $907,500 $814,162 -10.3%; MARSTONS MILLS 91 101 11.0%, $659,000 $665,000 0.9%",
+    "reading_2": "BARNSTABLE (single-family): YTD Number of Sales 79 60 -24.1%; YTD Median Sale Price $877,500 $885,000 0.9%. CENTERVILLE 137 142 3.6%, $619,000 $664,450 7.3%; COTUIT 54 68 25.9%, $907,500 $814,162 -10.3%; HYANNIS 124 131 5.6%, $550,000 $590,000 7.3%; MARSTONS MILLS 91 101 11.0%, $659,000 $665,000 0.9%; OSTERVILLE 56 51 -8.9%, $1,200,000 $1,165,000 -2.9%. No WEST BARNSTABLE, CUMMAQUID or HYANNIS PORT row."
+  },
+  "nearby": ["mashpee", "sandwich", "yarmouth", "falmouth"],
+  "search_notes": "'Barnstable MA real estate agent' returns HomeLight and BiggerPockets agent directories, single brokerage agent pages (Keller Williams, Raveis, Realty Executives), Bean Group and Redfin filter pages. 'Moving to Hyannis Barnstable' returns Wikivoyage, Frommers travel guides, mover pages (Allied) and one brokerage blog on choosing a village. Few results explain that Barnstable is seven villages with separate price tables, or lay out the CapeFLYER, ferry and bus connections with sources, which a sourced guide could cover.",
+  "faq": [
+    {"q": "What is the median home price in Barnstable, MA?", "a": "The Warren Group's MA December 2025 Sales, Prices by Town table reports Barnstable by village rather than as one town. For calendar year 2025, the median single-family sale price was $590,000 in Hyannis (131 sales), $664,450 in Centerville (142 sales), $665,000 in Marstons Mills (101 sales), $814,162 in Cotuit (68 sales), $885,000 in the row labeled Barnstable (60 sales) and $1,165,000 in Osterville (51 sales). West Barnstable has no separate row."},
+    {"q": "Does Barnstable have commuter rail?", "a": "Not year-round. The seasonal CapeFLYER runs weekends from Memorial Day weekend through Labor Day between Boston's South Station and the Hyannis Transportation Center. The nearest year-round MBTA Commuter Rail stations are Middleborough and Kingston."},
+    {"q": "Where do the island ferries leave from in Barnstable?", "a": "From Hyannis. The Steamship Authority runs ferries to Nantucket year-round, plus a seasonal high-speed passenger ferry, and Hy-Line runs passenger ferries to Nantucket and a seasonal catamaran to Martha's Vineyard."},
+    {"q": "Which school district serves Barnstable?", "a": "Barnstable Public Schools. Review its profile with DESE."}
+  ],
+  "notes": "Market: The Warren Group does not publish a single town-wide Barnstable row. It lists BARNSTABLE, CENTERVILLE, COTUIT, HYANNIS, MARSTONS MILLS and OSTERVILLE as separate single-family rows, and has no WEST BARNSTABLE row. It is unclear whether the BARNSTABLE row (60 sales, $885,000) covers only Barnstable Village or also West Barnstable and other unlisted areas, so the town-level sf_* fields are set to null rather than presenting that row as the town; village figures are kept in market.village_rows (an extra key the site build ignores) and in the FAQ. Both readings of all six rows agreed. No town median was computed from the village rows. Condo fields null: the BARNSTABLE condo row extracted garbled ('YTD Number of Sales13 200.0%'), and the condo table truncates at Brookline before the villages. Settlement and incorporation: Wikipedia's infobox gives incorporation as September 3, 1639 and its body text September 4, so history says only 'September'. The official site barnstable.gov (per the Wikipedia infobox) and townofbarnstable.us could not be loaded by the fetch tool; the housing plan PDF was fetched from barnstable.gov. The Housing Production Plan says both 'at least 23 percent' and 'at least a quarter' for second homes; the record uses 23 percent. Sandy Neck Light date: tower built 1857. The Sandy Neck town page (townofbarnstable.us/SandyNeck) failed to load, so ORV, camping and trail rules are omitted. The Barnstable village Wikipedia page does not mention whale watching, so it is left out. Hy-Line details come from the Hyannis Wikipedia page, not Hy-Line's own site. CCRTA route list also includes the Barnstable Villager, Hyannis Crosstown, H2O and a Hyannis Trolley, not described here. commute.sources is an extra key listing the pages behind commute.text. 'nearby' includes Falmouth, which does not border Barnstable (Mashpee lies between); the other three border it."
+}

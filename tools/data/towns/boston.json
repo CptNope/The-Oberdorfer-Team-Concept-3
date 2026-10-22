@@ -1,0 +1,70 @@
+{
+  "slug": "boston",
+  "name": "Boston",
+  "county": "Suffolk County",
+  "region": "Greater Boston (the city)",
+  "population_2020": 675647,
+  "population_source": "https://en.wikipedia.org/wiki/Boston",
+  "official_site": "https://www.boston.gov/",
+  "headline": ["Brownstones on filled marsh, three-deckers on the hills,", "and every commuter rail line running home to it."],
+  "answer": "Boston is the capital of Massachusetts, a Suffolk County city of 675,647 people (2020 Census) made up of 23 neighborhoods. Its housing is mostly attached and multi-unit: brownstone and brick row houses near the center, and triple-deckers, mostly built between the 1880s and 1930s, farther out. Single-family sales are a small and unrepresentative slice of the market: The Warren Group's Boston row counted 50 in 2025 against 1,611 condo sales, and it reports neighborhoods such as Dorchester, Jamaica Plain and Charlestown on separate rows. Every MBTA commuter rail line ends at South Station or North Station, and I-93 and I-90 meet downtown.",
+  "overview": [
+    "Puritan settlers founded Boston on the Shawmut Peninsula in 1630, set aside Boston Common in 1634 and opened Boston Latin School in 1635. Much of today's city is made land: the South End was built on tidal marsh beginning in 1849, and the Back Bay was filled between 1857 and about 1882, which is why their streets run in regular grids of Victorian row houses. Boston became a city in 1822 and grew by annexation, taking in Dorchester in 1870 and Charlestown and West Roxbury, which included Jamaica Plain, in 1874.",
+    "The city recognizes 23 neighborhoods, from Beacon Hill and the North End to Hyde Park and West Roxbury. Frederick Law Olmsted's Emerald Necklace links about 1,100 acres of parks over 7 miles, from the Back Bay Fens through Jamaica Pond and the Arnold Arboretum to Franklin Park. The 2.5-mile Freedom Trail runs from downtown to the Bunker Hill Monument in Charlestown, and public ferries reach several of the Boston Harbor Islands. This is one city guide for now; neighborhood guides are planned."
+  ],
+  "housing": {
+    "text": "Boston's triple-deckers were mostly built between the 1880s and 1930s, and the city has studied new versions of the type for neighborhoods including Roxbury, Mattapan, Dorchester and Hyde Park. Near the center, the Back Bay, South End and Charlestown are known for 19th-century brownstone and brick row houses. Condominiums dominate sales: The Warren Group counted 1,611 condo sales and 50 single-family sales on its 2025 Boston row, so the single-family median of about $3.1 million describes a very small set of homes and not the city as a whole.",
+    "source": "https://www.boston.gov/sites/default/files/file/2021/05/REQUEST%20FOR%20IDEAS_%20Co-creating%20Boston_s%20Future-Decker.pdf"
+  },
+  "villages": [
+    {"name": "Back Bay", "line": "Former tidal flats filled between 1857 and about 1882, laid out with Victorian brownstone row houses along Commonwealth Avenue's center mall, with Copley Square at its southeast corner.", "source": "https://en.wikipedia.org/wiki/Back_Bay,_Boston"},
+    {"name": "South End", "line": "Built on tidal marsh beside Boston Neck from 1849, with brick and brownstone row houses from 1850 to 1880 around small residential squares; often described as the largest intact Victorian row-house district in the country.", "source": "https://en.wikipedia.org/wiki/South_End,_Boston"},
+    {"name": "Jamaica Plain", "line": "Part of Roxbury, then West Roxbury, until annexed to Boston in 1874, with triple-deckers from the 1870s onward, Jamaica Pond, and four Orange Line stations under the Southwest Corridor Park.", "source": "https://en.wikipedia.org/wiki/Jamaica_Plain"},
+    {"name": "Charlestown", "line": "Laid out by Thomas Graves and settled in 1629, annexed to Boston in 1874, with red-brick row houses, the Bunker Hill Monument and the Charlestown Navy Yard.", "source": "https://en.wikipedia.org/wiki/Charlestown,_Boston"},
+    {"name": "Dorchester", "line": "A separate town founded in 1630 and part of Boston since 1870; the city's largest neighborhood at more than 6 square miles, with many three-decker buildings and stations on the Red Line and the Fairmount Line.", "source": "https://en.wikipedia.org/wiki/Dorchester,_Boston"}
+  ],
+  "commute": {
+    "rail": [
+      {"line": "South Station (Red Line, Silver Line SL1-SL3; Fairmount, Fall River/New Bedford, Framingham/Worcester, Franklin/Foxboro, Greenbush, Kingston, Needham and Providence/Stoughton Lines)", "stations": ["South Station, 700 Atlantic Avenue"]},
+      {"line": "North Station (Orange and Green Lines; Fitchburg, Haverhill, Lowell and Newburyport/Rockport Lines; Amtrak Downeaster)", "stations": ["North Station, 135 Causeway Street"]},
+      {"line": "Back Bay (Orange Line, commuter rail and Amtrak)", "stations": ["Back Bay"]}
+    ],
+    "rail_source": "https://www.mbta.com/stops/place-sstat",
+    "highways": ["I-93", "I-90 (Massachusetts Turnpike)", "US 1"],
+    "text": "Boston is the hub of the MBTA: the Red, Orange, Blue and Green Lines and the Mattapan Line run through the city, and commuter rail ends at South Station or North Station, with Back Bay as a through stop. Amtrak's Acela and Northeast Regional leave from South Station and Back Bay, and the Downeaster from North Station. I-93 and I-90 meet downtown in the tunnels built by the Big Dig, US 1 crosses the Tobin Bridge, and MBTA ferries link the waterfront with Charlestown, Hingham, Hull and other harbor communities."
+  },
+  "schools": {"district": "Boston Public Schools", "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=00350000&orgtypecode=5"},
+  "places": [
+    {"name": "Boston Common", "line": "Founded in 1634, with ballfields, a tot lot and the Frog Pond, which is open for skating in winter and has a spray area in summer.", "source": "https://www.boston.gov/parks/boston-common"},
+    {"name": "Freedom Trail", "line": "A 2.5-mile path through downtown and Charlestown linking sites of Boston National Historical Park, including Faneuil Hall and the Old South Meeting House.", "source": "https://www.nps.gov/bost/index.htm"},
+    {"name": "Charlestown Navy Yard", "line": "One of the country's first naval shipyards, home to USS Constitution and the museum ship USS Cassin Young.", "source": "https://www.nps.gov/bost/index.htm"},
+    {"name": "Emerald Necklace", "line": "Frederick Law Olmsted's 1,100-acre chain of eight parks over 7 miles, from Charlesgate and the Back Bay Fens to Franklin Park.", "source": "https://www.emeraldnecklace.org/park-overview/"},
+    {"name": "Arnold Arboretum", "line": "A 281-acre preserve founded in 1872 and part of the Emerald Necklace, free and open every day.", "source": "https://arboretum.harvard.edu/about/"},
+    {"name": "Boston Harbor Islands", "line": "A national and state park of 34 islands and peninsulas, with public ferries to Spectacle, Georges and Peddocks Islands among others.", "source": "https://www.nps.gov/boha/index.htm"}
+  ],
+  "history": [
+    {"year": "1630", "text": "Puritan settlers founded Boston on the Shawmut Peninsula, naming the town on September 7, 1630 (Old Style).", "source": "https://en.wikipedia.org/wiki/Boston"},
+    {"year": "1634", "text": "Boston Common was set aside, now described as the nation's first public park.", "source": "https://en.wikipedia.org/wiki/Boston"},
+    {"year": "1822", "text": "Boston was incorporated as a city on March 19, 1822.", "source": "https://en.wikipedia.org/wiki/Boston"},
+    {"year": "1897", "text": "The Tremont Street subway opened, the first subway in the United States.", "source": "https://en.wikipedia.org/wiki/Boston"}
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 50, "sf_sales_2024": 51,
+    "sf_median_2025": 3092500, "sf_median_2024": 3100000,
+    "condo_sales_2025": 1611, "condo_median_2025": 945000, "condo_median_2024": 970000,
+    "reading_1": "BOSTON (single-family; Dec 2024, Dec 2025, Percent Change): YTD Number of Sales 51 50 -2.0%; YTD Median Sale Price $3,100,000 $3,092,500 -0.2%. BOSTON (condo): YTD Number of Sales 1,505 1,611 7.0%; YTD Median Sale Price $970,000 $945,000 -2.6%",
+    "reading_2": "BOSTON (single-family): YTD Number of Sales 51 50 -2.0%; YTD Median Sale Price $3,100,000 $3,092,500 -0.2%. BOSTON (condo): Number of Sales 131 133 1.5%; YTD Number of Sales 1,505 1,611 7.0%; Median Sale Price $1,060,000 $950,000 -10.4%; YTD Median Sale Price $970,000 $945,000 -2.6%"
+  },
+  "nearby": ["cambridge", "somerville", "brookline", "quincy", "newton"],
+  "search_notes": "'Moving to Boston MA neighborhoods guide' returns mover and storage pages (All My Sons, Units Storage), a SpotEasy neighborhood blog, Expat Arrivals and a brokerage 'ultimate guide'. Results are general lifestyle roundups with few sources; none explain that Boston's single-family figures cover only a small slice of the market or that The Warren Group reports neighborhoods separately. A sourced city guide, followed by neighborhood guides, could fill that gap.",
+  "faq": [
+    {"q": "What is the median home price in Boston, MA?", "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, the median single-family sale price on its Boston row for calendar year 2025 was $3,092,500, across 50 sales. In 2024 it was $3,100,000, across 51 sales. That is a small and unrepresentative sample: the same row counted 1,611 condo sales in 2025 at a median of $945,000, and neighborhoods such as Dorchester, Jamaica Plain, Charlestown and West Roxbury are reported on separate rows."},
+    {"q": "Why is Boston's single-family median so high?", "a": "Boston is mostly condominiums, triple-deckers and other multi-unit buildings, so few single-family homes trade on The Warren Group's Boston row: 50 in 2025. A handful of high-priced sales can set the median. Condo sales on the same row numbered 1,611, at a median of $945,000."},
+    {"q": "Does Boston have commuter rail?", "a": "Yes. Every MBTA commuter rail line ends at South Station or North Station, Back Bay is a through stop, and the Fairmount Line has stations in Dorchester. The Red, Orange, Blue and Green Lines also run through the city."},
+    {"q": "Which school district serves Boston?", "a": "Boston Public Schools. Review its profile with DESE."}
+  ],
+  "notes": "Market geography: the Warren PDF lists ALLSTON, BRIGHTON, CHARLESTOWN, DORCHESTER, EAST BOSTON, HYDE PARK, JAMAICA PLAIN, MATTAPAN, ROSLINDALE, ROXBURY, SOUTH BOSTON and WEST ROXBURY as their own rows, so the BOSTON row appears to cover only the remaining central neighborhoods; the PDF has no footnote defining it, so a fact-checker should confirm with The Warren Group before the copy says so outright (current copy says only that those neighborhoods are reported separately). For later neighborhood guides, single readings of 2025 SF rows (sales, median): Dorchester 103, $800,000; Jamaica Plain 69, $1,256,250; Charlestown 48, $1,729,250; West Roxbury 210, $850,000; South Boston 62, $1,031,500; Roslindale 86, $778,000; Hyde Park 101, $675,000; these need a second reading. Boston condo row read cleanly twice (it precedes the truncation at Brookline); condo_sales_2024 is 1,505 but the schema has no field for it. Boston SF and condo rows read identically on two passes. The housing source (City of Boston Future-Decker RFI, May 2021) supports the triple-decker dates and neighborhoods; row-house descriptions come from the village Wikipedia pages and the sales counts from Warren. Population is from Wikipedia's infobox; settlement is given as 1625 in the infobox and 1630 in the text, so the history uses 1630. Dorchester annexation date is inconsistent on Wikipedia (January 3 vs 4, 1870), so only the year is used. The '23 neighborhoods' count is Wikipedia's list of city-designated neighborhoods. 'Every MBTA commuter rail line ends at South Station or North Station' is drawn from the MBTA South Station page (8 lines) plus Wikipedia's North Station page (Fitchburg and Haverhill terminate there; Lowell and Newburyport/Rockport serve it); the MBTA North Station page did not name lines. Capital-of-Massachusetts is from the Boston Wikipedia page. Highways are from Wikipedia's Transportation in Boston page. A 1999 City of Boston report counted 15,807 triple-decker structures, and a 2023 Lincoln Institute article says roughly 10,000; both were left out as dated or conflicting. Fair housing: Charlestown and Dorchester Wikipedia pages include demographic phrasing that was deliberately not used."
+}

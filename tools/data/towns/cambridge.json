@@ -1,0 +1,67 @@
+{
+  "slug": "cambridge",
+  "name": "Cambridge",
+  "county": "Middlesex County",
+  "region": "Greater Boston (inner core, across the Charles)",
+  "population_2020": 118403,
+  "population_source": "https://en.wikipedia.org/wiki/Cambridge,_Massachusetts",
+  "official_site": "https://www.cambridgema.gov/",
+  "headline": ["Newtowne of 1630 on the Charles,", "five Red Line stops and a reservoir to the west."],
+  "answer": "Cambridge is a Middlesex County city of 118,403 people (2020 Census) on the north bank of the Charles River, across from Boston. Single-family homes are a small share of its housing: 6.4% of units, against 34.1% in buildings of more than 100 units, by the city's own count. The Warren Group recorded 105 single-family sales in 2025, a small market for a city of this size. Five Red Line stations run through Cambridge, from Alewife to Kendall/MIT, and Porter also has commuter rail.",
+  "overview": [
+    "Cambridge was founded in December 1630 as Newtowne and renamed in May 1638 after the English university town, two years after the college that became Harvard was founded. George Washington took command of the Continental Army on Cambridge Common in 1775 and used the house at 105 Brattle Street as his first long-term headquarters during the siege of Boston. The West Boston Bridge of 1792 tied the town directly to Boston, and Cambridge became a city in 1846. MIT moved here from Boston in 1916.",
+    "The city recognizes 13 neighborhoods on about 6.4 square miles of land. Squares strung along Massachusetts Avenue anchor them: Harvard Square beside Harvard Yard, Central Square with City Hall, and Porter Square farther north, while Kendall Square grew from salt marsh and 19th-century industry into an office and laboratory district beside MIT. Cambridgeport keeps streets of triple-deckers near the river. In the west, Fresh Pond Reservation surrounds the city's drinking-water reservoir, and Mount Auburn Cemetery, founded in 1831, straddles the line with Watertown."
+  ],
+  "housing": {
+    "text": "By the city's inventory as of June 30, 2025, 6.4% of Cambridge's housing units are single-family homes, 11.9% are in two-unit buildings and 10.5% in three-unit buildings, while 34.1% are in buildings of more than 100 units. About two-thirds of occupied units (66.5%) are renter-occupied and 33.5% owner-occupied (2020 to 2024 American Community Survey). With so few single-family homes, The Warren Group's 105 single-family sales in 2025 reflect only a narrow part of the market.",
+    "source": "https://www.cambridgema.gov/CDD/factsandmaps/demographicfaq"
+  },
+  "villages": [
+    {"name": "Harvard Square", "line": "A triangular plaza where Massachusetts Avenue, Brattle Street and John F. Kennedy Street meet beside Harvard Yard, served by Harvard station on the Red Line and a bus hub.", "source": "https://en.wikipedia.org/wiki/Harvard_Square"},
+    {"name": "Central Square", "line": "The seat of city government, centered where Massachusetts Avenue, Prospect Street and Western Avenue meet; a state-designated Cultural District since 2012, with Central station on the Red Line.", "source": "https://en.wikipedia.org/wiki/Central_Square,_Cambridge"},
+    {"name": "Kendall Square", "line": "Former Charles River salt marsh and industrial district where Main Street meets Broadway, named for the Kendall Boiler and Tank Company, now an office and lab district beside MIT with the Kendall/MIT Red Line stop.", "source": "https://en.wikipedia.org/wiki/Kendall_Square"},
+    {"name": "Cambridgeport", "line": "A mostly residential neighborhood of triple-deckers between Massachusetts Avenue and the Charles River, with Magazine Beach and Fort Washington Park.", "source": "https://en.wikipedia.org/wiki/Cambridgeport,_Cambridge,_Massachusetts"},
+    {"name": "East Cambridge", "line": "The old Lechmere Point, once home to glassworks and factory cottages, between the Charles River, Somerville and Broadway, with Lechmere station relocated in 2022 for the Green Line Extension.", "source": "https://en.wikipedia.org/wiki/East_Cambridge,_Cambridge,_Massachusetts"}
+  ],
+  "commute": {
+    "rail": [
+      {"line": "Red Line (subway)", "stations": ["Alewife", "Porter", "Harvard", "Central", "Kendall/MIT"]},
+      {"line": "Fitchburg Line (commuter rail)", "stations": ["Porter"]},
+      {"line": "Green Line (subway)", "stations": ["Lechmere"]}
+    ],
+    "rail_source": "https://www.mbta.com/schedules/CR-Fitchburg/timetable",
+    "highways": ["Route 2", "US 3", "Route 16", "Memorial Drive"],
+    "text": "Five Red Line stations serve Cambridge, from Alewife, which has a 2,471-space MBTA garage, through Porter, Harvard and Central to Kendall/MIT. Porter is also a Fitchburg Line commuter rail stop, about 15 minutes from Boston's North Station, and Lechmere in East Cambridge is on the Green Line. Route 2 enters at Alewife and runs with US 3 and Route 16 along Alewife Brook and Fresh Pond Parkways, then with US 3 along Memorial Drive beside the Charles."
+  },
+  "schools": {"district": "Cambridge Public Schools", "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=00490000&orgtypecode=5"},
+  "places": [
+    {"name": "Fresh Pond Reservation", "line": "162 acres of open space around the 155-acre Fresh Pond reservoir, part of the city's drinking-water system, with nature walks and ranger programs.", "source": "https://www.cambridgema.gov/Departments/waterdepartment/freshpondreservation"},
+    {"name": "Mount Auburn Cemetery", "line": "Established in 1831 between Cambridge and Watertown, a National Historic Landmark open to the public at no cost every day of the year.", "source": "https://mountauburn.org/about/"},
+    {"name": "Longfellow House-Washington's Headquarters", "line": "A National Historic Site at 105 Brattle Street, Washington's headquarters during the siege of Boston and later Henry Wadsworth Longfellow's home, with seasonal tours and a formal garden.", "source": "https://www.nps.gov/long/index.htm"},
+    {"name": "Cambridge Common", "line": "Public parkland where Washington took command of the Continental Army in 1775.", "source": "https://en.wikipedia.org/wiki/Cambridge,_Massachusetts"}
+  ],
+  "history": [
+    {"year": "1630", "text": "Founded in December 1630 as Newtowne; it was renamed Cambridge in May 1638.", "source": "https://en.wikipedia.org/wiki/Cambridge,_Massachusetts"},
+    {"year": "1636", "text": "The college that became Harvard was founded.", "source": "https://en.wikipedia.org/wiki/Cambridge,_Massachusetts"},
+    {"year": "1775", "text": "George Washington took command of the Patriot soldiers on Cambridge Common.", "source": "https://en.wikipedia.org/wiki/Cambridge,_Massachusetts"},
+    {"year": "1846", "text": "Cambridge was incorporated as a city.", "source": "https://en.wikipedia.org/wiki/Cambridge,_Massachusetts"}
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 105, "sf_sales_2024": 98,
+    "sf_median_2025": 2175000, "sf_median_2024": 2135500,
+    "condo_sales_2025": null, "condo_median_2025": null, "condo_median_2024": null,
+    "reading_1": "CAMBRIDGE (single-family; Dec 2024, Dec 2025, Percent Change): YTD Number of Sales 98 105 7.1%; YTD Median Sale Price $2,135,500 $2,175,000 1.8%",
+    "reading_2": "CAMBRIDGE (single-family): YTD Number of Sales 98 105 7.1%; YTD Median Sale Price $2,135,500 $2,175,000 1.8%"
+  },
+  "nearby": ["boston", "somerville", "arlington", "belmont", "watertown"],
+  "search_notes": "'Cambridge MA real estate agent' returns individual agent profiles on RE/MAX and Experience.com, HomeLight's top-agent list, a This Old House list and a headshot photographer's page. No result explains how small the city's single-family market is or how the squares, Red Line stops and neighborhoods fit together, which a sourced guide could cover.",
+  "faq": [
+    {"q": "What is the median home price in Cambridge, MA?", "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, the median single-family sale price in Cambridge for calendar year 2025 was $2,175,000, across 105 sales. In 2024 it was $2,135,500, across 98 sales. Single-family homes are only 6.4% of the city's housing units, so these figures describe a small part of the market."},
+    {"q": "Does Cambridge have commuter rail?", "a": "Yes. Porter is a stop on the MBTA Fitchburg Line, about 15 minutes from North Station. Cambridge also has five Red Line stations, Alewife, Porter, Harvard, Central and Kendall/MIT, and Lechmere on the Green Line."},
+    {"q": "Which school district serves Cambridge?", "a": "Cambridge Public Schools. Review its profile with DESE."}
+  ],
+  "notes": "Condo fields null: the Warren PDF's extracted condo table is truncated at 'BROOKLI', before Cambridge. Wikipedia gives both July 2 and July 3, 1775 for Washington's arrival, so no day is used. The West Boston Bridge year differs between Wikipedia pages (1792 on Cambridge, 1793 on Kendall Square); the overview uses 1792 from the Cambridge page and a fact-checker may want to confirm. The city's structure-type shares come from the CDD inventory, which the city notes is not comparable to Census counts; the 66.5% renter figure is from the ACS on the same page. Kendall/MIT, Central, Harvard and Porter are listed as Cambridge Red Line stations on Wikipedia; Alewife's Cambridge address is from its MBTA stop page. The Porter travel time is read from the MBTA Fitchburg timetable. Mount Auburn acreage and 'first garden cemetery' claim were left out: its about page does not state them. Cambridge Common is sourced to Wikipedia only. Highways come from Wikipedia's Route 2 page. The 2016 city housing profile (7.2% single-family) was superseded by the 2025 figures used."
+}
