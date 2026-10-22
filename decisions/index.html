@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Decisions · The Oberdorfer Team</title>
+<meta name="description" content="Every open decision for The Oberdorfer Team's brand and website project, with the options, a recommendation, who decides and what each one blocks.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../assets/logo/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/docs.css">
+<style>
+  .dec { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: var(--space-5) var(--gutter); padding-block: var(--space-7); border-top: 1px solid var(--border-subtle); }
+  .dec:first-of-type { border-top: 1px solid var(--rule-gold); }
+  .dec__q { display: grid; gap: var(--space-3); align-content: start; }
+  .dec__q h3 { font-size: var(--step-h3); }
+  .dec__meta { display: grid; grid-template-columns: 5.5rem 1fr; gap: var(--space-2) var(--space-4); font-size: var(--step-caption); margin: 0; }
+  .dec__meta dt { font: 600 0.6875rem/1.6 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-accent); }
+  .dec__meta dd { margin: 0; color: var(--text-body); }
+  .opts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: var(--space-4); }
+  .opt { border: 1px solid var(--border-subtle); background: var(--surface-raised); padding: var(--space-5); display: grid; gap: var(--space-2); align-content: start; }
+  .opt--rec { border-color: var(--ot-gold); box-shadow: inset 0 3px 0 var(--ot-gold); }
+  .opt h4 { font: 400 1.25rem/1.2 var(--font-display); color: var(--text-display); }
+  .opt .cost { font-size: var(--step-caption); color: var(--text-muted); }
+  .opt ul { margin: 0; padding-left: 1.1rem; font-size: var(--step-body-s); display: grid; gap: var(--space-1); }
+  .opt .badge { justify-self: start; }
+  .surface-muted .opt { background: var(--surface-page); }
+  .glance td, .glance th { vertical-align: top; }
+  .glance td:first-child a { font-weight: 600; }
+  .glance .badge { white-space: nowrap; }
+  .log { list-style: none; margin: 0; padding: 0; display: grid; }
+  .log li { display: grid; grid-template-columns: 7.5rem 1fr; gap: var(--space-4); padding-block: var(--space-3); border-top: 1px solid var(--border-subtle); font-size: var(--step-body-s); }
+  .log time { color: var(--text-muted); font-variant-numeric: tabular-nums; }
+  @media (max-width: 52rem) {
+    .dec { grid-template-columns: 1fr; }
+    .log li { grid-template-columns: 1fr; gap: var(--space-1); }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="doc-bar">
+  <div class="container doc-bar__inner">
+    <a class="doc-bar__brand" href="../index.html"><img src="../assets/logo/monogram-navy.svg" alt="" width="40" height="50"><span>Decisions</span></a>
+    <p class="doc-bar__current" data-current-chapter>Open decisions</p>
+    <div class="doc-bar__actions">
+      <a class="icon-btn" href="../index.html" aria-label="Back to the overview"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-grid"/></svg></a>
+      <button class="doc-bar__contents" type="button" data-contents-toggle aria-controls="contents-panel" aria-expanded="false">Contents</button>
+    </div>
+  </div>
+</header>
+
+<div class="contents-panel surface-inverse" id="contents-panel" role="dialog" aria-modal="true" aria-label="Decisions contents" aria-hidden="true">
+  <div class="container contents-panel__inner">
+    <div class="contents-panel__head">
+      <img src="../assets/logo/logo-primary-gold.svg" alt="The Oberdorfer Team" width="300" height="40" style="width:18rem">
+      <button class="icon-btn" type="button" data-close aria-label="Close contents"><svg class="icon" aria-hidden="true"><use href="../assets/img/icons.svg#i-close"/></svg></button>
+    </div>
+    <ol class="toc" role="list">
+      <li><a href="#glance"><span class="toc__num">01</span><span class="toc__title">At a glance</span><span class="toc__note">Every open decision</span></a></li>
+      <li><a href="#brand"><span class="toc__num">02</span><span class="toc__title">Brand and content</span><span class="toc__note">Approvals</span></a></li>
+      <li><a href="#business"><span class="toc__num">03</span><span class="toc__title">Business details</span><span class="toc__note">Facts to supply</span></a></li>
+      <li><a href="#idx"><span class="toc__num">04</span><span class="toc__title">IDX and listings</span><span class="toc__note">Vendor choice</span></a></li>
+      <li><a href="#crm"><span class="toc__num">05</span><span class="toc__title">Leads, CRM and nurture</span><span class="toc__note">How leads are handled</span></a></li>
+      <li><a href="#growth"><span class="toc__num">06</span><span class="toc__title">Search and growth tools</span><span class="toc__note">Ranking</span></a></li>
+      <li><a href="#decided"><span class="toc__num">07</span><span class="toc__title">Already decided</span><span class="toc__note">Log</span></a></li>
+    </ol>
+  </div>
+</div>
+
+<main id="main">
+
+<section class="doc-cover folio-frame" style="min-height:auto" aria-labelledby="d-title">
+  <div class="doc-cover__inner">
+    <div class="doc-cover__top"><p class="doc-cover__issue">Deliverables 9–10 · Decisions · October 22, 2026</p></div>
+    <div class="doc-cover__title">
+      <h1 class="display-xl answer" id="d-title"><span>Decide once.</span><span><em>Build with confidence.</em></span></h1>
+      <p class="lead">Every choice still open for the brand, website and launch, with the options side by side, a recommendation, who decides and what each one holds up.</p>
+    </div>
+    <div class="doc-cover__foot"><p>Prices are published planning figures, not quotes. Nothing here is legal advice; compliance items go to REWAP's broker of record.</p><span class="badge badge--proposed">Awaiting decisions</span></div>
+  </div>
+</section>
+
+<!-- 01 AT A GLANCE -->
+<section class="chapter" id="glance" data-chapter="01 · At a glance" aria-labelledby="h-glance">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>Summary</span><span class="label--quiet">Decisions</span></div>
+      <p class="chapter__num" aria-hidden="true">01</p>
+      <h2 class="chapter__title display-m answer" id="h-glance"><span>Nineteen open decisions.</span><span>Six hold up launch.</span></h2>
+    </div>
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Open decisions">
+    <table class="tokens glance">
+      <thead><tr><th scope="col">Decision</th><th scope="col">Recommendation</th><th scope="col">Who decides</th><th scope="col">Holds up</th></tr></thead>
+      <tbody>
+        <tr><td><a href="#d-direction">Brand direction and logo</a></td><td>Approve A + B and the logo system as shown in the brand book</td><td>Brandon and Kaitlyn</td><td><span class="badge badge--verify">Launch</span></td></tr>
+        <tr><td><a href="#d-portraits">Portrait photography</a></td><td>Confirm whether the portraits are real photographs; commission a shoot either way</td><td>Brandon and Kaitlyn</td><td><span class="badge badge--verify">Launch</span></td></tr>
+        <tr><td><a href="#d-profiles">Agent profile details</a></td><td>Supply bios, titles, headshots; say "Kaitlyn" or "Kait"</td><td>Brandon and Kaitlyn</td><td>Profiles</td></tr>
+        <tr><td><a href="#d-towns">Community list</a></td><td>Keep the 16 proposed guides; add Tier 3 one at a time</td><td>Brandon and Kaitlyn</td><td>Town guides</td></tr>
+        <tr><td><a href="#d-pubtitle">Umbrella publication title</a></td><td>Keep "<em>[Town] at Home</em>" per town for now</td><td>Brandon and Kaitlyn</td><td>Journal</td></tr>
+        <tr><td><a href="#d-email">Team email</a></td><td>Google Workspace on oberdorferteam.com</td><td>Brandon and Kaitlyn</td><td>Google tools, forms</td></tr>
+        <tr><td><a href="#d-office">Worcester office address and hours</a></td><td>Publish the street address; a registered P.O. box can cover marketing email</td><td>Brandon and Kaitlyn</td><td><span class="badge badge--verify">Launch</span></td></tr>
+        <tr><td><a href="#d-phone">Local phone line</a></td><td>Keep 406-250-7620; consider adding a 508 or 774 office line</td><td>Brandon and Kaitlyn</td><td>Google Business Profile</td></tr>
+        <tr><td><a href="#d-compliance">Licenses, disclosures, privacy policy</a></td><td>Supply license numbers; broker approves disclosures and policy</td><td>REWAP broker of record</td><td><span class="badge badge--verify">Launch</span></td></tr>
+        <tr><td><a href="#d-idx">IDX vendor</a></td><td>Showcase IDX Essentials, or IDX Broker Core if its pages are crawlable</td><td>Team with REWAP</td><td><span class="badge badge--verify">Launch</span></td></tr>
+        <tr><td><a href="#d-mls">MLS PIN approval</a></td><td>Broker of record applies for the chosen vendor</td><td>REWAP broker of record</td><td><span class="badge badge--verify">Launch</span></td></tr>
+        <tr><td><a href="#d-product">Long-term product goal</a></td><td>Decide later; it only changes the IDX path after launch</td><td>Team</td><td>Nothing yet</td></tr>
+        <tr><td><a href="#d-crm">CRM mode</a></td><td>Built-in only at launch; add Follow Up Boss later if wanted</td><td>Brandon and Kaitlyn</td><td>Lead handling</td></tr>
+        <tr><td><a href="#d-routing">Response window and town owners</a></td><td>15 minutes in business hours; both leaders own every town until agents join</td><td>Brandon and Kaitlyn</td><td>Lead routing</td></tr>
+        <tr><td><a href="#d-mail">Email service and sender addresses</a></td><td>Pick one transactional service; send as each agent at oberdorferteam.com</td><td>Team and developer</td><td>Nurture</td></tr>
+        <tr><td><a href="#d-ai">Automatic AI sending</a></td><td>Approval required for every message at first</td><td>Team leaders</td><td>Nurture</td></tr>
+        <tr><td><a href="#d-retention">Lead retention period</a></td><td>24 months for unconverted leads</td><td>Team with REWAP</td><td>Privacy policy</td></tr>
+        <tr><td><a href="#d-keywords">Keyword data tool</a></td><td>HarborRank free allowance now, Search Console after launch</td><td>Team</td><td>Keyword plan</td></tr>
+        <tr><td><a href="#d-gbp">Google Business Profile</a></td><td>Create and verify at the Worcester office</td><td>Brandon and Kaitlyn</td><td>Map results</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Decisions · 2026</span><span>01</span></div>
+  </div>
+</section>
+
+<!-- 02 BRAND -->
+<section class="chapter surface-muted" id="brand" data-chapter="02 · Brand and content" aria-labelledby="h-brand">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>Approvals</span><span class="label--quiet">Decisions</span></div>
+      <p class="chapter__num" aria-hidden="true">02</p>
+      <h2 class="chapter__title display-m answer" id="h-brand"><span>The look is built.</span><span>It needs your yes.</span></h2>
+    </div>
+
+    <article class="dec" id="d-direction">
+      <div class="dec__q"><h3>Brand direction and logo</h3><dl class="dec__meta"><dt>Decides</dt><dd>Brandon and Kaitlyn</dd><dt>Holds up</dt><dd>Launch, print, signage</dd></dl></div>
+      <div class="opts">
+        <div class="opt opt--rec"><span class="badge badge--proposed">Recommended</span><h4>Approve A + B as built</h4><ul><li>Editorial Heritage on an architectural grid, chosen October 15</li><li>The logo system in the <a href="../brand-book/">brand book</a></li></ul></div>
+        <div class="opt"><h4>Approve with changes</h4><ul><li>Mark up the brand book; changes flow through tokens to every page</li></ul></div>
+      </div>
+    </article>
+
+    <article class="dec" id="d-portraits">
+      <div class="dec__q"><h3>Portrait photography</h3><p class="body-s">The publication was made with ChatGPT. It is not confirmed whether the portraits of Brandon and Kaitlyn are real photographs.</p><dl class="dec__meta"><dt>Decides</dt><dd>Brandon and Kaitlyn</dd><dt>Holds up</dt><dd>Launch, agent profiles</dd></dl></div>
+      <div class="opts">
+        <div class="opt opt--rec"><span class="badge badge--proposed">Recommended</span><h4>Commission a professional shoot</h4><ul><li>Team portrait, two individual 4:5 headshots, Worcester office and town photography</li><li>Replaces the interim crops on the profiles</li></ul></div>
+        <div class="opt"><h4>Confirm the current portraits are real</h4><ul><li>Usable as they are; individual headshots still needed</li></ul></div>
+      </div>
+    </article>
+
+    <article class="dec" id="d-profiles">
+      <div class="dec__q"><h3>Agent profile details</h3><dl class="dec__meta"><dt>Decides</dt><dd>Brandon and Kaitlyn</dd><dt>Holds up</dt><dd>Profile pages</dd></dl></div>
+      <div class="opts">
+        <div class="opt"><h4>To supply</h4><ul><li>Biography, 120 to 250 words each, first person</li><li>Professional title, specialties, languages</li><li>Direct line and email</li><li>"Kaitlyn" or "Kait" on the site</li></ul></div>
+      </div>
+    </article>
+
+    <article class="dec" id="d-towns">
+      <div class="dec__q"><h3>Community list</h3><p class="body-s">Sixteen guides are live on the prototype as a proposed list, in five regions.</p><dl class="dec__meta"><dt>Decides</dt><dd>Brandon and Kaitlyn</dd><dt>Holds up</dt><dd>Town guides</dd></dl></div>
+      <div class="opts">
+        <div class="opt opt--rec"><span class="badge badge--proposed">Recommended</span><h4>Keep all 16</h4><ul><li>Tier 1: Worcester, Shrewsbury, Grafton, Westborough, Holden, Wakefield, Reading, Melrose</li><li>Tier 2: Leominster, Framingham, Marlborough, Stoneham, Lowell, Newton, Quincy, Springfield</li></ul></div>
+        <div class="opt"><h4>Trim to Tier 1</h4><ul><li>Eight guides close to Worcester and Wakefield</li><li>Less statewide reach</li></ul></div>
+        <div class="opt"><h4>Add Tier 3 later</h4><ul><li>Boston neighborhoods, Cambridge, Somerville, South Shore, Cape Cod, Berkshires</li><li>One researched guide at a time</li></ul></div>
+      </div>
+    </article>
+
+    <article class="dec" id="d-pubtitle">
+      <div class="dec__q"><h3>Umbrella publication title</h3><dl class="dec__meta"><dt>Decides</dt><dd>Brandon and Kaitlyn</dd><dt>Holds up</dt><dd>Journal naming</dd></dl></div>
+      <div class="opts">
+        <div class="opt opt--rec"><span class="badge badge--proposed">Recommended</span><h4><em>[Town] at Home</em></h4><ul><li>One issue per town, like <em>Wakefield at Home</em></li><li>Journal named "At Home"</li></ul></div>
+        <div class="opt"><h4><em>Massachusetts at Home</em></h4><ul><li>A creative option, not approved</li><li>One statewide title with town editions</li></ul></div>
+      </div>
+    </article>
+    <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Decisions · 2026</span><span>02</span></div>
+  </div>
+</section>
+
+<!-- 03 BUSINESS -->
+<section class="chapter" id="business" data-chapter="03 · Business details" aria-labelledby="h-business">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>Facts to supply</span><span class="label--quiet">Decisions</span></div>
+      <p class="chapter__num" aria-hidden="true">03</p>
+      <h2 class="chapter__title display-m answer" id="h-business"><span>The details only</span><span>you can confirm.</span></h2>
+    </div>
+
+    <article class="dec" id="d-email">
+      <div class="dec__q"><h3>Team email</h3><p class="body-s">The account that owns Google Ads, Search Console, Analytics and the Business Profile should belong to the business.</p><dl class="dec__meta"><dt>Decides</dt><dd>Brandon and Kaitlyn</dd><dt>Holds up</dt><dd>Google tools, forms, nurture</dd></dl></div>
+      <div class="opts">
+        <div class="opt opt--rec"><span class="badge badge--proposed">Recommended</span><h4>Google Workspace on oberdorferteam.com</h4><p class="cost">Paid per user</p><ul><li>Real addresses such as team@ and brandon@</li><li>Needs access to the domain's DNS</li></ul></div>
+        <div class="opt"><h4>A new free Gmail for the business</h4><p class="cost">Free</p><ul><li>Quick to start; Brandon or Kaitlyn holds the password</li><li>Move tools to a domain account later</li></ul></div>
+      </div>
+    </article>
+
+    <article class="dec" id="d-office">
+      <div class="dec__q"><h3>Worcester office address and hours</h3><p class="body-s">The city is confirmed. The street address appears on the office page, the Business Profile and every listing site, and a postal address is required in marketing email.</p><dl class="dec__meta"><dt>Decides</dt><dd>Brandon and Kaitlyn, with REWAP</dd><dt>Holds up</dt><dd>Launch, Business Profile, email nurture</dd></dl></div>
+      <div class="opts">
+        <div class="opt opt--rec"><span class="badge badge--proposed">Recommended</span><h4>Publish the street address</h4><ul><li>Needed for a verified Google Business Profile</li><li>Also satisfies the email postal-address rule</li></ul></div>
+        <div class="opt"><h4>Registered P.O. box for email</h4><ul><li>Meets the email rule (CAN-SPAM) on its own</li><li>Does not replace the office address for maps</li></ul></div>
+      </div>
+    </article>
+
+    <article class="dec" id="d-phone">
+      <div class="dec__q"><h3>Local phone line</h3><p class="body-s">406 is a Montana area code. It is confirmed and must stay consistent everywhere.</p><dl class="dec__meta"><dt>Decides</dt><dd>Brandon and Kaitlyn</dd><dt>Holds up</dt><dd>Business Profile, listings</dd></dl></div>
+      <div class="opts">
+        <div class="opt opt--rec"><span class="badge badge--proposed">Recommended</span><h4>Keep 406-250-7620</h4><ul><li>Already on the publication and site</li></ul></div>
+        <div class="opt"><h4>Add a 508 or 774 office line</h4><ul><li>Reads as local to Worcester callers</li><li>Only if used consistently on every listing</li></ul></div>
+      </div>
+    </article>
+
+    <article class="dec" id="d-compliance">
+      <div class="dec__q"><h3>Licenses, disclosures and privacy policy</h3><dl class="dec__meta"><dt>Decides</dt><dd>REWAP broker of record</dd><dt>Holds up</dt><dd>Launch</dd></dl></div>
+      <div class="opts">
+        <div class="opt"><h4>To supply</h4><ul><li>Massachusetts license numbers for Brandon and Kaitlyn</li><li>REWAP team-advertising disclosures and approvals</li><li>Privacy policy covering lead storage, CRM forwarding, email and AI providers, retention</li><li>Consent wording for email and, later, texts</li></ul></div>
+      </div>
+    </article>
+    <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Decisions · 2026</span><span>03</span></div>
+  </div>
+</section>
+
+<!-- 04 IDX -->
+<section class="chapter surface-muted" id="idx" data-chapter="04 · IDX and listings" aria-labelledby="h-idx">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>Vendor choice</span><span class="label--quiet">Decisions</span></div>
+      <p class="chapter__num" aria-hidden="true">04</p>
+      <h2 class="chapter__title display-m answer" id="h-idx"><span>Listings are licensed.</span><span>Pick who supplies them.</span></h2>
+    </div>
+    <p class="body-s" style="max-width:68ch;margin-bottom:var(--space-6)">The website and the CRM are built in, so the IDX product only needs to supply MLS PIN search and listing pages and pass leads to the site. All-in-one platforms that replace the website (Real Geeks, Lofty, Sierra Interactive, BoldTrail, CINC, Ylopo, AgentFire, Placester, Luxury Presence, iHomefinder) are benchmarks, not candidates. Prices: vendor pages and MLS PIN, checked October 17 to 22, 2026.</p>
+
+    <article class="dec" id="d-idx">
+      <div class="dec__q"><h3>IDX vendor at launch</h3><dl class="dec__meta"><dt>Decides</dt><dd>Team with REWAP</dd><dt>Holds up</dt><dd>Buy page, listings, town guide listings</dd></dl></div>
+      <div class="opts">
+        <div class="opt opt--rec"><span class="badge badge--proposed">Recommended</span><h4>Showcase IDX Essentials</h4><p class="cost">$94.95/mo · 2 seats</p><ul><li>WordPress plugin our theme can style</li><li>Listings on our domain and indexable, per Showcase</li><li>Premium, $124.95/mo for 5 seats, as the team grows</li></ul></div>
+        <div class="opt"><h4>IDX Broker Core</h4><p class="cost">$87/mo · $80 for 2 agents + $7 MLS PIN fee</p><ul><li>Lowest cost</li><li>Confirm listing pages are crawlable on our domain</li><li>Engage tier: $126/mo</li></ul></div>
+        <div class="opt"><h4>MLS PIN free IDX Links</h4><p class="cost">Free</p><ul><li>Interim only: links out to MLS PIN's search</li><li>No lead capture on search</li></ul></div>
+        <div class="opt"><h4>RealScout Core, as a bridge</h4><p class="cost">$179/mo monthly · 1 license · 500 contacts</p><ul><li>Only if buyers need collaboration tools before the built-in nurture ships</li><li>Duplicates the built-in CRM long term</li></ul></div>
+      </div>
+    </article>
+
+    <article class="dec" id="d-mls">
+      <div class="dec__q"><h3>MLS PIN approval</h3><dl class="dec__meta"><dt>Decides</dt><dd>REWAP broker of record</dd><dt>Holds up</dt><dd>Any live listings</dd></dl></div>
+      <div class="opts">
+        <div class="opt"><h4>To do</h4><ul><li>Confirm REWAP's MLS PIN participation covers the team's site</li><li>Approve the chosen vendor's IDX connection</li><li>Get written answers to the vendor questions: two-agent total, listing SEO, webhooks, exports, exit terms</li></ul></div>
+      </div>
+    </article>
+
+    <article class="dec" id="d-product">
+      <div class="dec__q"><h3>Long-term product goal</h3><p class="body-s">Only matters if the platform might be licensed to other brokerages.</p><dl class="dec__meta"><dt>Decides</dt><dd>Team</dd><dt>Holds up</dt><dd>The IDX path after launch</dd></dl></div>
+      <div class="opts">
+        <div class="opt opt--rec"><span class="badge badge--proposed">Recommended</span><h4>Stay on a vendor</h4><ul><li>Least compliance and operations work</li></ul></div>
+        <div class="opt"><h4>Realtyna MLS On The Fly</h4><p class="cost">$449/mo for MLS PIN</p><ul><li>Listings rendered by our own templates through an API</li><li>No resale rights</li></ul></div>
+        <div class="opt"><h4>Direct MLS PIN feed</h4><p class="cost">$100/mo brokerage · $525/mo vendor</p><ul><li>Our own listing engine; MLS PIN approval required</li><li>We carry compliance, uptime and security</li></ul></div>
+      </div>
+    </article>
+    <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Decisions · 2026</span><span>04</span></div>
+  </div>
+</section>
+
+<!-- 05 CRM -->
+<section class="chapter" id="crm" data-chapter="05 · Leads, CRM and nurture" aria-labelledby="h-crm">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>How leads are handled</span><span class="label--quiet">Decisions</span></div>
+      <p class="chapter__num" aria-hidden="true">05</p>
+      <h2 class="chapter__title display-m answer" id="h-crm"><span>Every lead lands here.</span><span>Decide where it goes next.</span></h2>
+    </div>
+
+    <article class="dec" id="d-crm">
+      <div class="dec__q"><h3>CRM mode</h3><p class="body-s">The site's built-in CRM keeps every lead. An outside CRM is optional.</p><dl class="dec__meta"><dt>Decides</dt><dd>Brandon and Kaitlyn</dd><dt>Holds up</dt><dd>Lead handling</dd></dl></div>
+      <div class="opts">
+        <div class="opt opt--rec"><span class="badge badge--proposed">Recommended</span><h4>Built-in only</h4><ul><li>Inbox, routing, pipeline and nurture on the site</li><li>No extra subscription</li></ul></div>
+        <div class="opt"><h4>Built-in + Follow Up Boss</h4><p class="cost">$138/mo · 2 × $69</p><ul><li>Leads forwarded; the site keeps its own copy</li><li>Adds calling and mature workflows</li></ul></div>
+        <div class="opt"><h4>Built-in + another CRM</h4><ul><li>Through a signed webhook (Zapier, Make, Lofty, kvCORE, HubSpot)</li></ul></div>
+      </div>
+    </article>
+
+    <article class="dec" id="d-routing">
+      <div class="dec__q"><h3>Response window and town owners</h3><dl class="dec__meta"><dt>Decides</dt><dd>Brandon and Kaitlyn</dd><dt>Holds up</dt><dd>Lead routing</dd></dl></div>
+      <div class="opts">
+        <div class="opt opt--rec"><span class="badge badge--proposed">Recommended</span><h4>15 minutes, both leaders own all towns</h4><ul><li>Unanswered leads escalate after 15 minutes in business hours</li><li>Assign towns to agents as the team grows</li></ul></div>
+        <div class="opt"><h4>Split towns now</h4><ul><li>For example, Brandon for Central MA and Kaitlyn for North of Boston</li></ul></div>
+      </div>
+    </article>
+
+    <article class="dec" id="d-mail">
+      <div class="dec__q"><h3>Email service and sender addresses</h3><p class="body-s">Marketing email must not send from the web server.</p><dl class="dec__meta"><dt>Decides</dt><dd>Team and developer</dd><dt>Holds up</dt><dd>Nurture, newsletter</dd></dl></div>
+      <div class="opts">
+        <div class="opt"><h4>Amazon SES</h4><ul><li>Lowest cost at volume; more setup</li></ul></div>
+        <div class="opt"><h4>Postmark</h4><ul><li>Strong deliverability; simple setup</li></ul></div>
+        <div class="opt"><h4>Mailgun</h4><ul><li>Flexible; good webhooks</li></ul></div>
+      </div>
+    </article>
+
+    <article class="dec" id="d-ai">
+      <div class="dec__q"><h3>Automatic AI sending</h3><p class="body-s">AI drafts nurture emails from the lead's record and the site's sourced content only.</p><dl class="dec__meta"><dt>Decides</dt><dd>Team leaders</dd><dt>Holds up</dt><dd>Nurture</dd></dl></div>
+      <div class="opts">
+        <div class="opt opt--rec"><span class="badge badge--proposed">Recommended</span><h4>Approve every message at first</h4><ul><li>Turn on automatic sending per sequence once drafts need no edits</li></ul></div>
+        <div class="opt"><h4>Always approve</h4><ul><li>A person reviews every email, permanently</li></ul></div>
+      </div>
+    </article>
+
+    <article class="dec" id="d-retention">
+      <div class="dec__q"><h3>Lead retention period</h3><dl class="dec__meta"><dt>Decides</dt><dd>Team with REWAP</dd><dt>Holds up</dt><dd>Privacy policy</dd></dl></div>
+      <div class="opts">
+        <div class="opt opt--rec"><span class="badge badge--proposed">Recommended</span><h4>24 months</h4><ul><li>Unconverted leads with no activity are deleted after 24 months</li><li>Consent and unsubscribe records are kept as proof</li></ul></div>
+        <div class="opt"><h4>12 months</h4><ul><li>Smaller data footprint; shorter nurture history</li></ul></div>
+      </div>
+    </article>
+    <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Decisions · 2026</span><span>05</span></div>
+  </div>
+</section>
+
+<!-- 06 GROWTH -->
+<section class="chapter surface-muted" id="growth" data-chapter="06 · Search and growth tools" aria-labelledby="h-growth">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>Ranking</span><span class="label--quiet">Decisions</span></div>
+      <p class="chapter__num" aria-hidden="true">06</p>
+      <h2 class="chapter__title display-m answer" id="h-growth"><span>Measure what ranks.</span><span>Own the map.</span></h2>
+    </div>
+
+    <article class="dec" id="d-keywords">
+      <div class="dec__q"><h3>Keyword data tool</h3><p class="body-s">Replaces estimates in the keyword plan with real search volumes.</p><dl class="dec__meta"><dt>Decides</dt><dd>Team</dd><dt>Holds up</dt><dd>Keyword plan, town tiers</dd></dl></div>
+      <div class="opts">
+        <div class="opt opt--rec"><span class="badge badge--proposed">Recommended</span><h4>HarborRank</h4><p class="cost">Free allowance, then from $29/mo</p><ul><li>Keywords plus Google Maps ranking checks</li></ul></div>
+        <div class="opt"><h4>Google Keyword Planner</h4><p class="cost">Free with a Google Ads account</p><ul><li>Volume ranges, enough to rank towns against each other</li></ul></div>
+        <div class="opt"><h4>OpenSEO, self-hosted</h4><p class="cost">Free software + DataForSEO credit ($50 minimum)</p><ul><li>You run and maintain it</li></ul></div>
+        <div class="opt"><h4>Semrush or Ahrefs</h4><p class="cost">Subscription</p><ul><li>The fullest data and competitor research</li></ul></div>
+      </div>
+    </article>
+
+    <article class="dec" id="d-gbp">
+      <div class="dec__q"><h3>Google Business Profile</h3><p class="body-s">The single biggest factor for "real estate agent near me" map results.</p><dl class="dec__meta"><dt>Decides</dt><dd>Brandon and Kaitlyn</dd><dt>Holds up</dt><dd>Map results</dd></dl></div>
+      <div class="opts">
+        <div class="opt opt--rec"><span class="badge badge--proposed">Recommended</span><h4>Verify at the Worcester office</h4><ul><li>Owned by the business email</li><li>Category: Real Estate Agency</li><li>Ask every closed client for a review</li></ul></div>
+      </div>
+    </article>
+    <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Decisions · 2026</span><span>06</span></div>
+  </div>
+</section>
+
+<!-- 07 DECIDED -->
+<section class="chapter" id="decided" data-chapter="07 · Already decided" aria-labelledby="h-decided">
+  <div class="container">
+    <div class="chapter__head">
+      <div class="chapter__run running-head label"><span>Log</span><span class="label--quiet">Decisions</span></div>
+      <p class="chapter__num" aria-hidden="true">07</p>
+      <h2 class="chapter__title display-m answer" id="h-decided"><span>Settled,</span><span>and when.</span></h2>
+    </div>
+    <ol class="log" role="list">
+      <li><time datetime="2026-10-15">Oct 15, 2026</time><span>Direction A + B (Editorial Heritage on an architectural grid). The publication's details are correct, including 406-250-7620 and "Top Producer".</span></li>
+      <li><time datetime="2026-10-22">Oct 22, 2026</time><span>Office in Worcester; the team serves all of Massachusetts.</span></li>
+      <li><time datetime="2026-10-22">Oct 22, 2026</time><span>Production domain: oberdorferteam.com.</span></li>
+      <li><time datetime="2026-10-22">Oct 22, 2026</time><span>Hosting on Cloudways, PHP 8.4, custom WordPress block theme.</span></li>
+      <li><time datetime="2026-10-22">Oct 22, 2026</time><span>No ACF or fields plugin: custom fields are post meta bound to core blocks.</span></li>
+      <li><time datetime="2026-10-22">Oct 22, 2026</time><span>CRM and nurture built into the site, with an optional outside CRM. No Omnisend.</span></li>
+      <li><time datetime="2026-10-22">Oct 22, 2026</time><span>Individual agent profiles for Brandon and Kaitlyn, and a template for future agents.</span></li>
+      <li><time datetime="2026-10-22">Oct 22, 2026</time><span>Massachusetts-wide SEO with 16 researched town guides (list proposed).</span></li>
+    </ol>
+    <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Decisions · 2026</span><span>07</span></div>
+  </div>
+</section>
+
+</main>
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>

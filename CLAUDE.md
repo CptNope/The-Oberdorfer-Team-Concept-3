@@ -17,6 +17,7 @@ The visual language evolves the team's print publication, *Wakefield at Home*, F
 | `source/creative-brief.md` | The full client brief, with 19 phases and 10 deliverables |
 | `.impeccable/surfaces/index-html.md` | The direction contract for the documentation pages |
 | `brand-book/` § 20 Governance | Approvals, the "never publish" list and open items |
+| `decisions/` | The client-facing page of open decisions, their options and recommendations; update it when a decision is made or a new one opens |
 | `docs/wordpress-architecture.md` | What goes in the theme, the `ot-core` must-use plugin, `ot-blocks`, `ot-leads` and third-party code |
 | `docs/leads-crm-nurture-spec.md` | The built-in CRM, CRM connectors and AI nurture |
 | `docs/idx-options.md` | IDX and MLS PIN options still to decide, with costs, fit and vendor questions |
@@ -64,7 +65,7 @@ The visual language evolves the team's print publication, *Wakefield at Home*, F
 - **To preview,** run `python3 -m http.server 8765` and open <http://localhost:8765/>.
 - **To take screenshots,** run `python3 tools/screenshot.py http://localhost:8765/site/ out.png 1440 --full`. Check desktop at 1440 and mobile at 390, and confirm that `scrollWidth` equals `clientWidth`.
 - **Keep links relative.** The site is served from a GitHub Pages project subpath, so root-relative `/` links break.
-- **Deploys run on every push to `main`** through `.github/workflows/pages.yml`. Only `index.html`, `assets/`, `discovery/`, `brand-book/`, `design-system/` and `site/` are published.
+- **Deploys run on every push to `main`** through `.github/workflows/pages.yml`. Only `index.html`, `assets/`, `discovery/`, `brand-book/`, `design-system/`, `site/` and `decisions/` are published.
   - Never link pages to `source/`, `tools/`, `docs/` or Markdown files; they are not on the live site.
   - Downloadable PDFs belong in `assets/publications/`, as web-compressed copies.
   - If you add a new top-level folder that pages need, add it to the workflow's `cp` line.
