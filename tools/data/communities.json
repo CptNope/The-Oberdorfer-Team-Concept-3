@@ -2630,5 +2630,1931 @@
   "region_key": "west",
   "tier": 2,
   "art": "triple-decker"
+ },
+ {
+  "slug": "boston",
+  "name": "Boston",
+  "county": "Suffolk County",
+  "region": "Greater Boston",
+  "population_2020": 675647,
+  "population_source": "https://en.wikipedia.org/wiki/Boston",
+  "official_site": "https://www.boston.gov/",
+  "headline": [
+   "Brownstones on filled marsh, three-deckers on the hills,",
+   "and every commuter rail line running home to it."
+  ],
+  "answer": "Boston is the capital of Massachusetts, a Suffolk County city of 675,647 people (2020 Census) made up of 23 neighborhoods. Its housing is mostly attached and multi-unit: brownstone and brick row houses near the center, and triple-deckers, mostly built between the 1880s and 1930s, farther out. Single-family sales are a small and unrepresentative slice of the market: The Warren Group's Boston row counted 50 in 2025 against 1,611 condo sales, and it reports neighborhoods such as Dorchester, Jamaica Plain and Charlestown on separate rows. Every MBTA commuter rail line ends at South Station or North Station, and I-93 and I-90 meet downtown.",
+  "overview": [
+   "Puritan settlers founded Boston on the Shawmut Peninsula in 1630, set aside Boston Common in 1634 and opened Boston Latin School in 1635. Much of today's city is made land: the South End was built on tidal marsh beginning in 1849, and the Back Bay was filled between 1857 and about 1882, which is why their streets run in regular grids of Victorian row houses. Boston became a city in 1822 and grew by annexation, taking in Dorchester in 1870 and Charlestown and West Roxbury, which included Jamaica Plain, in 1874.",
+   "The city recognizes 23 neighborhoods, from Beacon Hill and the North End to Hyde Park and West Roxbury. Frederick Law Olmsted's Emerald Necklace links about 1,100 acres of parks over 7 miles, from the Back Bay Fens through Jamaica Pond and the Arnold Arboretum to Franklin Park. The 2.5-mile Freedom Trail runs from downtown to the Bunker Hill Monument in Charlestown, and public ferries reach several of the Boston Harbor Islands. This is one city guide for now; neighborhood guides are planned."
+  ],
+  "housing": {
+   "text": "Boston's triple-deckers were mostly built between the 1880s and 1930s, and the city has studied new versions of the type for neighborhoods including Roxbury, Mattapan, Dorchester and Hyde Park. Near the center, the Back Bay, South End and Charlestown are known for 19th-century brownstone and brick row houses. Condominiums dominate sales: The Warren Group counted 1,611 condo sales and 50 single-family sales on its 2025 Boston row, so the single-family median of about $3.1 million describes a very small set of homes and not the city as a whole.",
+   "source": "https://www.boston.gov/sites/default/files/file/2021/05/REQUEST%20FOR%20IDEAS_%20Co-creating%20Boston_s%20Future-Decker.pdf"
+  },
+  "villages": [
+   {
+    "name": "Back Bay",
+    "line": "Former tidal flats filled between 1857 and about 1882, laid out with Victorian brownstone row houses along Commonwealth Avenue's center mall, with Copley Square at its southeast corner.",
+    "source": "https://en.wikipedia.org/wiki/Back_Bay,_Boston"
+   },
+   {
+    "name": "South End",
+    "line": "Built on tidal marsh beside Boston Neck from 1849, with brick and brownstone row houses from 1850 to 1880 around small residential squares; often described as the largest intact Victorian row-house district in the country.",
+    "source": "https://en.wikipedia.org/wiki/South_End,_Boston"
+   },
+   {
+    "name": "Jamaica Plain",
+    "line": "Part of Roxbury, then West Roxbury, until annexed to Boston in 1874, with triple-deckers from the 1870s onward, Jamaica Pond, and four Orange Line stations under the Southwest Corridor Park.",
+    "source": "https://en.wikipedia.org/wiki/Jamaica_Plain"
+   },
+   {
+    "name": "Charlestown",
+    "line": "Laid out by Thomas Graves and settled in 1629, annexed to Boston in 1874, with red-brick row houses, the Bunker Hill Monument and the Charlestown Navy Yard.",
+    "source": "https://en.wikipedia.org/wiki/Charlestown,_Boston"
+   },
+   {
+    "name": "Dorchester",
+    "line": "A separate town founded in 1630 and part of Boston since 1870; the city's largest neighborhood at more than 6 square miles, with many three-decker buildings and stations on the Red Line and the Fairmount Line.",
+    "source": "https://en.wikipedia.org/wiki/Dorchester,_Boston"
+   }
+  ],
+  "commute": {
+   "rail": [
+    {
+     "line": "South Station (Red Line, Silver Line SL1-SL3; Fairmount, Fall River/New Bedford, Framingham/Worcester, Franklin/Foxboro, Greenbush, Kingston, Needham and Providence/Stoughton Lines)",
+     "stations": [
+      "South Station, 700 Atlantic Avenue"
+     ]
+    },
+    {
+     "line": "North Station (Orange and Green Lines; Fitchburg, Haverhill, Lowell and Newburyport/Rockport Lines; Amtrak Downeaster)",
+     "stations": [
+      "North Station, 135 Causeway Street"
+     ]
+    },
+    {
+     "line": "Back Bay (Orange Line, commuter rail and Amtrak)",
+     "stations": [
+      "Back Bay"
+     ]
+    }
+   ],
+   "rail_source": "https://www.mbta.com/stops/place-sstat",
+   "highways": [
+    "I-93",
+    "I-90 (Massachusetts Turnpike)",
+    "US 1"
+   ],
+   "text": "Boston is the hub of the MBTA: the Red, Orange, Blue and Green Lines and the Mattapan Line run through the city, and commuter rail ends at South Station or North Station, with Back Bay as a through stop. Amtrak's Acela and Northeast Regional leave from South Station and Back Bay, and the Downeaster from North Station. I-93 and I-90 meet downtown in the tunnels built by the Big Dig, US 1 crosses the Tobin Bridge, and MBTA ferries link the waterfront with Charlestown, Hingham, Hull and other harbor communities."
+  },
+  "schools": {
+   "district": "Boston Public Schools",
+   "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=00350000&orgtypecode=5"
+  },
+  "places": [
+   {
+    "name": "Boston Common",
+    "line": "Founded in 1634, with ballfields, a tot lot and the Frog Pond, which is open for skating in winter and has a spray area in summer.",
+    "source": "https://www.boston.gov/parks/boston-common"
+   },
+   {
+    "name": "Freedom Trail",
+    "line": "A 2.5-mile path through downtown and Charlestown linking sites of Boston National Historical Park, including Faneuil Hall and the Old South Meeting House.",
+    "source": "https://www.nps.gov/bost/index.htm"
+   },
+   {
+    "name": "Charlestown Navy Yard",
+    "line": "One of the country's first naval shipyards, home to USS Constitution and the museum ship USS Cassin Young.",
+    "source": "https://www.nps.gov/bost/index.htm"
+   },
+   {
+    "name": "Emerald Necklace",
+    "line": "Frederick Law Olmsted's 1,100-acre chain of eight parks over 7 miles, from Charlesgate and the Back Bay Fens to Franklin Park.",
+    "source": "https://www.emeraldnecklace.org/park-overview/"
+   },
+   {
+    "name": "Arnold Arboretum",
+    "line": "A 281-acre preserve founded in 1872 and part of the Emerald Necklace, free and open every day.",
+    "source": "https://arboretum.harvard.edu/about/"
+   },
+   {
+    "name": "Boston Harbor Islands",
+    "line": "A national and state park of 34 islands and peninsulas, with public ferries to Spectacle, Georges and Peddocks Islands among others.",
+    "source": "https://www.nps.gov/boha/index.htm"
+   }
+  ],
+  "history": [
+   {
+    "year": "1630",
+    "text": "Puritan settlers founded Boston on the Shawmut Peninsula, naming the town on September 7, 1630 (Old Style).",
+    "source": "https://en.wikipedia.org/wiki/Boston"
+   },
+   {
+    "year": "1634",
+    "text": "Boston Common was set aside, now described as the nation's first public park.",
+    "source": "https://en.wikipedia.org/wiki/Boston"
+   },
+   {
+    "year": "1822",
+    "text": "Boston was incorporated as a city on March 19, 1822.",
+    "source": "https://en.wikipedia.org/wiki/Boston"
+   },
+   {
+    "year": "1897",
+    "text": "The Tremont Street subway opened, the first subway in the United States.",
+    "source": "https://en.wikipedia.org/wiki/Boston"
+   }
+  ],
+  "market": {
+   "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+   "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+   "period": "Calendar year 2025",
+   "sf_sales_2025": 50,
+   "sf_sales_2024": 51,
+   "sf_median_2025": 3092500,
+   "sf_median_2024": 3100000,
+   "condo_sales_2025": 1611,
+   "condo_median_2025": 945000,
+   "condo_median_2024": 970000,
+   "reading_1": "BOSTON (single-family; Dec 2024, Dec 2025, Percent Change): YTD Number of Sales 51 50 -2.0%; YTD Median Sale Price $3,100,000 $3,092,500 -0.2%. BOSTON (condo): YTD Number of Sales 1,505 1,611 7.0%; YTD Median Sale Price $970,000 $945,000 -2.6%",
+   "reading_2": "BOSTON (single-family): YTD Number of Sales 51 50 -2.0%; YTD Median Sale Price $3,100,000 $3,092,500 -0.2%. BOSTON (condo): Number of Sales 131 133 1.5%; YTD Number of Sales 1,505 1,611 7.0%; Median Sale Price $1,060,000 $950,000 -10.4%; YTD Median Sale Price $970,000 $945,000 -2.6%"
+  },
+  "nearby": [
+   "cambridge",
+   "somerville",
+   "brookline",
+   "quincy",
+   "newton"
+  ],
+  "search_notes": "'Moving to Boston MA neighborhoods guide' returns mover and storage pages (All My Sons, Units Storage), a SpotEasy neighborhood blog, Expat Arrivals and a brokerage 'ultimate guide'. Results are general lifestyle roundups with few sources; none explain that Boston's single-family figures cover only a small slice of the market or that The Warren Group reports neighborhoods separately. A sourced city guide, followed by neighborhood guides, could fill that gap.",
+  "faq": [
+   {
+    "q": "What is the median home price in Boston, MA?",
+    "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, the median single-family sale price on its Boston row for calendar year 2025 was $3,092,500, across 50 sales. In 2024 it was $3,100,000, across 51 sales. That is a small and unrepresentative sample: the same row counted 1,611 condo sales in 2025 at a median of $945,000, and neighborhoods such as Dorchester, Jamaica Plain, Charlestown and West Roxbury are reported on separate rows."
+   },
+   {
+    "q": "Why is Boston's single-family median so high?",
+    "a": "Boston is mostly condominiums, triple-deckers and other multi-unit buildings, so few single-family homes trade on The Warren Group's Boston row: 50 in 2025. A handful of high-priced sales can set the median. Condo sales on the same row numbered 1,611, at a median of $945,000."
+   },
+   {
+    "q": "Does Boston have commuter rail?",
+    "a": "Yes. Every MBTA commuter rail line ends at South Station or North Station, Back Bay is a through stop, and the Fairmount Line has stations in Dorchester. The Red, Orange, Blue and Green Lines also run through the city."
+   },
+   {
+    "q": "Which school district serves Boston?",
+    "a": "Boston Public Schools. Review its profile with DESE."
+   }
+  ],
+  "notes": "Market geography: the Warren PDF lists ALLSTON, BRIGHTON, CHARLESTOWN, DORCHESTER, EAST BOSTON, HYDE PARK, JAMAICA PLAIN, MATTAPAN, ROSLINDALE, ROXBURY, SOUTH BOSTON and WEST ROXBURY as their own rows, so the BOSTON row appears to cover only the remaining central neighborhoods; the PDF has no footnote defining it, so a fact-checker should confirm with The Warren Group before the copy says so outright (current copy says only that those neighborhoods are reported separately). For later neighborhood guides, single readings of 2025 SF rows (sales, median): Dorchester 103, $800,000; Jamaica Plain 69, $1,256,250; Charlestown 48, $1,729,250; West Roxbury 210, $850,000; South Boston 62, $1,031,500; Roslindale 86, $778,000; Hyde Park 101, $675,000; these need a second reading. Boston condo row read cleanly twice (it precedes the truncation at Brookline); condo_sales_2024 is 1,505 but the schema has no field for it. Boston SF and condo rows read identically on two passes. The housing source (City of Boston Future-Decker RFI, May 2021) supports the triple-decker dates and neighborhoods; row-house descriptions come from the village Wikipedia pages and the sales counts from Warren. Population is from Wikipedia's infobox; settlement is given as 1625 in the infobox and 1630 in the text, so the history uses 1630. Dorchester annexation date is inconsistent on Wikipedia (January 3 vs 4, 1870), so only the year is used. The '23 neighborhoods' count is Wikipedia's list of city-designated neighborhoods. 'Every MBTA commuter rail line ends at South Station or North Station' is drawn from the MBTA South Station page (8 lines) plus Wikipedia's North Station page (Fitchburg and Haverhill terminate there; Lowell and Newburyport/Rockport serve it); the MBTA North Station page did not name lines. Capital-of-Massachusetts is from the Boston Wikipedia page. Highways are from Wikipedia's Transportation in Boston page. A 1999 City of Boston report counted 15,807 triple-decker structures, and a 2023 Lincoln Institute article says roughly 10,000; both were left out as dated or conflicting. Fair housing: Charlestown and Dorchester Wikipedia pages include demographic phrasing that was deliberately not used.",
+  "region_key": "boston",
+  "tier": 3,
+  "art": "townscape"
+ },
+ {
+  "slug": "cambridge",
+  "name": "Cambridge",
+  "county": "Middlesex County",
+  "region": "Greater Boston",
+  "population_2020": 118403,
+  "population_source": "https://en.wikipedia.org/wiki/Cambridge,_Massachusetts",
+  "official_site": "https://www.cambridgema.gov/",
+  "headline": [
+   "Newtowne of 1630 on the Charles,",
+   "five Red Line stops and a reservoir to the west."
+  ],
+  "answer": "Cambridge is a Middlesex County city of 118,403 people (2020 Census) on the north bank of the Charles River, across from Boston. Single-family homes are a small share of its housing: 6.4% of units, against 34.1% in buildings of more than 100 units, by the city's own count. The Warren Group recorded 105 single-family sales in 2025, a small market for a city of this size. Five Red Line stations run through Cambridge, from Alewife to Kendall/MIT, and Porter also has commuter rail.",
+  "overview": [
+   "Cambridge was founded in December 1630 as Newtowne and renamed in May 1638 after the English university town, two years after the college that became Harvard was founded. George Washington took command of the Continental Army on Cambridge Common in 1775 and used the house at 105 Brattle Street as his first long-term headquarters during the siege of Boston. The West Boston Bridge of 1792 tied the town directly to Boston, and Cambridge became a city in 1846. MIT moved here from Boston in 1916.",
+   "The city recognizes 13 neighborhoods on about 6.4 square miles of land. Squares strung along Massachusetts Avenue anchor them: Harvard Square beside Harvard Yard, Central Square with City Hall, and Porter Square farther north, while Kendall Square grew from salt marsh and 19th-century industry into an office and laboratory district beside MIT. Cambridgeport keeps streets of triple-deckers near the river. In the west, Fresh Pond Reservation surrounds the city's drinking-water reservoir, and Mount Auburn Cemetery, founded in 1831, straddles the line with Watertown."
+  ],
+  "housing": {
+   "text": "By the city's inventory as of June 30, 2025, 6.4% of Cambridge's housing units are single-family homes, 11.9% are in two-unit buildings and 10.5% in three-unit buildings, while 34.1% are in buildings of more than 100 units. About two-thirds of occupied units (66.5%) are renter-occupied and 33.5% owner-occupied (2020 to 2024 American Community Survey). With so few single-family homes, The Warren Group's 105 single-family sales in 2025 reflect only a narrow part of the market.",
+   "source": "https://www.cambridgema.gov/CDD/factsandmaps/demographicfaq"
+  },
+  "villages": [
+   {
+    "name": "Harvard Square",
+    "line": "A triangular plaza where Massachusetts Avenue, Brattle Street and John F. Kennedy Street meet beside Harvard Yard, served by Harvard station on the Red Line and a bus hub.",
+    "source": "https://en.wikipedia.org/wiki/Harvard_Square"
+   },
+   {
+    "name": "Central Square",
+    "line": "The seat of city government, centered where Massachusetts Avenue, Prospect Street and Western Avenue meet; a state-designated Cultural District since 2012, with Central station on the Red Line.",
+    "source": "https://en.wikipedia.org/wiki/Central_Square,_Cambridge"
+   },
+   {
+    "name": "Kendall Square",
+    "line": "Former Charles River salt marsh and industrial district where Main Street meets Broadway, named for the Kendall Boiler and Tank Company, now an office and lab district beside MIT with the Kendall/MIT Red Line stop.",
+    "source": "https://en.wikipedia.org/wiki/Kendall_Square"
+   },
+   {
+    "name": "Cambridgeport",
+    "line": "A mostly residential neighborhood of triple-deckers between Massachusetts Avenue and the Charles River, with Magazine Beach and Fort Washington Park.",
+    "source": "https://en.wikipedia.org/wiki/Cambridgeport,_Cambridge,_Massachusetts"
+   },
+   {
+    "name": "East Cambridge",
+    "line": "The old Lechmere Point, once home to glassworks and factory cottages, between the Charles River, Somerville and Broadway, with Lechmere station relocated in 2022 for the Green Line Extension.",
+    "source": "https://en.wikipedia.org/wiki/East_Cambridge,_Cambridge,_Massachusetts"
+   }
+  ],
+  "commute": {
+   "rail": [
+    {
+     "line": "Red Line (subway)",
+     "stations": [
+      "Alewife",
+      "Porter",
+      "Harvard",
+      "Central",
+      "Kendall/MIT"
+     ]
+    },
+    {
+     "line": "Fitchburg Line (commuter rail)",
+     "stations": [
+      "Porter"
+     ]
+    },
+    {
+     "line": "Green Line (subway)",
+     "stations": [
+      "Lechmere"
+     ]
+    }
+   ],
+   "rail_source": "https://www.mbta.com/schedules/CR-Fitchburg/timetable",
+   "highways": [
+    "Route 2",
+    "US 3",
+    "Route 16",
+    "Memorial Drive"
+   ],
+   "text": "Five Red Line stations serve Cambridge, from Alewife, which has a 2,471-space MBTA garage, through Porter, Harvard and Central to Kendall/MIT. Porter is also a Fitchburg Line commuter rail stop, about 15 minutes from Boston's North Station, and Lechmere in East Cambridge is on the Green Line. Route 2 enters at Alewife and runs with US 3 and Route 16 along Alewife Brook and Fresh Pond Parkways, then with US 3 along Memorial Drive beside the Charles."
+  },
+  "schools": {
+   "district": "Cambridge Public Schools",
+   "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=00490000&orgtypecode=5"
+  },
+  "places": [
+   {
+    "name": "Fresh Pond Reservation",
+    "line": "162 acres of open space around the 155-acre Fresh Pond reservoir, part of the city's drinking-water system, with nature walks and ranger programs.",
+    "source": "https://www.cambridgema.gov/Departments/waterdepartment/freshpondreservation"
+   },
+   {
+    "name": "Mount Auburn Cemetery",
+    "line": "Established in 1831 between Cambridge and Watertown, a National Historic Landmark open to the public at no cost every day of the year.",
+    "source": "https://mountauburn.org/about/"
+   },
+   {
+    "name": "Longfellow House-Washington's Headquarters",
+    "line": "A National Historic Site at 105 Brattle Street, Washington's headquarters during the siege of Boston and later Henry Wadsworth Longfellow's home, with seasonal tours and a formal garden.",
+    "source": "https://www.nps.gov/long/index.htm"
+   },
+   {
+    "name": "Cambridge Common",
+    "line": "Public parkland where Washington took command of the Continental Army in 1775.",
+    "source": "https://en.wikipedia.org/wiki/Cambridge,_Massachusetts"
+   }
+  ],
+  "history": [
+   {
+    "year": "1630",
+    "text": "Founded in December 1630 as Newtowne; it was renamed Cambridge in May 1638.",
+    "source": "https://en.wikipedia.org/wiki/Cambridge,_Massachusetts"
+   },
+   {
+    "year": "1636",
+    "text": "The college that became Harvard was founded.",
+    "source": "https://en.wikipedia.org/wiki/Cambridge,_Massachusetts"
+   },
+   {
+    "year": "1775",
+    "text": "George Washington took command of the Patriot soldiers on Cambridge Common.",
+    "source": "https://en.wikipedia.org/wiki/Cambridge,_Massachusetts"
+   },
+   {
+    "year": "1846",
+    "text": "Cambridge was incorporated as a city.",
+    "source": "https://en.wikipedia.org/wiki/Cambridge,_Massachusetts"
+   }
+  ],
+  "market": {
+   "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+   "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+   "period": "Calendar year 2025",
+   "sf_sales_2025": 105,
+   "sf_sales_2024": 98,
+   "sf_median_2025": 2175000,
+   "sf_median_2024": 2135500,
+   "condo_sales_2025": null,
+   "condo_median_2025": null,
+   "condo_median_2024": null,
+   "reading_1": "CAMBRIDGE (single-family; Dec 2024, Dec 2025, Percent Change): YTD Number of Sales 98 105 7.1%; YTD Median Sale Price $2,135,500 $2,175,000 1.8%",
+   "reading_2": "CAMBRIDGE (single-family): YTD Number of Sales 98 105 7.1%; YTD Median Sale Price $2,135,500 $2,175,000 1.8%"
+  },
+  "nearby": [
+   "boston",
+   "somerville",
+   "arlington",
+   "belmont",
+   "watertown"
+  ],
+  "search_notes": "'Cambridge MA real estate agent' returns individual agent profiles on RE/MAX and Experience.com, HomeLight's top-agent list, a This Old House list and a headshot photographer's page. No result explains how small the city's single-family market is or how the squares, Red Line stops and neighborhoods fit together, which a sourced guide could cover.",
+  "faq": [
+   {
+    "q": "What is the median home price in Cambridge, MA?",
+    "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, the median single-family sale price in Cambridge for calendar year 2025 was $2,175,000, across 105 sales. In 2024 it was $2,135,500, across 98 sales. Single-family homes are only 6.4% of the city's housing units, so these figures describe a small part of the market."
+   },
+   {
+    "q": "Does Cambridge have commuter rail?",
+    "a": "Yes. Porter is a stop on the MBTA Fitchburg Line, about 15 minutes from North Station. Cambridge also has five Red Line stations, Alewife, Porter, Harvard, Central and Kendall/MIT, and Lechmere on the Green Line."
+   },
+   {
+    "q": "Which school district serves Cambridge?",
+    "a": "Cambridge Public Schools. Review its profile with DESE."
+   }
+  ],
+  "notes": "Condo fields null: the Warren PDF's extracted condo table is truncated at 'BROOKLI', before Cambridge. Wikipedia gives both July 2 and July 3, 1775 for Washington's arrival, so no day is used. The West Boston Bridge year differs between Wikipedia pages (1792 on Cambridge, 1793 on Kendall Square); the overview uses 1792 from the Cambridge page and a fact-checker may want to confirm. The city's structure-type shares come from the CDD inventory, which the city notes is not comparable to Census counts; the 66.5% renter figure is from the ACS on the same page. Kendall/MIT, Central, Harvard and Porter are listed as Cambridge Red Line stations on Wikipedia; Alewife's Cambridge address is from its MBTA stop page. The Porter travel time is read from the MBTA Fitchburg timetable. Mount Auburn acreage and 'first garden cemetery' claim were left out: its about page does not state them. Cambridge Common is sourced to Wikipedia only. Highways come from Wikipedia's Route 2 page. The 2016 city housing profile (7.2% single-family) was superseded by the 2025 figures used.",
+  "region_key": "boston",
+  "tier": 3,
+  "art": "colonial"
+ },
+ {
+  "slug": "somerville",
+  "name": "Somerville",
+  "county": "Middlesex County",
+  "region": "Greater Boston",
+  "population_2020": 81045,
+  "population_source": "https://en.wikipedia.org/wiki/Somerville,_Massachusetts",
+  "official_site": "https://www.somervillema.gov/",
+  "headline": [
+   "A powder house, a hilltop castle,",
+   "and five Green Line stops opened in 2022."
+  ],
+  "answer": "Somerville is a Middlesex County city of 81,045 people (2020 Census) on about 4.1 square miles of land just north of Cambridge and Boston, often described as the most densely populated municipality in New England. Its housing is mostly small multi-unit buildings, and since November 2023 three-unit buildings have been allowed citywide by right. The Warren Group counted only 72 single-family sales in 2025. Davis Square is on the Red Line, Assembly on the Orange Line, and five Green Line stations opened in 2022.",
+  "overview": [
+   "Somerville was settled in 1629 as part of Charlestown and became its own town in 1842 and a city in 1872. Its hills played a part in the Revolution: British troops emptied the Old Powder House of gunpowder on September 1, 1774, setting off the Powder Alarm, and Prospect Hill was a Continental Army position during the siege of Boston, where tradition says Washington raised a flag on January 1, 1776. Brickmaking, meatpacking and a Ford assembly plant, open from 1926 to 1958, followed.",
+   "The city is organized around its squares. Davis Square, a six-point intersection named for grain dealer Person Davis, gained a Red Line station in 1984, and the Somerville Community Path runs from there on an old railroad right-of-way. Union Square, named for its Civil War recruiting role, and Ball Square have Green Line stations that opened in 2022, and Assembly Square on the Mystic River grew from the old Ford plant site into the Assembly Row development. The 2020 Census counted 36,269 housing units in the city."
+  ],
+  "housing": {
+   "text": "Somerville is known for its triple-deckers. In November 2023 the City Council made any three-unit building legal citywide by right, without zoning board approval, replacing 2019 rules that required a new triple-decker to sit next to an existing one and include an income-restricted unit. Single-family homes are a small part of the market: The Warren Group counted 72 single-family sales in 2025.",
+   "source": "https://www.bostonglobe.com/2023/12/11/business/somerville-triple-decker-construction-city-council"
+  },
+  "villages": [
+   {
+    "name": "Davis Square",
+    "line": "A six-point intersection in northwestern Somerville, named a square in 1883, with the 1914 Somerville Theatre and a Red Line station opened in December 1984.",
+    "source": "https://en.wikipedia.org/wiki/Davis_Square"
+   },
+   {
+    "name": "Union Square",
+    "line": "The southeastern square at Washington Street, Webster Avenue and Somerville Avenue, once called Sand Pit Square, with Prospect Hill nearby and a Green Line station opened March 21, 2022.",
+    "source": "https://en.wikipedia.org/wiki/Union_Square,_Somerville"
+   },
+   {
+    "name": "Ball Square",
+    "line": "A square on the Somerville-Medford line with a Green Line Extension station opened December 12, 2022.",
+    "source": "https://en.wikipedia.org/wiki/Green_Line_Extension"
+   },
+   {
+    "name": "Assembly Square",
+    "line": "Named for a Ford assembly plant that ran from 1926 to 1958, on the west bank of the Mystic River between I-93 and the river, now the 45-acre Assembly Row development with an Orange Line station.",
+    "source": "https://en.wikipedia.org/wiki/Assembly_Square"
+   }
+  ],
+  "commute": {
+   "rail": [
+    {
+     "line": "Red Line (subway)",
+     "stations": [
+      "Davis"
+     ]
+    },
+    {
+     "line": "Orange Line (subway)",
+     "stations": [
+      "Assembly"
+     ]
+    },
+    {
+     "line": "Green Line (subway, Union Square and Medford branches)",
+     "stations": [
+      "Union Square",
+      "East Somerville",
+      "Gilman Square",
+      "Magoun Square",
+      "Ball Square"
+     ]
+    },
+    {
+     "line": "Fitchburg Line (commuter rail, in neighboring Cambridge)",
+     "stations": [
+      "Porter"
+     ]
+    }
+   ],
+   "rail_source": "https://en.wikipedia.org/wiki/Green_Line_Extension",
+   "highways": [
+    "I-93",
+    "Route 28",
+    "Route 38"
+   ],
+   "text": "Somerville has no commuter rail station of its own; passenger rail service in the city ended by 1958, and the nearest stop is Porter in Cambridge on the Fitchburg Line. Rapid transit has returned in stages: Davis on the Red Line in 1984, Assembly on the Orange Line, and the Green Line Extension in 2022, with Union Square on one branch and East Somerville, Gilman Square, Magoun Square and Ball Square on the branch to Medford/Tufts. I-93 crosses the city on an elevated highway, Route 28 runs as McGrath Highway and Route 38 as Mystic Avenue."
+  },
+  "schools": {
+   "district": "Somerville Public Schools",
+   "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=02740000&orgtypecode=5"
+  },
+  "places": [
+   {
+    "name": "Old Powder House",
+    "line": "Built as a windmill around 1703 or 1704 and later a powder magazine, it overlooks Powder House Square from Nathan Tufts Park; both were listed on the National Register in 1975.",
+    "source": "https://en.wikipedia.org/wiki/Old_Powder_House"
+   },
+   {
+    "name": "Prospect Hill Monument",
+    "line": "A castle-like tower dedicated in 1903 atop Prospect Hill, a Continental Army position during the siege of Boston.",
+    "source": "https://en.wikipedia.org/wiki/Prospect_Hill_(Somerville,_Massachusetts)"
+   },
+   {
+    "name": "Somerville Community Path",
+    "line": "A walking and biking path on a former Boston and Maine right-of-way from Davis Square, extended 1.9 miles beside the Green Line to North Point in Cambridge in June 2023.",
+    "source": "https://en.wikipedia.org/wiki/Green_Line_Extension"
+   },
+   {
+    "name": "Somerville Theatre",
+    "line": "A Davis Square theater opened in 1914 that shows films and live performances.",
+    "source": "https://en.wikipedia.org/wiki/Davis_Square"
+   },
+   {
+    "name": "Assembly Row",
+    "line": "A 45-acre mixed-use development on the Mystic River, opened in 2014, with shops, restaurants, a 12-screen cinema and a hotel.",
+    "source": "https://en.wikipedia.org/wiki/Assembly_Square"
+   }
+  ],
+  "history": [
+   {
+    "year": "1629",
+    "text": "First European settlement, as part of Charlestown.",
+    "source": "https://en.wikipedia.org/wiki/Somerville,_Massachusetts"
+   },
+   {
+    "year": "1774",
+    "text": "British regulars removed gunpowder from the Old Powder House on September 1, setting off the Powder Alarm.",
+    "source": "https://en.wikipedia.org/wiki/Old_Powder_House"
+   },
+   {
+    "year": "1842",
+    "text": "Somerville separated from Charlestown and was incorporated as a town.",
+    "source": "https://en.wikipedia.org/wiki/Somerville,_Massachusetts"
+   },
+   {
+    "year": "1872",
+    "text": "Somerville was incorporated as a city.",
+    "source": "https://en.wikipedia.org/wiki/Somerville,_Massachusetts"
+   }
+  ],
+  "market": {
+   "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+   "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+   "period": "Calendar year 2025",
+   "sf_sales_2025": 72,
+   "sf_sales_2024": 93,
+   "sf_median_2025": 1287500,
+   "sf_median_2024": 1160000,
+   "condo_sales_2025": null,
+   "condo_median_2025": null,
+   "condo_median_2024": null,
+   "reading_1": "SOMERVILLE (single-family; Dec 2024, Dec 2025, Percent Change): YTD Number of Sales 93 72 -22.6%; YTD Median Sale Price $1,160,000 $1,287,500 11.0%",
+   "reading_2": "SOMERVILLE (single-family): YTD Number of Sales 93 72 -22.6%; YTD Median Sale Price $1,160,000 $1,287,500 11.0%"
+  },
+  "nearby": [
+   "cambridge",
+   "boston",
+   "medford",
+   "arlington"
+  ],
+  "search_notes": "'Somerville MA real estate agent' returns Berkshire Hathaway Verani blog posts and award news, Bankrate, BiggerPockets, Experience.com and RealTrends profiles, a HomeLight Ten Hills page and Redfin open houses. Few results explain the Green Line Extension, the 2023 triple-decker zoning change or how small the single-family market is, which a sourced guide could cover.",
+  "faq": [
+   {
+    "q": "What is the median home price in Somerville, MA?",
+    "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, the median single-family sale price in Somerville for calendar year 2025 was $1,287,500, across 72 sales. In 2024 it was $1,160,000, across 93 sales. With so few single-family sales, these figures describe a small part of the city's market."
+   },
+   {
+    "q": "Does Somerville have commuter rail?",
+    "a": "No station is located in Somerville itself; the nearest is Porter in Cambridge on the Fitchburg Line. Somerville has Davis on the Red Line, Assembly on the Orange Line, and five Green Line stations: Union Square, East Somerville, Gilman Square, Magoun Square and Ball Square."
+   },
+   {
+    "q": "Which school district serves Somerville?",
+    "a": "Somerville Public Schools. Review its profile with DESE."
+   }
+  ],
+  "notes": "Condo fields null: the Warren PDF's extracted condo table is truncated at 'BROOKLI', before Somerville. I could not find a current official breakdown of Somerville housing units by building type (searches turned up only a 2009 Somerville Times summary and blogs), so the housing text relies on the Boston Globe (December 2023) for the zoning change and GBH (September 2024) for 'known for triple-deckers'; the claim that housing is 'mostly small multi-unit buildings' in the answer rests on a March 2022 Somerville Times summary of the city's Needs Based Housing Assessment ('small multifamily buildings ... make up a large portion of available housing units'), and a fact-checker may want an official source. The 'most densely populated municipality in New England' line and land area are from Wikipedia, whose density figures are internally inconsistent. The Prospect Hill flag is given as tradition; Wikipedia notes scholars dispute it and calls it the Continental Union Flag, so the copy says only 'a flag'. Assembly station's opening year is not stated on the Assembly Square page, so no year is given; Assembly Row's 2014 opening is from that page. Ball Square straddles Somerville and Medford. Route 16 omitted: not confirmed in the sources fetched. The DCR Mystic River Reservation page failed to load, so it is not listed as a place.",
+  "region_key": "boston",
+  "tier": 3,
+  "art": "triple-decker"
+ },
+ {
+  "slug": "plymouth",
+  "name": "Plymouth",
+  "county": "Plymouth County",
+  "region": "South Shore",
+  "population_2020": 61217,
+  "population_source": "https://en.wikipedia.org/wiki/Plymouth,_Massachusetts",
+  "official_site": "https://www.plymouth-ma.gov/",
+  "headline": [
+   "A harbor town of 1620,",
+   "with pine forest and ponds filling its western miles."
+  ],
+  "answer": "Plymouth is a Plymouth County town of 61,217 people (2020 Census) on Cape Cod Bay, about 40 miles south of Boston, and the largest municipality in Massachusetts by area. Founded by the Mayflower Pilgrims in 1620, it is one of the county's two seats. About 71 percent of its homes are detached single-family houses. Route 3 serves the town with six exits, and Plymouth's own commuter rail station has been suspended since 2021, so the nearest active stop is Kingston.",
+  "overview": [
+   "The Mayflower Pilgrims settled here in December 1620, and Plymouth served as the capital of Plymouth Colony until 1691. The old town center keeps that story close to the water: Plymouth Rock under its 1921 portico in Pilgrim Memorial State Park, the Mayflower II at the State Pier, Cole's Hill, and Burial Hill above Leyden Street, where the Pilgrims built a fort in 1621 and 1622. Pilgrim Hall, opened in 1824 on Court Street, is the oldest public museum in the United States in continuous operation.",
+   "Beyond downtown the town spreads across about 96 square miles of land. North Plymouth grew around the Plymouth Cordage Company, once the largest maker of rope and twine in the world, and much of its multifamily housing evolved from mill housing. West Plymouth filled with subdivisions in the 1970s, and South Plymouth drew new growth from the 1980s. Inland, Myles Standish State Forest has ponds and pine and oak woods, while Manomet and Ellisville Harbor sit along the Cape Cod Bay shore."
+  ],
+  "housing": {
+   "text": "Plymouth's 2024 Housing Production Plan reports that detached single-family homes make up 71.1 percent of housing units, with attached single-family homes another 7.4 percent. As of 2021, 80.9 percent of occupied homes were owner-occupied, and the town's housing units grew from 25,058 in 2010 to 28,353 in 2021. The plan expects most new residential development in the town's rural areas, with recent projects in the south and at Cordage Park in the north.",
+   "source": "https://www.mass.gov/doc/plymouth-hpp/download"
+  },
+  "villages": [
+   {
+    "name": "Plymouth Center",
+    "line": "The downtown, home to Plymouth Rock, the Mayflower II and Pilgrim Hall.",
+    "source": "https://en.wikipedia.org/wiki/Plymouth,_Massachusetts"
+   },
+   {
+    "name": "North Plymouth",
+    "line": "A waterfront village around the former Plymouth Cordage Company, whose multifamily housing largely evolved from mill housing.",
+    "source": "https://www.mass.gov/doc/plymouth-hpp/download"
+   },
+   {
+    "name": "Manomet",
+    "line": "A seaside village named for a Wampanoag village once among the Manomet Ponds, with White Horse Beach and Stage Point.",
+    "source": "https://en.wikipedia.org/wiki/Manomet,_Massachusetts"
+   },
+   {
+    "name": "West Plymouth",
+    "line": "The hilly, forested western section, where single-family subdivisions grew in the 1970s.",
+    "source": "https://www.mass.gov/doc/plymouth-hpp/download"
+   },
+   {
+    "name": "Cedarville",
+    "line": "A neighborhood in the southeast of town, linked to Manomet by a local bus route.",
+    "source": "https://en.wikipedia.org/wiki/Plymouth,_Massachusetts"
+   }
+  ],
+  "commute": {
+   "rail": [
+    {
+     "line": "Kingston Line (in neighboring Kingston)",
+     "stations": [
+      "Kingston"
+     ]
+    }
+   ],
+   "rail_source": "https://www.mbta.com/schedules/CR-Kingston/timetable",
+   "highways": [
+    "Route 3 (Pilgrims Highway)",
+    "Route 44"
+   ],
+   "text": "Plymouth station at Cordage Park was suspended indefinitely on April 5, 2021, and is not on the current Kingston Line timetable, so the nearest active stop is Kingston station at 134 Marion Drive, with trains to South Station. Route 3 runs through town with six exits, and Route 44 ends in Plymouth. GATRA runs local routes including the Liberty, Freedom, Mayflower and Manomet Links, Plymouth & Brockton buses run to Boston and Hyannis, and a seasonal ferry sails from State Wharf to Provincetown."
+  },
+  "schools": {
+   "district": "Plymouth Public Schools",
+   "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=02390000&orgtypecode=5"
+  },
+  "places": [
+   {
+    "name": "Pilgrim Memorial State Park",
+    "line": "The waterfront park at 79 Water Street with Plymouth Rock under its portico, the Mayflower II, Cole's Hill Burial Ground and views of Plymouth Harbor.",
+    "source": "https://www.mass.gov/locations/pilgrim-memorial-state-park"
+   },
+   {
+    "name": "Plimoth Patuxet Museums",
+    "line": "A living history museum at 137 Warren Avenue with the Historic Patuxet Homesite, a re-created 17th-century English Village, the Plimoth Grist Mill and Mayflower II.",
+    "source": "https://www.plimoth.org/plan-your-visit/explore-our-sites"
+   },
+   {
+    "name": "Pilgrim Hall Museum",
+    "line": "A granite museum at 75 Court Street, designed by Alexander Parris and opened in 1824, holding a Plymouth Colony collection.",
+    "source": "https://en.wikipedia.org/wiki/Pilgrim_Hall_Museum"
+   },
+   {
+    "name": "Burial Hill",
+    "line": "The hillside burying ground off School Street, with marked graves from 1680, including that of Governor William Bradford.",
+    "source": "https://en.wikipedia.org/wiki/Burial_Hill"
+   },
+   {
+    "name": "Myles Standish State Forest",
+    "line": "A DCR forest of pine and oak with 13 miles of hiking trails, 35 miles of equestrian trails, camping and swimming at College Pond.",
+    "source": "https://www.mass.gov/locations/myles-standish-state-forest"
+   },
+   {
+    "name": "Ellisville Harbor State Park",
+    "line": "A Cape Cod Bay shore park at 1861 State Road with a beach, meadows, red pine forest and harbor seals offshore in winter.",
+    "source": "https://www.mass.gov/locations/ellisville-harbor-state-park"
+   }
+  ],
+  "history": [
+   {
+    "year": "1620",
+    "text": "The Mayflower Pilgrims founded the settlement in December, and Plymouth served as Plymouth Colony's capital until 1691.",
+    "source": "https://en.wikipedia.org/wiki/Plymouth,_Massachusetts"
+   },
+   {
+    "year": "1621",
+    "text": "After the fall harvest, the Pilgrims held a thanksgiving celebration with Wampanoag guests, remembered as the First Thanksgiving.",
+    "source": "https://en.wikipedia.org/wiki/Plymouth,_Massachusetts"
+   },
+   {
+    "year": "1824",
+    "text": "The Plymouth Cordage Company was founded in North Plymouth; it operated for more than 140 years before closing in 1964.",
+    "source": "https://en.wikipedia.org/wiki/Plymouth_Cordage_Company"
+   },
+   {
+    "year": "1921",
+    "text": "The present portico over Plymouth Rock was built.",
+    "source": "https://en.wikipedia.org/wiki/Plymouth,_Massachusetts"
+   }
+  ],
+  "market": {
+   "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+   "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+   "period": "Calendar year 2025",
+   "sf_sales_2025": 606,
+   "sf_sales_2024": 696,
+   "sf_median_2025": 654450,
+   "sf_median_2024": 632000,
+   "condo_sales_2025": null,
+   "condo_median_2025": null,
+   "condo_median_2024": null,
+   "reading_1": "PLYMOUTH (single-family; Dec 2024, Dec 2025, Percent Change): YTD Number of Sales 696 606 -12.9%; YTD Median Sale Price $632,000 $654,450 3.6%",
+   "reading_2": "Plymouth (single-family): YTD Number of Sales 696 606 -12.9%; YTD Median Sale Price $632,000 $654,450 3.6%"
+  },
+  "nearby": [
+   "kingston",
+   "carver",
+   "plympton",
+   "wareham",
+   "bourne"
+  ],
+  "search_notes": "'Plymouth MA real estate agent' returns individual brokerage agent pages (Coldwell Banker, William Raveis), a brokerage hiring post, BiggerPockets, HomeLight, Experience.com and RealTrends profiles. 'Moving to Plymouth MA' mixes movers (All My Sons, MoveBuddha, MoveAdvisor) with a Redfin pros-and-cons post, Redfin market data, Livability and a single agent blog. None explains the suspended Plymouth station, the village structure or the state forest, which a sourced guide could cover.",
+  "faq": [
+   {
+    "q": "What is the median home price in Plymouth, MA?",
+    "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, the median single-family sale price in Plymouth for calendar year 2025 was $654,450, across 606 sales. In 2024 it was $632,000, across 696 sales."
+   },
+   {
+    "q": "Does Plymouth have commuter rail?",
+    "a": "Not at present. Plymouth station at Cordage Park was suspended indefinitely in April 2021. The nearest active stop is Kingston station in neighboring Kingston, at the end of the Kingston Line to South Station."
+   },
+   {
+    "q": "Is Plymouth the largest town in Massachusetts?",
+    "a": "By area, yes. Plymouth is the largest municipality in Massachusetts by area, with about 134 square miles in total, of which about 96 are land."
+   },
+   {
+    "q": "Which school district serves Plymouth?",
+    "a": "Plymouth Public Schools. Review its profile with DESE."
+   }
+  ],
+  "notes": "Condo fields null: the PDF's extracted text ends partway through the condo table (at 'BROOKLI'), before Plymouth. Plymouth station status comes from Wikipedia (suspended April 5, 2021; planned July 2022 reopening did not happen) and from its absence on the current MBTA Kingston Line timetable; no MBTA notice was fetched, so recheck before publishing. Distance from Boston conflicts on Wikipedia (about 40 miles in the lead, about 44 miles in Geography); the answer uses 'about 40'. Pilgrim Hall's 'oldest public museum in continuous operation' claim is sourced to Wikipedia only; the museum's own About page failed to load. The Housing Production Plan's Appendix B naming the five village centers was cut off, so the village list mixes the HPP and Wikipedia; Cedarville's line is thin (Wikipedia gives location and a bus link only). The HPP gives two total unit counts (28,353 and 28,074 for SHI); the text uses the 2021 growth figure. Myles Standish acreage omitted: the DCR page gives none, and the 'second-largest state forest' claim (Wikipedia) was left out. GATRA route names come from GATRA's Plymouth/Wareham area list; Wikipedia's 'Plymouth Area Link' name does not appear on GATRA's page. The ferry and Plymouth & Brockton lines are sourced to Wikipedia. Route 3A not listed because no fetched page confirmed it. Kingston station is in Kingston; its distance from Plymouth Center was not sourced. Manomet's 'White Horse Beach is public' note: Wikipedia says parking there is private, so the beach is named without an access claim.",
+  "region_key": "southshore",
+  "tier": 3,
+  "art": "cape"
+ },
+ {
+  "slug": "braintree",
+  "name": "Braintree",
+  "county": "Norfolk County",
+  "region": "South Shore",
+  "population_2020": 39143,
+  "population_source": "https://en.wikipedia.org/wiki/Braintree,_Massachusetts",
+  "official_site": "https://www.braintreema.gov/",
+  "headline": [
+   "Saltbox houses on Washington Street,",
+   "and a station where three rail lines meet."
+  ],
+  "answer": "Braintree is a Norfolk County community of 39,143 people (2020 Census), about ten miles south of Boston, where I-93 and Route 3 meet. Most of its housing, 64 percent, is single-family detached homes. Braintree station on Ivory Street is served by the Red Line and two commuter rail lines, and the Greenbush Line stops at Weymouth Landing/East Braintree on the town line. It is legally a city with a mayor and council, though it keeps the name Town of Braintree.",
+  "overview": [
+   "Braintree was colonized in 1635 and incorporated in 1640, and the old town once took in what are now Quincy, Randolph and Holbrook. The town counts John Adams, John Quincy Adams, John Hancock and General Sylvanus Thayer among those born in Old Braintree. Water power on the Monatiquot River drew mills to South Braintree in the 1820s, and the Old Colony railroad arrived there in 1845, making South Braintree a rail junction. East Braintree grew at the head of navigation on the Fore River.",
+   "Washington Street carries much of the town's older fabric, including the Thayer Birthplace, built in 1720, and the Asa French House, built about 1699, both now in the town's historic district. Open space includes the Town Forest, Sunset Lake, Smith Beach, the Cranberry Pond Conservation District and Pond Meadow Park, shared with Weymouth, along with an 18-hole public golf course. The town site describes established neighborhoods, small clusters of new homes and several condominium complexes."
+  ],
+  "housing": {
+   "text": "A 2024 town feasibility study reports that 64 percent of Braintree's housing is single-family detached units and that about 74 percent of units are owner-occupied. Only 12 percent of units are studios or one-bedrooms. The study counts a 5.42 percent increase in housing units from 2010 to 2020. The town also lists several condominium complexes among its housing.",
+   "source": "https://www.braintreema.gov/DocumentCenter/View/16838/Kick-Off-Meeting-February-2-2024"
+  },
+  "villages": [
+   {
+    "name": "South Braintree",
+    "line": "The old industrial center along the Monatiquot River, where mills developed in the 1820s and the Old Colony railroad made a junction in 1845.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/bra.pdf"
+   },
+   {
+    "name": "East Braintree",
+    "line": "The area at the head of navigation on the Fore River, with Colonial-era Capes along the Monatiquot; its rail stop is Weymouth Landing/East Braintree.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/bra.pdf"
+   },
+   {
+    "name": "Braintree Highlands",
+    "line": "Laid out as a street grid in the 1870s and built up in the 20th century; the Thayer house was built here in 1720 before its move.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/bra.pdf"
+   },
+   {
+    "name": "Washington Street",
+    "line": "The town's civic spine since a town house was built midway along it in 1829, with the Thayer and French houses and Town Hall.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/bra.pdf"
+   }
+  ],
+  "commute": {
+   "rail": [
+    {
+     "line": "Red Line (subway)",
+     "stations": [
+      "Braintree"
+     ]
+    },
+    {
+     "line": "Kingston Line",
+     "stations": [
+      "Braintree"
+     ]
+    },
+    {
+     "line": "Fall River/New Bedford Line",
+     "stations": [
+      "Braintree"
+     ]
+    },
+    {
+     "line": "Greenbush Line (on the Braintree/Weymouth line)",
+     "stations": [
+      "Weymouth Landing/East Braintree"
+     ]
+    }
+   ],
+   "rail_source": "https://www.mbta.com/stops/place-brntn",
+   "highways": [
+    "I-93/US 1",
+    "Route 3",
+    "Route 37",
+    "Route 53"
+   ],
+   "text": "Braintree station, at 197 Ivory Street, has a Red Line platform, a commuter rail platform for the Kingston and Fall River/New Bedford lines to South Station, a busway and a 1,197-space garage. Weymouth Landing/East Braintree, on the Greenbush Line, sits on the town line with Weymouth. The seasonal CapeFLYER stops at Braintree on summer weekends on its way to Hyannis. I-93 and Route 3 meet in town."
+  },
+  "schools": {
+   "district": "Braintree Public Schools",
+   "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=00400000&orgtypecode=5"
+  },
+  "places": [
+   {
+    "name": "Pond Meadow Park",
+    "line": "A 320-acre park shared with Weymouth, opened in 1976, with a two-mile paved loop around a 20-acre pond and unpaved trails branching off it.",
+    "source": "https://en.wikipedia.org/wiki/Pond_Meadow_Park"
+   },
+   {
+    "name": "General Sylvanus Thayer Birthplace",
+    "line": "A 1720 farmhouse at 786 Washington Street, birthplace of the West Point superintendent, moved here in 1958 and listed on the National Register in 1974.",
+    "source": "https://www.braintreema.gov/382/Thayer-French-Houses"
+   },
+   {
+    "name": "Asa French House",
+    "line": "A house built about 1699 at 766 Washington Street, now owned by the Braintree Historical Society.",
+    "source": "https://www.braintreema.gov/382/Thayer-French-Houses"
+   },
+   {
+    "name": "Thayer Public Library",
+    "line": "The town library across from Town Hall, on land acquired in 1953 and rebuilt in 1997, with more than 125,000 items.",
+    "source": "https://www.braintreema.gov/411/Thayer-Public-Library"
+   },
+   {
+    "name": "Blue Hills Reservation",
+    "line": "A DCR reservation of more than 7,000 acres and 125 miles of trails, with a paved accessible path on Old Route 128 off West Street in Braintree.",
+    "source": "https://www.mass.gov/locations/blue-hills-reservation"
+   },
+   {
+    "name": "Sunset Lake and the Town Forest",
+    "line": "Two of the town's recreation areas, along with Smith Beach and the Cranberry Pond Conservation District.",
+    "source": "https://www.braintreema.gov/9/About-Us"
+   }
+  ],
+  "history": [
+   {
+    "year": "1640",
+    "text": "Braintree, colonized in 1635, was incorporated as a town.",
+    "source": "https://en.wikipedia.org/wiki/Braintree,_Massachusetts"
+   },
+   {
+    "year": "1792",
+    "text": "Quincy was incorporated from the original town, followed by Randolph in 1793.",
+    "source": "https://en.wikipedia.org/wiki/Braintree,_Massachusetts"
+   },
+   {
+    "year": "1845",
+    "text": "The Old Colony railroad reached South Braintree, which became a rail junction as branches followed to Fall River in 1846 and Randolph in 1866.",
+    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/bra.pdf"
+   },
+   {
+    "year": "1920",
+    "text": "The murders that led to the Sacco and Vanzetti trial took place in Braintree.",
+    "source": "https://en.wikipedia.org/wiki/Braintree,_Massachusetts"
+   }
+  ],
+  "market": {
+   "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+   "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+   "period": "Calendar year 2025",
+   "sf_sales_2025": 214,
+   "sf_sales_2024": 242,
+   "sf_median_2025": 725000,
+   "sf_median_2024": 680000,
+   "condo_sales_2025": 84,
+   "condo_median_2025": 465000,
+   "condo_median_2024": 450000,
+   "reading_1": "BRAINTREE (single-family; Dec 2024, Dec 2025, Percent Change): YTD Number of Sales 242 214 -11.6%; YTD Median Sale Price $680,000 $725,000 6.6%. Condo: YTD Number of Sales 85 84 -1.2%; YTD Median Sale Price $450,000 $465,000 3.3%",
+   "reading_2": "Braintree (single-family): YTD Number of Sales 242 214 -11.6%; YTD Median Sale Price $680,000 $725,000 6.6%. Condo: YTD Number of Sales 85 84 -1.2%; YTD Median Sale Price $450,000 $465,000 3.3%"
+  },
+  "nearby": [
+   "quincy",
+   "weymouth",
+   "randolph",
+   "holbrook"
+  ],
+  "search_notes": "'Braintree MA real estate agent' returns Experience.com review profiles, RealTrends and HomeLight directories (including a HomeLight page for South Braintree). 'Moving to Braintree MA' returns a storage company blog, Livability and mover pages (Lugg, uShip, HireAHelper). No result explains the town's three-line rail hub, the Weymouth Landing/East Braintree stop or the Washington Street historic houses, which a sourced guide could cover.",
+  "faq": [
+   {
+    "q": "What is the median home price in Braintree, MA?",
+    "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, the median single-family sale price in Braintree for calendar year 2025 was $725,000, across 214 sales. In 2024 it was $680,000, across 242 sales."
+   },
+   {
+    "q": "Does Braintree have commuter rail?",
+    "a": "Yes. Braintree station on Ivory Street is served by the Red Line and by the Kingston and Fall River/New Bedford commuter rail lines to South Station. The Greenbush Line stops at Weymouth Landing/East Braintree, on the town line with Weymouth."
+   },
+   {
+    "q": "Is Braintree a city or a town?",
+    "a": "Both, in a sense. It is officially named the Town of Braintree, but it has a mayor and council form of government and is considered a city under Massachusetts law."
+   },
+   {
+    "q": "Which school district serves Braintree?",
+    "a": "Braintree Public Schools. Review its profile with DESE."
+   }
+  ],
+  "notes": "Condo row was readable in both passes (85 to 84 sales; $450,000 to $465,000), so condo fields are filled. Housing figures come from a February 2024 kick-off presentation for the town's 74 and 90 Pond Street feasibility study, not a Housing Production Plan; the mass.gov HPP link failed to load. Village descriptions rely on the 1979 MHC Reconnaissance Survey report (OCR-scanned, older), since no official or Wikipedia page describes Braintree's neighborhoods; the town site names no villages. 'About ten miles south of Boston' is from the town's About Us page. The Blue Hills overview on mass.gov does not list Braintree among the towns it spans; it only names an accessible path on Old Route 128 in Braintree, so the line is worded around that. The Thayer house street address and 1958 move date come from the town's Thayer/French page; a second town page says the house was relocated in 1960, so that date was left out of the prose. Sunset Lake had no dedicated source beyond the town's list of recreation areas. Weymouth not yet a guide slug; nearby slugs are geographic neighbors.",
+  "region_key": "southshore",
+  "tier": 3,
+  "art": "colonial"
+ },
+ {
+  "slug": "barnstable",
+  "name": "Barnstable",
+  "county": "Barnstable County",
+  "region": "Cape Cod",
+  "population_2020": 48916,
+  "population_source": "https://en.wikipedia.org/wiki/Barnstable,_Massachusetts",
+  "official_site": "https://barnstable.gov/",
+  "headline": [
+   "Seven villages between two shores,",
+   "from the Great Marsh to the Hyannis ferries."
+  ],
+  "answer": "Barnstable is the seat of Barnstable County, a town of 48,916 people (2020 Census) made up of seven villages that run from Cape Cod Bay to Nantucket Sound. Detached single-family homes make up 84.8 percent of its residential properties, and the town's housing plan counts at least 23 percent of its housing units as second homes. Hyannis is the Cape's transit hub: the seasonal CapeFLYER train from Boston ends at the Hyannis Transportation Center, and ferries leave Hyannis for Nantucket and Martha's Vineyard. U.S. Route 6 crosses the town as a four-lane freeway.",
+  "overview": [
+   "Bartholomew Gosnold explored this shore in 1602, and English settlers arrived on June 4, 1638, making Barnstable one of the first towns of Plymouth Colony; it was incorporated in 1639. The north side still follows the Old King's Highway, Route 6A, through Barnstable village and West Barnstable, where the 1644 house that forms the original part of the Sturgis Library is the oldest building housing a public library in the United States, and the Olde Colonial Courthouse recalls a 1774 protest led by James Otis and Samuel Adams. Behind them, Sandy Neck runs about six and a half miles along Cape Cod Bay, backed by salt marsh, with Sandy Neck Light at its tip.",
+   "The south side faces Nantucket Sound. Hyannis holds the historic Main Street, a large natural harbor and the ferry docks, along with Barnstable Municipal Airport and the Hyannis Transportation Center. West along Route 28, Centerville reaches Craigville Beach, Osterville keeps the Crosby boatbuilding story in its historical museum, and Cotuit sits on Cotuit Bay, the home water of the Cotuit oyster. Inland, Marstons Mills takes its name from Benjamin Marston's fulling mill and keeps a herring run, kettle ponds and a grass airfield dating to 1929."
+  ],
+  "housing": {
+   "text": "Barnstable's 2025 Housing Production Plan executive summary counts detached single-family homes as 84.8 percent of residential properties, and reports that at least 23 percent of the town's housing units are second homes. Hyannis holds about one-fifth of all housing units; single-family homes are 59 percent of its units, and most of its units are rented. The plan names town-owned sites in Marstons Mills, among others, for new year-round housing.",
+   "source": "https://barnstable.gov/Departments/planninganddevelopment/Projects/HousingProduction/2025%20Housing%20Production%20Plan%20Executive%20Summary.pdf"
+  },
+  "villages": [
+   {
+    "name": "Hyannis",
+    "line": "The largest village, with the historic Main Street, the harbor and ferry docks, the Hyannis Transportation Center and Barnstable Municipal Airport. It includes Hyannis Port.",
+    "source": "https://en.wikipedia.org/wiki/Hyannis,_Massachusetts"
+   },
+   {
+    "name": "Barnstable Village",
+    "line": "The north-side village along the Old King's Highway (Route 6A), with a working harbor, the county complex, the Sturgis Library and the Olde Colonial Courthouse.",
+    "source": "https://en.wikipedia.org/wiki/Barnstable_(village),_Massachusetts"
+   },
+   {
+    "name": "West Barnstable",
+    "line": "A northwestern village on Route 6A whose land is largely Sandy Neck, the Great Marsh and the West Barnstable Conservation Area, centered on the West Parish meetinghouse of 1717 to 1718.",
+    "source": "https://en.wikipedia.org/wiki/West_Barnstable,_Massachusetts"
+   },
+   {
+    "name": "Centerville",
+    "line": "A south-side village with the Centerville Historic District, the Centerville Historical Museum and Craigville Beach in its Craigville neighborhood.",
+    "source": "https://en.wikipedia.org/wiki/Centerville,_Massachusetts"
+   },
+   {
+    "name": "Osterville",
+    "line": "A village facing Nantucket Sound, with West Bay, the Wianno neighborhood by East Bay and the Crosby boatbuilding tradition.",
+    "source": "https://en.wikipedia.org/wiki/Osterville,_Massachusetts"
+   },
+   {
+    "name": "Cotuit",
+    "line": "The village on Cotuit Bay, midway between Falmouth and Hyannis, where the Cotuit Kettleers play Cape Cod Baseball League games at Lowell Park.",
+    "source": "https://en.wikipedia.org/wiki/Cotuit,_Massachusetts"
+   },
+   {
+    "name": "Marstons Mills",
+    "line": "An inland village on glacial plains, with the Marstons Mills River, a herring run, kettle ponds such as Mystic Lake and Hamblin Pond, and saltwater access only at Prince Cove.",
+    "source": "https://en.wikipedia.org/wiki/Marstons_Mills,_Massachusetts"
+   }
+  ],
+  "commute": {
+   "rail": [
+    {
+     "line": "CapeFLYER (seasonal weekends, Memorial Day weekend to Labor Day)",
+     "stations": [
+      "Hyannis (Hyannis Transportation Center, 1 Transportation Avenue)"
+     ]
+    }
+   ],
+   "rail_source": "https://capeflyer.com/",
+   "highways": [
+    "U.S. Route 6",
+    "Route 6A",
+    "Route 28",
+    "Route 132",
+    "Route 149"
+   ],
+   "text": "Barnstable has no year-round passenger rail; the nearest year-round MBTA Commuter Rail stations are Middleborough and Kingston. In summer, the CapeFLYER runs weekends only from Memorial Day weekend through Labor Day between Boston's South Station and the Hyannis Transportation Center, with stops including Braintree, Brockton, Wareham Village, Buzzards Bay and Bourne. The Hyannis Transportation Center is also the terminal for Cape Cod Regional Transit Authority buses, including the Sealine to Falmouth and Woods Hole, and for Plymouth & Brockton and Peter Pan intercity buses. From Hyannis, the Steamship Authority runs year-round ferries to Nantucket and a seasonal high-speed passenger ferry, and Hy-Line runs passenger ferries to Nantucket and a seasonal catamaran to Martha's Vineyard. Barnstable Municipal Airport in Hyannis has scheduled flights to the islands and Boston. U.S. Route 6 crosses the town as a four-lane freeway, and Routes 132 and 149 link Route 6A to Route 28.",
+   "sources": [
+    "https://capeflyer.com/",
+    "https://en.wikipedia.org/wiki/Barnstable,_Massachusetts",
+    "https://en.wikipedia.org/wiki/Hyannis,_Massachusetts",
+    "https://www.capecodrta.org/sealine/",
+    "https://www.steamshipauthority.com/about"
+   ]
+  },
+  "schools": {
+   "district": "Barnstable Public Schools",
+   "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=00200000&orgtypecode=5"
+  },
+  "places": [
+   {
+    "name": "Sandy Neck",
+    "line": "A public barrier beach about 6.5 miles long on Cape Cod Bay, backed by salt marsh, with Sandy Neck Light's 1857 brick tower at Beach Point.",
+    "source": "https://en.wikipedia.org/wiki/Sandy_Neck_Beach"
+   },
+   {
+    "name": "John F. Kennedy Hyannis Museum",
+    "line": "A museum at 397 Main Street, Hyannis, on President Kennedy, his family and their connection to Cape Cod; hours change by season.",
+    "source": "https://www.jfkhyannismuseum.org/"
+   },
+   {
+    "name": "Sturgis Library",
+    "line": "A library at 3090 Main Street (Route 6A) in Barnstable Village whose building is the oldest structure housing a public library in the United States.",
+    "source": "https://www.sturgislibrary.org/"
+   },
+   {
+    "name": "Osterville Historical Museum",
+    "line": "A museum at 155 West Bay Road, founded in 1931, with the Cammett, Parker and Jelly houses and more than a dozen full-sized Crosby wooden boats.",
+    "source": "https://www.ostervillemuseum.org/"
+   },
+   {
+    "name": "Hyannis Harbor and Main Street",
+    "line": "A large natural harbor, the Cape's largest recreational boating port, beside the historic downtown Main Street shopping district.",
+    "source": "https://en.wikipedia.org/wiki/Hyannis,_Massachusetts"
+   },
+   {
+    "name": "Lowell Park, Cotuit",
+    "line": "The summer home field of the Cotuit Kettleers of the Cape Cod Baseball League.",
+    "source": "https://en.wikipedia.org/wiki/Cotuit,_Massachusetts"
+   }
+  ],
+  "history": [
+   {
+    "year": "1602",
+    "text": "Bartholomew Gosnold became the first European to explore the area.",
+    "source": "https://en.wikipedia.org/wiki/Barnstable,_Massachusetts"
+   },
+   {
+    "year": "1639",
+    "text": "Settled on June 4, 1638, as one of the first towns of Plymouth Colony, Barnstable was incorporated the following September.",
+    "source": "https://en.wikipedia.org/wiki/Barnstable,_Massachusetts"
+   },
+   {
+    "year": "1774",
+    "text": "Protesters led by James Otis and Samuel Adams interrupted court proceedings at the Olde Colonial Courthouse, now a museum.",
+    "source": "https://en.wikipedia.org/wiki/Barnstable_(village),_Massachusetts"
+   },
+   {
+    "year": "1854",
+    "text": "The Cape Cod Branch Railroad reached West Barnstable, and a depot was built in the village.",
+    "source": "https://en.wikipedia.org/wiki/West_Barnstable,_Massachusetts"
+   }
+  ],
+  "market": {
+   "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+   "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+   "period": "Calendar year 2025",
+   "sf_sales_2025": null,
+   "sf_sales_2024": null,
+   "sf_median_2025": null,
+   "sf_median_2024": null,
+   "condo_sales_2025": null,
+   "condo_median_2025": null,
+   "condo_median_2024": null,
+   "village_rows": [
+    {
+     "name": "Barnstable (row labeled BARNSTABLE)",
+     "sf_sales_2025": 60,
+     "sf_sales_2024": 79,
+     "sf_median_2025": 885000,
+     "sf_median_2024": 877500
+    },
+    {
+     "name": "Centerville",
+     "sf_sales_2025": 142,
+     "sf_sales_2024": 137,
+     "sf_median_2025": 664450,
+     "sf_median_2024": 619000
+    },
+    {
+     "name": "Cotuit",
+     "sf_sales_2025": 68,
+     "sf_sales_2024": 54,
+     "sf_median_2025": 814162,
+     "sf_median_2024": 907500
+    },
+    {
+     "name": "Hyannis",
+     "sf_sales_2025": 131,
+     "sf_sales_2024": 124,
+     "sf_median_2025": 590000,
+     "sf_median_2024": 550000
+    },
+    {
+     "name": "Marstons Mills",
+     "sf_sales_2025": 101,
+     "sf_sales_2024": 91,
+     "sf_median_2025": 665000,
+     "sf_median_2024": 659000
+    },
+    {
+     "name": "Osterville",
+     "sf_sales_2025": 51,
+     "sf_sales_2024": 56,
+     "sf_median_2025": 1165000,
+     "sf_median_2024": 1200000
+    }
+   ],
+   "reading_1": "BARNSTABLE (single-family; Dec 2024, Dec 2025, Percent Change): YTD Number of Sales 79 60 -24.1%; YTD Median Sale Price $877,500 $885,000 0.9%. Village rows in the same pass: HYANNIS YTD Sales 124 131 5.6%, YTD Median $550,000 $590,000 7.3%; CENTERVILLE 137 142 3.6%, $619,000 $664,450 7.3%; OSTERVILLE 56 51 -8.9%, $1,200,000 $1,165,000 -2.9%; COTUIT 54 68 25.9%, $907,500 $814,162 -10.3%; MARSTONS MILLS 91 101 11.0%, $659,000 $665,000 0.9%",
+   "reading_2": "BARNSTABLE (single-family): YTD Number of Sales 79 60 -24.1%; YTD Median Sale Price $877,500 $885,000 0.9%. CENTERVILLE 137 142 3.6%, $619,000 $664,450 7.3%; COTUIT 54 68 25.9%, $907,500 $814,162 -10.3%; HYANNIS 124 131 5.6%, $550,000 $590,000 7.3%; MARSTONS MILLS 91 101 11.0%, $659,000 $665,000 0.9%; OSTERVILLE 56 51 -8.9%, $1,200,000 $1,165,000 -2.9%. No WEST BARNSTABLE, CUMMAQUID or HYANNIS PORT row."
+  },
+  "nearby": [
+   "mashpee",
+   "sandwich",
+   "yarmouth",
+   "falmouth"
+  ],
+  "search_notes": "'Barnstable MA real estate agent' returns HomeLight and BiggerPockets agent directories, single brokerage agent pages (Keller Williams, Raveis, Realty Executives), Bean Group and Redfin filter pages. 'Moving to Hyannis Barnstable' returns Wikivoyage, Frommers travel guides, mover pages (Allied) and one brokerage blog on choosing a village. Few results explain that Barnstable is seven villages with separate price tables, or lay out the CapeFLYER, ferry and bus connections with sources, which a sourced guide could cover.",
+  "faq": [
+   {
+    "q": "What is the median home price in Barnstable, MA?",
+    "a": "The Warren Group's MA December 2025 Sales, Prices by Town table reports Barnstable by village rather than as one town. For calendar year 2025, the median single-family sale price was $590,000 in Hyannis (131 sales), $664,450 in Centerville (142 sales), $665,000 in Marstons Mills (101 sales), $814,162 in Cotuit (68 sales), $885,000 in the row labeled Barnstable (60 sales) and $1,165,000 in Osterville (51 sales). West Barnstable has no separate row."
+   },
+   {
+    "q": "Does Barnstable have commuter rail?",
+    "a": "Not year-round. The seasonal CapeFLYER runs weekends from Memorial Day weekend through Labor Day between Boston's South Station and the Hyannis Transportation Center. The nearest year-round MBTA Commuter Rail stations are Middleborough and Kingston."
+   },
+   {
+    "q": "Where do the island ferries leave from in Barnstable?",
+    "a": "From Hyannis. The Steamship Authority runs ferries to Nantucket year-round, plus a seasonal high-speed passenger ferry, and Hy-Line runs passenger ferries to Nantucket and a seasonal catamaran to Martha's Vineyard."
+   },
+   {
+    "q": "Which school district serves Barnstable?",
+    "a": "Barnstable Public Schools. Review its profile with DESE."
+   }
+  ],
+  "notes": "Market: The Warren Group does not publish a single town-wide Barnstable row. It lists BARNSTABLE, CENTERVILLE, COTUIT, HYANNIS, MARSTONS MILLS and OSTERVILLE as separate single-family rows, and has no WEST BARNSTABLE row. It is unclear whether the BARNSTABLE row (60 sales, $885,000) covers only Barnstable Village or also West Barnstable and other unlisted areas, so the town-level sf_* fields are set to null rather than presenting that row as the town; village figures are kept in market.village_rows (an extra key the site build ignores) and in the FAQ. Both readings of all six rows agreed. No town median was computed from the village rows. Condo fields null: the BARNSTABLE condo row extracted garbled ('YTD Number of Sales13 200.0%'), and the condo table truncates at Brookline before the villages. Settlement and incorporation: Wikipedia's infobox gives incorporation as September 3, 1639 and its body text September 4, so history says only 'September'. The official site barnstable.gov (per the Wikipedia infobox) and townofbarnstable.us could not be loaded by the fetch tool; the housing plan PDF was fetched from barnstable.gov. The Housing Production Plan says both 'at least 23 percent' and 'at least a quarter' for second homes; the record uses 23 percent. Sandy Neck Light date: tower built 1857. The Sandy Neck town page (townofbarnstable.us/SandyNeck) failed to load, so ORV, camping and trail rules are omitted. The Barnstable village Wikipedia page does not mention whale watching, so it is left out. Hy-Line details come from the Hyannis Wikipedia page, not Hy-Line's own site. CCRTA route list also includes the Barnstable Villager, Hyannis Crosstown, H2O and a Hyannis Trolley, not described here. commute.sources is an extra key listing the pages behind commute.text. 'nearby' includes Falmouth, which does not border Barnstable (Mashpee lies between); the other three border it.",
+  "region_key": "cape",
+  "tier": 3,
+  "art": "cape"
+ },
+ {
+  "slug": "falmouth",
+  "name": "Falmouth",
+  "county": "Barnstable County",
+  "region": "Cape Cod",
+  "population_2020": 32517,
+  "population_source": "https://en.wikipedia.org/wiki/Falmouth,_Massachusetts",
+  "official_site": "https://www.falmouthma.gov/",
+  "headline": [
+   "A village green, a seaside bikeway,",
+   "and the ferry to the Vineyard at Woods Hole."
+  ],
+  "answer": "Falmouth is an Upper Cape town of 32,517 people (2020 Census) in Barnstable County, bordered by Buzzards Bay to the west and Vineyard Sound to the south. Its 2024 Housing Production Plan counts 22,817 housing units, about 86 percent of them detached single-family homes, with 30 percent counted as seasonal units. Falmouth has no rail station: Steamship Authority ferries leave Woods Hole for Martha's Vineyard, and buses link the town to Hyannis and to Boston and Logan Airport. The median single-family sale price was $804,000 in 2025, across 424 sales.",
+  "overview": [
+   "English colonists settled Falmouth in 1660, and the town was incorporated in 1686. Its center has gathered around a triangular village green since 1756, when the meeting house moved there, and late Colonial and Federal houses still frame it with the 1796 First Congregational Church on its north side. Katharine Lee Bates, who wrote the words to \"America the Beautiful\", was born on Main Street in 1859. Woods Hole was raided by British forces in 1779, and the Falmouth Heights shore was bombarded by British frigates in the War of 1812. By 1872 the railroad had reached Falmouth and Woods Hole.",
+   "That rail line is now the Shining Sea Bikeway, 10.7 miles from Route 151 in North Falmouth to the Steamship Authority dock in Woods Hole, with a stretch along the water. Woods Hole is a working science village: the Marine Biological Laboratory dates to 1888 and the Woods Hole Oceanographic Institution to 1930, around the drawbridge at Eel Pond, with Nobska Light on the point above Vineyard Sound. Along the south shore, a run of closely spaced coastal ponds and necks leads east to the Waquoit Bay reserve, while West and North Falmouth face Buzzards Bay with harbors and public beaches such as Old Silver Beach."
+  ],
+  "housing": {
+   "text": "Falmouth's March 2024 Housing Production Plan counts 22,817 housing units in 2020, up from 18,168 in 1990. An estimated 86 percent are detached single-family homes, and 70 percent are counted as year-round units, with 30 percent counted as seasonal. The plan aims to direct new housing to areas that are already developed and to maximize affordable units on town-owned land.",
+   "source": "https://www.mass.gov/doc/falmouth-housing-production-plan-march-2024/download"
+  },
+  "villages": [
+   {
+    "name": "Falmouth Village",
+    "line": "The town center on Main Street (Route 28), around the triangular Falmouth Village Green, a historic district listed on the National Register in 1996.",
+    "source": "https://en.wikipedia.org/wiki/Falmouth_Village_Green_Historic_District"
+   },
+   {
+    "name": "Woods Hole",
+    "line": "The village at the southwestern tip of the Cape, around Eel Pond and its drawbridge, home to the Steamship Authority terminal, WHOI, the Marine Biological Laboratory and a USGS coastal and marine center.",
+    "source": "https://en.wikipedia.org/wiki/Woods_Hole,_Massachusetts"
+   },
+   {
+    "name": "West Falmouth",
+    "line": "A Buzzards Bay village with West Falmouth Harbor and the West Falmouth Village Historic District, which includes the Quaker Meeting House and carriage sheds.",
+    "source": "https://en.wikipedia.org/wiki/West_Falmouth,_Massachusetts"
+   },
+   {
+    "name": "North Falmouth",
+    "line": "The northwest village on Buzzards Bay, with two public beaches: Old Silver Beach off Quaker Road and Megansett Beach on Megansett Harbor.",
+    "source": "https://en.wikipedia.org/wiki/North_Falmouth,_Massachusetts"
+   },
+   {
+    "name": "East Falmouth and Waquoit",
+    "line": "The south-shore area of necks between tidal ponds (Great, Green, Bournes and Eel ponds), with Hatchville to the north on Route 151 and Waquoit to the east on Waquoit Bay.",
+    "source": "https://en.wikipedia.org/wiki/East_Falmouth,_Massachusetts"
+   }
+  ],
+  "commute": {
+   "rail": [
+    {
+     "line": "CapeFLYER (seasonal weekends, Memorial Day weekend to Labor Day, in neighboring Bourne)",
+     "stations": [
+      "Bourne",
+      "Buzzards Bay"
+     ]
+    }
+   ],
+   "rail_source": "https://capeflyer.com/",
+   "highways": [
+    "Route 28",
+    "Route 151"
+   ],
+   "text": "Falmouth has no rail station. The seasonal CapeFLYER, weekends only from Memorial Day weekend through Labor Day, stops in neighboring Bourne and Buzzards Bay on its way between Boston's South Station and Hyannis. Peter Pan buses run from Logan Airport and downtown Boston to the Falmouth Bus Depot. The Cape Cod Regional Transit Authority's Sealine connects the Hyannis Transportation Center with Falmouth Center and the Woods Hole ferry docks along Route 28, and from late June to Labor Day the Whoosh Trolley runs from the Falmouth Mall through Falmouth Center to Woods Hole. Steamship Authority ferries to Martha's Vineyard leave Woods Hole year-round, and the seasonal, passenger-only Island Queen crosses from Falmouth Harbor to Oak Bluffs in about 35 minutes. Route 28 runs south from Bourne as the town's main road, and Route 151 crosses the north of town.",
+   "sources": [
+    "https://capeflyer.com/",
+    "https://www.whoi.edu/what-we-do/educate/student-life/student-life-campus/transportation",
+    "https://www.capecodrta.org/sealine/",
+    "https://www.capecodrta.org/whoosh-trolley/",
+    "https://www.steamshipauthority.com/about",
+    "https://www.islandqueen.com/",
+    "https://en.wikipedia.org/wiki/Falmouth,_Massachusetts"
+   ]
+  },
+  "schools": {
+   "district": "Falmouth Public Schools",
+   "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=00960000&orgtypecode=5"
+  },
+  "places": [
+   {
+    "name": "Shining Sea Bikeway",
+    "line": "A 10.7-mile rail-trail from County Road (Route 151) in North Falmouth to the Steamship Authority on Crane Street in Woods Hole, named for a line of \"America the Beautiful\".",
+    "source": "https://www.traillink.com/trail/shining-sea-bikeway/"
+   },
+   {
+    "name": "Nobska Light",
+    "line": "A lighthouse on Nobska Road in Woods Hole, a station since 1828 with its present tower from 1876, overlooking Martha's Vineyard and Nonamesset Island.",
+    "source": "https://en.wikipedia.org/wiki/Nobska_Light"
+   },
+   {
+    "name": "Waquoit Bay National Estuarine Research Reserve",
+    "line": "About 2,700 acres of open water, barrier beach, marsh and upland in East Falmouth, with trails, a visitor center and boat-access campsites on Washburn Island.",
+    "source": "https://www.mass.gov/locations/waquoit-bay-national-estuarine-research-reserve"
+   },
+   {
+    "name": "Falmouth Village Green",
+    "line": "The triangular green formed by Main Street, West Main Street and Hewins Street, the town center since 1756.",
+    "source": "https://en.wikipedia.org/wiki/Falmouth_Village_Green_Historic_District"
+   },
+   {
+    "name": "Woods Hole and Eel Pond",
+    "line": "The village harbor of Eel Pond, crossed by a bascule drawbridge that opens on a posted schedule, ringed by the Marine Biological Laboratory and WHOI.",
+    "source": "https://en.wikipedia.org/wiki/Woods_Hole,_Massachusetts"
+   },
+   {
+    "name": "Old Silver Beach",
+    "line": "A public beach on Buzzards Bay off Quaker Road in North Falmouth.",
+    "source": "https://en.wikipedia.org/wiki/North_Falmouth,_Massachusetts"
+   }
+  ],
+  "history": [
+   {
+    "year": "1686",
+    "text": "First settled by English colonists in 1660, Falmouth was incorporated as a town.",
+    "source": "https://en.wikipedia.org/wiki/Falmouth,_Massachusetts"
+   },
+   {
+    "year": "1756",
+    "text": "The meeting house moved to the village green, which has been the town center since.",
+    "source": "https://en.wikipedia.org/wiki/Falmouth_Village_Green_Historic_District"
+   },
+   {
+    "year": "1859",
+    "text": "Katharine Lee Bates, author of \"America the Beautiful\", was born in Falmouth on August 12.",
+    "source": "https://en.wikipedia.org/wiki/Katharine_Lee_Bates"
+   },
+   {
+    "year": "1872",
+    "text": "The railroad reached Falmouth and Woods Hole; its right-of-way later became the Shining Sea Bikeway.",
+    "source": "https://en.wikipedia.org/wiki/Falmouth,_Massachusetts"
+   }
+  ],
+  "market": {
+   "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+   "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+   "period": "Calendar year 2025",
+   "sf_sales_2025": 424,
+   "sf_sales_2024": 428,
+   "sf_median_2025": 804000,
+   "sf_median_2024": 740500,
+   "condo_sales_2025": null,
+   "condo_median_2025": null,
+   "condo_median_2024": null,
+   "reading_1": "FALMOUTH (single-family; Dec 2024, Dec 2025, Percent Change): Number of Sales 40 47 17.5%; YTD Number of Sales 428 424 -0.9%; Median Sale Price $772,500 $740,000 -4.2%; YTD Median Sale Price $740,500 $804,000 8.6%",
+   "reading_2": "FALMOUTH (single-family): YTD Number of Sales 428 424 -0.9%; YTD Median Sale Price $740,500 $804,000 8.6%"
+  },
+  "nearby": [
+   "bourne",
+   "mashpee",
+   "sandwich",
+   "barnstable"
+  ],
+  "search_notes": "'Moving to Falmouth MA' returns Redfin housing-market pages for Falmouth, East Falmouth and West Falmouth, Livability, and mover marketplaces (HireAHelper, uShip, MoveAdvisor, the last for Falmouth, Maine). No result explains the villages, the seasonal transit options (Whoosh Trolley, Island Queen, CapeFLYER via Bourne) or the town's housing plan with sources, which a sourced guide could cover.",
+  "faq": [
+   {
+    "q": "What is the median home price in Falmouth, MA?",
+    "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, the median single-family sale price in Falmouth for calendar year 2025 was $804,000, across 424 sales. In 2024 it was $740,500, across 428 sales."
+   },
+   {
+    "q": "Does Falmouth have commuter rail?",
+    "a": "No. Falmouth has no rail station. The seasonal CapeFLYER stops in neighboring Bourne and Buzzards Bay on summer weekends, and Peter Pan buses run from the Falmouth Bus Depot to downtown Boston and Logan Airport."
+   },
+   {
+    "q": "How do you get from Falmouth to Martha's Vineyard?",
+    "a": "Steamship Authority ferries leave Woods Hole for Martha's Vineyard year-round, and the seasonal, passenger-only Island Queen sails from Falmouth Harbor to Oak Bluffs in about 35 minutes."
+   },
+   {
+    "q": "Which school district serves Falmouth?",
+    "a": "Falmouth Public Schools. Review its profile with DESE."
+   }
+  ],
+  "notes": "Both Warren Group readings agreed on the single-family row. Condo fields null: the condo table text truncates at Brookline, before Falmouth. The Warren Group lists no separate rows for Falmouth villages, so the FALMOUTH row is treated as town-wide. The housing plan figures are from the March 2024 Housing Production Plan on mass.gov; owner-occupancy was not in the extracted text, so it is left out. Wikipedia's Falmouth page says Woods Hole ferries serve Nantucket as well as Martha's Vineyard; the Steamship Authority's own site says Martha's Vineyard ferries leave Woods Hole and Nantucket ferries leave Hyannis, so the record follows the Authority. Peter Pan service to the Falmouth Bus Depot is sourced to a WHOI transportation page, because peterpanbus.com's home page does not list stops; the depot is at 50 Depot Avenue per the Falmouth EDIC. A Falmouth to Edgartown ferry (M/V Pied Piper) is mentioned on the WHOI page but was not verified on the operator's site and is left out. The Island Queen's 2027 opening day is May 28 per its site. Route 28A is not named on the Wikipedia pages fetched, so it is not listed. The Waquoit Bay page's street address extracted as '131 Waquoit, East Falmouth', apparently truncated, so the street address is left out. The town history page on falmouthma.gov failed to load, so history uses Wikipedia. The Shining Sea Bikeway length is 10.7 miles on TrailLink (Wikipedia's Bates article says 11). Highfield Hall was left out because its Wikipedia page did not load. 'nearby' includes Barnstable, which does not border Falmouth (Mashpee lies between). commute.sources is an extra key listing the pages behind commute.text.",
+  "region_key": "cape",
+  "tier": 3,
+  "art": "cape"
+ },
+ {
+  "slug": "new-bedford",
+  "name": "New Bedford",
+  "county": "Bristol County",
+  "region": "South Coast",
+  "population_2020": 101079,
+  "population_source": "https://en.wikipedia.org/wiki/New_Bedford,_Massachusetts",
+  "official_site": "https://www.newbedford-ma.gov/",
+  "headline": [
+   "Cobblestones above the working harbor,",
+   "and the train back on Acushnet Avenue."
+  ],
+  "answer": "New Bedford is a Bristol County city of 101,079 people (2020 Census) on the Acushnet River where it meets Buzzards Bay. Its downtown waterfront is part of New Bedford Whaling National Historical Park, established in 1996. The Warren Group counted 401 single-family sales in 2025. Since March 24, 2025, the MBTA Fall River/New Bedford Line has run from New Bedford and Church Street stations to Boston's South Station, and I-195 crosses the city.",
+  "overview": [
+   "New Bedford was incorporated as a town in 1787 and became a city in 1847. In the first half of the 1800s it was one of the world's most important whaling ports, and in 1857 its harbor counted 329 vessels. The downtown historic district, 11 city blocks and part of a twelfth west of the waterfront, keeps Federal and Greek Revival buildings put up mostly between 1790 and 1855, including Seamen's Bethel and the 1836 U.S. Customhouse. Frederick Douglass settled in the city in 1838 and lived there until 1841.",
+   "When whaling faded, cotton mills took over, and the Wamsutta Mills were for a time the world's largest weaving plant. The housing that followed spreads out from downtown: the County Street Historic District, laid out in the 18th century, holds City Hall, the library and large houses in Greek Revival and Gothic Revival styles, while Acushnet Heights keeps wood-frame houses built for factory workers from the 1860s on. Buttonwood Park and its zoo sit to the west, and Fort Taber Park occupies Clark's Point, the city's southern tip on Buzzards Bay."
+  ],
+  "housing": {
+   "text": "The 2020 Census counted 42,781 housing units in New Bedford, about 2,063 per square mile, and 39,208 households. Older neighborhoods mix 19th-century wood-frame houses with downtown commercial and mixed-use blocks, and The Warren Group recorded 401 single-family sales in 2025.",
+   "source": "https://en.wikipedia.org/wiki/New_Bedford,_Massachusetts"
+  },
+  "villages": [
+   {
+    "name": "Downtown and the Waterfront",
+    "line": "The historic district between Front, Elm and Commercial Streets and Acushnet Avenue, about 11 city blocks of Federal and Greek Revival buildings beside the harbor.",
+    "source": "https://en.wikipedia.org/wiki/New_Bedford_Historic_District"
+   },
+   {
+    "name": "County Street",
+    "line": "About 100 acres along County Street, roughly bounded by Acushnet, Page, Middle and Bedford Streets, with City Hall, the library and Greek Revival, Gothic Revival and Late Victorian buildings.",
+    "source": "https://en.wikipedia.org/wiki/County_Street_Historic_District"
+   },
+   {
+    "name": "Acushnet Heights",
+    "line": "About 20 acres around Clasky Common Park, bounded by Purchase, Linden and County Streets, with wood-frame houses built from the 1860s for factory workers and four 19th-century churches.",
+    "source": "https://en.wikipedia.org/wiki/Acushnet_Heights_Historic_District"
+   },
+   {
+    "name": "Clark's Point",
+    "line": "The southernmost point of the city, where the Acushnet River meets Buzzards Bay, home to Fort Taber Park.",
+    "source": "https://en.wikipedia.org/wiki/New_Bedford,_Massachusetts"
+   }
+  ],
+  "commute": {
+   "rail": [
+    {
+     "line": "Fall River/New Bedford Line (New Bedford branch)",
+     "stations": [
+      "New Bedford (536 Acushnet Ave)",
+      "Church Street (387 Church St)"
+     ]
+    }
+   ],
+   "rail_source": "https://www.mbta.com/schedules/CR-NewBedford/timetable",
+   "highways": [
+    "I-195",
+    "Route 18",
+    "Route 140",
+    "U.S. Route 6"
+   ],
+   "text": "Commuter rail returned on March 24, 2025, after a gap since 1958. New Bedford and Church Street stations sit on the New Bedford branch of the Fall River/New Bedford Line, which runs through East Taunton, Middleborough, Brockton and Quincy to Boston's South Station; a sample outbound weekday trip on the current timetable takes about 1 hour 40 minutes. I-195 crosses the city toward Providence and Wareham, Route 18 links it to the waterfront, and Route 140 runs north to Route 24 in Taunton. SRTA runs local buses, and SeaStreak ferries sail from New Bedford to Martha's Vineyard and Nantucket, with separate service to Cuttyhunk Island."
+  },
+  "schools": {
+   "district": "New Bedford Public Schools",
+   "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=02010000&orgtypecode=5"
+  },
+  "places": [
+   {
+    "name": "New Bedford Whaling National Historical Park",
+    "line": "A fee-free national park across 13 downtown blocks, with its visitor center at 33 William Street.",
+    "source": "https://www.nps.gov/nebe/planyourvisit/index.htm"
+   },
+   {
+    "name": "New Bedford Whaling Museum",
+    "line": "Founded in 1903 by the Old Dartmouth Historical Society, at 18 Johnny Cake Hill.",
+    "source": "https://www.whalingmuseum.org/about/"
+   },
+   {
+    "name": "Buttonwood Park Zoo",
+    "line": "A city-owned, AZA-accredited zoo at 425 Hawthorn Street in the center of Buttonwood Park, with animals from five continents.",
+    "source": "https://www.bpzoo.org/"
+   },
+   {
+    "name": "Fort Taber Park",
+    "line": "A 47-acre park at Clark's Point with the 1857 stone fort, Endicott-era batteries and the Fort Taber/Fort Rodman military museum.",
+    "source": "https://en.wikipedia.org/wiki/Fort_Rodman"
+   },
+   {
+    "name": "Seamen's Bethel",
+    "line": "A white clapboard chapel in the downtown historic district, first built in 1832 and rebuilt after an 1867 fire.",
+    "source": "https://en.wikipedia.org/wiki/New_Bedford_Historic_District"
+   }
+  ],
+  "history": [
+   {
+    "year": "1787",
+    "text": "Incorporated as a town on February 23; it became a city on March 18, 1847.",
+    "source": "https://en.wikipedia.org/wiki/New_Bedford,_Massachusetts"
+   },
+   {
+    "year": "1838",
+    "text": "Frederick Douglass settled in New Bedford, where he lived and worked on the wharves until 1841.",
+    "source": "https://en.wikipedia.org/wiki/New_Bedford,_Massachusetts"
+   },
+   {
+    "year": "1966",
+    "text": "The waterfront historic district was designated a National Historic Landmark on November 13.",
+    "source": "https://en.wikipedia.org/wiki/New_Bedford_Historic_District"
+   },
+   {
+    "year": "2025",
+    "text": "Commuter rail service to Boston resumed on March 24, the first since 1958.",
+    "source": "https://en.wikipedia.org/wiki/New_Bedford_station"
+   }
+  ],
+  "market": {
+   "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+   "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+   "period": "Calendar year 2025",
+   "sf_sales_2025": 401,
+   "sf_sales_2024": 412,
+   "sf_median_2025": 422000,
+   "sf_median_2024": 395000,
+   "condo_sales_2025": null,
+   "condo_median_2025": null,
+   "condo_median_2024": null,
+   "reading_1": "NEW BEDFORD (single-family; Dec 2024, Dec 2025, Percent Change): YTD Number of Sales 412 401 -2.7%; YTD Median Sale Price $395,000 $422,000 6.8%",
+   "reading_2": "NEW BEDFORD (single-family, between NEW ASHFORD and NEW BRAINTREE): Number of Sales 41 53 29.3%; YTD Number of Sales 412 401 -2.7%; Median Sale Price $425,000 $395,000 -7.1%; YTD Median Sale Price $395,000 $422,000 6.8%"
+  },
+  "nearby": [
+   "dartmouth",
+   "fairhaven",
+   "acushnet",
+   "freetown",
+   "fall-river"
+  ],
+  "search_notes": "'New Bedford MA real estate agent' returns directory and profile pages (BiggerPockets, HomeLight, Ramsey Solutions, Experience.com, RealTrends, Century 21), including HomeLight pages for the Clifford and Rockdale areas. 'Moving to New Bedford MA' is almost all movers (Lugg, MoveBuddha, LocalMovers, American Van Lines) plus Livability. No ranking result explains the new commuter rail stations, the historic districts or the national park, which a sourced guide could cover.",
+  "faq": [
+   {
+    "q": "What is the median home price in New Bedford, MA?",
+    "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, the median single-family sale price in New Bedford for calendar year 2025 was $422,000, across 401 sales. In 2024 it was $395,000, across 412 sales."
+   },
+   {
+    "q": "Does New Bedford have commuter rail?",
+    "a": "Yes. Since March 24, 2025, New Bedford station (536 Acushnet Avenue) and Church Street station (387 Church Street) have been served by the MBTA Fall River/New Bedford Line to Boston's South Station."
+   },
+   {
+    "q": "Is there a ferry from New Bedford?",
+    "a": "Yes. SeaStreak runs ferries from New Bedford to Martha's Vineyard and Nantucket, and the Cuttyhunk Ferry Company runs scheduled service to Cuttyhunk Island. Check the operators for seasonal schedules."
+   },
+   {
+    "q": "Which school district serves New Bedford?",
+    "a": "New Bedford Public Schools. Review its profile with DESE."
+   }
+  ],
+  "notes": "Condo fields null: both fetches of the Warren Group PDF cut off the condo table at 'BROOKLI', before New Bedford. The city site (newbedford-ma.gov) returned an error on its home page, so it is not cited for facts; the URL is confirmed by Wikipedia's infobox and a working subpage (/planning/). No housing production plan was found to cite, so housing uses 2020 Census unit counts via Wikipedia; no owner-occupancy or single-family share is given. MBTA confirms the stations, addresses and line; weekend timetables did not load, so weekend service is not stated, and the ~1h40m trip time is read from one sample outbound weekday trip (2:20 PM South Station to 4:02 PM New Bedford). Church Street's MBTA page gives the address but not the neighborhood. The national park's 13 blocks and 1996 date come from Wikipedia (NPS pages did not state them); the historic district article says 11 blocks and part of a twelfth, a different boundary from the park. SeaStreak's own page did not confirm seasonality, terminal address or crossing time, so ferries are sourced to Wikipedia and described without schedules. Superlatives available on Wikipedia (largest whaling museum, top U.S. fishing port by value, 'wealthiest city per capita') were left out except the historical Wamsutta 'world's largest weaving plant' line. Acushnet Heights' location wording on Wikipedia ('south-central', yet abutting a 'North Bedford' district) is inconsistent, so the line uses street boundaries only. Neighborhood names beyond historic districts (North End, South End, West End) are not described because no source characterizes them. Nearby slugs include towns without records.",
+  "region_key": "southcoast",
+  "tier": 3,
+  "art": "triple-decker"
+ },
+ {
+  "slug": "fall-river",
+  "name": "Fall River",
+  "county": "Bristol County",
+  "region": "South Coast",
+  "population_2020": 94000,
+  "population_source": "https://en.wikipedia.org/wiki/Fall_River,_Massachusetts",
+  "official_site": "https://www.fallriverma.gov/",
+  "headline": [
+   "Granite mills on a falling river,",
+   "a battleship at the foot of the hill."
+  ],
+  "answer": "Fall River is a Bristol County city of 94,000 people (2020 Census) on the Taunton River and Mount Hope Bay, at the Rhode Island line. It grew into a leading U.S. textile city in the 1800s, and its housing still includes many 19th-century triple-deckers. The Warren Group counted 300 single-family sales in 2025. Since March 24, 2025, Fall River Depot station has linked the city to Boston's South Station on the MBTA Fall River/New Bedford Line, and I-195 and Route 24 meet here.",
+  "overview": [
+   "Fall River separated from Freetown as a town in 1803, spent about 30 years named Troy, and took back its name in 1834; it became a city in 1854. The name comes from the Quequechan River, believed to mean 'falling river' in Wampanoag. A fire in July 1843 destroyed much of the town center, and the city motto, 'We'll Try', dates from the rebuilding. Mills followed the river's drop to the bay, and by 1868 the city had passed Lowell as the leading U.S. textile city. The 1847 Metacomet Mill is its oldest surviving textile mill.",
+   "I-195 divides the city into the North End and the South End. North of the highway, the Highlands ridge keeps houses from about 1840 to 1925 in Greek Revival, Italianate, Second Empire and Queen Anne styles, along with North Park, designed by the Olmsted Brothers. Below it, the Lower Highlands mixes Federal and Greek Revival houses with late-19th-century multiunit worker housing. On the waterfront, Battleship Cove and Fall River Heritage State Park sit beside the Braga Bridge, and to the south Kennedy Park, designed by Frederick Law Olmsted and Calvert Vaux, slopes down to Mount Hope Bay."
+  ],
+  "housing": {
+   "text": "Fall River's mill boom housed workers in thousands of wood-frame, multi-family tenements, usually three-floor triple-deckers with up to six apartments, and mill companies built more than 12,000 units. The Highlands and Lower Highlands keep older single-family and Victorian houses, and The Warren Group recorded 300 single-family sales in 2025.",
+   "source": "https://en.wikipedia.org/wiki/Fall_River,_Massachusetts"
+  },
+  "villages": [
+   {
+    "name": "The Highlands",
+    "line": "A historic district on a ridge above the Taunton River and Mount Hope Bay, with more than 300 structures built mostly between 1840 and 1925 and the Olmsted Brothers' North Park.",
+    "source": "https://en.wikipedia.org/wiki/Highlands_Historic_District_(Fall_River,_Massachusetts)"
+   },
+   {
+    "name": "Lower Highlands",
+    "line": "About 212 acres just east of downtown, roughly bounded by Cherry, Main, Winter and Bank Streets, settled by 1810 and partly rebuilt after the 1843 fire.",
+    "source": "https://en.wikipedia.org/wiki/Lower_Highlands_Historic_District"
+   },
+   {
+    "name": "Waterfront and Battleship Cove",
+    "line": "A North End neighborhood on the Taunton River where Battleship Cove and Heritage State Park sit beside the Braga Bridge.",
+    "source": "https://en.wikipedia.org/wiki/Fall_River,_Massachusetts"
+   },
+   {
+    "name": "Flint Village",
+    "line": "A South End neighborhood known as 'The Flint', near Bedford and Quarry Streets.",
+    "source": "https://en.wikipedia.org/wiki/Fall_River,_Massachusetts"
+   },
+   {
+    "name": "Globe Village",
+    "line": "A South End neighborhood around Cook Pond and Broadway.",
+    "source": "https://en.wikipedia.org/wiki/Fall_River,_Massachusetts"
+   }
+  ],
+  "commute": {
+   "rail": [
+    {
+     "line": "Fall River/New Bedford Line (Fall River branch)",
+     "stations": [
+      "Fall River Depot (825 Davol St)"
+     ]
+    }
+   ],
+   "rail_source": "https://www.mbta.com/schedules/CR-NewBedford/timetable",
+   "highways": [
+    "I-195",
+    "Route 24",
+    "Route 79",
+    "Route 138",
+    "U.S. Route 6"
+   ],
+   "text": "Fall River Depot opened on March 24, 2025, at 825 Davol Street, about a mile north of downtown near Route 79 and President Avenue, with 220 parking spaces. Trains on the Fall River branch stop at Freetown, then run through East Taunton, Middleborough, Brockton and Quincy to Boston's South Station; sample outbound weekday trips on the current timetable take about 1 hour 40 to 50 minutes. A downtown station at Battleship Cove is a proposed, unfunded later phase. I-195 runs east-west through downtown, Route 24 heads north toward Boston's southern suburbs, and SRTA runs local buses."
+  },
+  "schools": {
+   "district": "Fall River Public Schools",
+   "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=00950000&orgtypecode=5"
+  },
+  "places": [
+   {
+    "name": "Battleship Cove",
+    "line": "A naval museum at 5 Water Street, opened in 1965, with the battleship USS Massachusetts, the submarine USS Lionfish and the destroyer USS Joseph P. Kennedy Jr.",
+    "source": "https://en.wikipedia.org/wiki/Battleship_Cove"
+   },
+   {
+    "name": "Fall River Heritage State Park",
+    "line": "A DCR park on the Taunton River with a visitor center, a mile-long boardwalk and trail, a picnic meadow and views of Battleship Cove.",
+    "source": "https://www.mass.gov/locations/fall-river-heritage-state-park"
+   },
+   {
+    "name": "Lincoln Park Carousel",
+    "line": "A 1920 Philadelphia Toboggan Company carousel, restored by local vocational students and housed in a pavilion at Battleship Cove.",
+    "source": "https://en.wikipedia.org/wiki/Battleship_Cove"
+   },
+   {
+    "name": "Kennedy Park",
+    "line": "A 57-acre park from 1868 by Olmsted and Vaux, with ball fields above and woods running down to Mount Hope Bay.",
+    "source": "https://en.wikipedia.org/wiki/Kennedy_Park_(Fall_River,_Massachusetts)"
+   },
+   {
+    "name": "Lizzie Borden House",
+    "line": "The 230 Second Street house, now a bed and breakfast and museum with historical tours.",
+    "source": "https://en.wikipedia.org/wiki/Lizzie_Borden_House"
+   },
+   {
+    "name": "Freetown-Fall River State Forest",
+    "line": "About 5,000 acres of DCR forest with about 25 miles of trails, including the walk to Profile Rock.",
+    "source": "https://www.mass.gov/locations/freetown-fall-river-state-forest"
+   }
+  ],
+  "history": [
+   {
+    "year": "1803",
+    "text": "Separated from Freetown and incorporated as a town; it was renamed Troy a year later and reverted to Fall River in 1834.",
+    "source": "https://en.wikipedia.org/wiki/Fall_River,_Massachusetts"
+   },
+   {
+    "year": "1843",
+    "text": "A July fire destroyed much of the town center, leaving more than 1,300 people homeless.",
+    "source": "https://en.wikipedia.org/wiki/Fall_River,_Massachusetts"
+   },
+   {
+    "year": "1854",
+    "text": "Incorporated as a city.",
+    "source": "https://en.wikipedia.org/wiki/Fall_River,_Massachusetts"
+   },
+   {
+    "year": "1868",
+    "text": "Fall River passed Lowell as the leading textile city in the United States.",
+    "source": "https://en.wikipedia.org/wiki/Fall_River,_Massachusetts"
+   }
+  ],
+  "market": {
+   "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+   "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+   "period": "Calendar year 2025",
+   "sf_sales_2025": 300,
+   "sf_sales_2024": 281,
+   "sf_median_2025": 429450,
+   "sf_median_2024": 419000,
+   "condo_sales_2025": null,
+   "condo_median_2025": null,
+   "condo_median_2024": null,
+   "reading_1": "FALL RIVER (single-family; Dec 2024, Dec 2025, Percent Change): YTD Number of Sales 281 300 6.8%; YTD Median Sale Price $419,000 $429,450 2.5%",
+   "reading_2": "FALL RIVER (single-family, between FAIRHAVEN and FALMOUTH): Number of Sales 30 28 -6.7%; YTD Number of Sales 281 300 6.8%; Median Sale Price $432,500 $462,500 6.9%; YTD Median Sale Price $419,000 $429,450 2.5%"
+  },
+  "nearby": [
+   "somerset",
+   "swansea",
+   "westport",
+   "freetown",
+   "new-bedford"
+  ],
+  "search_notes": "'Fall River MA real estate agent' is dominated by individual Experience.com review profiles, plus BiggerPockets and HomeLight directories. 'Moving to Fall River MA' returns movers (uShip, HireAHelper, MoveAdvisor, All My Sons, Gentle Giant) and one River Journal relocation post. Nothing ranking explains the new Fall River Depot station, the Highlands historic districts or the waterfront parks, which a sourced guide could cover.",
+  "faq": [
+   {
+    "q": "What is the median home price in Fall River, MA?",
+    "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, the median single-family sale price in Fall River for calendar year 2025 was $429,450, across 300 sales. In 2024 it was $419,000, across 281 sales."
+   },
+   {
+    "q": "Does Fall River have commuter rail?",
+    "a": "Yes. Fall River Depot, at 825 Davol Street, opened on March 24, 2025, on the MBTA Fall River/New Bedford Line to Boston's South Station. A downtown station at Battleship Cove is proposed for a later, unfunded phase."
+   },
+   {
+    "q": "Which school district serves Fall River?",
+    "a": "Fall River Public Schools. Review its profile with DESE."
+   }
+  ],
+  "notes": "Condo fields null: both fetches of the Warren Group PDF cut off the condo table at 'BROOKLI', before Fall River. Population is the round figure 94,000 as given in Wikipedia's infobox; the Census QuickFacts page failed to load, so it was not cross-checked. MBTA pages confirm the line, Fall River Depot's address and 220 parking spaces; Freetown station is in Freetown, not Fall River. Weekend timetables did not load, so weekend service is not stated; trip time is estimated from sample outbound weekday trips. Opening date (March 24, 2025), the station's distance from downtown, and the unfunded Battleship Cove phase come from Wikipedia (South Coast Rail and Fall River station articles). Battleship Cove's own site gives the 5 Water St address but not the opening year or full ship list, so those come from Wikipedia. The Highlands Historic District's 'over 1,400 acres' on Wikipedia looks implausible and was omitted. The state forest's address is in Assonet (Freetown); Wikipedia lists the forest among Fall River's North End areas, but how much of it lies in the city was not verified. Flint Village and Globe Village lines are limited to the locators Wikipedia gives. No housing production plan or owner-occupancy figure was cited. The city site (fallriverma.gov) loaded but offered no history or neighborhood pages to cite. Nearby slugs include towns without records.",
+  "region_key": "southcoast",
+  "tier": 3,
+  "art": "triple-decker"
+ },
+ {
+  "slug": "pittsfield",
+  "name": "Pittsfield",
+  "county": "Berkshire County",
+  "region": "The Berkshires",
+  "population_2020": 43927,
+  "population_source": "https://en.wikipedia.org/wiki/Pittsfield,_Massachusetts",
+  "official_site": "https://www.pittsfieldma.gov/",
+  "headline": [
+   "A county seat around Park Square,",
+   "with two lakes and a state forest at its edges."
+  ],
+  "answer": "Pittsfield is a city of 43,927 people (2020 Census) and the seat of Berkshire County. A city housing analysis describes its homes as mostly single-family houses and small two- and three-unit buildings, and The Warren Group counted 434 single-family sales in 2025. Amtrak's Lake Shore Limited stops at the Joseph Scelsi Intermodal Transportation Center, and the seasonal Berkshire Flyer runs from there to New York. US 7 and US 20 meet in the city, and the Massachusetts Turnpike is about 10 miles south in Lee.",
+  "overview": [
+   "Settlement here dates to 1752, and the plantation of Pontoosuc was organized in 1753 before being incorporated as a town in 1761 and named for William Pitt. Park Square was laid out in 1790 on donated land, and the Old Town Hall, the county courthouse, the Berkshire Athenaeum and the First Church of Christ still face it. Late in the 19th century downtown pushed north along North Street, helped by an 1891 trolley line. In 1890 William Stanley Jr. founded the Stanley Electric Manufacturing Company here, and General Electric bought it in 1903. Pittsfield became a city in 1891.",
+   "Water and woods frame the city. Onota Lake, 617 acres and owned by the city, and Pontoosuc Lake are used for swimming, boating and fishing, and Pittsfield State Forest covers 11,000 acres with Berry Pond and 30 miles of trails. Herman Melville finished Moby-Dick at Arrowhead, his home on Holmes Road from 1850 to 1863. On West Housatonic Street, Hancock Shaker Village keeps 20 historic buildings, including a round stone barn from 1826. Downtown, the Colonial Theatre of 1903 reopened after restoration in 2006, and the Berkshire Museum, founded by Zenas Crane in 1903, holds more than 40,000 objects."
+  ],
+  "housing": {
+   "text": "A 2009 city housing analysis describes Pittsfield's housing stock as relatively old, made up mainly of single-family homes and small multifamily buildings of two or three units, and counted 21,633 units citywide in 2008. In the Westside and Morningside neighborhoods next to downtown, more than 80% of homes were built before 1969, and many larger houses from the 1890s to 1930s have been divided into apartments.",
+   "source": "https://www.pittsfieldma.gov/DocumentCenter/View/639/Housing-Needs-Analysis-for-Westside-and-Morningside-PDF"
+  },
+  "villages": [
+   {
+    "name": "Park Square",
+    "line": "The downtown green laid out in 1790, ringed by the Old Town Hall, the county courthouse, the Berkshire Athenaeum and the First Church of Christ; its historic district reaches roughly to East Housatonic, South, North and Fenn Streets and Wendell Avenue.",
+    "source": "https://en.wikipedia.org/wiki/Park_Square_Historic_District_(Pittsfield,_Massachusetts)"
+   },
+   {
+    "name": "Upper North Street",
+    "line": "Late-19th-century commercial blocks along North Street, built as downtown grew north from Park Square after an 1891 trolley line.",
+    "source": "https://en.wikipedia.org/wiki/Upper_North_Street_Commercial_District"
+   },
+   {
+    "name": "Westside",
+    "line": "The neighborhood just west of North Street, split by the West Branch of the Housatonic River, with denser older houses to the east and larger lots to the west.",
+    "source": "https://www.pittsfieldma.gov/DocumentCenter/View/639/Housing-Needs-Analysis-for-Westside-and-Morningside-PDF"
+   },
+   {
+    "name": "Morningside",
+    "line": "East of North Street between Springside Avenue and East Street, with one- and two-family homes, side-by-side duplexes and newer single-family homes on larger lots to the northeast.",
+    "source": "https://www.pittsfieldma.gov/DocumentCenter/View/639/Housing-Needs-Analysis-for-Westside-and-Morningside-PDF"
+   }
+  ],
+  "commute": {
+   "rail": [
+    {
+     "line": "Amtrak Lake Shore Limited (Boston to Chicago, daily)",
+     "stations": [
+      "Pittsfield (Joseph Scelsi Intermodal Transportation Center, 1 Columbus Avenue)"
+     ]
+    },
+    {
+     "line": "Amtrak Berkshire Flyer (seasonal, to New York)",
+     "stations": [
+      "Pittsfield (Joseph Scelsi Intermodal Transportation Center, 1 Columbus Avenue)"
+     ]
+    }
+   ],
+   "rail_source": "https://en.wikipedia.org/wiki/Lake_Shore_Limited",
+   "highways": [
+    "US 7",
+    "US 20",
+    "Route 8",
+    "Route 9"
+   ],
+   "text": "Pittsfield is outside the MBTA. Amtrak's Lake Shore Limited stops daily at the Joseph Scelsi Intermodal Transportation Center on its Boston section, with Massachusetts stops at Springfield, Worcester, Framingham and Boston. In 2026 the Berkshire Flyer ran from Pittsfield to New York's Moynihan Train Hall via Albany-Rensselaer on Fridays and Sundays from June 12 to September 19. The Berkshire Regional Transit Authority is based at the same center, with routes to North Adams, Lee, Dalton, Lanesborough and an express to Great Barrington. US 7 and US 20 meet in the city, and the Massachusetts Turnpike (I-90) is about 10 miles south in Lee."
+  },
+  "schools": {
+   "district": "Pittsfield Public Schools",
+   "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=02360000&orgtypecode=5"
+  },
+  "places": [
+   {
+    "name": "Pittsfield State Forest",
+    "line": "An 11,000-acre DCR forest at 1041 Cascade Street with Berry Pond, 30 miles of trails, an accessible Tranquility Trail and three campgrounds.",
+    "source": "https://www.mass.gov/locations/pittsfield-state-forest"
+   },
+   {
+    "name": "Onota Lake",
+    "line": "A 617-acre lake owned by the city and used for fishing, swimming, water skiing and sailing.",
+    "source": "https://en.wikipedia.org/wiki/Onota_Lake"
+   },
+   {
+    "name": "Arrowhead",
+    "line": "The 1785 house at 780 Holmes Road where Herman Melville lived from 1850 to 1863 and finished Moby-Dick, run by the Berkshire County Historical Society.",
+    "source": "https://en.wikipedia.org/wiki/Arrowhead_(Herman_Melville_House)"
+   },
+   {
+    "name": "Hancock Shaker Village",
+    "line": "A living history museum at 1843 West Housatonic Street on the site of a Shaker community active from 1790 to 1960, with 20 historic buildings and a round stone barn from 1826.",
+    "source": "https://en.wikipedia.org/wiki/Hancock_Shaker_Village"
+   },
+   {
+    "name": "Colonial Theatre",
+    "line": "A 1903 theater at 111 South Street whose restoration was completed in 2006.",
+    "source": "https://en.wikipedia.org/wiki/Colonial_Theatre_(Pittsfield,_Massachusetts)"
+   },
+   {
+    "name": "Berkshire Museum",
+    "line": "Founded in 1903 by Zenas Crane, with art, natural history and ancient-civilization collections of more than 40,000 objects.",
+    "source": "https://en.wikipedia.org/wiki/Berkshire_Museum"
+   }
+  ],
+  "history": [
+   {
+    "year": "1753",
+    "text": "Organized as Pontoosuc Plantation, after settlement began in 1752.",
+    "source": "https://en.wikipedia.org/wiki/Pittsfield,_Massachusetts"
+   },
+   {
+    "year": "1761",
+    "text": "Incorporated as a town and named for William Pitt by Governor Sir Francis Bernard.",
+    "source": "https://en.wikipedia.org/wiki/Pittsfield,_Massachusetts"
+   },
+   {
+    "year": "1791",
+    "text": "A town bylaw barred playing \"baseball\" within 80 yards of the meeting house, a reference found by historian John Thorn in 2004.",
+    "source": "https://en.wikipedia.org/wiki/Pittsfield,_Massachusetts"
+   },
+   {
+    "year": "1891",
+    "text": "Incorporated as a city.",
+    "source": "https://en.wikipedia.org/wiki/Pittsfield,_Massachusetts"
+   }
+  ],
+  "market": {
+   "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+   "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+   "period": "Calendar year 2025",
+   "sf_sales_2025": 434,
+   "sf_sales_2024": 373,
+   "sf_median_2025": 293000,
+   "sf_median_2024": 286000,
+   "condo_sales_2025": null,
+   "condo_median_2025": null,
+   "condo_median_2024": null,
+   "reading_1": "PITTSFIELD (single-family; Dec 2024, Dec 2025, Percent Change): Number of Sales 35 36 2.9%; YTD Number of Sales 373 434 16.4%; Median Sale Price $305,000 $334,450 9.7%; YTD Median Sale Price $286,000 $293,000 2.4%",
+   "reading_2": "PITTSFIELD (single-family): YTD Number of Sales 373 434 16.4%; YTD Median Sale Price $286,000 $293,000 2.4%"
+  },
+  "nearby": [
+   "lenox",
+   "dalton",
+   "lanesborough",
+   "richmond",
+   "hancock"
+  ],
+  "search_notes": "'Pittsfield MA real estate agent' returns agent directories (Clever, Experience.com, a Century 21 profile) and a local brokerage's listing pages. 'Moving to Pittsfield MA' is almost entirely movers (Allied, moveBuddha, uShip, HireAHelper) plus a Livability page and a radio-station listicle. Nothing ranking explains the Amtrak and Berkshire Flyer service, BRTA routes, Park Square or the lakes and state forest with sources, which a guide could cover.",
+  "faq": [
+   {
+    "q": "What is the median home price in Pittsfield, MA?",
+    "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, the median single-family sale price in Pittsfield for calendar year 2025 was $293,000, across 434 sales. In 2024 it was $286,000, across 373 sales."
+   },
+   {
+    "q": "Does Pittsfield have train service?",
+    "a": "Yes. Amtrak's Lake Shore Limited stops daily at the Joseph Scelsi Intermodal Transportation Center, 1 Columbus Avenue, on its Boston to Chicago run. The seasonal Berkshire Flyer runs from the same station to New York on summer weekends; in 2026 it ran Fridays and Sundays from June 12 to September 19. Pittsfield is not served by the MBTA."
+   },
+   {
+    "q": "Is there local bus service in Pittsfield?",
+    "a": "Yes. The Berkshire Regional Transit Authority runs its buses from the Intermodal Transportation Center, with city routes and routes to North Adams, Lee, Dalton, Lanesborough and Great Barrington. The authority says its service is fare-free through June 2027."
+   },
+   {
+    "q": "Which school district serves Pittsfield?",
+    "a": "Pittsfield Public Schools. Review its profile with DESE."
+   }
+  ],
+  "notes": "Condo figures set to null: both fetches of the Warren Group PDF truncate the condo table at 'BROOKLI', before Pittsfield. Housing text comes from the city's August 2009 Housing Needs Analysis for Westside and Morningside (the most recent city housing document found); its 21,633-unit count is for 2008 (Wikipedia gives 21,738 units in 2020). The analysis also rates unit condition; that was left out. Village lines for Westside and Morningside use the 2009 report's boundaries and building types only. Berkshire Flyer facts come from the Commonwealth's May 14, 2026 release (https://www.mass.gov/news/amtraks-berkshire-flyer-returns-for-summer-service-with-expanded-weekend-trips-between-pittsfield-and-new-york-city), not the rail_source; it is a seasonal pilot, so dates will change yearly. Amtrak's own station page (https://www.amtrak.com/stations/pit) confirms the 1 Columbus Avenue address but did not list routes, so the Lake Shore Limited stop is sourced to Wikipedia. BRTA routes and fare-free note from https://berkshirerta.gov/plan-your-trip/ and https://berkshirerta.gov/. The Park Square historic district article calls the 1810 fair on the square the nation's first agricultural fair; left out as an unverified superlative. Wahconah Park was left out because its grandstand is being rebuilt and its build year conflicts (1892 vs 1919). Pontoosuc Lake is named from Wikipedia's city article without acreage. Nearby slugs are neighboring towns from general geography and are not checked against a source.",
+  "region_key": "berkshires",
+  "tier": 3,
+  "art": "colonial"
+ },
+ {
+  "slug": "great-barrington",
+  "name": "Great Barrington",
+  "county": "Berkshire County",
+  "region": "The Berkshires",
+  "population_2020": 7172,
+  "population_source": "https://en.wikipedia.org/wiki/Great_Barrington,_Massachusetts",
+  "official_site": "https://townofgbma.gov/",
+  "headline": [
+   "A Main Street on the Housatonic,",
+   "and Monument Mountain up Route 7."
+  ],
+  "answer": "Great Barrington is a Berkshire County town of 7,172 people (2020 Census) in the Housatonic River valley. US 7 runs through its center as Main Street, and the town also takes in the villages of Housatonic and Van Deusenville. There is no passenger rail station in town; BRTA buses run to Lee and to Pittsfield, where Amtrak stops. The Warren Group counted 77 single-family sales in Great Barrington in 2025.",
+  "overview": [
+   "The Mahican name for this stretch of the river was Mahaiwe, \"the place downstream.\" Colonists settled here in 1726, the area served as the north parish of Sheffield from 1742, and it was incorporated as Great Barrington in 1761. In 1774 local colonists forced the Berkshire County court to close in protest of British policy, and in March 1886 William Stanley's alternating current system lit 23 businesses along Main Street. That Main Street still carries US 7 through the central village, where the Mahaiwe Theater opened in 1905 and reopened in 2005 as a performing arts center.",
+   "North of the center, the village of Housatonic grew in the early 1800s around textile and paper mills on the river; Monument Mills, its largest employer, closed in 1956, and the mill buildings are listed on the National Register. Monument Mountain rises along Route 7, with 503 acres and a 1,642-foot summit kept by The Trustees. To the east, East Mountain holds Ski Butternut and a state forest crossed by the Appalachian Trail. The Housatonic River Walk follows the river through downtown, and the W. E. B. Du Bois Boyhood Homesite, a National Historic Landmark, lies on the road to South Egremont."
+  ],
+  "housing": {
+   "text": "Seasonal use shapes Great Barrington's housing. In December 2025 the Commonwealth identified the town as eligible for its Seasonal Communities designation, whose criteria include the share of housing units used for seasonal, recreational or occasional use. Annual Town Meeting voters accepted the designation on May 2, 2026, and the Selectboard and Planning Board scheduled a joint meeting on related zoning changes for June 1, 2026.",
+   "source": "https://townofgbma.gov/608/Seasonal-Communities"
+  },
+  "villages": [
+   {
+    "name": "Great Barrington (central village)",
+    "line": "The town's central built-up area along the Housatonic River, where US 7 runs as Main Street and Routes 23 and 41 share it.",
+    "source": "https://en.wikipedia.org/wiki/Great_Barrington_(CDP),_Massachusetts"
+   },
+   {
+    "name": "Housatonic",
+    "line": "A village on the town's northern edge, bordering Stockbridge and West Stockbridge, with the river at its center and Route 183 crossing it; it grew around textile and paper mills.",
+    "source": "https://en.wikipedia.org/wiki/Housatonic,_Massachusetts"
+   },
+   {
+    "name": "Van Deusenville",
+    "line": "One of the town's three named villages, with the central village and Housatonic.",
+    "source": "https://en.wikipedia.org/wiki/Great_Barrington,_Massachusetts"
+   }
+  ],
+  "commute": {
+   "rail": [
+    {
+     "line": "Amtrak Lake Shore Limited and seasonal Berkshire Flyer (in Pittsfield)",
+     "stations": [
+      "Pittsfield (Joseph Scelsi Intermodal Transportation Center)"
+     ]
+    }
+   ],
+   "rail_source": "https://www.mass.gov/news/amtraks-berkshire-flyer-returns-for-summer-service-with-expanded-weekend-trips-between-pittsfield-and-new-york-city",
+   "highways": [
+    "US 7",
+    "Route 23",
+    "Route 41",
+    "Route 183"
+   ],
+   "text": "Great Barrington has no passenger rail station. The Berkshire Regional Transit Authority runs Route 21 between Great Barrington and Lee and the Route 921 express between Great Barrington and Pittsfield, where Amtrak's Lake Shore Limited stops and the seasonal Berkshire Flyer runs to New York. US 7 is Main Street through the center, Route 23 crosses town west to east, and Route 183 serves the east side and Housatonic. The nearest interstate is the Massachusetts Turnpike (I-90)."
+  },
+  "schools": {
+   "district": "Berkshire Hills Regional School District",
+   "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=06180000&orgtypecode=5"
+  },
+  "places": [
+   {
+    "name": "Monument Mountain",
+    "line": "A 503-acre Trustees reservation on Route 7 with three trails to the 1,642-foot Peeskawso Peak, where Hawthorne and Melville once spent an afternoon.",
+    "source": "https://thetrustees.org/place/monument-mountain/"
+   },
+   {
+    "name": "Mahaiwe Performing Arts Center",
+    "line": "The theater at 14 Castle Street opened on September 26, 1905, and reopened after restoration on May 29, 2005.",
+    "source": "https://en.wikipedia.org/wiki/Mahaiwe_Performing_Arts_Center"
+   },
+   {
+    "name": "W. E. B. Du Bois Boyhood Homesite",
+    "line": "A 5-acre National Historic Landmark (1976) on Routes 23 and 41, stewarded by UMass Amherst, with a path to a kiosk, a memorial boulder and the old house's foundation.",
+    "source": "https://en.wikipedia.org/wiki/W._E._B._Du_Bois_Boyhood_Homesite"
+   },
+   {
+    "name": "Housatonic River Walk",
+    "line": "A national recreation trail along the river in downtown, a project of the Great Barrington Land Conservancy, open free in daylight from spring through fall.",
+    "source": "https://www.gbriverwalk.org/"
+   },
+   {
+    "name": "Ski Butternut",
+    "line": "A ski area on East Mountain with 22 trails and about 1,000 feet of vertical drop.",
+    "source": "https://en.wikipedia.org/wiki/Ski_Butternut"
+   }
+  ],
+  "history": [
+   {
+    "year": "1726",
+    "text": "First settled by colonists, in the area the Mahican called Mahaiwe.",
+    "source": "https://en.wikipedia.org/wiki/Great_Barrington,_Massachusetts"
+   },
+   {
+    "year": "1761",
+    "text": "Incorporated as Great Barrington, after nearly two decades as the north parish of Sheffield.",
+    "source": "https://en.wikipedia.org/wiki/Great_Barrington,_Massachusetts"
+   },
+   {
+    "year": "1774",
+    "text": "Local colonists forced the temporary closure of the Berkshire County court in protest of British policy.",
+    "source": "https://en.wikipedia.org/wiki/Great_Barrington,_Massachusetts"
+   },
+   {
+    "year": "1886",
+    "text": "In March, William Stanley's alternating current lighting system lit 23 businesses along Main Street.",
+    "source": "https://en.wikipedia.org/wiki/Great_Barrington,_Massachusetts"
+   }
+  ],
+  "market": {
+   "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+   "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+   "period": "Calendar year 2025",
+   "sf_sales_2025": 77,
+   "sf_sales_2024": 69,
+   "sf_median_2025": 575000,
+   "sf_median_2024": 550000,
+   "condo_sales_2025": null,
+   "condo_median_2025": null,
+   "condo_median_2024": null,
+   "reading_1": "GREAT BARRINGTON (single-family; Dec 2024, Dec 2025, Percent Change): Number of Sales 7 7 0.0%; YTD Number of Sales 69 77 11.6%; Median Sale Price $605,000 $680,000 12.4%; YTD Median Sale Price $550,000 $575,000 4.5%",
+   "reading_2": "GREAT BARRINGTON (single-family): YTD Number of Sales 69 77 11.6%; YTD Median Sale Price $550,000 $575,000 4.5%"
+  },
+  "nearby": [
+   "stockbridge",
+   "west-stockbridge",
+   "sheffield",
+   "egremont",
+   "alford"
+  ],
+  "search_notes": "'Great Barrington MA real estate agent' returns RealTrends and Experience.com agent profiles, a Berkshire Eagle homes page, Showcase and LuxuryEstate directories. 'Moving to Great Barrington MA' is dominated by travel and rental listings (Expedia, Airbnb, Travelocity) and HireAHelper movers. No ranking page covers the villages, BRTA bus links, the regional school district or the town's history with sources, which a guide could cover.",
+  "faq": [
+   {
+    "q": "What is the median home price in Great Barrington, MA?",
+    "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, the median single-family sale price in Great Barrington for calendar year 2025 was $575,000, across 77 sales. In 2024 it was $550,000, across 69 sales."
+   },
+   {
+    "q": "Does Great Barrington have train service?",
+    "a": "No passenger rail station is located in Great Barrington. BRTA's Route 921 express bus connects the town with Pittsfield, where Amtrak's Lake Shore Limited stops and the seasonal Berkshire Flyer runs to New York."
+   },
+   {
+    "q": "Which school district serves Great Barrington?",
+    "a": "Berkshire Hills Regional School District, the regional K-12 district for Great Barrington, Stockbridge and West Stockbridge. Review its profile with DESE."
+   }
+  ],
+  "notes": "Condo figures set to null: both fetches of the Warren Group PDF truncate the condo table at 'BROOKLI', before Great Barrington. In reading_1 the monthly 'Number of Sales' values ran together in the extracted text ('77 0.0%'); 7 and 7 is inferred from the 0.0% change and is not used in the record. The YTD rows read cleanly in both passes. School district verified as Berkshire Hills (DESE orgcode 06180000, office in Stockbridge; https://www.bhrsd.org/ says it serves Great Barrington, Stockbridge and West Stockbridge), not Southern Berkshire. Official site: the town now uses townofgbma.gov; the older townofgb.org still loads but shows stale 2024 notices. No housing-stock figures (unit counts, single-family share, seasonal share) could be found in an official source; Wikipedia gives only 2000 Census units, so the housing text uses the town's Seasonal Communities page. Wikipedia gives two conflicting distances to I-90 (about 7 and about 12 miles), so no distance is stated. The Housatonic Railroad line through town is not described because Wikipedia does not say what traffic it carries. 'Nearest' Amtrak station is deliberately not claimed: Hudson, NY may be closer than Pittsfield by road; the guide only says the BRTA express reaches Pittsfield. Ski Butternut's operating status and trail count are from Wikipedia only. The East Mountain State Forest page on mass.gov failed to load, so the forest and Appalachian Trail mention rests on the Great Barrington Wikipedia article. Monument Mountain trail names reflect the April 2021 renaming. Van Deusenville has no fetched source beyond being named as a village. Nearby slugs are neighboring towns from general geography and are not checked against a source.",
+  "region_key": "berkshires",
+  "tier": 3,
+  "art": "townscape"
  }
 ]

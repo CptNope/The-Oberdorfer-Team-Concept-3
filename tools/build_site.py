@@ -716,7 +716,7 @@ def page_town(t):
     if rows:
         market_html = f'''<table class="spec-table market-table"><thead><tr><th scope="col">Calendar year</th><th scope="col">2024</th><th scope="col">2025</th><th scope="col">Change</th></tr></thead><tbody>{rows}</tbody></table>
 <p class="stat-source">Source: <a href="{WARREN_URL}">The Warren Group, MA December 2025 Sales, Prices by Town</a>. Geography: town of {name}. Year-to-date figures through December, so calendar years 2024 and 2025. Not live data and not a valuation of any home.</p>'''
-    else:
+    elif not market_html:
         market_html = '<p class="placeholder-block">Town-level sale prices to be added from a dated, sourced report.</p>'
     extra_market = t.get("extra_market_html", "")
     # FAQ (visible; no FAQPage markup: Google retired FAQ rich results in May 2026)
