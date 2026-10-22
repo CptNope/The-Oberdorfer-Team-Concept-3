@@ -21,10 +21,10 @@ The visual language evolves the team's print publication, *Wakefield at Home*, F
 ## Ground rules
 
 1. **Never invent facts.** This covers listings, testimonials, awards, production statistics, agent profiles, license numbers, office addresses, brokerage approvals, commissions and recruiting benefits. Anything unconfirmed is shown as a `[bracketed placeholder]` or carries a badge: `.badge--demo`, `--verify`, `--proposed` or `--source`.
-2. **Confirmed by the client on 2026-10-15:** all data in the publication is correct. That includes the phone **406-250-7620**, **"Top Producer"**, and the Wakefield market figures (Redfin, accessed Oct 10, 2026). **Confirmed 2026-10-22:** the team's office is in **Worcester**, and the team serves all of Massachusetts.
+2. **Confirmed by the client on 2026-10-15:** all data in the publication is correct. That includes the phone **406-250-7620**, **"Top Producer"**, and the Wakefield market figures (Redfin, accessed Oct 10, 2026). **Confirmed 2026-10-22:** the team is opening its office in **Worcester**, serves all of Massachusetts, and its production domain is **oberdorferteam.com** (canonical, sitemap and schema URLs use it, without the prototype's `/site/` prefix).
 3. **Still unconfirmed:**
    - whether the portraits are real photographs or AI-generated (the publication was made with ChatGPT)
-   - team email and domain
+   - team email (the domain, oberdorferteam.com, is confirmed)
    - MA license numbers
    - office street address, hours and status (the city, Worcester, is confirmed)
    - REWAP disclosures

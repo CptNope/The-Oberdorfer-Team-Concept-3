@@ -61,7 +61,7 @@ def breadcrumbs(R, trail):
 
 def crumbs_ld(trail):
     return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-        {"@type": "ListItem", "position": i + 1, "name": html.unescape(l), "item": SITE + h} for i, (l, h) in enumerate(trail)]}
+        {"@type": "ListItem", "position": i + 1, "name": html.unescape(l), "item": prod(h)} for i, (l, h) in enumerate(trail)]}
 
 def page_hero(R, trail, title_lines, lead=None, aside=None, navy=False, photo=None, photo_alt="", focal="50% 50%", h1=None):
     """h1: the search-facing page heading (e.g. "Living in Worcester, MA"). When given, it is
@@ -171,7 +171,11 @@ def contact_fields(p, phone_opt=True):
             f'<div class="form__row">{field(p+"-phone","Phone","tel",auto="tel",opt=True,pattern="[0-9()+\\-\\s.]{7,}",pattern_msg="Use digits, spaces or dashes, for example 406-250-7620.")}</div>')
 
 # --------------------------------------------------------------------------- chrome
-SITE = "https://[domain-to-confirm]/"
+SITE = "https://oberdorferteam.com/"   # production domain, confirmed 2026-10-22
+
+def prod(path=""):
+    """Production URL for a prototype path: the WordPress site has no /site/ prefix."""
+    return SITE + path.removeprefix("site/")
 TEAM_ID = SITE + "#team"
 BROKER_ID = SITE + "#brokerage"
 UPDATED = "2026-10-22"
@@ -193,7 +197,7 @@ def head(R, title, desc, extra_ld=None, canonical_path="", og_type="website", og
 <title>{title}</title>
 <meta name="description" content="{e(desc)}">
 <meta name="robots" content="noindex">
-<link rel="canonical" href="https://[domain-to-confirm]/{canonical_path}">
+<link rel="canonical" href="{prod(canonical_path.rstrip('/') + '/')}">
 <meta property="og:type" content="{og_type}"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:image" content="{R}{og_image or 'assets/logo/social-avatar.png'}"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="{R}assets/logo/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="{R}assets/logo/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -641,7 +645,7 @@ def page_communities():
 </div></section>
 {cta_panel(R, "Exploring a move? <em>Let's compare towns together.</em>", "Relocating within Massachusetts")}'''
     item_list = {"@context": "https://schema.org", "@type": "ItemList", "name": "Massachusetts community guides",
-                 "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": f"{t['name']}, Massachusetts", "url": SITE + f"site/communities/{t['slug']}/"} for i, t in enumerate(TOWNS)]}
+                 "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": f"{t['name']}, Massachusetts", "url": prod(f"site/communities/{t['slug']}/")} for i, t in enumerate(TOWNS)]}
     write("communities", R, "Massachusetts Town Guides: Homes, Commutes and Prices | The Oberdorfer Team",
           f"Local guides to {len(TOWNS)} Massachusetts communities, from Worcester and Shrewsbury to Wakefield, Newton and Springfield: housing, commuting, schools and 2025 home prices.",
           "Communities", body, ld=[crumbs_ld(trail), item_list])
@@ -779,9 +783,9 @@ def page_town(t):
     city = {"@type": "City", "name": f"{name}, Massachusetts",
             "containedInPlace": [{"@type": "AdministrativeArea", "name": f"{t['county']}, Massachusetts"}, {"@type": "State", "name": "Massachusetts"}]}
     if t.get("official_site"): city["sameAs"] = [t["official_site"]]
-    page_ld = {"@context": "https://schema.org", "@type": "WebPage", "@id": SITE + url_rel + "#page", "url": SITE + url_rel,
+    page_ld = {"@context": "https://schema.org", "@type": "WebPage", "@id": prod(url_rel) + "#page", "url": prod(url_rel),
                "name": f"Living in {name}, MA", "about": city, "dateModified": UPDATED, "inLanguage": "en-US",
-               "publisher": {"@id": TEAM_ID}, "mainEntityOfPage": SITE + url_rel}
+               "publisher": {"@id": TEAM_ID}, "mainEntityOfPage": prod(url_rel)}
     title = f"{name}, MA Town Guide: Homes, Commute and Prices | Oberdorfer Team"
     desc = t.get("meta") or f"Living in {name}, Massachusetts: neighborhoods, commuter rail, schools, things to do and 2025 home prices, with sources. A guide from The Oberdorfer Team."
     write(f"communities/{slug}", R, title, desc, "Communities", body, ld=[crumbs_ld(trail), page_ld])
@@ -905,8 +909,8 @@ def page_agent():
   <div style="grid-column:1/span 5" class="stack"><p class="label">Contact</p><h2 class="display-m answer"><span>We would love</span><span>to be a resource.</span></h2><p>Messages from this page are attributed to Brandon and Kaitlyn in the team's lead routing.</p></div>
   <div style="grid-column:7/span 6" class="panel">{form(R, "agent", "Message Brandon &amp; Kaitlyn", contact_fields("af") + select("af-topic","I'm interested in",["Buying","Selling","Both","Something else"]) + field("af-msg","Message","textarea",opt=True) + reach_pref("af"), "Send my message", "agent:brandon-kaitlyn", "h3")}</div>
 </div></section>'''
-    person = {"@context":"https://schema.org","@type":"AboutPage","url":SITE+"site/agents/brandon-kaitlyn-oberdorfer/","dateModified":UPDATED,
-              "mainEntity":{"@id":TEAM_ID},"mentions":[{"@id":SITE+f"site/agents/{a['slug']}/#person"} for a in AGENTS]}
+    person = {"@context":"https://schema.org","@type":"AboutPage","url":prod("site/agents/brandon-kaitlyn-oberdorfer/"),"dateModified":UPDATED,
+              "mainEntity":{"@id":TEAM_ID},"mentions":[{"@id":prod(f"site/agents/{a['slug']}/#person")} for a in AGENTS]}
     write("agents/brandon-kaitlyn-oberdorfer", R, "Brandon & Kaitlyn Oberdorfer · Husband-and-Wife Real Estate Team, Massachusetts", "Meet Brandon and Kaitlyn Oberdorfer, the husband-and-wife team leaders and Top Producers of The Oberdorfer Team.", "Our Team", body, ld=[crumbs_ld(trail), person])
 
 # --------------------------------------------------------------------------- agent profiles
@@ -964,7 +968,7 @@ def agent_faq(a):
     return qs
 
 def profile_ld(R, a, url, faq):
-    pid = SITE + f"site/agents/{a['slug']}/#person"
+    pid = prod(f"site/agents/{a['slug']}/#person")
     person = {"@type": "Person", "@id": pid, "name": a["name"], "givenName": a["given"], "familyName": a["family"],
               "url": url, "image": SITE + a["photo"], "telephone": PHONE,
               "jobTitle": "Real estate team leader",
@@ -972,7 +976,7 @@ def profile_ld(R, a, url, faq):
               "areaServed": {"@type": "State", "name": "Massachusetts"},
               "knowsAbout": ["Buying a home in Massachusetts", "Selling a home in Massachusetts", "Wakefield, Massachusetts real estate"]}
     if a.get("partner"):
-        person["spouse"] = {"@id": SITE + f"site/agents/{a['partner']}/#person"}
+        person["spouse"] = {"@id": prod(f"site/agents/{a['partner']}/#person")}
     page = {"@context": "https://schema.org", "@type": "ProfilePage", "url": url, "dateModified": UPDATED,
             "mainEntity": person}
     faq_ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
@@ -990,7 +994,7 @@ def page_profile(a):
     R = "../../../"
     tpl = a.get("template", False)
     g = a["given"]
-    url = SITE + f"site/agents/{a['slug']}/"
+    url = prod(f"site/agents/{a['slug']}/")
     trail = [("Home", "site/"), ("Our Team", "site/team/"), (a["name"], f"site/agents/{a['slug']}/")]
     partner = AGENT_BY_SLUG.get(a.get("partner") or "", None)
     faq = agent_faq(a)
@@ -1105,11 +1109,11 @@ def page_profile(a):
 def write_discovery_files():
     """sitemap.xml for search engines and llms.txt for answer engines. Both use the
     production domain placeholder until the domain is confirmed."""
-    urls = "".join(f"  <url><loc>{SITE}site/{p['rel'] + '/' if p['rel'] else ''}</loc><lastmod>{UPDATED}</lastmod></url>\n" for p in WRITTEN if p["index"])
+    urls = "".join(f"  <url><loc>{prod(p['rel'] + '/' if p['rel'] else '')}</loc><lastmod>{UPDATED}</lastmod></url>\n" for p in WRITTEN if p["index"])
     with open(os.path.join(OUT, "sitemap.xml"), "w") as f:
-        f.write(f'<?xml version="1.0" encoding="UTF-8"?>\n<!-- Prototype: replace [domain-to-confirm] with the production domain. WordPress generates this at launch. -->\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
-    people = "\n".join(f"- [{a['name']}]({SITE}site/agents/{a['slug']}/): {a['role']}, The Oberdorfer Team. Leads the team with {a['relation']}, {AGENT_BY_SLUG[a['partner']]['name']}." for a in AGENTS)
-    pages = "\n".join(f"- [{html.unescape(p['title'])}]({SITE}site/{p['rel'] + '/' if p['rel'] else ''}): {html.unescape(p['desc'])}" for p in WRITTEN if p["index"])
+        f.write(f'<?xml version="1.0" encoding="UTF-8"?>\n<!-- Prototype: production URLs on oberdorferteam.com. WordPress generates the live sitemap at launch. -->\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
+    people = "\n".join(f"- [{a['name']}]({prod(f"site/agents/{a['slug']}/")}): {a['role']}, The Oberdorfer Team. Leads the team with {a['relation']}, {AGENT_BY_SLUG[a['partner']]['name']}." for a in AGENTS)
+    pages = "\n".join(f"- [{html.unescape(p['title'])}]({prod(p['rel'] + '/' if p['rel'] else '')}): {html.unescape(p['desc'])}" for p in WRITTEN if p["index"])
     with open(os.path.join(OUT, "llms.txt"), "w") as f:
         f.write(f"""# The Oberdorfer Team
 
@@ -1206,7 +1210,7 @@ def page_join():
 def page_office():
     R = "../../"
     trail = [("Home", "site/"), ("Team office", "site/office/")]
-    body = page_hero(R, trail, ["A place to sit down", "and plan your move."], h1="Our office in Worcester, Massachusetts", lead="The Oberdorfer Team works from Worcester and serves clients across Massachusetts. Visits are by appointment.", aside='<span class="badge badge--verify">Street address and hours to be confirmed</span>') + f'''
+    body = page_hero(R, trail, ["A place to sit down", "and plan your move."], h1="Our office in Worcester, Massachusetts", lead="The Oberdorfer Team is opening its new office in Worcester and serves clients across Massachusetts. Visits are by appointment.", aside='<span class="badge badge--verify">Street address and hours to be confirmed</span>') + f'''
 <section class="section"><div class="container split" style="align-items:start">
   <div style="grid-column:1/span 7" class="stack" >
     <div class="map-frame"><svg viewBox="0 0 800 500" role="img" aria-label="Illustrative map placeholder"><rect width="800" height="500" fill="#E9E2D5"/><g stroke="#FBF9F5" stroke-width="10" fill="none" stroke-linecap="round"><path d="M0 300C200 280 360 330 800 260"/><path d="M300 0C320 160 280 340 330 500"/><path d="M800 420C600 400 450 440 300 500"/></g><g transform="translate(338 284)"><circle r="20" fill="#071D2D"/><circle r="27" fill="none" stroke="#B49A65"/></g></svg><p class="map-frame__note"><span class="badge badge--demo">Illustrative map · no real location</span></p></div>
