@@ -1,0 +1,223 @@
+{
+ "summary": {
+  "health_score": 79,
+  "business_type": "Local service (real estate team)",
+  "scope": "Prototype build, 48 pages, audited for launch readiness on oberdorferteam.com",
+  "top_findings": [
+   "All 48 pages are noindex (prototype by design; must not carry into WordPress)",
+   "No office street address, thin office page, no Google Business Profile",
+   "Agent bios and license numbers are placeholders",
+   "Town meta descriptions are one template and overstate commuter rail",
+   "Seven town guides have only 2 internal links pointing to them"
+  ],
+  "quick_wins": [
+   "Town meta descriptions from each answer field",
+   "Town titles to ~60 characters",
+   "url, logo, image, sameAs on RealEstateAgent",
+   "Fill Nearby guides from the same region",
+   "width/height on 3 photos"
+  ]
+ },
+ "categories": [
+  {
+   "name": "Technical SEO",
+   "score": 80,
+   "what_works": [
+    "48/48 canonicals correct",
+    "0 broken links, 0 orphans",
+    "Sitemap 41 URLs, demos excluded"
+   ],
+   "findings": [
+    {
+     "title": "noindex on all pages",
+     "severity": "Critical",
+     "description": "Prototype meta robots noindex on 48 pages",
+     "recommendation": "Output index,follow in WordPress for public pages"
+    },
+    {
+     "title": "No robots.txt",
+     "severity": "Medium",
+     "description": "None in prototype",
+     "recommendation": "Ship robots.txt with sitemap and AI crawler policy"
+    }
+   ]
+  },
+  {
+   "name": "Content Quality",
+   "score": 75,
+   "what_works": [
+    "27 sourced guides, 990-1,600 words",
+    "Fair-housing compliant"
+   ],
+   "findings": [
+    {
+     "title": "Placeholder agent bios",
+     "severity": "High",
+     "description": "No bios, titles or license numbers",
+     "recommendation": "Team to supply"
+    },
+    {
+     "title": "Thin office page",
+     "severity": "High",
+     "description": "128 words, no address",
+     "recommendation": "Expand once address confirmed"
+    },
+    {
+     "title": "Tier 1 guides near uniqueness gate",
+     "severity": "Medium",
+     "description": "Reading, Shrewsbury, Westborough 59%, Stoneham 60%",
+     "recommendation": "Add one sourced section each"
+    }
+   ]
+  },
+  {
+   "name": "On-Page SEO",
+   "score": 72,
+   "what_works": [
+    "One H1 per page",
+    "No duplicate titles or descriptions"
+   ],
+   "findings": [
+    {
+     "title": "Long titles",
+     "severity": "Medium",
+     "description": "36 of 48 over 60 characters, max 79",
+     "recommendation": "Living in {Town}, MA: Homes, Prices, Commute"
+    },
+    {
+     "title": "Templated town descriptions",
+     "severity": "Medium",
+     "description": "Same template; says commuter rail for towns without stations",
+     "recommendation": "Build from answer field"
+    },
+    {
+     "title": "Weak internal links to Tier 3",
+     "severity": "Medium",
+     "description": "7 guides have 2 internal links pointing to them",
+     "recommendation": "Same-region nearby fallback"
+    }
+   ]
+  },
+  {
+   "name": "Schema / Structured Data",
+   "score": 80,
+   "what_works": [
+    "Consistent @id graph",
+    "0 parse errors"
+   ],
+   "findings": [
+    {
+     "title": "Incomplete RealEstateAgent",
+     "severity": "Medium",
+     "description": "No url, logo, image, sameAs",
+     "recommendation": "Add them"
+    },
+    {
+     "title": "FAQPage present",
+     "severity": "Info",
+     "description": "Agent pages and Sell; FAQ rich results retired May 7, 2026",
+     "recommendation": "Leave; add none to new templates"
+    }
+   ]
+  },
+  {
+   "name": "Performance (CWV)",
+   "score": 90,
+   "what_works": [
+    "Mobile LCP 0.7-2.0 s (lab, throttled)",
+    "CLS 0"
+   ],
+   "findings": [
+    {
+     "title": "Six render-blocking stylesheets",
+     "severity": "Low",
+     "description": "Google Fonts plus five CSS files incl. docs.css",
+     "recommendation": "Self-host fonts, bundle CSS in theme"
+    }
+   ]
+  },
+  {
+   "name": "AI Search Readiness",
+   "score": 85,
+   "what_works": [
+    "Answer-first leads",
+    "Sourced, dated figures",
+    "llms.txt"
+   ],
+   "findings": [
+    {
+     "title": "No AI crawler policy",
+     "severity": "Medium",
+     "description": "No robots.txt",
+     "recommendation": "Team decides; state it in robots.txt"
+    }
+   ]
+  },
+  {
+   "name": "Images",
+   "score": 85,
+   "what_works": [
+    "Alt text everywhere",
+    "WebP"
+   ],
+   "findings": [
+    {
+     "title": "Missing dimensions",
+     "severity": "Low",
+     "description": "3 photos on 15 pages lack width/height",
+     "recommendation": "Add width and height"
+    }
+   ]
+  }
+ ],
+ "action_plan": {
+  "phases": [
+   {
+    "name": "Phase 1: Critical Fixes",
+    "timeframe": "Before launch",
+    "items": [
+     "index,follow in WordPress",
+     "robots.txt",
+     "Search Console + sitemap"
+    ]
+   },
+   {
+    "name": "Phase 2: High-Impact Improvements",
+    "timeframe": "Weeks 1-3",
+    "items": [
+     "Office address and page",
+     "Google Business Profile",
+     "Agent bios and licenses",
+     "Town meta descriptions",
+     "Organization schema fields"
+    ]
+   },
+   {
+    "name": "Phase 3: Content & Authority",
+    "timeframe": "Month 2",
+    "items": [
+     "Shorter titles",
+     "Regional internal links",
+     "Deepen four Tier 1 guides",
+     "Fonts and CSS",
+     "Image dimensions",
+     "Citations"
+    ]
+   },
+   {
+    "name": "Phase 4: Monitoring & Iteration",
+    "timeframe": "Ongoing",
+    "items": [
+     "Weekly Search Console",
+     "HarborRank keyword research",
+     "Quarterly market refresh"
+    ]
+   }
+  ]
+ },
+ "limits": "Lab performance only; rankings, volumes, backlinks, indexing and GBP unknown (no HarborRank or Search Console).",
+ "artifacts": {
+  "findings_dir": "FULL-AUDIT-REPORT.md",
+  "screenshots_dir": null
+ }
+}
