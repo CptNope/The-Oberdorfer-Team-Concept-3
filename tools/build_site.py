@@ -707,6 +707,12 @@ def page_town(t):
         chs = fmt_pct(ch)
         rows += f'<tr><th scope="row">Condominium median sale price</th><td class="tabular">{money(m["condo_median_2024"]) if m.get("condo_median_2024") else "n/a"}</td><td class="tabular">{money(m["condo_median_2025"])}</td><td class="tabular">{chs}</td></tr>'
     market_html = ""
+    vrows = m.get("village_rows") or []
+    if not rows and vrows:
+        # Some towns (Barnstable) are reported by village, with no town-wide row.
+        body_rows = "".join(f'<tr><th scope="row">{v["name"]}</th><td class="tabular">{fmt_people(v["sf_sales_2025"])}</td><td class="tabular">{money(v["sf_median_2024"])}</td><td class="tabular">{money(v["sf_median_2025"])}</td><td class="tabular">{fmt_pct(pct(v["sf_median_2024"], v["sf_median_2025"]))}</td></tr>' for v in sorted(vrows, key=lambda v: v["sf_median_2025"]))
+        market_html = f'''<div class="table-scroll" tabindex="0" role="region" aria-label="{name} single-family prices by village"><table class="spec-table market-table"><thead><tr><th scope="col">Village</th><th scope="col">Sales, 2025</th><th scope="col">Median, 2024</th><th scope="col">Median, 2025</th><th scope="col">Change</th></tr></thead><tbody>{body_rows}</tbody></table></div>
+<p class="stat-source">Source: <a href="{WARREN_URL}">The Warren Group, MA December 2025 Sales, Prices by Town</a>, single-family. The report lists {name} by village, with no town-wide figure, so none is given here. Calendar years 2024 and 2025. Not live data and not a valuation of any home.</p>'''
     if rows:
         market_html = f'''<table class="spec-table market-table"><thead><tr><th scope="col">Calendar year</th><th scope="col">2024</th><th scope="col">2025</th><th scope="col">Change</th></tr></thead><tbody>{rows}</tbody></table>
 <p class="stat-source">Source: <a href="{WARREN_URL}">The Warren Group, MA December 2025 Sales, Prices by Town</a>. Geography: town of {name}. Year-to-date figures through December, so calendar years 2024 and 2025. Not live data and not a valuation of any home.</p>'''
