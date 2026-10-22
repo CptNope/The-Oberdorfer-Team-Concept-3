@@ -61,6 +61,8 @@ Leads are stored in custom database tables, not as posts. That keeps personal da
 - **Spam:** Cloudflare Turnstile (each token is verified server-side through Siteverify; tokens are single-use and expire after 5 minutes), a hidden honeypot field, and a per-IP rate limit. Spam never reaches the inbox and never triggers alerts.
 - **After submitting:** the existing inline success state (as on the prototype), and an optional confirmation email to the lead from the assigned agent.
 
+- **IDX lead events:** registrations, saved searches, favorites and showing requests from the IDX vendor arrive through its webhook or API (or are polled where no webhook exists). Each becomes a lead or an event on an existing lead, with the MLS number and listing URL as references only. The vendor itself is an open decision; see `docs/idx-options.md`.
+
 ## 5. Routing and alerts
 
 Rules run in this order; the first match wins.

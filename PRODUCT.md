@@ -73,7 +73,7 @@ Two things set the team apart:
 - An invented listing must never be presented as a real property.
 
 **Open decisions (record, do not invent):**
-- IDX provider and integration method; whether the team may use the brokerage's MLS permissions
+- IDX provider and integration method; whether the team may use the brokerage's MLS permissions. Options, costs and the recommended path are in `docs/idx-options.md`: launch on Showcase IDX Essentials or IDX Broker Core, with MLS PIN's free IDX Links as an interim fallback; Realtyna or a direct MLS PIN feed only if a licensable product becomes the goal
 - CRM: none at launch (built-in `ot-leads`); outside CRM optional, not selected
 - Lead response window, town ownership by agent, lead retention period, email service and sender addresses
 - Consent wording and broker approval for automated email and texting

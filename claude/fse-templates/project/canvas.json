@@ -440,6 +440,14 @@
    "fill": "blue",
    "size": "m",
    "text": "Lead management (ot-leads)\n\nThese are WordPress admin screens, not theme templates. They live in the ot-leads plugin so leads survive any theme change (docs/wordpress-architecture.md).\n\nEvery site form saves here. Routing assigns the lead; the team works it in the inbox and pipeline; an outside CRM (webhook or Follow Up Boss) is optional and the site always keeps its own record.\n\nAI drafts nurture emails only from the lead's record and the site's sourced content, runs fair-housing and number checks, and waits for a person to approve.\n\nAll leads shown are demo data. Spec: docs/leads-crm-nurture-spec.md."
+  },
+  "s6": {
+   "x": 10150,
+   "y": 1600,
+   "w": 420,
+   "fill": "blue",
+   "size": "m",
+   "text": "IDX: still to decide (docs/idx-options.md)\n\nListings come from MLS PIN through a licensed IDX product; the theme only styles them.\n\nRecommended launch: Showcase IDX Essentials ($94.95/mo, 2 seats; listings on our domain and indexable), or IDX Broker Core ($87/mo) if its listing pages prove crawlable. Interim: MLS PIN's free IDX Links.\n\nLater, only if a licensable product is the goal: Realtyna MLS On The Fly ($449/mo for MLS PIN) or a direct MLS PIN feed ($100 brokerage / $525 vendor, approval required).\n\nNot at launch: RealScout (duplicates ot-leads nurture) and all-in-one platforms (replace the site).\n\nVendor lead events (registrations, saved searches, showings) flow into ot-leads. Published prices, not quotes; confirm in writing."
   }
  },
  "designSystems": [

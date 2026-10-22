@@ -34,7 +34,7 @@ The production site for oberdorferteam.com is a custom block theme plus a small 
 | Leads, pipeline, routing, tasks | `ot-leads` | Custom database tables, not posts |
 | CRM connectors | `ot-leads` | Webhook first, then Follow Up Boss |
 | Email nurture, newsletter, AI drafting | `ot-leads` (modules) | Each module can be switched off |
-| Listings and search | IDX provider plugin | Required by MLS rules; the theme styles its output with `ot/listing-card` |
+| Listings and search | IDX provider plugin (open decision: `docs/idx-options.md`) | Licensed MLS PIN data; the theme styles its output with `ot/listing-card`, and vendor lead events (registrations, saved searches, inquiries) go to `ot-leads`. A future own feed would live in a separate `ot-idx` plugin, never in `ot-leads` or the theme. |
 | Outgoing email delivery | Email service (Amazon SES, Postmark or Mailgun) | SPF, DKIM and DMARC on oberdorferteam.com. WordPress core mail goes through the same service. |
 | Two-factor login | Third-party 2FA plugin | Required for every admin and agent account |
 | Caching, CDN, backups, firewall, staging | Cloudways | Exclude form endpoints and the admin from page cache |

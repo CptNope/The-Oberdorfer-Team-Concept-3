@@ -19,6 +19,7 @@ The visual language evolves the team's print publication, *Wakefield at Home*, F
 | `brand-book/` § 20 Governance | Approvals, the "never publish" list and open items |
 | `docs/wordpress-architecture.md` | What goes in the theme, the `ot-core` must-use plugin, `ot-blocks`, `ot-leads` and third-party code |
 | `docs/leads-crm-nurture-spec.md` | The built-in CRM, CRM connectors and AI nurture |
+| `docs/idx-options.md` | IDX and MLS PIN options still to decide, with costs, fit and vendor questions |
 
 ## Ground rules
 
@@ -31,7 +32,7 @@ The visual language evolves the team's print publication, *Wakefield at Home*, F
    - office street address, hours and status (the city, Worcester, is confirmed)
    - REWAP disclosures
    - privacy policy
-   - IDX/MLS provider; outside CRM (optional; the built-in `ot-leads` is planned)
+   - IDX/MLS provider (options in `docs/idx-options.md`); outside CRM (optional; the built-in `ot-leads` is planned)
    - final community list (the 16 guides in `tools/data/communities.json` are a proposed list)
    - Brandon's and Kaitlyn's individual biographies, titles, direct lines, emails, specialties, languages and headshots (their profiles use placeholders and interim crops of the team portrait)
 4. **Market data:** always show the source, period and geography. Never present the Wakefield figures as live or statewide. Town figures are The Warren Group's calendar-year 2025 single-family table; the statewide figures are its January 20, 2026 release.
