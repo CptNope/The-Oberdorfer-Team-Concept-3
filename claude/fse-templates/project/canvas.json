@@ -102,7 +102,7 @@
    "x": 8120,
    "y": 1600,
    "w": 1440,
-   "h": 5440,
+   "h": 5509,
    "expand": "fill",
    "title": "page-market.html · Massachusetts market, town by town"
   },
@@ -110,7 +110,7 @@
    "x": 9640,
    "y": 1600,
    "w": 390,
-   "h": 6281,
+   "h": 6351,
    "title": "Phone · page-market.html"
   },
   "ArchiveCommunity.dc.html": {
@@ -132,7 +132,7 @@
    "x": 2030,
    "y": 15700,
    "w": 1440,
-   "h": 8449,
+   "h": 8467,
    "expand": "fill",
    "title": "single-community.html · Worcester (one template, 27 town guides)"
   },
@@ -140,7 +140,7 @@
    "x": 3550,
    "y": 15700,
    "w": 390,
-   "h": 11633,
+   "h": 11728,
    "title": "Phone · single-community.html (Worcester)"
   },
   "ArchiveAgent.dc.html": {

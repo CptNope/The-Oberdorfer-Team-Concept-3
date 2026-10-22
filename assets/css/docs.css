@@ -96,12 +96,6 @@
 .note strong { font-weight: 600; }
 .surface-inverse .note { color: var(--ot-ink); }
 
-/* ---- Two-column comparisons -------------------------------------------- */
-.cols { display: grid; grid-template-columns: repeat(var(--cols, 2), minmax(0, 1fr)); gap: var(--space-6) var(--gutter); }
-.cols--3 { --cols: 3; } .cols--4 { --cols: 4; }
-@media (max-width: 60rem) { .cols--4 { --cols: 2; } .cols--3 { --cols: 2; } }
-@media (max-width: 40rem) { .cols, .cols--3, .cols--4 { --cols: 1; } }
-.col-rule > * { border-top: 1px solid var(--rule-gold); padding-top: var(--space-4); }
 
 /* ---- Do / don't --------------------------------------------------------- */
 .dodont { display: grid; gap: var(--space-3); align-content: start; }
@@ -134,7 +128,6 @@
 .matrix thead th { font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.6875rem; color: var(--text-muted); }
 .matrix .sample { display: inline-block; padding: 0.3rem 0.6rem; font-weight: 600; }
 .pass { color: var(--success); font-weight: 600; } .fail { color: var(--error); font-weight: 600; }
-.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 
 /* ---- Type specimens ------------------------------------------------------ */
 .specimen { display: grid; grid-template-columns: 9rem 1fr; gap: var(--space-4) var(--gutter); align-items: baseline; padding-block: var(--space-4); border-top: 1px solid var(--border-subtle); }
@@ -187,6 +180,4 @@
 @media (max-width: 34rem) { .kv { grid-template-columns: 1fr; gap: var(--space-1); } .kv dd { margin-bottom: var(--space-3); } }
 @media (max-width: 40rem) { .doc-cover__top .label { letter-spacing: 0.14em; } }
 
-/* Tables keep a readable width and scroll sideways on phones. */
-.table-scroll > table { min-width: 36rem; }
 @media (max-width: 40rem) { .tokens code { white-space: normal; overflow-wrap: anywhere; } }

@@ -66,3 +66,51 @@ wp-content/
 **Sitemap:** remove core's users (author) provider; the agent CPT pages are the people pages, and author archives would expose usernames.
 
 Each first-party plugin has its own version, changelog and database migrations, so the plugins and the theme can ship on separate schedules.
+
+## Launch checklist (search)
+
+From the SEO audit of October 22, 2026 (`seo/reports/oberdorferteam.com-audit/`). Work through it on staging, then again on production after the DNS switch.
+
+**Indexing (the prototype is `noindex` on every page; none of that may carry over)**
+- [ ] Settings → Reading: "Discourage search engines" is **off** on production and **on** on staging. Staging also sits behind Cloudways basic auth.
+- [ ] `ot-core` outputs `index, follow` on public pages and `noindex` only on demo content, the agent template, search results, and `?s=`, `/wp-admin/` and `ot-leads` endpoints.
+- [ ] Every public page has a self-referencing canonical on `https://oberdorferteam.com/` (no `/site/`, no trailing `index.html`).
+- [ ] `www` and `http` redirect to `https://oberdorferteam.com/` in one hop; HSTS is on.
+
+**robots.txt** (served by WordPress through `ot-core`'s `robots_txt` filter, not a static file)
+
+```text
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /?s=
+Disallow: /search/
+
+# AI crawlers: see the decision "AI search crawlers" on the decisions page.
+# Recommended: allow, so answer engines can cite the town guides.
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://oberdorferteam.com/wp-sitemap.xml
+```
+
+**Search Console and discovery**
+- [ ] Verify `oberdorferteam.com` as a Domain property (DNS TXT), owned by the team's Google Workspace account.
+- [ ] Submit `https://oberdorferteam.com/wp-sitemap.xml`; confirm the community, agent and page sitemaps list every public URL and no demo listings.
+- [ ] Serve `llms.txt` at the root (an `ot-core` route) with the same content rules as the prototype.
+- [ ] Connect Search Console to HarborRank.
+
+**Structured data and speed**
+- [ ] Rich Results Test passes on the home, a town guide, an agent profile and the market page; the `RealEstateAgent` node has `url`, `logo`, `image`, and `address` and `sameAs` once confirmed.
+- [ ] Fonts are self-hosted in the theme (Cormorant Garamond 300 to 600 with italics, Manrope variable), as WOFF2 with `font-display: swap`. Preload the two most used files. The prototype still uses Google Fonts because the font packages were not reachable from the build workspace.
+- [ ] CSS is bundled and minified. Site templates do not load the documentation stylesheet (`docs.css`).
+- [ ] The hero image on each template is preloaded with `fetchpriority="high"`. Every `<img>` has `width` and `height`.
+- [ ] Field Core Web Vitals (LCP, INP, CLS) are checked in Search Console four weeks after launch.

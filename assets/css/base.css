@@ -128,6 +128,18 @@ a:hover { color: var(--text-link-hover); text-decoration-color: currentColor; }
   .folio-bar > :nth-child(2) { display: none; }
 }
 
+/* ---- Column layouts (moved from docs.css: the site uses them too) ---------- */
+.cols { display: grid; grid-template-columns: repeat(var(--cols, 2), minmax(0, 1fr)); gap: var(--space-6) var(--gutter); }
+.cols--3 { --cols: 3; } .cols--4 { --cols: 4; }
+@media (max-width: 60rem) { .cols--4 { --cols: 2; } .cols--3 { --cols: 2; } }
+@media (max-width: 40rem) { .cols, .cols--3, .cols--4 { --cols: 1; } }
+.col-rule > * { border-top: 1px solid var(--rule-gold); padding-top: var(--space-4); }
+
+/* ---- Scrolling tables (moved from docs.css) -------------------------------- */
+/* Tables keep a readable width and scroll sideways on phones. */
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.table-scroll > table { min-width: 36rem; }
+
 /* ---- Motion ---------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; }
