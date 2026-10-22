@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>wp-admin · Approval queue (ot-leads AI)</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="oberdorfer-tokens.css">
+<link rel="stylesheet" href="fse.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="fse {{tagClass}}">
+<div class="wpa">
+<div class="wpa-bar"><b>The Oberdorfer Team</b><span>+ New lead</span><span class="wpa-bar__right">Howdy, Kaitlyn</span></div>
+<nav class="wpa-side" aria-label="Admin menu">
+<a href="#">Dashboard</a><a href="#">Posts</a><a href="#">Agents</a><a href="#">Communities</a><a href="#">Offices</a>
+<a href="#" class="is-current">Leads</a>
+<div class="wpa-sub"><a href="#">Inbox</a><a href="#">Pipeline</a><a href="#" class="is-current">Approval queue <span class="wpa-tag wpa-tag--ai" style="margin-left:4px">3</span></a><a href="#">Sequences</a><a href="#">Routing</a><a href="#">Connectors</a><a href="#">Settings</a></div>
+<a href="#">Pages</a><a href="#">Appearance</a><a href="#">Users</a>
+</nav>
+<main class="wpa-main">
+<div class="wpa-notice wpa-notice--demo"><span class="badge badge--demo">Demo data</span> An invented lead and an illustrative AI draft. Its facts come from the Shrewsbury and Westborough guide records.</div>
+<div class="wpa-head"><h1>Approval queue</h1><span class="wpa-muted">3 drafts · nothing sends without approval unless a team leader turns on automatic sending for a sequence</span></div>
+
+<div class="wpa-grid" style="grid-template-columns:300px 1fr 330px;align-items:start">
+<section class="wpa-card fse-scope"><span class="fse-tag"><b>list</b> ot_messages status = draft · oldest first</span>
+<div class="wpa-card__head" style="padding-top:58px">Waiting</div>
+<div style="padding:4px 0">
+<div style="padding:10px 16px;border-left:3px solid var(--ot-navy);background:#f6f7f7"><b>Demo Lead A.</b> · New buyer, step 1<br><span class="wpa-muted">Shrewsbury, Westborough · 12 min</span></div>
+<div style="padding:10px 16px"><b>Demo Lead D.</b> · New buyer, step 3<br><span class="wpa-muted">Framingham · 1 day</span></div>
+<div style="padding:10px 16px"><b>Reading followers</b> · Monthly town update<br><span class="wpa-muted">14 recipients · 2 days</span></div>
+</div></section>
+
+<section class="wpa-card fse-scope"><span class="fse-tag"><b>draft</b> AI-written subject and body · editable inline · signature, unsubscribe and postal address added by the system</span>
+<div class="wpa-card__head" style="padding-top:58px"><span class="wpa-tag wpa-tag--ai">AI draft</span> To Demo Lead A. · from Kaitlyn Oberdorfer</div>
+<div class="wpa-card__body">
+<p class="wpa-muted" style="margin:0 0 6px">Subject</p>
+<div class="wpa-input" style="width:100%;color:var(--wpa-text);margin-bottom:14px">Getting from Shrewsbury and Westborough to the train</div>
+<div class="wpa-draft">
+<p>Hi [first name],</p>
+<p>Thanks for reaching out about Shrewsbury and Westborough. Since you asked about commuting, here is how the two compare.</p>
+<p><b>Westborough</b> has its own stop on the MBTA Framingham/Worcester Line, at Smith Parkway and Fisher Street. <b>Shrewsbury</b> has no station of its own; the same line stops in neighboring Worcester, Grafton (North Grafton) and Westborough. I-290 has two Shrewsbury exits, and the Massachusetts Turnpike and I-495 meet at Westborough's line with Hopkinton.</p>
+<p>On price, The Warren Group's 2025 figures put the single-family median at $716,500 in Shrewsbury (234 sales) and $752,000 in Westborough (134 sales). A townwide median is only a starting point, so I'm happy to pull recent sales that match what you're looking for.</p>
+<p>Would a quick call this week help? Reply here with a time that suits you.</p>
+</div>
+<p class="wpa-src" style="margin:10px 0 0">+ Kaitlyn's signature · 406-250-7620 · unsubscribe link · office postal address <span class="placeholder-value">[Worcester street address required before sending]</span></p>
+<div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap">
+<a class="wpa-btn" href="#">Approve and send</a><a class="wpa-btn wpa-btn--secondary" href="#">Save edits</a><a class="wpa-btn wpa-btn--secondary" href="#">Regenerate</a><a class="wpa-btn wpa-btn--link" href="#">Skip this step</a>
+</div>
+</div></section>
+
+<div class="wpa-grid">
+<section class="wpa-card fse-scope"><span class="fse-tag"><b>validator</b> runs before a draft reaches the queue · failures are flagged, never sent</span>
+<div class="wpa-card__head" style="padding-top:58px">Checks</div><div class="wpa-card__body">
+<div class="wpa-check"><b>✓</b><span>Every number is in the grounding pack (4 of 4)</span></div>
+<div class="wpa-check"><b>✓</b><span>Prices carry source and period</span></div>
+<div class="wpa-check"><b>✓</b><span>Fair-housing deny list: no matches</span></div>
+<div class="wpa-check"><b>✓</b><span>No school ratings, price predictions or legal advice</span></div>
+<div class="wpa-check"><b>✓</b><span>Length within the 220-word limit</span></div>
+<div class="wpa-check"><span class="wpa-tag wpa-tag--warn">Blocked</span><span>Postal address missing in settings: sending is disabled until it is added (CAN-SPAM)</span></div>
+</div></section>
+<section class="wpa-card fse-scope"><span class="fse-tag"><b>grounding</b> the only sources the AI could use · each opens the record</span>
+<div class="wpa-card__head" style="padding-top:58px">Sources used</div><div class="wpa-card__body wpa-src" style="font-size:13px">
+<p style="margin:0 0 6px"><a href="#">Lead record</a>: towns, timing, price range, message</p>
+<p style="margin:0 0 6px"><a href="#">Shrewsbury community record</a>: commute (MBTA)</p>
+<p style="margin:0 0 6px"><a href="#">Westborough community record</a>: commute (MBTA)</p>
+<p style="margin:0"><a href="#">Market table, 2025</a>: The Warren Group, single-family by town</p>
+</div></section>
+<section class="wpa-card fse-scope"><span class="fse-tag"><b>sequence</b> approval mode · automatic sending needs a team leader</span>
+<div class="wpa-card__head" style="padding-top:58px">Sequence: New buyer</div><div class="wpa-card__body">
+<p style="margin:0">Approval: <b>every message</b></p>
+<p class="wpa-src" style="margin:4px 0 0">Approved without edits: 0 of the last 10. Automatic sending is suggested only after a run of unedited approvals.</p>
+</div></section>
+</div>
+</div>
+</main>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"showTags":{"editor":"boolean","default":true,"section":"Board"},"$preview":{"width":1440,"height":1130}}'>
+class Component extends DCLogic {
+renderVals() {
+const on = this.props.showTags ?? true;
+return { showTags: on, tagClass: on ? 'show-tags' : '' };
+}
+}
+</script>
+</body>
+</html>

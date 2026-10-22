@@ -74,6 +74,18 @@ The components live in `assets/css/components.css`, and each one maps to a plann
 
 The REWAP logo is never redrawn. It always sits on its own ivory plate.
 
+## Admin screens (`ot-leads`)
+
+The lead-management screens live in the WordPress admin, so they follow WordPress's own admin design (`@wordpress/components` and DataViews) rather than the public site's editorial layout. The brand appears as accents only:
+
+- **Navy** for the active state and primary buttons.
+- **Gold** for the "Warm" intent signal. On light admin backgrounds, use `--ot-gold-ink` for text.
+- **Cormorant Garamond** only for the lead's name on the detail screen.
+
+Everything else uses the admin's system font. Density is higher than on the site: 13px body text, 40px table rows. Status and stage use text labels plus color, never color alone. AI-drafted content is always labelled "AI draft", with its grounding sources one click away.
+
+Mock-ups are on the FSE canvas in the "Lead management" row: Leads inbox, Lead detail, Approval queue. The behaviour is specified in `docs/leads-crm-nurture-spec.md`.
+
 ## Agent profiles, search and conversion
 
 Brandon and Kaitlyn each have a profile (`site/agents/brandon-oberdorfer/`, `site/agents/kaitlyn-oberdorfer/`); the joint page `site/agents/brandon-kaitlyn-oberdorfer/` tells their story together and links to both. `site/agents/agent-template/` is the profile every future agent receives, unpublished until its checklist is complete. All three come from one data model (`AGENTS` in `tools/build_site.py`).

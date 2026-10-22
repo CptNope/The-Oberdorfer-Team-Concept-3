@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>wp-admin · Leads inbox (ot-leads)</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="oberdorfer-tokens.css">
+<link rel="stylesheet" href="fse.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="fse {{tagClass}}">
+<div class="wpa">
+<div class="wpa-bar"><b>The Oberdorfer Team</b><span>+ New lead</span><span class="wpa-bar__right">Howdy, Kaitlyn</span></div>
+<nav class="wpa-side fse-scope" aria-label="Admin menu">
+<span class="fse-tag" style="top:auto;bottom:8px"><b>admin menu</b> ot-leads › Leads (capability ot_view_own_leads)</span>
+<a href="#">Dashboard</a><a href="#">Posts</a><a href="#">Agents</a><a href="#">Communities</a><a href="#">Offices</a>
+<a href="#" class="is-current">Leads</a>
+<div class="wpa-sub"><a href="#" class="is-current">Inbox</a><a href="#">Pipeline</a><a href="#">Approval queue <span class="wpa-tag wpa-tag--ai" style="margin-left:4px">3</span></a><a href="#">Sequences</a><a href="#">Routing</a><a href="#">Connectors</a><a href="#">Settings</a></div>
+<a href="#">Pages</a><a href="#">Appearance</a><a href="#">Plugins</a><a href="#">Users</a><a href="#">Settings</a>
+</nav>
+<main class="wpa-main">
+<div class="wpa-notice wpa-notice--demo"><span class="badge badge--demo">Demo data</span> Mock-up of the planned built-in CRM. Every lead below is invented for illustration; no real person or inquiry.</div>
+<div class="wpa-head"><h1>Leads</h1><a class="wpa-btn wpa-btn--secondary" href="#">Add lead</a><a class="wpa-btn wpa-btn--secondary" href="#">Export CSV</a><span class="wpa-muted" style="margin-left:auto">CRM mode: <b>Built-in only</b> · <a href="#" style="color:#2271b1">Connect an outside CRM</a></span></div>
+
+<section class="fse-scope" style="padding-top:2px">
+<span class="fse-tag"><b>DataViews</b> saved views · counts per view · views are per user</span>
+<div class="wpa-views" style="margin-top:28px">
+<span class="wpa-view is-current">New today <small>3</small></span><span class="wpa-view">Mine <small>12</small></span><span class="wpa-view">Unassigned <small>0</small></span><span class="wpa-view">Warm <small>4</small></span><span class="wpa-view">Tasks due <small>5</small></span><span class="wpa-view">Nurture <small>38</small></span><span class="wpa-view">All <small>61</small></span>
+</div>
+</section>
+
+<section class="wpa-card fse-scope">
+<span class="fse-tag"><b>DataViews table</b> filters: type, town, agent, stage, consent · bulk: assign, add to sequence, export · row → lead detail</span>
+<div class="wpa-toolbar" style="padding-top:40px">
+<span class="wpa-input" style="width:280px">Search name, email, phone, town…</span>
+<span class="wpa-input">Type: All</span><span class="wpa-input">Town: All</span><span class="wpa-input">Agent: All</span><span class="wpa-input">Stage: All</span>
+<span style="margin-left:auto" class="wpa-muted">Bulk actions ▾</span>
+</div>
+<table class="wpa-table">
+<thead><tr><th style="width:28px"><input type="checkbox" aria-label="Select all"></th><th>Lead</th><th>Type and source</th><th>Towns</th><th>Agent</th><th>Stage</th><th>Intent</th><th>Consent</th><th>Next task</th><th>Received</th></tr></thead>
+<tbody>
+<tr class="is-new"><td><input type="checkbox" aria-label="Select"></td><td><span class="wpa-name">Demo Lead A.</span><br><span class="wpa-muted">Buying · 3–6 months · $650k–$750k</span></td><td>Community<br><span class="wpa-muted">Shrewsbury guide</span></td><td>Shrewsbury, Westborough</td><td>Kaitlyn O.</td><td><span class="wpa-tag wpa-tag--new">New</span></td><td><span class="wpa-tag wpa-tag--warm">Warm</span></td><td><span class="wpa-tag wpa-tag--ok">Email ✓</span></td><td>Reply · today 4:30 pm</td><td>12 min ago</td></tr>
+<tr class="is-new"><td><input type="checkbox" aria-label="Select"></td><td><span class="wpa-name">Demo Lead B.</span><br><span class="wpa-muted">Market review · single-family</span></td><td>Seller<br><span class="wpa-muted">Sell page</span></td><td>Worcester</td><td>Brandon O.</td><td><span class="wpa-tag wpa-tag--new">New</span></td><td><span class="wpa-tag">Quiet</span></td><td><span class="wpa-tag">No marketing</span></td><td>Prepare comps · tomorrow</td><td>1 hr ago</td></tr>
+<tr class="is-new"><td><input type="checkbox" aria-label="Select"></td><td><span class="wpa-name">Demo Lead C.</span><br><span class="wpa-muted">Asked about joining</span></td><td>Recruiting<br><span class="wpa-muted">Join page</span></td><td>None</td><td>Brandon and Kaitlyn</td><td><span class="wpa-tag wpa-tag--new">New</span></td><td><span class="wpa-tag">Quiet</span></td><td><span class="wpa-tag">No marketing</span></td><td>Reply · today</td><td>3 hr ago</td></tr>
+<tr><td><input type="checkbox" aria-label="Select"></td><td><span class="wpa-name">Demo Lead D.</span><br><span class="wpa-muted">Buying · just exploring</span></td><td>Agent<br><span class="wpa-muted">Brandon's profile</span></td><td>Framingham</td><td>Brandon O.</td><td><span class="wpa-tag">Contacted</span></td><td><span class="wpa-tag wpa-tag--warm">Warm</span></td><td><span class="wpa-tag wpa-tag--ok">Email ✓</span></td><td>Follow up · Fri</td><td>Yesterday</td></tr>
+<tr><td><input type="checkbox" aria-label="Select"></td><td><span class="wpa-name">Demo Lead E.</span><br><span class="wpa-muted">Showing request · Demo Residence Two</span></td><td>Showing<br><span class="wpa-muted">Listing page</span></td><td>Worcester</td><td>Kaitlyn O.</td><td><span class="wpa-tag">Appointment set</span></td><td><span class="wpa-tag wpa-tag--warm">Warm</span></td><td><span class="wpa-tag wpa-tag--ok">Email ✓ · SMS ✓</span></td><td>Showing · Sat 11 am</td><td>2 days ago</td></tr>
+<tr><td><input type="checkbox" aria-label="Select"></td><td><span class="wpa-name">Demo Lead F.</span><br><span class="wpa-muted">Comparing towns</span></td><td>Community<br><span class="wpa-muted">Communities hub</span></td><td>Reading, Melrose, Wakefield</td><td>Kaitlyn O.</td><td><span class="wpa-tag">Nurture</span></td><td><span class="wpa-tag">Cooling</span></td><td><span class="wpa-tag wpa-tag--ok">Email ✓</span></td><td>None</td><td>3 weeks ago</td></tr>
+</tbody>
+</table>
+<div class="wpa-toolbar" style="border-top:1px solid var(--wpa-line);border-bottom:0"><span class="wpa-muted">6 of 61 · sorted by received</span><span style="margin-left:auto" class="wpa-muted">‹ 1 2 3 … 11 ›</span></div>
+</section>
+
+<div class="wpa-grid" style="grid-template-columns:repeat(3,1fr);margin-top:16px">
+<section class="wpa-card fse-scope"><span class="fse-tag"><b>widget</b> response window (setting) · escalates to team leaders</span><div class="wpa-card__head" style="padding-top:56px">Response time, last 30 days</div><div class="wpa-card__body"><p style="margin:0;font-size:28px;font-weight:600;color:var(--ot-navy)">[—]</p><p class="wpa-muted" style="margin:4px 0 0">Median time to "Contacted". Shown once real leads exist.</p></div></section>
+<section class="wpa-card fse-scope"><span class="fse-tag"><b>widget</b> connector outbox · retries 1m, 5m, 30m, 2h, 12h</span><div class="wpa-card__head" style="padding-top:58px">Delivery to outside CRM</div><div class="wpa-card__body"><p style="margin:0">Not connected. Leads are stored here only.</p><p class="wpa-muted" style="margin:4px 0 0">Webhook or Follow Up Boss can be switched on in Connectors.</p></div></section>
+<section class="wpa-card fse-scope"><span class="fse-tag"><b>widget</b> approval queue count · links to queue</span><div class="wpa-card__head" style="padding-top:58px">AI drafts waiting <span class="wpa-tag wpa-tag--ai">3</span></div><div class="wpa-card__body"><p style="margin:0">3 nurture emails are waiting for approval. Nothing sends without it.</p><a class="wpa-btn" href="#" style="margin-top:10px">Review drafts</a></div></section>
+</div>
+</main>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"showTags":{"editor":"boolean","default":true,"section":"Board"},"$preview":{"width":1440,"height":1010}}'>
+class Component extends DCLogic {
+renderVals() {
+const on = this.props.showTags ?? true;
+return { showTags: on, tagClass: on ? 'show-tags' : '' };
+}
+}
+</script>
+</body>
+</html>

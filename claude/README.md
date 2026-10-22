@@ -5,7 +5,7 @@ This folder holds the source of the two Claude artifacts made for this project, 
 | Folder | Artifact | What it is |
 |---|---|---|
 | `design-system/` | [The-Oberdorfer-Team-Concept-3](https://claude.ai/artifact/YE21oQ5cfN4i2RqN51Wwj4) (Claude Design System) | Tokens, the brand book, 49 component previews and 62 assets, built from `assets/css/` and `design-system/index.html` |
-| `fse-templates/` | [Oberdorfer Team FSE Templates](https://claude.ai/artifact/Lzv2vEyR3YjDWmhdJZxZs6) (Claude Design canvas) | Annotated boards for the WordPress block theme: a template map, the header and footer parts, 17 page boards at 1440px (one profile template shown for Brandon, Kaitlyn and a future agent; one community template shown for Worcester), each paired with a 390px phone board, plus the phone overlay menu |
+| `fse-templates/` | [Oberdorfer Team FSE Templates](https://claude.ai/artifact/Lzv2vEyR3YjDWmhdJZxZs6) (Claude Design canvas) | Annotated boards for the WordPress block theme: a template map, the header and footer parts, 17 page boards at 1440px (one profile template shown for Brandon, Kaitlyn and a future agent; one community template shown for Worcester), each paired with a 390px phone board, plus the phone overlay menu, and three admin mock-ups for the built-in CRM (`ot-leads`: leads inbox, lead detail, AI approval queue) |
 
 Both artifacts are private until shared from their Share menu.
 
@@ -29,6 +29,6 @@ Then ask Claude to publish `claude/design-system/project/` to the artifact. Chan
 
 - `project/canvas.json` is the canvas index: board positions, titles, notes and the installed design system.
 - Each `*.dc.html` file is one board. Page boards import `Header.dc.html` and `Footer.dc.html` as template parts, and each `Mobile*.dc.html` board imports its desktop template at 390px, so the phone views follow any change to the desktop boards.
-- `fse.css` styles the blue block annotations; `oberdorfer-tokens.css` is the compiled token sheet. The canvas also holds a copy of the design system under `ds/oberdorferteam/` (its `tokens.json` and `components/bundle.css`), copied from the design-system artifact.
+- `fse.css` styles the blue block annotations; `admin.css` styles the WordPress-admin mock-ups; `oberdorfer-tokens.css` is the compiled token sheet. The canvas also holds a copy of the design system under `ds/oberdorferteam/` (its `tokens.json` and `components/bundle.css`), copied from the design-system artifact.
 - Images on the boards are uploads in the canvas's asset store, referenced as `/_blob/<id>`.
 - `tools/claude/fse_markup.py <page>` prints a prototype page's `<main>` with links, images and icons rewritten for a board, which is how the boards were written. `tools/claude/board_main.py <board> <page> <tags.json>` swaps a board's `<main>` for that markup and puts one blue chip (from the JSON list) on each section.

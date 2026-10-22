@@ -1,0 +1,61 @@
+/* Admin mock-up chrome for the ot-leads screens.
+   WordPress admin look (system font, dense tables), with the team's navy and gold as accents only. */
+.wpa { --wpa-bar: #1d2327; --wpa-side: #1d2327; --wpa-side-text: #f0f0f1; --wpa-bg: #f0f0f1; --wpa-card: #fff; --wpa-line: #dcdcde; --wpa-text: #1d2327; --wpa-muted: #50575e;
+  font: 13px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  color: var(--wpa-text); background: var(--wpa-bg); width: 1440px; min-height: 900px; display: grid; grid-template-columns: 160px 1fr; grid-template-rows: 32px 1fr; }
+.wpa * { box-sizing: border-box; }
+.wpa-bar { grid-column: 1 / -1; background: var(--wpa-bar); color: #f0f0f1; display: flex; align-items: center; gap: 18px; padding: 0 12px; font-size: 13px; }
+.wpa-bar b { font-weight: 600; }
+.wpa-bar .wpa-bar__right { margin-left: auto; opacity: .85; }
+.wpa-side { background: var(--wpa-side); color: var(--wpa-side-text); padding: 10px 0; }
+.wpa-side a { display: block; color: var(--wpa-side-text); text-decoration: none; padding: 7px 12px; font-size: 14px; }
+.wpa-side a.is-current { background: var(--ot-navy); box-shadow: inset 4px 0 0 var(--ot-gold); font-weight: 600; }
+.wpa-side .wpa-sub a { font-size: 13px; padding: 5px 12px 5px 22px; color: #c3c4c7; }
+.wpa-side .wpa-sub a.is-current { background: none; box-shadow: none; color: #fff; font-weight: 600; }
+.wpa-side .wpa-sub { background: #2c3338; padding: 6px 0; }
+.wpa-main { padding: 20px 24px 40px; min-width: 0; }
+.wpa-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.wpa-head h1 { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 23px; font-weight: 400; line-height: 1.3; margin: 0; color: var(--wpa-text); letter-spacing: 0; }
+.wpa-side .wpa-tag { padding: 0 6px; }
+.wpa-btn { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--ot-navy); background: var(--ot-navy); color: #fff; border-radius: 3px; padding: 0 12px; height: 32px; font: inherit; font-weight: 500; text-decoration: none; }
+.wpa-btn--secondary { background: #fff; color: var(--ot-navy); }
+.wpa-btn--link { background: none; border-color: transparent; color: #2271b1; padding: 0 4px; }
+.wpa-btn--danger { background: #fff; color: #b32d2e; border-color: #b32d2e; }
+.wpa-card { background: var(--wpa-card); border: 1px solid var(--wpa-line); border-radius: 2px; }
+.wpa-card__head { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid var(--wpa-line); font-weight: 600; }
+.wpa-card__body { padding: 16px; }
+.wpa-views { display: flex; gap: 4px; margin-bottom: 12px; flex-wrap: wrap; }
+.wpa-view { padding: 6px 12px; border-radius: 3px; border: 1px solid var(--wpa-line); background: #fff; color: var(--wpa-text); }
+.wpa-view.is-current { border-color: var(--ot-navy); box-shadow: inset 0 -2px 0 var(--ot-navy); font-weight: 600; }
+.wpa-view small { color: var(--wpa-muted); margin-left: 4px; }
+.wpa-toolbar { display: flex; gap: 8px; align-items: center; padding: 10px 12px; border-bottom: 1px solid var(--wpa-line); }
+.wpa-input { height: 32px; border: 1px solid #8c8f94; border-radius: 3px; padding: 0 10px; background: #fff; color: var(--wpa-muted); display: inline-flex; align-items: center; }
+.wpa-table { width: 100%; border-collapse: collapse; }
+.wpa-table th { text-align: left; font-weight: 600; color: var(--wpa-muted); font-size: 12px; padding: 8px 12px; border-bottom: 1px solid var(--wpa-line); white-space: nowrap; }
+.wpa-table td { padding: 0 12px; height: 44px; border-bottom: 1px solid #f0f0f1; vertical-align: middle; }
+.wpa-table tr.is-new td:first-child { box-shadow: inset 3px 0 0 var(--ot-navy); }
+.wpa-name { font-weight: 600; color: #2271b1; }
+.wpa-muted { color: var(--wpa-muted); }
+.wpa-tag { display: inline-flex; align-items: center; gap: 4px; padding: 1px 8px; border-radius: 10px; font-size: 12px; border: 1px solid var(--wpa-line); background: #f6f7f7; white-space: nowrap; }
+.wpa-tag--new { background: #e9eef2; border-color: #b8c4cc; color: var(--ot-navy); font-weight: 600; }
+.wpa-tag--warm { background: #f7f1e3; border-color: #d8c79e; color: var(--ot-gold-ink); font-weight: 600; }
+.wpa-tag--ok { background: #edfaef; border-color: #b8e6bf; color: #00632a; }
+.wpa-tag--warn { background: #fcf9e8; border-color: #f0d36b; color: #6e5300; }
+.wpa-tag--ai { background: #f0f6fc; border-color: #9ec2e6; color: #135e96; font-weight: 600; }
+.wpa-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.wpa-grid { display: grid; gap: 16px; }
+.wpa-kv { display: grid; grid-template-columns: 130px 1fr; gap: 6px 12px; margin: 0; }
+.wpa-kv dt { color: var(--wpa-muted); }
+.wpa-kv dd { margin: 0; }
+.wpa-timeline { list-style: none; margin: 0; padding: 0; }
+.wpa-timeline li { display: grid; grid-template-columns: 110px 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid #f0f0f1; }
+.wpa-timeline time { color: var(--wpa-muted); font-size: 12px; }
+.wpa-notice { border-left: 4px solid #72aee6; background: #fff; padding: 10px 12px; box-shadow: 0 1px 1px rgb(0 0 0 / .04); margin-bottom: 14px; }
+.wpa-notice--demo { border-left-color: var(--ot-gold); }
+.wpa-person { font-family: var(--font-display); font-weight: 400; font-size: 30px; line-height: 1.1; color: var(--ot-navy); margin: 0; }
+.wpa-draft { border: 1px solid var(--wpa-line); border-radius: 2px; background: #fff; padding: 16px 18px; font-size: 14px; line-height: 1.6; }
+.wpa-draft p { margin: 0 0 10px; }
+.wpa-check { display: flex; gap: 8px; align-items: flex-start; padding: 6px 0; }
+.wpa-check b { color: #00632a; }
+.wpa-src { font-size: 12px; color: var(--wpa-muted); }
+.wpa-src a { color: #2271b1; }

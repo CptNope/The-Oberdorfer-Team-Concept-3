@@ -292,6 +292,27 @@
    "w": 390,
    "h": 11272,
    "title": "Phone · single-agent.html (template)"
+  },
+  "AdminLeadsInbox.dc.html": {
+   "x": 0,
+   "y": 45730,
+   "w": 1440,
+   "h": 1010,
+   "title": "wp-admin · Leads inbox (ot-leads)"
+  },
+  "AdminLeadDetail.dc.html": {
+   "x": 1560,
+   "y": 45730,
+   "w": 1440,
+   "h": 980,
+   "title": "wp-admin · Lead detail (ot-leads)"
+  },
+  "AdminApprovalQueue.dc.html": {
+   "x": 3120,
+   "y": 45730,
+   "w": 1440,
+   "h": 1130,
+   "title": "wp-admin · AI approval queue (ot-leads)"
   }
  },
  "order": [
@@ -332,7 +353,10 @@
   "SingleOffice.dc.html",
   "MobileOffice.dc.html",
   "PageContact.dc.html",
-  "MobileContact.dc.html"
+  "MobileContact.dc.html",
+  "AdminLeadsInbox.dc.html",
+  "AdminLeadDetail.dc.html",
+  "AdminApprovalQueue.dc.html"
  ],
  "notes": {
   "t0": {
@@ -401,6 +425,21 @@
    "fill": "blue",
    "size": "m",
    "text": "Community guides\n\nOne single-community.html template serves all 16 town guides, from a researched record per town (tools/data/towns). Every fact carries its source URL; the guide lists them at the foot.\n\nBuilt for search and answer engines: an h1 of \"Living in (town), MA\", a 40 to 60 word answer as the lead, quick facts, a dated market table (The Warren Group, 2025), WebPage + City JSON-LD.\n\nFair housing: describe places, housing, transit and history; never who lives there; schools are a DESE link, never a rating.\n\nThe list of towns is proposed until the team confirms it."
+  },
+  "t5": {
+   "x": 0,
+   "y": 45470,
+   "text": "Lead management: the built-in CRM (ot-leads plugin, admin screens)",
+   "kind": "title1",
+   "maxW": 10030
+  },
+  "s5": {
+   "x": 4680,
+   "y": 45730,
+   "w": 420,
+   "fill": "blue",
+   "size": "m",
+   "text": "Lead management (ot-leads)\n\nThese are WordPress admin screens, not theme templates. They live in the ot-leads plugin so leads survive any theme change (docs/wordpress-architecture.md).\n\nEvery site form saves here. Routing assigns the lead; the team works it in the inbox and pipeline; an outside CRM (webhook or Follow Up Boss) is optional and the site always keeps its own record.\n\nAI drafts nurture emails only from the lead's record and the site's sourced content, runs fair-housing and number checks, and waits for a person to approve.\n\nAll leads shown are demo data. Spec: docs/leads-crm-nurture-spec.md."
   }
  },
  "designSystems": [

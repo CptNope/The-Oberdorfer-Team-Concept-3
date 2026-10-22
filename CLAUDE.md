@@ -17,6 +17,8 @@ The visual language evolves the team's print publication, *Wakefield at Home*, F
 | `source/creative-brief.md` | The full client brief, with 19 phases and 10 deliverables |
 | `.impeccable/surfaces/index-html.md` | The direction contract for the documentation pages |
 | `brand-book/` § 20 Governance | Approvals, the "never publish" list and open items |
+| `docs/wordpress-architecture.md` | What goes in the theme, the `ot-core` must-use plugin, `ot-blocks`, `ot-leads` and third-party code |
+| `docs/leads-crm-nurture-spec.md` | The built-in CRM, CRM connectors and AI nurture |
 
 ## Ground rules
 
@@ -29,7 +31,7 @@ The visual language evolves the team's print publication, *Wakefield at Home*, F
    - office street address, hours and status (the city, Worcester, is confirmed)
    - REWAP disclosures
    - privacy policy
-   - IDX/MLS provider and CRM
+   - IDX/MLS provider; outside CRM (optional; the built-in `ot-leads` is planned)
    - final community list (the 16 guides in `tools/data/communities.json` are a proposed list)
    - Brandon's and Kaitlyn's individual biographies, titles, direct lines, emails, specialties, languages and headshots (their profiles use placeholders and interim crops of the team portrait)
 4. **Market data:** always show the source, period and geography. Never present the Wakefield figures as live or statewide. Town figures are The Warren Group's calendar-year 2025 single-family table; the statewide figures are its January 20, 2026 release.
@@ -52,6 +54,7 @@ The visual language evolves the team's print publication, *Wakefield at Home*, F
 - **The example site is generated.** Edit `tools/build_site.py`, never `site/**/index.html` by hand. Then run `python3 tools/build_site.py`.
 - **Community guides are data.** Each town is a researched record in `tools/data/towns/<slug>.json` (every fact with its source URL). Edit the record, then run `python3 tools/data/assemble_communities.py` and rebuild the site. Region order and tiers live in that script.
 - **SEO conventions:** every page passes an `h1=` to `page_hero` (the search-facing heading; the brand line stays as the display text), a title ending in "The Oberdorfer Team", and a meta description of about 150 to 160 characters. Google retired FAQ rich results on May 7, 2026: keep visible FAQs, but don't add new FAQPage markup.
+- **Layer rule for the WordPress build:** if losing it on a theme change would lose data or break saved content, it does not go in the theme. Content model, fields and SEO go in `ot-core`; custom blocks in `ot-blocks`; forms, leads and nurture in `ot-leads`. AI-written lead messages follow the same no-invented-facts and fair-housing rules as the site.
 - **Custom fields in the WordPress build:** no ACF or other fields plugin. Register each agent, community and office field as post meta (`register_post_meta`, `show_in_rest`), and bind it to core blocks in templates and patterns with the Block Bindings API (WordPress 6.5+). Target PHP 8.4 on Cloudways.
 - **Logos are generated.** Edit `tools/build_logos.py`, then run `python3 tools/build_logos.py`. It outlines the Cormorant Garamond glyphs from `tools/fonts/`.
 - **House illustrations are generated.** Edit `tools/build_illustrations.py`, then run `python3 tools/build_illustrations.py`. It writes the colonial, triple-decker, Cape and townscape symbols to `assets/img/illustrations.svg` with three stroke weights (1.2 outlines, 0.8 trim, 0.55 detail).

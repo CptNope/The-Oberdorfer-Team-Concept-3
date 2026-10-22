@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>wp-admin · Lead detail (ot-leads)</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="oberdorfer-tokens.css">
+<link rel="stylesheet" href="fse.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&amp;display=swap">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="fse {{tagClass}}">
+<div class="wpa">
+<div class="wpa-bar"><b>The Oberdorfer Team</b><span>+ New lead</span><span class="wpa-bar__right">Howdy, Kaitlyn</span></div>
+<nav class="wpa-side" aria-label="Admin menu">
+<a href="#">Dashboard</a><a href="#">Posts</a><a href="#">Agents</a><a href="#">Communities</a><a href="#">Offices</a>
+<a href="#" class="is-current">Leads</a>
+<div class="wpa-sub"><a href="#" class="is-current">Inbox</a><a href="#">Pipeline</a><a href="#">Approval queue</a><a href="#">Sequences</a><a href="#">Routing</a><a href="#">Connectors</a><a href="#">Settings</a></div>
+<a href="#">Pages</a><a href="#">Appearance</a><a href="#">Users</a>
+</nav>
+<main class="wpa-main">
+<div class="wpa-notice wpa-notice--demo"><span class="badge badge--demo">Demo data</span> An invented lead, shown to illustrate the screen.</div>
+<p class="wpa-muted" style="margin:0 0 6px"><a href="#" style="color:#2271b1">Leads</a> › Demo Lead A.</p>
+
+<section class="fse-scope" style="padding:34px 0 12px">
+<span class="fse-tag"><b>header</b> name (Cormorant, the only brand type in admin) · stage select · owner · primary actions log a call, email, task</span>
+<div style="display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap">
+<div><p class="wpa-person">Demo Lead A.</p><p class="wpa-muted" style="margin:4px 0 0">Buyer · Shrewsbury and Westborough · received 12 min ago from the Shrewsbury guide</p></div>
+<div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+<span class="wpa-input">Stage: New ▾</span><span class="wpa-input">Agent: Kaitlyn O. ▾</span>
+<a class="wpa-btn" href="#">Log call</a><a class="wpa-btn wpa-btn--secondary" href="#">Email</a><a class="wpa-btn wpa-btn--secondary" href="#">Add task</a>
+</div></div>
+</section>
+
+<div class="wpa-grid" style="grid-template-columns:1.05fr 1.6fr 1fr;align-items:start">
+<div class="wpa-grid">
+<section class="wpa-card fse-scope"><span class="fse-tag"><b>facts</b> ot_leads fields · contact details visible to the assigned agent and team leaders only</span>
+<div class="wpa-card__head" style="padding-top:58px">Details</div><div class="wpa-card__body">
+<dl class="wpa-kv"><dt>Email</dt><dd>demo-a@example.com</dd><dt>Phone</dt><dd>(000) 000-0000</dd><dt>Prefers</dt><dd>Email</dd><dt>Looking for</dt><dd>Single-family</dd><dt>Price</dt><dd>$650,000–$750,000</dd><dt>Timing</dt><dd>3–6 months</dd><dt>Preapproved</dt><dd>In progress</dd><dt>Towns</dt><dd>Shrewsbury, Westborough</dd><dt>Source</dt><dd>Shrewsbury guide form · utm_source=google</dd></dl>
+</div></section>
+<section class="wpa-card fse-scope"><span class="fse-tag"><b>consent</b> ot_consents · wording version · per channel</span>
+<div class="wpa-card__head" style="padding-top:58px">Consent</div><div class="wpa-card__body">
+<div class="wpa-check"><span class="wpa-tag wpa-tag--ok">Email marketing ✓</span><span class="wpa-src">Wording v1 · Shrewsbury guide · 12 min ago</span></div>
+<div class="wpa-check"><span class="wpa-tag">SMS: not given</span><span class="wpa-src">No texts will be sent</span></div>
+<a class="wpa-btn wpa-btn--link" href="#">Export data</a> <a class="wpa-btn wpa-btn--link" href="#" style="color:#b32d2e">Delete on request</a>
+</div></section>
+</div>
+
+<div class="wpa-grid">
+<section class="wpa-card fse-scope"><span class="fse-tag"><b>AI</b> summary + next step · from this lead's events only · labelled AI</span>
+<div class="wpa-card__head" style="padding-top:58px"><span class="wpa-tag wpa-tag--ai">AI</span> Summary</div><div class="wpa-card__body">
+<p style="margin:0 0 8px">Buyer looking at Shrewsbury and Westborough single-family homes, $650k–$750k, moving in 3–6 months, preapproval in progress. Read the Shrewsbury and Westborough guides before asking about commuting.</p>
+<p style="margin:0"><b>Suggested next step:</b> reply by email today (their stated preference) with the commuter rail options for both towns, then offer a call.</p>
+<p class="wpa-src" style="margin:8px 0 0">Based on: 1 form · 2 guide visits · <span class="wpa-tag wpa-tag--warm">Warm</span> because of 2 guide visits and a form within 20 minutes</p>
+</div></section>
+<section class="wpa-card fse-scope"><span class="fse-tag"><b>timeline</b> ot_lead_events · newest first · includes who viewed and exported</span>
+<div class="wpa-card__head" style="padding-top:58px">Activity</div><div class="wpa-card__body" style="padding-top:4px">
+<ul class="wpa-timeline">
+<li><time>12 min ago</time><span class="wpa-muted">Enrolled in sequence <b>New buyer</b> · step 1 drafted, waiting for approval</span></li>
+<li><time>12 min ago</time><span>Assigned to Kaitlyn O. by town rule (Shrewsbury) · alert emailed</span></li>
+<li><time>12 min ago</time><span>Form submitted on <b>Living in Shrewsbury, MA</b>: "We're relocating within Worcester County and want to understand the commute options."</span></li>
+<li><time>18 min ago</time><span>Viewed <b>Living in Westborough, MA</b> (2 min)</span></li>
+<li><time>31 min ago</time><span>Viewed <b>Living in Shrewsbury, MA</b> (4 min), from Google</span></li>
+</ul></div></section>
+</div>
+
+<div class="wpa-grid">
+<section class="wpa-card fse-scope"><span class="fse-tag"><b>tasks</b> ot_tasks · due today shown in daily digest</span>
+<div class="wpa-card__head" style="padding-top:58px">Tasks</div><div class="wpa-card__body">
+<div class="wpa-check"><input type="checkbox" aria-label="Done"><span><strong>Reply by email</strong> · today 4:30 pm<br><span class="wpa-src">Response window: 15 min (setting)</span></span></div>
+<div class="wpa-check"><input type="checkbox" aria-label="Done"><span><strong>Send commute notes</strong> · tomorrow</span></div>
+</div></section>
+<section class="wpa-card fse-scope"><span class="fse-tag"><b>nurture</b> ot_enrollments · pause, skip step, exit</span>
+<div class="wpa-card__head" style="padding-top:58px">Nurture</div><div class="wpa-card__body">
+<p style="margin:0"><b>New buyer</b> · step 1 of 5</p><p class="wpa-src" style="margin:4px 0 10px">Days 0, 2, 7, 14, then monthly · exits on reply, Appointment set or unsubscribe</p>
+<a class="wpa-btn wpa-btn--secondary" href="#">Review draft</a> <a class="wpa-btn wpa-btn--link" href="#">Pause</a>
+</div></section>
+<section class="wpa-card fse-scope"><span class="fse-tag"><b>CRM sync</b> ot_outbox state</span>
+<div class="wpa-card__head" style="padding-top:58px">Outside CRM</div><div class="wpa-card__body"><p style="margin:0" class="wpa-muted">Not connected (built-in only).</p></div></section>
+</div>
+</div>
+</main>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"showTags":{"editor":"boolean","default":true,"section":"Board"},"$preview":{"width":1440,"height":980}}'>
+class Component extends DCLogic {
+renderVals() {
+const on = this.props.showTags ?? true;
+return { showTags: on, tagClass: on ? 'show-tags' : '' };
+}
+}
+</script>
+</body>
+</html>
