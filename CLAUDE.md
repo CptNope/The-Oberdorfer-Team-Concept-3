@@ -21,6 +21,7 @@ The visual language evolves the team's print publication, *Wakefield at Home*, F
 | `docs/wordpress-architecture.md` | What goes in the theme, the `ot-core` must-use plugin, `ot-blocks`, `ot-leads` and third-party code |
 | `docs/leads-crm-nurture-spec.md` | The built-in CRM, CRM connectors and AI nurture |
 | `docs/idx-options.md` | IDX and MLS PIN options still to decide, with costs, fit and vendor questions |
+| `docs/coming-soon-launch.md` | Cloudways, DNS and WordPress settings for the coming-soon page on oberdorferteam.com |
 
 ## Ground rules
 
@@ -65,10 +66,11 @@ The visual language evolves the team's print publication, *Wakefield at Home*, F
 - **To preview,** run `python3 -m http.server 8765` and open <http://localhost:8765/>.
 - **To take screenshots,** run `python3 tools/screenshot.py http://localhost:8765/site/ out.png 1440 --full`. Check desktop at 1440 and mobile at 390, and confirm that `scrollWidth` equals `clientWidth`.
 - **Keep links relative.** The site is served from a GitHub Pages project subpath, so root-relative `/` links break.
-- **Deploys run on every push to `main`** through `.github/workflows/pages.yml`. Only `index.html`, `assets/`, `discovery/`, `brand-book/`, `design-system/`, `site/` and `decisions/` are published.
+- **Deploys run on every push to `main`** through `.github/workflows/pages.yml`. Only `index.html`, `assets/`, `discovery/`, `brand-book/`, `design-system/`, `site/`, `decisions/` and `coming-soon/` are published.
   - Never link pages to `source/`, `tools/`, `docs/` or Markdown files; they are not on the live site.
   - Downloadable PDFs belong in `assets/publications/`, as web-compressed copies.
   - If you add a new top-level folder that pages need, add it to the workflow's `cp` line.
+- **The coming-soon theme** is a one-page WordPress block theme in `wordpress/oberdorfer-coming-soon/` that holds the domain until launch. Edit its pattern, CSS or `functions.php` there, then run `python3 tools/build_coming_soon.py`, which writes its `theme.json` from the tokens, refreshes the `coming-soon/` preview and rebuilds `wordpress/dist/oberdorfer-coming-soon.zip`. Setup steps: `docs/coming-soon-launch.md`.
 - **Design workflow:** the Impeccable design skill was used. `PRODUCT.md`, `DESIGN.md` and `.impeccable/` are its project files.
 
 ## Claude artifacts

@@ -1,0 +1,117 @@
+<?php
+/**
+ * The Oberdorfer Team: coming-soon theme.
+ *
+ * A one-page block theme that holds oberdorferteam.com until the full site launches.
+ * It is indexable on purpose: the domain starts building history in Search Console,
+ * and a Google Business Profile can link to it. When the full theme ships, this theme
+ * is simply switched off; it stores no content or settings of its own.
+ *
+ * @package oberdorfer-coming-soon
+ */
+
+defined( 'ABSPATH' ) || exit;
+
+const OT_CS_VERSION = '1.0.0';
+const OT_CS_PHONE   = '406-250-7620';
+
+/** Styles: the page CSS and the brand fonts (self-hosted in the full theme). */
+add_action( 'wp_enqueue_scripts', function () {
+	wp_enqueue_style(
+		'ot-cs-fonts',
+		'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Manrope:wght@400;600&display=swap',
+		array(),
+		null
+	);
+	wp_enqueue_style( 'ot-cs', get_theme_file_uri( 'assets/css/coming-soon.css' ), array(), OT_CS_VERSION );
+} );
+
+add_filter( 'wp_resource_hints', function ( $urls, $relation ) {
+	if ( 'preconnect' === $relation ) {
+		$urls[] = 'https://fonts.googleapis.com';
+		$urls[] = array( 'href' => 'https://fonts.gstatic.com', 'crossorigin' );
+	}
+	return $urls;
+}, 10, 2 );
+
+/** Title: "The Oberdorfer Team | Worcester & Massachusetts Real Estate" (site title | tagline). */
+add_filter( 'document_title_separator', fn() => '|' );
+
+/** Head: description, Open Graph, icons, preload and structured data. */
+add_action( 'wp_head', function () {
+	$desc  = 'Brandon and Kaitlyn Oberdorfer are a husband-and-wife real estate team opening an office in Worcester and serving all of Massachusetts. Call or text ' . OT_CS_PHONE . '.';
+	$title = wp_get_document_title();
+	$home  = home_url( '/' );
+	$img   = get_theme_file_uri( 'assets/img/' );
+
+	printf( '<meta name="description" content="%s">' . "\n", esc_attr( $desc ) );
+	if ( is_front_page() ) {
+		printf( '<link rel="canonical" href="%s">' . "\n", esc_url( $home ) );
+	}
+	printf( '<meta property="og:type" content="website"><meta property="og:url" content="%s"><meta property="og:title" content="%s"><meta property="og:description" content="%s"><meta property="og:image" content="%s"><meta name="twitter:card" content="summary">' . "\n",
+		esc_url( $home ), esc_attr( $title ), esc_attr( $desc ), esc_url( $img . 'social-avatar.png' ) );
+	printf( '<link rel="preload" as="image" href="%s" type="image/svg+xml">' . "\n", esc_url( $img . 'logo-primary-gold.svg' ) );
+	printf( '<link rel="apple-touch-icon" href="%s">' . "\n", esc_url( $img . 'apple-touch-icon.png' ) );
+	if ( ! has_site_icon() ) {
+		printf( '<link rel="icon" href="%s" type="image/svg+xml">' . "\n", esc_url( $img . 'favicon.svg' ) );
+	}
+
+	// Same entity as the prototype's graph (@id), with only confirmed facts.
+	$ld = array(
+		'@context'           => 'https://schema.org',
+		'@type'              => 'RealEstateAgent',
+		'@id'                => $home . '#team',
+		'name'               => 'The Oberdorfer Team',
+		'url'                => $home,
+		'logo'               => $img . 'social-avatar.png',
+		'telephone'          => OT_CS_PHONE,
+		'slogan'             => 'Luxury at every price point.',
+		'areaServed'         => array( '@type' => 'State', 'name' => 'Massachusetts' ),
+		'address'            => array( '@type' => 'PostalAddress', 'addressLocality' => 'Worcester', 'addressRegion' => 'MA', 'addressCountry' => 'US' ),
+		'parentOrganization' => array( '@type' => 'Organization', 'name' => 'REWAP Brokerage LLC', 'url' => 'https://rewapbrokerage.com/' ),
+	);
+	echo '<script type="application/ld+json">' . wp_json_encode( $ld, JSON_UNESCAPED_SLASHES ) . "</script>\n";
+}, 1 );
+
+/** WordPress prints its own canonical on singular views; this page prints one for the home. */
+remove_action( 'wp_head', 'rel_canonical' );
+
+/** Skip link to the page content. */
+add_action( 'wp_body_open', function () {
+	echo '<a class="skip-link" href="#main">Skip to content</a>';
+} );
+
+/**
+ * A one-page site: no comments, feeds, author archives or user sitemap.
+ * Everything that is not the home page gets the 404 template (which repeats the page).
+ */
+add_filter( 'comments_open', '__return_false', 20 );
+add_filter( 'pings_open', '__return_false', 20 );
+remove_action( 'wp_head', 'feed_links', 2 );
+remove_action( 'wp_head', 'feed_links_extra', 3 );
+add_action( 'template_redirect', function () {
+	if ( is_feed() || is_author() || is_attachment() || is_search() || is_date() ) {
+		global $wp_query;
+		$wp_query->set_404();
+		status_header( 404 );
+		nocache_headers();
+	}
+} );
+add_filter( 'wp_sitemaps_add_provider', function ( $provider, $name ) {
+	return in_array( $name, array( 'users', 'taxonomies' ), true ) ? false : $provider;
+}, 10, 2 );
+add_filter( 'wp_sitemaps_post_types', function ( $types ) {
+	return array_intersect_key( $types, array( 'page' => true ) );
+} );
+
+/** robots.txt: the sitemap plus the AI-crawler policy (see the decisions page; recommended: allow). */
+add_filter( 'robots_txt', function ( $output, $public ) {
+	if ( ! $public ) {
+		return $output;
+	}
+	$output .= "\n# AI crawlers: allowed until the team decides otherwise (decisions page).\n";
+	foreach ( array( 'GPTBot', 'OAI-SearchBot', 'ClaudeBot', 'PerplexityBot', 'Google-Extended' ) as $bot ) {
+		$output .= "User-agent: {$bot}\nAllow: /\n";
+	}
+	return $output;
+}, 10, 2 );

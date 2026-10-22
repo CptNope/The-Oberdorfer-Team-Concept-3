@@ -28,7 +28,7 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html .nojekyll _site/
-          cp -r assets discovery brand-book design-system site decisions _site/
+          cp -r assets discovery brand-book design-system site decisions coming-soon _site/
           echo "Published size:" && du -sh _site
 
       - uses: actions/configure-pages@v5
