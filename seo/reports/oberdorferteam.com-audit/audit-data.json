@@ -1,6 +1,6 @@
 {
  "summary": {
-  "health_score": 79,
+  "health_score": 85,
   "business_type": "Local service (real estate team)",
   "scope": "Prototype build, 48 pages, audited for launch readiness on oberdorferteam.com",
   "top_findings": [
@@ -16,12 +16,13 @@
    "url, logo, image, sameAs on RealEstateAgent",
    "Fill Nearby guides from the same region",
    "width/height on 3 photos"
-  ]
+  ],
+  "health_score_before_fixes": 79
  },
  "categories": [
   {
    "name": "Technical SEO",
-   "score": 80,
+   "score": 82,
    "what_works": [
     "48/48 canonicals correct",
     "0 broken links, 0 orphans",
@@ -44,7 +45,7 @@
   },
   {
    "name": "Content Quality",
-   "score": 75,
+   "score": 78,
    "what_works": [
     "27 sourced guides, 990-1,600 words",
     "Fair-housing compliant"
@@ -72,7 +73,7 @@
   },
   {
    "name": "On-Page SEO",
-   "score": 72,
+   "score": 88,
    "what_works": [
     "One H1 per page",
     "No duplicate titles or descriptions"
@@ -100,7 +101,7 @@
   },
   {
    "name": "Schema / Structured Data",
-   "score": 80,
+   "score": 85,
    "what_works": [
     "Consistent @id graph",
     "0 parse errors"
@@ -122,7 +123,7 @@
   },
   {
    "name": "Performance (CWV)",
-   "score": 90,
+   "score": 92,
    "what_works": [
     "Mobile LCP 0.7-2.0 s (lab, throttled)",
     "CLS 0"
@@ -155,7 +156,7 @@
   },
   {
    "name": "Images",
-   "score": 85,
+   "score": 95,
    "what_works": [
     "Alt text everywhere",
     "WebP"

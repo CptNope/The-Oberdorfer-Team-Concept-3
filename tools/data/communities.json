@@ -184,7 +184,8 @@
   "answer": "Shrewsbury is a Worcester County town of 38,325 people (2020 Census), across Lake Quinsigamond from Worcester. Single-family homes grew along its 19th-century streetcar routes, and The Warren Group counted 234 single-family sales in 2025. I-290, Route 9, Route 20 and Route 140 cross the town; the nearest commuter rail stops are in neighboring Worcester, Grafton and Westborough.",
   "overview": [
    "Shrewsbury sits just east of Worcester, with Lake Quinsigamond between them; I-290 crosses the water into town. Shrewsbury was incorporated in 1727 and grew along the old Boston Post Road, where two milestones from 1767 still stand. In the 19th century, streetcar lines helped single-family housing spread outward from the center, while the lakeshore filled with cottages and a summer resort season. The White City amusement park once stood by the lake; a shopping plaza holds the site today.",
-   "Main Street is the town's historic spine. The General Artemas Ward House Museum, a Harvard-affiliated house museum at 786 Main Street, opens for free guided tours from mid-April through November, across the road from Dean Park and its trails. Prospect Park adds 71 acres of forest paths, Jordan Pond has about 0.8 miles of trails, and Ski Ward at 1000 Main Street runs skiing, snowboarding and tubing through the year. The public library moved into a new 42,000-square-foot building in 2016."
+   "Main Street is the town's historic spine. The General Artemas Ward House Museum, a Harvard-affiliated house museum at 786 Main Street, opens for free guided tours from mid-April through November, across the road from Dean Park and its trails. Prospect Park adds 71 acres of forest paths, Jordan Pond has about 0.8 miles of trails, and Ski Ward at 1000 Main Street runs skiing, snowboarding and tubing through the year. The public library moved into a new 42,000-square-foot building in 2016.",
+   "Lake Quinsigamond, about 4 miles long and 772 acres, lies between Shrewsbury and Worcester, and getting across it shaped the town. After a bridge collapsed in 1817, a floating bridge served until 1861, an earthen causeway was finished in 1863, and a stone, cement and steel bridge opened in 1919; most lakeside building clustered on the southern shores once the causeway was in place. Competitive rowing on the lake dates to 1857, and it hosts college regattas including the Eastern Sprints. On the Shrewsbury side, the town lists the Donahue Rowing Center and the Corazzini Boat Ramp on North Quinsigamond Avenue and a second ramp at Oak Island on Route 20."
   ],
   "housing": {
    "text": "Streetcar routes in the 19th century propelled the growth of single-family housing in Shrewsbury, and lakeside cottages were built along Lake Quinsigamond. The Warren Group recorded 234 single-family sales in town in 2025.",
@@ -215,6 +216,11 @@
     "name": "Shrewsbury Village",
     "line": "The Old Shrewsbury Village area near Valente Drive on the Route 20 corridor.",
     "source": "https://www.mass.gov/doc/master-plan-part-1/download"
+   },
+   {
+    "name": "Shrewsbury Historic District",
+    "line": "About 14 acres around the common laid out in 1721 at Main and Prospect Streets, with the 1766 First Congregational Church, an 1830 brick schoolhouse now used for town offices and the historical society, the 1797 Sumner House and the 1903 library building; listed on the National Register in 1976.",
+    "source": "https://en.wikipedia.org/wiki/Shrewsbury_Historic_District_(Shrewsbury,_Massachusetts)"
    }
   ],
   "commute": {
@@ -271,6 +277,16 @@
     "name": "Lake Quinsigamond",
     "line": "The lake on the Worcester line, crossed by I-290, with a long history of lakeside cottages.",
     "source": "https://en.wikipedia.org/wiki/Shrewsbury,_Massachusetts"
+   },
+   {
+    "name": "Corazzini Boat Ramp and Donahue Rowing Center",
+    "line": "Town-listed lake facilities on North Quinsigamond Avenue, on the Shrewsbury shore of Lake Quinsigamond.",
+    "source": "https://shrewsburyma.gov/413/Parks-Recreation-Facilities"
+   },
+   {
+    "name": "Oak Island Boat Ramp",
+    "line": "A second town boat ramp on the lake, on Route 20 across from Edgemere Boulevard.",
+    "source": "https://shrewsburyma.gov/413/Parks-Recreation-Facilities"
    }
   ],
   "history": [
@@ -324,9 +340,13 @@
    {
     "q": "Which school district serves Shrewsbury?",
     "a": "Shrewsbury Public Schools. Review its profile with DESE."
+   },
+   {
+    "q": "How do you cross Lake Quinsigamond between Shrewsbury and Worcester?",
+    "a": "Route 9 crosses on the Kenneth F. Burns Memorial Bridge, a steel arch bridge with a separate structure for each direction that opened in November 2015, and I-290 crosses on its own bridge at the north end of the lake."
    }
   ],
-  "notes": "Condo rows could not be read (both condo fetches truncated at 'BROOKLI'), so condo fields are null. The village and area names come from the MassDOT Shrewsbury Route 20 Corridor Master Plan, which names them but gives little description, so lines are kept to location. Wikipedia names no villages. Single-family sales fell 21.7 percent from 2024 to 2025 per the Warren Group; the reason is not given. Ward House operator is inferred from Harvard branding on wardhouse.harvard.edu, hence 'Harvard-affiliated'. Northborough and Boylston as neighbors come from the Route 20 corridor study and the I-290 route description.",
+  "notes": "Condo rows could not be read (both condo fetches truncated at 'BROOKLI'), so condo fields are null. The village and area names come from the MassDOT Shrewsbury Route 20 Corridor Master Plan, which names them but gives little description, so lines are kept to location. Wikipedia names no villages. Single-family sales fell 21.7 percent from 2024 to 2025 per the Warren Group; the reason is not given. Ward House operator is inferred from Harvard branding on wardhouse.harvard.edu, hence 'Harvard-affiliated'. Northborough and Boylston as neighbors come from the Route 20 corridor study and the I-290 route description. Deepened 2026-10-22: added an overview paragraph on Lake Quinsigamond's crossings, shoreline and rowing (source: https://en.wikipedia.org/wiki/Lake_Quinsigamond, plus the town parks list at https://shrewsburyma.gov/413/Parks-Recreation-Facilities for the facilities); places Corazzini Boat Ramp and Donahue Rowing Center, and Oak Island Boat Ramp; the Shrewsbury Historic District as a village; an FAQ on the lake crossings (source: Lake Quinsigamond Wikipedia article). Unverified: the town parks page gives addresses only, no descriptions or hours, so the lines are kept to location; whether the 2016 library replaced or incorporated the 1903 building is not stated in the district article. MBTA Communities status was not added because no town or state page confirming it could be opened. Fact-check (deepening) 2026-10-22: lake 4 miles, about 772 acres, 1817 to 1861 floating bridge (after a September 1817 bridge collapse), causeway finished 1863, 1919 stone, cement and steel bridge, rowing since 1857, Eastern Sprints, Burns Bridge opened Nov 1, 2015 and I-290 at the north end all confirmed on the Lake Quinsigamond article; reworded the causeway sentence to match the source (lakeside development concentrated on the southern shores because of the causeway) and the Burns Bridge description (two-barrel steel arch, one structure per direction). Historic district details and NRHP 1976 confirmed; parks page addresses confirmed.",
   "region_key": "central",
   "tier": 1,
   "art": "colonial"
@@ -510,7 +530,8 @@
   "answer": "Westborough is a Worcester County town of 21,567 people (2020 Census), incorporated in 1717. Its center keeps colonial and 19th-century homes, and The Warren Group counted 134 single-family sales in 2025. Westborough station is on the MBTA Framingham/Worcester Line, and the Massachusetts Turnpike, I-495 and Route 9 cross the town, linking it east to Boston and west to Worcester.",
   "overview": [
    "Westborough was incorporated in 1717 as the hundredth town in Massachusetts, set off from Marlborough with twenty-seven families. Eli Whitney, later the inventor of the cotton gin, was born here in 1765, and a stone on Eli Whitney Street marks the spot. In 1810 the road between Boston and Worcester became an official turnpike through town, today's Route 9. Once the railroad came through the center, the commercial life of the town followed it, leaving brick blocks downtown and smaller turnpike villages like Wessonville.",
-   "The land is a broad central plain ringed by rounded hills, with a large cedar swamp at its eastern end and the Assabet River along part of the northern edge. Lake Chauncy, in the north, has a summer beach open to Westborough and Northborough residents and is used for swimming, boating and fishing. The Westborough Charm Bracelet, a roughly 28-mile loop trail developed since 2000 by the Westborough Community Land Trust and the town's Open Space Preservation Committee, links most of the major open spaces, with side trails planned to reach schools and neighborhoods."
+   "The land is a broad central plain ringed by rounded hills, with a large cedar swamp at its eastern end and the Assabet River along part of the northern edge. Lake Chauncy, in the north, has a summer beach open to Westborough and Northborough residents and is used for swimming, boating and fishing. The Westborough Charm Bracelet, a roughly 28-mile loop trail developed since 2000 by the Westborough Community Land Trust and the town's Open Space Preservation Committee, links most of the major open spaces, with side trails planned to reach schools and neighborhoods.",
+   "The north end of town, around Lake Chauncy, was long given over to state institutions. The state opened a reform school on the lake in 1848, described as the first publicly funded reform school in the United States. In 1884 its grounds passed to the new Westborough State Hospital, which opened in 1886 as the first state homeopathic psychiatric hospital in New England, on more than 600 acres between Lyman Street and the lake. The hospital closed in 2010, and the complex was demolished in 2019 despite its 1994 National Register listing. After voters approved a sale in 2016, the town sold 37 acres of the former hospital site on Lyman Street, at the Northborough line, to Pulte Homes, which the Worcester Business Journal reported was planning 700 units in 14 buildings."
   ],
   "housing": {
    "text": "The Massachusetts Historical Commission notes two-story, center-chimney colonial houses, worker cottages grouped in the center and Italianate, Second Empire and Queen Anne houses on High Street. The Vintonville Historic District, just east of the center, is made up of modest houses on smaller lots, largely built between 1860 and 1890.",
@@ -536,6 +557,11 @@
     "name": "Lake Chauncy area",
     "line": "The northern part of town around Lake Chauncy, once home to the state reform school and state hospital grounds.",
     "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/wbo.pdf"
+   },
+   {
+    "name": "West Main Street Historic District",
+    "line": "About 45 acres of the historic center along West Main Street, roughly bounded by Milk, Main, Blake and Fay Streets, with Greek Revival and late Victorian buildings; listed in 1987 and enlarged in 1990, 2006 and 2009.",
+    "source": "https://en.wikipedia.org/wiki/West_Main_Street_Historic_District_(Westborough,_Massachusetts)"
    }
   ],
   "commute": {
@@ -586,6 +612,11 @@
     "name": "Eli Whitney birthplace",
     "line": "A commemorative stone on Eli Whitney Street marks where the inventor was born in 1765.",
     "source": "https://en.wikipedia.org/wiki/Westborough,_Massachusetts"
+   },
+   {
+    "name": "Cedar Swamp",
+    "line": "About 2,675 acres of wetland east of the center, reaching into Hopkinton, that hold the headwaters of the Sudbury River; listed on the National Register in 1988 as an archaeological district.",
+    "source": "https://en.wikipedia.org/wiki/Cedar_Swamp_Archeological_District"
    }
   ],
   "history": [
@@ -638,9 +669,13 @@
    {
     "q": "Which school district serves Westborough?",
     "a": "Westborough Public Schools. Review its profile with DESE."
+   },
+   {
+    "q": "What is the Cedar Swamp in Westborough?",
+    "a": "A wetland of about 2,675 acres east of the town center, extending into Hopkinton, that contains the headwaters of the Sudbury River. It is listed on the National Register of Historic Places as the Cedar Swamp Archeological District, and I-90 and I-495 cross parts of it."
    }
   ],
-  "notes": "Condo rows could not be read (both condo fetches truncated at 'BROOKLI'), so condo fields are null. Wikipedia dates the railroad's arrival to 1824 while the 1983 MHC report gives 1834-35, so the overview gives no date for it. The MHC report is from 1983 and OCR-scanned. Hopkinton as a neighbor rests on the Turnpike exit list ('Hopkinton-Westborough line'). The official site www.town.westborough.ma.us redirects to www.westboroughma.gov.",
+  "notes": "Condo rows could not be read (both condo fetches truncated at 'BROOKLI'), so condo fields are null. Wikipedia dates the railroad's arrival to 1824 while the 1983 MHC report gives 1834-35, so the overview gives no date for it. The MHC report is from 1983 and OCR-scanned. Hopkinton as a neighbor rests on the Turnpike exit list ('Hopkinton-Westborough line'). The official site www.town.westborough.ma.us redirects to www.westboroughma.gov. Deepened 2026-10-22: added an overview paragraph on the reform school and state hospital lands by Lake Chauncy (sources: https://en.wikipedia.org/wiki/Westborough_State_Hospital, https://en.wikipedia.org/wiki/Westborough,_Massachusetts, https://en.wikipedia.org/wiki/Lyman_School_for_Boys, https://wbjournal.com/article/7-million-westborough-sale-advances-plan-for-700-homes/); place Cedar Swamp; the West Main Street Historic District as a village; an FAQ on the Cedar Swamp. To check: the Worcester Business Journal article on the Pulte sale has no visible date, and the project is age-restricted, which the overview leaves out on fair-housing grounds; its build-out status is not confirmed (Wikipedia says construction is under way). The 1846 reform school date is the Lyman School article's infobox; the 'first publicly funded reform school' line is from the town's Wikipedia article. Mass Audubon's Westborough sanctuary and the town's MBTA Communities status could not be confirmed from pages that loaded, so neither was added. Fact-check (deepening) 2026-10-22: corrected the reform school date to 1848 (the town article's date for the reform school on Lake Chauncy; the Lyman School infobox's 1846 refers to a different framing and its body says c. 1884) and 'first publicly funded reform school in the United States' is the town article's wording; hospital established 1884 on the reform school grounds, opened Dec 1, 1886, first state homeopathic hospital in New England, 600+ acres, closed 2010, demolished summer 2019, NRHP 1994 all confirmed. Pulte: WBJ confirms 37 acres, Pulte, 700 units, 14 buildings, 2016 vote, Lyman Street at the Northborough line; 'four-story' dropped (only shown in advertised designs) and the sentence now attributes the plan to WBJ so it does not imply the project is built; the WBJ article is undated (it expected first occupants in early 2020) and the age restriction stays out on fair-housing grounds. Cedar Swamp 2,675 acres, NRHP May 23, 1988, I-90 and I-495, and the West Main Street district (45 acres, 1987, enlarged 1990, 2006, 2009) confirmed.",
   "region_key": "central",
   "tier": 1,
   "art": "colonial"
@@ -1464,7 +1499,8 @@
   "answer": "Reading is a Middlesex County town of 25,518 people (2020 Census) whose housing is mostly single-family, with a large share built before 1960. It grew around a traditional New England common and keeps conservation land such as the Town Forest. Reading station on the MBTA Haverhill Line runs to Boston's North Station, and I-93 and I-95/Route 128 cross the town.",
   "overview": [
    "Reading began as an inland plantation for settlers from Lynn and was incorporated in 1644. Over the next two centuries it gave up land to form its neighbors: the parish to the south became South Reading and was renamed Wakefield in 1868, and the land north of the Ipswich River became North Reading in 1853. What remains centers on the Common, where Main and Salem Streets meet, framed by the First Congregational Church, the public library and the town hall.",
-   "The railroad reached Reading in 1845, and Woburn Street shows what followed: Queen Anne and Colonial Revival houses on well-proportioned lots along a tree-lined stretch, now a historic district. Around the built-up streets, Reading keeps a web of conservation land, from the Town Forest, its largest, to Bare Meadow and the Aberjona River Headwaters Trail through the Maillet Conservation Area."
+   "The railroad reached Reading in 1845, and Woburn Street shows what followed: Queen Anne and Colonial Revival houses on well-proportioned lots along a tree-lined stretch, now a historic district. Around the built-up streets, Reading keeps a web of conservation land, from the Town Forest, its largest, to Bare Meadow and the Aberjona River Headwaters Trail through the Maillet Conservation Area.",
+   "Downtown Reading has been zoned for housing above and beside its shops since November 2009, when the town adopted a Downtown Smart Growth District under the state's Chapter 40R; Town Meeting added about 21 acres to it in 2017. Projects approved under 40R include Oaktree on Haven Street, the first built in the district, with 53 units over ground-floor retail, Postmark Square, which turned the historic post office into 50 ownership units, and 55 units at 20-24 Gould Street, completed in 2021. A second 40R district, the Gateway Smart Growth District, adopted in December 2007 at the southern town line, takes in 200 of the 424 units of Reading Woods, built on a former Addison-Wesley commercial site. In November 2024 Town Meeting approved zoning under the state's MBTA Communities law covering downtown and a smaller area near Summit Towers, and the state lists Reading as compliant."
   ],
   "housing": {
    "text": "Reading's 2023 Housing Production Plan describes the housing stock as primarily single-family, at 76.7% of units, with 84.6% owner occupied. Over half of the homes were built before 1960, and about a third before 1940. The downtown area holds a number of multi-family, affordable and public housing developments.",
@@ -1484,6 +1520,11 @@
    {
     "name": "Downtown",
     "line": "The retail and service center of town, where most of Reading's multi-family and affordable housing developments are located.",
+    "source": "https://www.mass.gov/doc/hpp-reading-2023/download"
+   },
+   {
+    "name": "Gateway district",
+    "line": "The southern edge of town near I-95/Route 128 and Main Street (Route 28), zoned as a 40R district in 2007; it takes in 200 of the 424 units of Reading Woods, on a former Addison-Wesley commercial site.",
     "source": "https://www.mass.gov/doc/hpp-reading-2023/download"
    }
   ],
@@ -1533,6 +1574,16 @@
     "name": "Reading Common",
     "line": "A town common held in common since at least 1737, the center of the Common Historic District.",
     "source": "https://en.wikipedia.org/wiki/Common_Historic_District_(Reading,_Massachusetts)"
+   },
+   {
+    "name": "Boston and Maine Railroad Depot",
+    "line": "The 1870 Queen Anne depot at Reading station, at Lincoln and Prescott Streets, with paneled pilasters and large knee braces under the wide overhangs of its hip roof; it was listed on the National Register in 1984.",
+    "source": "https://en.wikipedia.org/wiki/Reading_station_(MBTA)"
+   },
+   {
+    "name": "Biller Conservation Area",
+    "line": "Town conservation land that takes in the Lobs Pound Mill site and Marion Woods, with a trail map published by the town.",
+    "source": "https://www.readingma.gov/227/Trail-Map-Library"
    }
   ],
   "history": [
@@ -1585,9 +1636,13 @@
    {
     "q": "Which school district serves Reading?",
     "a": "Reading Public Schools. Review its profile with DESE."
+   },
+   {
+    "q": "What kinds of housing are in downtown Reading?",
+    "a": "Downtown holds a number of Reading's multi-family, affordable and public housing developments. Since November 2009 it has been a Chapter 40R Downtown Smart Growth District, and projects there include Oaktree on Haven Street, with 53 units above shops, and Postmark Square, with 50 ownership units in the former post office, according to the town's 2023 Housing Production Plan."
    }
   ],
-  "notes": "Condo figures set to null: the PDF's extracted text ends partway through the condo table (at Brookline), so Reading's condo rows could not be read in either fetch. Reading's recognized neighborhoods are thinly documented in official sources; only the two historic districts and the downtown area are listed. The 2023 HPP gives 76.7% single-family in its text but a 2020 table shows 72.5% one-unit detached, so the housing text uses the plan's own headline figure. Lake Quannapowitt was left out of places because it lies in Wakefield.",
+  "notes": "Condo figures set to null: the PDF's extracted text ends partway through the condo table (at Brookline), so Reading's condo rows could not be read in either fetch. Reading's recognized neighborhoods are thinly documented in official sources; only the two historic districts and the downtown area are listed. The 2023 HPP gives 76.7% single-family in its text but a 2020 table shows 72.5% one-unit detached, so the housing text uses the plan's own headline figure. Lake Quannapowitt was left out of places because it lies in Wakefield. Deepened 2026-10-22: added a third overview paragraph on downtown 40R zoning, Reading Woods and the 2024 MBTA Communities vote (sources: the 2023 HPP at https://www.mass.gov/doc/hpp-reading-2023/download and The Reading Post, https://thereadingpost.com/2024/11/18/town-meeting-approves-mbta-communities-plan/); places Boston and Maine Railroad Depot and Biller Conservation Area; the Gateway district as a village; an FAQ on downtown housing. Unverified or to check: the MBTA Communities vote rests on a local news report (Reading Post, Nov 18, 2024: Article 17 passed 129-32, downtown plus an area near Summit Towers), not a town or state page; the depot's current use is not stated in the source. Wikipedia's station page also reports an August 2026 federal grant to double-track Reading to Andover and rebuild Reading station in 2029 and 2030; it was left out until confirmed on an MBTA page. Fact-check (deepening) 2026-10-22: HPP confirms Nov 2009 DSGD, ~21 acres added 2017, Oaktree 53 units (first project in the DSGD), Postmark Square 50 ownership units in the former post office, 20-24 Gould 55 units completed 2021, Gateway district Dec 2007; corrected Reading Woods: the HPP says the Gateway district holds only 200 of its 424 units and calls the site a former Addison-Wesley commercial use (not 'office'); Postmark and Gould had 40R plan approval but the HPP does not name the district, so 'built under it' became 'approved under 40R'. Corrected the depot location to Lincoln and Prescott Streets (Wikipedia; High Street is the station's general location) and 'eaves' to 'overhangs'. MBTA Communities: Reading Post (Article 17, Nov 14, 2024, 129-32) plus the state's compliance list (https://www.mass.gov/doc/mbta-communities-district-compliance-letters/download, 'As of October 21, 2026', no. 109 Reading); the town's own page and the compliance letter text were not found. Biller Conservation Area confirmed on the town trail page.",
   "region_key": "north",
   "tier": 1,
   "art": "colonial"
@@ -1776,7 +1831,8 @@
   "answer": "Stoneham is a Middlesex County town of 23,244 people (2020 Census), less than 10 miles northwest of Boston. About a third of its land lies in the Middlesex Fells Reservation. Slightly more than half its homes are single-family. I-93 runs through town, and Boston-bound rail stations sit in Melrose, Winchester and Malden next door.",
   "overview": [
    "Early explorers called this land Charlestown End, and Governor Winthrop's party is said to have lunched by Spot Pond in 1632. Farmers settled slowly, and the town broke from Charlestown on December 17, 1725. A stagecoach line on the Medford to Andover Turnpike in 1833 brought house lots, and shoemaking grew from home workshops into more than forty manufacturers. That era left Central Square, with its Second Empire commercial blocks, the 1904 library, and churches lining the north side at Common Street.",
-   "A few blocks west of the square, Nobility Hill keeps Italianate, Stick and Queen Anne houses from about 1860 to 1920. The Middlesex Fells covers roughly a third of the town, with Spot Pond, Bear Hill and the Stone Zoo, founded in 1905. Stoneham's housing plan counts slightly more than half its homes as single-family, with much of the rest in larger buildings. The Tri-Community Greenway runs from Gould Street toward Woburn and Winchester."
+   "A few blocks west of the square, Nobility Hill keeps Italianate, Stick and Queen Anne houses from about 1860 to 1920. The Middlesex Fells covers roughly a third of the town, with Spot Pond, Bear Hill and the Stone Zoo, founded in 1905. Stoneham's housing plan counts slightly more than half its homes as single-family, with much of the rest in larger buildings. The Tri-Community Greenway runs from Gould Street toward Woburn and Winchester.",
+   "Much of the Fells land in Stoneham was shaped by the Boston area's water supply. Spot Pond was enlarged into a storage reservoir for communities north of Boston, its level raised by 16 feet, and the Metropolitan District Commission replaced several town pumping stations with a single pumping station and gatehouse, listed on the National Register in 1984. Bear Hill Reservoir, just west of I-93 near the summit of Bear Hill, was built in 1902 and 1903 with two concrete dams and a gatehouse. Spot Pond is no longer part of the drinking water supply, and the John Botume House, a 19th-century granite house on its eastern shore, now serves as the reservation's visitor center."
   ],
   "housing": {
    "text": "Stoneham's Housing Production Plan reports that 57.1% of housing units are single-family homes, and nearly half of the remaining multifamily units are in buildings of 20 or more units. About 65% of homes are owner-occupied. The plan points to the town center around Main Street as the area best suited for new housing.",
@@ -1797,6 +1853,11 @@
     "name": "Farm Hill",
     "line": "A hill outside the Fells settled by farmers in the mid-1600s.",
     "source": "https://bostonbasinhills.org/pages/stoneham-hills.html"
+   },
+   {
+    "name": "Haywardville",
+    "line": "A former mill village along Spot Pond Brook in the Virginia Woods section of the Fells, named for the mid-19th-century Hayward Rubber Works; a trail and a footbridge over an 18th-century dam pass its remains.",
+    "source": "https://en.wikipedia.org/wiki/Spot_Pond_Archeological_District"
    }
   ],
   "commute": {
@@ -1856,6 +1917,16 @@
     "name": "Central Square",
     "line": "The historic downtown, with Second Empire blocks, the 1904 Stoneham Public Library and the 1939 town hall.",
     "source": "https://en.wikipedia.org/wiki/Central_Square_Historic_District_(Stoneham,_Massachusetts)"
+   },
+   {
+    "name": "Boston and Maine Railroad Depot",
+    "line": "An 1895 single-story brick depot on a granite foundation, with large brackets under its eaves, at Franklin and Pine Streets two blocks east of Central Square; now in commercial use.",
+    "source": "https://en.wikipedia.org/wiki/Boston_and_Maine_Railroad_Depot_(Stoneham,_Massachusetts)"
+   },
+   {
+    "name": "Shoe Shop–Doucette Ten Footer",
+    "line": "An 1850 backyard shoemaker's workshop of the type called a ten footer, behind the Stoneham Historical Society at 36 William Street.",
+    "source": "https://en.wikipedia.org/wiki/Shoe_Shop%E2%80%93Doucette_Ten_Footer"
    }
   ],
   "history": [
@@ -1908,9 +1979,13 @@
    {
     "q": "Which school district serves Stoneham?",
     "a": "Stoneham Public Schools. Review its profile with DESE."
+   },
+   {
+    "q": "Did Stoneham ever have a train station?",
+    "a": "Yes. The Stoneham Branch of the Boston and Lowell Railroad was built to serve the town's shoe factories and carry passengers, and its 1895 brick depot still stands at Franklin and Pine Streets in commercial use. The Tri-Community Greenway now follows the branch's route, with its northern end at Gould Street across from Recreation Park."
    }
   ],
-  "notes": "Condo figures set to null: the PDF's extracted text ends partway through the condo table (at Brookline), so Stoneham's condo rows could not be read. Settlement year conflicts (the town site says 1645, Wikipedia body says 1634), so the history uses the town site. The undated Housing Production Plan appears to date from about 2018, and its statement that most housing was built after 1960 was left out because it reads oddly against the town's history. The rail stations listed are representative stations in neighboring towns; Wikipedia names neighboring towns with stations but not specific nearest stations. Farm Hill is sourced to an independent local history site (bostonbasinhills.org), not an official one. Route 28 is listed from Wikipedia's note of a Route 28 exit and the Fells Reservoirs district boundary.",
+  "notes": "Condo figures set to null: the PDF's extracted text ends partway through the condo table (at Brookline), so Stoneham's condo rows could not be read. Settlement year conflicts (the town site says 1645, Wikipedia body says 1634), so the history uses the town site. The undated Housing Production Plan appears to date from about 2018, and its statement that most housing was built after 1960 was left out because it reads oddly against the town's history. The rail stations listed are representative stations in neighboring towns; Wikipedia names neighboring towns with stations but not specific nearest stations. Farm Hill is sourced to an independent local history site (bostonbasinhills.org), not an official one. Route 28 is listed from Wikipedia's note of a Route 28 exit and the Fells Reservoirs district boundary. Deepened 2026-10-22: added an overview paragraph on the Fells water-supply landscape (sources: https://en.wikipedia.org/wiki/Middlesex_Fells_Reservoirs_Historic_District and https://en.wikipedia.org/wiki/Spot_Pond); places Boston and Maine Railroad Depot and Shoe Shop–Doucette Ten Footer; Haywardville as a (former) village; an FAQ on Stoneham's rail history (sources: the depot article and https://www.traillink.com/trail/tri-community-greenway/). To check: the Spot Pond article credits the reservoir works and 16-foot rise to the Metropolitan Water Supply Commission (1926 to 1946) while the district article credits the MDC, so the overview gives no date and names the MDC only for the pumping station; the Branch's opening and closing dates were not found in a page that loaded. The 1895 depot article does not name the line, so tying it to the Stoneham Branch is an inference. MBTA Communities was left out: a local news report describes a 7.6-acre district adopted in October 2022, but a town slide deck cites a 50-acre minimum, so the status is unclear. Fact-check (deepening) 2026-10-22: 16-foot rise and no longer in the drinking supply confirmed (Spot Pond article); the 1984 NR listing belongs to the MDC Pumping House and its adjacent gatehouse (https://en.wikipedia.org/wiki/Metropolitan_District_Commission_Pumping_House, listed April 13, 1984), not the Fells Reservoirs district (1990); the John Botume House (spelled Botume by DCR and Wikipedia, https://en.wikipedia.org/wiki/John_Botume_House) is an uncoursed granite house on Spot Pond's eastern shore now used as a visitors center, built c. 1847 to 1858 per conflicting dates. Bear Hill Reservoir 1902-3, two concrete dams and a gatehouse confirmed. Depot 1895, brick on granite, brackets, Franklin and Pine, commercial use, NR 1984 confirmed. Ten Footer 1850 and 36 William St confirmed, but 'about 10 feet square' is the building type's typical size, not this building's, so it was reworded. Haywardville confirmed as an area name (the source does not use 'village'). TrailLink confirms the Stoneham Branch served shoe factories and passengers and the Gould Street end at Recreation Park. No claim cites greaterbostonstage.org.",
   "region_key": "north",
   "tier": 2,
   "art": "cape"

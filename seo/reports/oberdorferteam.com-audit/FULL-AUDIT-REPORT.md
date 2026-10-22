@@ -121,6 +121,24 @@
 | Citations | Not checked, because the domain isn't live. At launch: REWAP's agent roster, Zillow and Realtor.com agent profiles, and the local Realtor association, all with identical name, address and phone. |
 | Phone area code | 406 is a Montana code. It is confirmed and must stay consistent; a local 508 or 774 line is an open decision. |
 
+## Re-check after the quick wins (same day, 6:15 p.m.)
+
+The quick wins from the action plan (#7 to #13 and the launch safeguards) were applied in the prototype generator and the four Tier 1 guides were deepened and fact-checked. A re-crawl and re-test of the 48 pages:
+
+| Category | Before | After | What changed |
+|---|---|---|---|
+| Technical SEO | 80 | 82 | Launch checklist and a draft `robots.txt` in `docs/wordpress-architecture.md`. The prototype is still `noindex`, by design. |
+| Content quality | 75 | 78 | Reading, Shrewsbury, Westborough and Stoneham each gained a sourced section: their unique share rose from 59 to 60% to 75 to 77%. The lowest guide is now 71%. Agent bios and the office page are still waiting on the team. |
+| On-page SEO | 72 | 88 | Every title is 62 characters or fewer. Every indexable description is 120 to 160 characters, and town descriptions come from each town's own answer. Each guide links to its region, and Barnstable is in the market table. |
+| Schema | 80 | 85 | `RealEstateAgent` has `url`, `logo` and `image`. `address` and `sameAs` still wait on the office and the Business Profile. |
+| Performance | 90 | 92 | Render-blocking stylesheets went from 6 to 5 (`docs.css` is gone from site pages), and the hero image is preloaded. Home mobile LCP is 1.9 s and CLS is 0. Fonts are still on Google Fonts, because the font packages were not reachable from the build workspace; the theme self-hosts them (launch checklist). |
+| AI search readiness | 85 | 85 | The crawler policy is now a decision on the decisions page (recommended: allow). |
+| Images | 85 | 95 | Every `<img>` has `width` and `height`. |
+
+**SEO Health Score: 79 → 85.**
+
+Still open: the six demo listings and the agent template keep short descriptions. They are `noindex` and the IDX vendor replaces the listings. Items #1 to #6 and #14 in the action plan wait on the WordPress build, the live domain, or details from the team.
+
 ## What this audit could not measure
 
 Rankings, search volume, keyword difficulty, backlinks, indexing status, field Core Web Vitals and Business Profile data are all **unknown**. Connect HarborRank and, at launch, Search Console to fill them in.
