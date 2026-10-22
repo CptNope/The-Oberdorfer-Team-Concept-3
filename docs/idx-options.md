@@ -29,6 +29,7 @@ These decisions in `docs/wordpress-architecture.md` and `docs/leads-crm-nurture-
 | **F. Realtyna MLS On The Fly** | $449 for MLS PIN (Tier 5) | Yes, rendered by our own templates through its API | Ours to build | Best fit for full design control without running our own feed | Cost; the API does not grant resale or sublicensing |
 | **G. Direct MLS PIN feed** (RESO Web API, custom engine in a new `ot-idx` plugin) | $100 brokerage access, or $525 vendor access | Yes, fully ours | Native | Highest control | Needs MLS PIN approval of a Broker Data Access Agreement; we carry compliance, uptime and security; reselling to other brokerages needs the vendor agreement |
 | **RealScout Build** | $299, 2 licenses, 12-month term | Not a website replacement | Its own nurture engine | Duplicates `ot-leads` nurture | Only if mature buyer collaboration is needed on day one |
+| **RealScout Core** | $179 monthly, or $149 on a 12-month term; 1 user license, 500 contacts (Luxury Presence's June 2026 snapshot; confirm with RealScout) | As Build | As Build | Stopgap only, for one agent | Licenses appear to be per user, so Brandon and Kaitlyn should not share one login; confirm the terms. Prefer monthly billing if used as a bridge until `ot-leads` nurture ships. |
 | **Follow Up Boss Grow** | $138 (2 × $69) | No IDX | Already planned as an `ot-leads` connector | CRM only | Optional, not an IDX choice |
 
 **Benchmarks, not candidates** (they replace the custom WordPress site):
