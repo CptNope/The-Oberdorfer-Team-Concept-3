@@ -10,7 +10,7 @@ web
 
 Prototype: static HTML/CSS/JS (user choice, 2026-10-15). CSS custom-property tokens and components named and structured as future Gutenberg blocks/patterns so they port directly into a custom WordPress theme.
 
-Production (stated in brief, not yet built): custom WordPress theme, native Gutenberg, reusable blocks and patterns, ACF or Carbon Fields where useful, PHP server rendering, modular JS. Custom post types planned: Agents, Communities, Offices, Testimonials, Publications (optional). Journal uses standard posts. Listings come only from an authorized IDX/MLS integration (provider not selected). CRM not selected; lead routing must stay configurable.
+Production (stated in brief, not yet built): custom WordPress theme, native Gutenberg, reusable blocks and patterns, custom fields as registered post meta bound to core blocks with the Block Bindings API (no ACF or other fields plugin; decided 2026-10-22), PHP server rendering, modular JS. Custom post types planned: Agents, Communities, Offices, Testimonials, Publications (optional). Journal uses standard posts. Listings come only from an authorized IDX/MLS integration (provider not selected). CRM not selected; lead routing must stay configurable.
 
 ## Users
 
