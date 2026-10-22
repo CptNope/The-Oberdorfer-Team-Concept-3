@@ -1,0 +1,70 @@
+{
+  "slug": "braintree",
+  "name": "Braintree",
+  "county": "Norfolk County",
+  "region": "South Shore (Greater Boston, south suburbs)",
+  "population_2020": 39143,
+  "population_source": "https://en.wikipedia.org/wiki/Braintree,_Massachusetts",
+  "official_site": "https://www.braintreema.gov/",
+  "headline": ["Saltbox houses on Washington Street,", "and a station where three rail lines meet."],
+  "answer": "Braintree is a Norfolk County community of 39,143 people (2020 Census), about ten miles south of Boston, where I-93 and Route 3 meet. Most of its housing, 64 percent, is single-family detached homes. Braintree station on Ivory Street is served by the Red Line and two commuter rail lines, and the Greenbush Line stops at Weymouth Landing/East Braintree on the town line. It is legally a city with a mayor and council, though it keeps the name Town of Braintree.",
+  "overview": [
+    "Braintree was colonized in 1635 and incorporated in 1640, and the old town once took in what are now Quincy, Randolph and Holbrook. The town counts John Adams, John Quincy Adams, John Hancock and General Sylvanus Thayer among those born in Old Braintree. Water power on the Monatiquot River drew mills to South Braintree in the 1820s, and the Old Colony railroad arrived there in 1845, making South Braintree a rail junction. East Braintree grew at the head of navigation on the Fore River.",
+    "Washington Street carries much of the town's older fabric, including the Thayer Birthplace, built in 1720, and the Asa French House, built about 1699, both now in the town's historic district. Open space includes the Town Forest, Sunset Lake, Smith Beach, the Cranberry Pond Conservation District and Pond Meadow Park, shared with Weymouth, along with an 18-hole public golf course. The town site describes established neighborhoods, small clusters of new homes and several condominium complexes."
+  ],
+  "housing": {
+    "text": "A 2024 town feasibility study reports that 64 percent of Braintree's housing is single-family detached units and that about 74 percent of units are owner-occupied. Only 12 percent of units are studios or one-bedrooms. The study counts a 5.42 percent increase in housing units from 2010 to 2020. The town also lists several condominium complexes among its housing.",
+    "source": "https://www.braintreema.gov/DocumentCenter/View/16838/Kick-Off-Meeting-February-2-2024"
+  },
+  "villages": [
+    {"name": "South Braintree", "line": "The old industrial center along the Monatiquot River, where mills developed in the 1820s and the Old Colony railroad made a junction in 1845.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/bra.pdf"},
+    {"name": "East Braintree", "line": "The area at the head of navigation on the Fore River, with Colonial-era Capes along the Monatiquot; its rail stop is Weymouth Landing/East Braintree.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/bra.pdf"},
+    {"name": "Braintree Highlands", "line": "Laid out as a street grid in the 1870s and built up in the 20th century; the Thayer house was built here in 1720 before its move.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/bra.pdf"},
+    {"name": "Washington Street", "line": "The town's civic spine since a town house was built midway along it in 1829, with the Thayer and French houses and Town Hall.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/bra.pdf"}
+  ],
+  "commute": {
+    "rail": [
+      {"line": "Red Line (subway)", "stations": ["Braintree"]},
+      {"line": "Kingston Line", "stations": ["Braintree"]},
+      {"line": "Fall River/New Bedford Line", "stations": ["Braintree"]},
+      {"line": "Greenbush Line (on the Braintree/Weymouth line)", "stations": ["Weymouth Landing/East Braintree"]}
+    ],
+    "rail_source": "https://www.mbta.com/stops/place-brntn",
+    "highways": ["I-93/US 1", "Route 3", "Route 37", "Route 53"],
+    "text": "Braintree station, at 197 Ivory Street, has a Red Line platform, a commuter rail platform for the Kingston and Fall River/New Bedford lines to South Station, a busway and a 1,197-space garage. Weymouth Landing/East Braintree, on the Greenbush Line, sits on the town line with Weymouth. The seasonal CapeFLYER stops at Braintree on summer weekends on its way to Hyannis. I-93 and Route 3 meet in town."
+  },
+  "schools": {"district": "Braintree Public Schools", "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=00400000&orgtypecode=5"},
+  "places": [
+    {"name": "Pond Meadow Park", "line": "A 320-acre park shared with Weymouth, opened in 1976, with a two-mile paved loop around a 20-acre pond and unpaved trails branching off it.", "source": "https://en.wikipedia.org/wiki/Pond_Meadow_Park"},
+    {"name": "General Sylvanus Thayer Birthplace", "line": "A 1720 farmhouse at 786 Washington Street, birthplace of the West Point superintendent, moved here in 1958 and listed on the National Register in 1974.", "source": "https://www.braintreema.gov/382/Thayer-French-Houses"},
+    {"name": "Asa French House", "line": "A house built about 1699 at 766 Washington Street, now owned by the Braintree Historical Society.", "source": "https://www.braintreema.gov/382/Thayer-French-Houses"},
+    {"name": "Thayer Public Library", "line": "The town library across from Town Hall, on land acquired in 1953 and rebuilt in 1997, with more than 125,000 items.", "source": "https://www.braintreema.gov/411/Thayer-Public-Library"},
+    {"name": "Blue Hills Reservation", "line": "A DCR reservation of more than 7,000 acres and 125 miles of trails, with a paved accessible path on Old Route 128 off West Street in Braintree.", "source": "https://www.mass.gov/locations/blue-hills-reservation"},
+    {"name": "Sunset Lake and the Town Forest", "line": "Two of the town's recreation areas, along with Smith Beach and the Cranberry Pond Conservation District.", "source": "https://www.braintreema.gov/9/About-Us"}
+  ],
+  "history": [
+    {"year": "1640", "text": "Braintree, colonized in 1635, was incorporated as a town.", "source": "https://en.wikipedia.org/wiki/Braintree,_Massachusetts"},
+    {"year": "1792", "text": "Quincy was incorporated from the original town, followed by Randolph in 1793.", "source": "https://en.wikipedia.org/wiki/Braintree,_Massachusetts"},
+    {"year": "1845", "text": "The Old Colony railroad reached South Braintree, which became a rail junction as branches followed to Fall River in 1846 and Randolph in 1866.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/bra.pdf"},
+    {"year": "1920", "text": "The murders that led to the Sacco and Vanzetti trial took place in Braintree.", "source": "https://en.wikipedia.org/wiki/Braintree,_Massachusetts"}
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 214, "sf_sales_2024": 242,
+    "sf_median_2025": 725000, "sf_median_2024": 680000,
+    "condo_sales_2025": 84, "condo_median_2025": 465000, "condo_median_2024": 450000,
+    "reading_1": "BRAINTREE (single-family; Dec 2024, Dec 2025, Percent Change): YTD Number of Sales 242 214 -11.6%; YTD Median Sale Price $680,000 $725,000 6.6%. Condo: YTD Number of Sales 85 84 -1.2%; YTD Median Sale Price $450,000 $465,000 3.3%",
+    "reading_2": "Braintree (single-family): YTD Number of Sales 242 214 -11.6%; YTD Median Sale Price $680,000 $725,000 6.6%. Condo: YTD Number of Sales 85 84 -1.2%; YTD Median Sale Price $450,000 $465,000 3.3%"
+  },
+  "nearby": ["quincy", "weymouth", "randolph", "holbrook"],
+  "search_notes": "'Braintree MA real estate agent' returns Experience.com review profiles, RealTrends and HomeLight directories (including a HomeLight page for South Braintree). 'Moving to Braintree MA' returns a storage company blog, Livability and mover pages (Lugg, uShip, HireAHelper). No result explains the town's three-line rail hub, the Weymouth Landing/East Braintree stop or the Washington Street historic houses, which a sourced guide could cover.",
+  "faq": [
+    {"q": "What is the median home price in Braintree, MA?", "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, the median single-family sale price in Braintree for calendar year 2025 was $725,000, across 214 sales. In 2024 it was $680,000, across 242 sales."},
+    {"q": "Does Braintree have commuter rail?", "a": "Yes. Braintree station on Ivory Street is served by the Red Line and by the Kingston and Fall River/New Bedford commuter rail lines to South Station. The Greenbush Line stops at Weymouth Landing/East Braintree, on the town line with Weymouth."},
+    {"q": "Is Braintree a city or a town?", "a": "Both, in a sense. It is officially named the Town of Braintree, but it has a mayor and council form of government and is considered a city under Massachusetts law."},
+    {"q": "Which school district serves Braintree?", "a": "Braintree Public Schools. Review its profile with DESE."}
+  ],
+  "notes": "Condo row was readable in both passes (85 to 84 sales; $450,000 to $465,000), so condo fields are filled. Housing figures come from a February 2024 kick-off presentation for the town's 74 and 90 Pond Street feasibility study, not a Housing Production Plan; the mass.gov HPP link failed to load. Village descriptions rely on the 1979 MHC Reconnaissance Survey report (OCR-scanned, older), since no official or Wikipedia page describes Braintree's neighborhoods; the town site names no villages. 'About ten miles south of Boston' is from the town's About Us page. The Blue Hills overview on mass.gov does not list Braintree among the towns it spans; it only names an accessible path on Old Route 128 in Braintree, so the line is worded around that. The Thayer house street address and 1958 move date come from the town's Thayer/French page; a second town page says the house was relocated in 1960, so that date was left out of the prose. Sunset Lake had no dedicated source beyond the town's list of recreation areas. Weymouth not yet a guide slug; nearby slugs are geographic neighbors."
+}

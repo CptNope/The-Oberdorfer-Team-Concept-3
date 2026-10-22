@@ -1,0 +1,67 @@
+{
+  "slug": "fall-river",
+  "name": "Fall River",
+  "county": "Bristol County",
+  "region": "South Coast (Mount Hope Bay)",
+  "population_2020": 94000,
+  "population_source": "https://en.wikipedia.org/wiki/Fall_River,_Massachusetts",
+  "official_site": "https://www.fallriverma.gov/",
+  "headline": ["Granite mills on a falling river,", "a battleship at the foot of the hill."],
+  "answer": "Fall River is a Bristol County city of 94,000 people (2020 Census) on the Taunton River and Mount Hope Bay, at the Rhode Island line. It grew into a leading U.S. textile city in the 1800s, and its housing still includes many 19th-century triple-deckers. The Warren Group counted 300 single-family sales in 2025. Since March 24, 2025, Fall River Depot station has linked the city to Boston's South Station on the MBTA Fall River/New Bedford Line, and I-195 and Route 24 meet here.",
+  "overview": [
+    "Fall River separated from Freetown as a town in 1803, spent about 30 years named Troy, and took back its name in 1834; it became a city in 1854. The name comes from the Quequechan River, believed to mean 'falling river' in Wampanoag. A fire in July 1843 destroyed much of the town center, and the city motto, 'We'll Try', dates from the rebuilding. Mills followed the river's drop to the bay, and by 1868 the city had passed Lowell as the leading U.S. textile city. The 1847 Metacomet Mill is its oldest surviving textile mill.",
+    "I-195 divides the city into the North End and the South End. North of the highway, the Highlands ridge keeps houses from about 1840 to 1925 in Greek Revival, Italianate, Second Empire and Queen Anne styles, along with North Park, designed by the Olmsted Brothers. Below it, the Lower Highlands mixes Federal and Greek Revival houses with late-19th-century multiunit worker housing. On the waterfront, Battleship Cove and Fall River Heritage State Park sit beside the Braga Bridge, and to the south Kennedy Park, designed by Frederick Law Olmsted and Calvert Vaux, slopes down to Mount Hope Bay."
+  ],
+  "housing": {
+    "text": "Fall River's mill boom housed workers in thousands of wood-frame, multi-family tenements, usually three-floor triple-deckers with up to six apartments, and mill companies built more than 12,000 units. The Highlands and Lower Highlands keep older single-family and Victorian houses, and The Warren Group recorded 300 single-family sales in 2025.",
+    "source": "https://en.wikipedia.org/wiki/Fall_River,_Massachusetts"
+  },
+  "villages": [
+    {"name": "The Highlands", "line": "A historic district on a ridge above the Taunton River and Mount Hope Bay, with more than 300 structures built mostly between 1840 and 1925 and the Olmsted Brothers' North Park.", "source": "https://en.wikipedia.org/wiki/Highlands_Historic_District_(Fall_River,_Massachusetts)"},
+    {"name": "Lower Highlands", "line": "About 212 acres just east of downtown, roughly bounded by Cherry, Main, Winter and Bank Streets, settled by 1810 and partly rebuilt after the 1843 fire.", "source": "https://en.wikipedia.org/wiki/Lower_Highlands_Historic_District"},
+    {"name": "Waterfront and Battleship Cove", "line": "A North End neighborhood on the Taunton River where Battleship Cove and Heritage State Park sit beside the Braga Bridge.", "source": "https://en.wikipedia.org/wiki/Fall_River,_Massachusetts"},
+    {"name": "Flint Village", "line": "A South End neighborhood known as 'The Flint', near Bedford and Quarry Streets.", "source": "https://en.wikipedia.org/wiki/Fall_River,_Massachusetts"},
+    {"name": "Globe Village", "line": "A South End neighborhood around Cook Pond and Broadway.", "source": "https://en.wikipedia.org/wiki/Fall_River,_Massachusetts"}
+  ],
+  "commute": {
+    "rail": [
+      {"line": "Fall River/New Bedford Line (Fall River branch)", "stations": ["Fall River Depot (825 Davol St)"]}
+    ],
+    "rail_source": "https://www.mbta.com/schedules/CR-NewBedford/timetable",
+    "highways": ["I-195", "Route 24", "Route 79", "Route 138", "U.S. Route 6"],
+    "text": "Fall River Depot opened on March 24, 2025, at 825 Davol Street, about a mile north of downtown near Route 79 and President Avenue, with 220 parking spaces. Trains on the Fall River branch stop at Freetown, then run through East Taunton, Middleborough, Brockton and Quincy to Boston's South Station; sample outbound weekday trips on the current timetable take about 1 hour 40 to 50 minutes. A downtown station at Battleship Cove is a proposed, unfunded later phase. I-195 runs east-west through downtown, Route 24 heads north toward Boston's southern suburbs, and SRTA runs local buses."
+  },
+  "schools": {"district": "Fall River Public Schools", "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=00950000&orgtypecode=5"},
+  "places": [
+    {"name": "Battleship Cove", "line": "A naval museum at 5 Water Street, opened in 1965, with the battleship USS Massachusetts, the submarine USS Lionfish and the destroyer USS Joseph P. Kennedy Jr.", "source": "https://en.wikipedia.org/wiki/Battleship_Cove"},
+    {"name": "Fall River Heritage State Park", "line": "A DCR park on the Taunton River with a visitor center, a mile-long boardwalk and trail, a picnic meadow and views of Battleship Cove.", "source": "https://www.mass.gov/locations/fall-river-heritage-state-park"},
+    {"name": "Lincoln Park Carousel", "line": "A 1920 Philadelphia Toboggan Company carousel, restored by local vocational students and housed in a pavilion at Battleship Cove.", "source": "https://en.wikipedia.org/wiki/Battleship_Cove"},
+    {"name": "Kennedy Park", "line": "A 57-acre park from 1868 by Olmsted and Vaux, with ball fields above and woods running down to Mount Hope Bay.", "source": "https://en.wikipedia.org/wiki/Kennedy_Park_(Fall_River,_Massachusetts)"},
+    {"name": "Lizzie Borden House", "line": "The 230 Second Street house, now a bed and breakfast and museum with historical tours.", "source": "https://en.wikipedia.org/wiki/Lizzie_Borden_House"},
+    {"name": "Freetown-Fall River State Forest", "line": "About 5,000 acres of DCR forest with about 25 miles of trails, including the walk to Profile Rock.", "source": "https://www.mass.gov/locations/freetown-fall-river-state-forest"}
+  ],
+  "history": [
+    {"year": "1803", "text": "Separated from Freetown and incorporated as a town; it was renamed Troy a year later and reverted to Fall River in 1834.", "source": "https://en.wikipedia.org/wiki/Fall_River,_Massachusetts"},
+    {"year": "1843", "text": "A July fire destroyed much of the town center, leaving more than 1,300 people homeless.", "source": "https://en.wikipedia.org/wiki/Fall_River,_Massachusetts"},
+    {"year": "1854", "text": "Incorporated as a city.", "source": "https://en.wikipedia.org/wiki/Fall_River,_Massachusetts"},
+    {"year": "1868", "text": "Fall River passed Lowell as the leading textile city in the United States.", "source": "https://en.wikipedia.org/wiki/Fall_River,_Massachusetts"}
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 300, "sf_sales_2024": 281,
+    "sf_median_2025": 429450, "sf_median_2024": 419000,
+    "condo_sales_2025": null, "condo_median_2025": null, "condo_median_2024": null,
+    "reading_1": "FALL RIVER (single-family; Dec 2024, Dec 2025, Percent Change): YTD Number of Sales 281 300 6.8%; YTD Median Sale Price $419,000 $429,450 2.5%",
+    "reading_2": "FALL RIVER (single-family, between FAIRHAVEN and FALMOUTH): Number of Sales 30 28 -6.7%; YTD Number of Sales 281 300 6.8%; Median Sale Price $432,500 $462,500 6.9%; YTD Median Sale Price $419,000 $429,450 2.5%"
+  },
+  "nearby": ["somerset", "swansea", "westport", "freetown", "new-bedford"],
+  "search_notes": "'Fall River MA real estate agent' is dominated by individual Experience.com review profiles, plus BiggerPockets and HomeLight directories. 'Moving to Fall River MA' returns movers (uShip, HireAHelper, MoveAdvisor, All My Sons, Gentle Giant) and one River Journal relocation post. Nothing ranking explains the new Fall River Depot station, the Highlands historic districts or the waterfront parks, which a sourced guide could cover.",
+  "faq": [
+    {"q": "What is the median home price in Fall River, MA?", "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, the median single-family sale price in Fall River for calendar year 2025 was $429,450, across 300 sales. In 2024 it was $419,000, across 281 sales."},
+    {"q": "Does Fall River have commuter rail?", "a": "Yes. Fall River Depot, at 825 Davol Street, opened on March 24, 2025, on the MBTA Fall River/New Bedford Line to Boston's South Station. A downtown station at Battleship Cove is proposed for a later, unfunded phase."},
+    {"q": "Which school district serves Fall River?", "a": "Fall River Public Schools. Review its profile with DESE."}
+  ],
+  "notes": "Condo fields null: both fetches of the Warren Group PDF cut off the condo table at 'BROOKLI', before Fall River. Population is the round figure 94,000 as given in Wikipedia's infobox; the Census QuickFacts page failed to load, so it was not cross-checked. MBTA pages confirm the line, Fall River Depot's address and 220 parking spaces; Freetown station is in Freetown, not Fall River. Weekend timetables did not load, so weekend service is not stated; trip time is estimated from sample outbound weekday trips. Opening date (March 24, 2025), the station's distance from downtown, and the unfunded Battleship Cove phase come from Wikipedia (South Coast Rail and Fall River station articles). Battleship Cove's own site gives the 5 Water St address but not the opening year or full ship list, so those come from Wikipedia. The Highlands Historic District's 'over 1,400 acres' on Wikipedia looks implausible and was omitted. The state forest's address is in Assonet (Freetown); Wikipedia lists the forest among Fall River's North End areas, but how much of it lies in the city was not verified. Flint Village and Globe Village lines are limited to the locators Wikipedia gives. No housing production plan or owner-occupancy figure was cited. The city site (fallriverma.gov) loaded but offered no history or neighborhood pages to cite. Nearby slugs include towns without records."
+}
