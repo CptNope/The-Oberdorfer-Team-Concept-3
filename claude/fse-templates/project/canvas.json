@@ -102,7 +102,7 @@
    "x": 8120,
    "y": 1600,
    "w": 1440,
-   "h": 4975,
+   "h": 5440,
    "expand": "fill",
    "title": "page-market.html · Massachusetts market, town by town"
   },
@@ -110,22 +110,22 @@
    "x": 9640,
    "y": 1600,
    "w": 390,
-   "h": 5862,
+   "h": 6281,
    "title": "Phone · page-market.html"
   },
   "ArchiveCommunity.dc.html": {
    "x": 0,
    "y": 15700,
    "w": 1440,
-   "h": 8971,
+   "h": 13768,
    "expand": "fill",
-   "title": "archive-community.html · Communities hub (5 regions)"
+   "title": "archive-community.html · Communities hub (9 regions, 27 guides)"
   },
   "MobileCommunities.dc.html": {
    "x": 1520,
    "y": 15700,
    "w": 390,
-   "h": 9556,
+   "h": 14061,
    "title": "Phone · archive-community.html"
   },
   "SingleCommunity.dc.html": {
@@ -134,7 +134,7 @@
    "w": 1440,
    "h": 8449,
    "expand": "fill",
-   "title": "single-community.html · Worcester (one template, 16 town guides)"
+   "title": "single-community.html · Worcester (one template, 27 town guides)"
   },
   "MobileCommunity.dc.html": {
    "x": 3550,
@@ -145,7 +145,7 @@
   },
   "ArchiveAgent.dc.html": {
    "x": 0,
-   "y": 27760,
+   "y": 30260,
    "w": 1440,
    "h": 3142,
    "expand": "fill",
@@ -153,14 +153,14 @@
   },
   "MobileTeam.dc.html": {
    "x": 1520,
-   "y": 27760,
+   "y": 30260,
    "w": 390,
    "h": 5102,
    "title": "Phone · archive-agent.html"
   },
   "SingleAgent.dc.html": {
    "x": 6090,
-   "y": 27760,
+   "y": 30260,
    "w": 1440,
    "h": 7412,
    "expand": "fill",
@@ -168,7 +168,7 @@
   },
   "MobileAgent.dc.html": {
    "x": 7610,
-   "y": 27760,
+   "y": 30260,
    "w": 390,
    "h": 11420,
    "title": "Phone · single-agent.html (Kaitlyn)"
@@ -190,7 +190,7 @@
   },
   "Home.dc.html": {
    "x": 0,
-   "y": 39660,
+   "y": 42160,
    "w": 1440,
    "h": 3605,
    "expand": "fill",
@@ -198,14 +198,14 @@
   },
   "MobileJournal.dc.html": {
    "x": 1520,
-   "y": 39660,
+   "y": 42160,
    "w": 390,
    "h": 5640,
    "title": "Phone · home.html"
   },
   "Single.dc.html": {
    "x": 2030,
-   "y": 39660,
+   "y": 42160,
    "w": 1440,
    "h": 3571,
    "expand": "fill",
@@ -213,14 +213,14 @@
   },
   "MobileArticle.dc.html": {
    "x": 3550,
-   "y": 39660,
+   "y": 42160,
    "w": 390,
    "h": 4419,
    "title": "Phone · single.html"
   },
   "SingleOffice.dc.html": {
    "x": 4060,
-   "y": 39660,
+   "y": 42160,
    "w": 1440,
    "h": 2514,
    "expand": "fill",
@@ -228,14 +228,14 @@
   },
   "MobileOffice.dc.html": {
    "x": 5580,
-   "y": 39660,
+   "y": 42160,
    "w": 390,
    "h": 3560,
    "title": "Phone · single-office.html"
   },
   "PageContact.dc.html": {
    "x": 6090,
-   "y": 39660,
+   "y": 42160,
    "w": 1440,
    "h": 2703,
    "expand": "fill",
@@ -243,14 +243,14 @@
   },
   "MobileContact.dc.html": {
    "x": 7610,
-   "y": 39660,
+   "y": 42160,
    "w": 390,
    "h": 4016,
    "title": "Phone · page-contact.html"
   },
   "TeamLeaders.dc.html": {
    "x": 2030,
-   "y": 27760,
+   "y": 30260,
    "w": 1440,
    "h": 6348,
    "expand": "fill",
@@ -258,14 +258,14 @@
   },
   "MobileTeamLeaders.dc.html": {
    "x": 3550,
-   "y": 27760,
+   "y": 30260,
    "w": 390,
    "h": 10022,
    "title": "Phone · page-brandon-kaitlyn.html"
   },
   "AgentBrandon.dc.html": {
    "x": 4060,
-   "y": 27760,
+   "y": 30260,
    "w": 1440,
    "h": 7434,
    "expand": "fill",
@@ -273,14 +273,14 @@
   },
   "MobileAgentBrandon.dc.html": {
    "x": 5580,
-   "y": 27760,
+   "y": 30260,
    "w": 390,
    "h": 11473,
    "title": "Phone · single-agent.html (Brandon)"
   },
   "AgentTemplate.dc.html": {
    "x": 8120,
-   "y": 27760,
+   "y": 30260,
    "w": 1440,
    "h": 7271,
    "expand": "fill",
@@ -288,28 +288,28 @@
   },
   "MobileAgentTemplate.dc.html": {
    "x": 9640,
-   "y": 27760,
+   "y": 30260,
    "w": 390,
    "h": 11272,
    "title": "Phone · single-agent.html (template)"
   },
   "AdminLeadsInbox.dc.html": {
    "x": 0,
-   "y": 45730,
+   "y": 48230,
    "w": 1440,
    "h": 1010,
    "title": "wp-admin · Leads inbox (ot-leads)"
   },
   "AdminLeadDetail.dc.html": {
    "x": 1560,
-   "y": 45730,
+   "y": 48230,
    "w": 1440,
    "h": 980,
    "title": "wp-admin · Lead detail (ot-leads)"
   },
   "AdminApprovalQueue.dc.html": {
    "x": 3120,
-   "y": 45730,
+   "y": 48230,
    "w": 1440,
    "h": 1130,
    "title": "wp-admin · AI approval queue (ot-leads)"
@@ -382,7 +382,7 @@
   },
   "t3": {
    "x": 0,
-   "y": 39400,
+   "y": 41900,
    "text": "Journal, office and contact",
    "kind": "title1",
    "maxW": 10030
@@ -405,14 +405,14 @@
   },
   "t4": {
    "x": 0,
-   "y": 27500,
+   "y": 30000,
    "text": "Our team: the team page, the joint page and one profile per agent",
    "kind": "title1",
    "maxW": 10030
   },
   "s3": {
    "x": 10150,
-   "y": 27760,
+   "y": 30260,
    "w": 420,
    "fill": "blue",
    "size": "m",
@@ -424,18 +424,18 @@
    "w": 420,
    "fill": "blue",
    "size": "m",
-   "text": "Community guides\n\nOne single-community.html template serves all 16 town guides, from a researched record per town (tools/data/towns). Every fact carries its source URL; the guide lists them at the foot.\n\nBuilt for search and answer engines: an h1 of \"Living in (town), MA\", a 40 to 60 word answer as the lead, quick facts, a dated market table (The Warren Group, 2025), WebPage + City JSON-LD.\n\nFair housing: describe places, housing, transit and history; never who lives there; schools are a DESE link, never a rating.\n\nThe list of towns is proposed until the team confirms it."
+   "text": "Community guides\n\nOne single-community.html template serves all 27 town guides (Tiers 1 to 3), from a researched record per town (tools/data/towns). Every fact carries its source URL; the guide lists them at the foot.\n\nBuilt for search and answer engines: an h1 of \"Living in (town), MA\", a 40 to 60 word answer as the lead, quick facts, a dated market table (The Warren Group, 2025), WebPage + City JSON-LD.\n\nFair housing: describe places, housing, transit and history; never who lives there; schools are a DESE link, never a rating.\n\nTowns the source reports only by village (Barnstable) show a village table instead of a town median.\n\nThe list of towns is proposed until the team confirms it."
   },
   "t5": {
    "x": 0,
-   "y": 45470,
+   "y": 47970,
    "text": "Lead management: the built-in CRM (ot-leads plugin, admin screens)",
    "kind": "title1",
    "maxW": 10030
   },
   "s5": {
    "x": 4680,
-   "y": 45730,
+   "y": 48230,
    "w": 420,
    "fill": "blue",
    "size": "m",
