@@ -1,0 +1,199 @@
+{
+  "slug": "boylston",
+  "name": "Boylston",
+  "county": "Worcester County",
+  "region": "Central Massachusetts",
+  "population_2020": 4849,
+  "population_source": "https://www.census.gov/quickfacts/fact/table/boylstontownworcestercountymassachusetts/PST045224",
+  "official_site": "https://www.boylston-ma.gov/",
+  "headline": [
+    "A reservoir town on the road from Worcester to Clinton,",
+    "with a granite town hall and the gardens at Tower Hill."
+  ],
+  "answer": "Boylston is a Worcester County town of 4,849 people (2020 Census) on the Wachusett Reservoir, between Shrewsbury and Clinton. Most of its 1,823 housing units are detached single-family homes (74%, per the town's 2021 Housing Production Plan), from 18th-century houses near the town common to houses built since 1960. Routes 70 and 140 cross the town, I-290 passes through, and commuter rail is reached in Worcester.",
+  "meta": "Boylston, MA guide: a Worcester County town on the Wachusett Reservoir, home to the botanic garden at Tower Hill. Housing, history, prices, taxes and schools.",
+  "overview": [
+    "Europeans first settled the northern part of present-day Boylston around 1705, near Sawyer's Mills on the Nashua River intervale, and permanent settlement followed after 1718, according to the Massachusetts Historical Commission's 1983 survey. The area became the second precinct of Shrewsbury in 1742, gathered a church and built its first meetinghouse in 1743, and was incorporated as the town of Boylston in 1786. Part of the town was set off as West Boylston in 1808. Sawyer's Mills was the industrial center from the mid-1700s, with saw, grist and fulling mills, a wire mill and, by 1855, a cotton mill employing 50. The Wachusett Reservoir, completed in 1905, flooded the Nashua valley and Sawyer's Mills with it: 302 people were displaced, 46 dwellings were moved or destroyed, and the town's population fell by more than half within five years.",
+    "The land falls from over 700 feet near the Shrewsbury line to just under 400 feet at the reservoir shore, and the town's roads radiate from the common in Boylston Center. There the granite town hall of 1830, paid for by the Boston merchant Ward Nicholas Boylston, now houses the Boylston Historical Society's museum; the public library is in a 1904 fieldstone building by the Worcester architects Fuller & Delano; and Hastings' Tavern, a brick five-bay building, went up in the center in 1818. The temperance lecturer John B. Gough built his Italianate house, Hillside, on Main Street in 1848. An electric streetcar opened along Main Street from Worcester to Clinton in 1898 and was gone by the 1920s; Main Street was rebuilt as Route 70 in the early 1930s, and School Street (Route 140) became the road to Shrewsbury. Morningdale, in the southwest, grew as a Worcester suburb between the wars.",
+    "Boylston's 2021 Housing Production Plan counts 1,823 housing units, 74% of them detached single-family homes and 83.3% of occupied units owner occupied (2015 to 2019 American Community Survey). About 16% of units were built since 2000. The zoning bylaw caps new development at 20 permits a year, allows buildings of more than two units only in the Mixed Use Industrial district by special permit, and, after a June 7, 2021 Town Meeting vote, requires 10% affordable units in developments of more than eight units. Boylston does not appear on the state's list of MBTA Communities. The 293.6-acre Hillside property on Main Street, a former Digital Equipment Corporation training center, now holds the municipal offices, fields and trails; a master plan for the site, funded by a state One Stop for Growth grant, explored community space, housing, small business, trails and conservation and was scheduled to finish in June 2026."
+  ],
+  "housing": {
+    "text": "The town's 2021 Housing Production Plan, prepared with the Central Massachusetts Regional Planning Commission, counts 1,823 housing units (2015 to 2019 American Community Survey), 74% of them detached single-family homes and 9% attached single-family homes. Of occupied units, 83.3% (1,499) were owner occupied and 16.7% (300) renter occupied. By year built, 15% of units date from 1939 or earlier, 18% from 1940 to 1959, 26% from 1960 to 1979, 25% from 1980 to 1999, 11% from 2000 to 2009 and 5% from 2010 or later. The plan lists 30 units, or 1.7%, on the state's Subsidized Housing Inventory, including the 24 rental units of Sun Bank Village on Heritage Lane.",
+    "source": "https://www.mass.gov/doc/boylston-plan/download"
+  },
+  "villages": [
+    {
+      "name": "Boylston Center",
+      "line": "The civic center around the town common, with the meetinghouse sites, the 1830 granite town hall, the 1904 library, Hastings' Tavern (1818) and Italianate, Queen Anne and shingled houses of the later 1800s.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/boy.pdf"
+    },
+    {
+      "name": "Morningdale",
+      "line": "The southwest section along Route 70 toward Worcester, which grew as a Worcester suburb in the early 1900s, with many one-story houses and a 1926 Colonial Revival schoolhouse.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/boy.pdf"
+    },
+    {
+      "name": "Straw Hollow",
+      "line": "A southeastern district that made palm-leaf hats and straw braid, then became a dairy and orchard area with a creamery and stock farm in the 1870s.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/boy.pdf"
+    },
+    {
+      "name": "Sawyer's Mills (former)",
+      "line": "The mill village on the Nashua River in the northwest, the town's industrial center from the mid-1700s until it was cleared and flooded for the Wachusett Reservoir around 1900.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/boy.pdf"
+    },
+    {
+      "name": "Route 140 corridor",
+      "line": "The School Street corridor toward Shrewsbury and I-290, zoned in part as the 52.4-acre Route 140 Business District.",
+      "source": "https://www.mass.gov/doc/boylston-plan/download"
+    }
+  ],
+  "commute": {
+    "rail": [
+      {
+        "line": "Framingham/Worcester Line (stations outside Boylston)",
+        "stations": [
+          "Worcester",
+          "Westborough"
+        ]
+      }
+    ],
+    "rail_source": "https://www.mbta.com/schedules/CR-Worcester/timetable",
+    "highways": [
+      "I-290",
+      "Route 70",
+      "Route 140"
+    ],
+    "text": "Boylston has no rail service today: the Massachusetts Historical Commission records 19th-century lines that were discontinued or flooded by the Wachusett Reservoir, and the Worcester to Clinton streetcar on Main Street closed by the 1920s. Commuter rail is reached at stations on the MBTA Framingham/Worcester Line in other towns, including Worcester and Westborough. Route 70 (Main Street) runs from Worcester to Clinton and meets Route 140 (School Street) in town; I-290 passes through, with interchanges just outside the town at Route 140 in Shrewsbury and Church Street in Northborough."
+  },
+  "schools": {
+    "district": "Berlin-Boylston Regional School District",
+    "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=06200000&orgtypecode=5"
+  },
+  "places": [
+    {
+      "name": "New England Botanic Garden at Tower Hill",
+      "line": "Nearly 200 acres at 11 French Drive, owned and operated by the Worcester County Horticultural Society, with conservatories, formal and naturalistic gardens, an apple orchard, trails and views of the Wachusett Reservoir.",
+      "source": "https://nebg.org/"
+    },
+    {
+      "name": "Wachusett Reservoir",
+      "line": "A 65-billion-gallon reservoir covering 6.5 square miles with 37 miles of shoreline, managed by the DCR Office of Watershed Management; walking, running and shore fishing are allowed in designated areas, reached from access gates.",
+      "source": "https://www.mass.gov/locations/wachusett-reservoir"
+    },
+    {
+      "name": "Hillside",
+      "line": "The 293.6-acre property at 215 and 221 Main Street, once a Digital Equipment Corporation training center, with the town hall, a gymnasium, two soccer fields, an 18-hole disc golf course, a community garden and walking trails.",
+      "source": "https://cms3.revize.com/revize/boylstonma/Parks%20and%20Rec/Facilities/Boylston%20Parks%20Facilities%20for%20Website.pdf"
+    },
+    {
+      "name": "John B. Gough House",
+      "line": "The 1848 Italianate house at 215 Main Street where the temperance lecturer John B. Gough lived until 1886; it was designated a National Historic Landmark on May 30, 1974.",
+      "source": "https://en.wikipedia.org/wiki/John_B._Gough_House"
+    },
+    {
+      "name": "Boylston Historical Society museum",
+      "line": "The granite ashlar town hall of 1830, built with a schoolroom below and a meeting hall above and paid for by Ward Nicholas Boylston, now the historical society's museum.",
+      "source": "https://mass.historicbuildingsct.com/?p=6567"
+    },
+    {
+      "name": "Boylston Public Library",
+      "line": "A 1904 building at 695 Main Street by Fuller & Delano, given by Salome E. White in memory of her mother, Harriet Sawyer, on the site of the 1841 Center School.",
+      "source": "https://www.boylstonlibrary.org/library-history"
+    },
+    {
+      "name": "Harrington Park",
+      "line": "A town park at 320 Sewall Street with a short walking trail and the only public access to the shoreline of Sewall Pond.",
+      "source": "https://www.boylston-ma.gov/services/parks___recreation/harrington_park.php"
+    },
+    {
+      "name": "Manor Park",
+      "line": "A Morningdale park reached by Orient Street off Route 70 and then Midland Street, with three baseball diamonds and a playground.",
+      "source": "https://cms3.revize.com/revize/boylstonma/Parks%20and%20Rec/Facilities/Boylston%20Parks%20Facilities%20for%20Website.pdf"
+    }
+  ],
+  "history": [
+    {
+      "year": "1705",
+      "text": "Europeans began settling near Sawyer's Mills on the Nashua River intervale, around this year; permanent occupation followed after 1718.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/boy.pdf"
+    },
+    {
+      "year": "1786",
+      "text": "The second precinct of Shrewsbury, organized in 1742, was incorporated as the town of Boylston.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/boy.pdf"
+    },
+    {
+      "year": "1830",
+      "text": "The cornerstone of the granite town hall was laid on August 21, and the building was finished that year.",
+      "source": "https://mass.historicbuildingsct.com/?p=6567"
+    },
+    {
+      "year": "1905",
+      "text": "The Wachusett Reservoir was completed, flooding Sawyer's Mills; 302 people were displaced and 46 dwellings were moved or destroyed in Boylston.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/boy.pdf"
+    },
+    {
+      "year": "1986",
+      "text": "The Worcester County Horticultural Society's garden at Tower Hill had its beginnings.",
+      "source": "https://nebg.org/40-years/"
+    }
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 46,
+    "sf_sales_2024": 37,
+    "sf_median_2025": 583500,
+    "sf_median_2024": 580000,
+    "condo_sales_2025": 30,
+    "condo_sales_2024": 13,
+    "condo_median_2025": 625800,
+    "condo_median_2024": 565000,
+    "reading_1": "BOYLSTON (single-family; Dec 2024, Dec 2025, Percent Change): YTD Number of Sales 37 46 24.3%; YTD Median Sale Price $580,000 $583,500 0.6%",
+    "reading_2": "BOYLSTON (condos) YTD Number of Sales 13 30 130.8%; YTD Median Sale Price $565,000 $625,800 10.8% (read from the PDF by WebFetch on 2026-10-22; matches the Boylston row in tools/data/condo-2025.json)"
+  },
+  "tax": {
+    "fy": "FY2026",
+    "residential_rate": 13.58,
+    "commercial_rate": 13.58,
+    "residential_exemption": false,
+    "source": "https://www.boylston-ma.gov/services/assessors_office/index.php",
+    "note": "The Assessors' Office page states: 'The FY2026 tax rate is $13.58 per thousand dollars of assessed value.' It gives one rate for all classes, so the same figure is recorded for commercial; the Massachusetts Municipal Association's profile likewise lists a single residential and commercial rate ($13.83, the FY2025 figure). No residential exemption is mentioned."
+  },
+  "nearby": [
+    "shrewsbury",
+    "northborough",
+    "worcester",
+    "holden"
+  ],
+  "search_notes": "Checked 2026-10-22. 'Boylston MA real estate agent' returns portal and brokerage listing pages (Redfin city and neighborhood pages, Coldwell Banker, Berkshire Hathaway HomeServices), several of them mixed up with Boylston Street in Boston and Brookline. 'Moving to Boylston MA' returns Redfin's housing market page, a bmnboston.com 'moving to Boylston' page, mover directories and pages for West Boylston. No result offers a sourced local guide. A guide can fill that gap with the reservoir and Sawyer's Mills history, the Hillside property and its master plan, the 2021 Housing Production Plan figures, the town's one-rate FY2026 tax and the Warren Group figures, and can make clear that Boylston and West Boylston are separate towns.",
+  "faq": [
+    {
+      "q": "What is the median home price in Boylston, MA?",
+      "a": "The median single-family sale price in Boylston was $583,500 in calendar year 2025, across 46 sales, up from $580,000 across 37 sales in 2024, according to The Warren Group's MA December 2025 Sales, Prices by Town report. The same report gives a condominium median of $625,800 across 30 sales in 2025, up from $565,000 across 13 sales in 2024."
+    },
+    {
+      "q": "Does Boylston have commuter rail?",
+      "a": "No. Boylston has no rail service. Commuter rail is reached at stations on the MBTA Framingham/Worcester Line in other towns, including Worcester and Westborough."
+    },
+    {
+      "q": "Which school district serves Boylston?",
+      "a": "Boylston is served by the Berlin-Boylston Regional School District, which DESE lists as a PK to 12 district with three schools, including Tahanto Regional Middle/High School. Review its profile with DESE."
+    },
+    {
+      "q": "What is the property tax rate in Boylston?",
+      "a": "Boylston's FY2026 tax rate is $13.58 per $1,000 of assessed value, according to the town Assessors' Office. The town uses one rate for all property classes."
+    },
+    {
+      "q": "Is Boylston the same town as West Boylston?",
+      "a": "No. West Boylston was set off from Boylston in 1808 and is a separate town on the west side of the Wachusett Reservoir, with its own government, tax rate and school district."
+    },
+    {
+      "q": "Can you walk or fish at the Wachusett Reservoir?",
+      "a": "Yes, in designated areas. The DCR Office of Watershed Management allows walking, running and shore fishing from one hour before sunrise to one hour after sunset, with parking at access gates around the reservoir; boats, swimming, wading, bikes and animals are not allowed."
+    }
+  ],
+  "notes": "Written 2026-10-22. Sources: MHC Reconnaissance Survey Town Report for Boylston (1983, OCR scan) for topography, settlement, the 1742 precinct, 1743 meetinghouse, 1786 incorporation, the 1808 West Boylston set-off, Sawyer's Mills industry, palm-leaf hats (3,000 in 1832), cider mills (about 30, 1806 to 1830), the 1855 cotton mill (50 employed), reservoir displacement (302 people, 46 dwellings, population down more than 50% in five years), the 1898 streetcar, Routes 70 and 140 in the 1930s, Hastings' Tavern (1818), the 1904 library, Morningdale and Straw Hollow, and population growth of 567 from 1920 to 1935. Town's 2021 Housing Production Plan (mass.gov/doc/boylston-plan/download, with CMRPC, 2015 to 2019 ACS data) for housing units, structure type, tenure, year built, zoning, the 20-permit growth cap, inclusionary zoning (June 7, 2021), SHI (30 units, 1.7%), Sun Bank Village, Compass Pointe (2018), Lilymere Estates and the Route 140 Business District (52.4 acres). The 2021 plan's '41% built 1960 to 1999' is the sum of its 26% and 25% rows; its own text says homes of the past two decades are 'only 5%' while its table gives 11% for 2000 to 2009 and 5% for 2010 or later, and the table is used. Census QuickFacts for the 2020 population (4,849); QuickFacts also gives an owner-occupied rate of 79.2% for 2020 to 2024 and MMA gives 80.1%, both newer than the HPP's 83.3%, which is used because the housing paragraph cites the HPP throughout. Hillside: the town's Hillside Master Plan Steering Committee page (293.6 acres, former DEC training center, municipal offices, fields, trails, community garden, disc golf; One Stop for Growth grant; uses explored; work through June 2026; committee decommissioned by the Select Board on July 27, 2026) and the Parks and Recreation facility list (221 and 215 Main Street, amenities, Manor Park, Harrington Park at 320 Sewall Street). The outcome of the Hillside master plan was not found. John B. Gough House: Wikipedia (215 Main Street, 1848, Italianate, NRHP March 19, 1974, NHL May 30, 1974, Shepherd Knapp School, DEC in the 1980s; Wikipedia says the Boylston Historical Society controls the house). Whether the Gough house sits within the town-owned 293.6 acres is not stated by either source, so the record keeps them separate. Town hall: historicbuildingsct.com (cornerstone August 21, 1830, granite ashlar, Ward Nicholas Boylston, now the historical society museum); MHC says it was built from a bequest and Wikipedia describes a 1797 fund of $1,450, so the record says only that he paid for it. Library: boylstonlibrary.org history page (1792 social library, 1880 public library, 1904 building by Fuller & Delano, gift of Salome E. White in memory of Harriet Sawyer, site of the 1841 Center School). MBTA Communities: Boylston does not appear in EOHLC's 'MBTA Community Categories and Requirements' (as of January 14, 2025, https://www.mass.gov/doc/section-3a-regulations-community-categories-and-reqs/download) or in the compliance status sheet as of October 20, 2026 (https://www.mass.gov/files/csv/2026-10/Compliance%20Status%20Sheet%20as%20of%2010-20-26.csv); only West Boylston is listed. Highways: Wikipedia articles on I-290 (enters Boylston after the Route 140 junction; exits 26 Route 140 in Shrewsbury and 27 Church Street in Northborough), Route 70 and Route 140. WRTA: its West Boylston community profile names only Route 30 in West Boylston; no fixed route in Boylston was found, so no bus service is claimed. Reservoir: DCR location page (65 billion gallons, 6.5 square miles, 37 miles of shoreline, hours, gates) and Wikipedia (prohibited activities; 4,380 acres flooded across Boylston, West Boylston, Clinton and Sterling; first filled May 1908). New England Botanic Garden: nebg.org (nearly 200 acres, 11 French Drive, Worcester County Horticultural Society, features) and nebg.org/40-years ('beginnings in 1986'); the society's founding date and the date of the renaming from Tower Hill Botanic Garden were not found on pages opened. Schools: DESE profile 06200000, Berlin-Boylston, PK to 12, three schools; Tahanto Regional Middle/High School is from Wikipedia's Boylston article; the elementary school's name and Sewall Street address appear in the town facility list. Tax: town Assessors' Office page (FY2026 $13.58, one rate), matched by joeshimkus.com (citing DOR); the DLS Databank and the Vision database did not load. Market: single-family YTD row read from the Warren Group PDF; the condo row was read from the same PDF and matches tools/data/condo-2025.json. The condo median exceeds the single-family median in 2025; no source explaining the mix of condo sales was found, so none is offered. Left out: the town website's statement that the first settlers were English and Scots-Irish families (describes who settled, not the place); the 55+ age restriction the HPP gives for Lilymere Estates and part of Compass Pointe (left out under the brief's no-age-groups rule; buyers should confirm any restriction directly); Barlin Acres (NRHP 1982), because Wikipedia says the house was demolished and gives conflicting build dates; the Worcester County Tuberculosis Hospital, the 1926 Morningdale Catholic church (dated with a question mark by MHC) and native sites at the ponds; Cyprian Keyes Golf Club and other businesses (details can change). Settlement date: the MHC gives about 1705 with permanent occupation after 1718, Wikipedia gives 1705 or 'around 1706', and the town website says 1722; the MHC date is used. Wikipedia names Ward Nicholas Boylston as the town's namesake while historicbuildingsct.com says the 1786 naming honored his family; neither claim is used in the record beyond his payment for the town hall. Boylston Center local historic district: the Historic District Commission was established by Town Meeting on June 18, 1979, and the HPP refers to a 'Boylston Center Historic District'; its boundaries were not found, so it is not described. The CMRPC-hosted master plan (cmrpc.org/wp-content/uploads/2024/01/BoylstonMasterPlan_NoAppendices.pdf) could not be read as text."
+}
