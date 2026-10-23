@@ -179,13 +179,17 @@ def prod(path=""):
 TEAM_ID = SITE + "#team"
 BROKER_ID = SITE + "#brokerage"
 UPDATED = "2026-10-22"
+# Office address confirmed 2026-10-22 (as supplied by the team; hours and formal status still open).
+STREET, POSTCODE = "652 B Park Ave", "01603"
+ADDRESS = f"{STREET}, Worcester, MA {POSTCODE}"
+MAPS = "https://www.google.com/maps/search/?api=1&query=" + ADDRESS.replace(" ", "+").replace(",", "%2C")
 WRITTEN = []   # every page path, for sitemap.xml and llms.txt
 
 def head(R, title, desc, extra_ld=None, canonical_path="", og_type="website", og_image=None):
     ld = {"@context": "https://schema.org", "@type": "RealEstateAgent", "@id": TEAM_ID, "name": "The Oberdorfer Team",
           "url": SITE, "logo": SITE + "assets/logo/social-avatar.png", "image": SITE + "assets/img/photo/team-portrait.webp",
           "telephone": PHONE, "areaServed": {"@type": "State", "name": "Massachusetts"},
-          "address": {"@type": "PostalAddress", "addressLocality": "Worcester", "addressRegion": "MA", "addressCountry": "US"},
+          "address": {"@type": "PostalAddress", "streetAddress": STREET, "addressLocality": "Worcester", "addressRegion": "MA", "postalCode": POSTCODE, "addressCountry": "US"},
           "slogan": "Luxury at every price point.",
           "parentOrganization": {"@type": "Organization", "@id": BROKER_ID, "name": "REWAP Brokerage LLC", "url": "https://rewapbrokerage.com/"}}
     blocks = [ld] + (extra_ld or [])
@@ -253,7 +257,7 @@ def footer(R):
     <div class="attribution">
       <div class="attribution__plate"><img src="{R}assets/img/rewap-logo.webp" alt="REWAP Brokerage" width="900" height="300"><small>Real Estate Wealth Acquisition and Preservation Brokerage</small></div>
       <div class="stack" style="--stack:var(--space-3)">
-        <p class="disclosure"><strong>The Oberdorfer Team</strong> is a real estate team operating under <strong>REWAP Brokerage LLC</strong>, Massachusetts. Brokerage license number, required team disclosures and office address [to be supplied and approved by the principal broker]. Listing information is provided by [MLS name] and is deemed reliable but not guaranteed. Listings on this prototype are demonstrations.</p>
+        <p class="disclosure"><strong>The Oberdorfer Team</strong> is a real estate team operating under <strong>REWAP Brokerage LLC</strong>, Massachusetts. Office: {ADDRESS}. Brokerage license number and required team disclosures [to be supplied and approved by the principal broker]. Listing information is provided by [MLS name] and is deemed reliable but not guaranteed. Listings on this prototype are demonstrations.</p>
         <p class="eho">{icon(R, 'eho')}Equal Housing Opportunity</p>
         <p class="disclosure">© 2026 The Oberdorfer Team · <a href="{R}site/contact/#privacy">Privacy</a> · <a href="{R}site/contact/#accessibility">Accessibility</a> · <a href="{R}site/contact/#fair-housing">Fair housing</a></p>
       </div>
@@ -1254,7 +1258,7 @@ def page_join():
   {section_head("What you would join", "Join Our Team", ["A brand built", "on presentation."], title_id="j-title")}
   <div class="cols cols--4 col-rule">
     <div><h3 class="h4">The brand</h3><p class="body-s" style="margin-top:var(--space-2)">The Oberdorfer Team identity and the <em>At Home</em> publications. [What agents receive to be confirmed by the team.]</p></div>
-    <div><h3 class="h4">The office</h3><p class="body-s" style="margin-top:var(--space-2)">The team works from Worcester under REWAP Brokerage. The street address is being confirmed.</p></div>
+    <div><h3 class="h4">The office</h3><p class="body-s" style="margin-top:var(--space-2)">The team works from {ADDRESS}, under REWAP Brokerage.</p></div>
     <div><h3 class="h4">Marketing and technology</h3><p class="body-s" style="margin-top:var(--space-2)">[Support details to be confirmed by the team before publication.]</p></div>
     <div><h3 class="h4">Training and mentorship</h3><p class="body-s" style="margin-top:var(--space-2)">[Program details to be confirmed by the team before publication.]</p></div>
   </div>
@@ -1269,7 +1273,7 @@ def page_join():
 def page_office():
     R = "../../"
     trail = [("Home", "site/"), ("Team office", "site/office/")]
-    body = page_hero(R, trail, ["A place to sit down", "and plan your move."], h1="Our office in Worcester, Massachusetts", lead="The Oberdorfer Team is opening its new office in Worcester and serves clients across Massachusetts. Visits are by appointment.", aside='<span class="badge badge--verify">Street address and hours to be confirmed</span>') + f'''
+    body = page_hero(R, trail, ["A place to sit down", "and plan your move."], h1="Our office in Worcester, Massachusetts", lead="The Oberdorfer Team is opening its new office in Worcester and serves clients across Massachusetts. Visits are by appointment.", aside='<span class="badge badge--verify">Hours to be confirmed</span>') + f'''
 <section class="section"><div class="container split" style="align-items:start">
   <div style="grid-column:1/span 7" class="stack" >
     <div class="map-frame"><svg viewBox="0 0 800 500" role="img" aria-label="Illustrative map placeholder"><rect width="800" height="500" fill="#E9E2D5"/><g stroke="#FBF9F5" stroke-width="10" fill="none" stroke-linecap="round"><path d="M0 300C200 280 360 330 800 260"/><path d="M300 0C320 160 280 340 330 500"/><path d="M800 420C600 400 450 440 300 500"/></g><g transform="translate(338 284)"><circle r="20" fill="#071D2D"/><circle r="27" fill="none" stroke="#B49A65"/></g></svg><p class="map-frame__note"><span class="badge badge--demo">Illustrative map · no real location</span></p></div>
@@ -1278,7 +1282,7 @@ def page_office():
   <div style="grid-column:9/span 4" class="stack" >
     <div class="office-card">
       <h2 class="h4">The Oberdorfer Team Office</h2>
-      <dl><dt>City</dt><dd>Worcester, Massachusetts</dd><dt>Address</dt><dd><span class="placeholder-value">[Street address to be confirmed]</span></dd><dt>Phone</dt><dd><a href="tel:{TEL}">{PHONE}</a></dd><dt>Hours</dt><dd><span class="placeholder-value">[Hours to be confirmed]</span></dd><dt>Brokerage</dt><dd>A team office of REWAP Brokerage LLC (formal status to be confirmed)</dd><dt>Agents</dt><dd><a href="{R}site/agents/brandon-kaitlyn-oberdorfer/">Brandon &amp; Kaitlyn Oberdorfer</a></dd></dl>
+      <dl><dt>City</dt><dd>Worcester, Massachusetts</dd><dt>Address</dt><dd>{STREET}<br>Worcester, MA {POSTCODE}<br><a href="{MAPS}" rel="noopener">Get directions</a></dd><dt>Phone</dt><dd><a href="tel:{TEL}">{PHONE}</a></dd><dt>Hours</dt><dd><span class="placeholder-value">[Hours to be confirmed]</span></dd><dt>Brokerage</dt><dd>A team office of REWAP Brokerage LLC (formal status to be confirmed)</dd><dt>Agents</dt><dd><a href="{R}site/agents/brandon-kaitlyn-oberdorfer/">Brandon &amp; Kaitlyn Oberdorfer</a></dd></dl>
     </div>
     <div class="panel">{form(R, "appt", "Request an appointment", contact_fields("ap") + select("ap-topic","Topic",["Buying","Selling","Joining the team","Other"]), "Request an appointment", "office", "h3")}</div>
   </div>

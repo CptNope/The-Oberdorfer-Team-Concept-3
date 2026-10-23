@@ -12,7 +12,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-const OT_CS_VERSION = '1.0.2';
+const OT_CS_VERSION = '1.0.3';
 const OT_CS_PHONE   = '406-250-7620';
 const OT_CS_HOST    = 'oberdorferteam.com';
 
@@ -85,7 +85,7 @@ add_action( 'wp_head', function () {
 	printf( '<link rel="manifest" href="%s">' . "\n", esc_url( $img . 'site.webmanifest' ) );
 	echo '<meta name="theme-color" content="#071D2D">' . "\n";
 
-	// Same entity as the prototype's graph (@id), with only confirmed facts.
+	// Same entity as the prototype's graph (@id), with only confirmed facts (office address confirmed 2026-10-22).
 	$ld = array(
 		'@context'           => 'https://schema.org',
 		'@type'              => 'RealEstateAgent',
@@ -96,7 +96,7 @@ add_action( 'wp_head', function () {
 		'telephone'          => OT_CS_PHONE,
 		'slogan'             => 'Luxury at every price point.',
 		'areaServed'         => array( '@type' => 'State', 'name' => 'Massachusetts' ),
-		'address'            => array( '@type' => 'PostalAddress', 'addressLocality' => 'Worcester', 'addressRegion' => 'MA', 'addressCountry' => 'US' ),
+		'address'            => array( '@type' => 'PostalAddress', 'streetAddress' => '652 B Park Ave', 'addressLocality' => 'Worcester', 'addressRegion' => 'MA', 'postalCode' => '01603', 'addressCountry' => 'US' ),
 		'parentOrganization' => array( '@type' => 'Organization', 'name' => 'REWAP Brokerage LLC', 'url' => 'https://rewapbrokerage.com/' ),
 	);
 	echo '<script type="application/ld+json">' . wp_json_encode( $ld, JSON_UNESCAPED_SLASHES ) . "</script>\n";

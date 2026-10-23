@@ -7,8 +7,8 @@
  * Description: The single coming-soon page: logo, search-facing heading, brand line, phone actions and the brokerage disclosure.
  *
  * Every text block here is editable in Appearance > Editor. Nothing on this page may be
- * invented: the phone number, "Top Producer", Worcester and the REWAP relationship are
- * confirmed (CLAUDE.md, ground rule 2). The disclosure line is approved by REWAP's broker
+ * invented: the phone number, "Top Producer", the Worcester office address and the REWAP
+ * relationship are confirmed (CLAUDE.md, ground rule 2). The disclosure line is approved by REWAP's broker
  * of record before the domain goes live.
  */
 $img = get_theme_file_uri( 'assets/img/' );
@@ -63,7 +63,7 @@ $img = get_theme_file_uri( 'assets/img/' );
 
 <!-- wp:group {"className":"cs-footer__text","layout":{"type":"default"}} -->
 <div class="wp-block-group cs-footer__text"><!-- wp:paragraph {"className":"cs-disclosure"} -->
-<p class="cs-disclosure"><strong>The Oberdorfer Team</strong> is a real estate team operating under <strong>REWAP Brokerage LLC</strong>, Massachusetts.</p>
+<p class="cs-disclosure"><strong>The Oberdorfer Team</strong> is a real estate team operating under <strong>REWAP Brokerage LLC</strong>, Massachusetts. Office: 652 B Park Ave, Worcester, MA 01603.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:html -->

@@ -6,7 +6,7 @@ The aim is to put a real, indexable page on the domain now, so it starts buildin
 
 ## Before you start: get approval
 
-The page is advertising for a licensed team, so **REWAP's broker of record approves the text before it goes live**. That covers the team name, "Top Producer", the phone number, the Worcester office mention and the disclosure line ("The Oberdorfer Team is a real estate team operating under REWAP Brokerage LLC, Massachusetts."). If REWAP requires a license number or an office address in team advertising, add it to the footer paragraph in the Site Editor; don't publish a bracketed placeholder.
+The page is advertising for a licensed team, so **REWAP's broker of record approves the text before it goes live**. That covers the team name, "Top Producer", the phone number, the Worcester office address and the disclosure line ("The Oberdorfer Team is a real estate team operating under REWAP Brokerage LLC, Massachusetts. Office: 652 B Park Ave, Worcester, MA 01603."). If REWAP requires a license number in team advertising, add it to the footer paragraph in the Site Editor; don't publish a bracketed placeholder.
 
 ## 1. Cloudways: server and application
 
@@ -158,7 +158,7 @@ Do **not** install a "maintenance mode" or "coming soon" plugin. They return a 5
    - `https://oberdorferteam.com/wp-sitemap.xml` lists the home page.
 2. **Search Console.** *Done 2026-10-22:* Domain property `sc-domain:oberdorferteam.com` verified by a TXT record at GoDaddy (keep that record), sitemap submitted and home-page indexing requested. It is owned for now by the developer's Google account; add the team's Google account as an **Owner** (Settings → Users and permissions) once it exists, then hand over. Original step: add a **Domain** property for `oberdorferteam.com`, verify it with the DNS TXT record, and submit `https://oberdorferteam.com/wp-sitemap.xml`. Use URL Inspection → Request indexing on the home page. Own it from the team's Google account, not a personal one.
 3. **Rich Results Test.** Check the home page; the `RealEstateAgent` item should be detected with no errors.
-4. **Google Business Profile.** When the Worcester address is confirmed, verify the profile and set its website to `https://oberdorferteam.com/`.
+4. **Google Business Profile.** The address is confirmed (652 B Park Ave, Worcester, MA 01603). Verify the profile, entering the address exactly as on the site, and set its website to `https://oberdorferteam.com/`.
 5. **HarborRank.** Connect Search Console to the project.
 6. **PageSpeed Insights.** Run it once on mobile. The page should score in the green, with LCP under 2.5 s and CLS near 0.
 
