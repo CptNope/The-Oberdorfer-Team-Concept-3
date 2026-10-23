@@ -1,0 +1,93 @@
+{
+  "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+  "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+  "period": "Calendar year 2025",
+  "accessed": "2026-10-23",
+  "method": "Read with pdf.js in a browser from the PDF's text. Columns are Dec 2024, Dec 2025, Percent Change; the YTD lines are the calendar years 2024 and 2025. Single-family table pages 1-36, condominium table pages 37-73. The North End, Back Bay, Beacon Hill, South End, Fenway and other central neighborhoods have no rows of their own: they fall within the BOSTON row.",
+  "rows": {
+    "allston": {
+      "sf": "ALLSTON | YTD Number of Sales 6 11 83.3% | YTD Median Sale Price $1,007,500 $889,900 -11.7%",
+      "sf_sales_2024": 6,
+      "sf_sales_2025": 11,
+      "sf_median_2024": 1007500,
+      "sf_median_2025": 889900,
+      "condo": "ALLSTON | YTD Number of Sales 69 66 -4.3% | YTD Median Sale Price $585,000 $516,250 -11.8%",
+      "condo_sales_2024": 69,
+      "condo_sales_2025": 66,
+      "condo_median_2024": 585000,
+      "condo_median_2025": 516250
+    },
+    "brighton": {
+      "sf": "BRIGHTON | YTD Number of Sales 25 37 48.0% | YTD Median Sale Price $1,000,000 $1,000,000 0.0%",
+      "sf_sales_2024": 25,
+      "sf_sales_2025": 37,
+      "sf_median_2024": 1000000,
+      "sf_median_2025": 1000000,
+      "condo": "BRIGHTON | YTD Number of Sales 247 266 7.7% | YTD Median Sale Price $515,000 $548,000 6.4%",
+      "condo_sales_2024": 247,
+      "condo_sales_2025": 266,
+      "condo_median_2024": 515000,
+      "condo_median_2025": 548000
+    },
+    "east-boston": {
+      "sf": "EAST BOSTON | YTD Number of Sales 23 41 78.3% | YTD Median Sale Price $700,000 $649,000 -7.3%",
+      "sf_sales_2024": 23,
+      "sf_sales_2025": 41,
+      "sf_median_2024": 700000,
+      "sf_median_2025": 649000,
+      "condo": "EAST BOSTON | YTD Number of Sales 302 263 -12.9% | YTD Median Sale Price $665,000 $645,000 -3.0%",
+      "condo_sales_2024": 302,
+      "condo_sales_2025": 263,
+      "condo_median_2024": 665000,
+      "condo_median_2025": 645000
+    },
+    "hyde-park": {
+      "sf": "HYDE PARK | YTD Number of Sales 118 101 -14.4% | (next page) YTD Median Sale Price $655,000 $675,000 3.1%",
+      "sf_sales_2024": 118,
+      "sf_sales_2025": 101,
+      "sf_median_2024": 655000,
+      "sf_median_2025": 675000,
+      "condo": "HYDE PARK | YTD Number of Sales 48 54 12.5% | YTD Median Sale Price $441,500 $482,000 9.2%",
+      "condo_sales_2024": 48,
+      "condo_sales_2025": 54,
+      "condo_median_2024": 441500,
+      "condo_median_2025": 482000
+    },
+    "mattapan": {
+      "sf": "MATTAPAN | YTD Number of Sales 48 34 -29.2% | YTD Median Sale Price $599,950 $627,500 4.6%",
+      "sf_sales_2024": 48,
+      "sf_sales_2025": 34,
+      "sf_median_2024": 599950,
+      "sf_median_2025": 627500,
+      "condo": "MATTAPAN | YTD Number of Sales 34 94 176.5% | YTD Median Sale Price $417,450 $420,000 0.6%",
+      "condo_sales_2024": 34,
+      "condo_sales_2025": 94,
+      "condo_median_2024": 417450,
+      "condo_median_2025": 420000
+    },
+    "roslindale": {
+      "sf": "ROSLINDALE | YTD Number of Sales 96 86 -10.4% | YTD Median Sale Price $762,000 $778,000 2.1%",
+      "sf_sales_2024": 96,
+      "sf_sales_2025": 86,
+      "sf_median_2024": 762000,
+      "sf_median_2025": 778000,
+      "condo": "ROSLINDALE | YTD Number of Sales 95 106 11.6% | YTD Median Sale Price $590,000 $615,000 4.2%",
+      "condo_sales_2024": 95,
+      "condo_sales_2025": 106,
+      "condo_median_2024": 590000,
+      "condo_median_2025": 615000
+    },
+    "roxbury": {
+      "sf": "ROXBURY | YTD Number of Sales 24 20 -16.7% | YTD Median Sale Price $654,125 $712,000 8.8%",
+      "sf_sales_2024": 24,
+      "sf_sales_2025": 20,
+      "sf_median_2024": 654125,
+      "sf_median_2025": 712000,
+      "condo": "ROXBURY | YTD Number of Sales 149 117 -21.5% | YTD Median Sale Price $600,000 $618,000 3.0%",
+      "condo_sales_2024": 149,
+      "condo_sales_2025": 117,
+      "condo_median_2024": 600000,
+      "condo_median_2025": 618000
+    }
+  }
+}

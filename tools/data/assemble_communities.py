@@ -34,9 +34,11 @@ PLAN = [
 # They are attached to their city's record as "neighborhoods" and get their own pages.
 NEIGHBORHOODS = {
     "worcester": ["downtown", "canal-district", "shrewsbury-street", "main-south",
-                  "grafton-hill", "tatnuck", "greendale", "quinsigamond-village"],
-    "boston": ["back-bay", "beacon-hill", "south-end", "charlestown",
-               "jamaica-plain", "south-boston", "west-roxbury", "dorchester"],
+                  "grafton-hill", "tatnuck", "greendale", "quinsigamond-village",
+                  "webster-square", "vernon-hill", "union-hill", "burncoat"],
+    "boston": ["back-bay", "beacon-hill", "south-end", "north-end", "charlestown",
+               "east-boston", "jamaica-plain", "roslindale", "west-roxbury", "hyde-park",
+               "roxbury", "mattapan", "dorchester", "south-boston", "allston", "brighton"],
 }
 REGION_NAMES = {"central": "Central Massachusetts", "metrowest": "MetroWest", "north": "North of Boston",
                 "boston": "Greater Boston", "southshore": "South Shore",
