@@ -1,0 +1,80 @@
+{
+  "slug": "charlestown",
+  "name": "Charlestown",
+  "parent": "boston",
+  "city_name": "Boston",
+  "county": "Suffolk County",
+  "region": "Greater Boston (the city)",
+  "population_2020": 19120,
+  "population_source": "https://www.bostonplans.org/getattachment/285c9cac-59e4-415c-9d7d-a4873a3f2773",
+  "official_site": "https://www.bostonplans.org/neighborhoods/charlestown",
+  "headline": ["Red-brick rows on Breed's Hill,", "and a navy yard turned to new uses on the harbor."],
+  "answer": "Charlestown is Boston's oldest neighborhood, founded in 1629 on a peninsula between the Charles and Mystic Rivers and annexed to Boston in 1874, with 19,120 residents in 2020 (2020 Census, Boston Planning Department tabulation). Its housing is largely red-brick row houses on Bunker Hill and Breed's Hill, plus buildings of the former Navy Yard converted to residential and other uses. The Orange Line stops at Community College and Sullivan Square, and the MBTA's Charlestown Ferry runs from the Navy Yard to Long Wharf.",
+  "meta": "Charlestown, Boston: founded 1629, red-brick rows on Breed's Hill, the Bunker Hill Monument and Navy Yard, Orange Line and ferry. 2025 Warren Group prices.",
+  "boundaries": {
+    "text": "A peninsula north of the Charles River, opposite downtown Boston, bordered by the Mystic River and Boston Harbor, with I-93 along its western edge, the Navy Yard on the harbor, and Sullivan Square where the Charlestown Neck once joined it to the mainland.",
+    "source": "https://en.wikipedia.org/wiki/Charlestown,_Boston"
+  },
+  "overview": [
+    "Charlestown was laid out by Thomas Graves and settled in 1629, and the City of Boston calls it the city's oldest neighborhood; John Winthrop's company stopped here in 1630 before crossing the Charles River to found Boston. On June 17, 1775, the Battle of Bunker Hill was fought on Breed's Hill, and British forces burned almost the whole town. The first bridge to Boston opened in 1786, and the Navy Yard opened in 1800. Charlestown voters approved annexation on October 7, 1873, by 2,240 to 1,947, and it became part of Boston on January 5, 1874.",
+    "The peninsula rises to two small hills, Bunker Hill to the north and Breed's Hill, both covered mostly in housing, much of it red-brick row houses. The 221-foot granite Bunker Hill Monument, reached by 294 steps, was dedicated on Breed's Hill in 1843. City Square, at the Charlestown Bridge, was the site of the city hall before annexation, and Sullivan Square sits where landfill erased the narrow Charlestown Neck. The Navy Yard closed on July 1, 1974; the National Park Service holds 25 acres, including USS Constitution and Dry Dock 1, and most of the redeveloped buildings were converted to office, commercial and residential use. The Orange Line has run through Charlestown since April 7, 1975, when Community College and Sullivan Square stations replaced the City Square and Thompson Square stations of the Charlestown Elevated, which had opened in 1901.",
+    "Two large changes are under way. The Bunker Hill Housing redevelopment, a partnership of the Boston Housing Authority, the Joseph J. Corcoran Company, Leggat McCall and the Charlestown Resident Alliance, is replacing 1,100 public housing units with 2,699 public, income-restricted and market-rate rental units, with 73,000 square feet of retail and civic space; its first building broke ground in June 2023, and the next, a nine-story building of 265 units, was expected to start in mid to late 2025. On September 28, 2023, the Boston Planning & Development Agency board adopted PLAN: Charlestown, which highlights Sullivan Square, and approved 503 units at 1 Mystic Avenue near the Sullivan Square station at the same meeting."
+  ],
+  "housing": {
+    "text": "Charlestown's housing stock is largely red-brick row houses, many near the waterfront, along with homes in converted Navy Yard buildings and the Bunker Hill public housing now being rebuilt. The Boston Planning & Development Agency's tabulation of the 2014 to 2018 American Community Survey counts 9,536 housing units, 9,050 of them occupied; 46.1% of occupied units were owner occupied and 53.9% renter occupied.",
+    "source": "https://www.bostonplans.org/getattachment/1882b00d-48fe-41bc-ac1a-6979e25dbaf1"
+  },
+  "areas": [
+    {"name": "Charlestown Navy Yard", "line": "The former naval shipyard on the harbor, open from 1800 to 1974; 25 acres are part of Boston National Historical Park and most of the rest has been redeveloped for office, commercial and residential use.", "source": "https://en.wikipedia.org/wiki/Charlestown_Navy_Yard"},
+    {"name": "Monument Square and Breed's Hill", "line": "The hilltop around the Bunker Hill Monument, with the monument's museum at 43 Monument Square and residential streets on the slopes below.", "source": "https://www.nps.gov/bost/learn/historyculture/bhm.htm"},
+    {"name": "City Square", "line": "The southern end of the neighborhood at the Charlestown Bridge, site of the city hall before annexation, beside Paul Revere Park on the river.", "source": "https://en.wikipedia.org/wiki/Charlestown,_Boston"},
+    {"name": "Sullivan Square", "line": "The northwest corner where the Charlestown Neck once met the mainland, with an Orange Line station and busway, and the focus of the city's 2023 PLAN: Charlestown.", "source": "https://www.bisnow.com/news/boston/mixed-use/charlestown-could-see-major-changes-after-new-planning-guide-adopted-120972"}
+  ],
+  "commute": {
+    "rail": [
+      {"line": "Orange Line", "stations": ["Community College", "Sullivan Square"]},
+      {"line": "Charlestown Ferry", "stations": ["Charlestown (Navy Yard)", "Long Wharf (South)"]}
+    ],
+    "rail_source": "https://en.wikipedia.org/wiki/Community_College_station",
+    "highways": ["I-93", "US 1 (Tobin Bridge)"],
+    "text": "The Orange Line stops at Community College, on Austin Street beneath the I-93 viaduct, and at Sullivan Square, which has a busway; routes 92 and 93 run from Sullivan Square to downtown. The MBTA's Charlestown Ferry links the Navy Yard with Long Wharf. Charlestown has no commuter rail station. I-93 and US 1, by way of the Tobin Bridge, pass through."
+  },
+  "schools": {"district": "Boston Public Schools", "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=00350000&orgtypecode=5"},
+  "places": [
+    {"name": "Bunker Hill Monument", "line": "A 221-foot granite obelisk on Breed's Hill marking the battle of June 17, 1775, dedicated in 1843 and climbed by a spiral stair of 294 steps.", "source": "https://www.nps.gov/bost/learn/historyculture/bhm.htm"},
+    {"name": "USS Constitution", "line": "Launched in 1797 and known as Old Ironsides, the world's oldest commissioned warship still afloat, usually berthed at Pier 1 of the Navy Yard and open to visitors year round with free tours.", "source": "https://en.wikipedia.org/wiki/USS_Constitution"},
+    {"name": "USS Cassin Young and Dry Dock 1", "line": "A Fletcher-class destroyer kept by the National Park Service at the Navy Yard, which opened its first dry dock in 1833; the Navy Yard grounds are open 24 hours a day.", "source": "https://www.nps.gov/bost/learn/historyculture/cny.htm"},
+    {"name": "Paul Revere Park", "line": "A five-acre park along the Charles River between the Freedom Trail and the Zakim Bunker Hill Bridge, built as Big Dig mitigation and first opened in 1999.", "source": "https://en.wikipedia.org/wiki/Paul_Revere_Park"},
+    {"name": "Phipps Street Burying Ground", "line": "A 1.8-acre burial ground created in 1630, where John Harvard is buried; listed on the National Register in 1974.", "source": "https://en.wikipedia.org/wiki/Phipps_Street_Burying_Ground"},
+    {"name": "Winthrop Square (Training Field)", "line": "A historic park and former militia training field, home to the Charlestown Civil War Memorial.", "source": "https://en.wikipedia.org/wiki/Winthrop_Square_(Charlestown)"}
+  ],
+  "history": [
+    {"year": "1629", "text": "Thomas Graves laid out Charlestown, settled that year.", "source": "https://en.wikipedia.org/wiki/Charlestown,_Boston"},
+    {"year": "1775", "text": "The Battle of Bunker Hill was fought on June 17, and British forces burned almost all of the town.", "source": "https://en.wikipedia.org/wiki/Charlestown,_Boston"},
+    {"year": "1874", "text": "Charlestown was annexed to Boston on January 5, 1874, after voters approved it 2,240 to 1,947.", "source": "https://en.wikipedia.org/wiki/Charlestown,_Boston"},
+    {"year": "1974", "text": "The Charlestown Navy Yard was deactivated on July 1, 1974, after 174 years.", "source": "https://en.wikipedia.org/wiki/Charlestown_Navy_Yard"}
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 48,
+    "sf_sales_2024": 41,
+    "sf_median_2025": 1729250,
+    "sf_median_2024": 1550000,
+    "condo_sales_2025": null,
+    "condo_median_2025": null,
+    "condo_median_2024": null,
+    "reading_1": "CHARLESTOWN (single-family; Dec 2024, Dec 2025, Percent Change): Number of Sales32 -33.3%; YTD Number of Sales 41 48 17.1%; Median Sale Price $1,605,000 $1,705,000 6.2%; YTD Median Sale Price $1,550,000 $1,729,250 11.6%",
+    "reading_2": "CHARLESTOWN (single-family, between CHARLEMONT and CHARLTON): YTD Number of Sales 41 48 17.1%; YTD Median Sale Price $1,550,000 $1,729,250 11.6%"
+  },
+  "nearby": ["beacon-hill", "back-bay", "south-end", "south-boston"],
+  "search_notes": "Not researched in this session: the web search budget ran out before checking what ranks for 'Charlestown Boston real estate agent' and 'moving to Charlestown MA'. To do before launch.",
+  "faq": [
+    {"q": "What is the median home price in Charlestown?", "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, the median single-family sale price on its Charlestown row for calendar year 2025 was $1,729,250, across 48 sales. In 2024 it was $1,550,000, across 41 sales. Charlestown's condo row could not be read from the PDF."},
+    {"q": "Does Charlestown have commuter rail?", "a": "No. Charlestown is served by the Orange Line at Community College and Sullivan Square, MBTA buses 92 and 93 from Sullivan Square, and the Charlestown Ferry from the Navy Yard to Long Wharf."},
+    {"q": "Which school district serves Charlestown?", "a": "Boston Public Schools. School assignment is set by the district under its own citywide rules; review the district's profile with DESE."},
+    {"q": "What is happening with the Bunker Hill housing redevelopment?", "a": "The Boston Housing Authority and its private partners are replacing 1,100 public housing units with 2,699 public, income-restricted and market-rate rental units in phases. The first building broke ground in June 2023, according to the City of Boston."}
+  ],
+  "notes": "Written 2026-10-22. Population: 19,120 is from the Boston Planning & Development Agency (now the Boston Planning Department) Research Division report of June 2023, chart 'Boston Population by Neighborhood, 1980 to 2020'; neighborhoods are approximated by 2020 Census tracts. Labels and values are separate ascending blocks in the PDF's extracted text, so the pairing was made by position; it agrees with the BPDA's 2014 to 2018 ACS figure of 19,414. A fact-checker should confirm it against the chart image. Market: the Warren Group PDF has its own CHARLESTOWN row; the single-family YTD figures read identically on two fetches this session and match the single reading recorded in the Boston city record's notes. The PDF does not define the row's geography. The monthly December 'Number of Sales' cell is merged in the extracted text ('32 -33.3%') and was not used. The condo table is truncated at Brookline in the extracted text, so condo fields are null. Housing: tenure from the BPDA 'Boston in Context: Neighborhoods' (February 2020) Housing Tenure row 'Charlestown 9,536 9,050 94.9% 4,175 46.1% 4,875 53.9%'; the red-brick row house description is from Wikipedia. Navy Yard: Wikipedia gives 1800 and 1801 for its opening in different places; NPS says it opened in 1800, so 1800 is used, and '174 years' is 1800 to 1974. Charlestown's own city incorporation is given as 1847 in Wikipedia's infobox and 1848 in its text, so the record avoids the date. Bunker Hill Housing figures are from the City of Boston news release on the Housing Accelerator Fund (https://www.boston.gov/node/16261006, updated November 19, 2024); whether the 265-unit building actually started in 2025 was not confirmed. PLAN: Charlestown adoption date and the 1 Mystic Avenue approval rest on a Bisnow report (October 5, 2023), not a city page; the BPDA news pages redirected and could not be read. Buses 92 and 93 and the absence of commuter rail are from Wikipedia's Charlestown page; the ferry name and stops are from https://www.mbta.com/schedules/Boat-F4. Schools: Boston Public Schools (DESE orgcode 00350000, confirmed); assignment is by the district's own citywide rules and registration process (https://www.bostonpublicschools.org/enroll); nothing is said about individual schools. Fair housing: Wikipedia's ZIP-code race and ancestry tables, its 'yuppie gentrification' line, and the city neighborhood page's statistics on children and labor-force participation were left out. The Bunker Hill redevelopment is described as a housing project (unit counts and types), not by who lives there. Search notes not researched (search budget exhausted)."
+}
