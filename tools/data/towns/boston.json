@@ -52,6 +52,8 @@
     "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
     "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
     "period": "Calendar year 2025",
+    "citywide": false,
+    "geography": "the report's Boston row, which leaves out the neighborhoods it lists separately (Allston, Brighton, Charlestown, Dorchester, East Boston, Hyde Park, Jamaica Plain, Mattapan, Roslindale, Roxbury, South Boston and West Roxbury)",
     "sf_sales_2025": 50, "sf_sales_2024": 51,
     "sf_median_2025": 3092500, "sf_median_2024": 3100000,
     "condo_sales_2025": 1611, "condo_median_2025": 945000, "condo_median_2024": 970000,

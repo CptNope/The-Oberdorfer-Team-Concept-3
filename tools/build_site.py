@@ -637,7 +637,7 @@ def town_art(t, i=0):
 
 def community_card(R, t, i=0):
     m = t.get("market") or {}
-    med = f" · 2025 median {money(m['sf_median_2025'])}" if m.get("sf_median_2025") else ""
+    med = f" · 2025 median {money(m['sf_median_2025'])}" if m.get("sf_median_2025") and m.get("citywide", True) else ""
     if t["slug"] == "wakefield":
         media = f'<img src="{R}assets/img/photo/lake-quannapowitt.webp" alt="" loading="lazy" style="object-position:30% 50%">'
     else:
@@ -732,7 +732,7 @@ def page_town(t):
     facts.append(("Rail", rail_txt))
     if c.get("highways"): facts.append(("Highways", ", ".join(c["highways"][:4])))
     if sch.get("district"): facts.append(("Schools", f'<a href="{sch["dese_url"]}">{sch["district"]}</a> (DESE profile)'))
-    if m.get("sf_median_2025"): facts.append(("Single-family median", f"{money(m['sf_median_2025'])} in 2025 <span class=\"badge badge--source\">Warren Group</span>"))
+    if m.get("sf_median_2025"): facts.append(("Single-family median" if m.get("citywide", True) else f"Single-family median ({name} row)", f"{money(m['sf_median_2025'])} in 2025 <span class=\"badge badge--source\">Warren Group</span>"))
     if tax_fact(t): facts.append(("Property tax", tax_fact(t)))
     facts.append(("Guide updated", f'<time datetime="{UPDATED}">October 22, 2026</time>'))
     facts_html = "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in facts)
@@ -787,7 +787,7 @@ def page_town(t):
 <p class="stat-source">Source: <a href="{WARREN_URL}">The Warren Group, MA December 2025 Sales, Prices by Town</a>, single-family. The report lists {name} by village, with no town-wide figure, so none is given here. Calendar years 2024 and 2025. Not live data and not a valuation of any home.</p>'''
     if rows:
         market_html = f'''<table class="spec-table market-table"><thead><tr><th scope="col">Calendar year</th><th scope="col">2024</th><th scope="col">2025</th><th scope="col">Change</th></tr></thead><tbody>{rows}</tbody></table>
-<p class="stat-source">Source: <a href="{WARREN_URL}">The Warren Group, MA December 2025 Sales, Prices by Town</a>. Geography: town of {name}. Year-to-date figures through December, so calendar years 2024 and 2025. Not live data and not a valuation of any home.</p>'''
+<p class="stat-source">Source: <a href="{WARREN_URL}">The Warren Group, MA December 2025 Sales, Prices by Town</a>. Geography: {m.get("geography") or f"town of {name}"}. Year-to-date figures through December, so calendar years 2024 and 2025. Not live data and not a valuation of any home.</p>'''
     elif not market_html:
         market_html = '<p class="placeholder-block">Town-level sale prices to be added from a dated, sourced report.</p>'
     extra_market = t.get("extra_market_html", "")
@@ -915,7 +915,13 @@ def page_neighborhood(n, city):
         facts.append(("Population", f"{fmt_people(n['population_2020'])}" + (f" ({n['population_label']})" if n.get("population_label") else "")))
     facts.append(("Transit", rail_txt))
     if sch.get("district"): facts.append(("Schools", f'<a href="{sch["dese_url"]}">{sch["district"]}</a> (DESE profile)'))
-    if cm.get("sf_median_2025"): facts.append((f"{cname} single-family median", f"{money(cm['sf_median_2025'])} in 2025, citywide <span class=\"badge badge--source\">Warren Group</span>"))
+    nm = n.get("market") or {}
+    if nm.get("sf_median_2025"):
+        facts.append(("Single-family median", f"{money(nm['sf_median_2025'])} in 2025 ({name} row) <span class=\"badge badge--source\">Warren Group</span>"))
+    elif cm.get("sf_median_2025") and cm.get("citywide", True):
+        facts.append((f"{cname} single-family median", f"{money(cm['sf_median_2025'])} in 2025, citywide <span class=\"badge badge--source\">Warren Group</span>"))
+    elif cm.get("sf_median_2025"):
+        facts.append((f"{cname} row single-family median", f"{money(cm['sf_median_2025'])} in 2025 (central neighborhoods) <span class=\"badge badge--source\">Warren Group</span>"))
     if tax_fact(city): facts.append(("Property tax", tax_fact(city) + " (citywide)"))
     facts.append(("Guide updated", f'<time datetime="{UPDATED}">October 22, 2026</time>'))
     facts_html = "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in facts)
@@ -941,8 +947,13 @@ def page_neighborhood(n, city):
         market_html = f'''<table class="spec-table market-table"><thead><tr><th scope="col">Calendar year</th><th scope="col">2024</th><th scope="col">2025</th><th scope="col">Change</th></tr></thead><tbody><tr><th scope="row">Single-family median sale price</th><td class="tabular">{money(nm["sf_median_2024"]) if nm.get("sf_median_2024") else "n/a"}</td><td class="tabular">{money(nm["sf_median_2025"])}</td><td class="tabular">{fmt_pct(pct(nm.get("sf_median_2024"), nm["sf_median_2025"]))}</td></tr></tbody></table>
 <p class="stat-source">Source: <a href="{WARREN_URL}">The Warren Group, MA December 2025 Sales, Prices by Town</a>. Geography: {name}, as the report defines it. Calendar years 2024 and 2025. Not live data and not a valuation of any home.</p>'''
     else:
-        city_line = f"{cname}'s single-family median was {money(cm['sf_median_2025'])} in 2025" if cm.get("sf_median_2025") else f"{cname}'s figures are in the city guide"
-        market_html = f'''<p>Sale prices are reported for the city of {cname} as a whole, not by neighborhood. {city_line}, according to <a href="{WARREN_URL}">The Warren Group</a>. Prices within {name} depend on the street, the building and the type of home, so the best guide is recent closed sales nearby.</p>{link_arrow(R, f"{R}site/communities/{cslug}/#market", f"{cname} prices in the city guide")}'''
+        if cm.get("sf_median_2025") and not cm.get("citywide", True):
+            lead_line = f"The Warren Group does not report {name} on its own row; it falls within {cm.get('geography', 'the city row')}."
+            city_line = f"That row's single-family median was {money(cm['sf_median_2025'])} in 2025, across {fmt_people(cm['sf_sales_2025'])} sales" + (f", and its condominium median was {money(cm['condo_median_2025'])}" if cm.get("condo_median_2025") else "")
+        else:
+            lead_line = f"Sale prices are reported for the city of {cname} as a whole, not by neighborhood."
+            city_line = f"{cname}'s single-family median was {money(cm['sf_median_2025'])} in 2025" if cm.get("sf_median_2025") else f"{cname}'s figures are in the city guide"
+        market_html = f'''<p>{lead_line} {city_line}, according to <a href="{WARREN_URL}">The Warren Group</a>. Prices within {name} depend on the street, the building and the type of home, so the best guide is recent closed sales nearby.</p>{link_arrow(R, f"{R}site/communities/{cslug}/#market", f"{cname} prices in the city guide")}'''
     faq = n.get("faq", [])
     faq_html = "".join(f'<details{" open" if i == 0 else ""}><summary>{f["q"]}</summary><div class="accordion__body body-s"><p>{f["a"]}</p></div></details>' for i, f in enumerate(faq))
     sibs = {x["slug"]: x for x in city.get("neighborhoods", [])}
