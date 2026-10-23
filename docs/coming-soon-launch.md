@@ -102,14 +102,30 @@ Leave `oberdorferteam.com` without these. It gets the Google Workspace records i
 | Speed (primary) | HTTP/2, HTTP/3, 0-RTT, Early Hints and Speed Brain on; Rocket Loader off | Free-plan speed features; Rocket Loader can break block-theme scripts |
 | Caching (primary) | Browser Cache TTL: respect existing headers; Crawler Hints on | |
 | Cache rule (primary) | "Cache pages for visitors": host `oberdorferteam.com`, eligible for cache, except `/wp-admin`, `/wp-login.php`, `/wp-json`, `wp-cron.php`, preview URLs and the `wordpress_logged_in`, `wp-postpass` and `comment_author` cookies | HTML is served from Cloudflare's edge (default 2 hours, since WordPress sends no cache header). **After editing the page, purge it**: Caching → Configuration → Purge Everything |
+| Rate limiting (primary) | "Limit login attempts": more than 5 POSTs to `/wp-login.php` from one IP in 10 seconds are blocked for 10 seconds | The free plan's one rate-limiting rule; stops password guessing that gets past the challenge |
 | Security rules (primary) | Block `/xmlrpc.php`; Managed Challenge on `/wp-login.php` and everything under `/wp-admin` except `/wp-admin/admin-ajax.php` (front-end features call it) | Free plan allows five custom rules; the challenge is passed once per session |
 | AI crawlers | Allowed (search, agent and training); Bot Preference Sync **off** so `robots.txt` comes only from the theme | Matches the decisions page |
 | Redirects | Account-level Bulk Redirect list `oberdorfer_alias_domains`: the five other domains (and `www`) → `https://oberdorferteam.com/` with a 301, keeping the path and query string | Visitors are redirected at Cloudflare without reaching the server; the theme's redirect stays as a fallback |
 
-**Still to do after activation:**
-- Turn on **DNSSEC** in Cloudflare (DNS → Settings) for each zone and add the DS record it gives at GoDaddy (Domain → DNS → DNSSEC).
+**Activation:** all six zones were active on 2026-10-22; Google's public DNS returns Cloudflare's addresses for oberdorferteam.com.
+
+**DNSSEC:** turned on in Cloudflare for all six zones on 2026-10-22. Each zone is *pending* until its DS record is added at GoDaddy (Domain → DNS → DNSSEC → Add DS record). Every zone uses key tag **2371**, algorithm **13** (ECDSA P-256 SHA-256), digest type **2** (SHA-256), with its own digest:
+
+| Domain | Digest |
+|---|---|
+| oberdorferteam.com | `DBE4A4BFE1CC7EC4EB6E6435ED799356760CF330AC4E66ED4A80AF91DC8F903B` |
+| theoberdorferteam.com | `830B158B615D823E36AF602C4ABB70E99C079BFA651AA675CDA7F6950F59DA2F` |
+| oberdorferhomes.com | `B556B33D18220DFB6A346AEE6758C0B94E728C45A04B77AF6B0B0C10A080B226` |
+| oberdorferluxury.com | `B5B3A3849AFC7A0C9E41601E41D4F60E04445EE431B7EA3CB2A9E748C0B943EB` |
+| maluxuryhomes.com | `A4DB7F638AD2E54B23617D96A61E4E18A2ADF49C82B8E66F0D924A669CB5FF47` |
+| maluxury.homes | `0505F8ABECFEEDC63DD62D4C3999B9481180231E32D4AC150F1B32BEFEE87D1F` |
+
+Cloudflare's DNS → Settings page shows the same values and switches each zone to *active* once it sees the DS record (usually within an hour). **If the domains ever leave Cloudflare, remove the DS records at GoDaddy first**, or the domains stop resolving.
+
+**Still to do:**
+- Add the six DS records above at GoDaddy, if not yet done.
 - Check `curl -sI https://oberdorferteam.com/` shows `server: cloudflare` and, on a second request, `cf-cache-status: HIT`; check that each alias domain returns a 301 to `https://oberdorferteam.com/`.
-- When Google Workspace is chosen, add its MX, SPF, DKIM and DMARC records in **Cloudflare** DNS (DNS only, grey cloud).
+- When Google Workspace is chosen, add its MX, SPF, DKIM and DMARC records in **Cloudflare** DNS (DNS only, grey cloud). For receiving only, Cloudflare Email Routing can forward addresses such as `team@oberdorferteam.com` to Brandon's and Kaitlyn's Gmail for free.
 - Bot Fight Mode is left off: on the free plan it can't be bypassed for Let's Encrypt renewals or uptime monitors.
 
 ## 3. WordPress settings
