@@ -1,0 +1,141 @@
+{
+  "slug": "downtown",
+  "name": "Downtown",
+  "parent": "worcester",
+  "city_name": "Worcester",
+  "county": "Worcester County",
+  "region": "Central Massachusetts",
+  "official_site": "https://www.worcesterma.gov/",
+  "headline": [
+    "City Hall, the Common and Mechanics Hall,",
+    "with the commuter rail a short walk east."
+  ],
+  "answer": "Downtown is Worcester's city center, running along Main Street from Lincoln Square past City Hall and the 4.4-acre Common, with Union Station in Washington Square on its eastern side. Its housing is mostly apartments and condominiums in converted commercial and civic buildings, such as the 118 Courthouse Lofts in the former county courthouse. Union Station is the western end of the MBTA Framingham/Worcester Line, and the WRTA bus hub is on Foster Street.",
+  "meta": "Downtown Worcester guide: City Hall and the Common, Mechanics Hall, Union Station and the WRTA hub, and housing in converted historic buildings.",
+  "boundaries": {
+    "text": "Downtown takes in Lincoln Square at the north end of Main Street, Federal Square, Worcester Common with City Hall, and Washington Square with Union Station. The city does not publish a fixed neighborhood line; its Downtown Urban Revitalization Area, as amended, covers 137.1 acres with an irregular boundary.",
+    "source": "https://en.wikipedia.org/wiki/Neighborhoods_in_Worcester,_Massachusetts"
+  },
+  "overview": [
+    "Downtown Worcester grew around its common, set aside in 1669 and once about 20 acres. A meeting house built there in 1719 hosted the first town meeting in 1722, and the Common served as a training field where Minute Men drilled in 1775. The Common is now 4.4 acres at 99 Front Street, with City Hall, built in 1898 to a design by Peabody & Stearns, facing Main Street. Its memorials include the 1874 Soldiers' Memorial, a World War II memorial with water jets and engraved granite piers, and the Southwest Asia War Memorial, and in winter the Worcester Common Oval is used for skating.",
+    "Main Street is lined with commercial blocks from the second half of the 19th century and the early 20th. Mechanics Hall, built in 1857 at 321 Main Street for the Mechanics Association, holds the 1864 Hook organ and anchors a National Register district covering 282 to 343 Main Street. South of the Common, the Main and Franklin Streets Historic District, listed in 2022, covers about four acres of Second Empire, Queen Anne, Classical Revival and Romanesque buildings; the area turned from houses to a dense commercial district over the 60 years after 1870, and its largest buildings went up between 1910 and 1914, including the Park Building and the Bancroft Hotel. The Hanover Theatre, opened in 1904 as the Franklin Square Theatre at 2 Southbridge Street, reopened for live performance in March 2008.",
+    "Downtown is part of a Downtown Urban Revitalization Plan adopted by the City and the Worcester Redevelopment Authority in 2016. As amended, its area covers 137.1 acres, about 137 parcels and 412 properties, including about 214 residential condominium units, and it also takes in Polar Park and the Canal District. Housing downtown is largely in reused buildings: the former Worcester County Courthouse at 2 Main Street, dating to 1845, was converted between 2019 and 2021 into 118 apartments called the Courthouse Lofts. A July 2023 Telegram & Gazette column counted more than 2,000 apartments built or planned across downtown and the Canal District, most of them studios and one-bedrooms."
+  ],
+  "housing": {
+    "text": "Downtown housing is mostly apartments and condominiums in mid-rise and converted buildings rather than houses. The city's Downtown Urban Revitalization Area includes about 214 residential condominium units among its 412 properties. Conversions include the Courthouse Lofts, 118 units in the former Worcester County Courthouse at Lincoln Square, completed in 2021.",
+    "source": "https://www.worcesterma.gov/node/23917"
+  },
+  "areas": [
+    {
+      "name": "Lincoln Square",
+      "line": "The north end of Main Street, where the former Worcester County Courthouse at 2 Main Street sits within the Institutional District, a National Register district of properties on Lincoln and Wheaton Squares and Salisbury and Tuckerman Streets.",
+      "source": "https://en.wikipedia.org/wiki/Worcester_County_Courthouse"
+    },
+    {
+      "name": "City Hall and the Common",
+      "line": "The civic center at 455 Main Street: the 1898 City Hall and the 4.4-acre Common beside it (park address 99 Front Street), listed together on the National Register in 1978.",
+      "source": "https://en.wikipedia.org/wiki/Worcester_City_Hall_and_Common"
+    },
+    {
+      "name": "Main and Franklin Streets Historic District",
+      "line": "About four acres directly south of City Hall and the Common, roughly bounded by Main, Franklin, Federal, Portland and Salem Streets, with commercial buildings from about 1870 on and its largest from 1910 to 1914; listed on the National Register on May 27, 2022.",
+      "source": "https://en.wikipedia.org/wiki/Main_and_Franklin_Streets_Historic_District"
+    },
+    {
+      "name": "Washington Square",
+      "line": "The eastern edge of downtown, where Union Station (1911) stands at 2 Washington Square, served by the commuter rail, Amtrak and intercity buses.",
+      "source": "https://en.wikipedia.org/wiki/Union_Station_(Worcester,_Massachusetts)"
+    }
+  ],
+  "commute": {
+    "rail": [
+      {
+        "line": "Framingham/Worcester Line",
+        "stations": ["Worcester (Union Station, 2 Washington Square)"]
+      }
+    ],
+    "rail_source": "https://www.mbta.com/schedules/CR-Worcester/timetable",
+    "highways": ["I-290"],
+    "text": "Worcester station at Union Station is the western end of the MBTA Framingham/Worcester Line, which runs through Grafton, Westborough and Framingham to Boston's South Station; Amtrak's Lake Shore Limited also stops there. The WRTA's hub is at 60 Foster Street, and the WRTA Advisory Board voted in April 2026 to keep buses fare-free until at least June 30, 2027."
+  },
+  "schools": {
+    "district": "Worcester Public Schools",
+    "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=03480000&orgtypecode=5"
+  },
+  "places": [
+    {
+      "name": "City Hall Common",
+      "line": "4.4 acres at 99 Front Street with an amphitheater, the 1874 Soldiers' Memorial, a World War II memorial and the Worcester Common Oval for winter skating; summer events include the Out to Lunch festival and farmers' market.",
+      "source": "https://www.worcesterma.gov/city-parks/city-hall-common"
+    },
+    {
+      "name": "Worcester City Hall",
+      "line": "Built in 1898 at 455 Main Street, designed by Peabody & Stearns and built by the Norcross Brothers; listed on the National Register with the Common in 1978.",
+      "source": "https://en.wikipedia.org/wiki/Worcester_City_Hall_and_Common"
+    },
+    {
+      "name": "Mechanics Hall",
+      "line": "A Renaissance Revival concert hall at 321 Main Street, built in 1857 to a design by Boyden & Ball, home to the 1864 E. & G.G. Hook organ with 3,504 pipes; listed on the National Register in 1972.",
+      "source": "https://en.wikipedia.org/wiki/Mechanics_Hall_(Worcester,_Massachusetts)"
+    },
+    {
+      "name": "The Hanover Theatre",
+      "line": "Opened in 1904 as the Franklin Square Theatre at 2 Southbridge Street, remodeled by Thomas W. Lamb in 1926, and reopened in March 2008 as a 2,300-seat performing arts theater.",
+      "source": "https://en.wikipedia.org/wiki/Hanover_Theatre_and_Conservancy_for_the_Performing_Arts"
+    },
+    {
+      "name": "Union Station",
+      "line": "A French Renaissance Revival station by Watson & Huckel at 2 Washington Square, opened in 1911, restored by the Worcester Redevelopment Authority and reopened to trains on June 20, 2000.",
+      "source": "https://en.wikipedia.org/wiki/Union_Station_(Worcester,_Massachusetts)"
+    },
+    {
+      "name": "Former Worcester County Courthouse",
+      "line": "A Greek Revival and Classical Revival courthouse at 2 Main Street, begun in 1845 to a design by Ammi B. Young, converted into the 118-unit Courthouse Lofts between 2019 and 2021, with a small museum about the cyclist Major Taylor.",
+      "source": "https://en.wikipedia.org/wiki/Worcester_County_Courthouse"
+    }
+  ],
+  "history": [
+    {
+      "year": "1669",
+      "text": "The Common was established as open land; it once covered about 20 acres.",
+      "source": "https://en.wikipedia.org/wiki/Worcester_City_Hall_and_Common"
+    },
+    {
+      "year": "1857",
+      "text": "Mechanics Hall was completed on Main Street for the Mechanics Association.",
+      "source": "https://en.wikipedia.org/wiki/Mechanics_Hall_(Worcester,_Massachusetts)"
+    },
+    {
+      "year": "1898",
+      "text": "City Hall was built at 455 Main Street, designed by Peabody & Stearns.",
+      "source": "https://en.wikipedia.org/wiki/Worcester_City_Hall_and_Common"
+    },
+    {
+      "year": "2000",
+      "text": "Union Station reopened to Amtrak and MBTA trains on June 20 after a $32 million renovation by the Worcester Redevelopment Authority.",
+      "source": "https://en.wikipedia.org/wiki/Union_Station_(Worcester,_Massachusetts)"
+    }
+  ],
+  "market": null,
+  "nearby": ["canal-district", "shrewsbury-street", "main-south", "grafton-hill"],
+  "search_notes": "Not researched in this session: the shared web search budget ran out before ranking checks for 'downtown Worcester MA real estate' and 'living in downtown Worcester' could be run.",
+  "faq": [
+    {
+      "q": "Is there a median home price for downtown Worcester?",
+      "a": "The Warren Group reports Worcester only as a whole city, so there is no downtown figure. Citywide, the median single-family sale price for calendar year 2025 was $430,000, across 884 sales, according to its MA December 2025 Sales, Prices by Town report."
+    },
+    {
+      "q": "Does downtown Worcester have commuter rail?",
+      "a": "Yes. Worcester station at Union Station, 2 Washington Square, is the western end of the MBTA Framingham/Worcester Line to Boston's South Station, and Amtrak's Lake Shore Limited also stops there."
+    },
+    {
+      "q": "What kind of housing is in downtown Worcester?",
+      "a": "Mostly apartments and condominiums, many in converted buildings. The city's Downtown Urban Revitalization Area includes about 214 residential condominium units, and the former county courthouse at 2 Main Street became the 118-unit Courthouse Lofts between 2019 and 2021."
+    },
+    {
+      "q": "Which school district serves downtown Worcester?",
+      "a": "Worcester Public Schools. School assignment is set by the district by address; review the district's profile with DESE."
+    }
+  ],
+  "notes": "Written 2026-10-22. Boundaries: the city does not publish a downtown neighborhood line; the record uses the parts Wikipedia lists for Downtown (Lincoln Square, Federal Square, Worcester Common) plus Washington Square, which the Worcester city record already places downtown, and the URP acreage from the city's Urban Renewal page (https://www.worcesterma.gov/node/23917). The 2016 URP adoption date comes from the EPA's Polar Park brownfields page (https://epa.gov/brownfields/r1-success-story-polar-park-worcester-mass); the city page lists amendments but not the adoption date. The 2,000-apartment figure is from a Telegram & Gazette opinion column by Raymond V. Mariano (July 28, 2023, republished at https://www.yahoo.com/news/ray-mariano-changes-shrewsbury-street-090626587.html) and is attributed as such. Left out: a 312-unit conversion of 340 Main Street proposed by SilverBrick in September 2020 (Banker & Tradesman) because its completion could not be confirmed; the Declaration of Independence reading on the Common, because the city's Common page ('first read publicly in New England') and the city record ('first public reading in Massachusetts') word it differently. The WRTA hub address (60 Foster Street) is from Wikipedia's WRTA article; Wikipedia's Union Station article also calls the bus terminal beside the station a WRTA hub, so the two descriptions may reflect different dates. WRTA fare-free status is from This Week in Worcester (April 2026 vote). No population is given because no source reports one for this boundary. Market set to null: the Warren Group table lists Worcester only citywide. Schools: assignment is by address and set by the district. Fair housing: the city's Common Oval page calls it 'family-friendly'; that wording was not used."
+}

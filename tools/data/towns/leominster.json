@@ -6,59 +6,191 @@
   "population_2020": 43782,
   "population_source": "https://en.wikipedia.org/wiki/Leominster,_Massachusetts",
   "official_site": "https://www.leominster-ma.gov/",
-  "headline": ["A city that once made combs,", "with a state forest at its back door."],
+  "headline": [
+    "A city that once made combs,",
+    "with a state forest at its back door."
+  ],
   "answer": "Leominster is a city of 43,782 people (2020 Census) in northern Worcester County, just south of Fitchburg. Its housing includes worker cottages, three-deckers and duplexes from its comb and plastics years. Route 2 and I-190 pass through, and North Leominster station is on the MBTA Fitchburg Line to Boston's North Station.",
   "overview": [
     "Leominster grew out of Lancaster. Permanent settlement began around 1725, the town was established in 1740, and it became a city in 1915. Its factories gave it a distinct story: comb shops lined Exchange Street in Morse Hollow, and after celluloid was invented in 1868 Leominster became known as the Comb City. Plastics followed, and the plastic pink flamingo lawn ornament was invented here in 1956. John Chapman, the orchard planter known as Johnny Appleseed, was born here in 1774; a granite marker stands on Johnny Appleseed Lane.",
-    "Monument Square has been the civic and commercial center since the 1800s, and the railroad has run through North Leominster since 1841, where the commuter rail station now sits on Nashua Street. Open land is close. Leominster State Forest offers swimming at Crow Hill Pond, the Crow Hill Ledges and a stretch of the Midstate Trail. Sholan Farms, bought with the city's help, grows apples, berries and pumpkins on Pleasant Street. Phase One of the Twin Cities Rail Trail now links the business districts of Leominster and Fitchburg."
+    "Monument Square has been the civic and commercial center since the 1800s, and the railroad has run through North Leominster since 1841, where the commuter rail station now sits on Nashua Street. Open land is close. Leominster State Forest offers swimming at Crow Hill Pond, the Crow Hill Ledges and a stretch of the Midstate Trail. Sholan Farms, bought with the city's help, grows apples, berries and pumpkins on Pleasant Street. Phase One of the Twin Cities Rail Trail now links the business districts of Leominster and Fitchburg.",
+    "Recent change in Leominster has come as much through infrastructure as through housing. Phase One of the Twin Cities Rail Trail, from Carter Park to First Street in Fitchburg, was completed by a bicycle and pedestrian bridge over Route 2, celebrated on August 3, 2024, and a $25 million second phase is planned to link downtown Leominster with Fitchburg's intermodal center. Heavy rain on September 11, 2023 caused significant flooding and a state of emergency. The state lists Leominster as compliant with the MBTA Communities law as of October 21, 2026. The city keeps a single tax rate for all property, and that rate has fallen each year since FY2021, from $18.13 to $13.67 per $1,000 in FY2026."
   ],
   "housing": {
-    "text": "The Massachusetts Historical Commission's survey of Leominster records worker cottages east of the center along Water, Spruce and Mechanic Streets and in Lincoln Terrace, along with double houses, gable-end duplexes and three-deckers, which it notes were especially common in the early 1900s. Larger Queen Anne and Colonial Revival houses line the West Side and the hillside streets northwest of Main Street.",
-    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"
+    "text": "Single-family houses make up most of Leominster's residential parcels: for FY2026 the city's assessors counted 8,317 single-family parcels, 1,933 condominiums, 832 two-family and 334 three-family houses, and 327 apartment properties. The 2020 Census counted 18,732 housing units. The Massachusetts Historical Commission's survey records worker cottages east of the center along Water, Spruce and Mechanic Streets and in Lincoln Terrace, along with double houses, gable-end duplexes and three-deckers, which it notes were especially common in the early 1900s. Larger Queen Anne and Colonial Revival houses line the West Side and the hillside streets northwest of Main Street.",
+    "source": "https://www.leominster-ma.gov/Archive/ViewFile/Item/359"
   },
   "villages": [
-    {"name": "Monument Square and the Center", "line": "The historic civic and commercial center along Monoosnock Brook, around the old common.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"},
-    {"name": "North Leominster", "line": "A secondary industrial and residential center on the North Nashua River and the railroad, home to the commuter rail station.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"},
-    {"name": "West Side", "line": "A residential district west of Main Street and north of West Street.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"},
-    {"name": "Morse Hollow", "line": "The former comb-factory area along Exchange Street, with a residential cluster around Elm and Exchange Streets.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"},
-    {"name": "Lincoln Terrace", "line": "A neighborhood of early worker housing east of Central Street.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"},
-    {"name": "French Hill", "line": "One of the city's commonly named neighborhoods.", "source": "https://en.wikipedia.org/wiki/Leominster,_Massachusetts"}
+    {
+      "name": "Monument Square and the Center",
+      "line": "The historic civic and commercial center along Monoosnock Brook, around the old common.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"
+    },
+    {
+      "name": "North Leominster",
+      "line": "A secondary industrial and residential center on the North Nashua River and the railroad, home to the commuter rail station.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"
+    },
+    {
+      "name": "West Side",
+      "line": "A residential district west of Main Street and north of West Street.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"
+    },
+    {
+      "name": "Morse Hollow",
+      "line": "The former comb-factory area along Exchange Street, with a residential cluster around Elm and Exchange Streets.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"
+    },
+    {
+      "name": "Lincoln Terrace",
+      "line": "A neighborhood of early worker housing east of Central Street.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"
+    },
+    {
+      "name": "French Hill",
+      "line": "One of the city's commonly named neighborhoods.",
+      "source": "https://en.wikipedia.org/wiki/Leominster,_Massachusetts"
+    }
   ],
   "commute": {
-    "rail": [{"line": "Fitchburg Line", "stations": ["North Leominster (44 Nashua Street)"]}],
+    "rail": [
+      {
+        "line": "Fitchburg Line",
+        "stations": [
+          "North Leominster (44 Nashua Street)"
+        ]
+      }
+    ],
     "rail_source": "https://www.mbta.com/stops/place-FR-0451",
-    "highways": ["Route 2", "I-190", "Route 12", "Route 13", "Route 117"],
+    "highways": [
+      "Route 2",
+      "I-190",
+      "Route 12",
+      "Route 13",
+      "Route 117"
+    ],
     "text": "North Leominster station is on the MBTA Fitchburg Line, which runs to North Station in Boston. Route 2, I-190 and Routes 12, 13 and 117 all pass through the city."
   },
-  "schools": {"district": "Leominster Public Schools", "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=01530000&orgtypecode=5"},
+  "schools": {
+    "district": "Leominster Public Schools",
+    "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=01530000&orgtypecode=5"
+  },
   "places": [
-    {"name": "Leominster State Forest", "line": "A DCR forest with swimming and trout fishing at Crow Hill Pond, the Crow Hill Ledges, Paradise Pond and part of the Midstate Trail; the beach entrance is on Fitchburg Road in Westminster.", "source": "https://www.mass.gov/locations/leominster-state-forest"},
-    {"name": "Sholan Farms", "line": "A preserved orchard at 1125 Pleasant Street with pick-your-own fruit, crop fields and walking trails.", "source": "https://freedomsway.org/?p=15335"},
-    {"name": "Doyle Community Park", "line": "A former estate at 464 Abbott Avenue with landscaped grounds, including Pierce Park, and the Doyle Center.", "source": "https://freedomsway.org/?p=6440"},
-    {"name": "Twin Cities Rail Trail", "line": "Phase One runs from Carter Park in Leominster to First Street in Fitchburg, including a new bridge over Route 2.", "source": "https://www.mass.gov/news/healey-driscoll-administration-celebrates-route-2-multimodal-bridge"},
-    {"name": "Johnny Appleseed birthplace marker", "line": "A historical marker on Johnny Appleseed Lane noting John Chapman's birth nearby in 1774.", "source": "https://www.hmdb.org/m.asp?m=32789"}
+    {
+      "name": "Leominster State Forest",
+      "line": "A DCR forest with swimming and trout fishing at Crow Hill Pond, the Crow Hill Ledges, Paradise Pond and part of the Midstate Trail; the beach entrance is on Fitchburg Road in Westminster.",
+      "source": "https://www.mass.gov/locations/leominster-state-forest"
+    },
+    {
+      "name": "Sholan Farms",
+      "line": "A preserved orchard at 1125 Pleasant Street with pick-your-own fruit, crop fields and walking trails.",
+      "source": "https://freedomsway.org/?p=15335"
+    },
+    {
+      "name": "Doyle Community Park",
+      "line": "A former estate at 464 Abbott Avenue with landscaped grounds, including Pierce Park, and the Doyle Center.",
+      "source": "https://freedomsway.org/?p=6440"
+    },
+    {
+      "name": "Twin Cities Rail Trail",
+      "line": "Phase One runs from Carter Park in Leominster to First Street in Fitchburg, including a new bridge over Route 2.",
+      "source": "https://www.mass.gov/news/healey-driscoll-administration-celebrates-route-2-multimodal-bridge"
+    },
+    {
+      "name": "Johnny Appleseed birthplace marker",
+      "line": "A historical marker on Johnny Appleseed Lane noting John Chapman's birth nearby in 1774.",
+      "source": "https://www.hmdb.org/m.asp?m=32789"
+    },
+    {
+      "name": "Barrett Park",
+      "line": "One of the city's main parks and home to the Recreation Department's offices.",
+      "source": "https://en.wikipedia.org/wiki/Leominster,_Massachusetts"
+    },
+    {
+      "name": "Leominster Public Library",
+      "line": "Established in 1856, the library moved between locations until its permanent building opened in 1910.",
+      "source": "https://en.wikipedia.org/wiki/Leominster,_Massachusetts"
+    }
   ],
   "history": [
-    {"year": "1740", "text": "Established as the town of Leominster, after settlement from Lancaster began around 1725.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"},
-    {"year": "1868", "text": "Celluloid was invented, reshaping comb-making and earning Leominster the nickname Comb City.", "source": "https://en.wikipedia.org/wiki/Leominster,_Massachusetts"},
-    {"year": "1915", "text": "Incorporated as a city.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"}
+    {
+      "year": "1740",
+      "text": "Established as the town of Leominster, after settlement from Lancaster began around 1725.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"
+    },
+    {
+      "year": "1774",
+      "text": "John Chapman, later known as Johnny Appleseed, was born in Leominster.",
+      "source": "https://www.hmdb.org/m.asp?m=32789"
+    },
+    {
+      "year": "1868",
+      "text": "Celluloid was invented, reshaping comb-making and earning Leominster the nickname Comb City.",
+      "source": "https://en.wikipedia.org/wiki/Leominster,_Massachusetts"
+    },
+    {
+      "year": "1915",
+      "text": "Incorporated as a city.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/leo.pdf"
+    },
+    {
+      "year": "1956",
+      "text": "The plastic pink flamingo lawn ornament was invented in Leominster for Union Products.",
+      "source": "https://en.wikipedia.org/wiki/Leominster,_Massachusetts"
+    }
   ],
   "market": {
     "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
     "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
     "period": "Calendar year 2025",
-    "sf_sales_2025": 258, "sf_sales_2024": 257,
-    "sf_median_2025": 475500, "sf_median_2024": 462000,
-    "condo_sales_2025": null, "condo_median_2025": null, "condo_median_2024": null,
+    "sf_sales_2025": 258,
+    "sf_sales_2024": 257,
+    "sf_median_2025": 475500,
+    "sf_median_2024": 462000,
+    "condo_sales_2025": null,
+    "condo_median_2025": null,
+    "condo_median_2024": null,
     "reading_1": "LEOMINSTER | YTD Number of Sales 257 258 0.4% | YTD Median Sale Price $462,000 $475,500 2.9% (columns: Dec 2024, Dec 2025, Percent Change)",
     "reading_2": "LEOMINSTER | YTD Number of Sales 257 258 0.4% | YTD Median Sale Price $462,000 $475,500 2.9% (columns: Dec 2024, Dec 2025, Percent Change)"
   },
-  "nearby": ["fitchburg", "lunenburg", "lancaster", "sterling", "princeton", "westminster"],
+  "tax": {
+    "fy": "FY2026",
+    "residential_rate": 13.67,
+    "commercial_rate": 13.67,
+    "residential_exemption": false,
+    "source": "https://www.leominster-ma.gov/Archive/ViewFile/Item/359",
+    "note": "Single rate: the city's FY2026 classification hearing booklet lists one rate per year in its ten-year history ($13.67 for FY26, $14.03 for FY25). The booklet does not state the adopted residential factor or mention a residential exemption."
+  },
+  "nearby": [
+    "fitchburg",
+    "lunenburg",
+    "lancaster",
+    "sterling",
+    "princeton",
+    "westminster"
+  ],
   "search_notes": "'Leominster MA real estate agent' returns individual agent profiles on directories (RealTrends, HomeLight, Experience.com) rather than any town page. 'Moving to Leominster MA' is led by mover sites (Allied, HireAHelper, MoveAdvisor, Wheaton), Redfin's housing-market page and Livability. Nothing ranking explains the neighborhoods, the Fitchburg Line stop or the comb-and-plastics history, so a sourced local guide has clear room.",
   "faq": [
-    {"q": "What is the median home price in Leominster, MA?", "a": "The median single-family sale price in Leominster was $475,500 in calendar year 2025, up from $462,000 in 2024, across 258 sales (257 in 2024), according to The Warren Group's MA December 2025 Sales, Prices by Town report."},
-    {"q": "Does Leominster have commuter rail?", "a": "Yes. North Leominster station, at 44 Nashua Street, is on the MBTA Fitchburg Line, which runs to North Station in Boston."},
-    {"q": "Which school district serves Leominster?", "a": "Leominster Public Schools. Review its profile with DESE."}
+    {
+      "q": "What is the median home price in Leominster, MA?",
+      "a": "The median single-family sale price in Leominster was $475,500 in calendar year 2025, up from $462,000 in 2024, across 258 sales (257 in 2024), according to The Warren Group's MA December 2025 Sales, Prices by Town report."
+    },
+    {
+      "q": "Does Leominster have commuter rail?",
+      "a": "Yes. North Leominster station, at 44 Nashua Street, is on the MBTA Fitchburg Line, which runs to North Station in Boston."
+    },
+    {
+      "q": "Which school district serves Leominster?",
+      "a": "Leominster Public Schools. Review its profile with DESE."
+    },
+    {
+      "q": "What is the property tax rate in Leominster, MA?",
+      "a": "Leominster's FY2026 tax rate is $13.67 per $1,000 of assessed value, down from $14.03 in FY2025, according to the city's FY2026 classification hearing booklet. The city lists a single rate for all classes of property."
+    },
+    {
+      "q": "Is there a rail trail in Leominster?",
+      "a": "Yes. Phase One of the Twin Cities Rail Trail runs from Carter Park in Leominster to First Street in Fitchburg, crossing Route 2 on a bridge celebrated by the state on August 3, 2024; Phase Two is planned."
+    }
   ],
-  "notes": "Condo fields are null: in both WebFetch readings the converted PDF text of the condo table ended at 'BROOKLI', so Leominster's condo rows could not be read. Doyle Community Park acreage differs by source (157 acres on Freedom's Way, 167 on Wikipedia), so it is omitted. The Freedom's Way page credits The Trustees at the Doyle Center but does not state current ownership. French Hill is listed on Wikipedia only. The MHC survey is from the 1980s. Wikipedia credits the population figure to the 2020 Census."
+  "notes": "Condo fields are null: in both WebFetch readings the converted PDF text of the condo table ended at 'BROOKLI', so Leominster's condo rows could not be read. Doyle Community Park acreage differs by source (157 acres on Freedom's Way, 167 on Wikipedia), so it is omitted. The Freedom's Way page credits The Trustees at the Doyle Center but does not state current ownership. French Hill is listed on Wikipedia only. The MHC survey is from the 1980s. Wikipedia credits the population figure to the 2020 Census. Deepened 2026-10-22: added a third overview paragraph (rail trail details from the state release of Aug 3, 2024, https://www.mass.gov/news/healey-driscoll-administration-celebrates-route-2-multimodal-bridge; Sept 11, 2023 flooding from Wikipedia; MBTA Communities from the state's compliance list 'As of October 21, 2026', no. 63 Leominster, https://www.mass.gov/doc/mbta-communities-district-compliance-letters/download; tax rate history from the FY2026 classification hearing booklet, https://www.leominster-ma.gov/Archive/ViewFile/Item/359). Which district the state approved, and when, was not found. Housing text now opens with FY2026 parcel counts by use class from the same booklet (classes 101, 102, 104, 105 and 111 to 125) and the 2020 Census unit count via Wikipedia; no Leominster housing production plan or master plan could be opened (mass.gov did not serve one and the city site refused the fetch), so owner occupancy and year built are not given. Added places Barrett Park and Leominster Public Library and history entries 1774 and 1956 (Wikipedia; hmdb marker for Chapman). Tax: $13.67 FY2026 from the booklet's ten-year history; the booklet calls its levy page preliminary and does not state the adopted factor, so the single rate rests on the history table and MMA's profile showing equal rates ($14.03, matching FY2025). The DLS Databank report did not render through the fetch tool. The Wikipedia origin of the French Hill name refers to who settled there and was not used. Added FAQs on the tax rate and the rail trail."
 }

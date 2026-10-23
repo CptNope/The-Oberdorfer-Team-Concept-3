@@ -6,33 +6,78 @@
   "population_2020": 88923,
   "population_source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts",
   "official_site": "https://www.newtonma.gov/",
-  "headline": ["Learn the villages first,", "then find the street that fits."],
+  "headline": [
+    "Learn the villages first,",
+    "then find the street that fits."
+  ],
   "answer": "Newton is a city of thirteen villages in Middlesex County, about eight miles west of downtown Boston. Much of its housing is older: as of the 2000 Census, only 19 percent of its homes had been built after 1960. The Green Line D branch and the Framingham/Worcester commuter rail line connect it to Boston.",
   "overview": [
     "Newton sits about eight miles west of downtown Boston and has no single center. Instead it is a patchwork of thirteen villages, from Auburndale and Waban to Nonantum and Chestnut Hill, and many of them have a small downtown of their own. The villages have no legal boundaries, so addresses can puzzle first-time visitors. The city goes by The Garden City. It began as Cambridge Village in 1681, took the name Newton in 1766 and became a city in 1874.",
-    "Water and transit shape the map. The Charles River runs along the city's north and west sides, past Newton Lower Falls and Newton Upper Falls, both former small industrial sites, and under Echo Bridge at Hemlock Gorge. The Green Line D branch runs through the middle of the city, with stops including Newton Centre and Riverside, while the Framingham/Worcester Line stops at Newtonville, West Newton and Auburndale. Commonwealth Avenue carries the Boston Marathon over Heartbreak Hill, between Walnut Street and Boston College."
+    "Water and transit shape the map. The Charles River runs along the city's north and west sides, past Newton Lower Falls and Newton Upper Falls, both former small industrial sites, and under Echo Bridge at Hemlock Gorge. The Green Line D branch runs through the middle of the city, with stops including Newton Centre and Riverside, while the Framingham/Worcester Line stops at Newtonville, West Newton and Auburndale. Commonwealth Avenue carries the Boston Marathon over Heartbreak Hill, between Walnut Street and Boston College.",
+    "Most of Newton's land is residential: in the city's FY2026 classification hearing packet, residential property made up 92.23 percent of taxable value, and 16,947 of its 26,888 residential parcels were single-family homes, alongside 5,883 condominiums and 2,490 two-family houses. The largest planned housing site is Riverside, the Green Line terminus, where the MBTA approved an 85-year lease of part of the parking lots for mixed-use development in 2009 and the city rezoned the site for a larger project in late 2019. A revised plan the MBTA approved in August 2024 calls for 545 apartments and a garage in a first phase, with an office or lab building and about 100 more units planned for the early 2030s. Under the state's MBTA Communities law, Newton appears on the state's list of compliant municipalities."
   ],
   "housing": {
-    "text": "A 2003 city survey of mid-20th-century housing reported that, as of the 1960 Census, 70.5 percent of Newton's housing units were single-family dwellings and 20.5 percent were two-family homes. It also noted that, as of the 2000 Census, only 19 percent of the city's dwellings had been built after 1960.",
+    "text": "A 2003 city survey of mid-20th-century housing reported that, as of the 1960 Census, 70.5 percent of Newton's housing units were single-family dwellings and 20.5 percent were two-family homes. It also noted that, as of the 2000 Census, only 19 percent of the city's dwellings had been built after 1960. The 2020 Census counted 33,320 housing units in the city. In the FY2026 assessment, 16,947 of 26,888 residential parcels were single-family, 5,883 were condominiums, 2,490 two-family, 252 three-family and 159 apartment buildings.",
     "source": "https://newtonma.gov/home/showpublisheddocument/78011/637738815000930000"
   },
   "villages": [
-    {"name": "Newton Centre", "line": "Village built around the Green Line station of the same name, near Crystal Lake.", "source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts"},
-    {"name": "Newtonville", "line": "Northern village with a stop on the Framingham/Worcester commuter rail line.", "source": "https://www.mbta.com/schedules/CR-Worcester/timetable"},
-    {"name": "West Newton", "line": "Northern village with its own commuter rail stop on the Framingham/Worcester Line.", "source": "https://www.mbta.com/schedules/CR-Worcester/timetable"},
-    {"name": "Auburndale", "line": "Village on the Charles River, once home to Norumbega Park, with a commuter rail stop.", "source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts"},
-    {"name": "Newton Lower Falls", "line": "Former small industrial site on the Charles River, near the end of the Green Line D branch.", "source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts"},
-    {"name": "Newton Upper Falls", "line": "Former small industrial site on the Charles River.", "source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts"},
-    {"name": "Chestnut Hill", "line": "Unincorporated village near the Boston line, crossed north to south by Hammond Pond Parkway.", "source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts"},
-    {"name": "Oak Hill", "line": "Southern village that was farmland until the 1950s, when Newton grew more densely settled.", "source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts"}
+    {
+      "name": "Newton Centre",
+      "line": "Newton's largest village downtown, a triangle of shops around Beacon Street, Centre Street and Langley Road, with the Green Line station on Union Street and Crystal Lake just to the east.",
+      "source": "https://en.wikipedia.org/wiki/Newton_Centre,_Massachusetts"
+    },
+    {
+      "name": "Newtonville",
+      "line": "A commuter suburb that grew after the railroad arrived in 1834, with its center along Walnut Street, a Framingham/Worcester Line stop, and a Star Market built on air rights over the Massachusetts Turnpike.",
+      "source": "https://en.wikipedia.org/wiki/Newtonville,_Massachusetts"
+    },
+    {
+      "name": "West Newton",
+      "line": "Northern village with a Framingham/Worcester Line stop; its square on Washington Street is a National Register district, and West Newton Hill and Webster Park are historic residential districts listed in 1986.",
+      "source": "https://en.wikipedia.org/wiki/West_Newton,_Massachusetts"
+    },
+    {
+      "name": "Auburndale",
+      "line": "Western village on the Charles River, split by the Turnpike, with a commuter rail stop, Lasell University, the Plummer Memorial Library and a local historic district of about 275 properties established in 2005; Norumbega Park operated here from 1897 to 1963.",
+      "source": "https://en.wikipedia.org/wiki/Auburndale,_Massachusetts"
+    },
+    {
+      "name": "Newton Upper Falls",
+      "line": "Mill village on the Charles River, where Newton's first mill was built in 1688; about 60 acres between Route 9 and Elliot Street form a National Register district listed in 1986, and Eliot station on the Green Line serves it.",
+      "source": "https://en.wikipedia.org/wiki/Newton_Upper_Falls,_Massachusetts"
+    },
+    {
+      "name": "Newton Highlands",
+      "line": "A village platted as a commuter suburb after the Charles River Railroad was built in 1852, with late 19th-century Victorian houses, a historic district around its center, and Newton Highlands and Eliot stations on the Green Line D branch.",
+      "source": "https://en.wikipedia.org/wiki/Newton_Highlands,_Massachusetts"
+    }
   ],
   "commute": {
     "rail": [
-      {"line": "Framingham/Worcester Line", "stations": ["Newtonville", "West Newton", "Auburndale"]},
-      {"line": "Green Line D branch (subway)", "stations": ["Newton Centre", "Riverside"]}
+      {
+        "line": "Framingham/Worcester Line",
+        "stations": [
+          "Newtonville",
+          "West Newton",
+          "Auburndale"
+        ]
+      },
+      {
+        "line": "Green Line D branch (subway)",
+        "stations": [
+          "Newton Centre",
+          "Riverside"
+        ]
+      }
     ],
     "rail_source": "https://www.mbta.com/schedules/CR-Worcester/timetable",
-    "highways": ["Massachusetts Turnpike (I-90)", "I-95/Route 128", "Route 9", "Route 30 (Commonwealth Avenue)", "Route 16"],
+    "highways": [
+      "Massachusetts Turnpike (I-90)",
+      "I-95/Route 128",
+      "Route 9",
+      "Route 30 (Commonwealth Avenue)",
+      "Route 16"
+    ],
     "text": "The Framingham/Worcester commuter rail line stops at three northern villages, and the Green Line D branch runs through the city's center to Riverside. The Massachusetts Turnpike crosses the northern villages, and I-95/Route 128 runs along the western edge near Lower Falls."
   },
   "schools": {
@@ -40,16 +85,73 @@
     "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=02070000&orgtypecode=5"
   },
   "places": [
-    {"name": "Crystal Lake", "line": "A natural lake in Newton Centre with a city-run swim beach, bathhouse and summer lifeguards.", "source": "https://www.newtonma.gov/government/parks-recreation-culture/aquatics/crystal-lake"},
-    {"name": "Jackson Homestead and Museum", "line": "Historic Newton's museum at 527 Washington Street, with exhibits on city history and the Underground Railroad.", "source": "https://www.newtonma.gov/government/historic-newton/visit-museum/jackson-homestead-and-museum"},
-    {"name": "Hammond Pond Reservation", "line": "A DCR reservation off Hammond Pond Parkway with trails, rock formations to climb and paddling on the pond.", "source": "https://mass.gov/locations/hammond-pond-reservation"},
-    {"name": "Hemlock Gorge Reservation", "line": "A 23-acre DCR reservation on the Charles River, known for Echo Bridge and its echo.", "source": "https://mass.gov/locations/hemlock-gorge-reservation"},
-    {"name": "Heartbreak Hill", "line": "The Boston Marathon's climb on Commonwealth Avenue between Walnut Street and Boston College.", "source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts"}
+    {
+      "name": "Crystal Lake",
+      "line": "A natural lake in Newton Centre with a city-run swim beach, bathhouse and summer lifeguards.",
+      "source": "https://www.newtonma.gov/government/parks-recreation-culture/aquatics/crystal-lake"
+    },
+    {
+      "name": "Jackson Homestead and Museum",
+      "line": "Historic Newton's museum at 527 Washington Street, with exhibits on city history and the Underground Railroad.",
+      "source": "https://www.newtonma.gov/government/historic-newton/visit-museum/jackson-homestead-and-museum"
+    },
+    {
+      "name": "Hammond Pond Reservation",
+      "line": "A DCR reservation off Hammond Pond Parkway with trails, rock formations to climb and paddling on the pond.",
+      "source": "https://mass.gov/locations/hammond-pond-reservation"
+    },
+    {
+      "name": "Hemlock Gorge Reservation",
+      "line": "A 23-acre DCR reservation on the Charles River, known for Echo Bridge and its echo.",
+      "source": "https://mass.gov/locations/hemlock-gorge-reservation"
+    },
+    {
+      "name": "Heartbreak Hill",
+      "line": "The Boston Marathon's climb on Commonwealth Avenue between Walnut Street and Boston College.",
+      "source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts"
+    },
+    {
+      "name": "Auburndale Cove",
+      "line": "A picnic and recreation area on the Charles River in Auburndale.",
+      "source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts"
+    },
+    {
+      "name": "Bullough's Pond",
+      "line": "A former mill pond in Newtonville, reshaped as a landscape feature in the late 19th century, near the Johnny Kelley statue at the start of Heartbreak Hill.",
+      "source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts"
+    },
+    {
+      "name": "West Newton Cinema",
+      "line": "A Washington Street movie house opened in 1937 and expanded to six screens in 1990; a fundraising campaign reached its $5.6 million goal in August 2024 to keep it open.",
+      "source": "https://en.wikipedia.org/wiki/West_Newton,_Massachusetts"
+    }
   ],
   "history": [
-    {"year": "1681", "text": "Incorporated as a town under the name Cambridge Village, on December 15.", "source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts"},
-    {"year": "1766", "text": "Took the name Newton, after being called Newtown from 1691.", "source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts"},
-    {"year": "1874", "text": "Incorporated as a city on January 5.", "source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts"}
+    {
+      "year": "1681",
+      "text": "Incorporated as a town under the name Cambridge Village, on December 15.",
+      "source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts"
+    },
+    {
+      "year": "1766",
+      "text": "Took the name Newton, after being called Newtown from 1691.",
+      "source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts"
+    },
+    {
+      "year": "1834",
+      "text": "The Boston and Worcester Railroad reached West Newton, starting the suburban growth of the northern villages.",
+      "source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts"
+    },
+    {
+      "year": "1874",
+      "text": "Incorporated as a city on January 5.",
+      "source": "https://en.wikipedia.org/wiki/Newton,_Massachusetts"
+    },
+    {
+      "year": "1959",
+      "text": "The Highland branch railroad, closed in 1958, reopened in July 1959 as the Green Line D branch, with Newton Centre station back in service on July 4.",
+      "source": "https://en.wikipedia.org/wiki/Newton_Centre_station"
+    }
   ],
   "market": {
     "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
@@ -65,13 +167,47 @@
     "reading_1": "Newton (single-family), columns Dec 2024 | Dec 2025 | Percent Change. YTD Number of Sales: 482 | 525 | 8.9%. YTD Median Sale Price: $1,690,000 | $1,825,000 | 8.0%.",
     "reading_2": "NEWTON: \"YTD Number of Sales 482 525 8.9%\"; \"YTD Median Sale Price $1,690,000 $1,825,000 8.0%\""
   },
-  "nearby": ["waltham", "wellesley", "needham", "brookline", "watertown"],
+  "tax": {
+    "fy": "FY2026",
+    "residential_rate": 9.69,
+    "commercial_rate": 18.06,
+    "residential_exemption": false,
+    "source": "https://www.newtonma.gov/government/assessing/tax-rate",
+    "note": "FY2025 rates were $9.80 residential and $18.34 commercial. The city adopts the maximum 175 percent residential factor shift (FY2026 classification packet). The assessor page does not mention a residential exemption."
+  },
+  "nearby": [
+    "waltham",
+    "wellesley",
+    "needham",
+    "brookline",
+    "watertown"
+  ],
   "search_notes": "For 'Newton MA real estate agent', results are individual agent profiles (RE/MAX, William Raveis), directories (HomeLight village pages, BiggerPockets), a brokerage job listing and paid press releases; Zillow and Redfin did not surface in these results. 'Moving to Newton MA' is dominated by moving companies (North American, All My Sons, Allied, MoveBuddha) plus Livability and one brokerage blog post. Nothing ranking explains the thirteen villages side by side with sourced transit, parks and sale data, which is the gap a real guide can fill.",
   "faq": [
-    {"q": "What is the median home price in Newton, MA?", "a": "For calendar year 2025, The Warren Group reports a single-family median sale price of $1,825,000 in Newton, across 525 sales. In 2024 the median was $1,690,000 on 482 sales. Source: The Warren Group, MA December 2025 Sales, Prices by Town."},
-    {"q": "Does Newton have commuter rail?", "a": "Yes. The MBTA Framingham/Worcester Line stops at Newtonville, West Newton and Auburndale. The Green Line D branch also runs through the city, with stops including Newton Centre and Riverside."},
-    {"q": "Which school district serves Newton?", "a": "Newton Public Schools. Review its profile with DESE."},
-    {"q": "What are Newton's villages?", "a": "Newton has thirteen villages: Auburndale, Chestnut Hill, Newton Centre, Newton Corner, Newton Highlands, Newton Lower Falls, Newton Upper Falls, Newtonville, Nonantum, Oak Hill, Thompsonville, Waban and West Newton. They have no legal boundaries."}
+    {
+      "q": "What is the median home price in Newton, MA?",
+      "a": "For calendar year 2025, The Warren Group reports a single-family median sale price of $1,825,000 in Newton, across 525 sales. In 2024 the median was $1,690,000 on 482 sales. Source: The Warren Group, MA December 2025 Sales, Prices by Town."
+    },
+    {
+      "q": "Does Newton have commuter rail?",
+      "a": "Yes. The MBTA Framingham/Worcester Line stops at Newtonville, West Newton and Auburndale. The Green Line D branch also runs through the city, with stops including Newton Centre and Riverside."
+    },
+    {
+      "q": "Which school district serves Newton?",
+      "a": "Newton Public Schools. Review its profile with DESE."
+    },
+    {
+      "q": "What is the property tax rate in Newton, MA?",
+      "a": "For fiscal year 2026, Newton's rates are $9.69 per $1,000 of assessed value for residential property and $18.06 per $1,000 for commercial property, according to the city's assessing department. In fiscal 2025 they were $9.80 and $18.34."
+    },
+    {
+      "q": "What are Newton's villages?",
+      "a": "Newton has thirteen villages: Auburndale, Chestnut Hill, Newton Centre, Newton Corner, Newton Highlands, Newton Lower Falls, Newton Upper Falls, Newtonville, Nonantum, Oak Hill, Thompsonville, Waban and West Newton. They have no legal boundaries."
+    },
+    {
+      "q": "What is planned at Riverside station?",
+      "a": "A revised plan approved by the MBTA in August 2024 calls for 545 apartments and a garage in a first phase at the Riverside Green Line terminus, with an office or lab building and about 100 more units in a later phase."
+    }
   ],
-  "notes": "The Warren Group condo table could not be read: both fetches returned text cut off partway through Brookline, so all condo fields are null. The housing source is a 2003 city report that uses 1960 and 2000 Census figures, not current data; no newer sourced breakdown was found. The MBTA stop page for Newton Centre and Riverside confirms Newton addresses; the D branch line assignment comes from Wikipedia because the mbta.com line page did not render its stop list. The Green Line B branch ends at Boston College, just across the line, and is not listed. Population is from Wikipedia, citing the 2020 Census."
+  "notes": "The Warren Group condo table could not be read: both fetches returned text cut off partway through Brookline, so all condo fields are null. The housing source is a 2003 city report that uses 1960 and 2000 Census figures, not current data; no newer sourced breakdown was found. The MBTA stop page for Newton Centre and Riverside confirms Newton addresses; the D branch line assignment comes from Wikipedia because the mbta.com line page did not render its stop list. The Green Line B branch ends at Boston College, just across the line, and is not listed. Population is from Wikipedia, citing the 2020 Census. Deepened 2026-10-22: added a third overview paragraph on the residential tax base, Riverside and MBTA Communities (FY2026 Classification Hearing packet, Nov 14, 2025, https://www.newtonma.gov/home/showpublisheddocument/133754/638990694185900000; Riverside station article, https://en.wikipedia.org/wiki/Riverside_station_(MBTA), for the 2009 lease, late-2019 rezoning and August 2024 revised plan; state compliance list 'As of October 21, 2026', no. 91, https://www.mass.gov/doc/mbta-communities-district-compliance-letters/download). Housing text now adds the 2020 Census unit count (Wikipedia) and FY2026 parcel counts by class (classification packet; the packet calls its figures preliminary); housing.source remains the 2003 survey, and the added figures come from https://en.wikipedia.org/wiki/Newton,_Massachusetts and the classification packet. Villages trimmed to six best-documented (Newton Centre, Newtonville, West Newton, Auburndale, Newton Upper Falls, Newton Highlands, each from its Wikipedia village article); Newton Lower Falls, Chestnut Hill and Oak Hill were dropped from the list (their earlier lines rested only on the city article) but remain in the thirteen-village FAQ. Added places Auburndale Cove, Bullough's Pond and West Newton Cinema; history entries 1834 (Wikipedia) and 1959 (Newton Centre station article); the tax object (city assessing page, FY2026 $9.69 residential, $18.06 commercial; the classification packet gives the same rates at the 175 percent shift); FAQs on tax and Riverside. Not confirmed: the details of Newton's MBTA Communities / village center zoning (adoption date, districts, capacity), because the city's zoning pages would not load and the web search budget ran out; only the state's compliance listing is used. Riverside unit counts are from Wikipedia citing MBTA documents, not an MBTA page opened here. Wikipedia calls some villages 'affluent' or 'upscale'; those characterizations were left out under the fair-housing rules. The DLS Municipal Databank could not be reached."
 }

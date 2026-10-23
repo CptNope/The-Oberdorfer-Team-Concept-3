@@ -1,0 +1,75 @@
+{
+  "slug": "south-boston",
+  "name": "South Boston",
+  "parent": "boston",
+  "city_name": "Boston",
+  "county": "Suffolk County",
+  "region": "Greater Boston (the city)",
+  "population_2020": 37917,
+  "population_source": "https://bostonplans.org/getattachment/86f801a8-f8a6-4d0c-83ed-b9a63684d6b5",
+  "official_site": "https://www.boston.gov/",
+  "headline": ["Dorchester Heights at the center,", "Castle Island and three miles of beach at the end of Broadway."],
+  "answer": "South Boston is a Boston neighborhood on the former Dorchester Neck, south and east of Fort Point Channel along Dorchester Bay, annexed to Boston in 1804. Its housing includes 19th-century brick and mansard row houses and flat-roofed triple-deckers, and the Boston Planning & Development Agency counted 37,917 people there in 2020, with the South Boston Waterfront counted separately. The Red Line stops at Broadway and Andrew, and Castle Island anchors three miles of shoreline parks.",
+  "meta": "South Boston: row houses and triple-deckers from Dorchester Heights to Castle Island, with Red Line stops at Broadway and Andrew and three miles of beaches.",
+  "boundaries": {
+    "text": "South Boston lies south and east of Fort Point Channel, with Dorchester Bay on its southern and eastern shore and Castle Island at its eastern tip; Andrew Square marks its southwestern corner. The Seaport, or South Boston Waterfront, north of the residential streets is treated by the city's planners as a separate neighborhood.",
+    "source": "https://en.wikipedia.org/wiki/South_Boston"
+  },
+  "overview": [
+    "South Boston was Dorchester Neck, a narrow peninsula belonging to the town of Dorchester. On the night of March 4, 1776, Continental troops fortified Dorchester Heights, and the British evacuated Boston on March 17. Boston annexed the peninsula in 1804, bridges over Fort Point Channel tied it to downtown, and landfill widened its connection to the mainland. In 1822 the city set aside land near the top of the peninsula for a jail and an almshouse; after they moved, East Broadway was extended to the end of the peninsula in 1854 and 4.5 acres became Independence Square.",
+    "The streets climb to Dorchester Heights, the neighborhood's highest point, where Thomas Park was laid out in the 1850s around what is now a 115-foot marble monument completed in 1902; South Boston High School was built in 1901 on the site of an 1849 reservoir on neighboring Telegraph Hill. Mansard and brick row houses, some with marble and sandstone fronts, went up around Independence Square in the fifteen years after the Civil War. At City Point the granite Fort Independence, built between 1833 and 1848, stands on Castle Island, which the city joined to the mainland by filling the flats between 1890 and the 1920s; Day Boulevard now runs past Pleasure Bay, M Street Beach and Carson Beach.",
+    "Planning in recent decades has focused on the industrial edges. The Boston Planning & Development Agency completed PLAN: South Boston Dorchester Avenue in December 2016 for the Dorchester Avenue and Old Colony Avenue corridors between the Broadway and Andrew Red Line stations, followed by a transportation plan launched in 2020 and finalized in 2021. To the north, the waterfront along Fort Point Channel and Boston Harbor was the focus of the city's 1,000-acre Innovation District plan announced in 2010, and the city's research tables report it as the separate South Boston Waterfront neighborhood."
+  ],
+  "housing": {
+    "text": "South Boston's housing includes mansard and brick row houses from the 1860s and 1870s around Independence Square and along East Broadway, and triple-deckers, which here were mostly built with flat roofs. The Boston Housing Authority's Mary Ellen McCormack (1936) and Old Colony (1941) developments are in the neighborhood, and the second phase of Old Colony's redevelopment was completed in 2014. The Boston Planning & Development Agency's tabulation of the 2016-2020 American Community Survey counts 17,109 occupied housing units, 43.4% of them owner-occupied, compared with 35.3% citywide.",
+    "source": "https://bostonplans.org/getattachment/86f801a8-f8a6-4d0c-83ed-b9a63684d6b5"
+  },
+  "areas": [
+    {"name": "City Point", "line": "The eastern end of the peninsula near Castle Island, reached by East Broadway and Day Boulevard, where MBTA bus routes 7, 9, 10 and 11 end at the City Point bus terminal.", "source": "https://en.wikipedia.org/wiki/South_Boston"},
+    {"name": "Independence Square", "line": "A 4.5-acre square on East Broadway laid out in 1854, ringed by mansard and brick row houses built mostly between 1861 and 1880, including the Harrison Loring House at 789 East Broadway.", "source": "https://sah-archipedia.org/buildings/MA-01-SB19"},
+    {"name": "Dorchester Heights and Telegraph Hill", "line": "The high ground at the center of the neighborhood, with Thomas Park and the Dorchester Heights Monument on the summit and South Boston High School on the site of an 1849 reservoir.", "source": "https://en.wikipedia.org/wiki/Dorchester_Heights"},
+    {"name": "West Broadway and Andrew Square", "line": "The western side along Broadway and Dorchester Avenue, served by the Broadway and Andrew Red Line stations; Andrew Square is where Dorchester Avenue and Southampton Street meet.", "source": "https://en.wikipedia.org/wiki/Andrew_station"}
+  ],
+  "commute": {
+    "rail": [
+      {"line": "Red Line", "stations": ["Broadway", "Andrew"]}
+    ],
+    "rail_source": "https://en.wikipedia.org/wiki/Broadway_station_(MBTA)",
+    "highways": ["I-93", "William J. Day Boulevard"],
+    "text": "The Red Line's Broadway station, at Dorchester Avenue and Broadway, opened in 1917, and Andrew station, at Andrew Square, in 1918; both run north to South Station, where the Fairmount, Needham, Providence/Stoughton and other south-side commuter rail lines end. MBTA bus routes 7, 9, 10 and 11 cross the neighborhood to the City Point terminal, and Andrew connects with routes including the 10, 16, 17, 18 and 171. The Silver Line serves the separate Waterfront area, and the Big Dig put I-93 below ground."
+  },
+  "schools": {"district": "Boston Public Schools", "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=00350000&orgtypecode=5"},
+  "places": [
+    {"name": "Castle Island and Fort Independence", "line": "A state park at 2010 Day Boulevard, managed by DCR with the Castle Island Association, where the Castle Island Loop circles the granite fort, built from 1833 and listed on the National Register in 1970; open sunrise to sunset.", "source": "https://www.mass.gov/locations/castle-island-pleasure-bay-m-street-beach-and-carson-beach"},
+    {"name": "Pleasure Bay, M Street Beach and Carson Beach", "line": "About three miles of beach and parkland along Day Boulevard, with an accessible loop around Pleasure Bay; dogs are not allowed on the beach from May 1 through September 15.", "source": "https://www.mass.gov/locations/castle-island-pleasure-bay-m-street-beach-and-carson-beach"},
+    {"name": "Dorchester Heights Monument", "line": "A white marble Georgian Revival tower by Peabody and Stearns, completed in 1902 to mark the fortification of March 4, 1776, and stewarded by the National Park Service as part of Boston National Historical Park.", "source": "https://www.nps.gov/bost/learn/historyculture/dohe.htm"},
+    {"name": "Thomas Park", "line": "A roughly elliptical park of walks and plantings laid out in the 1850s on the summit of Dorchester Heights, centered on the monument.", "source": "https://en.wikipedia.org/wiki/Dorchester_Heights"},
+    {"name": "Independence Square", "line": "A 4.5-acre park created in 1854 on East Broadway, which received 150 trees and granite steps in 1874.", "source": "https://sah-archipedia.org/buildings/MA-01-SB19"},
+    {"name": "Saint Augustine Chapel", "line": "A chapel completed in 1819 and described as the oldest Catholic church building in Massachusetts.", "source": "https://en.wikipedia.org/wiki/South_Boston"}
+  ],
+  "history": [
+    {"year": "1776", "text": "Continental troops fortified Dorchester Heights on March 4, and the British evacuated Boston on March 17.", "source": "https://www.nps.gov/bost/learn/historyculture/dohe.htm"},
+    {"year": "1804", "text": "Boston annexed South Boston, part of the town of Dorchester's Dorchester Neck.", "source": "https://en.wikipedia.org/wiki/South_Boston"},
+    {"year": "1833", "text": "Work began on the present granite Fort Independence on Castle Island, substantially complete by 1848.", "source": "https://en.wikipedia.org/wiki/Fort_Independence_(Massachusetts)"},
+    {"year": "1917", "text": "Broadway station opened on December 15 as part of the Red Line's Dorchester Extension; Andrew followed in 1918.", "source": "https://en.wikipedia.org/wiki/Broadway_station_(MBTA)"}
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 62, "sf_sales_2024": 61,
+    "sf_median_2025": 1031500, "sf_median_2024": 1025000,
+    "condo_sales_2025": null, "condo_median_2025": null, "condo_median_2024": null,
+    "reading_1": "SOUTH BOSTON (single-family; Dec 2024, Dec 2025, Percent Change): Number of Sales 1 4 300.0% [printed run together as 'Number of Sales14 300.0%']; YTD Number of Sales 61 62 1.6%; Median Sale Price $1,050,000 $872,500 -16.9%; YTD Median Sale Price $1,025,000 $1,031,500 0.6%",
+    "reading_2": "SOUTH BOSTON (single-family): YTD Number of Sales 61 62 1.6%; YTD Median Sale Price $1,025,000 $1,031,500 0.6%"
+  },
+  "nearby": ["dorchester", "south-end", "back-bay", "beacon-hill"],
+  "search_notes": "Not checked in this session: the shared web search budget ran out before search results for 'South Boston real estate agent' and 'moving to South Boston' could be reviewed. Recheck before launch.",
+  "faq": [
+    {"q": "What is the median home price in South Boston?", "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, which lists South Boston on its own row, the median single-family sale price for calendar year 2025 was $1,031,500, across 62 sales. In 2024 it was $1,025,000, across 61 sales. Condominium figures for South Boston could not be read from the table."},
+    {"q": "Does South Boston have commuter rail?", "a": "No commuter rail station is in South Boston itself. The Red Line runs from Broadway and Andrew stations to South Station, where the Fairmount, Needham, Providence/Stoughton and other south-side commuter rail lines end."},
+    {"q": "Which school district serves South Boston?", "a": "Boston Public Schools. School assignment is set by the district; review its profile with DESE."},
+    {"q": "Is the Seaport part of South Boston?", "a": "Historically the waterfront north of the residential streets is part of South Boston, but the city's planners tabulate it as a separate neighborhood, the South Boston Waterfront. The population and housing figures in this guide exclude it."}
+  ],
+  "notes": "Written 2026-10-22. Population: Boston Planning & Development Agency Research Division, 'Boston in Context: Neighborhoods, 2020 Decennial Census Redistricting Data and 2016-2020 American Community Survey' (April 2022), 'Population by Age Group' table, total 37,917; neighborhood boundaries approximated with 2020 block groups, with South Boston Waterfront as its own row. It is a neighborhood figure, not a planning-district figure. The January 1, 2025 estimate in the agency's 2025 'Boston in Context: Neighborhoods' is 40,904 (not used). Housing tenure from the same 2022 report (ACS 2016-2020, B25003/B25001). Flat-roofed triple-deckers: Boston Preservation Alliance, 'A Short History of Boston's Triple Deckers' (https://bostonpreservation.org/news-item/short-history-bostons-triple-deckers), citing geographer Arthur Krim. Row-house dates from SAH Archipedia's Independence Square entry; the Harrison Loring House is dated 1861 there and 1865 on Wikipedia, so no date is given. BHA developments, Saint Augustine Chapel and bus routes from Wikipedia's South Boston article. Monument height (115 feet), Thomas Park and the 1849 reservoir from Wikipedia's Dorchester Heights article; dates and designers confirmed on the NPS page. Castle Island fill dates and the fort's National Register listing from Wikipedia's Fort Independence article; DCR page gives address, hours, loop trails and dog rule. 'Three miles' of beach and parkland is Wikipedia's figure; the DCR page gives no length. Not confirmed and left out: Castle Island acreage (Wikipedia gives 22 acres for the park and 15 for the fort), whether Fort Independence is a National Historic Landmark (not on the fort's own Wikipedia page), the M Street Park Vietnam memorial claim, Marine Park, the L Street Bathhouse details (page not found). Commuter rail lines at South Station are from the city record's MBTA source and were not reopened this session. 'I-93 below ground' rests on Wikipedia's South Boston article, which says the Big Dig buried the elevated I-93 that had cut off the waterfront. Market: single-family row read twice in this session with identical YTD figures; condo table truncated at Brookline. Schools: assignment is by address and set by Boston Public Schools. Nearby: Beacon Hill is not adjacent; it is included because the neighborhood slug list offers few closer options (South End and Dorchester border South Boston, Back Bay is across the South End). Fair housing: Wikipedia's article covers 1970s opposition to court-ordered school busing and describes areas by what 'lifelong residents' call them; both were left out, and the 'East Side'/'West Side' realtor labels are replaced with City Point and West Broadway. Public housing developments are named only as part of the housing stock, by name and year."
+}

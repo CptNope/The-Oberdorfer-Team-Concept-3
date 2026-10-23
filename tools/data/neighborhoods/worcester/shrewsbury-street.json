@@ -1,0 +1,136 @@
+{
+  "slug": "shrewsbury-street",
+  "name": "Shrewsbury Street",
+  "parent": "worcester",
+  "city_name": "Worcester",
+  "county": "Worcester County",
+  "region": "Central Massachusetts",
+  "official_site": "https://www.worcesterma.gov/",
+  "headline": [
+    "A restaurant corridor from Union Station",
+    "to East Park and the hills beyond."
+  ],
+  "answer": "Shrewsbury Street is a neighborhood on Worcester's East Side, named for the commercial street that runs about 7,000 feet from I-290 near Union Station to Route 9. The street is known for its restaurants, the 1936 Boulevard Diner and the 23-acre East Park, and in 2023 several mid-rise apartment projects were under construction or approved along it. Union Station's footbridge has an entrance at 45 Shrewsbury Street, a short walk to the MBTA Framingham/Worcester Line.",
+  "meta": "Shrewsbury Street, Worcester: the restaurant corridor from Union Station to Route 9, the Boulevard Diner, East Park and new apartments near the commuter rail.",
+  "boundaries": {
+    "text": "The neighborhood follows Shrewsbury Street on the city's East Side, a corridor of about 7,000 feet running at an angle from I-290 near Union Station to Route 9, with East Park at 180 Shrewsbury Street and side streets such as Mulberry Street climbing toward Belmont Hill.",
+    "source": "https://www.beta-inc.com/project/shrewsbury-street-roadway-improvements/"
+  },
+  "overview": [
+    "The western end of Shrewsbury Street was once the Meadows, low land beside the Blackstone Canal where the canal's builders were housed in camps in the 1820s. Older landmarks along it include the Greek Revival Leonard Sturtevant House, built about 1849 at 84 Mulberry Street near the base of Belmont Hill, and the stone griffins at the gate of East Park, which once supported the arch of the train shed at the old Union Station and were moved to the park in 1916.",
+    "The city describes Shrewsbury Street as one of its main commercial corridors, and it is best known for restaurants: a 2023 Telegram & Gazette column counted more than 30, the stretch some call restaurant row. The Boulevard Diner, a 1936 Worcester Lunch Car at 155 Shrewsbury Street with yellow ceramic panels and a barrel roof, is on the National Register. Our Lady of Mount Carmel Church, completed in 1928 on Mulberry Street about 25 feet from an interstate highway built in front of it in the late 1950s and early 1960s, was closed as a church by diocesan decree in 2017. A streetscape project designed for the city by BETA Group added street trees, stamped crosswalks, neckdowns and median plantings, and the whole street was resurfaced in 2016.",
+    "Housing along the corridor is changing. A July 2023 column in the Telegram & Gazette counted six apartment projects on or near the street, three under construction, two approved and one in review, that together would add nearly 750 apartments in buildings of up to six or seven stories, most of them studios and one-bedrooms; a city request for proposals for public works land on Shrewsbury and Albany Streets could add more. In 2024 Union Station gained a center platform and a pedestrian bridge with an entrance at 45 Shrewsbury Street."
+  ],
+  "housing": {
+    "text": "Shrewsbury Street's newer housing is in mid-rise apartment buildings: as of July 2023, six projects in progress or planned would add nearly 750 apartments, about three-quarters of them studios or one-bedrooms, in buildings of up to six or seven stories. Older houses stand on the side streets toward Belmont Hill, among them the Leonard Sturtevant House (about 1849) on Mulberry Street.",
+    "source": "https://www.yahoo.com/news/ray-mariano-changes-shrewsbury-street-090626587.html?fr=sycsrp_catchall"
+  },
+  "areas": [
+    {
+      "name": "Washington Square end",
+      "line": "The western end by Union Station and I-290, once the Meadows beside the canal, where the station's footbridge now has an entrance at 45 Shrewsbury Street.",
+      "source": "https://spectrumnews1.com/ma/worcester/news/2024/07/01/new-platform--pedestrian-bridge-open-at-union-station"
+    },
+    {
+      "name": "Restaurant row",
+      "line": "The central blocks with the street's restaurants and bars, including the Boulevard Diner at 155 and a former Buick dealership at 72 now used for dining.",
+      "source": "https://discovercentralma.org/articles/post/shrewsbury-street"
+    },
+    {
+      "name": "Mulberry Street and Belmont Hill",
+      "line": "Side streets climbing toward Belmont Hill, with the c. 1849 Leonard Sturtevant House at 84 Mulberry Street and the site of Our Lady of Mount Carmel Church at 24 Mulberry Street.",
+      "source": "https://en.wikipedia.org/wiki/Leonard_Sturtevant_House"
+    },
+    {
+      "name": "East Park",
+      "line": "The 23-acre city park at 180 Shrewsbury Street, whose wooded hillsides connect by trail to Bell Pond, Green Hill Park and Lake Quinsigamond.",
+      "source": "https://www.worcesterma.gov/city-parks/cristoforo-colombo-east-park"
+    }
+  ],
+  "commute": {
+    "rail": [
+      {
+        "line": "Framingham/Worcester Line",
+        "stations": ["Worcester (Union Station, 2 Washington Square)"]
+      }
+    ],
+    "rail_source": "https://www.mbta.com/schedules/CR-Worcester/timetable",
+    "highways": ["I-290", "Route 9"],
+    "text": "Union Station, at the street's western end, is the western end of the MBTA Framingham/Worcester Line to Boston's South Station, reached by a footbridge with an entrance at 45 Shrewsbury Street. I-290 crosses the western end and Route 9 meets the eastern end. WRTA Route 15 runs to Shrewsbury Center via Shrewsbury Street and Route 9."
+  },
+  "schools": {
+    "district": "Worcester Public Schools",
+    "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=03480000&orgtypecode=5"
+  },
+  "places": [
+    {
+      "name": "Cristoforo Colombo (East) Park",
+      "line": "A 23-acre park at 180 Shrewsbury Street with an amphitheater, ball fields, courts, a playground, a spray park and trails; its 1916 gateway uses two stone griffins from the old Union Station, and the Massachusetts Symphony Orchestra plays there before the city's Independence Day fireworks.",
+      "source": "https://www.worcesterma.gov/city-parks/cristoforo-colombo-east-park"
+    },
+    {
+      "name": "Boulevard Diner",
+      "line": "Worcester Lunch Car No. 730, built in 1936 at 155 Shrewsbury Street, with a barrel roof, yellow ceramic panels with red lettering and restored marble counters; listed on the National Register in 2000.",
+      "source": "https://en.wikipedia.org/wiki/Boulevard_Diner"
+    },
+    {
+      "name": "Union Station footbridge",
+      "line": "The pedestrian bridge to the station's center island platform, opened in 2024 as part of a project of about $45 million, with a street entrance at 45 Shrewsbury Street.",
+      "source": "https://spectrumnews1.com/ma/worcester/news/2024/07/01/new-platform--pedestrian-bridge-open-at-union-station"
+    },
+    {
+      "name": "Leonard Sturtevant House",
+      "line": "A locally distinctive Greek Revival house of about 1849 at 84 Mulberry Street, at the corner of Prospect Street; listed on the National Register in 1980.",
+      "source": "https://en.wikipedia.org/wiki/Leonard_Sturtevant_House"
+    },
+    {
+      "name": "Ramshorn Island",
+      "line": "A 1.5-acre city-owned island in Lake Quinsigamond, a park since 1919, south of the Burns Bridge at 422 Belmont Street; reachable only by boat, kayak or paddleboard.",
+      "source": "https://www.worcesterma.gov/node/45366"
+    }
+  ],
+  "history": [
+    {
+      "year": "1820s",
+      "text": "Workers building the Blackstone Canal were kept in camps in the Meadows, now the western end of Shrewsbury Street.",
+      "source": "https://www.preservationworcester.org/_files/ugd/6a3292_eee08e2ca88447688a7f01dcb37c73a6.pdf"
+    },
+    {
+      "year": "1916",
+      "text": "East Park's gateway was built with two stone griffins from the train shed arch of the old Union Station.",
+      "source": "https://www.worcesterma.gov/city-parks/cristoforo-colombo-east-park"
+    },
+    {
+      "year": "1936",
+      "text": "The Worcester Lunch Car Company built the Boulevard Diner, No. 730, at 155 Shrewsbury Street.",
+      "source": "https://en.wikipedia.org/wiki/Boulevard_Diner"
+    },
+    {
+      "year": "2017",
+      "text": "Our Lady of Mount Carmel Church on Mulberry Street, completed in 1928, was closed as a church by diocesan decree after vibration from the adjacent interstate damaged the building.",
+      "source": "https://5647.sites.ecatholic.com/news/bishop-issues-decree-regarding-future-of-mount-carmel-church"
+    }
+  ],
+  "market": null,
+  "nearby": ["downtown", "canal-district", "grafton-hill"],
+  "search_notes": "Not researched in this session: the shared web search budget ran out before ranking checks for 'Shrewsbury Street Worcester apartments' and 'living near Shrewsbury Street Worcester' could be run.",
+  "faq": [
+    {
+      "q": "Is there a median home price for the Shrewsbury Street area?",
+      "a": "The Warren Group reports Worcester only as a whole city, so there is no Shrewsbury Street figure. Citywide, the median single-family sale price for calendar year 2025 was $430,000, across 884 sales, according to its MA December 2025 Sales, Prices by Town report."
+    },
+    {
+      "q": "How close is Shrewsbury Street to the commuter rail?",
+      "a": "Union Station is at the street's western end, and since 2024 its pedestrian bridge has had an entrance at 45 Shrewsbury Street. Worcester station is the western end of the MBTA Framingham/Worcester Line to Boston's South Station."
+    },
+    {
+      "q": "What kind of housing is being built on Shrewsbury Street?",
+      "a": "Mostly mid-rise apartment buildings. A July 2023 Telegram & Gazette column counted six projects that would add nearly 750 apartments, about three-quarters of them studios or one-bedrooms, in buildings of up to six or seven stories."
+    },
+    {
+      "q": "Which school district serves the Shrewsbury Street area?",
+      "a": "Worcester Public Schools. School assignment is set by the district by address; review the district's profile with DESE."
+    }
+  ],
+  "notes": "Written 2026-10-22. Boundary and length are from BETA Group's project page for the city's Shrewsbury Street roadway and streetscape design (I-290 to Route 9, 7,000 feet); the page gives no dates, so the streetscape is not dated, and the 2016 resurfacing is from the city's announcement (https://worcesterma.gov/announcements/shrewsbury-street-hamilton-street-to-be-resurfaced-in-2016), which also calls the street one of the city's main commercial corridors. Mulberry Street's position near the base of Belmont Hill is from the Sturtevant House article; no source gives the street's compass orientation, so none is stated. The street's 19th-century origins as a route to the town of Shrewsbury were not confirmed in a source and are left out. The development figures (six projects, nearly 750 apartments, the DPW land RFP, three-quarters studios or one-bedrooms) and the 'more than 30' restaurants come from a Telegram & Gazette opinion column by Raymond V. Mariano (July 28, 2023), attributed as such; no city list of the projects was found. The same column says Mount Carmel church has been demolished; the diocesan decree (October 24, 2017) closed it but does not order demolition, so the record says only that it closed. The decree describes a highway built in the late 1950s and early 1960s about 25 feet in front of the church; it does not name I-290. Union Station footbridge: Spectrum News (July 1, 2024) gives the 45 Shrewsbury Street entrance and the ~$45 million cost. Ramshorn Island is at the lake end of the East Side rather than on the street; included for the lake connection the East Park page describes. Business names in the 'restaurant row' area are kept to the National Register diner and a building description; no hours or menus. Market set to null: the Warren Group lists Worcester only citywide. Schools: assignment is by address and set by the district. Fair housing: the T&G column and the diocese describe the street's historical ethnic identity and multigenerational residents; none of that was used, and the church is described as a building."
+}

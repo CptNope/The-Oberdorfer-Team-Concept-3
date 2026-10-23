@@ -6,60 +6,188 @@
   "population_2020": 19664,
   "population_source": "https://en.wikipedia.org/wiki/Grafton,_Massachusetts",
   "official_site": "https://www.grafton-ma.gov/",
-  "headline": ["Grafton, village by village,", "from the common to the river."],
+  "headline": [
+    "Grafton, village by village,",
+    "from the common to the river."
+  ],
   "answer": "Grafton is a Worcester County town of 19,664 people (2020 Census) bordering Worcester, established in 1735. Its housing runs from the 19th-century homes around Grafton Common to worker housing in its Blackstone River mill villages. Grafton station in North Grafton is on the MBTA Framingham/Worcester Line, and Routes 122, 140 and 30 cross the town.",
   "overview": [
     "Grafton's story begins with Hassanamisco, a Christian Indian plantation established in 1654; the town itself was established in 1735. Hassanamesitt Woods, about 200 acres on Keith Hill, is believed to hold the core of that Nipmuc village, and the Trust for Public Land bought it in 2004 for transfer to the town. Grafton Common, landscaped into an elliptical park in 1843 and 1844, is still ringed by a temple-front store, a mansard-roofed store and a Second Empire commercial block.",
-    "Away from the common, Grafton spreads into villages built on water power. North Grafton, once New England Village, sits where the Quinsigamond River falls more than 50 feet in a short distance, and Saundersville, Fisherville and Farnumsville line the Blackstone River in the southwest. Benjamin Willard began making clocks in a North Grafton workshop in 1766, a legacy now kept at the Willard House and Clock Museum. Grafton station on Pine Street puts the town on the Framingham/Worcester Line, and Tufts University's Cummings School of Veterinary Medicine has its campus here."
+    "Away from the common, Grafton spreads into villages built on water power. North Grafton, once New England Village, sits where the Quinsigamond River falls more than 50 feet in a short distance, and Saundersville, Fisherville and Farnumsville line the Blackstone River in the southwest. Benjamin Willard began making clocks in a North Grafton workshop in 1766, a legacy now kept at the Willard House and Clock Museum. Grafton station on Pine Street puts the town on the Framingham/Worcester Line, and Tufts University's Cummings School of Veterinary Medicine has its campus here.",
+    "Grafton's zoning already makes room for denser housing near the station: its bylaw includes a North Grafton Transit Village Overlay District, a Chapter 40R smart growth district, and a Village and Neighborhood Mixed Use district, and the May 12, 2025 Annual Town Meeting warrant carried amendments to both, including a clearer definition of attached single-family homes such as townhouses. The state lists Grafton as compliant with the MBTA Communities law as of October 21, 2026. The town's 2018 Housing Production Plan counted 365 units, or 5.1% of its housing, on the state's Subsidized Housing Inventory. Values have climbed: the town reports that the average single-family assessed value rose from $625,767 in FY2025 to $663,695 in FY2026."
   ],
   "housing": {
-    "text": "The Massachusetts Historical Commission describes Grafton Center as possibly the best-preserved 19th-century residential and institutional village in its study area, while the Blackstone River villages retain much of their 19th-century worker housing, including duplexes, boardinghouses and double-deckers. Craftsman bungalows and Colonial Revival homes followed in the early 20th century.",
-    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"
+    "text": "Grafton's 2018 Housing Production Plan, using 2012 to 2016 ACS estimates, counted 7,179 housing units: 59.3% single-family detached, 15.3% single-family attached, 12.6% in buildings of two to four units, 6.8% in buildings of five to nine and 5.4% in buildings of ten or more, with 72.3% owner occupied. Half of the stock, 3,570 units, was built before 1980. The Massachusetts Historical Commission describes Grafton Center as possibly the best-preserved 19th-century residential and institutional village in its study area, while the Blackstone River villages retain much of their 19th-century worker housing, including duplexes, boardinghouses and double-deckers; Craftsman bungalows and Colonial Revival homes followed in the early 20th century.",
+    "source": "https://www.mass.gov/doc/grafton-plan/download"
   },
   "villages": [
-    {"name": "Grafton Center", "line": "The crossroads village around Grafton Common, with 19th-century homes, stores and civic buildings.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"},
-    {"name": "North Grafton", "line": "Includes the former New England Village on the Quinsigamond River, with worker housing near Factory and Second Streets; home to Grafton station.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"},
-    {"name": "South Grafton", "line": "One of the town's three postal villages, each with its own ZIP code.", "source": "https://en.wikipedia.org/wiki/Grafton,_Massachusetts"},
-    {"name": "Farnumsville", "line": "A Blackstone River mill village in the southwest of town.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"},
-    {"name": "Fisherville", "line": "A Blackstone River mill village that keeps much of its 19th-century worker housing.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"},
-    {"name": "Saundersville", "line": "A Blackstone River mill village where a cotton mill was built in 1829.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"},
-    {"name": "Centerville", "line": "A former mill site on the Quinsigamond River west of Grafton Center.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"}
+    {
+      "name": "Grafton Center",
+      "line": "The crossroads village around Grafton Common, with 19th-century homes, stores and civic buildings.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"
+    },
+    {
+      "name": "North Grafton",
+      "line": "Includes the former New England Village on the Quinsigamond River, with worker housing near Factory and Second Streets; home to Grafton station.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"
+    },
+    {
+      "name": "South Grafton",
+      "line": "One of the town's three postal villages, each with its own ZIP code.",
+      "source": "https://en.wikipedia.org/wiki/Grafton,_Massachusetts"
+    },
+    {
+      "name": "Farnumsville",
+      "line": "A Blackstone River mill village in the southwest of town.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"
+    },
+    {
+      "name": "Fisherville",
+      "line": "A Blackstone River mill village that keeps much of its 19th-century worker housing.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"
+    },
+    {
+      "name": "Saundersville",
+      "line": "A Blackstone River mill village where a cotton mill was built in 1829.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"
+    },
+    {
+      "name": "Centerville",
+      "line": "A former mill site on the Quinsigamond River west of Grafton Center.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"
+    }
   ],
   "commute": {
-    "rail": [{"line": "Framingham/Worcester Line", "stations": ["Grafton (1 Pine Street, North Grafton)"]}],
+    "rail": [
+      {
+        "line": "Framingham/Worcester Line",
+        "stations": [
+          "Grafton (1 Pine Street, North Grafton)"
+        ]
+      }
+    ],
     "rail_source": "https://www.mbta.com/stops/place-WML-0364",
-    "highways": ["Route 122", "Route 140", "Route 30"],
+    "highways": [
+      "Route 122",
+      "Route 140",
+      "Route 30"
+    ],
     "text": "Grafton station sits between Worcester and Westborough on the Framingham/Worcester Line, with a 382-space parking lot. Route 140 runs through Grafton Center, Route 122 crosses toward Worcester and Providence, and Route 30 links North Grafton with Westborough."
   },
-  "schools": {"district": "Grafton Public Schools", "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=01100000&orgtypecode=5"},
+  "schools": {
+    "district": "Grafton Public Schools",
+    "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=01100000&orgtypecode=5"
+  },
   "places": [
-    {"name": "Grafton Common", "line": "The town's central green, landscaped as an elliptical park in 1843 and 1844 and framed by 19th-century buildings.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"},
-    {"name": "Willard House and Clock Museum", "line": "The Willard clockmakers' home at 11 Willard Street, North Grafton, showing more than 90 Willard clocks by guided tour.", "source": "https://www.willardhouse.org/"},
-    {"name": "Hassanamesitt Woods", "line": "About 200 wooded acres on Keith Hill, believed to hold the core of the 17th-century Nipmuc village, with trails for hiking, skiing and birdwatching.", "source": "https://www.tpl.org/media-room/hassanamesitt-woods-protection-moves-forward-ma"},
-    {"name": "Grafton Land Trust properties", "line": "More than two dozen protected parcels with trails, including Brigham Hill, Fletcher Reserve and Williams Woods.", "source": "https://graftonland.org/openspaces.properties.php"},
-    {"name": "Cummings School of Veterinary Medicine", "line": "Tufts University's veterinary school campus in North Grafton.", "source": "https://en.wikipedia.org/wiki/Grafton,_Massachusetts"}
+    {
+      "name": "Grafton Common",
+      "line": "The town's central green, landscaped as an elliptical park in 1843 and 1844 and framed by 19th-century buildings.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"
+    },
+    {
+      "name": "Willard House and Clock Museum",
+      "line": "The Willard clockmakers' home at 11 Willard Street, North Grafton, showing more than 90 Willard clocks by guided tour.",
+      "source": "https://www.willardhouse.org/"
+    },
+    {
+      "name": "Hassanamesitt Woods",
+      "line": "About 200 wooded acres on Keith Hill, believed to hold the core of the 17th-century Nipmuc village, with trails for hiking, skiing and birdwatching.",
+      "source": "https://www.tpl.org/media-room/hassanamesitt-woods-protection-moves-forward-ma"
+    },
+    {
+      "name": "Grafton Land Trust properties",
+      "line": "More than two dozen protected parcels with trails, including Brigham Hill, Fletcher Reserve and Williams Woods.",
+      "source": "https://graftonland.org/openspaces.properties.php"
+    },
+    {
+      "name": "Cummings School of Veterinary Medicine",
+      "line": "Tufts University's veterinary school campus in North Grafton.",
+      "source": "https://en.wikipedia.org/wiki/Grafton,_Massachusetts"
+    },
+    {
+      "name": "Grafton Inn",
+      "line": "A three-story, five-bay hip-roofed building that Samuel Wood built in 1805, one of the landmarks of Grafton Center.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"
+    }
   ],
   "history": [
-    {"year": "1654", "text": "The Christian Indian plantation of Hassanamisco was established.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"},
-    {"year": "1735", "text": "Incorporated as the Town of Grafton.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"},
-    {"year": "1766", "text": "Benjamin Willard began making clocks in his North Grafton workshop.", "source": "https://www.willardhouse.org/"}
+    {
+      "year": "1654",
+      "text": "The Christian Indian plantation of Hassanamisco was established.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"
+    },
+    {
+      "year": "1735",
+      "text": "Incorporated as the Town of Grafton.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"
+    },
+    {
+      "year": "1766",
+      "text": "Benjamin Willard began making clocks in his North Grafton workshop.",
+      "source": "https://www.willardhouse.org/"
+    },
+    {
+      "year": "1828",
+      "text": "The Blackstone Canal was completed, with three locks in Grafton, spurring mill growth along the river.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"
+    },
+    {
+      "year": "1847",
+      "text": "The Providence and Worcester Railroad began service through the Blackstone River villages in the southwest of town.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/grf.pdf"
+    }
   ],
   "market": {
     "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
     "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
     "period": "Calendar year 2025",
-    "sf_sales_2025": 153, "sf_sales_2024": 143,
-    "sf_median_2025": 610000, "sf_median_2024": 610000,
-    "condo_sales_2025": null, "condo_median_2025": null, "condo_median_2024": null,
+    "sf_sales_2025": 153,
+    "sf_sales_2024": 143,
+    "sf_median_2025": 610000,
+    "sf_median_2024": 610000,
+    "condo_sales_2025": null,
+    "condo_median_2025": null,
+    "condo_median_2024": null,
     "reading_1": "Grafton (single-family, Dec 2024 / Dec 2025 / % change): \"YTD Number of Sales 143 153 7.0%\"; \"YTD Median Sale Price $610,000 $610,000 0.0%\"",
     "reading_2": "GRAFTON (single-family): \"Number of Sales9 15 66.7%\"; \"YTD Number of Sales 143 153 7.0%\"; \"Median Sale Price $550,000 $500,000 -9.1%\"; \"YTD Median Sale Price $610,000 $610,000 0.0%\""
   },
-  "nearby": ["worcester", "shrewsbury", "westborough", "millbury", "upton"],
+  "tax": {
+    "fy": "FY2026",
+    "residential_rate": 13.69,
+    "commercial_rate": null,
+    "residential_exemption": false,
+    "source": "https://grafton-ma.gov/DocumentCenter/View/20064/FC-Packet-42926?bidId=",
+    "note": "The town's FY2026 State of the Town message (Finance Committee packet, April 29, 2026, marked preliminary draft) gives $13.69 per $1,000, down $0.25 from FY2025. A November 2024 Tri-Com presentation describes a split rate with a 1% shift to commercial, industrial and personal property, so the commercial rate differs slightly and was not found. No residential exemption is mentioned."
+  },
+  "nearby": [
+    "worcester",
+    "shrewsbury",
+    "westborough",
+    "millbury",
+    "upton"
+  ],
   "search_notes": "For 'Grafton MA real estate agent', results are BiggerPockets, a Max Real Estate Exposure page, William Raveis and Redfin listing pages, and a HomeLight page that is actually for Worcester's Grafton Hill neighborhood, showing name confusion. 'Moving to Grafton MA' returns only mover directories and cost pages (uShip, MoveBuddha, MoveAdvisor). There is no real local guide ranking, and a page that explains Grafton's villages, the common and the North Grafton station would stand alone.",
   "faq": [
-    {"q": "What is the median home price in Grafton, MA?", "a": "The median single-family sale price in Grafton for calendar year 2025 was $610,000, across 153 sales, unchanged from $610,000 in 2024, according to The Warren Group's MA December 2025 Sales, Prices by Town report."},
-    {"q": "Does Grafton have commuter rail?", "a": "Yes. Grafton station, at 1 Pine Street in North Grafton, is on the MBTA Framingham/Worcester Line between Worcester and Westborough."},
-    {"q": "Which school district serves Grafton?", "a": "Grafton Public Schools. Review its profile with DESE."}
+    {
+      "q": "What is the median home price in Grafton, MA?",
+      "a": "The median single-family sale price in Grafton for calendar year 2025 was $610,000, across 153 sales, unchanged from $610,000 in 2024, according to The Warren Group's MA December 2025 Sales, Prices by Town report."
+    },
+    {
+      "q": "Does Grafton have commuter rail?",
+      "a": "Yes. Grafton station, at 1 Pine Street in North Grafton, is on the MBTA Framingham/Worcester Line between Worcester and Westborough."
+    },
+    {
+      "q": "Which school district serves Grafton?",
+      "a": "Grafton Public Schools. Review its profile with DESE."
+    },
+    {
+      "q": "What is the property tax rate in Grafton, MA?",
+      "a": "Grafton's FY2026 residential tax rate is $13.69 per $1,000 of assessed value, down $0.25 from FY2025, according to the town's State of the Town message. The town reports an average single-family assessed value of $663,695 for FY2026."
+    },
+    {
+      "q": "What kinds of housing are in Grafton?",
+      "a": "Mostly single-family: the town's 2018 Housing Production Plan counted 59.3% of units as detached single-family homes and 15.3% as attached single-family, with 72.3% owner occupied. The Blackstone River villages keep much of their 19th-century worker housing, including duplexes and double-deckers."
+    }
   ],
-  "notes": "Condo rows could not be read (both condo fetches truncated at 'BROOKLI'), so condo fields are null. The MHC town report dates from 1984 and warns that it is dated; its route descriptions (Routes 122, 140, 30) and village character are historic. I could not confirm that I-90 passes through Grafton (the Turnpike exit list names Millbury and Westborough only), so it is left out. Hassanamesitt Woods was bought by the Trust for Public Land in 2004 for transfer to the town; I did not confirm the transfer was completed. Grafton Land Trust acreage is not stated on its site. The district's DESE name is 'Grafton'; 'Grafton Public Schools' is the common name."
+  "notes": "Condo rows could not be read (both condo fetches truncated at 'BROOKLI'), so condo fields are null. The MHC town report dates from 1984 and warns that it is dated; its route descriptions (Routes 122, 140, 30) and village character are historic. I could not confirm that I-90 passes through Grafton (the Turnpike exit list names Millbury and Westborough only), so it is left out. Hassanamesitt Woods was bought by the Trust for Public Land in 2004 for transfer to the town; I did not confirm the transfer was completed. Grafton Land Trust acreage is not stated on its site. The district's DESE name is 'Grafton'; 'Grafton Public Schools' is the common name. Deepened 2026-10-22: added a third overview paragraph and rewrote the housing text from the 2018 Housing Production Plan (https://www.mass.gov/doc/grafton-plan/download; structure types, tenure and 7,179 units from 2012 to 2016 ACS; 3,570 units built before 1980; SHI 365 units, 5.1%, date of SHI data not stated). The plan itself flags that its 2016 unit total looks low against permit activity. No newer Grafton HPP was found. Zoning districts and the May 12, 2025 warrant articles (Articles 31 and 32) from https://www.grafton-ma.gov/DocumentCenter/View/16319/Spring-2025-Warrant_Final; whether those articles passed was not confirmed, and the overview says only that the warrant carried them. MBTA Communities: the state's compliance list 'As of October 21, 2026' includes no. 46 Grafton (https://www.mass.gov/doc/mbta-communities-district-compliance-letters/download); which district the state approved and when was not found, so the record does not say the 40R district is the compliance district. Assessed values and the FY2026 rate from the FY2026 State of the Town message in the April 29, 2026 Finance Committee packet (https://grafton-ma.gov/DocumentCenter/View/20064/FC-Packet-42926?bidId=), marked preliminary draft; MMA's profile shows $13.94 with no fiscal year (it matches FY2025 per the packet). Commercial rate left null: the November 12, 2024 Tri-Com packet (https://grafton-ma.gov/DocumentCenter/View/14450/Tri-Com-Packet-111224?bidId=) says 'Split tax rate; consistently 1% shift to CIP', and no FY2026 CIP figure was found; the DLS Databank report did not render through the fetch tool. Added the Grafton Inn (MHC report; current use not stated) to places and history entries 1828 and 1847 from the MHC report. Hassanamisco Reservation is named on Wikipedia but was not added as a place: no source describing the site itself was opened, and the record already covers Hassanamisco's history. Grafton State Hospital dates conflict (Wikipedia 1901 to 1973; MHC says it separated from Worcester State Hospital in 1912 and took the name in 1915), so no history entry was added."
 }

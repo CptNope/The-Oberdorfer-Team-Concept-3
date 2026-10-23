@@ -13,10 +13,11 @@
   "answer": "Holden is a town of 19,905 people (2020 Census) in Worcester County, set in rolling hills just north of Worcester. Its houses range from 1800s mill-village homes to suburban streets that grew after World War II. Routes 122A, 31 and 68 cross the town, and the commuter rail stops at Worcester station next door.",
   "overview": [
     "Holden covers about thirty-six square miles of rolling upland just north of Worcester, and the town notes that a good portion of that land is protected open space, watershed and recreation area. Settlement began around 1723, and Holden was incorporated on January 9, 1741, from what had been the north half of Worcester. Through the 1800s, mills grew up along the Quinapoxet River in villages such as Chaffin, Springdale and Dawsonville, while Jefferson became the industrial village in the south of town.",
-    "The landscape shifted again around 1900, when reservoirs built for Worcester and the Wachusett Reservoir project cleared most of the river mills. After World War II, Holden became largely residential. Holden Center is still the civic heart along Main Street, where the Gale Free Library has used the Damon Memorial building since 1888. For time outside, the 660-acre Trout Brook Recreation Area and the town beach at Eagle Lake are within town lines, and the Mass Central Rail Trail follows the Quinapoxet River into Holden from Oakdale in West Boylston."
+    "The landscape shifted again around 1900, when reservoirs built for Worcester and the Wachusett Reservoir project cleared most of the river mills. After World War II, Holden became largely residential. Holden Center is still the civic heart along Main Street, where the Gale Free Library has used the Damon Memorial building since 1888. For time outside, the 660-acre Trout Brook Recreation Area and the town beach at Eagle Lake are within town lines, and the Mass Central Rail Trail follows the Quinapoxet River into Holden from Oakdale in West Boylston.",
+    "Housing policy in Holden has centered on the state's MBTA Communities law, which requires the town to zone for at least 750 multifamily units by right on at least 50 acres, at 15 or more units per acre. After a lawsuit brought on behalf of the Central Massachusetts Housing Alliance, the town submitted an action plan to the state in February 2025, but Town Meeting rejected a three-area rezoning that May. On January 29, 2026, the Attorney General sued Holden and eight other communities for noncompliance. A second plan, with overlay districts on a 39-acre former quarry at 2077 Main Street and 11.5 acres on Newbury Drive (an estimated 759 units in all), failed 520 to 257 at a Special Town Meeting on March 2, 2026. Holden is not on the state's list of compliant communities as of October 21, 2026."
   ],
   "housing": {
-    "text": "The Massachusetts Historical Commission's survey of Holden records one-story center-chimney Federal houses, mid-1800s side-passage houses with Greek Revival or Italianate trim, company tenements in Jefferson, and Bungalow and Four Square houses from 1915 to 1940, with suburban growth tied to Worcester after the 1920s. The town notes further residential growth after World War II.",
+    "text": "The Massachusetts Historical Commission's survey of Holden records one-story center-chimney Federal houses, mid-1800s side-passage houses with Greek Revival or Italianate trim, company tenements in Jefferson, and Bungalow and Four Square houses from 1915 to 1940, with suburban growth tied to Worcester after the 1920s. The town notes further residential growth after World War II. The 2020 Census counted 7,439 housing units in Holden. Much of the town is closed to building: Worcester came to control 3,332 acres in Holden as reservoir and watershed land, and the town's 2012 Open Space and Recreation Plan put about 30% of the town in permanently preserved open space.",
     "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/hol.pdf"
   },
   "villages": [
@@ -98,6 +99,16 @@
       "name": "Dawson Recreation Area",
       "line": "A town recreation site with a playground and baseball field, with expansion planned at 18 Industrial Drive.",
       "source": "https://www.holdenma.gov/print/99386"
+    },
+    {
+      "name": "Poutwater Pond Nature Preserve",
+      "line": "State land around a rare acidic bog with a boardwalk, established in 1998 as the first nature preserve in Massachusetts, according to the town's open space plan.",
+      "source": "https://www.holdenma.gov/sites/g/files/vyhlif4526/f/file/file/updated_plan-1_open_space_recreation_plan.pdf"
+    },
+    {
+      "name": "Park Avenue Burying Ground",
+      "line": "A cemetery laid out in 1826, which the town's open space plan describes as a prominent Federal-period landscape.",
+      "source": "https://www.holdenma.gov/sites/g/files/vyhlif4526/f/file/file/updated_plan-1_open_space_recreation_plan.pdf"
     }
   ],
   "history": [
@@ -110,6 +121,16 @@
       "year": "1741",
       "text": "Incorporated on January 9 from the north half of Worcester.",
       "source": "https://www.holdenma.gov/node/55651"
+    },
+    {
+      "year": "1886",
+      "text": "The east-west Massachusetts Central Railroad opened across the northern half of town.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/hol.pdf"
+    },
+    {
+      "year": "1903",
+      "text": "The Worcester-Holden electric street railway began service.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/hol.pdf"
     },
     {
       "year": "1954",
@@ -130,6 +151,14 @@
     "condo_median_2024": null,
     "reading_1": "HOLDEN | YTD Number of Sales 174 200 14.9% | YTD Median Sale Price $550,000 $550,000 0.0% (columns: Dec 2024, Dec 2025, Percent Change)",
     "reading_2": "HOLDEN | YTD Number of Sales 174 200 14.9% | YTD Median Sale Price $550,000 $550,000 0.0% (columns: Dec 2024, Dec 2025, Percent Change)"
+  },
+  "tax": {
+    "fy": "FY2026",
+    "residential_rate": 13.48,
+    "commercial_rate": 13.48,
+    "residential_exemption": false,
+    "source": "https://www.holdenma.gov/assessor",
+    "note": "Single rate: the assessor's page lists one FY2026 tax rate, $13.48, for all classes. The page does not mention a residential exemption."
   },
   "nearby": [
     "worcester",
@@ -152,7 +181,15 @@
     {
       "q": "Which school district serves Holden?",
       "a": "Holden is part of the Wachusett Regional School District. Review its profile with DESE."
+    },
+    {
+      "q": "What is the property tax rate in Holden, MA?",
+      "a": "Holden's FY2026 tax rate is $13.48 per $1,000 of assessed value, according to the town assessor's page, which lists a single rate for all property."
+    },
+    {
+      "q": "Has Holden adopted MBTA Communities zoning?",
+      "a": "No. Town Meeting rejected rezoning plans in May 2025 and again on March 2, 2026, by 520 to 257, and the Attorney General sued the town for noncompliance in January 2026. Holden is not on the state's list of compliant communities as of October 21, 2026."
     }
   ],
-  "notes": "Condo fields are null: in both WebFetch readings the converted PDF text of the condo table ended at 'BROOKLI', so Holden's condo rows could not be read. Holden is not on a station list for either line; Worcester borders Holden to the southeast per Wikipedia. The MHC survey dates from 1984. Wikipedia credits the population figure to a Census Bureau profile. Routes 122A, 31 and 68 come from the MHC report; no interstate is listed because none was sourced as passing through town."
+  "notes": "Condo fields are null: in both WebFetch readings the converted PDF text of the condo table ended at 'BROOKLI', so Holden's condo rows could not be read. Holden is not on a station list for either line; Worcester borders Holden to the southeast per Wikipedia. The MHC survey dates from 1984. Wikipedia credits the population figure to a Census Bureau profile. Routes 122A, 31 and 68 come from the MHC report; no interstate is listed because none was sourced as passing through town. Deepened 2026-10-22: added a third overview paragraph on MBTA Communities (750 units on 50 acres at 15 per acre and the March 2, 2026 vote, 520 to 257, with the two districts and 759-unit estimate, from Boston.com, Mar 3, 2026, https://www.boston.com/news/local-news/2026/03/03/holden-rejects-mbta-communities-proposal-faces-legal-action/; action plan submitted Feb 2025 after the Lawyers for Civil Rights suit on behalf of CMHA, Banker & Tradesman, Feb 26, 2025, https://bankerandtradesman.com/mbta-communities-holdout-town-agrees-to-comply/; May 2025 rejection of a three-area plan, https://www.yahoo.com/news/articles/holden-vote-obeying-mbta-housing-172125525.html; AG suit, https://www.mass.gov/news/ag-campbell-sues-nine-communities-for-noncompliance-with-mbta-communities-law; GBH, https://www.wgbh.org/news/local/2026-03-03/holden-voters-again-defy-mbta-housing-law-now-the-town-faces-a-lawsuit; Holden absent from the compliance list 'As of October 21, 2026', https://www.mass.gov/doc/mbta-communities-district-compliance-letters/download). The status of the AG's case after March 2026 was not found. Housing text: 7,439 units from Wikipedia citing the 2020 Census (census.gov could not be fetched); 3,332 acres from the MHC report; 30% preserved open space from the 2012 OSRP. No Holden housing production plan was found, and the 2019 Holden Master Plan (listed on CMRPC's snapshot, https://cmrpc.org/?p=2803) could not be located, so single-family share and owner occupancy are not given. Added places Poutwater Pond Nature Preserve and Park Avenue Burying Ground (2012 OSRP; the OSRP says DCR land includes the preserve), and history entries 1886 and 1903 from the MHC report. Holden Reservoirs 1 and 2 were left out of places because the OSRP says public recreation is not permitted there. Tax: $13.48 FY2026 from the assessor's page; MMA's community profile shows equal residential and commercial rates ($13.86, no fiscal year stated, apparently FY2025), consistent with a single rate. The DLS Databank report did not render through the fetch tool. Added FAQs on the tax rate and MBTA Communities status."
 }

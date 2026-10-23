@@ -1,0 +1,106 @@
+{
+  "slug": "grafton-hill",
+  "parent": "worcester",
+  "city_name": "Worcester",
+  "name": "Grafton Hill",
+  "county": "Worcester County",
+  "region": "Central Massachusetts",
+  "official_site": "https://www.worcesterma.gov/",
+  "headline": ["Three-decker rows on the hill", "that Grafton Street climbs out of downtown."],
+  "answer": "Grafton Hill is a neighborhood on Worcester's East Side, on one of the city's seven named hills, anchored by Grafton Street (Route 122) and Providence Street in southeastern Worcester. Its western slope along Dorchester Street holds some of the city's earliest rows of three-deckers, from the 1890s. WRTA Routes 5 and 12 run on Grafton Street, and Worcester's Union Station, on the MBTA Framingham/Worcester Line, is downtown.",
+  "meta": "Grafton Hill, Worcester: three-deckers from the 1890s, the 1879 Grafton Street School, Mulcahy Field and WRTA buses on Grafton Street. A sourced neighborhood guide.",
+  "boundaries": {
+    "text": "Grafton Hill rises in southeastern Worcester, anchored by Grafton Street and Providence Street; its lower western slope reaches Dorchester Street, and the city places Mulcahy Field, at 158 Dorchester Street, in the neighborhood. Massasoit Road spans Grafton Hill, Union Hill and the Broad Meadow Brook area.",
+    "source": "https://en.wikipedia.org/wiki/Grafton_Hill"
+  },
+  "overview": [
+    "Grafton Hill takes its name from the road that climbs it. The hill, once called Sagatabscot, is counted by the city among Worcester's seven hills, and Grafton Street was already a working route out of the town center before 1830: the Massachusetts Historical Commission's survey records a brewery at the head of Grafton Street by 1830, and the Blackstone Canal, which opened in 1828, ran parallel to Summer and Grafton Streets. Public transit followed the street up the hill. Worcester's first horsecar line, opened in 1863, had a spur on Front and Grafton Streets to the railroad station, and a streetcar line on Grafton Street opened in 1890.",
+    "The streetcar years shaped what stands on the hill today. The Grafton Street School, on the north side of Grafton Street between Fay and Wall Streets, opened in 1879 and gained a second building in 1899; its Wikipedia article notes that the area began as suburban and filled in with triple-deckers, which drove the school's expansions. The National Register nomination for the Patrick McGrath Three-Decker, a Queen Anne house of about 1894 on Dorchester Street, describes it as part of a row of similar houses on the lower western slope of Grafton Hill, in the earliest core of three-decker building in the Grafton Hill and Vernon Hill area. North of Grafton Street, four Colonial Revival three-deckers of about 1928 on Ingleside Avenue, which runs north from Grafton Street to Plantation Street, form a small historic district from the type's last phase.",
+    "The city marked the neighborhood formally in October 2025, when it installed a granite Grafton Hill sign on Grafton Street, paid for by the CSX Community Investment Fund. Recreation centers on Mulcahy Field on Dorchester Street, a city ballfield and playground, and the neighborhood association's meetings have been held at Mass Audubon's Broad Meadow Brook sanctuary on Massasoit Road, a large urban sanctuary of woods, fields, streams and marsh."
+  ],
+  "housing": {
+    "text": "The National Register record for the Patrick McGrath Three-Decker places Dorchester Street, on Grafton Hill's lower western slope, in the earliest core of Worcester's three-decker development, built up as rows of similar houses in the 1890s. Later three-deckers on the hill, such as the four c. 1928 houses of the Ingleside Avenue Historic District, carry Colonial Revival details. No published count of housing types or ownership for Grafton Hill alone was found.",
+    "source": "https://npgallery.nps.gov/GetAsset/54faea76-5b90-4033-9ec4-dff47e357e01/"
+  },
+  "areas": [
+    {
+      "name": "Grafton Street",
+      "line": "The neighborhood's spine and Route 122, with the 1879 and 1899 Grafton Street School buildings on its north side between Fay and Wall Streets and WRTA buses toward Blithewood and Edgemere.",
+      "source": "https://en.wikipedia.org/wiki/Grafton_Street_School"
+    },
+    {
+      "name": "Dorchester Street and the western slope",
+      "line": "Rows of 1890s three-deckers on the lower western slope, including the Patrick McGrath Three-Decker at 50 Dorchester Street, with Mulcahy Field farther along at 158 Dorchester Street.",
+      "source": "https://en.wikipedia.org/wiki/Patrick_McGrath_Three-Decker"
+    },
+    {
+      "name": "Ingleside Avenue",
+      "line": "A street running north from Grafton Street to Plantation Street; four Colonial Revival three-deckers at 218-220 and 226-228 Ingleside Avenue, built about 1928, form a National Register historic district.",
+      "source": "https://en.wikipedia.org/wiki/Ingleside_Avenue_Historic_District"
+    }
+  ],
+  "commute": {
+    "rail": [{"line": "Framingham/Worcester Line", "stations": ["Worcester (Union Station, 2 Washington Square)"]}],
+    "rail_source": "https://www.mbta.com/stops/place-WML-0442",
+    "highways": ["Route 122 (Grafton Street)"],
+    "text": "Grafton Hill has no rail station of its own; the nearest is Worcester station at Union Station, 2 Washington Square, downtown, the western end of the MBTA Framingham/Worcester Line. WRTA Route 5 (Blithewood/Massasoit via Grafton Street) and Route 12 (Edgemere Crossing and DTA/RMV via Grafton Street) run through the neighborhood."
+  },
+  "schools": {
+    "district": "Worcester Public Schools",
+    "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=03480000&orgtypecode=5"
+  },
+  "places": [
+    {
+      "name": "Grafton Street School",
+      "line": "Two school buildings at 311 Grafton Street: a Queen Anne building of 1879 by E. Boyden & Son, enlarged in the 1890s, and a Colonial Revival building of 1899 by J. William Patston; listed on the National Register in 1980.",
+      "source": "https://en.wikipedia.org/wiki/Grafton_Street_School"
+    },
+    {
+      "name": "Mulcahy Field",
+      "line": "A city park of about 3.4 acres at 158 Dorchester Street with baseball and softball fields, a playground and a basketball court, named for Capt. Michael J. Mulcahy, a physical education instructor at the junior high school on Dorchester Street.",
+      "source": "https://www.worcesterma.gov/city-parks/mulcahy-field"
+    },
+    {
+      "name": "Patrick McGrath Three-Decker",
+      "line": "A Queen Anne three-decker of about 1894 at 50 Dorchester Street, built as one of a row of similar houses and listed on the National Register in 1990.",
+      "source": "https://en.wikipedia.org/wiki/Patrick_McGrath_Three-Decker"
+    },
+    {
+      "name": "Ingleside Avenue Historic District",
+      "line": "Four Colonial Revival three-deckers built about 1928 north of Grafton Street, listed on the National Register in 1990.",
+      "source": "https://en.wikipedia.org/wiki/Ingleside_Avenue_Historic_District"
+    },
+    {
+      "name": "Providence Street Firehouse",
+      "line": "An 1899 firehouse at 98 Providence Street with Beaux Arts details, listed on the National Register in 1980 and now used by Worcester Emergency Medical Services.",
+      "source": "https://en.wikipedia.org/wiki/Providence_Street_Firehouse"
+    },
+    {
+      "name": "Grafton Hill neighborhood marker",
+      "line": "A granite sign installed on Grafton Street in October 2025, designed by Serrato Signs with granite from Empire Granite and funded by the CSX Community Investment Fund.",
+      "source": "https://www.worcesterma.gov/node/47910"
+    },
+    {
+      "name": "Broad Meadow Brook Wildlife Sanctuary",
+      "line": "Mass Audubon's sanctuary at 414 Massasoit Road, with more than 400 acres of woods, fields, streams and marsh on well-marked trails; Grafton Hill neighborhood meetings have been held in its community room.",
+      "source": "https://www.massaudubon.org/places-to-explore/wildlife-sanctuaries/broad-meadow-brook"
+    }
+  ],
+  "history": [
+    {"year": "1828", "text": "The Blackstone Canal opened, running south parallel to Summer and Grafton Streets.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/wor.pdf"},
+    {"year": "1863", "text": "Worcester's first horsecar line opened with a spur on Front and Grafton Streets to the Western Railroad station; a streetcar line on Grafton Street followed in 1890.", "source": "https://en.wikipedia.org/wiki/Worcester_Consolidated_Street_Railway"},
+    {"year": "1879", "text": "The first Grafton Street School building opened; a second building was added in 1899 as three-deckers filled the surrounding streets.", "source": "https://en.wikipedia.org/wiki/Grafton_Street_School"},
+    {"year": "2025", "text": "The city installed a granite Grafton Hill neighborhood marker on Grafton Street on October 31.", "source": "https://www.worcesterma.gov/node/47910"}
+  ],
+  "market": null,
+  "nearby": ["shrewsbury-street", "canal-district", "downtown", "quinsigamond-village"],
+  "search_notes": "Exact-ranking queries for 'Grafton Hill Worcester real estate' and 'moving to Grafton Hill Worcester' were not run (the session's search budget ran out). Research searches for the neighborhood returned a short Wikipedia stub, a Redfin neighborhoods blog post, an Apartments.com local guide with location errors (it places Grafton Hill east of Lake Quinsigamond) and a Discover Central MA round-up. No sourced guide covers the hill's three-decker history, the Grafton Street School or the 2025 marker, which is the gap this page fills.",
+  "faq": [
+    {"q": "What is the median home price in Grafton Hill, Worcester?", "a": "The Warren Group does not report Grafton Hill separately. Citywide, the median single-family sale price in Worcester for calendar year 2025 was $430,000 across 884 sales, up from $420,000 across 904 sales in 2024, according to its MA December 2025 Sales, Prices by Town report."},
+    {"q": "Is there commuter rail near Grafton Hill?", "a": "Grafton Hill has no station of its own. The nearest is Worcester station at Union Station, 2 Washington Square, downtown, the western end of the MBTA Framingham/Worcester Line. WRTA Routes 5 and 12 run along Grafton Street."},
+    {"q": "Which school district serves Grafton Hill?", "a": "Worcester Public Schools. School assignment is by address and is set by the district; review the district's profile with DESE."},
+    {"q": "Is Grafton Hill the same as Union Hill?", "a": "The names overlap. Wikipedia's Grafton Hill article treats Grafton Hill and Union Hill as names for the hill once called Sagatabscot, one of the city's seven hills, while its list of Worcester neighborhoods names Union Hill, Grafton Hill and Vernon Hill as separate East Side neighborhoods."},
+    {"q": "What kind of housing is on Grafton Hill?", "a": "Three-deckers are the documented type. The National Register record for 50 Dorchester Street places the hill's lower western slope in the earliest core of Worcester's three-decker building in the 1890s, and four c. 1928 Colonial Revival three-deckers on Ingleside Avenue form a historic district."}
+  ],
+  "notes": "Written 2026-10-22. Boundaries: no official city boundary for Grafton Hill was found. The boundary text combines Wikipedia's Grafton Hill stub (southeastern Worcester, anchored by Grafton and Providence Streets), the McGrath Three-Decker nomination (lower western slope at Dorchester Street), the city's Mulcahy Field page (which places the park in the Grafton Hill neighborhood) and Wikipedia's neighborhood list (Massasoit Road spans Union Hill, Grafton Hill and Broadmeadow Brook). Naming overlap: Wikipedia's Grafton Hill stub and a viacadllc.com page call the hill 'Union Hill or Grafton Hill' (Sagatabscot), but Wikipedia's neighborhood list treats Union Hill, Grafton Hill and Vernon Hill as separate neighborhoods; Union Hill landmarks (Shaarai Torah Synagogue, 32 Providence St) and Vernon Hill ones (Providence Street Historic District, 127-145 Providence St; Vernon Hill Park) were left out. The Providence Street Firehouse (98 Providence St) is on an anchor street but its own article says only 'southeast of the city's downtown'; confirm it falls within Grafton Hill. The McGrath Three-Decker address is 50 Dorchester St per its Wikipedia article and MHC Form B; the eastern-Worcester NRHP list shows 40 Dorchester St. The Grafton Street School is 311 Grafton St on the NRHP list; its 1978 MHC Form B gives 303 and 293 Grafton St and dates parts to 1879, 1890 and 1899 (the overview follows Wikipedia: 1879 and 1899 buildings). Mulcahy Field acreage: city page gives 'about 4 acres' and 3.4 acres in Quick Facts; 3.4 used. The city's Mulcahy Field page also says it sits within the Ingleside Avenue Historic District, which Wikipedia describes as only 218-228 Ingleside Ave; that claim was not repeated. Broad Meadow Brook acreage: 435 acres on one part of the Mass Audubon page, 'over 400' in another; the city record uses 'more than 400'. The neighborhood-meeting location comes from a city police calendar entry (April 16, 2025, https://www.worcesterma.gov/node/47038). The MHC town report gives the brewery and canal facts under the Federal Period (1775-1830). Left out: the Roosevelt Branch library (1006 Grafton St) and the Southeast fire station (745 Grafton St), because no source places them in Grafton Hill; I-290 (no source tying it to the neighborhood); the Discover Central MA line about restaurants and El Morocco (business details); and the city councilor's quote that the neighborhood is 'welcoming' (characterizes residents). Market null: the Warren Group PDF lists Worcester only as a citywide row (re-read this session: 'YTD Number of Sales 904 884 -2.2%'; 'YTD Median Sale Price $420,000 $430,000 2.4%'). School assignment is by address and set by the district."
+}

@@ -13,10 +13,11 @@
   "answer": "Wakefield is a Middlesex County town about 10 miles north of Boston, centered on Lake Quannapowitt and a downtown along Main Street. Single-family detached homes make up 55 percent of its housing, and about a third of its structures predate World War II. The Haverhill Line stops at Wakefield and Greenwood stations.",
   "overview": [
     "Wakefield is a town of about 27,000 people, 10 miles north of Boston, and it is laid out around Lake Quannapowitt. A paved loop of about 3.6 miles circles the lake, and Wakefield Common sits at its southern end. From there, downtown runs south along Main Street toward Crystal Lake, the town's drinking-water reservoir. The town began as part of Reading. Its South Parish broke off as South Reading in 1812, and in 1868 the town took the name of Cyrus Wakefield, who gave land and money for a new town hall.",
-    "Two Haverhill Line stations, Wakefield and Greenwood, serve the town, and I-95/Route 128 runs along its northwest edge. Greenwood covers nearly all of southern Wakefield, while Montrose, Woodville and Lakeside fill in the east and north. On Saturdays from June through October, the farmers market sets up on North Avenue by Hall Park, on the lake's shore. Breakheart Reservation, a state park with two lakes and a swimming beach at Pearce Lake, has an entrance on Hemlock Road, the one closer to the beach."
+    "Two Haverhill Line stations, Wakefield and Greenwood, serve the town, and I-95/Route 128 runs along its northwest edge. Greenwood covers nearly all of southern Wakefield, while Montrose, Woodville and Lakeside fill in the east and north. On Saturdays from June through October, the farmers market sets up on North Avenue by Hall Park, on the lake's shore. Breakheart Reservation, a state park with two lakes and a swimming beach at Pearce Lake, has an entrance on Hemlock Road, the one closer to the beach.",
+    "Wakefield's current housing plan, the Housing Production Plan for FY2026-2030, was adopted by the Town Council on June 23, 2025 and by the Planning Board on July 15, 2025, and is awaiting state certification. Under the state's MBTA Communities law, which places Wakefield in the commuter rail category, Town Meeting turned down three proposed multifamily districts in April 2024, then approved a by-right multifamily district and the bylaw change on November 16, 2024; the state now lists Wakefield as compliant. The largest project under way is The Basin at 200 Quannapowitt, where Cabot, Cabot & Forbes began demolition in May 2023 for four buildings with more than 440 apartments: the first, with 64 units, opened in August 2025, and the last is scheduled for 2026. A town master plan, drafted with MAPC on the foundation of the earlier Vision 2030, is still being refined."
   ],
   "housing": {
-    "text": "The town's Housing Production Plan for FY2026-2030 reports that single-family detached homes are 55 percent of all housing units, down from 62 percent in 2011, and that about a third of structures were built before World War II. Two-family homes, buildings of 20 to 49 units, and three- and four-unit buildings are the next most common types.",
+    "text": "The town's Housing Production Plan for FY2026-2030 reports that single-family detached homes are 55 percent of all housing units, down from 62 percent in 2011, and that about a third of structures were built before World War II. Two-family homes, buildings of 20 to 49 units, and three- and four-unit buildings are the next most common types. The plan was adopted by the Town Council on June 23, 2025 and the Planning Board on July 15, 2025.",
     "source": "https://www.mass.gov/doc/wakefield-housing-production-plan/download"
   },
   "villages": [
@@ -32,7 +33,7 @@
     },
     {
       "name": "Lakeside",
-      "line": "North-central Wakefield, along the eastern shore of Lake Quannapowitt.",
+      "line": "North-central Wakefield, along the whole eastern shore of Lake Quannapowitt and bordering Reading to the north.",
       "source": "https://en.wikipedia.org/wiki/Wakefield,_Massachusetts"
     },
     {
@@ -44,6 +45,11 @@
       "name": "Woodville",
       "line": "Much of central-eastern Wakefield.",
       "source": "https://en.wikipedia.org/wiki/Wakefield,_Massachusetts"
+    },
+    {
+      "name": "Wakefield Park",
+      "line": "A residential subdivision on Park Avenue between Summit Avenue and Chestnut Street, laid out in 1888 on former farmland and marketed in the 1890s as a garden suburb; its core was listed on the National Register in 1990.",
+      "source": "https://en.wikipedia.org/wiki/Wakefield_Park_Historic_District"
     }
   ],
   "commute": {
@@ -75,8 +81,8 @@
     },
     {
       "name": "Wakefield Common",
-      "line": "The town green on the south shore of Lake Quannapowitt, where downtown begins.",
-      "source": "https://en.wikipedia.org/wiki/Wakefield,_Massachusetts"
+      "line": "The town green on the south shore of Lake Quannapowitt, where downtown begins; it is the center of the Common District, listed on the National Register in 1990, and the Upper Common holds the World War II Veterans' Memorial, unveiled in 2011.",
+      "source": "https://en.wikipedia.org/wiki/National_Register_of_Historic_Places_listings_in_Wakefield,_Massachusetts"
     },
     {
       "name": "Hall Park and the Wakefield Farmers Market",
@@ -92,6 +98,21 @@
       "name": "Lucius Beebe Memorial Library",
       "line": "The public library at Main and Avon Streets downtown, opened in 1923.",
       "source": "https://en.wikipedia.org/wiki/Lucius_Beebe_Memorial_Library"
+    },
+    {
+      "name": "Colonel James Hartshorne House",
+      "line": "The oldest house in town, at 41 Church Street, built before 1681 and enlarged several times; it was deeded to the town in 1929 and is kept by the Col. James Hartshorne House Association.",
+      "source": "https://digitalheritage.noblenet.org/s/wakefield/item/17052"
+    },
+    {
+      "name": "Church-Lafayette Streets Historic District",
+      "line": "About seven acres of late 18th- and early 19th-century houses on Church Street, just south of the lake, and Greek Revival houses on Lafayette Street, laid out in 1824; listed on the National Register in 1989.",
+      "source": "https://en.wikipedia.org/wiki/Church%E2%80%93Lafayette_Streets_Historic_District"
+    },
+    {
+      "name": "Little Red School House",
+      "line": "The former West Ward School, a one-room schoolhouse that now houses the Wakefield Historical Society.",
+      "source": "https://en.wikipedia.org/wiki/Wakefield,_Massachusetts"
     }
   ],
   "history": [
@@ -103,6 +124,16 @@
     {
       "year": "1812",
       "text": "The South Parish separated from Reading and was incorporated as South Reading on February 25.",
+      "source": "https://en.wikipedia.org/wiki/Wakefield,_Massachusetts"
+    },
+    {
+      "year": "1844",
+      "text": "The railroad between Wilmington and Boston was chartered and built through town; it later became part of the Boston and Maine main line.",
+      "source": "https://en.wikipedia.org/wiki/Wakefield,_Massachusetts"
+    },
+    {
+      "year": "1856",
+      "text": "Cyrus Wakefield founded the Rattan Works, which grew into the Wakefield Rattan Company, at one time employing a thousand people.",
       "source": "https://en.wikipedia.org/wiki/Wakefield,_Massachusetts"
     },
     {
@@ -124,6 +155,14 @@
     "condo_median_2024": null,
     "reading_1": "Wakefield (single-family), columns Dec 2024 | Dec 2025 | Percent Change. YTD Number of Sales: 178 | 195 | 9.6%. YTD Median Sale Price: $822,500 | $830,000 | 0.9%.",
     "reading_2": "WAKEFIELD: \"YTD Number of Sales 178 195 9.6%\"; \"YTD Median Sale Price $822,500 $830,000 0.9%\""
+  },
+  "tax": {
+    "fy": "FY2026",
+    "residential_rate": 11.74,
+    "commercial_rate": 22.4,
+    "residential_exemption": false,
+    "source": "https://www.wakefieldma.gov/Faq.aspx?QID=74",
+    "note": "Single rate set for commercial, industrial and personal property (CIP). The town FAQ does not mention a residential exemption. The DLS Municipal Databank report could not be read in this session."
   },
   "nearby": [
     "reading",
@@ -149,7 +188,15 @@
     {
       "q": "How long is the walk around Lake Quannapowitt?",
       "a": "The town describes the paved loop around the lake as approximately 3.6 miles."
+    },
+    {
+      "q": "What is the property tax rate in Wakefield, MA?",
+      "a": "For fiscal year 2026, Wakefield's rates are $11.74 per $1,000 of assessed value for residential property and $22.40 per $1,000 for commercial, industrial and personal property, according to the town."
+    },
+    {
+      "q": "Has Wakefield adopted MBTA Communities zoning?",
+      "a": "Yes. Town Meeting approved a by-right multifamily district and the matching bylaw change on November 16, 2024, and the state lists Wakefield as compliant with the MBTA Communities law."
     }
   ],
-  "notes": "The Warren Group condo table could not be read: both fetches returned text cut off partway through Brookline, so all condo fields are null. The marketspread listing gives the market's address (468 North Ave) and describes Hall Park in its location notes, but does not say outright that the market is held in Hall Park; the existing Wakefield guide already confirms the Hall Park market. Lake acreage (247) is from Wikipedia; the 3.6-mile loop is from the town site. I-93 does not pass through Wakefield; the town site describes Wakefield as at the intersection of I-93 and I-95/128, so it is mentioned only in the commute text. Wikipedia also names the West Side and East Side but gives no description, so they are omitted. The Housing Production Plan's chart labels appear reversed in one place (38/61 percent), so only the text figures (55 percent single-family, 33 percent pre-war) are used. Albion Street is not mentioned because no source opened here named it. Population is from Wikipedia, citing the 2020 Census."
+  "notes": "The Warren Group condo table could not be read: both fetches returned text cut off partway through Brookline, so all condo fields are null. The marketspread listing gives the market's address (468 North Ave) and describes Hall Park in its location notes, but does not say outright that the market is held in Hall Park; the existing Wakefield guide already confirms the Hall Park market. Lake acreage (247) is from Wikipedia; the 3.6-mile loop is from the town site. I-93 does not pass through Wakefield; the town site describes Wakefield as at the intersection of I-93 and I-95/128, so it is mentioned only in the commute text. Wikipedia also names the West Side and East Side but gives no description, so they are omitted. The Housing Production Plan's chart labels appear reversed in one place (38/61 percent), so only the text figures (55 percent single-family, 33 percent pre-war) are used. Albion Street is not mentioned because no source opened here named it. Population is from Wikipedia, citing the 2020 Census. Deepened 2026-10-22: added a third overview paragraph on the FY2026-2030 Housing Production Plan adoption dates (town page, https://www.wakefieldma.gov/378/Housing-Production-Plan), MBTA Communities (town Housing page, https://www.wakefieldma.gov/655/Housing, for the November 16, 2024 Town Meeting vote and commuter rail category; Wakefield Daily Item via Local Headline News, April 30, 2024, https://localheadlinenews.com/wakefield-daily-item-town-meeting-rejects-mbta-multifamily-district-plans/, for the three rejected districts; state compliance list 'As of October 21, 2026', no. 139, https://www.mass.gov/doc/mbta-communities-district-compliance-letters/download), The Basin at 200 Quannapowitt (developer-side report by CCF New England, Nov 12, 2025, https://ccfne.com/the-basin-at-200-quannapowitt-phased-progress-in-wakefield-ma/; unit total is the sum of its four building counts, 64+160+130+86=440, and later phase dates are schedules, not completions) and the master plan status (https://www.wakefieldma.gov/474/Master-Plan-Project). Added the Wakefield Park village, places Hartshorne House, Church-Lafayette Streets Historic District and Little Red School House, history entries for 1844 and 1856, the tax object (town FAQ, FY2026 $11.74 residential, $22.40 CIP) and two FAQs (tax, MBTA Communities). The Wakefield Common line now cites the NRHP list for the Common District and the 2011 WWII memorial. Not confirmed: the MBTA district's location, acreage and unit capacity (the Daily Item coverage is paywalled and the bylaw PDF on ecode360 would not load); the HPP PDF returned binary data in this session, so no new HPP figures (tenure, unit totals) were added; the Hartshorne House date is given as 'before 1681' because the source title says 1681 and its description 'before 1680'; Wikipedia places Breakheart Reservation in Saugus, accessible from Wakefield. The DLS Municipal Databank could not be reached; the town FAQ was used for the rate."
 }

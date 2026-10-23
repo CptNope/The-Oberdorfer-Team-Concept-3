@@ -1,0 +1,74 @@
+{
+  "slug": "west-roxbury",
+  "name": "West Roxbury",
+  "parent": "boston",
+  "city_name": "Boston",
+  "county": "Suffolk County",
+  "region": "Greater Boston (the city)",
+  "population_2020": 31561,
+  "population_source": "https://bostonplans.org/getattachment/86f801a8-f8a6-4d0c-83ed-b9a63684d6b5",
+  "official_site": "https://www.boston.gov/",
+  "headline": ["Centre Street, three Needham Line stops,", "and the city's highest hill above the Charles."],
+  "answer": "West Roxbury is Boston's southwestern neighborhood, bordering Brookline, Newton, Needham and Dedham, set off from Roxbury as its own town in 1851 and annexed to Boston in 1874. Its housing is mostly single-family homes with some two-family houses, and the Boston Planning & Development Agency counted 31,561 people there in 2020. Three Needham Line stations, Bellevue, Highland and West Roxbury, run to South Station, and Centre Street is the main business district.",
+  "meta": "West Roxbury, Boston: mostly single-family homes along Centre Street, three Needham Line stations, Millennium Park and Bellevue Hill, the city's highest point.",
+  "boundaries": {
+    "text": "West Roxbury is the southwest corner of Boston: Roslindale and Jamaica Plain lie to the northeast, Chestnut Hill and Brookline to the north, Newton to the northwest, Dedham and Needham to the southwest across the Charles River and VFW Parkway, and Hyde Park to the southeast.",
+    "source": "https://en.wikipedia.org/wiki/West_Roxbury"
+  },
+  "overview": [
+    "West Roxbury was settled in 1630 as farmland on the western side of Roxbury, and its settlers were buried in the Westerly Burying Ground on Centre Street from 1683. In 1841 George and Sophia Ripley founded Brook Farm, a transcendentalist community, at the Ellis Farm on what is now Baker Street; Nathaniel Hawthorne's stay there became The Blithedale Romance. The Boston and Providence Railroad opened its West Roxbury Branch from Forest Hills to Dedham in 1849, and on May 24, 1851, West Roxbury, then including Jamaica Plain, was incorporated as a separate town. It became part of Boston on January 5, 1874.",
+    "Centre Street is the spine of the neighborhood and its business district, with the Theodore Parker Church, a Boston Landmark whose present building dates from 1900, and the Westerly Burying Ground along it. Bellevue Hill, bounded roughly by LaGrange Street, Centre Street and the West Roxbury Parkway, rises to 330 feet, the highest natural point in Boston and Suffolk County, and carries the Bellevue Standpipe. In 1906 the New Haven Railroad extended the branch from West Roxbury to Needham Junction, the route of today's Needham Line.",
+    "Open land frames the streets. Boston's 2008-2014 Open Space Plan counted 645 acres of protected open space in West Roxbury, including the 616-acre Stony Brook Reservation, shared with Hyde Park; Millennium Park, built on the capped Gardner Street landfill with soil from the Big Dig and opened on December 7, 2000; Allandale Woods, which the plan called the city's largest urban wild; and Brook Farm, which the state acquired in 1988 and DCR operates as a historic site."
+  ],
+  "housing": {
+    "text": "West Roxbury is mostly single-family homes, with some two-family houses. Boston's 2008-2014 Open Space Plan put single-family homes at about 55% of year-round housing units and noted that over three-quarters of units were built after 1920. The Boston Planning & Development Agency's tabulation of the 2016-2020 American Community Survey counts 13,868 occupied housing units, 61.7% of them owner-occupied, compared with 35.3% citywide.",
+    "source": "https://bostonplans.org/getattachment/86f801a8-f8a6-4d0c-83ed-b9a63684d6b5"
+  },
+  "areas": [
+    {"name": "Centre Street", "line": "The main commercial street and business district, running the length of the neighborhood past the Theodore Parker Church and the Westerly Burying Ground.", "source": "https://en.wikipedia.org/wiki/West_Roxbury"},
+    {"name": "Bellevue Hill", "line": "Streets on the city's highest natural point, at 330 feet, bounded roughly by LaGrange Street, Centre Street and the West Roxbury Parkway, with the Bellevue Standpipe on the summit.", "source": "https://en.wikipedia.org/wiki/Bellevue_Hill,_Boston"},
+    {"name": "The Charles River edge", "line": "The western side along VFW Parkway, with Millennium Park and its canoe launch on the Charles River, Brook Farm on Baker Street, and a VA hospital near the Dedham line.", "source": "https://www.cityofboston.gov/parks/pdfs/OSP2010/OSP0814_7.2.15_WestRoxbury.pdf"}
+  ],
+  "commute": {
+    "rail": [
+      {"line": "Needham Line", "stations": ["Bellevue", "Highland", "West Roxbury"]}
+    ],
+    "rail_source": "https://www.mbta.com/schedules/CR-Needham/timetable",
+    "highways": ["VFW Parkway", "West Roxbury Parkway"],
+    "text": "The Needham Line stops at Bellevue, Highland and West Roxbury, at 450 LaGrange Street, and runs through Roslindale Village, Forest Hills, Ruggles and Back Bay to South Station. Forest Hills, at the Jamaica Plain end of the line, connects with the Orange Line. Several MBTA bus routes run through or end in the neighborhood, and VFW Parkway and the West Roxbury Parkway are its main parkways."
+  },
+  "schools": {"district": "Boston Public Schools", "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=00350000&orgtypecode=5"},
+  "places": [
+    {"name": "Millennium Park", "line": "A park on the former Gardner Street landfill, capped with soil from the Big Dig and opened in 2000; the city's open space plan lists 105 acres, with 21 acres of playing fields and a canoe launch on the Charles River.", "source": "https://www.cityofboston.gov/parks/pdfs/OSP2010/OSP0814_7.2.15_WestRoxbury.pdf"},
+    {"name": "Stony Brook Reservation", "line": "A 616-acre DCR reservation established in 1894 by the Metropolitan Park Commission, running south from Washington Street toward Hyde Park, with hiking and biking trails and fishing at Turtle Pond.", "source": "https://en.wikipedia.org/wiki/Stony_Brook_Reservation"},
+    {"name": "Brook Farm", "line": "Site of the 1841 to 1847 transcendentalist community at 670 Baker Street, a National Historic Landmark since 1965, operated by DCR as a historic site.", "source": "https://en.wikipedia.org/wiki/Brook_Farm"},
+    {"name": "Westerly Burying Ground", "line": "A burying ground on Centre Street dating to 1683, Boston's seventh-oldest cemetery, listed on the National Register in 1987.", "source": "https://en.wikipedia.org/wiki/Westerly_Burying_Ground"},
+    {"name": "Theodore Parker Church", "line": "A Boston Landmark on Centre Street, its 1900 building designed by Henry Seaver, with seven Tiffany Studios windows; the original 1890 church by Alexander Wadsworth Longfellow Jr. is now the parish hall.", "source": "https://en.wikipedia.org/wiki/West_Roxbury"},
+    {"name": "Allandale Woods", "line": "A wooded city urban wild at the neighborhood's northern edge, described in Boston's open space plan as the city's largest.", "source": "https://www.cityofboston.gov/parks/pdfs/OSP2010/OSP0814_7.2.15_WestRoxbury.pdf"}
+  ],
+  "history": [
+    {"year": "1683", "text": "The Westerly Burying Ground was established, when West Roxbury was still part of Roxbury.", "source": "https://en.wikipedia.org/wiki/Westerly_Burying_Ground"},
+    {"year": "1841", "text": "George and Sophia Ripley founded the Brook Farm community at the Ellis Farm; it had closed by 1847.", "source": "https://en.wikipedia.org/wiki/Brook_Farm"},
+    {"year": "1851", "text": "West Roxbury was incorporated as a town on May 24, separate from Roxbury.", "source": "https://en.wikipedia.org/wiki/West_Roxbury"},
+    {"year": "1874", "text": "West Roxbury became part of Boston on January 5.", "source": "https://en.wikipedia.org/wiki/West_Roxbury"}
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 210, "sf_sales_2024": 222,
+    "sf_median_2025": 850000, "sf_median_2024": 797500,
+    "condo_sales_2025": null, "condo_median_2025": null, "condo_median_2024": null,
+    "reading_1": "WEST ROXBURY (single-family; Dec 2024, Dec 2025, Percent Change): Number of Sales 18 19 5.6%; YTD Number of Sales 222 210 -5.4%; Median Sale Price $710,000 $750,000 5.6%; YTD Median Sale Price $797,500 $850,000 6.6%",
+    "reading_2": "WEST ROXBURY (single-family): YTD Number of Sales 222 210 -5.4%; YTD Median Sale Price $797,500 $850,000 6.6%"
+  },
+  "nearby": ["jamaica-plain", "back-bay", "south-end", "dorchester"],
+  "search_notes": "Not checked in this session: the shared web search budget ran out before search results for 'West Roxbury real estate agent' and 'moving to West Roxbury' could be reviewed. Recheck before launch.",
+  "faq": [
+    {"q": "What is the median home price in West Roxbury?", "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, which lists West Roxbury on its own row, the median single-family sale price for calendar year 2025 was $850,000, across 210 sales. In 2024 it was $797,500, across 222 sales. Condominium figures for West Roxbury could not be read from the table."},
+    {"q": "Does West Roxbury have commuter rail?", "a": "Yes. The MBTA Needham Line stops at Bellevue, Highland and West Roxbury and runs through Forest Hills, Ruggles and Back Bay to South Station."},
+    {"q": "Which school district serves West Roxbury?", "a": "Boston Public Schools. School assignment is set by the district; review its profile with DESE."},
+    {"q": "What is the highest point in Boston?", "a": "Bellevue Hill in West Roxbury, at 330 feet, is the highest natural point in Boston and Suffolk County. The Bellevue Standpipe on its summit is on the Boston Register of Historic Places."}
+  ],
+  "notes": "Written 2026-10-22. Population: Boston Planning & Development Agency Research Division, 'Boston in Context: Neighborhoods, 2020 Decennial Census Redistricting Data and 2016-2020 American Community Survey' (April 2022), 'Population by Age Group' table, total 31,561 (neighborhood approximated with 2020 block groups; not a planning-district figure). The agency's January 1, 2025 estimate is 31,381 (not used). Housing: 'mostly single-family homes, with some two-family houses' is from Wikipedia's West Roxbury article; the 55% single-family and post-1920 shares are from Boston's Open Space Plan 2008-2014, section 7.2.15 (Boston Parks & Recreation, August 2007), and rest on 2000 Census data, so they are dated; tenure from the 2022 BPDA report. Open space: the 2007 plan gives Millennium Park as 105 acres and 21 acres of fields, while Wikipedia gives 100 acres and 25 acres; the city figures are used and attributed. Allandale Woods acreage was not given; the boston.gov urban wilds page failed to load. Brook Farm: founded 1841 at the Ellis Farm, NHL 1965, state acquired 148 acres in 1988 (Wikipedia). Stony Brook Reservation acreage and date from Wikipedia; the DCR page was not opened. Theodore Parker Church details from Wikipedia's West Roxbury article (its own article was not found); its Landmark designation year was not confirmed. Needham Line stations and order from the MBTA timetable; West Roxbury station address and the 1849 and 1906 dates from Wikipedia's West Roxbury station article. The answer's 'set off from Roxbury in 1851' and 'then including Jamaica Plain' rest on the West Roxbury and Jamaica Plain Wikipedia articles. Highway route numbers (for example whether VFW Parkway carries US 1) were not confirmed, so only parkway names are listed. Market: single-family row read twice in this session with identical YTD figures; condo table truncated at Brookline. Schools: assignment is by address and set by Boston Public Schools; Roxbury Latin School is in West Roxbury but was not named because it was not confirmed this session. Nearby: Roslindale and Hyde Park border West Roxbury but are not in the current slug list; Jamaica Plain is adjacent, and Back Bay and the South End are on the Needham Line; Dorchester is not adjacent. Fair housing: the Open Space Plan and Wikipedia describe the neighborhood as 'the most suburban' and its streets as 'leafy' with 'stately homes'; that language was not used. Population history figures in the 2007 plan were left out."
+}

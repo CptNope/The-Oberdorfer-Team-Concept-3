@@ -1,0 +1,69 @@
+{
+  "slug": "beacon-hill",
+  "name": "Beacon Hill",
+  "parent": "boston",
+  "city_name": "Boston",
+  "county": "Suffolk County",
+  "region": "Greater Boston (the city)",
+  "population_2020": 9336,
+  "population_source": "https://www.bostonplans.org/getattachment/285c9cac-59e4-415c-9d7d-a4873a3f2773",
+  "official_site": "https://boston.gov/historic-district/historic-beacon-hill-district",
+  "headline": ["Brick rows and cobblestone lanes", "climbing from Charles Street to the State House."],
+  "answer": "Beacon Hill is a Boston neighborhood on the hill behind the Massachusetts State House, between Boston Common and the Charles River, with 9,336 residents in 2020 (2020 Census, Boston Planning Department tabulation). Its housing is mostly Federal and Greek Revival brick row houses built after the State House was completed in 1798, protected since 1955 as the Historic Beacon Hill District. The Red Line stops at Charles/MGH and Park Street, and the Blue Line at Bowdoin.",
+  "meta": "Beacon Hill, Boston: Federal and Greek Revival row houses behind the 1798 State House, Louisburg Square, Charles Street, and the Red Line at Charles/MGH.",
+  "boundaries": {
+    "text": "Bounded by Storrow Drive, Cambridge Street, Bowdoin Street, Park Street and Beacon Street, plus the block bounded by Beacon, Tremont and Park Streets, with the Charles River Esplanade to the west and Boston Common and the Public Garden to the south.",
+    "source": "https://en.wikipedia.org/wiki/Beacon_Hill,_Boston"
+  },
+  "overview": [
+    "Beacon Hill takes its name from a signal beacon set on its summit in 1634. William Blaxton had built a house and orchard on the south slope by 1625, and Beacon Street began as a cow path to Boston Common, laid out as a street in 1708. Development of the hill began with Charles Bulfinch's Massachusetts State House, whose cornerstone was laid on July 4, 1795, and which was completed in January 1798. The Mount Vernon Proprietors bought 18 1/2 acres west of the State House, mostly from the painter John Singleton Copley, for house lots. Between 1807 and 1832 the hill was cut down from 138 feet to 80, and the surrounding waters were filled, creating the level Flat of the Hill west of Charles Street.",
+    "Asher Benjamin, Solomon Willard and Alexander Parris designed houses on the hill in the Federal and Greek Revival styles, and apartment buildings were added later in the 19th century. Louisburg Square, surveyed in the 1820s, is lined with Greek Revival houses built between 1834 and 1847 around a fenced oval owned and kept by the Louisburg Square Proprietors, not the city. Acorn Street, a narrow cobblestone lane, once held the houses of coachmen who worked on Mount Vernon and Chestnut Streets. Charles Street, at the foot of the hill, is the neighborhood's commercial spine and gives the Red Line's Charles/MGH station its name. On the North Slope, the African Meeting House (1806) and the Abiel Smith School (1835) are part of the Boston African American National Historic Site.",
+    "In 1955 the state created the Historic Beacon Hill District, the first historic district in Massachusetts, starting with the South Slope; the Flat of the Hill and the North Slope were added in 1958 and 1963, and the district was expanded again in 1975 and 2024. All exterior work visible from a public way, including views from the Common, the Public Garden, Storrow Drive, the Esplanade and the Longfellow Bridge, needs approval from the Beacon Hill Architectural Commission before work starts or materials are bought. Beacon Hill was designated a National Historic Landmark District on December 19, 1962, and listed on the National Register on October 15, 1966."
+  ],
+  "housing": {
+    "text": "Beacon Hill's housing is Federal and Greek Revival brick row houses, apartment buildings added later in the 19th century, and former stables and carriage houses converted into lofts and studios. The Boston Planning & Development Agency's tabulation of the 2014 to 2018 American Community Survey counts 6,077 housing units, 5,325 of them occupied; 33.5% of occupied units were owner occupied and 66.5% renter occupied.",
+    "source": "https://www.bostonplans.org/getattachment/1882b00d-48fe-41bc-ac1a-6979e25dbaf1"
+  },
+  "areas": [
+    {"name": "South Slope", "line": "The side of the hill facing Boston Common, behind the State House; the first section protected when the Historic Beacon Hill District was created in 1955.", "source": "https://en.wikipedia.org/wiki/Beacon_Hill,_Boston"},
+    {"name": "North Slope", "line": "The side of the hill falling toward Cambridge Street, added to the historic district in 1963, where the African Meeting House and Abiel Smith School stand at the center of the Boston African American National Historic Site.", "source": "https://www.nps.gov/boaf/index.htm"},
+    {"name": "Flat of the Hill", "line": "Level land built on fill west of Charles Street, between Beacon and Cambridge Streets, added to the historic district in 1958.", "source": "https://en.wikipedia.org/wiki/Beacon_Hill,_Boston"},
+    {"name": "Charles Street", "line": "The commercial spine of the neighborhood, running south from Charles Circle at the foot of the hill; it gives the Red Line's Charles/MGH station its name.", "source": "https://en.wikipedia.org/wiki/Charles_Street_(Boston)"}
+  ],
+  "commute": {
+    "rail": [
+      {"line": "Red Line", "stations": ["Charles/MGH", "Park Street"]},
+      {"line": "Green Line", "stations": ["Park Street"]},
+      {"line": "Blue Line", "stations": ["Bowdoin"]}
+    ],
+    "rail_source": "https://en.wikipedia.org/wiki/Beacon_Hill,_Boston",
+    "highways": ["Storrow Drive"],
+    "text": "The Red Line stops at Charles/MGH, at Cambridge and Charles Streets, and at Park Street, where it meets the Green Line; the Blue Line stops at Bowdoin. There is no commuter rail station in the neighborhood; the Red Line continues to South Station, where eight commuter rail lines end. Storrow Drive runs along the river edge."
+  },
+  "schools": {"district": "Boston Public Schools", "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=00350000&orgtypecode=5"},
+  "places": [
+    {"name": "Massachusetts State House", "line": "Charles Bulfinch's state capitol on Beacon Street across from Boston Common, completed in 1798; Paul Revere's company sheathed its dome in copper in 1802, and it was gilded in 1874.", "source": "https://en.wikipedia.org/wiki/Massachusetts_State_House"},
+    {"name": "Louisburg Square", "line": "A private oval park between Pinckney and Mount Vernon Streets, ringed by Greek Revival houses built from 1834 to 1847, with statues of Columbus and Aristides the Just at either end.", "source": "https://en.wikipedia.org/wiki/Louisburg_Square"},
+    {"name": "Acorn Street", "line": "A narrow cobblestone lane whose small houses once belonged to coachmen working for households on Mount Vernon and Chestnut Streets.", "source": "https://en.wikipedia.org/wiki/Beacon_Hill,_Boston"},
+    {"name": "African Meeting House and Abiel Smith School", "line": "Cared for by the Museum of African American History on the North Slope; the meeting house was the religious, educational and political center of Boston's Black community in the 1800s, and the school opened in 1835. Park rangers lead walks on the Black Heritage Trail.", "source": "https://www.nps.gov/boaf/index.htm"},
+    {"name": "Nichols House Museum", "line": "A historic house at 55 Mount Vernon Street, open for tours, programs and events.", "source": "https://www.nicholshousemuseum.org/"},
+    {"name": "Boston Common", "line": "Founded in 1634 at the foot of the hill, with ballfields, a tot lot and the Frog Pond, used for skating in winter and as a spray pool in summer.", "source": "https://www.boston.gov/parks/boston-common"},
+    {"name": "Charles River Esplanade", "line": "State parkland along the river to the west, created with the 1910 Charles River Dam, with the Hatch Shell stage built in 1941.", "source": "https://en.wikipedia.org/wiki/Charles_River_Esplanade"}
+  ],
+  "history": [
+    {"year": "1634", "text": "A signal beacon was set on the hilltop, giving the hill its name.", "source": "https://en.wikipedia.org/wiki/Beacon_Hill,_Boston"},
+    {"year": "1798", "text": "Charles Bulfinch's Massachusetts State House was completed in January, after its cornerstone was laid on July 4, 1795.", "source": "https://en.wikipedia.org/wiki/Massachusetts_State_House"},
+    {"year": "1955", "text": "The Historic Beacon Hill District was established, the first historic district in Massachusetts; it was expanded in 1958, 1963, 1975 and 2024.", "source": "https://boston.gov/historic-district/historic-beacon-hill-district"},
+    {"year": "1962", "text": "Beacon Hill was designated a National Historic Landmark District on December 19, 1962.", "source": "https://en.wikipedia.org/wiki/Beacon_Hill,_Boston"}
+  ],
+  "market": null,
+  "nearby": ["back-bay", "charlestown", "south-end", "south-boston"],
+  "search_notes": "Not researched in this session: the web search budget ran out before checking what ranks for 'Beacon Hill Boston real estate agent' and 'moving to Beacon Hill Boston'. To do before launch.",
+  "faq": [
+    {"q": "What is the median home price on Beacon Hill?", "a": "The Warren Group's MA December 2025 Sales, Prices by Town table does not list Beacon Hill as its own row. It reports some Boston neighborhoods, such as Charlestown and South Boston, separately, and has a Boston row that the PDF does not define by neighborhood; see the Boston city guide for that row."},
+    {"q": "Is there commuter rail on Beacon Hill?", "a": "No commuter rail station is in the neighborhood. The Red Line stops at Charles/MGH and Park Street and continues to South Station, where eight MBTA commuter rail lines end; the Blue Line stops at Bowdoin."},
+    {"q": "Which school district serves Beacon Hill?", "a": "Boston Public Schools. School assignment is set by the district under its own citywide rules; review the district's profile with DESE."},
+    {"q": "Do Beacon Hill homes need approval for exterior changes?", "a": "Yes, inside the Historic Beacon Hill District. All exterior work visible from a public way, including from the Common, the Public Garden, Storrow Drive, the Esplanade and the Longfellow Bridge, needs Beacon Hill Architectural Commission approval before work starts."}
+  ],
+  "notes": "Written 2026-10-22. Population: 9,336 is from the Boston Planning & Development Agency (now the Boston Planning Department) Research Division report of June 2023, chart 'Boston Population by Neighborhood, 1980 to 2020'; neighborhoods are approximated by 2020 Census tracts. Labels and values are separate ascending blocks in the PDF's extracted text, so the pairing was made by position; it agrees with the BPDA's 2014 to 2018 ACS figure of 9,422 and Wikipedia's 2010 figure of 9,023. A fact-checker should confirm it against the chart image. Market: no BEACON HILL row in the Warren Group PDF (read twice), so market is null. Housing: tenure from the BPDA 'Boston in Context: Neighborhoods' (February 2020) Housing Tenure row 'Beacon Hill 6,077 5,325 87.6% 1,783 33.5% 3,542 66.5%'; the description of house types, later apartment buildings and stable conversions is from the City of Boston district page (https://boston.gov/historic-district/historic-beacon-hill-district). The 1955 'first such district in Massachusetts' and the 1958/1963 additions for the Flat and North Slope are from Wikipedia; the city page confirms 1955, 1958, 1963, 1975 and 2024. Schools: Boston Public Schools (DESE orgcode 00350000, confirmed); assignment is by the district's own citywide rules and registration process (https://www.bostonpublicschools.org/enroll); nothing is said about individual schools. 'Eight commuter rail lines' at South Station is from the MBTA South Station page (https://www.mbta.com/stops/place-sstat). Fair housing: Wikipedia's slope descriptions say who lived and lives on each slope (Brahmin families, students, professionals), and its Louisburg Square text calls it 'the most prestigious address'; all of that was left out, and the slopes are described only by location and district dates. The North Slope's 19th-century Black community is mentioned only as the National Park Service describes the African Meeting House's historic role, not as a description of present residents. 'Most frequently photographed street' (Acorn Street) left out as a superlative. The Nichols House Museum's year, architect and namesake were not on its homepage, so only the address and use are given. Search notes not researched (search budget exhausted)."
+}

@@ -1,0 +1,68 @@
+{
+  "slug": "back-bay",
+  "name": "Back Bay",
+  "parent": "boston",
+  "city_name": "Boston",
+  "county": "Suffolk County",
+  "region": "Greater Boston (the city)",
+  "population_2020": 18190,
+  "population_source": "https://www.bostonplans.org/getattachment/285c9cac-59e4-415c-9d7d-a4873a3f2773",
+  "official_site": "https://www.boston.gov/historic-district/back-bay-architectural-district",
+  "headline": ["Brownstone rows on filled tidal flats,", "laid out one alphabetical cross street at a time."],
+  "answer": "Back Bay is a Boston neighborhood built on tidal flats filled between 1857 and 1882, with 18,190 residents in 2020 (2020 Census, Boston Planning Department tabulation). Its housing is mostly Victorian brownstone row houses of three to five stories on Beacon, Marlborough and Commonwealth, with shops along Newbury and Boylston Streets. Back Bay station serves the Orange Line, four commuter rail lines and Amtrak, and the Green Line stops at Arlington, Copley, Hynes Convention Center and Prudential.",
+  "meta": "Back Bay, Boston: brownstone rows on land filled from 1857 to 1882, the Commonwealth Avenue Mall, Copley Square, and rail at Back Bay station. Sourced guide.",
+  "boundaries": {
+    "text": "As defined by the Neighborhood Association of the Back Bay, the Charles River to the north, Arlington Street and Park Square to the east, Columbus Avenue, Huntington Avenue, Dalton Street and the Massachusetts Turnpike to the south, and Charlesgate East to the west. The smaller Back Bay Architectural District runs from Back Street to Boylston Street between Arlington Street and Charlesgate East.",
+    "source": "https://en.wikipedia.org/wiki/Back_Bay,_Boston"
+  },
+  "overview": [
+    "Back Bay was a tidal bay of the Charles River until the 19th century. The Boston and Roxbury Mill Corporation, chartered in 1814, built a milldam across it that doubled as a toll road; the basin behind it trapped sewage and the venture failed. Filling began in 1857 at the edge of the Public Garden and worked westward, and houses followed lot by lot from 1859. By 1882 the present neighborhood had been filled, and the City of Boston credits the mid-century landfilling with more than 450 acres of usable land by the 1880s. Arthur Gilman's plan, modeled on Haussmann's Paris, set five parallel east-west streets, Beacon, Marlborough, Commonwealth, Newbury and Boylston, crossed by streets named in alphabetical order from Arlington to Hereford.",
+    "Commonwealth Avenue runs down the middle of the grid on a 32-acre mall that Gilman designed in 1856 in the French boulevard style, the green link between the Public Garden and Frederick Law Olmsted's park system. The row houses, three to five stories, were held to setbacks written into the lot deeds, so the blocks read as continuous walls. Commercial use reached Boylston Street around 1880 and Newbury Street in the early 20th century, often by adapting existing row houses. Copley Square gathers H. H. Richardson's Trinity Church (1872 to 1877) and the Boston Public Library's McKim Building (1895), and the 52-story Prudential Tower, completed in 1964, rises to the south.",
+    "The Massachusetts Legislature created the Back Bay Architectural District in 1966 to regulate exterior changes, and it was expanded in 1974, 1979 and 1981. All proposed exterior work goes to the Back Bay Architectural Commission, and approval is needed before work begins. The district was added to the National Register of Historic Places on August 14, 1973. Along the river, the Charles River Esplanade was built after the Charles River Dam was completed in 1910, and pedestrian overpasses connect it to the city's streets."
+  ],
+  "housing": {
+    "text": "Back Bay's housing is mostly Victorian brownstone row houses of three to five stories, built from 1859 as the land was filled. The Boston Planning & Development Agency's tabulation of the 2014 to 2018 American Community Survey counts 11,992 housing units, 9,842 of them occupied; 31.8% of occupied units were owner occupied and 68.2% renter occupied.",
+    "source": "https://www.bostonplans.org/getattachment/1882b00d-48fe-41bc-ac1a-6979e25dbaf1"
+  },
+  "areas": [
+    {"name": "Back Bay Architectural District", "line": "The residential core from Back Street to Boylston Street, between Arlington Street and Charlesgate East: Beacon, Marlborough and Commonwealth crossed by the alphabetical streets, where all exterior work is reviewed by the Back Bay Architectural Commission.", "source": "https://www.boston.gov/historic-district/back-bay-architectural-district"},
+    {"name": "Newbury and Boylston Streets", "line": "The shopping streets of the neighborhood; commercial development started on Boylston Street around 1880 and on Newbury Street in the early 20th century, in some cases by adapting existing row houses.", "source": "https://www.boston.gov/historic-district/back-bay-architectural-district"},
+    {"name": "Copley Square", "line": "A public square in the southeast of the neighborhood, framed by Trinity Church and the Boston Public Library's Central Library.", "source": "https://en.wikipedia.org/wiki/Back_Bay,_Boston"},
+    {"name": "Prudential Center", "line": "The mixed-use complex in the south of the neighborhood around the 52-story Prudential Tower, completed in 1964, with Prudential station on the Green Line.", "source": "https://en.wikipedia.org/wiki/Back_Bay,_Boston"}
+  ],
+  "commute": {
+    "rail": [
+      {"line": "Orange Line", "stations": ["Back Bay"]},
+      {"line": "Green Line", "stations": ["Arlington", "Copley", "Hynes Convention Center", "Prudential"]},
+      {"line": "Commuter rail: Framingham/Worcester, Needham, Franklin/Foxboro and Providence/Stoughton Lines", "stations": ["Back Bay, 145 Dartmouth Street"]}
+    ],
+    "rail_source": "https://en.wikipedia.org/wiki/Back_Bay_station",
+    "highways": ["I-90 (Massachusetts Turnpike)"],
+    "text": "Back Bay station, at 145 Dartmouth Street, serves the Orange Line, the Framingham/Worcester, Needham, Franklin/Foxboro and Providence/Stoughton commuter rail lines, and Amtrak's Acela, Northeast Regional and the Boston section of the Lake Shore Limited. The Green Line stops at Arlington, Copley, Hynes Convention Center and Prudential. The Massachusetts Turnpike forms part of the neighborhood's southern boundary."
+  },
+  "schools": {"district": "Boston Public Schools", "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=00350000&orgtypecode=5"},
+  "places": [
+    {"name": "Commonwealth Avenue Mall", "line": "A 32-acre promenade designed by Arthur Gilman in 1856 in the French boulevard style, with monuments along its center and a link from the Public Garden to the Olmsted parks.", "source": "https://www.boston.gov/parks/commonwealth-avenue-mall"},
+    {"name": "Trinity Church", "line": "H. H. Richardson's Richardsonian Romanesque church on Copley Square, built from 1872 to 1877 and designated a National Historic Landmark in 1970.", "source": "https://en.wikipedia.org/wiki/Trinity_Church_(Boston)"},
+    {"name": "Boston Public Library, Central Library", "line": "At 700 Boylston Street on Copley Square: Charles Follen McKim's 1895 building, with the Bates Hall reading room, and Philip Johnson's 1972 Boylston Street building in the same pink Milford granite.", "source": "https://en.wikipedia.org/wiki/Boston_Public_Library"},
+    {"name": "Charles River Esplanade", "line": "State parkland along the Charles River created with the 1910 dam and expanded between 1928 and 1936, with the Hatch Shell stage, built in 1941, near the Arthur Fiedler footbridge at Arlington Street.", "source": "https://en.wikipedia.org/wiki/Charles_River_Esplanade"},
+    {"name": "Public Garden", "line": "Established in 1837 across Arlington Street as the first public botanical garden in America, with the Lagoon and the Swan Boats run by the Paget family for over 100 years.", "source": "https://www.boston.gov/parks/public-garden"},
+    {"name": "Gibson House Museum", "line": "A Victorian house museum at 137 Beacon Street, home to three generations of the Gibson family from 1859 to 1954.", "source": "https://www.thegibsonhouse.org/"}
+  ],
+  "history": [
+    {"year": "1814", "text": "The Boston and Roxbury Mill Corporation was chartered to build a milldam across the bay that also served as a toll road.", "source": "https://en.wikipedia.org/wiki/Back_Bay,_Boston"},
+    {"year": "1857", "text": "Filling of the area enclosed by the dam began; the present neighborhood was filled by 1882.", "source": "https://en.wikipedia.org/wiki/Back_Bay,_Boston"},
+    {"year": "1966", "text": "The Back Bay Architectural District was established, later expanded in 1974, 1979 and 1981.", "source": "https://www.boston.gov/historic-district/back-bay-architectural-district"},
+    {"year": "1973", "text": "The district was added to the National Register of Historic Places on August 14, 1973.", "source": "https://en.wikipedia.org/wiki/Back_Bay,_Boston"}
+  ],
+  "market": null,
+  "nearby": ["beacon-hill", "south-end", "jamaica-plain", "south-boston"],
+  "search_notes": "Not researched in this session: the web search budget ran out before checking what ranks for 'Back Bay Boston real estate agent' and 'moving to Back Bay Boston'. To do before launch.",
+  "faq": [
+    {"q": "What is the median home price in Back Bay?", "a": "The Warren Group's MA December 2025 Sales, Prices by Town table does not list Back Bay as its own row. It reports some Boston neighborhoods, such as Charlestown, Dorchester and Jamaica Plain, separately, and has a Boston row that the PDF does not define by neighborhood; see the Boston city guide for that row."},
+    {"q": "Does Back Bay have commuter rail?", "a": "Yes. Back Bay station at 145 Dartmouth Street is a stop on the Framingham/Worcester, Needham, Franklin/Foxboro and Providence/Stoughton Lines, as well as the Orange Line and Amtrak."},
+    {"q": "Which school district serves Back Bay?", "a": "Boston Public Schools. School assignment is set by the district under its own citywide rules; review the district's profile with DESE."},
+    {"q": "Do Back Bay homes need approval for exterior changes?", "a": "Inside the Back Bay Architectural District, yes. All proposed exterior work is reviewed by the Back Bay Architectural Commission, and approval is needed before work begins."}
+  ],
+  "notes": "Written 2026-10-22. Population: 18,190 is from the Boston Planning & Development Agency (now the Boston Planning Department) Research Division report of June 2023 on Boston's population 1950 to 2020, chart 'Boston Population by Neighborhood, 1980 to 2020'; neighborhoods there are approximated by 2020 Census tracts, not planning districts. The PDF's extracted text lists chart labels and values as separate blocks, both in ascending order; the pairing was made by position and is consistent with the report's own text (Roxbury 54,533) and with the BPDA's earlier 2014 to 2018 ACS count of 17,902. A fact-checker should confirm 18,190 against the chart image. The old BRA 'Back Bay/Beacon Hill' planning district combines two neighborhoods, so no planning-district figure was used. Market: the Warren Group PDF (fetched twice) has no BACK BAY row, so market is null. Housing: tenure figures are from the BPDA's 'Boston in Context: Neighborhoods' (February 2020), Housing Tenure table, row 'Back Bay 11,992 9,842 82.1% 3,132 31.8% 6,710 68.2%'; row-house description from Wikipedia. Schools: Boston Public Schools (DESE orgcode 00350000, opened and confirmed); assignment is by the district's own citywide rules and registration process (https://www.bostonpublicschools.org/enroll), and nothing is said about individual schools. Left out: the John Hancock Tower (Wikipedia's summary gave a completion date that could not be cross-checked), Wikipedia's ZIP-code demographic and ancestry tables (fair housing), the district page's description of Back Bay as a 'fashionable' district (marketing tone), and the Back Bay Fens, which Wikipedia places on the south edge but which is generally treated as part of the Fenway. Copley Square line rests on Wikipedia because the boston.gov Copley Square page failed to load. Search notes not researched (search budget exhausted)."
+}
