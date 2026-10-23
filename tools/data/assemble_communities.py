@@ -35,9 +35,7 @@ PLAN = [
 NEIGHBORHOODS = {
     "worcester": ["downtown", "canal-district", "shrewsbury-street", "main-south",
                   "grafton-hill", "tatnuck", "greendale", "quinsigamond-village",
-                  "union-hill", "burncoat"],
-    # webster-square and vernon-hill are researched but their fact-check is unfinished
-    # (2026-10-23); add them back here once it is complete.
+                  "webster-square", "vernon-hill", "union-hill", "burncoat"],
     "boston": ["back-bay", "beacon-hill", "south-end", "north-end", "charlestown",
                "east-boston", "jamaica-plain", "roslindale", "west-roxbury", "hyde-park",
                "roxbury", "mattapan", "dorchester", "south-boston", "allston", "brighton"],

@@ -1396,6 +1396,317 @@
     "notes": "Written 2026-10-22. Correction for the city record: worcester.json describes Quinsigamond Village as 'near Lake Avenue and Lake Quinsigamond'. Sources read here place it in the Blackstone River valley in South Worcester (walking tour; city Greenwood Park and Blackstone Gateway Park pages); Lake Quinsigamond is on the city's east side, so the city record's village line should be revised (not edited here, per the brief). Fair housing: the walking tour's population history (the village as 'Little Sweden', the share of Swedish residents in 1900, home-ownership rates and the earlier Irish Catholic population) was left out because it describes who lived there; only institutions are named (First Swedish Co-op Store, Swedish Congregational chapel, Lutheran Emmanuel Church). Discover Central MA's 'traditionally Swedish neighborhood' line was likewise not used. Dates: the walking tour puts Isaiah Thomas's paper mill in the 1770s; the MHC town report says 1794; the MHC date is used. The walking tour (Blackstone River Valley National Heritage Corridor, apparently 1999) gives older Millbury Street addresses: the library at 812 Millbury St (also on the NRHP list) is now 14 Blackstone River Road per Wikipedia, and its 'Quinsigamond Fire Station, 837 Main Street' appears to be an error for the firehouse at 15 Blackstone River Road. House numbers from the walking tour (Berg/Dahlin Cottages 841-847 and George Reeves House 894 Millbury St, the Klondike 854-858) were not repeated because the numbering may have changed; whether those buildings and the Washburn & Moen galvanizing and wire rope buildings near the river bridge still stand was not confirmed. Blackstone Gateway Park acreage: the city gives 30 acres; Discover Central MA says 34; the city figure is used. The visitor center: the Heritage Corridor page says it opened October 27, 2018; a Worcester Business Journal article calls it a $12 million effort while a search snippet said $21 million, so no cost is stated. The 2005 bikeway opening date is from Wikipedia's Blackstone River Greenway article (https://en.wikipedia.org/wiki/Blackstone_River_Greenway). Route 146 exit numbers are from Wikipedia (https://en.wikipedia.org/wiki/Massachusetts_Route_146). The replacement fire station 'on McKeon Street' in the firehouse article is presumably the McKeon Road station at 80 McKeon Road listed by the fire department. Streetcar facts are from Wikipedia's Worcester Consolidated Street Railway article. The 'pickerel fishing place' translation is from the NativeTech Nipmuc place-name list. Market null: the Warren Group PDF lists Worcester only as a citywide row (re-read this session: 'YTD Number of Sales 904 884 -2.2%'; 'YTD Median Sale Price $420,000 $430,000 2.4%'). School assignment is by address and set by the district; Quinsigamond Elementary School is named only as the building joined to the old library. Fact-check 2026-10-22: Verified the walking tour (narrow valley between two steep ridges; the village spreading along Millbury Street; three-deckers by 1900; Berg/Dahlin cottages 1875-1878; George Reeves House 1857-1862 and its Washburn & Moen foreman; the Methodist church at 9 Stebbins Street, 1884, brick first floor 1893, rebuilt after a 1975 fire; First Swedish Co-op Store 1883; Greenwood Street chapel 1891 and Lutheran Emmanuel 1898-1899; firehouse 1891-1892; school buildings of 1890, 1896 and 1899; South Works between Millbury and Ballard Streets by 1900; American Steel & Wire 1899; U.S. Steel by 1901; closed 1977), the MHC report (1794 two-vat paper mill; 1846 Washburn purchase), the firehouse article (15 Blackstone River Road, 1891-92, O. C. Ward, $7,112, Romanesque, in service until 1994, vacant, NRHP 1980), the library article (14 Blackstone River Road at Stebbins Street, 1913, Fuller & Delano, Beaux Arts, Carnegie present to lay the cornerstone, one of three Carnegie-funded branches, closed 1990, joined to the school), the street-railway article, the city's Blackstone Gateway Park ('on the edge of the Quinsigamond Village neighborhood'; 30 acres; 15 McKeon Road; 3,000 feet of accessible paths; three bridges) and Greenwood Park ('Quinsigamond Village Neighborhood'; 14 acres; 14 Forsberg Street; 1905, 1912, 1917) pages, the visitor-center page (3 Paul Clancy Way, October 27, LEED Silver, 4,000-square-foot exhibit hall, former brownfield), the bikeway page (2.5 miles, two repair stations), the Greenway article (2005, Turnpike-Route 146 interchange project), the Route 146 article (exits 18, 19, 20), the fire stations page (McKeon Road, 80 McKeon Road; the firehouse article says 'McKeon Street') and the WRTA routes page. The lake and early-settlement naming is from Wikipedia's Quinsigamond article (https://en.wikipedia.org/wiki/Quinsigamond), which also gives 'the pickerel (or long nose) fishing place'. Removed: 'about three miles south of downtown' (in no source opened, including the walking tour) and 'became the city's leading industry' (the MHC report applies 'leading industry' to the earlier Northville wire works, not the South Works). Corrected: the Berg and Dahlin cottages are 'Victorian double cottages' in the walking tour, not single-family houses; the gathering-place village is a conjecture in the MHC report; the 1917 track was the company's final extension; the visitor center was to be the 'future home' of DCR's Central Region headquarters (the page does not confirm it now houses it); the exhibit themes now follow the center's page; 'paved, off-road' was dropped from the bikeway line because the page says that only of the three completed sections together. Address conflicts: the library is 14 Blackstone River Road in its article but 812 Millbury St. on the NRHP list and in the walking tour; the record uses 14 Blackstone River Road as the current address. The walking tour's '837 Main Street' for the fire station appears to be an error for 15 Blackstone River Road (both the article and the NRHP list give 15 Blackstone River Rd.). Fair housing: re-read; the walking tour's home-ownership share for 1900 and its population history are not used."
    },
    {
+    "slug": "webster-square",
+    "parent": "worcester",
+    "city_name": "Worcester",
+    "name": "Webster Square",
+    "county": "Worcester County",
+    "region": "Central Massachusetts",
+    "official_site": "https://www.worcesterma.gov/",
+    "headline": [
+     "The old New Worcester crossroads,",
+     "where Stafford Street leaves Main Street for Leicester."
+    ],
+    "answer": "Webster Square is a South Worcester neighborhood named for the junction of Main, Webster and Cambridge Streets, now also met by Mill Street, in the area once called New Worcester. Loring and Aury Coes built their wrench and knife works here, and Coes Reservoir and its parks lie along Mill Street. Stafford Street begins at the square, Route 12 crosses it on Mill Street, and WRTA Route 19 runs from Webster Square to Clark University on Main Street.",
+    "meta": "Webster Square, Worcester: the old New Worcester crossroads, the Coes wrench works, Coes Pond parks, Stearns Tavern and WRTA Route 19. A sourced neighborhood guide.",
+    "boundaries": {
+     "text": "Webster Square once referred to the intersection of Main, Webster and Cambridge Streets, a junction Mill Street has also met since it was pushed across Main Street to Webster Street in the 1980s; the name has long since spread to the neighborhood west of that junction along Main Street, past the intersection of Main Street, Park Avenue and Stafford Street. Wikipedia's list of Worcester neighborhoods places Webster Square in South Worcester.",
+     "source": "https://www.bostonrambles.net/worcester-massachusetts-part-five-the-road-from-paris-to-new-york/"
+    },
+    "overview": [
+     "Webster Square began as a mill village on Kettle Brook. The Massachusetts Historical Commission's survey of Worcester records the first water-powered spinning of cotton yarn in the town at Trowbridgeville, or New Worcester, at Joshua Hale's mill on Kettle Brook, and a federal report of 1832 listed two satinet mills on Curtis Pond near Webster Square. Roads met here early: the Holland, Worcester and Stafford Turnpike (Stafford Street), which gave a direct route to the southwest after 1810, began at Main Street at New Worcester, and by 1830 a small residential cluster stood at Webster Square on Main Street. Caleb Wall's Reminiscences of Worcester (1877) says Charles Stearns built and first kept a tavern at New Worcester in 1812, and the Stearns Tavern building, dated to about 1812, survives, though it has been moved twice. Phineas Ball's 1860 city map labels the area New Worcester, and Samuel Triscott's 1878 map uses the name Webster Square.",
+     "Industry and the street railway built the square out. Loring Coes, born at New Worcester in 1812, patented a screw wrench in 1841, and with his brother Aury and Levi Hardy bought Moses Clement's shop at the corner of Main and Mill Streets in 1853. In 1865 the Coes brothers and Hardy bought 100 acres of the Lyon Farm, now the site of Coes Pond, and built a dam and a knife shop there, followed by a lower dam at Coes Square in 1867 and, in 1871, Loring's four-story wrench factory at Coes Square. Worcester's first horsecar line, opened in 1863, ran from Webster Square through downtown to Bell Hill, and the 1916 streetcar route list still included lines from Webster Square to Barber's Crossing, Union Station and Lincoln Square. A walking history of the road notes that most of the lots along Main Street west of the square were developed with three-deckers.",
+     "The square is now a busy crossroads. Route 12 crosses it on Mill Street before joining Route 9 on Park Avenue, and Webster Square Plaza, a late-twentieth-century shopping plaza, fills the large lot between Main Street and Stafford Street. The Worcester Housing Authority runs Webster Square Towers East and West at 1050 and 1060 Main Street and, in 2002, bought the former Webster Square Cinemas building at 24 Mill Street; after selling it in 2004, it bought it back for maintenance facilities and property management offices. Up Mill Street, the city's Coes Pond parks cover about 21 acres around Coes Reservoir, including Coes Park on the former Coes Knife factory site, where the Stearns Tavern building was moved in October 2016."
+    ],
+    "housing": {
+     "text": "A walking history of the Main Street corridor notes that most of the lots west of the square were developed with three-deckers, alongside substantial two-family houses such as the six at 1286 to 1296 Main Street, and that the footprint of Webster Square Plaza hides how residential the area was first built. Webster Square Towers East and West, at 1050 and 1060 Main Street, are run by the Worcester Housing Authority. No published count of housing types or ownership for Webster Square alone was found.",
+     "source": "https://www.bostonrambles.net/worcester-massachusetts-part-five-the-road-from-paris-to-new-york/"
+    },
+    "areas": [
+     {
+      "name": "The square: Main, Mill, Webster and Cambridge Streets",
+      "line": "The original junction, with the Webster Square fire station at 40 Webster Street and Webster Square Towers, run by the Worcester Housing Authority, at 1050 and 1060 Main Street.",
+      "source": "https://worcesterma.gov/fire/about-us/fire-stations"
+     },
+     {
+      "name": "Main Street west to Park Avenue and Stafford Street",
+      "line": "Main Street climbs west from the square toward Leicester past Webster Square Plaza, which fills the lot between Main and Stafford Streets, three-deckers and two-family houses, and Our Lady of the Angels Church at 1222 Main Street.",
+      "source": "https://www.bostonrambles.net/worcester-massachusetts-part-five-the-road-from-paris-to-new-york/"
+     },
+     {
+      "name": "Mill Street and Coes Pond",
+      "line": "The Coes industrial district: the dams and wrench factory at Coes Square, Coes Reservoir and its parks, the Stearns Tavern building at 140 Mill Street, and the Major Taylor Bike Trail along Mill Street.",
+      "source": "https://www.worcesterma.gov/city-parks/coes-pond-parks"
+     }
+    ],
+    "commute": {
+     "rail": [
+      {
+       "line": "Framingham/Worcester Line",
+       "stations": [
+        "Worcester (Union Station, 2 Washington Square)"
+       ]
+      }
+     ],
+     "rail_source": "https://www.mbta.com/stops/place-WML-0442",
+     "highways": [
+      "Route 12 (Mill Street and Webster Street)",
+      "Route 9 (Park Avenue)"
+     ],
+     "text": "Webster Square has no rail station; the nearest is Worcester station at Union Station, 2 Washington Square, downtown, on the MBTA Framingham/Worcester Line. Route 12 runs north on Webster Street past Hope Cemetery, crosses Webster Square as Mill Street and joins Route 9 on Park Avenue. WRTA Route 19 runs from Webster Square to Clark University via Main Street."
+    },
+    "schools": {
+     "district": "Worcester Public Schools",
+     "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=03480000&orgtypecode=5"
+    },
+    "places": [
+     {
+      "name": "Coes Park",
+      "line": "A city park at 72 Coes Street on the former Coes Knife factory site, with a universally accessible playground of 57 features, a sledding hill, a scenic overlook and ADA-accessible walkways on Coes Reservoir, commonly called Coes Pond.",
+      "source": "https://www.worcesterma.gov/city-parks/coes-pond-parks"
+     },
+     {
+      "name": "Stearns Tavern",
+      "line": "A tavern building dated to about 1812, moved from 1030 Main Street to 651 Park Avenue in 1974 and to 140 Mill Street in October 2016; the Seven Hills Foundation uses its first floor for a cafe and workforce training.",
+      "source": "https://en.wikipedia.org/wiki/Stearns_Tavern"
+     },
+     {
+      "name": "Binienda Beach",
+      "line": "The swimming beach on the western side of Coes Reservoir, formerly Coes Pond Beach, named for the late State Representative John J. Binienda, with a bathhouse and seasonal kayak, paddle boat and paddle board rentals.",
+      "source": "https://www.worcesterma.gov/city-parks/coes-pond-parks"
+     },
+     {
+      "name": "Columbus Park",
+      "line": "The park on the eastern side of Coes Reservoir, kept largely natural by its steep slopes; the 'Hillside' beach area, its only generally flat ground, is in the far southwest corner.",
+      "source": "https://www.worcesterma.gov/city-parks/coes-pond-parks"
+     },
+     {
+      "name": "Major Taylor Bike Trail",
+      "line": "A bike trail along Mill Street past Coes Pond and the former Coes Knife property, named for Marshall Walter 'Major' Taylor, who won national and world bicycle sprint championships in 1899.",
+      "source": "https://www.worcesterma.gov/city-parks/coes-pond-parks"
+     },
+     {
+      "name": "Hope Cemetery",
+      "line": "A 168-acre garden cemetery at 119 Webster Street (Route 12); the city bought its first land in 1851, 'south of New Worcester' in the mayor's January 1852 report, and Loring Coes was one of its five original commissioners. It was listed on the National Register on December 22, 1997.",
+      "source": "https://friendsofhopecemetery.com/wp-content/uploads/2018/10/2007-Tour-Mapsm.pdf"
+     },
+     {
+      "name": "Our Lady of the Angels Church",
+      "line": "A Catholic church at 1222 Main Street, designed by George B. Haynes of Pittsfield; the parish was organized in 1916, and the present church, built in 1927 and 1928, held its first Mass at Christmas 1928.",
+      "source": "https://en.wikipedia.org/wiki/Our_Lady_of_the_Angels_Parish_(Worcester,_Massachusetts)"
+     }
+    ],
+    "history": [
+     {
+      "year": "1810",
+      "text": "The Holland, Worcester and Stafford Turnpike (Stafford Street) opened a direct route to the southwest, beginning at Main Street at New Worcester, later Webster Square.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/wor.pdf"
+     },
+     {
+      "year": "1863",
+      "text": "Worcester's first horsecar line opened, running from Webster Square through downtown to Bell Hill via Main and Lincoln Streets.",
+      "source": "https://en.wikipedia.org/wiki/Worcester_Consolidated_Street_Railway"
+     },
+     {
+      "year": "1871",
+      "text": "Loring Coes built a four-story wrench factory at Coes Square, four years after the lower dam there.",
+      "source": "https://worcesterhistorical.com/wp-content/uploads/2020/04/coes-family-papers-1977.40.pdf"
+     },
+     {
+      "year": "2016",
+      "text": "The Stearns Tavern building was moved in October from Park Avenue to 140 Mill Street, on the former Coes Knife site.",
+      "source": "https://en.wikipedia.org/wiki/Stearns_Tavern"
+     }
+    ],
+    "market": null,
+    "nearby": [
+     "main-south",
+     "tatnuck",
+     "downtown",
+     "quinsigamond-village"
+    ],
+    "search_notes": "A search for 'Webster Square Worcester MA real estate' returned only Redfin's Webster Square neighborhood listing pages (recently sold, new listings, filtered views); other research searches returned Walk Score, zipdatamaps, Apartments.com unit listings and the Boston Rambles walking history. Wikipedia has no Webster Square article. No sourced guide ties the New Worcester mill village, the Coes works, the 1863 horsecar line and today's Coes Pond parks together, which is the gap this page fills.",
+    "faq": [
+     {
+      "q": "What is the median home price in Webster Square, Worcester?",
+      "a": "The Warren Group does not report Webster Square separately. Citywide, the median single-family sale price in Worcester for calendar year 2025 was $430,000 across 884 sales, up from $420,000 across 904 sales in 2024, according to its MA December 2025 Sales, Prices by Town report."
+     },
+     {
+      "q": "Is there commuter rail near Webster Square?",
+      "a": "Webster Square has no station of its own. The nearest is Worcester station at Union Station, 2 Washington Square, downtown, on the MBTA Framingham/Worcester Line. WRTA Route 19 runs from Webster Square to Clark University along Main Street."
+     },
+     {
+      "q": "Which school district serves Webster Square?",
+      "a": "Worcester Public Schools. School assignment is by address and is set by the district; review the district's profile with DESE."
+     },
+     {
+      "q": "Where exactly is Webster Square?",
+      "a": "The name once referred to the intersection of Main, Webster and Cambridge Streets, in an area once called New Worcester; Mill Street has also met the junction since the 1980s. It now covers the neighborhood west of that junction along Main Street, past Park Avenue and Stafford Street."
+     },
+     {
+      "q": "Is Coes Pond in Webster Square?",
+      "a": "Coes Reservoir, commonly called Coes Pond, lies along Mill Street, which runs through the square. The Coes brothers built their knife shop and dams there in the 1860s, and the city's Coes Pond parks, about 21 acres, now include Coes Park, Binienda Beach and Columbus Park."
+     }
+    ],
+    "notes": "Written 2026-10-23. Boundaries: no official city boundary was found. The Boston Rambles walking history (an independent blog, used for local geography and some dates) says Webster Square 'once referred to the intersection of Main, Webster, and Cambridge Streets' and 'has long since become a name for the entire neighborhood west of the intersection'; it calls the junction that of 'Main Street, Mill Street, Webster Street, and Cambridge Street' and says a plaque names the Main/Park/Stafford intersection Gardner Square (its 0.7-mile figure is for Gates Lane; see the fact-check below). The task brief placed Webster Square at Main Street and Park Avenue; on these sources the square proper is the Main/Mill/Webster/Cambridge junction, and Park Avenue meets Main and Stafford Streets to its west. The city's April 22, 2024 Stafford Street meeting notice (https://worcesterma.gov/calendar/stafford-street-informational-meeting) describes 'Stafford Street between Webster Square and the Leicester Town Line', and the MHC report says the Stafford Turnpike began 'at Main Street at New Worcester (later Webster Square)'. Wikipedia's neighborhood list (https://en.wikipedia.org/wiki/Neighborhoods_in_Worcester,_Massachusetts) places Webster Square in South Worcester. Name: the blog cites Ball's 1860 map ('New Worcester') and Triscott's 1878 map, which it treats as the first naming of Webster Square; but the MHC report lists a 'Webster Square (1860)' church in its Early Industrial period, so no first-use date is claimed. The Worcester Historical Museum finding aid says Loring Coes 'was born at Webster Square (then called New Worcester)'. Why the square is named Webster was not found. Coes dates: the overview follows the Worcester Historical Museum finding aid for the Coes family papers (1853 purchase with Levi Hardy; 1865-67 Lyon Farm, dam and knife shop; 1867 lower dam at Coes Square; 1871 wrench factory; 1902 merger into the Coes Wrench Company). Wikipedia's Coes Wrench Company article says that company was founded April 1, 1888 and merged with Loring Coes & Company in 1888; the merger date is left out because the sources conflict. The patent date (April 16, 1841) is from Wikipedia's Loring Coes article; the UMass Chan history page says 1840. Stearns Tavern: Wikipedia dates the building c. 1812 and gives the 1974 and 2016 moves; the 1812 opening by Charles Stearns is from Caleb Wall's Reminiscences of Worcester (1877) as quoted by the blog, which also argues the original tavern stood at 1050 Main Street rather than in this building, so the record says only that the building is dated to about 1812. The tavern was removed from the National Register on December 26, 2023 (after its move). The city calls it '204-year-old', which matches c. 1812 at the time the page was written; not repeated. Coes Pond acreage: the city page gives 20.79 acres in its introduction and 23.2 acres in Quick Facts; 'about 21 acres' follows the introduction. The city page also calls the reservoir the headwaters of the Blackstone River; not repeated. Webster Square Towers: the Worcester Business Journal article on the WHA's repurchase of 24 Mill Street (https://wbjournal.com/article/worcester-housing-authority-buys-back-improved-webster-square-property) describes the towers' tenancy; not used (it describes who lives there). Tower addresses 1050 and 1060 Main Street are from city police calendar notices (https://www.worcesterma.gov/node/47044, https://www.worcesterma.gov/node/48357) and the blog. The WBJ article gives no publication date, so the year of the repurchase is not stated. Webster Square Plaza is described only as the blog describes it ('a late-twentieth-century addition'); no tenants or business details. Fire station: the city lists the 'Webster Square' station at 40 Webster Street; Wikipedia's Webster Street Firehouse article says the 1893 E. Boyden & Son firehouse there was demolished around 2000 and replaced. Hope Cemetery: the Friends of Hope Cemetery tour map says it was dedicated in 1852 and placed on the National Register in 1998; Wikipedia says founded 1854 and listed December 22, 1997 (the NRHP list agrees: 97001560); the record gives 1997 and no founding year. Our Lady of the Angels: address confirmed by the city's Stafford Street meeting notice; the 1916 and 1927 dates are from the blog only. WRTA: route names from https://www.therta.com/routes/ (Route 19 'Webster Square - Clark University via Main St.'; Route 825 'Park Avenue Connector'); Route 27 (Auburn Mall via Main St.) and Route 7 (via Mill St.) were not confirmed to pass the square and are left out. Route 12 and Route 9 wording is from Wikipedia's Route 12 article (https://en.wikipedia.org/wiki/Massachusetts_Route_12). Left out: the Cambridge Street School and Cambridge Street Firehouse (Cambridge Street is listed as a separate South Worcester neighborhood); Beaver Brook Park (300 Chandler Street, no source places it in Webster Square); Lakeside Apartments; the 1851 report's and the city's 'densely populated residential neighborhoods' wording; the Seven Hills Foundation's program participants. Market null: the Warren Group PDF lists Worcester only as a citywide row (read this session: 'YTD Number of Sales 904 884 -2.2%'; 'YTD Median Sale Price $420,000 $430,000 2.4%'); it does not list Webster Square (its 'WEBSTER' row is the Town of Webster). No population figure: no source gives one for this boundary. School assignment is by address and set by the district. Fair housing: no wording describes residents; the blog's and WBJ's descriptions of who lived or lives in the area were not used. Fact-check 2026-10-23: Partial; WebFetch hit a session limit partway through, so the items listed as unchecked below still need a second pass. Verified against the cited pages: Boston Rambles (the 'busy junction of Main Street, Mill Street, Webster Street, and Cambridge Street'; 'once referred to the intersection of Main, Webster, and Cambridge Streets'; 'has long since become a name for the entire neighborhood west of the intersection'; Ball 1860 'New Worcester'; Triscott 1878 'what is called \"Webster Square\" on his map'; Wall's 1812 Stearns quote; Webster Square Plaza 'between the old Stafford turnpike and the south side of Main Street' and 'a late-twentieth-century addition'; 'Most of the lots were developed into the ubiquitous triple-deckers'; the six two-family houses at 1286-1296 Main Street; 1050 and 1060 Main Street towers; 1222 Main Street); the MHC report (Trowbridgeville or New Worcester at Joshua Hale's mill on Kettle Brook, dated 1810 in the report; two satinet mills on Curtis Pond near Webster Square in the 1832 Treasury report; Webster Square (Main Street) among the residential clusters at the end of the Federal period, 1775-1830; the Holland, Worcester and Stafford Turnpike after 1810, 'beginning at Main Street at New Worcester (later Webster Square)'); the Worcester Historical Museum Coes finding aid (birth 1812 at Webster Square (New Worcester), 1841 patent, 1853 Clement shop with Levi Hardy at Main and Mill, 1865 Lyon Farm, 1867 lower dam, 1871 four-story factory, 1902 consolidation); Wikipedia's Worcester Consolidated Street Railway (first horsecar line September 1, 1863, Webster Square to Bell Hill via Main and Lincoln Streets; 1916 routes 20, 23 and 32 from Webster Square to Barber's Crossing, Union Station and Lincoln Square); Wikipedia's Stearns Tavern (c. 1812, 1030 Main Street, 1974 move to 651 Park Avenue, October 2016 move to 140 Mill Street, removed from the NRHP December 26, 2023); the city's Coes Pond Parks page (20.79 acres, 72 Coes Street, former Coes Knife site, 57-feature accessible playground, sledding hill, overlook, ADA accessible walkways, Stearns Tavern in Coes Park with the Seven Hills Foundation's cafe and workforce training on the first floor, Binienda Beach, Columbus Park, the Major Taylor Bike Trail along Mill Street and his 1899 championships); the Friends of Hope Cemetery tour map (about 168 acres, dedicated 1852, the 1851 purchase 'south of New Worcester' in Mayor Bacon's January 5, 1852 report, Loring Coes one of five original commissioners); Wikipedia's Hope Cemetery (119 Webster St., 168 acres, NRHP December 22, 1997, ref. 97001560; the Friends map says 1998, so the NRHP date is used). Corrected: the square's definition (the blog says the name 'once referred to the intersection of Main, Webster, and Cambridge Streets' and that Mill Street 'was pushed across Main Street through the block to Webster Street sometime in the 1980s', so Mill Street is no longer given as part of the original junction); the 0.7-mile distance, which the blog gives for Gates Lane, not for the Main/Park/Stafford intersection, so it was removed; 'southwestern Worcester', not in the source, removed; the Lyon Farm purchase is 1865, not '1865 to 1867'; the 1812 tavern opening is now attributed to Wall, since the blog doubts this building was Stearns's tavern; the Hope Cemetery report is dated January 1852 (describing the 1851 purchase); Columbus Park's 'small beach' is now the page's 'Hillside' beach area. Our Lady of the Angels: primary sources found. Wikipedia's parish article (citing Nelson's Worcester County, 1934, and the parish's 1991 history) gives 'Organized in 1916', built 1927-1928, architect George B. Haynes, first Mass in the new church at Christmas 1928; an article on the parish's centennial on its ecatholic site (https://18271.sites.ecatholic.com/news/our-lady-of-the-angels-parish-ends-celebration-of-100-years-with-history-lesson) says the new parish was announced on October 1, 1916 and 'The first Mass in the church was celebrated on Christmas in 1928'. The blog's 'opened in 1927' is corrected and the source is changed to the Wikipedia article. Not reached before the fetch limit, so still unconfirmed: the city fire stations page (Webster Square station, 40 Webster Street); the city police notices and the WBJ article (WHA ownership of Webster Square Towers, the 24 Mill Street cinema purchases of 2002 and 2004, the maintenance and property management offices); the Stafford Street meeting notice; Wikipedia's Route 12 article (Route 12 on Mill and Webster Streets, joining Route 9 on Park Avenue); the WRTA routes page (Route 19, Route 825); the MBTA Worcester stop page; Wikipedia's Worcester neighborhood list (South Worcester); the Loring Coes and Coes Wrench Company articles. No MACRIS or Worcester Historical Commission page defining the square was reached. Nearby slugs are all in the city's neighborhood list. FAQ citywide price matches towns/worcester.json and is labelled citywide. No fair-housing slips found. Fact-check completed 2026-10-23: second pass, all remaining items checked with WebFetch. Verified: the city fire stations page ('Webster Square 40 Webster Street, 01603'); the WBJ article (24 Mill St.; bought in 2002 for $635,000 after the Webster Square Cinemas closed; sold in 2004; repurchased for 'maintenance facilities and property management offices'; no publication date shown); the city police calendar notices (WHA tenant meeting at Webster Square Towers East, 1050 Main St.; Webster Square Towers-West, 1060 Main St.); the Stafford Street meeting notice (Monday, April 22, 2024; 'Stafford Street between Webster Square and the Leicester Town Line'; held at 1222 Main Street, where the page misspells the church as 'Angles'); Wikipedia's Route 12 article (it turns north on Webster Street along Hope Cemetery, 'crosses through Webster Square as Mill Street, then joins Route 9 as Park Avenue'); the WRTA routes page (Route 19 'Webster Square - Clark University via Main St.'); the MBTA Worcester stop page (2 Washington Sq), the MBTA Framingham/Worcester Line page and Wikipedia's Union Station article (2 Washington Square, western end of that line); Wikipedia's neighborhood list (Webster Square under South Worcester; Main South and Quinsigamond Village also there, Tatnuck under West Side; Downtown appears as a region rather than a listed neighborhood, but a downtown record exists in this folder); the Loring Coes article (patent 'granted on April 16, 1841'; born in Worcester in 1812) and the Coes Wrench Company article (founded April 1, 1888, merged with Loring Coes & Company in 1888), which support only the notes. Corrected: the WBJ article says the WHA 'runs' the towers and does not say it owns them, so the overview, housing text and square area now say 'runs' instead of 'owns' or 'Worcester Housing Authority buildings'; the 24 Mill Street use now follows the article's 'maintenance facilities and property management offices'. Removed: WRTA Route 825 ('Park Avenue Connector'); the routes page confirms the name but nothing confirms the route serves Webster Square, the same standard that left out Routes 7 and 27. Still unconfirmed: an official Webster Square boundary and why the square is named Webster; the year of the WHA's repurchase. Fair-housing re-read after edits: the WBJ article's description of the towers' tenancy is still not used; no slips. Ready to publish: yes, on these sources."
+   },
+   {
+    "slug": "vernon-hill",
+    "parent": "worcester",
+    "city_name": "Worcester",
+    "name": "Vernon Hill",
+    "county": "Worcester County",
+    "region": "Central Massachusetts",
+    "official_site": "https://www.worcesterma.gov/",
+    "headline": [
+     "Three-decker streets on one of the seven hills,",
+     "climbed by Vernon and Providence Streets."
+    ],
+    "answer": "Vernon Hill is a neighborhood in southeastern Worcester on one of the city's seven named hills, climbed by Vernon Street and by Providence Street, which carries Route 122A. Streetcars reached its slopes from the 1890s, and three-deckers built mostly from the 1910s to 1930 line its streets, with groups on View Street, Providence Street and Perry Avenue listed as National Register historic districts. The 15-acre Vernon Hill Park sits atop the hill at 144 Providence Street.",
+    "meta": "Vernon Hill, Worcester: three-decker historic districts on Providence Street, View Street and Perry Avenue, Vernon Hill Park and WRTA Routes 1 and 11.",
+    "boundaries": {
+     "text": "Vernon Hill rises in southeastern Worcester, along Vernon Street and Providence Street, with Vernon Hill Park at its top at 144 Providence Street. Perry Avenue, which runs parallel to and east of I-290, lies on its lower western slopes, and Wikipedia's list of Worcester neighborhoods places Vernon Hill on the East Side.",
+     "source": "https://en.wikipedia.org/wiki/George_Fontaine_Three-Decker"
+    },
+    "overview": [
+     "Vernon Hill is one of the seven hills on which Worcester, like Rome, is said to stand. Its main streets follow old routes: the Massachusetts Historical Commission's survey of the city infers a native trail running south toward Singletary Pond along the line of Vernon Street and Greenwood Street. In the Early Industrial period (1830 to 1870) the survey records a residential cluster on the west slope of Vernon Hill along the Ward Street and Millbury Street axis. The Upsala Street School, a Romanesque Revival building by the Worcester architect George Clemence at Upsala and Louise Streets, was finished in 1894 and enlarged in 1902 and 1923.",
+     "The street railway opened the hilltop. As the system was electrified, from the first electric line in 1891 to the last horsecars in November 1893, it added a line on Providence Street; Upsala Street cars crossed Vernon Hill, and tracks laid across Vernon Square in 1902 let them reach downtown by Green Street. In September 1912 the Providence Street line was extended 3,605 feet along Holcombe and Granite Streets. A streetcar also ran on Vernon Street, and as development pushed into the hill's steeper terrain in the 1910s, View Street was laid out and built with three-deckers. The George Fontaine Three-Decker at 141 Vernon Street, built about 1918 while the area was developing as a streetcar suburb, dates from this phase, as do the 40 three-deckers of the Euclid Avenue and Montrose Street district on a hillside between Vernon Street and Perry Avenue, most built between 1910 and 1930 and 27 of them with gambrel roofs.",
+     "The last wave came in the late 1920s. Ten three-deckers with seven period garages at 127 to 145 Providence Street, built between 1926 and 1930, and four on Perry Avenue, built about 1928 as infill on the lower slopes, date from Worcester's last period of three-decker construction. The National Register listed these two groups on February 9, 1990, with the View Street district, the George Fontaine and David Dworman three-deckers and the Euclid Avenue-Montrose Street district. The summit is public land: Vernon Hill Park, at 144 Providence Street, has ballfields, tennis and basketball courts, a pool run by the state Department of Conservation and Recreation, and the city's first off-leash dog park, opened in August 2017."
+    ],
+    "housing": {
+     "text": "The three-decker is the documented housing type on Vernon Hill. National Register records describe groups built from the 1910s to 1930 on View Street, Euclid Avenue and Montrose Street, Providence Street and Perry Avenue, mostly in Colonial Revival and Craftsman styles, many with gambrel roofs and some with period garages, plus single listed three-deckers at 141 Vernon Street and 159 Providence Street. The 1894 Upsala Street School has been converted into apartments. No published count of housing types or ownership for Vernon Hill alone was found.",
+     "source": "https://en.wikipedia.org/wiki/Euclid_Avenue-Montrose_Street_Historic_District"
+    },
+    "areas": [
+     {
+      "name": "Providence Street",
+      "line": "The hill's eastern spine and Route 122A, with the Providence Street Historic District (127-145), the David Dworman Three-Decker (159) and Vernon Hill Park (144) on the summit.",
+      "source": "https://en.wikipedia.org/wiki/Providence_Street_Historic_District"
+     },
+     {
+      "name": "Vernon Street and Euclid Avenue",
+      "line": "The old streetcar street, with the George Fontaine Three-Decker at 141 Vernon Street and the Euclid Avenue and Montrose Street historic district on the hillside between Vernon Street and Perry Avenue.",
+      "source": "https://en.wikipedia.org/wiki/National_Register_of_Historic_Places_listings_in_eastern_Worcester,_Massachusetts"
+     },
+     {
+      "name": "View Street",
+      "line": "A street laid out in the 1910s on the hill's steeper ground, with eleven Colonial Revival three-deckers built between 1916 and 1930 at 7-17 and 8-16 View Street.",
+      "source": "https://en.wikipedia.org/wiki/View_Street_Historic_District"
+     },
+     {
+      "name": "Perry Avenue and the lower slopes",
+      "line": "A residential street running parallel to and east of I-290, where four three-deckers of about 1928 were built as infill on the lower slopes of Vernon Hill.",
+      "source": "https://en.wikipedia.org/wiki/Perry_Avenue_Historic_District"
+     }
+    ],
+    "commute": {
+     "rail": [
+      {
+       "line": "Framingham/Worcester Line",
+       "stations": [
+        "Worcester (Union Station, 2 Washington Square)"
+       ]
+      }
+     ],
+     "rail_source": "https://www.mbta.com/stops/place-WML-0442",
+     "highways": [
+      "Route 122A (Providence Street)",
+      "I-290",
+      "Route 146"
+     ],
+     "text": "Route 122A leaves Route 146 at Providence Street and follows Providence and Winthrop Streets to cross I-290 before meeting Route 122 at Kelley Square. WRTA Route 1 runs via Providence and Granite Streets and Route 11 to The Fair Plaza via Vernon Hill and Greenwood Street. Commuter rail leaves from Worcester station at Union Station, downtown, on the MBTA Framingham/Worcester Line."
+    },
+    "schools": {
+     "district": "Worcester Public Schools",
+     "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=03480000&orgtypecode=5"
+    },
+    "places": [
+     {
+      "name": "Vernon Hill Park",
+      "line": "A 15-acre city park atop the hill at 144 Providence Street with baseball and softball fields, tennis, basketball and handball courts, a playground, a spray park, the Dennis F. Shine Jr. pool (renovated and rededicated in 2009) and the city's first off-leash dog park, opened in August 2017.",
+      "source": "https://www.worcesterma.gov/city-parks/vernon-hill-park"
+     },
+     {
+      "name": "Providence Street Historic District",
+      "line": "Ten three-deckers and seven period garages at 127-145 Providence Street, built between 1926 and 1930 with Colonial Revival and Craftsman detail, on 1.39 acres; listed on the National Register in 1990.",
+      "source": "https://en.wikipedia.org/wiki/Providence_Street_Historic_District"
+     },
+     {
+      "name": "Euclid Avenue-Montrose Street Historic District",
+      "line": "Forty Colonial Revival three-deckers on a steep hillside between Vernon Street and Perry Avenue, most built between 1910 and 1930 and 27 of them with gambrel roofs; listed on the National Register in 1990.",
+      "source": "https://en.wikipedia.org/wiki/Euclid_Avenue-Montrose_Street_Historic_District"
+     },
+     {
+      "name": "View Street Historic District",
+      "line": "Eleven Colonial Revival three-deckers built between 1916 and 1930 on a street laid out as building reached the hill's steeper terrain; listed on the National Register in 1990.",
+      "source": "https://en.wikipedia.org/wiki/View_Street_Historic_District"
+     },
+     {
+      "name": "Upsala Street School",
+      "line": "A Romanesque Revival school at 36 Upsala Street, designed by George Clemence, finished in 1894 and enlarged in 1902 and 1923; listed on the National Register in 1980 and converted into apartments.",
+      "source": "https://en.wikipedia.org/wiki/Upsala_Street_School"
+     },
+     {
+      "name": "David Dworman Three-Decker",
+      "line": "A Craftsman three-decker of about 1926 at 159 Providence Street, across from Vernon Hill Park, listed on the National Register in 1990.",
+      "source": "https://en.wikipedia.org/wiki/David_Dworman_Three-Decker"
+     }
+    ],
+    "history": [
+     {
+      "year": "1894",
+      "text": "The Upsala Street School, designed by George Clemence, was finished; it was enlarged in 1902 and 1923.",
+      "source": "https://en.wikipedia.org/wiki/Upsala_Street_School"
+     },
+     {
+      "year": "1902",
+      "text": "Streetcar tracks were laid across Vernon Square, letting Upsala Street cars reach downtown via Green Street.",
+      "source": "https://en.wikipedia.org/wiki/Worcester_Consolidated_Street_Railway"
+     },
+     {
+      "year": "1912",
+      "text": "In September the Providence Street streetcar line was extended 3,605 feet along Holcombe and Granite Streets.",
+      "source": "https://en.wikipedia.org/wiki/Worcester_Consolidated_Street_Railway"
+     },
+     {
+      "year": "1990",
+      "text": "On February 9 the National Register listed the Providence Street, View Street, Perry Avenue and Euclid Avenue-Montrose Street historic districts with other Worcester three-deckers.",
+      "source": "https://en.wikipedia.org/wiki/National_Register_of_Historic_Places_listings_in_eastern_Worcester,_Massachusetts"
+     }
+    ],
+    "market": null,
+    "nearby": [
+     "grafton-hill",
+     "union-hill",
+     "quinsigamond-village",
+     "canal-district"
+    ],
+    "search_notes": "A search for 'Vernon Hill Worcester MA real estate' returned Redfin's Vernon Hill listing pages, NeighborhoodScout profiles (statistical, with demographic and crime content a fair-housing guide cannot repeat), a Bean Group page and Boston.com listings. Wikipedia has no Vernon Hill article; the neighborhood appears in its neighborhood list and in the articles for individual National Register three-deckers. No sourced guide connects the streetcar lines, the 1990 three-decker listings and Vernon Hill Park, which is the gap this page fills.",
+    "faq": [
+     {
+      "q": "What is the median home price in Vernon Hill, Worcester?",
+      "a": "The Warren Group does not report Vernon Hill separately. Citywide, the median single-family sale price in Worcester for calendar year 2025 was $430,000 across 884 sales, up from $420,000 across 904 sales in 2024, according to its MA December 2025 Sales, Prices by Town report."
+     },
+     {
+      "q": "Is there commuter rail near Vernon Hill?",
+      "a": "Vernon Hill has no station of its own. The nearest is Worcester station at Union Station, 2 Washington Square, downtown, on the MBTA Framingham/Worcester Line. WRTA Routes 1 and 11 serve the hill, and Providence Street carries Route 122A."
+     },
+     {
+      "q": "Which school district serves Vernon Hill?",
+      "a": "Worcester Public Schools. School assignment is by address and is set by the district; review the district's profile with DESE."
+     },
+     {
+      "q": "Is Vernon Hill one of Worcester's seven hills?",
+      "a": "Yes. Vernon Hill is one of the seven hills Worcester is traditionally said to stand on, with Airport Hill, Bancroft Hill, Belmont Hill (Bell Hill), Grafton Hill, Green Hill and Pakachoag Hill. The 15-acre Vernon Hill Park sits on its top."
+     },
+     {
+      "q": "What kind of housing is on Vernon Hill?",
+      "a": "Mostly three-deckers. Groups built from the 1910s to 1930 on View Street, Providence Street and Perry Avenue are National Register historic districts, as is a fourth on Euclid Avenue and Montrose Street between Vernon Street and Perry Avenue, many with Colonial Revival or Craftsman detail and gambrel roofs."
+     }
+    ],
+    "notes": "Written 2026-10-23. Boundaries: no official city boundary was found. The boundary text combines Wikipedia's George Fontaine Three-Decker article ('southeastern Worcester's Vernon Hill neighborhood', 141 Vernon Street), the city's Vernon Hill Park page ('a 15-acre park located atop Vernon Hill', 144 Providence Street), the Perry Avenue Historic District article (lower slopes of Vernon Hill; Perry Avenue 'parallel to and east of Interstate 290') and Wikipedia's neighborhood list (https://en.wikipedia.org/wiki/Neighborhoods_in_Worcester,_Massachusetts; Vernon Hill under East Side). The Euclid Avenue-Montrose Street article does not name Vernon Hill; it places the district between Vernon Street and Perry Avenue, which the other sources put on the hill. The Peter Baker Three-Decker article (90 Vernon Street, c. 1902) says only 'Worcester's south east side'. Task-brief checks: Quinsigamond Village to the south is supported only indirectly (the MHC report's inferred trail along 'Vernon Street-Greenwood Street', WRTA Route 11 'via Vernon Hill and Greenwood St.', and the Quinsigamond Village record's Greenwood Street); the record says only that Route 11 runs toward the village. Green Hill Park was NOT confirmed as nearby: the city's page (https://www.worcesterma.gov/city-parks/green-hill-park, 301 Green Hill Parkway, District 2) names no bounding streets and no source ties it to Vernon Hill, so it is left out. The seven hills list is from Wikipedia's Worcester article (https://en.wikipedia.org/wiki/Worcester,_Massachusetts): 'Airport Hill, Bancroft Hill, Belmont Hill (Bell Hill), Grafton Hill, Green Hill, Pakachoag Hill and Vernon Hill'. The MHC town report (https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/wor.pdf) supplies the inferred trail and the Early Industrial settlement on the west slope along the Ward/Millbury Street axis; the report describes that settlement by the national origin of its residents, which is not repeated. Streetcar facts are from Wikipedia's Worcester Consolidated Street Railway article (Providence Street line in the 1893-94 build-out after the last horsecars ran in November 1893; Upsala Street route over Vernon Hill; Vernon Square tracks 1902; Providence Street extension September 1912); the Vernon Street streetcar is from the View Street article. Where Vernon Square is was not confirmed. Upsala Street School: Wikipedia says it 'has been converted into senior living apartments'; the record says 'apartments' (age wording left out under the fair-housing rules). Providence Street Playground (239 Providence Street) is on the neighborhood's spine street, but no source names Vernon Hill for it; confirm. Left out: the Providence Street Firehouse (98 Providence Street; its article says only 'southeast of the city's downtown'; now Worcester EMS), Worcester Academy (81 Providence Street; Wikipedia places it on Union Hill), the Patrick Murphy and Bridget Shea three-deckers on Jefferson Street (Wikipedia places them in Oak Hill), the Richard O'Brien Three-Decker (43 Suffolk Street; no neighborhood named), Shaarai Torah Synagogue (32 Providence Street; Union Hill per the Grafton Hill record), and the Patrick McGrath Three-Decker (Grafton Hill). Fair housing: the Perry Avenue, View Street and Worcester articles describe who first owned or settled the houses (by national origin and class) and Wikipedia's Worcester article associates Vernon Hill with one ethnic community; none of this is used. NeighborhoodScout's demographic and crime content was not used. The Vernon Hill Park page says the pool's namesake was 'a Vernon Hill corporal'; the record names him only by the pool. Market null: the Warren Group PDF lists Worcester only as a citywide row (read this session: 'YTD Number of Sales 904 884 -2.2%'; 'YTD Median Sale Price $420,000 $430,000 2.4%'); Vernon Hill is not listed. No population figure: no source gives one for this boundary. School assignment is by address and set by the district. WRTA route names are from https://www.therta.com/routes/ (Route 1 'Walmart 146 via Providence & Granite St.'; Route 11 'The Fair Plaza via Vernon Hill and Greenwood St.'). Route 122A wording is from https://en.wikipedia.org/wiki/Massachusetts_Route_122A. Fact-check 2026-10-23: Partial; WebFetch hit a session limit early, so most of this record still needs a second pass. Verified: the MHC town report (the trail to Singletary Pond along 'Vernon Street-Greenwood Street' is described as inferred; the Early Industrial period runs 1830-1870, and the report places a cluster 'on the west slope of Vernon Hill along the Ward/Millbury Street axis', which it describes by national origin, not repeated); Wikipedia's Worcester Consolidated Street Railway (the first electric line in 1891 and the last horsecars in November 1893, with several expansions 'during this period, including a line on Providence Street'; a 1901 connector let Millbury cars avoid 'the route over Vernon Hill via Upsala Street'; 'Tracks across Vernon Square were added in 1902, allowing Upsala Street cars to reach downtown via Green Street'; the September 1912 extension of 3,605 feet along Holcombe and Granite Streets). Corrected: the overview said the Providence Street line came after the last horsecars ran; the article places it within the 1891-1893 electrification, and the sentence now says so. The MHC sentence now says 'a residential cluster' (the report's wording) instead of 'housing spreading'. The streetcar article does not mention a Vernon Street line; that fact rests on the View Street article, not yet checked. Not reached before the fetch limit, so still unconfirmed: the February 9, 1990 National Register listings and whether each article (Providence Street, View Street, Euclid Avenue-Montrose Street, Perry Avenue districts; George Fontaine, David Dworman and Peter Baker three-deckers) places its subject on Vernon Hill, with their counts, dates, acreage and styles; the Upsala Street School article (36 Upsala Street, George Clemence, 1894, 1902 and 1923 enlargements, NRHP 1980, conversion to apartments); the city's Vernon Hill Park and Providence Street Playground pages; Wikipedia's Worcester article (seven hills) and neighborhood list (East Side); the WRTA routes page (Routes 1 and 11); the Route 122A article; the MBTA Worcester stop page. Nearby slugs are all in the city's neighborhood list. FAQ citywide price matches towns/worcester.json ($430,000, 884 sales, 2025; $420,000, 904 sales, 2024) and is labelled citywide. Fair-housing re-read: no wording describes residents by national origin, ethnicity, class, income or age, and none characterizes crime or safety. Fact-check completed 2026-10-23: second pass, all remaining items checked with WebFetch. Verified: Providence Street Historic District article ('in the Vernon Hill section of the city'; 127-145 Providence St.; ten primary buildings and seven period garages; built between 1926 and 1930; Colonial Revival and Craftsman; 1.39 acres; February 9, 1990); View Street Historic District ('the Vernon Hill area'; eleven triple deckers built between 1916 and 1930; Colonial Revival; laid out in the 1910s; 'the streetcar that ran on Vernon Street'; February 9, 1990); Perry Avenue Historic District ('at the base of Vernon Hill', 'lower on the slopes of Vernon Hill'; 'parallel to and east of Interstate 290'; four triple deckers built about 1928 as infill; 'Worcester's last period of triple decker construction'; February 9, 1990); George Fontaine Three-Decker (141 Vernon St.; 'southeastern Worcester's Vernon Hill neighborhood'; c. 1918; streetcar suburb; February 9, 1990); David Dworman Three-Decker (159 Providence St.; 'Worcester's southern Vernon Hill neighborhood'; 'opposite Vernon Hill Park'; c. 1926; Craftsman; February 9, 1990); the Euclid Avenue-Montrose Street article (40 triple deckers, 'Most of the district was built out between 1910 and 1930', 27 gambrel roofs, Colonial Revival, between Vernon Street and Perry Avenue) and the eastern Worcester NRHP list (February 9, 1990 for all four districts and the Fontaine, Dworman and Baker three-deckers; Upsala Street School March 5, 1980); the Upsala Street School article (36 Upsala St.; 'southeastern Worcester's Vernon Hill neighborhood'; George Clemence; Romanesque Revival; completed 1894; additions 1902 and 1923; NRHP 1980; converted into apartments, with the age wording still left out); the city's Vernon Hill Park page (15-acre park 'located atop Vernon Hill', 144 Providence Street, two baseball and two softball diamonds, two tennis courts, basketball and handball courts, playground, spray park, pool 'run by the state's Department of Conservation and Recreation', 2009 re-dedication, 'The City's first ever off-leash dog park opened in August of 2017'); Wikipedia's Worcester article (the seven hills as listed, 'like Rome'); the neighborhood list (Vernon Hill under East Side; Grafton Hill, Union Hill, Quinsigamond Village and Canal District listed); the WRTA routes page (Route 1 'Walmart 146 via Providence & Granite St.'; Route 11 'The Fair Plaza via Vernon Hill and Greenwood St.'); the Route 122A article (leaves Route 146 at Providence Street, follows it and Winthrop Street, crosses I-290, meets Route 122 at Kelley Square); the MBTA Worcester stop page (2 Washington Sq), the MBTA Framingham/Worcester Line page and Wikipedia's Union Station article (2 Washington Square, western end of the Framingham/Worcester Line). Corrected: the Euclid Avenue-Montrose Street article and the NRHP list do not name Vernon Hill, so the answer, meta, overview and housing FAQ no longer count it among the hill's districts; it is described by its streets (between Vernon Street and Perry Avenue), and the Vernon Street area's source is now the NRHP list, which gives both its location and 141 Vernon St. The Peter Baker Three-Decker article (90 Vernon Street, c. 1902) says only 'Worcester's south east side', so 90 Vernon Street is removed from the housing text and the Vernon Street area. The overview no longer says 'several single houses on the hill'; it names the Fontaine and Dworman three-deckers, whose articles place them on Vernon Hill. The pool's '1970' dedication year is removed: the city page says the pool was dedicated 'one year after his death in 1970' but also that he was killed in 1969, so the year is ambiguous; only the 2009 renovation and re-dedication is kept. 'Toward Quinsigamond Village' is removed from Route 11 (not in the WRTA route name); the route's own destination is used instead. Removed: Providence Street Playground (239 Providence Street); the city page confirms its address, 4.6 acres, 2010, two-section playground and Glodis Field, but names no neighborhood, and no source places it on Vernon Hill. Still unconfirmed: an official Vernon Hill boundary, and the location of Vernon Square (the streetcar sentence repeats the article's wording without placing it). Fair-housing re-read after edits: no slips. Ready to publish: yes, on these sources."
+   },
+   {
     "slug": "union-hill",
     "parent": "worcester",
     "city_name": "Worcester",
