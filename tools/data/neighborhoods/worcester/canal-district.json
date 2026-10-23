@@ -17,18 +17,18 @@
     "source": "https://cromptonprk.holycross.edu/green-island-or-canal-district/"
   },
   "overview": [
-    "The Blackstone Canal, built from 1824 to 1828, linked Worcester with Providence, and the first packet boat reached Worcester on October 7, 1828. The canal generally followed Mill Brook through the city, and the land between the two became known as the Island, later Green Island after Green Street. Railroads to Boston and Providence ended canal traffic by 1848, and the Worcester stretch was folded into the sewer system and covered over in the late 19th century; it still runs underground beneath Harding Street. Canal markers stand at Kelley Square and at Quinsigamond Avenue and Olde Millbury Street.",
-    "Industry followed the water and the rails. George Crompton opened a loom works at 132-142 Green Street in 1860, the Heywood boot and shoe factory went up at 68-80 Winter Street in 1879, and the W. H. Hill Envelope Company moved into a four-story, 90,000-square-foot building at 48 Water Street in 1891. Green and Water Streets filled with brick blocks of shops with apartments above, clubhouses and churches, among them St. John's on Temple Street (1845), the city's oldest Roman Catholic church, and the Goldberg Building at Water and Harrison Streets (about 1908). Construction of I-290 in the 1960s took a large share of the area's housing.",
-    "Since the 2000 reopening of Union Station, the district's old buildings have been reused: the 1850 Ash Street School became apartments in 2002, and the Winter Street factory blocks have shops below and condominiums above. Polar Park opened on May 11, 2021, on about 18 acres of former industrial land at 100 Madison Street, part of a Downtown Urban Revitalization Plan the City and the Worcester Redevelopment Authority adopted in 2016. MassDOT rebuilt Kelley Square, a seven-way intersection, as a modified roundabout with shared-use paths on Madison and Green Streets. By August 2024 four apartment buildings with about 550 units were open or nearly complete around the ballpark, one of them reserved for income-restricted rents."
+    "The Blackstone Canal, built from 1824 to 1828, linked Worcester with Providence; it opened on October 7, 1828, and the packet boat Lady Carrington was the first vessel to make the trip. The canal generally followed Mill Brook through the city, and the land between the two was first known as the Island, later Green Island after Green Street. Railroads to Boston and Providence ended canal traffic by 1848, and the Worcester stretch was folded into the sewer system and covered over in the late 19th century; it still runs underground beneath Harding Street. Historical markers about the canal stand on Quinsigamond Avenue at Canton Street, south of the district in Green Island.",
+    "Industry followed the water and the rails. The Crompton Loom Works at 132-142 Green Street has a section from 1860, the Heywood boot and shoe factory went up at 68-80 Winter Street in 1879, and the W. H. Hill Envelope Company moved into a four-story, 90,000-square-foot building at 48 Water Street in 1891. Green and Water Streets filled with brick commercial blocks, clubhouses and churches, among them St. John's on Temple Street (1845), the city's oldest Roman Catholic church, and the Goldberg Building at Water and Harrison Streets (about 1908). Construction of I-290 in the 1960s took a large share of the area's housing.",
+    "Since the 2000 reopening of Union Station, the district's old buildings have been reused: the 1850 Ash Street School became apartments in 2002, and the Winter Street factory blocks have shops below and condominiums above. Polar Park opened on May 11, 2021, on about 18 acres of former industrial land at 100 Madison Street, part of a Downtown Urban Revitalization Plan the City and the Worcester Redevelopment Authority adopted in 2016. MassDOT rebuilt Kelley Square, a seven-way intersection, as a modified roundabout with shared-use paths on Madison and Green Streets. By August 2024 four apartment buildings with nearly 550 units were open or nearly complete around the ballpark, one of them entirely at below-market rents."
   ],
   "housing": {
-    "text": "Housing in the Canal District is mostly apartments and condominiums. Older stock is in converted 19th-century buildings, such as the Ash Street School apartments (2002) and condominiums above shops on Winter Street, while the Polar Park blocks added four apartment buildings with about 550 units by August 2024, including one with below-market rents. The city's plan also lists The Cove, a 173-unit building with first-floor retail, and Table Talk Lofts, a mixed-income project that will reopen Spruce Street between Green and Washington Streets.",
+    "text": "Housing in the Canal District is mostly apartments and condominiums. Older stock is in converted 19th-century buildings, such as the Ash Street School apartments (2002) and condominiums above shops on Winter Street, while the Polar Park blocks added four apartment buildings with nearly 550 units by August 2024, including one entirely at below-market rents. The city's plan also lists The Cove, a 173-unit building with first-floor retail, and Table Talk Lofts, a mixed-income project that will reopen Spruce Street between Green and Washington Streets.",
     "source": "https://www.worcesterma.gov/node/23917"
   },
   "areas": [
     {
       "name": "Kelley Square",
-      "line": "A seven-way intersection whose approaches include Water, Harding and Madison Streets, rebuilt by MassDOT as a modified roundabout in a $14.7 million project, with wider sidewalks and a canal marker.",
+      "line": "A seven-way intersection whose approaches include Water, Harding and Madison Streets, rebuilt by MassDOT as a modified roundabout in a $14.7 million project, with wider sidewalks.",
       "source": "https://www.mass.gov/doc/kelley-sq-english-fact-sheet/download"
     },
     {
@@ -43,7 +43,7 @@
     },
     {
       "name": "Polar Park blocks",
-      "line": "About 18 acres of former industrial land on Madison Street and Green Island Boulevard, with the ballpark, the WooSox Loop walkway, Summit Street terraces and new apartment buildings.",
+      "line": "About 18 acres of former industrial land on Madison Street, with the ballpark and new apartment buildings; the first, with 228 units, began construction in August 2021.",
       "source": "https://epa.gov/brownfields/r1-success-story-polar-park-worcester-mass"
     }
   ],
@@ -65,7 +65,7 @@
   "places": [
     {
       "name": "Polar Park",
-      "line": "The city-owned ballpark at 100 Madison Street, home of the Triple-A Worcester Red Sox since its first game on May 11, 2021, with 9,508 seats and use for concerts and community events.",
+      "line": "The ballpark at 100 Madison Street, home of the Triple-A Worcester Red Sox since its first game on May 11, 2021, with 9,508 seats and use for concerts and community events.",
       "source": "https://www.worcesterma.gov/node/24003"
     },
     {
@@ -75,7 +75,7 @@
     },
     {
       "name": "Crompton Loom Works",
-      "line": "George Crompton's loom factory at 132-142 Green Street; its earliest section, from 1860, is one of Worcester's oldest surviving factory buildings.",
+      "line": "The Crompton loom factory at 132-142 Green Street; its earliest section, from 1860, is one of Worcester's oldest surviving factory buildings.",
       "source": "https://www.preservationworcester.org/_files/ugd/6a3292_eee08e2ca88447688a7f01dcb37c73a6.pdf"
     },
     {
@@ -102,7 +102,7 @@
   "history": [
     {
       "year": "1828",
-      "text": "The Blackstone Canal opened; the packet boat Lady Carrington was the first to reach Worcester, on October 7.",
+      "text": "The Blackstone Canal opened on October 7; the packet boat Lady Carrington was the first vessel to make the trip.",
       "source": "https://en.wikipedia.org/wiki/Blackstone_Canal"
     },
     {
@@ -112,7 +112,7 @@
     },
     {
       "year": "1860",
-      "text": "George Crompton opened his loom works on Green Street; its 1860 section still stands at 132-142 Green Street.",
+      "text": "The earliest surviving section of the Crompton Loom Works at 132-142 Green Street was built.",
       "source": "https://www.preservationworcester.org/_files/ugd/6a3292_eee08e2ca88447688a7f01dcb37c73a6.pdf"
     },
     {
@@ -135,16 +135,16 @@
     },
     {
       "q": "Can you still see the Blackstone Canal in Worcester?",
-      "a": "Very little of it. The canal was covered over in the late 19th century and still runs underground beneath Harding Street; markers stand at Kelley Square and at Quinsigamond Avenue and Olde Millbury Street, and a 90-foot canal replica with a fountain sits on the plaza leading to Polar Park."
+      "a": "Very little of it. The canal was covered over in the late 19th century and still runs underground beneath Harding Street; historical markers stand on Quinsigamond Avenue at Canton Street in Green Island, and a 90-foot canal replica with a fountain sits on the plaza leading to Polar Park."
     },
     {
       "q": "What kind of housing is in the Canal District?",
-      "a": "Mostly apartments and condominiums: units in converted 19th-century buildings such as the Ash Street School, and about 550 units in four new buildings around Polar Park as of August 2024, one of them with below-market rents."
+      "a": "Mostly apartments and condominiums: units in converted 19th-century buildings such as the Ash Street School, and nearly 550 units in four new buildings around Polar Park as of August 2024, one of them with below-market rents."
     },
     {
       "q": "Which school district serves the Canal District?",
       "a": "Worcester Public Schools. School assignment is set by the district by address; review the district's profile with DESE."
     }
   ],
-  "notes": "Written 2026-10-22. No official boundary was found; the boundary text combines the College of the Holy Cross Crompton Park project (Green Island and the Canal District) with the street list of Preservation Worcester's 'By the Canal' walking tour (Union Station, Temple, Green, Water, Winter and Ash Streets). Canal dates: construction 1824-1828 and folding into the sewer system in the late 1860s (Preservation Worcester), covering 'in the 1870s' (Holy Cross) and 'arched over in the 1890s' (Clio, citing the Canal District Alliance) disagree, so the record says 'late 19th century'. The 1960s I-290 statement is from Clio (https://theclio.com/entry/23684) and the walking tour; the Clio entry also links the district's redevelopment to Union Station's 2000 reopening. Polar Park seat count is the city's (9,508); EPA calls it a 10,000-seat ballpark. The 18-acre site figure is the EPA's; the Boston Globe (Aug 6, 2024) gives six acres for the stadium plus about 12 turned over to developers, and is the source for the four buildings, about 550 units and the below-market building. Kelley Square: the seven-way description and the Water Street, Harding Street, Madison Street and Green Island Boulevard approaches come from Streetsblog Mass (May 4, 2021); Green Street is from the MassDOT fact sheet's scope list. The MassDOT fact sheet (Nov 2019) gave expected completion in November 2020; no official completion date was found, so none is given. The Hill Envelope building at 48 Water Street was described by the walking tour as 'being restored' into 64 mixed-income units, and the Crompton Loom Works as being renovated for retail and housing; the brochure is undated, so their current status is not stated. The Cove and Table Talk Lofts come from the city's Urban Renewal page, which does not date their status. WRTA routes are from the WRTA routes page as read on 2026-10-22. Left out: the Miss Worcester Diner (302 Southbridge Street, 1948, Worcester Lunch Car #812) because sources place it in Green Island rather than the Canal District; 91 Green Street's music venue and other business details that could change. Market set to null: the Warren Group lists Worcester only citywide. Schools: assignment is by address and set by the district. Fair housing: sources describe the national origin of past and present residents (the walking tour, the Goldberg Building article and the Holy Cross project, which also discusses displacement); none of that was used, and institutions are named only (Hibernian Cultural Center, White Eagle Association). The below-market building is described by its rents, not by who lives there."
+  "notes": "Written 2026-10-22. No official boundary was found; the boundary text combines the College of the Holy Cross Crompton Park project (Green Island and the Canal District) with the street list of Preservation Worcester's 'By the Canal' walking tour (Union Station, Temple, Green, Water, Winter and Ash Streets). Canal dates: construction 1824-1828 and folding into the sewer system in the late 1860s (Preservation Worcester), covering 'in the 1870s' (Holy Cross) and 'arched over in the 1890s' (Clio, citing the Canal District Alliance) disagree, so the record says 'late 19th century'. The 1960s I-290 statement is from Clio (https://theclio.com/entry/23684) and the walking tour; the Clio entry also links the district's redevelopment to Union Station's 2000 reopening. Polar Park seat count is the city's (9,508); EPA calls it a 10,000-seat ballpark. The 18-acre site figure is the EPA's; the Boston Globe (Aug 6, 2024) gives six acres for the stadium plus about 12 turned over to developers, and is the source for the four buildings, about 550 units and the below-market building. Kelley Square: the seven-way description and the Water Street, Harding Street, Madison Street and Green Island Boulevard approaches come from Streetsblog Mass (May 4, 2021); Green Street is from the MassDOT fact sheet's scope list. The MassDOT fact sheet (Nov 2019) gave expected completion in November 2020; no official completion date was found, so none is given. The Hill Envelope building at 48 Water Street was described by the walking tour as 'being restored' into 64 mixed-income units, and the Crompton Loom Works as being renovated for retail and housing; the brochure is undated, so their current status is not stated. The Cove and Table Talk Lofts come from the city's Urban Renewal page, which does not date their status. WRTA routes are from the WRTA routes page as read on 2026-10-22. Left out: the Miss Worcester Diner (302 Southbridge Street, 1948, Worcester Lunch Car #812) because sources place it in Green Island rather than the Canal District; 91 Green Street's music venue and other business details that could change. Market set to null: the Warren Group lists Worcester only citywide. Schools: assignment is by address and set by the district. Fair housing: sources describe the national origin of past and present residents (the walking tour, the Goldberg Building article and the Holy Cross project, which also discusses displacement); none of that was used, and institutions are named only (Hibernian Cultural Center, White Eagle Association). The below-market building is described by its rents, not by who lives there. Fact-check 2026-10-22: Verified the canal dates (walking tour 1824-1828; Wikipedia's Blackstone Canal article gives 1825-1828 and the October 7, 1828 opening; the Lady Carrington was 'the first vessel to make the trip'), closure by 1848 and covering (Holy Cross), Harding Street, the Green Island name (Holy Cross), the walking-tour buildings and dates (Crompton 1860 section, Heywood/Wachusett 1879, Walker 1870, Hill Envelope 1891, Ash Street School 1850/2002, Cahill House 1852/2005, Father Mathew Hall 1888, 82-88 Winter Street and I-290), St. John's (44 Temple Street per its article, 1845, dedicated 1846, NRHP 1980; the NRHP list gives 40 Temple St.; the article's address is kept), the Goldberg Building, Clio's I-290 line, the city's Polar Park page (9,508 seats, 100 Madison Street, first game May 11, 2021), the EPA page (18 acres, 2016 URP, 228-unit building begun August 2021) and the MassDOT fact sheet ($14.7 million, modified roundabout, shared-use paths on Madison, Green and Harding Streets). Seven-way and wider sidewalks: Streetsblog Mass, May 4, 2021 (https://mass.streetsblog.org/2021/05/04/eyes-on-the-street-i-survived-worcesters-new-kelley-square). Apartments: Boston Globe, Aug 6, 2024 (https://www.bostonglobe.com/2024/08/06/business/worcester-polar-park-woosox-canal-district) says 'nearly 550 units' and one building 'entirely set aside at below-market rents'; corrected from 'about 550' and 'income-restricted'. Corrected: the first-boat sentence now follows Wikipedia; Mill Brook now rests on the Green Island historical marker (HMdb, https://www.hmdb.org/m.asp?m=151753: the canal 'generally followed the Mill Brook through Worcester'); 'George Crompton opened ... in 1860' softened to the walking tour's wording (an 1860 section); 'shops with apartments above' removed from the Green and Water Street sentence (not in a source); 'city-owned' removed from Polar Park (the city page does not state ownership). Removed: the canal markers 'at Kelley Square and at Quinsigamond Avenue and Olde Millbury Street' and the Kelley Square 'canal marker', because no source opened places markers there; the markers found are at Quinsigamond Avenue and Canton Street (HMdb 151752 and 151753), in Green Island, and are now described that way. Removed the Polar Park area's Green Island Boulevard, WooSox Loop walkway and Summit Street terraces, which the cited EPA page does not mention. Fair housing: re-read; no wording describes residents."
 }
