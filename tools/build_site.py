@@ -660,7 +660,14 @@ def page_communities():
   {section_head(name, f"{len(ts)} guide{'s' if len(ts) != 1 else ''}", [name + "."], lead=blurb, title_id=key + "-title")}
   <div class="card-grid-3" style="gap:var(--gutter)">{cards}</div>
 </div></section>'''
-    toc = "".join(f'<li><a href="#{k}">{n}</a></li>' for k, n, _ in REGIONS if towns_in(k))
+    cities = [t for t in TOWNS if t.get("neighborhoods")]
+    nb_cols = "".join(f'''<div class="stack" style="--stack:var(--space-3)"><h3 class="h4"><a href="{R}site/communities/{t["slug"]}/">{t["name"]}</a></h3><ul class="toc-mini">{"".join(f'<li><a href="{R}site/communities/{t["slug"]}/{n["slug"]}/">{n["name"]}</a></li>' for n in t["neighborhoods"])}</ul></div>''' for t in cities)
+    if cities:
+        regions += f'''<section class="section" id="neighborhoods" aria-labelledby="nbh-title"><div class="container">
+  {section_head("Neighborhood guides", f"{sum(len(t['neighborhoods']) for t in cities)} neighborhoods", ["Street by street", "in the cities."], lead="Closer looks at the neighborhoods of Worcester, home base for the team, and Boston, each with its own streets, homes, transit and history.", title_id="nbh-title")}
+  <div class="cols cols--{max(2, len(cities))} col-rule">{nb_cols}</div>
+</div></section>'''
+    toc = "".join(f'<li><a href="#{k}">{n}</a></li>' for k, n, _ in REGIONS if towns_in(k)) + ('<li><a href="#neighborhoods">Neighborhoods</a></li>' if cities else "")
     names = ", ".join(t["name"] for t in TOWNS)
     body = page_hero(R, trail, ["Close to home,", "wherever home is."], h1="Massachusetts community guides",
                      lead=f"The Oberdorfer Team works from Worcester and helps buyers and sellers across Massachusetts. These {len(TOWNS)} guides cover housing, neighborhoods, commuting, schools and 2025 home prices, each with its sources.",
@@ -668,7 +675,7 @@ def page_communities():
 <section class="section--tight"><div class="container"><nav aria-label="Regions"><ul class="toc-mini" style="display:flex;flex-wrap:wrap;gap:var(--space-3) var(--space-6)">{toc}</ul></nav></div></section>
 {regions}
 <section class="section"><div class="container split" style="align-items:start">
-  <div class="stack" style="grid-column:1/span 6"><p class="label">Elsewhere in Massachusetts</p><h2 class="h2">Not seeing your town?</h2><p>The team helps clients across the state. Guides are added one at a time as the team works in a town, each researched and sourced, never generated in bulk. Boston neighborhood guides are next.</p>{link_arrow(R, R+"site/contact/", "Ask about your town")}</div>
+  <div class="stack" style="grid-column:1/span 6"><p class="label">Elsewhere in Massachusetts</p><h2 class="h2">Not seeing your town?</h2><p>The team helps clients across the state. Guides are added one at a time as the team works in a town, each researched and sourced, never generated in bulk.</p>{link_arrow(R, R+"site/contact/", "Ask about your town")}</div>
   <div class="stack" style="grid-column:8/span 5"><p class="caption">Line drawings stand in for community photography still to be commissioned. Wakefield photo: Lake Quannapowitt Panorama, RedSoxFan274 / Wikimedia Commons, CC BY-SA 4.0, cropped.</p><p class="caption">Home prices: {WARREN}. <a href="{R}site/market/">All towns compared</a>.</p></div>
 </div></section>
 {cta_panel(R, "Exploring a move? <em>Let's compare towns together.</em>", "Relocating within Massachusetts")}'''
@@ -679,6 +686,17 @@ def page_communities():
           "Communities", body, ld=[crumbs_ld(trail), item_list])
 
 def fmt_people(n): return f"{n:,}"
+
+def first_sentence(text):
+    return re.split(r'(?<=[a-z0-9\)])\. (?=[A-Z])', text)[0].rstrip(".") + "."
+
+def tax_fact(t):
+    """'$13.70 per $1,000 (FY2026 residential)' from a town's sourced tax record, or None."""
+    x = t.get("tax") or {}
+    if not x.get("residential_rate"): return None
+    s = f"${x['residential_rate']:.2f} per $1,000 ({x.get('fy', '')} residential)".replace("( ", "(")
+    if x.get("residential_exemption"): s += "; residential exemption available"
+    return s + ' <span class="badge badge--source">Mass. DLS</span>' if "dls" in (x.get("source") or "").lower() else s
 
 def town_title(name):
     """About 60 characters, town first, brand last (the SEO convention)."""
@@ -715,6 +733,7 @@ def page_town(t):
     if c.get("highways"): facts.append(("Highways", ", ".join(c["highways"][:4])))
     if sch.get("district"): facts.append(("Schools", f'<a href="{sch["dese_url"]}">{sch["district"]}</a> (DESE profile)'))
     if m.get("sf_median_2025"): facts.append(("Single-family median", f"{money(m['sf_median_2025'])} in 2025 <span class=\"badge badge--source\">Warren Group</span>"))
+    if tax_fact(t): facts.append(("Property tax", tax_fact(t)))
     facts.append(("Guide updated", f'<time datetime="{UPDATED}">October 22, 2026</time>'))
     facts_html = "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in facts)
     overview = "".join(f"<p>{p}</p>" for p in t["overview"])
@@ -723,7 +742,17 @@ def page_town(t):
         hs = t["housing"].get("source")
         housing = f'<h3 class="h4" style="margin-top:var(--space-6)">Homes in {name}</h3><p>{t["housing"]["text"]}</p>'
     villages = ""
-    if t.get("villages"):
+    nbs = t.get("neighborhoods") or []
+    if nbs:
+        # Cities with neighborhood guides: one card per guide, then any village without its own page.
+        have = {n["name"].lower() for n in nbs}
+        items = "".join(f'<div><h3 class="h4"><a href="{R}site/communities/{slug}/{n["slug"]}/">{n["name"]}</a></h3><p class="body-s" style="margin-top:var(--space-2)">{first_sentence(n["answer"])}</p><p class="body-s" style="margin-top:var(--space-2)">{link_arrow(R, f"{R}site/communities/{slug}/{n["slug"]}/", f"The {n["name"]} guide")}</p></div>' for n in nbs)
+        items += "".join(f'<div><h3 class="h4">{v["name"]}</h3><p class="body-s" style="margin-top:var(--space-2)">{v["line"]}</p></div>' for v in t.get("villages", []) if v["name"].lower() not in have)
+        villages = f'''<section class="section surface-muted" id="neighborhoods" aria-labelledby="nb-title"><div class="container">
+  {section_head("Neighborhood guides", f"{len(nbs)} {name} neighborhoods", ["Where you might", f"live in {name}."], title_id="nb-title")}
+  <div class="cols cols--3 col-rule">{items}</div>
+</div></section>'''
+    elif t.get("villages"):
         items = "".join(f'<div><h3 class="h4">{v["name"]}</h3><p class="body-s" style="margin-top:var(--space-2)">{v["line"]}</p></div>' for v in t["villages"])
         villages = f'''<section class="section surface-muted" id="neighborhoods" aria-labelledby="nb-title"><div class="container">
   {section_head("Neighborhoods and villages", name, ["Where you might", f"live in {name}."], title_id="nb-title")}
@@ -795,6 +824,7 @@ def page_town(t):
     addsrc("Massachusetts DESE district profile", sch.get("dese_url"))
     addsrc("The Warren Group, 2025 sales by town", WARREN_URL)
     if t.get("housing"): addsrc("Housing", t["housing"].get("source"))
+    if t.get("tax"): addsrc(f"Property tax rates, {t['tax'].get('fy', '')}".strip(", "), t["tax"].get("source"))
     for v in t.get("villages", []): addsrc(v["name"], v.get("source"))
     for p in t.get("places", []): addsrc(p["name"], p.get("source"))
     for h in t.get("history", []): addsrc(f"History ({h['year']})", h.get("source"))
@@ -849,6 +879,139 @@ def page_town(t):
     title = town_title(name)
     desc = town_desc(t)
     write(f"communities/{slug}", R, title, desc, "Communities", body, ld=[crumbs_ld(trail), page_ld])
+
+def nbhd_title(name, city):
+    """About 60 characters, neighborhood and city first, brand last."""
+    for t in (f"Living in {name}, {city}, MA | The Oberdorfer Team",
+              f"{name}, {city}: Neighborhood Guide | The Oberdorfer Team",
+              f"{name}, {city} MA | The Oberdorfer Team"):
+        if len(t) <= 62: return t
+    return t
+
+def nbhd_desc(n):
+    if n.get("meta"): return n["meta"]
+    first = first_sentence(n["answer"])
+    for tail in (" Streets, homes, transit and places to know, with sources.",
+                 " Homes, transit and places to know, with sources.",
+                 " Homes and transit, with sources."):
+        if len(first + tail) <= 160: return first + tail
+    return first
+
+def page_neighborhood(n, city):
+    """A neighborhood guide under its city's guide: site/communities/<city>/<slug>/.
+    Same sourced record format as a town (tools/data/RESEARCH-BRIEF.md), with boundaries and areas."""
+    R = "../../../../"
+    slug, name, cname, cslug = n["slug"], n["name"], city["name"], city["slug"]
+    url_rel = f"site/communities/{cslug}/{slug}/"
+    trail = [("Home", "site/"), ("Communities", "site/communities/"), (cname, f"site/communities/{cslug}/"), (name, url_rel)]
+    c = n.get("commute") or {}
+    sch = n.get("schools") or city.get("schools") or {}
+    cm = city.get("market") or {}
+    rail = c.get("rail") or []
+    rail_txt = "; ".join(f"{r['line']} ({', '.join(r['stations'])})" for r in rail) if rail else "See commuting below"
+    facts = [("City", f'<a href="{R}site/communities/{cslug}/">{cname}, Massachusetts</a>'), ("County", city["county"])]
+    if n.get("population_2020"):
+        facts.append(("Population", f"{fmt_people(n['population_2020'])}" + (f" ({n['population_label']})" if n.get("population_label") else "")))
+    facts.append(("Transit", rail_txt))
+    if sch.get("district"): facts.append(("Schools", f'<a href="{sch["dese_url"]}">{sch["district"]}</a> (DESE profile)'))
+    if cm.get("sf_median_2025"): facts.append((f"{cname} single-family median", f"{money(cm['sf_median_2025'])} in 2025, citywide <span class=\"badge badge--source\">Warren Group</span>"))
+    if tax_fact(city): facts.append(("Property tax", tax_fact(city) + " (citywide)"))
+    facts.append(("Guide updated", f'<time datetime="{UPDATED}">October 22, 2026</time>'))
+    facts_html = "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in facts)
+    b = n.get("boundaries") or {}
+    where = f'<h3 class="h4">Where it is</h3><p>{b["text"]}</p>' if b.get("text") else ""
+    overview = "".join(f"<p>{p}</p>" for p in n["overview"])
+    housing = f'<h3 class="h4" style="margin-top:var(--space-6)">Homes in {name}</h3><p>{n["housing"]["text"]}</p>' if (n.get("housing") or {}).get("text") else ""
+    areas = ""
+    if n.get("areas"):
+        items = "".join(f'<div><h3 class="h4">{a["name"]}</h3><p class="body-s" style="margin-top:var(--space-2)">{a["line"]}</p></div>' for a in n["areas"])
+        areas = f'''<section class="section surface-muted" id="areas" aria-labelledby="ar-title"><div class="container">
+  {section_head("Within the neighborhood", name, ["Corners of", f"{name}."], title_id="ar-title")}
+  <div class="cols cols--3 col-rule">{items}</div>
+</div></section>'''
+    rail_list = "".join(f"<li><b>{r['line']}</b>: {', '.join(r['stations'])}</li>" for r in rail)
+    rail_block = f'<ul class="body-s" style="padding-left:1.1rem;display:grid;gap:var(--space-2)">{rail_list}</ul>' if rail else ""
+    places = "".join(f'<div><h3 class="h4">{p["name"]}</h3><p class="body-s" style="margin-top:var(--space-2)">{p["line"]}</p></div>' for p in n.get("places", []))
+    hist = ""
+    if n.get("history"):
+        hist = '<div class="history">' + "".join(f'<div><b>{h["year"]}</b><p class="body-s">{h["text"]}</p></div>' for h in n["history"][:4]) + "</div>"
+    nm = n.get("market") or {}
+    if nm.get("sf_median_2025"):
+        market_html = f'''<table class="spec-table market-table"><thead><tr><th scope="col">Calendar year</th><th scope="col">2024</th><th scope="col">2025</th><th scope="col">Change</th></tr></thead><tbody><tr><th scope="row">Single-family median sale price</th><td class="tabular">{money(nm["sf_median_2024"]) if nm.get("sf_median_2024") else "n/a"}</td><td class="tabular">{money(nm["sf_median_2025"])}</td><td class="tabular">{fmt_pct(pct(nm.get("sf_median_2024"), nm["sf_median_2025"]))}</td></tr></tbody></table>
+<p class="stat-source">Source: <a href="{WARREN_URL}">The Warren Group, MA December 2025 Sales, Prices by Town</a>. Geography: {name}, as the report defines it. Calendar years 2024 and 2025. Not live data and not a valuation of any home.</p>'''
+    else:
+        city_line = f"{cname}'s single-family median was {money(cm['sf_median_2025'])} in 2025" if cm.get("sf_median_2025") else f"{cname}'s figures are in the city guide"
+        market_html = f'''<p>Sale prices are reported for the city of {cname} as a whole, not by neighborhood. {city_line}, according to <a href="{WARREN_URL}">The Warren Group</a>. Prices within {name} depend on the street, the building and the type of home, so the best guide is recent closed sales nearby.</p>{link_arrow(R, f"{R}site/communities/{cslug}/#market", f"{cname} prices in the city guide")}'''
+    faq = n.get("faq", [])
+    faq_html = "".join(f'<details{" open" if i == 0 else ""}><summary>{f["q"]}</summary><div class="accordion__body body-s"><p>{f["a"]}</p></div></details>' for i, f in enumerate(faq))
+    sibs = {x["slug"]: x for x in city.get("neighborhoods", [])}
+    near = [sibs[k] for k in n.get("nearby", []) if k in sibs and k != slug][:4]
+    others = [x for x in city.get("neighborhoods", []) if x["slug"] != slug and x not in near]
+    near_html = ""
+    if near:
+        near_html += f'<p class="label" style="margin-top:var(--space-6)">Nearby neighborhoods</p><ul class="toc-mini">' + "".join(f'<li><a href="{R}site/communities/{cslug}/{x["slug"]}/">{x["name"]}</a></li>' for x in near) + "</ul>"
+    if others:
+        near_html += f'<p class="label" style="margin-top:var(--space-6)">More {cname} neighborhoods</p><ul class="toc-mini">' + "".join(f'<li><a href="{R}site/communities/{cslug}/{x["slug"]}/">{x["name"]}</a></li>' for x in others) + "</ul>"
+    near_html += f'<p class="body-s" style="margin-top:var(--space-3)"><a href="{R}site/communities/{cslug}/">The {cname} city guide</a></p>'
+    srcs = []
+    def addsrc(label, u):
+        if u and u not in [x[1] for x in srcs]: srcs.append((label, u))
+    addsrc(f"City of {cname}", city.get("official_site"))
+    if n.get("population_source"): addsrc("Population", n["population_source"])
+    addsrc("Boundaries", b.get("source"))
+    addsrc("Transit", c.get("rail_source"))
+    addsrc("Massachusetts DESE district profile", sch.get("dese_url"))
+    addsrc("The Warren Group, 2025 sales by town", WARREN_URL)
+    if (city.get("tax") or {}).get("source"): addsrc(f"{cname} property tax rates", city["tax"]["source"])
+    if n.get("housing"): addsrc("Housing", n["housing"].get("source"))
+    for a in n.get("areas", []): addsrc(a["name"], a.get("source"))
+    for p_ in n.get("places", []): addsrc(p_["name"], p_.get("source"))
+    for h in n.get("history", []): addsrc(f"History ({h['year']})", h.get("source"))
+    src_html = "".join(f'<li><a href="{u}">{e(l)}</a></li>' for l, u in srcs)
+    hero = page_hero(R, trail, n["headline"], h1=f"Living in {name}, {cname}, MA", lead=n["answer"])
+    body = hero + f'''
+<section class="section" aria-labelledby="about-title"><div class="container split" style="align-items:start">
+  <div class="stack prose" style="grid-column:1/span 7;--stack:var(--space-4)">
+    <h2 class="h2" id="about-title">About {name}</h2>
+    {where}
+    {overview}
+    {housing}
+  </div>
+  <aside class="stack" style="grid-column:9/span 4;--stack:var(--space-5)" aria-label="{name} at a glance">
+    <dl class="quick-facts quick-facts--aside">{facts_html}</dl>
+    <div class="panel"><p class="h5">Your {cname} guides</p><p class="body-s">Brandon &amp; Kaitlyn Oberdorfer · Based in Worcester</p><div class="cluster"><a class="btn btn--small" href="#contact-town">Ask about {name}</a><a class="link-arrow" href="tel:{TEL}">{PHONE}</a></div></div>
+  </aside>
+</div></section>
+{areas}
+<section class="section" id="commute" aria-labelledby="commute-title"><div class="container split" style="align-items:start">
+  <div class="stack" style="grid-column:1/span 6;--stack:var(--space-4)"><p class="label">Getting around</p><h2 class="h2" id="commute-title">Commuting from {name}</h2><p>{c.get("text", "")}</p>{rail_block}<p class="caption">Check current schedules with the <a href="https://www.mbta.com/">MBTA</a>{' and the <a href="https://therta.com/">WRTA</a>' if cslug == "worcester" else ""}; compare the trip from each address before you buy.</p></div>
+  <div class="stack" style="grid-column:8/span 5;--stack:var(--space-4)"><p class="label">Schools</p><h2 class="h2">Public schools</h2><p>{name} is served by {sch.get("district", "[district to confirm]")}. School assignment depends on the address and the district's own rules; confirm it with the district, and review its profile with the Massachusetts Department of Elementary and Secondary Education.</p>{link_arrow(R, sch.get("dese_url", "#"), "DESE district profile")}</div>
+</div></section>
+<section class="section surface-muted" id="places" aria-labelledby="places-title"><div class="container">
+  {section_head("Things to do", name, ["Places to know", f"in {name}."], title_id="places-title")}
+  <div class="cols cols--3 col-rule">{places}</div>
+  {f'<h2 class="h3" style="margin-top:var(--space-8);margin-bottom:var(--space-5)">History</h2>{hist}' if hist else ""}
+</div></section>
+<section class="section" id="market" aria-labelledby="market-title"><div class="container split" style="align-items:start">
+  <div class="stack" style="grid-column:1/span 7;--stack:var(--space-4)"><p class="label">Home prices</p><h2 class="h2" id="market-title">Buying in {name}</h2>{market_html}</div>
+  <div class="stack" style="grid-column:9/span 4;--stack:var(--space-4)"><h3 class="h4">Read it for your own home</h3><p class="body-s">A citywide median is a starting point. Your best comparisons are recent closed sales that resemble the home in location, size, condition and style.</p>{link_arrow(R, R+"site/sell/#consult", "Request a market review")}</div>
+</div></section>
+<section class="section surface-muted" id="questions" aria-labelledby="faq-title"><div class="container split" style="align-items:start">
+  <div class="stack" style="grid-column:1/span 5"><p class="label">Questions</p><h2 class="display-m answer" id="faq-title"><span>Asked about</span><span>{name}.</span></h2>{near_html}</div>
+  <div class="accordion" style="grid-column:7/span 6">{faq_html}</div>
+</div></section>
+<section class="section" id="contact-town" aria-labelledby="ct-title"><div class="container split" style="align-items:start">
+  <div class="stack" style="grid-column:1/span 5;--stack:var(--space-5)"><p class="label">Thinking about {name}?</p><h2 class="display-m answer" id="ct-title"><span>Let's talk about</span><span>your move.</span></h2><p>Buying in {name}, selling here, or comparing it with other parts of {cname}: tell us what you are planning and we will reply by your preferred method.</p><a class="cta-panel__phone" href="tel:{TEL}" style="color:var(--ot-navy);font-size:var(--step-h2)">{PHONE}</a></div>
+  <div class="panel" style="grid-column:7/span 6">{form(R, "town", f"Ask about {name}", contact_fields("tw") + select("tw-topic", "I'm interested in", [f"Buying in {name}", f"Selling in {name}", "Both", f"Comparing {cname} neighborhoods"]) + field("tw-msg", "Message", "textarea", opt=True) + reach_pref("tw"), "Send my question", f"community:{cslug}/{slug}", "h3")}</div>
+</div></section>
+<section class="section--tight" aria-labelledby="src-title"><div class="container"><h2 class="label" id="src-title">Sources for this guide</h2><ul class="source-list caption">{src_html}</ul><p class="caption" style="margin-top:var(--space-3)">Researched by The Oberdorfer Team. Updated <time datetime="{UPDATED}">October 22, 2026</time>. Places and facts can change; check with the source before you rely on them.</p></div></section>'''
+    place = {"@type": "Place", "name": f"{name}, {cname}, Massachusetts",
+             "containedInPlace": {"@type": "City", "name": f"{cname}, Massachusetts", "url": prod(f"site/communities/{cslug}/")}}
+    page_ld = {"@context": "https://schema.org", "@type": "WebPage", "@id": prod(url_rel) + "#page", "url": prod(url_rel),
+               "name": f"Living in {name}, {cname}, MA", "about": place, "dateModified": UPDATED, "inLanguage": "en-US",
+               "isPartOf": {"@id": prod(f"site/communities/{cslug}/") + "#page"},
+               "publisher": {"@id": TEAM_ID}, "mainEntityOfPage": prod(url_rel)}
+    write(f"communities/{cslug}/{slug}", R, nbhd_title(name, cname), nbhd_desc(n), "Communities", body, ld=[crumbs_ld(trail), page_ld])
 
 def page_market():
     R = "../../"
@@ -1327,7 +1490,7 @@ def page_contact():
 
 if __name__ == "__main__":
     page_home(); page_buy(); [page_listing(l) for l in LISTINGS]; page_sell(); page_market()
-    page_communities(); [page_town(t) for t in TOWNS]; page_team(); page_agent(); page_journal(); page_article()
+    page_communities(); [page_town(t) for t in TOWNS]; [page_neighborhood(n, t) for t in TOWNS for n in t.get("neighborhoods", [])]; page_team(); page_agent(); page_journal(); page_article()
     page_join(); page_office(); page_contact()
     for a in AGENTS: page_profile(a)
     page_profile(TEMPLATE_AGENT)

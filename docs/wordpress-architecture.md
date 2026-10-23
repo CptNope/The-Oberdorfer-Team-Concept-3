@@ -22,7 +22,7 @@ The production site for oberdorferteam.com is a custom block theme plus a small 
 | Colors, type, spacing | Theme (`theme.json`) | Generated from `tokens.css` by `tools/export_tokens.py`; never hand-edited |
 | Templates and template parts | Theme | One per board on the FSE canvas |
 | Patterns | Theme | The pattern names on the FSE boards' blue chips |
-| CPTs: agent, community, office, testimonial, publication | `ot-core` | Taxonomies: region, specialty, language, service area |
+| CPTs: agent, community, office, testimonial, publication | `ot-core` | Taxonomies: region, specialty, language, service area. `community` is hierarchical: a neighborhood guide is a child of its city (`/communities/worcester/tatnuck/`), uses the same fields plus boundaries and areas, and shows the city's market figures and tax rate rather than its own. |
 | Custom fields | `ot-core` | `register_post_meta` with `show_in_rest`; no ACF or other fields plugin |
 | Field display in templates | `ot-core` + theme | `ot-core` registers Block Bindings sources; the theme's templates bind core blocks to them. Bindings reach only some attributes of a few core blocks (paragraph, heading, image, button and a few others), and `core/post-meta` needs `show_in_rest` and a key without a leading underscore. Structured fields go through `ot/*` blocks. |
 | JSON-LD (RealEstateAgent, Person, ProfilePage, City, WebPage, BreadcrumbList, Dataset) | `ot-core` | Same graph as the prototype, with `@id` links; no FAQPage on new templates |
@@ -37,7 +37,8 @@ The production site for oberdorferteam.com is a custom block theme plus a small 
 | Listings and search | IDX provider plugin (open decision: `docs/idx-options.md`) | Licensed MLS PIN data; the theme styles its output with `ot/listing-card`, and vendor lead events (registrations, saved searches, inquiries) go to `ot-leads`. A future own feed would live in a separate `ot-idx` plugin, never in `ot-leads` or the theme. |
 | Outgoing email delivery | Email service (Amazon SES, Postmark or Mailgun) | SPF, DKIM and DMARC on oberdorferteam.com. WordPress core mail goes through the same service. |
 | Two-factor login | Third-party 2FA plugin | Required for every admin and agent account |
-| Caching, CDN, backups, firewall, staging | Cloudways | Exclude form endpoints and the admin from page cache |
+| Caching, backups, staging | Cloudways | Exclude form endpoints and the admin from page cache |
+| CDN, DNS, edge cache, firewall | Cloudflare (free plan) | Settings in `docs/coming-soon-launch.md` section 2b; purge the cache after publishing |
 | Analytics | `ot-core` setting | One GA4 measurement ID field; Search Console is verified at the domain (DNS) |
 
 ## Deliberately not used

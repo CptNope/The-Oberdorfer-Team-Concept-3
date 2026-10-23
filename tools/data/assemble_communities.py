@@ -26,7 +26,18 @@ PLAN = [
     ("barnstable", "cape", 3), ("falmouth", "cape", 3),
     ("new-bedford", "southcoast", 3), ("fall-river", "southcoast", 3),
     ("pittsfield", "berkshires", 3), ("great-barrington", "berkshires", 3),
+    # Tier 4, added 2026-10-22: towns around the Worcester office.
+    ("auburn", "central", 4), ("millbury", "central", 4), ("northborough", "central", 4),
+    ("paxton", "central", 4), ("sutton", "central", 4), ("boylston", "central", 4),
 ]
+# Neighborhood guides, in page order, from tools/data/neighborhoods/<city>/<slug>.json.
+# They are attached to their city's record as "neighborhoods" and get their own pages.
+NEIGHBORHOODS = {
+    "worcester": ["downtown", "canal-district", "shrewsbury-street", "main-south",
+                  "grafton-hill", "tatnuck", "greendale", "quinsigamond-village"],
+    "boston": ["back-bay", "beacon-hill", "south-end", "charlestown",
+               "jamaica-plain", "south-boston", "west-roxbury", "dorchester"],
+}
 REGION_NAMES = {"central": "Central Massachusetts", "metrowest": "MetroWest", "north": "North of Boston",
                 "boston": "Greater Boston", "southshore": "South Shore",
                 "cape": "Cape Cod", "southcoast": "South Coast", "west": "Pioneer Valley",
@@ -45,10 +56,29 @@ ART = {"worcester": "triple-decker", "lowell": "townscape", "springfield": "trip
        "reading": "colonial", "melrose": "townscape", "stoneham": "cape",
        "boston": "townscape", "cambridge": "colonial", "somerville": "triple-decker", "plymouth": "cape",
        "braintree": "colonial", "barnstable": "cape", "falmouth": "cape", "new-bedford": "triple-decker",
-       "fall-river": "triple-decker", "pittsfield": "colonial", "great-barrington": "townscape"}
+       "fall-river": "triple-decker", "pittsfield": "colonial", "great-barrington": "townscape",
+       "auburn": "cape", "millbury": "townscape", "northborough": "colonial", "paxton": "cape",
+       "sutton": "colonial", "boylston": "cape"}
+
+def condo_data():
+    """Condo rows read separately from the same Warren Group report (tools/data/condo-2025.json).
+    They only fill fields a town record leaves empty."""
+    p = os.path.join(HERE, "condo-2025.json")
+    return json.load(open(p)).get("towns", {}) if os.path.exists(p) else {}
+
+def neighborhoods(city):
+    out = []
+    for slug in NEIGHBORHOODS.get(city, []):
+        p = os.path.join(HERE, "neighborhoods", city, slug + ".json")
+        if os.path.exists(p):
+            out.append(json.load(open(p)))
+        else:
+            print("missing neighborhood", city, slug)
+    return out
 
 def main(src):
     out = []
+    condos = condo_data()
     for slug, region, tier in PLAN:
         p = os.path.join(src, slug + ".json")
         if not os.path.exists(p):
@@ -57,6 +87,13 @@ def main(src):
         t["region_key"], t["region"], t["tier"] = region, REGION_NAMES[region], tier
         if slug in ART: t["art"] = ART[slug]
         t.update(EXTRA.get(slug, {}))
+        c, m = condos.get(slug), t.get("market")
+        if c and m:
+            for k in ("condo_sales_2025", "condo_sales_2024", "condo_median_2025", "condo_median_2024"):
+                if m.get(k) is None and c.get(k) is not None: m[k] = c[k]
+            if c.get("row"): m["condo_row"] = c["row"]
+        nb = neighborhoods(slug)
+        if nb: t["neighborhoods"] = nb
         out.append(t)
     with open(os.path.join(HERE, "communities.json"), "w") as f:
         json.dump(out, f, indent=1, ensure_ascii=False)
