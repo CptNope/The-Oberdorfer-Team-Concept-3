@@ -1,0 +1,106 @@
+{
+  "slug": "quinsigamond-village",
+  "parent": "worcester",
+  "city_name": "Worcester",
+  "name": "Quinsigamond Village",
+  "county": "Worcester County",
+  "region": "Central Massachusetts",
+  "official_site": "https://www.worcesterma.gov/",
+  "headline": ["A wire-mill village in the Blackstone valley,", "where the river path to Millbury begins."],
+  "answer": "Quinsigamond Village is a South Worcester neighborhood in the narrow Blackstone River valley, about three miles south of downtown, that grew around Washburn & Moen's South Works wire mill after 1846. Millbury Street was its spine, built up with three-deckers, churches, a firehouse and a 1913 Carnegie library. Route 146 has an exit signed for Millbury Street and Quinsigamond Village, and the Blackstone River Bikeway starts at the visitor center beside it.",
+  "meta": "Quinsigamond Village, Worcester: the South Works wire mill, Millbury Street three-deckers, Blackstone Gateway Park and the bikeway to Millbury. A sourced neighborhood guide.",
+  "boundaries": {
+    "text": "Quinsigamond Village lies in South Worcester, about three miles south of downtown, in a narrow valley carved by the Blackstone River between two steep ridges. It spread along Millbury Street, and Blackstone Gateway Park on McKeon Road sits at its edge.",
+    "source": "https://blackstoneheritagecorridor.org/wp-content/uploads/2016/02/Quinsigamond-Walking-Tour.pdf"
+  },
+  "overview": [
+    "Quinsigamond is a Nipmuc name, usually translated as 'pickerel fishing place', that first belonged to the lake between Worcester and Shrewsbury and then to the English settlement that became Worcester. The Massachusetts Historical Commission's survey records a Native village at Quinsigamond as a gathering place before settlement. Industry came early to this stretch of the Blackstone River: in 1794 the printer Isaiah Thomas built a two-vat paper mill at Quinsigamond Village, and in 1846 Ichabod and Charles Washburn bought the site for their South Works, an iron rolling mill and wire factory that became the city's leading industry. By 1900 the South Works covered the land between Millbury and Ballard Streets; American Steel & Wire bought it in 1899, it became part of U.S. Steel by 1901, and it closed in 1977 as the last major steel mill in New England.",
+    "The village grew along Millbury Street as mill workers looked for housing near the works, much of it in three-deckers, alongside earlier single-family houses such as the Berg and Dahlin cottages of 1875 to 1878. Institutions followed: the Quinsigamond United Methodist Church on Stebbins Street (1884), the First Swedish Co-op Store (1883), a Swedish Congregational chapel on Greenwood Street (1891), Lutheran Emmanuel Church on Greenwood Street (1898 to 1899), the Romanesque Quinsigamond Firehouse (1891 to 1892) and the Quinsigamond School buildings of the 1890s. In 1913 Andrew Carnegie came to lay the cornerstone of the Quinsigamond Branch Library, one of three city branches built partly with his grant. Streetcars ran from City Hall to Quinsigamond via Front, Green and Millbury Streets by 1886, and the company's last new track, in 1917, ran 0.9 miles through the village to the Millbury line.",
+    "The river is now the neighborhood's front door. Route 146 runs through the valley with an exit signed for Millbury Street and Quinsigamond Village, and its interchange project opened the first 2.5-mile section of the Blackstone River Bikeway, from Worcester to Millbury, in 2005. On the village's edge, the city's 30-acre Blackstone Gateway Park has about half a mile of accessible paths, boardwalks and three bridges over the Middle River, and the Blackstone Heritage Corridor's visitor center opened beside it on a former brownfield on October 27, 2018; it also houses the Central Region headquarters of the state Department of Conservation and Recreation. The 1892 firehouse, replaced in 1994 by a district station on McKeon Road, stands vacant."
+  ],
+  "housing": {
+    "text": "The Blackstone River Valley National Heritage Corridor's walking tour describes the village spreading along Millbury Street as workers sought housing near the mills, with many households in three-deckers by 1900, and earlier single-family houses such as the Berg and Dahlin cottages (1875 to 1878) and the George Reeves House (1857 to 1862), built for a Washburn & Moen foreman. No current count of housing types or ownership for the neighborhood alone was found.",
+    "source": "https://blackstoneheritagecorridor.org/wp-content/uploads/2016/02/Quinsigamond-Walking-Tour.pdf"
+  },
+  "areas": [
+    {
+      "name": "Village center, Blackstone River Road and Stebbins Street",
+      "line": "The institutional core: the 1892 Quinsigamond Firehouse at 15 Blackstone River Road and, across the street at the corner of Stebbins Street, the 1913 branch library, now joined to Quinsigamond Elementary School.",
+      "source": "https://en.wikipedia.org/wiki/Quinsigamond_Firehouse"
+    },
+    {
+      "name": "Millbury Street",
+      "line": "The village's historic spine, lined with three-deckers, cottages and shops built for South Works employees; WRTA Route 4 runs on it to the Shoppes at Blackstone Valley.",
+      "source": "https://blackstoneheritagecorridor.org/wp-content/uploads/2016/02/Quinsigamond-Walking-Tour.pdf"
+    },
+    {
+      "name": "Greenwood Street",
+      "line": "The street of the village's 1890s churches, including a Swedish Congregational chapel of 1891 and Lutheran Emmanuel Church of 1898 to 1899, now a community center, with the 14-acre Greenwood Park off Forsberg Street.",
+      "source": "https://blackstoneheritagecorridor.org/wp-content/uploads/2016/02/Quinsigamond-Walking-Tour.pdf"
+    }
+  ],
+  "commute": {
+    "rail": [{"line": "Framingham/Worcester Line", "stations": ["Worcester (Union Station, 2 Washington Square)"]}],
+    "rail_source": "https://www.mbta.com/stops/place-WML-0442",
+    "highways": ["Route 146", "Route 122A (McKeon Road)"],
+    "text": "Route 146 runs through the valley, with exit 19 signed for Millbury Street and Quinsigamond Village and exit 20 for McKeon Road (Route 122A) toward I-290; to the south, exit 18 connects to the Massachusetts Turnpike. WRTA Route 4 runs via Millbury Street and Route 11 via Vernon Hill and Greenwood Street. Commuter rail leaves from Worcester station at Union Station, downtown, on the MBTA Framingham/Worcester Line."
+  },
+  "schools": {
+    "district": "Worcester Public Schools",
+    "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=03480000&orgtypecode=5"
+  },
+  "places": [
+    {
+      "name": "Blackstone Gateway Park",
+      "line": "A 30-acre city riverfront park at 15 McKeon Road on the edge of the village, with about 3,000 feet of accessible paths, elevated boardwalks and three bridges over the Middle River, plus interpretive signs.",
+      "source": "https://www.worcesterma.gov/city-parks/blackstone-gateway-park"
+    },
+    {
+      "name": "Blackstone Heritage Corridor Visitor Center",
+      "line": "A LEED Silver visitor center at 3 Paul Clancy Way, opened October 27, 2018, with a 4,000-square-foot exhibit hall on the Blackstone Valley's industry, immigration and transportation.",
+      "source": "https://blackstoneheritagecorridor.org/new-visitor-center-opening/"
+    },
+    {
+      "name": "Blackstone River Bikeway",
+      "line": "A 2.5-mile paved, off-road path from the visitor center to Millbury, with bike repair stations at the center and at the 1265 Millbury Street parking lot.",
+      "source": "https://blackstoneheritagecorridor.org/exploring-the-blackstone-river-valley/maps-tours-guides/blackstone-river-bikeway/"
+    },
+    {
+      "name": "Greenwood Park",
+      "line": "A 14-acre city park at 14 Forsberg Street, assembled from purchases in 1905, 1912 and 1917, with a spray park, playground, tennis and basketball courts, a softball diamond and nature trails.",
+      "source": "https://www.worcesterma.gov/city-parks/greenwood-park"
+    },
+    {
+      "name": "Quinsigamond Firehouse",
+      "line": "A Romanesque firehouse at 15 Blackstone River Road, built in 1891 and 1892 for $7,112, in service until 1994 and listed on the National Register in 1980; it is vacant.",
+      "source": "https://en.wikipedia.org/wiki/Quinsigamond_Firehouse"
+    },
+    {
+      "name": "Quinsigamond Branch Library",
+      "line": "A Beaux Arts library of 1913 by the Fuller & Delano Company at Blackstone River Road and Stebbins Street, built partly with an Andrew Carnegie grant; it closed as a library in 1990 and is joined to Quinsigamond Elementary School.",
+      "source": "https://en.wikipedia.org/wiki/Quinsigamond_Branch_Library"
+    },
+    {
+      "name": "Quinsigamond United Methodist Church",
+      "line": "A church at 9 Stebbins Street, built in 1884, given a brick first floor in 1893 and rebuilt after a fire in 1975.",
+      "source": "https://blackstoneheritagecorridor.org/wp-content/uploads/2016/02/Quinsigamond-Walking-Tour.pdf"
+    }
+  ],
+  "history": [
+    {"year": "1794", "text": "Isaiah Thomas built a two-vat paper mill at Quinsigamond Village.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/wor.pdf"},
+    {"year": "1846", "text": "Ichabod and Charles Washburn bought the mill site for their South Works, which grew into Washburn & Moen's iron rolling mill and wire factory.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/wor.pdf"},
+    {"year": "1977", "text": "The South Works, by then a U.S. Steel division, closed as New England's last major steel mill.", "source": "https://blackstoneheritagecorridor.org/wp-content/uploads/2016/02/Quinsigamond-Walking-Tour.pdf"},
+    {"year": "2018", "text": "The Blackstone Heritage Corridor visitor center opened on October 27 at the head of the bikeway to Millbury.", "source": "https://blackstoneheritagecorridor.org/new-visitor-center-opening/"}
+  ],
+  "market": null,
+  "nearby": ["canal-district", "grafton-hill", "main-south", "downtown"],
+  "search_notes": "Exact-ranking queries for 'Quinsigamond Village Worcester real estate' and 'moving to Quinsigamond Village Worcester' were not run (the session's search budget ran out). Research searches returned Wikipedia's Quinsigamond article (about the Nipmuc village and the lake, not the neighborhood), the Heritage Corridor's walking-tour PDF, a Holy Cross page on the North Works and commercial listings on Blackstone River Road. No guide connects the mill history to today's park, visitor center and bikeway with sources.",
+  "faq": [
+    {"q": "What is the median home price in Quinsigamond Village, Worcester?", "a": "The Warren Group does not report Quinsigamond Village separately. Citywide, the median single-family sale price in Worcester for calendar year 2025 was $430,000 across 884 sales, up from $420,000 across 904 sales in 2024, according to its MA December 2025 Sales, Prices by Town report."},
+    {"q": "Is Quinsigamond Village on Lake Quinsigamond?", "a": "No. The village is in the Blackstone River valley in South Worcester. It shares its name with Lake Quinsigamond, on the Worcester and Shrewsbury line, because Quinsigamond was the Nipmuc name first given to the lake and then to the early settlement of Worcester."},
+    {"q": "Is there commuter rail near Quinsigamond Village?", "a": "The village has no station of its own. The nearest is Worcester station at Union Station, 2 Washington Square, downtown, on the MBTA Framingham/Worcester Line. WRTA Routes 4 and 11 serve the neighborhood, and Route 146 has an exit for Millbury Street and Quinsigamond Village."},
+    {"q": "Which school district serves Quinsigamond Village?", "a": "Worcester Public Schools. School assignment is by address and is set by the district; review the district's profile with DESE."},
+    {"q": "Where can you walk or bike in Quinsigamond Village?", "a": "Blackstone Gateway Park, a 30-acre city park on McKeon Road, has about half a mile of accessible paths and boardwalks along the Middle River, and the Blackstone River Bikeway runs 2.5 miles from the visitor center at 3 Paul Clancy Way to Millbury. Greenwood Park on Forsberg Street adds nature trails."}
+  ],
+  "notes": "Written 2026-10-22. Correction for the city record: worcester.json describes Quinsigamond Village as 'near Lake Avenue and Lake Quinsigamond'. Sources read here place it in the Blackstone River valley in South Worcester (walking tour; city Greenwood Park and Blackstone Gateway Park pages); Lake Quinsigamond is on the city's east side, so the city record's village line should be revised (not edited here, per the brief). Fair housing: the walking tour's population history (the village as 'Little Sweden', the share of Swedish residents in 1900, home-ownership rates and the earlier Irish Catholic population) was left out because it describes who lived there; only institutions are named (First Swedish Co-op Store, Swedish Congregational chapel, Lutheran Emmanuel Church). Discover Central MA's 'traditionally Swedish neighborhood' line was likewise not used. Dates: the walking tour puts Isaiah Thomas's paper mill in the 1770s; the MHC town report says 1794; the MHC date is used. The walking tour (Blackstone River Valley National Heritage Corridor, apparently 1999) gives older Millbury Street addresses: the library at 812 Millbury St (also on the NRHP list) is now 14 Blackstone River Road per Wikipedia, and its 'Quinsigamond Fire Station, 837 Main Street' appears to be an error for the firehouse at 15 Blackstone River Road. House numbers from the walking tour (Berg/Dahlin Cottages 841-847 and George Reeves House 894 Millbury St, the Klondike 854-858) were not repeated because the numbering may have changed; whether those buildings and the Washburn & Moen galvanizing and wire rope buildings near the river bridge still stand was not confirmed. Blackstone Gateway Park acreage: the city gives 30 acres; Discover Central MA says 34; the city figure is used. The visitor center: the Heritage Corridor page says it opened October 27, 2018; a Worcester Business Journal article calls it a $12 million effort while a search snippet said $21 million, so no cost is stated. The 2005 bikeway opening date is from Wikipedia's Blackstone River Greenway article (https://en.wikipedia.org/wiki/Blackstone_River_Greenway). Route 146 exit numbers are from Wikipedia (https://en.wikipedia.org/wiki/Massachusetts_Route_146). The replacement fire station 'on McKeon Street' in the firehouse article is presumably the McKeon Road station at 80 McKeon Road listed by the fire department. Streetcar facts are from Wikipedia's Worcester Consolidated Street Railway article. The 'pickerel fishing place' translation is from the NativeTech Nipmuc place-name list. Market null: the Warren Group PDF lists Worcester only as a citywide row (re-read this session: 'YTD Number of Sales 904 884 -2.2%'; 'YTD Median Sale Price $420,000 $430,000 2.4%'). School assignment is by address and set by the district; Quinsigamond Elementary School is named only as the building joined to the old library."
+}
