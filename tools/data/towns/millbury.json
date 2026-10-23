@@ -39,12 +39,12 @@
     },
     {
       "name": "West Millbury",
-      "line": "A less dense area of houses and farmland in the west of town, with the Union Chapel (1888) and the West Congregational Church.",
+      "line": "A less densely built part of town, with homes and farmland.",
       "source": "https://www.millburyma.gov/sites/g/files/vyhlif4706/f/uploads/millbury_master_plan.pdf"
     },
     {
       "name": "East Millbury",
-      "line": "A more concentrated residential area near the Worcester and Grafton lines, with Raymond Memorial Congregational Church (1934), Our Lady of Lourdes (1938) and early suburban streets such as Wheelock Avenue.",
+      "line": "A more concentrated residential area in the east of town, with Raymond Memorial Congregational Church (1934), Our Lady of Lourdes (1938) and early suburban streets such as Wheelock Avenue.",
       "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/mlb.pdf"
     },
     {
@@ -70,7 +70,7 @@
       "US Route 20",
       "Route 122A"
     ],
-    "text": "Millbury has no commuter rail station of its own; the Framingham/Worcester Line stops in neighboring Worcester and Grafton. Route 146 and the Turnpike meet in town, Route 20 runs along the Worcester line and Route 122A follows the Blackstone. WRTA Route 4 runs from Worcester's Central Hub to the Shoppes at Blackstone Valley, North Main Street and Elm and Canal Streets."
+    "text": "Millbury has no commuter rail station of its own; the Framingham/Worcester Line stops in neighboring Worcester and Grafton. Route 146 and the Turnpike meet in town, Route 20 runs along the Worcester line and Route 122A also crosses the town. WRTA Route 4 runs from Worcester's Central Hub to the Shoppes at Blackstone Valley, North Main Street and Elm and Canal Streets."
   },
   "schools": {
     "district": "Millbury Public Schools",
@@ -99,7 +99,7 @@
     },
     {
       "name": "US Post Office, Millbury Main",
-      "line": "The post office at 119 Elm Street, next to the Asa Waters Mansion, listed on the National Register in 1987.",
+      "line": "The post office at 119 Elm Street, on the same street as the Asa Waters Mansion, listed on the National Register in 1987.",
       "source": "https://en.wikipedia.org/wiki/National_Register_of_Historic_Places_listings_in_Worcester_County,_Massachusetts"
     },
     {
