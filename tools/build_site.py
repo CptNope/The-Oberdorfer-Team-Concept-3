@@ -898,6 +898,14 @@ def nbhd_desc(n):
         if len(first + tail) <= 160: return first + tail
     return first
 
+def nb_condo_row(nm):
+    """The neighborhood's own Warren Group condominium row, when the record has one."""
+    if not nm.get("condo_median_2025"):
+        return ""
+    return (f'<tr><th scope="row">Condominium median sale price</th><td class="tabular">{money(nm["condo_median_2024"]) if nm.get("condo_median_2024") else "n/a"}</td>'
+            f'<td class="tabular">{money(nm["condo_median_2025"])}</td><td class="tabular">{fmt_pct(pct(nm.get("condo_median_2024"), nm["condo_median_2025"]))}</td></tr>')
+
+
 def page_neighborhood(n, city):
     """A neighborhood guide under its city's guide: site/communities/<city>/<slug>/.
     Same sourced record format as a town (tools/data/RESEARCH-BRIEF.md), with boundaries and areas."""
@@ -918,6 +926,8 @@ def page_neighborhood(n, city):
     nm = n.get("market") or {}
     if nm.get("sf_median_2025"):
         facts.append(("Single-family median", f"{money(nm['sf_median_2025'])} in 2025 ({name} row) <span class=\"badge badge--source\">Warren Group</span>"))
+        if nm.get("condo_median_2025"):
+            facts.append(("Condominium median", f"{money(nm['condo_median_2025'])} in 2025 ({name} row) <span class=\"badge badge--source\">Warren Group</span>"))
     elif cm.get("sf_median_2025") and cm.get("citywide", True):
         facts.append((f"{cname} single-family median", f"{money(cm['sf_median_2025'])} in 2025, citywide <span class=\"badge badge--source\">Warren Group</span>"))
     elif cm.get("sf_median_2025"):
@@ -944,7 +954,7 @@ def page_neighborhood(n, city):
         hist = '<div class="history">' + "".join(f'<div><b>{h["year"]}</b><p class="body-s">{h["text"]}</p></div>' for h in n["history"][:4]) + "</div>"
     nm = n.get("market") or {}
     if nm.get("sf_median_2025"):
-        market_html = f'''<table class="spec-table market-table"><thead><tr><th scope="col">Calendar year</th><th scope="col">2024</th><th scope="col">2025</th><th scope="col">Change</th></tr></thead><tbody><tr><th scope="row">Single-family median sale price</th><td class="tabular">{money(nm["sf_median_2024"]) if nm.get("sf_median_2024") else "n/a"}</td><td class="tabular">{money(nm["sf_median_2025"])}</td><td class="tabular">{fmt_pct(pct(nm.get("sf_median_2024"), nm["sf_median_2025"]))}</td></tr></tbody></table>
+        market_html = f'''<table class="spec-table market-table"><thead><tr><th scope="col">Calendar year</th><th scope="col">2024</th><th scope="col">2025</th><th scope="col">Change</th></tr></thead><tbody><tr><th scope="row">Single-family median sale price</th><td class="tabular">{money(nm["sf_median_2024"]) if nm.get("sf_median_2024") else "n/a"}</td><td class="tabular">{money(nm["sf_median_2025"])}</td><td class="tabular">{fmt_pct(pct(nm.get("sf_median_2024"), nm["sf_median_2025"]))}</td></tr>{nb_condo_row(nm)}</tbody></table>
 <p class="stat-source">Source: <a href="{WARREN_URL}">The Warren Group, MA December 2025 Sales, Prices by Town</a>. Geography: {name}, as the report defines it. Calendar years 2024 and 2025. Not live data and not a valuation of any home.</p>'''
     else:
         if cm.get("sf_median_2025") and not cm.get("citywide", True):
