@@ -1,0 +1,194 @@
+{
+  "slug": "sutton",
+  "name": "Sutton",
+  "county": "Worcester County",
+  "region": "Central Massachusetts",
+  "population_2020": 9357,
+  "population_source": "https://en.wikipedia.org/wiki/Sutton,_Massachusetts",
+  "official_site": "https://www.suttonma.gov/",
+  "headline": [
+    "Five villages, old mill sites,",
+    "and a granite chasm in the southeast."
+  ],
+  "answer": "Sutton is a Blackstone Valley town of 9,357 people (2020 Census) in Worcester County, made up of five villages: Sutton Center, Manchaug, Wilkinsonville, West Sutton and South Sutton. The town's 2025 Housing Production Plan reports that 86% of homes are single-family detached houses. Route 146 and Route 122A run through town, and commuter rail is reached at Grafton and Worcester stations on the Framingham/Worcester Line.",
+  "meta": "Sutton, MA guide: five villages from Manchaug to West Sutton, Purgatory Chasm and Route 146. Housing, history, home prices, property tax and schools.",
+  "overview": [
+    "Sutton began as an eight-mile-square tract that the Massachusetts General Court granted to Edward Pratt and other proprietors in 1704, after a Nipmuc man, John Wampas, had deeded land in the area to Pratt. The Massachusetts Historical Commission dates the town's establishment to 1714, with settlement beginning around 1716 and the common and cemetery laid out in 1719. The town was much larger then: a parish set off in 1778 became Ward, later Auburn, and the northern section became Millbury in 1813. Through the 1700s Sutton was a town of dispersed farmsteads on drumlin hilltops, and the clay soils of the northwest held some of the county's most productive farmland. Population peaked at 2,718 in 1855.",
+    "Water power brought industry in the 1820s. David Wilkinson built a stone factory in 1823 at what became Wilkinsonville; the Blackstone Canal, opened in 1828, passed the village with a lock and basin until it closed in 1848, and the Providence and Worcester Railroad came through in 1847. On the Mumford River, investors from Providence bought the Manchaug site in 1826, and granite mills went up there in 1852, 1862 and 1868; the Manchaug mills closed in 1921. Sutton Center kept the civic role, with the 1829 Congregational Church and Rufus Putnam Hall, an 1824 school and Masonic lodge, while West Sutton grew along the Central Turnpike, opened around 1824. Sutton Center, West Sutton and Manchaug are each National Register historic districts. To the southeast, Purgatory Chasm cuts a deep rift through granite bedrock.",
+    "Sutton's 2025 Housing Production Plan, written by a town working group with help from the Central Massachusetts Regional Planning Commission, counts 3,612 housing units in 2020 and reports that 86% of homes are single-family detached and 87% are owner occupied. About 15% were built before 1940. The town's Subsidized Housing Inventory stood at 55 units, or 1.55%, against the state's 10% goal, and the plan notes that recent building permits have all been for single-family homes. Public water reaches about 15% of the town's land through the Wilkinsonville, Manchaug and Whitinsville water districts. Under the MBTA Communities law, Sutton is classed as an adjacent small town that must zone for at least 181 multi-family units; the town's proposed overlay covered parcels at Galaxy Pass and Pleasant Valley Road, and the state lists Sutton as compliant as of October 21, 2026."
+  ],
+  "housing": {
+    "text": "Sutton's 2025 Housing Production Plan counts 3,612 housing units in 2020 and cites American Community Survey estimates that 86% of homes are single-family detached and 87% are owner occupied. About 15% of homes were built before 1940, and the plan puts the average age of a home at about 56 years. Subsidized housing makes up 55 units, or 1.55% of the year-round stock, and recent building permits have all been for single-family homes.",
+    "source": "https://www.suttonma.gov/DocumentCenter/View/4226/Plan"
+  },
+  "villages": [
+    {
+      "name": "Sutton Center",
+      "line": "The civic village where Boston Road, Singletary Avenue and Uxbridge Road meet, around the common laid out in 1719; its 435-acre National Register district, listed in 2001, has more than 120 contributing resources, including the 1829 Congregational Church and an 1839 brick commercial block.",
+      "source": "https://en.wikipedia.org/wiki/Sutton_Center_Historic_District"
+    },
+    {
+      "name": "Manchaug",
+      "line": "A textile village on the Mumford River, centered where Main Street meets Manchaug, Putnam Hill and Whitins Roads, with large stone mills and gabled, multi-family wood-frame worker houses; it was listed on the National Register in 2018.",
+      "source": "https://en.wikipedia.org/wiki/Manchaug_Village_Historic_District"
+    },
+    {
+      "name": "Wilkinsonville",
+      "line": "The village that grew around David Wilkinson's 1823 stone factory, where the Blackstone Canal had a lock and basin and the Providence and Worcester Railroad arrived in 1847; it also has a 1917 school building.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/sut.pdf"
+    },
+    {
+      "name": "West Sutton",
+      "line": "A turnpike village along the Central Turnpike from Manchaug Road to the Oxford line, in a 460-acre National Register district of 18th- and 19th-century houses, farmsteads, a church, a cemetery and an 1831 sawmill.",
+      "source": "https://en.wikipedia.org/wiki/West_Sutton_Historic_District"
+    },
+    {
+      "name": "South Sutton",
+      "line": "A small cluster of houses along Whitin Road, south of the Second Baptist meetinghouse.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/sut.pdf"
+    }
+  ],
+  "commute": {
+    "rail": [
+      {
+        "line": "Framingham/Worcester Line (in Grafton and Worcester)",
+        "stations": [
+          "Grafton",
+          "Worcester"
+        ]
+      }
+    ],
+    "rail_source": "https://www.mbta.com/schedules/CR-Worcester/timetable",
+    "highways": [
+      "Route 146",
+      "Route 122A"
+    ],
+    "text": "Sutton has no commuter rail station. Grafton station, at 1 Pine Street in North Grafton, and Worcester station are both on the MBTA Framingham/Worcester Line. Route 146, the Worcester-Providence highway, runs north and south through town, and Route 122A follows Providence Road, improved as a regional highway in the 1920s."
+  },
+  "schools": {
+    "district": "Sutton Public Schools",
+    "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=02900000&orgtypecode=5"
+  },
+  "places": [
+    {
+      "name": "Purgatory Chasm State Reservation",
+      "line": "A DCR reservation at 198 Purgatory Road with about two miles of trails to rock formations named the Corn Crib, the Coffin and Lovers' Leap; the Chasm Trail itself closes in winter.",
+      "source": "https://www.mass.gov/locations/purgatory-chasm-state-reservation"
+    },
+    {
+      "name": "Waters Farm",
+      "line": "A farm at 53 Waters Road with a Georgian house built by Stephen Waters in 1757 and 120 acres given to the town in 1974; Waters Farm Preservation, Inc. maintains it as an open-air museum, and it was listed on the National Register in 1985.",
+      "source": "https://en.wikipedia.org/wiki/Waters_Farm"
+    },
+    {
+      "name": "Marion's Camp",
+      "line": "The town beach at the end of Tuttle Road, bought by the town in 1989, with a pavilion, trails and a kayak launch; staff are on site from mid-June through Labor Day and a beach pass is required then.",
+      "source": "https://www.suttonma.gov/457/Recreation"
+    },
+    {
+      "name": "Manchaug Mill #2 and #3 site",
+      "line": "Town-owned mill ruins on the Mumford River, with granite blocks, a chimney foundation, a 1920 bridge and a stone arch bridge over the tailraces; a December 2024 CMRPC concept plan proposes an interpretive park with trails and a river overlook.",
+      "source": "https://cmrpc.org/sutton-mill2-and-3-park-final-1/"
+    },
+    {
+      "name": "Sutton Town Common",
+      "line": "The common on Uxbridge Road in the Sutton Center Historic District; the town's FY2026 capital plan sets aside $30,000 to restore its bandstand.",
+      "source": "https://www.suttonma.gov/1460/Sutton-Town-Common-Renovation"
+    },
+    {
+      "name": "Edward Putnam House",
+      "line": "A house at 211 Putnam Hill Road built in 1737 and pictured on the town seal.",
+      "source": "https://en.wikipedia.org/wiki/Sutton,_Massachusetts"
+    },
+    {
+      "name": "Blackstone Canal Historic District",
+      "line": "The canal corridor from Blackstone to Worcester, listed on the National Register in 1995, which passes through Wilkinsonville, where the canal had a lock and basin.",
+      "source": "https://en.wikipedia.org/wiki/National_Register_of_Historic_Places_listings_in_Worcester_County,_Massachusetts"
+    }
+  ],
+  "history": [
+    {
+      "year": "1714",
+      "text": "Sutton was established as a town; settlement began around 1716.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/sut.pdf"
+    },
+    {
+      "year": "1719",
+      "text": "The town common and cemetery were laid out at what is now Sutton Center.",
+      "source": "https://en.wikipedia.org/wiki/Sutton_Center_Historic_District"
+    },
+    {
+      "year": "1813",
+      "text": "The northern part of Sutton became the town of Millbury.",
+      "source": "https://en.wikipedia.org/wiki/Sutton,_Massachusetts"
+    },
+    {
+      "year": "1823",
+      "text": "David Wilkinson built a stone textile factory, the start of Wilkinsonville.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/sut.pdf"
+    },
+    {
+      "year": "1826",
+      "text": "Investors from Providence bought the Manchaug mill site on the Mumford River; its mills ran until 1921.",
+      "source": "https://cmrpc.org/sutton-mill2-and-3-park-final-1/"
+    }
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 70,
+    "sf_sales_2024": 80,
+    "sf_median_2025": 615000,
+    "sf_median_2024": 639900,
+    "condo_sales_2025": null,
+    "condo_median_2025": null,
+    "condo_median_2024": null,
+    "reading_1": "SUTTON (single-family; Dec 2024, Dec 2025, Percent Change): YTD Number of Sales 80 70 -12.5%; YTD Median Sale Price $639,900 $615,000 -3.9%",
+    "reading_2": "SUTTON (single-family): Number of Sales 9 3 -66.7%; YTD Number of Sales 80 70 -12.5%; Median Sale Price $675,000 $820,000 21.5%; YTD Median Sale Price $639,900 $615,000 -3.9%"
+  },
+  "tax": {
+    "fy": "FY2026",
+    "residential_rate": 11.55,
+    "commercial_rate": 11.55,
+    "residential_exemption": false,
+    "source": "https://www.suttonma.gov/DocumentCenter/View/4722/Fiscal-2026-Approved-Tax-Rate",
+    "note": "The Select Board adopted one rate for all classes of property, approved by the Department of Revenue. Properties in a water district also pay a district rate: $0.31 per $1,000 in the Wilkinsonville Water District and $1.64 in the Manchaug Water District."
+  },
+  "nearby": [
+    "millbury",
+    "grafton",
+    "auburn",
+    "oxford",
+    "northbridge",
+    "douglas"
+  ],
+  "search_notes": "Not checked directly: this session's web search budget ran out before ranking checks for 'Sutton MA real estate agent' and 'moving to Sutton MA' could be run. Searches for Sutton's tax rate returned a brokerage blog page (bmnboston.com 'Sutton MA property tax guide') alongside the town's own notice, which suggests agent content competes. A sourced guide can explain the five villages, the mill history of Manchaug and Wilkinsonville, the water districts' extra tax rates and the Warren Group figures.",
+  "faq": [
+    {
+      "q": "What is the median home price in Sutton, MA?",
+      "a": "The median single-family sale price in Sutton was $615,000 in calendar year 2025, across 70 sales, down from $639,900 across 80 sales in 2024, according to The Warren Group's MA December 2025 Sales, Prices by Town report."
+    },
+    {
+      "q": "Does Sutton have commuter rail?",
+      "a": "Not within town lines. Grafton station in North Grafton and Worcester station are both on the MBTA Framingham/Worcester Line."
+    },
+    {
+      "q": "Which school district serves Sutton?",
+      "a": "Sutton Public Schools. Review its profile with DESE."
+    },
+    {
+      "q": "What is the property tax rate in Sutton?",
+      "a": "Sutton's FY2026 rate is $11.55 per $1,000 of assessed value, one rate for all classes of property. Homes in the Wilkinsonville or Manchaug water districts also pay a district rate of $0.31 or $1.64 per $1,000."
+    },
+    {
+      "q": "What are the villages of Sutton?",
+      "a": "The town's 2025 Housing Production Plan names five villages: Sutton Center, Manchaug, Wilkinsonville, West Sutton and South Sutton. Sutton Center, West Sutton and Manchaug are National Register historic districts."
+    },
+    {
+      "q": "Is Sutton covered by the MBTA Communities zoning law?",
+      "a": "Yes. The state classes Sutton as an adjacent small town that must zone for at least 181 multi-family units, and its list of compliant municipalities, as of October 21, 2026, includes Sutton."
+    }
+  ],
+  "notes": "Written 2026-10-22. Sources: MHC Reconnaissance Survey (1983) for topography, establishment, villages, roads, canal, railroad and housing types; the 2025 Housing Production Plan (town site) for housing figures, villages and water districts; Wikipedia articles on the Sutton Center, West Sutton and Manchaug Village historic districts and Waters Farm; DCR for Purgatory Chasm; CMRPC's December 2024 Mill #2 and #3 report; the town's Recreation and Town Common pages. MBTA Communities: category and 181-unit minimum from EOHLC's 'MBTA Community Categories and Requirements' (as of January 14, 2025, https://www.mass.gov/doc/section-3a-regulations-community-categories-and-reqs/download); compliance from the state list (https://www.mass.gov/doc/mbta-communities-district-compliance-letters/download, as of October 21, 2026, entry 132); the overlay location (Galaxy Pass and Pleasant Valley Road parcels) is from the town's Section 3A page (https://www.suttonma.gov/1326/Chapter-40A-Section-3A-Multifamily-Housi), which described it before the Fall 2025 Town Meeting. The adopted district's final boundary and capacity were not confirmed. Establishment date: MHC and MMA give 1714; the Wikipedia infobox gives 1716 (the settlement date in MHC), so 1714 is used for establishment. The Wampas deed date in Wikipedia was left out because it is not cross-checked. Manchaug's National Register date is January 2018 (the county list says January 26, the district article January 16), so only the year is given. Marion's Camp sits on a lake the town page does not name, so no lake is named. Population: 9,357 is the 2020 Census figure from Wikipedia; MMA lists 9,436. Left out: Pleasant Valley Country Club (current status not confirmed), Orchard Apartments (described in the HPP by occupancy restriction), the Freegrace Marble Farm Historic District (no description beyond its 80 Burbank Road address and 1989 listing), Singletary Lake, Manchaug Pond and Shaw Farm (named by CMRPC, but the 2022 to 2029 Open Space and Recreation Plan PDF could not be read). WRTA bus service and I-90 access were not confirmed. Condo fields are null: the PDF text of the condo table ends at 'BROOKLI' in both readings, before Sutton. Nearby slugs are neighboring or nearby towns named in the MHC report and HPP (Millbury, Auburn, Oxford, Douglas, Whitinsville in Northbridge) plus Grafton for its rail station; shared borders were not each confirmed."
+}

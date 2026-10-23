@@ -1,0 +1,173 @@
+{
+  "slug": "paxton",
+  "name": "Paxton",
+  "county": "Worcester County",
+  "region": "Central Massachusetts",
+  "population_2020": 5004,
+  "population_source": "https://en.wikipedia.org/wiki/Paxton,_Massachusetts",
+  "official_site": "https://www.townofpaxton.net/",
+  "headline": [
+    "A hill town on the Worcester line,",
+    "with a state park and reservoir land."
+  ],
+  "answer": "Paxton is a hill town of 5,004 people (2020 Census) in Worcester County, bordering Worcester. Its houses run from 18th-century center-chimney homes and mid-1800s side-passage houses in Paxton Center to bungalows and post-1945 suburban streets, and the town contains Moore State Park and large tracts of Worcester watershed land. Routes 31, 56 and 122 cross the town; commuter rail is reached at Worcester station.",
+  "meta": "Paxton, MA guide: a Worcester County hill town with Moore State Park, reservoir land and Routes 31, 56 and 122. Housing, history, prices, taxes and schools.",
+  "overview": [
+    "Paxton sits on high ground near the center of Worcester County: most of the town lies between 1,000 and 1,200 feet, and Asnebumskit Hill reaches about 1,400 feet, according to the Massachusetts Historical Commission's 1984 survey. The land was part of the Leicester and Rutland grants of 1686 and 1687, and the first confirmed settlers, Josiah and Jason Livermore, worked farms in the southwest from 1748. Paxton was incorporated as a district on February 12, 1765, from nearly equal parts of Leicester and Rutland, and became a town in 1775. It is named for Charles Paxton, marshal of the Admiralty Court, who offered a church bell in return; the bell never came. Through the 1800s the town made boots, with output peaking in 1875, until a fire in the 1880s destroyed the main factory and farming took over again.",
+    "No railroad or streetcar ever reached Paxton, so the town grew along its roads: north and south from the meetinghouse, toward Worcester, and out along West and Maple Streets. Paxton Center holds the civic buildings, including the 1888 Town Hall and the 1899 Records Building on Pleasant Street and the Richards Memorial Library, added in 1926. Bungalows went up along West and Pleasant Streets from about 1920, and the population quadrupled after 1945 as automobile suburbs spread from Worcester. Large tracts went to Worcester's water supply: the Pine Hill and Kettle Brook reservoirs flooded lowland in the northeast and south, and the city owned about 1,590 acres in Paxton for watershed protection at the time of the town's 2003 open space plan. Moore State Park, a 400-acre state property on Sawmill Road, keeps the stone foundations of mills that ran from the 18th to the early 20th century.",
+    "Paxton's homes are mostly owner occupied: in the 2000 Census, 94.8% of its 1,428 occupied housing units were owned, according to the town's 2003 Open Space and Recreation Plan, and the state's MBTA Communities table counts 1,689 housing units in 2020. The town adopted a Watershed Protection District in 2001 and raised minimum lot sizes, and the 2003 plan noted that about 98% of its land cannot support on-site septic systems for new development. Paxton has run its own municipal light department since 1914. Under the state's MBTA Communities law it is classed as an adjacent small town that must zone for at least 84 multi-family units, and the state lists it as compliant as of October 21, 2026. Anna Maria College, founded in 1946 and long based in Paxton, closed at the end of the spring 2026 semester."
+  ],
+  "housing": {
+    "text": "Of Paxton's 1,428 occupied housing units in the 2000 Census, 94.8% were owner occupied, according to the town's 2003 Open Space and Recreation Plan. The plan recorded residential land growing 64% over the previous 30 years and an average of 16.6 new residential permits a year since 1995. The older stock, as surveyed by the Massachusetts Historical Commission in 1984, runs from center-chimney Colonial houses to gable-end, side-passage houses of the mid-1800s, mostly in the Center, and bungalows along West and Pleasant Streets from 1915 to 1940.",
+    "source": "https://cmrpc.org/paxton-2003-osrp"
+  },
+  "villages": [
+    {
+      "name": "Paxton Center",
+      "line": "The civic center on Pleasant Street, around the site of the 1767 meetinghouse, with the 1888 Town Hall, the 1899 Records Building, the Richards Memorial Library (1926) and gable-end, side-passage houses from the mid-1800s.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/pax.pdf"
+    },
+    {
+      "name": "West and Pleasant Streets",
+      "line": "Roads leading out of the Center where bungalows marked Paxton's first suburban growth, from about 1920.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/pax.pdf"
+    },
+    {
+      "name": "Northwest district",
+      "line": "An outlying farm district that had its own brick schoolhouse by 1820.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/pax.pdf"
+    }
+  ],
+  "commute": {
+    "rail": [
+      {
+        "line": "Framingham/Worcester Line (in Worcester)",
+        "stations": [
+          "Worcester"
+        ]
+      }
+    ],
+    "rail_source": "https://www.mbta.com/schedules/CR-Worcester/timetable",
+    "highways": [
+      "Route 31",
+      "Route 56",
+      "Route 122"
+    ],
+    "text": "Paxton has no rail line; the Massachusetts Historical Commission notes that no railroad or streetcar ever reached the town. Commuter rail is reached at Worcester station, 2 Washington Square, on the MBTA Framingham/Worcester Line. Route 122 follows Pleasant Street through the Center, Route 56 runs north and south and Route 31 east and west."
+  },
+  "schools": {
+    "district": "Wachusett Regional School District",
+    "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=07750000&orgtypecode=5"
+  },
+  "places": [
+    {
+      "name": "Moore State Park",
+      "line": "A 400-acre DCR park at 1 Sawmill Road with a restored sawmill, stone mill foundations, waterfalls, wooded paths and plantings of rhododendrons, azaleas and laurels.",
+      "source": "https://www.mass.gov/locations/moore-state-park"
+    },
+    {
+      "name": "Asnebumskit Hill",
+      "line": "The town's high point at about 1,400 feet, where the Yankee Network's early FM broadcasting antenna began commercial operation in 1939.",
+      "source": "https://en.wikipedia.org/wiki/Paxton,_Massachusetts"
+    },
+    {
+      "name": "Richards Memorial Library",
+      "line": "The town library building in Paxton Center, added in 1926; the library itself was founded in 1877.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/pax.pdf"
+    },
+    {
+      "name": "Town Hall and Records Building",
+      "line": "The 1888 Town Hall and the 1899 Records Building on Pleasant Street, both still in town use when the 2003 open space plan was written.",
+      "source": "https://cmrpc.org/paxton-2003-osrp"
+    },
+    {
+      "name": "Boynton Park",
+      "line": "About 114 acres of parkland on the Worcester line, about 85 of them in Paxton, per the 2003 open space plan.",
+      "source": "https://cmrpc.org/paxton-2003-osrp"
+    },
+    {
+      "name": "Moose Hill Wildlife Management Area",
+      "line": "About 180 acres of state wildlife land in eight parcels, per the 2003 open space plan.",
+      "source": "https://cmrpc.org/paxton-2003-osrp"
+    }
+  ],
+  "history": [
+    {
+      "year": "1748",
+      "text": "Josiah and Jason Livermore, the earliest confirmed settlers, were farming in the southwest of present-day Paxton.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/pax.pdf"
+    },
+    {
+      "year": "1765",
+      "text": "Incorporated as a district on February 12 from parts of Leicester and Rutland.",
+      "source": "https://en.wikipedia.org/wiki/Paxton,_Massachusetts"
+    },
+    {
+      "year": "1775",
+      "text": "The district of Paxton became a town.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/pax.pdf"
+    },
+    {
+      "year": "1914",
+      "text": "The town began selling electricity on February 15, the start of the Paxton Municipal Light Department.",
+      "source": "https://www.mass.gov/doc/paxton-2022/download"
+    },
+    {
+      "year": "1939",
+      "text": "The Yankee Network's FM antenna on Asnebumskit Hill began commercial operation.",
+      "source": "https://en.wikipedia.org/wiki/Paxton,_Massachusetts"
+    }
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 40,
+    "sf_sales_2024": 51,
+    "sf_median_2025": 615000,
+    "sf_median_2024": 500000,
+    "condo_sales_2025": null,
+    "condo_median_2025": null,
+    "condo_median_2024": null,
+    "reading_1": "PAXTON (single-family; Dec 2024, Dec 2025, Percent Change): YTD Number of Sales 51 40 -21.6%; YTD Median Sale Price $500,000 $615,000 23.0%",
+    "reading_2": "PAXTON (single-family): Number of Sales 3 4 33.3%; YTD Number of Sales 51 40 -21.6%; Median Sale Price $428,500 $577,500 34.8%; YTD Median Sale Price $500,000 $615,000 23.0%"
+  },
+  "tax": {
+    "fy": "FY2026",
+    "residential_rate": 15.17,
+    "commercial_rate": 15.17,
+    "residential_exemption": false,
+    "source": "https://gis.vgsi.com/PaxtonMA/",
+    "note": "The assessors' online property database states: 'The Fiscal Year 2026 tax rate has been approved at $15.17.' It gives one rate, so the same figure is recorded for commercial; no residential exemption is mentioned."
+  },
+  "nearby": [
+    "worcester",
+    "holden",
+    "leicester",
+    "rutland"
+  ],
+  "search_notes": "Not checked directly: this session's web search budget ran out before ranking checks for 'Paxton MA real estate agent' and 'moving to Paxton MA' could be run. Searches for Paxton's tax rate returned brokerage blog pages (bmnboston.com 'moving to Paxton MA' and 'Paxton MA property tax guide') and a realtor tax-rate table (joeshimkus.com), which suggests agent content competes for these terms. A sourced guide can add what those pages lack: the reservoir and watershed history, Moore State Park, the town's MBTA Communities status and the Warren Group figures.",
+  "faq": [
+    {
+      "q": "What is the median home price in Paxton, MA?",
+      "a": "The median single-family sale price in Paxton was $615,000 in calendar year 2025, across 40 sales, up from $500,000 across 51 sales in 2024, according to The Warren Group's MA December 2025 Sales, Prices by Town report. With so few sales a year, the median can move sharply."
+    },
+    {
+      "q": "Does Paxton have commuter rail?",
+      "a": "No. No railroad or streetcar ever reached Paxton. Commuter rail is reached at Worcester station on the MBTA Framingham/Worcester Line, in the neighboring city."
+    },
+    {
+      "q": "Which school district serves Paxton?",
+      "a": "Paxton is a member of the Wachusett Regional School District. Review its profile with DESE."
+    },
+    {
+      "q": "What is the property tax rate in Paxton?",
+      "a": "Paxton's approved FY2026 tax rate is $15.17 per $1,000 of assessed value, according to the town assessors' online property database."
+    },
+    {
+      "q": "Is Paxton covered by the MBTA Communities zoning law?",
+      "a": "Yes. The state classes Paxton as an adjacent small town that must zone for at least 84 multi-family units, and its list of compliant municipalities, as of October 21, 2026, includes Paxton."
+    }
+  ],
+  "notes": "Written 2026-10-22. Sources: MHC Reconnaissance Survey (1984) for topography, settlement, roads, industry, housing types and landmarks; CMRPC-hosted 2003 Open Space and Recreation Plan for tenure, open space acreage, water and zoning (dated: figures are from the 2000 Census and 2003, and no newer housing production plan or master plan for Paxton was found); EOHLC 'MBTA Community Categories and Requirements' (as of January 14, 2025, https://www.mass.gov/doc/section-3a-regulations-community-categories-and-reqs/download) for the 2020 housing unit count (1,689) and the 84-unit requirement; the state compliance list (https://www.mass.gov/doc/mbta-communities-district-compliance-letters/download, as of October 21, 2026, entry 101) for compliance. The district's location and size were not found (the district atlas spreadsheet could not be downloaded). Anna Maria College's closure is from WBUR (https://www.wbur.org/news/2026/04/23/anna-maria-college-massachusetts-to-close) and Spectrum News; the future of the campus is not reported. Wikipedia gives first European settlement as 1749; the MHC's 1748 Livermore date is used. MMA lists population 5,016 (not a 2020 Census figure) and a 1775 date alongside 1765; the 2020 Census figure 5,004 is from Wikipedia. Moore State Park acreage: DCR says 400 acres, the 2003 OSRP says about 700 to 711; the DCR figure is used. Only three named districts could be sourced (MHC also mentions a 'Suomi Street area', left out because the source describes it by who lived there); Paxton has no villages in official sources, so the villages list is below the 4 to 6 target. The Wikipedia statement that Asnebumskit Pond is the town's principal drinking water source conflicts with the 2003 OSRP, which says Paxton buys water from Worcester and Worcester may draw from the pond; both were left out. Moore State Park Historic District was listed on the National Register on May 21, 2004 (Wikipedia's Worcester County NRHP list), not added to the place line because the DCR page does not mention it. Thompson Pond and Worcester County Memorial Park, named by CMRPC, were left out for lack of a descriptive source. Highways come from the MHC report (Route 122 on Pleasant Street, Route 56 north-south, Route 31 east-west by the 1930s). WRTA bus service was not confirmed. Tax: the DLS Databank could not be loaded; the rate comes from the assessors' Vision database page, matched by a realtor table citing DOR (joeshimkus.com, 15.17). Condo fields are null: the PDF text of the condo table ends at 'BROOKLI' in both readings, before Paxton. The town website URL is the one CMRPC links to; its content could not be read to confirm."
+}
