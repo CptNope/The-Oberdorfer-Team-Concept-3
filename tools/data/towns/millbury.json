@@ -1,0 +1,196 @@
+{
+  "slug": "millbury",
+  "name": "Millbury",
+  "county": "Worcester County",
+  "region": "Central Massachusetts",
+  "population_2020": 13831,
+  "population_source": "https://en.wikipedia.org/wiki/Millbury,_Massachusetts",
+  "official_site": "https://www.millburyma.gov/",
+  "headline": [
+    "Millbury, on the Blackstone:",
+    "armory village, mill brooks and a river path."
+  ],
+  "answer": "Millbury is a Worcester County town of 13,831 people (2020 Census), set off from Sutton in 1813 and divided by the Blackstone River. Its housing is mostly detached single-family, with 19th-century mill housing in the center and Bramanville. Route 146 and the Massachusetts Turnpike meet in town, WRTA Route 4 runs to Worcester, and the nearest MBTA stations are Worcester and Grafton on the Framingham/Worcester Line.",
+  "meta": "Millbury, MA: Blackstone River town set off from Sutton in 1813, with the Asa Waters Mansion, mill villages, 2025 Warren Group prices and the FY2026 tax rate.",
+  "overview": [
+    "Millbury was settled in 1716 and spent nearly a century as the north parish of Sutton. On June 11, 1813, Governor Caleb Strong approved the act that made the North Parish a separate town named Millbury. Water power set its course. John Singletary built a mill on Singletary Brook, below Singletary Lake, in 1735, and in 1808 Asa and Elijah Waters built an armory on the Blackstone River that became the core of Armory Village and made bayonets and parts for Springfield muskets during the Civil War. The Blackstone Canal carried boats through the valley by 1829 and closed in 1848; a branch railroad reached Millbury Center in 1838, and the Providence and Worcester line came through in 1847. Josiah Holbrook founded the first formal lyceum here in 1826.",
+    "The center grew around the Town Common, at Main and Elm Streets, and the armory village along Elm Street, where the Waters family built a Federal mansion between 1826 and 1832 to a design by Asher Benjamin. The Greek Revival meetinghouse of 1828 at 20 Main Street is now the Millbury Federated Church. Rivulet Village added 20 worker tenements in 1878, and the Cordis Mill expanded in 1914. Bramanville, on Singletary Brook, had seven factories by 1870 and kept its double-chimney worker housing; West Millbury had wool scouring mills on Ramshorn Brook until a dam broke in 1873. The S & D Spinning Mill, built around 1753, is cited as one of the oldest continuously operated mills in the United States. Millbury lies in the Blackstone River Valley National Heritage Corridor and was named a Preserve America community in 2004.",
+    "Millbury's 2019 Comprehensive Master Plan, prepared by BSC Group, counted 5,621 housing units (2012 to 2016 American Community Survey) and found residential use on 38% of the town's land. The plan names the Shoppes at Blackstone Valley, with more than 750,000 square feet of retail, restaurant and entertainment space reached from Routes 122A and 146, as the town's largest economic development project, and cites the Cordis and Felter's mills as examples of adaptive reuse. A steering committee is preparing the town's first Housing Production Plan under Chapter 40B, and a community forum on it was held at the public library on June 4, 2024. The state's MBTA Communities compliance list (as of October 21, 2026) includes Millbury."
+  ],
+  "housing": {
+    "text": "The 2019 master plan counted 5,621 housing units, with 73% of households owning their homes and 27% renting (2012 to 2016 American Community Survey). About 26% of units were built before 1940, and the plan describes the stock as largely traditional detached single-family homes. It counted about 220 units, or about 4%, on the state's Subsidized Housing Inventory.",
+    "source": "https://www.millburyma.gov/sites/g/files/vyhlif4706/f/uploads/millbury_master_plan.pdf"
+  },
+  "villages": [
+    {
+      "name": "Millbury Center",
+      "line": "The commercial and civic core around the Town Common, with the Academy (1832), First Baptist Church (1864) and temple-front Greek Revival houses, and Rivulet Village's 1878 worker tenements nearby.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/mlb.pdf"
+    },
+    {
+      "name": "Armory Village",
+      "line": "The Elm Street area that grew around Asa and Elijah Waters's 1808 armory on the Blackstone, including the Waters mansion and the 1828 meetinghouse.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/mlb.pdf"
+    },
+    {
+      "name": "Bramanville",
+      "line": "A textile village on Singletary Brook with seven factories by 1870, two-story double-chimney worker housing and the late Second Empire St. Charles hotel.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/mlb.pdf"
+    },
+    {
+      "name": "West Millbury",
+      "line": "A less dense area of houses and farmland in the west of town, with the Union Chapel (1888) and the West Congregational Church.",
+      "source": "https://www.millburyma.gov/sites/g/files/vyhlif4706/f/uploads/millbury_master_plan.pdf"
+    },
+    {
+      "name": "East Millbury",
+      "line": "A more concentrated residential area near the Worcester and Grafton lines, with Raymond Memorial Congregational Church (1934), Our Lady of Lourdes (1938) and early suburban streets such as Wheelock Avenue.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/mlb.pdf"
+    },
+    {
+      "name": "Prospect Hill",
+      "line": "A hill north of the center where larger houses were built in the early 20th century.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/mlb.pdf"
+    }
+  ],
+  "commute": {
+    "rail": [
+      {
+        "line": "Framingham/Worcester Line (in neighboring communities)",
+        "stations": [
+          "Worcester",
+          "Grafton"
+        ]
+      }
+    ],
+    "rail_source": "https://www.mbta.com/schedules/CR-Worcester/timetable",
+    "highways": [
+      "Massachusetts Turnpike (I-90)",
+      "Route 146",
+      "US Route 20",
+      "Route 122A"
+    ],
+    "text": "Millbury has no commuter rail station of its own; the Framingham/Worcester Line stops in neighboring Worcester and Grafton. Route 146 and the Turnpike meet in town, Route 20 runs along the Worcester line and Route 122A follows the Blackstone. WRTA Route 4 runs from Worcester's Central Hub to the Shoppes at Blackstone Valley, North Main Street and Elm and Canal Streets."
+  },
+  "schools": {
+    "district": "Millbury Public Schools",
+    "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=01860000&orgtypecode=5"
+  },
+  "places": [
+    {
+      "name": "Asa Waters Mansion",
+      "line": "A Federal mansion at 123 Elm Street, built from 1826 to 1832 to a design by Asher Benjamin; it houses the Millbury Historical Society and was listed on the National Register in 1978.",
+      "source": "https://en.wikipedia.org/wiki/Asa_Waters_Mansion"
+    },
+    {
+      "name": "Blackstone River Greenway",
+      "line": "A ten-foot-wide paved path from Worcester into Millbury, ending at Route 122A; its first 2.5-mile segment opened in 2005 with the Turnpike and Route 146 interchange project.",
+      "source": "https://en.wikipedia.org/wiki/Blackstone_River_Greenway"
+    },
+    {
+      "name": "First Presbyterian Society Meeting House",
+      "line": "A Greek Revival meetinghouse of 1828 at 20 Main Street, now the Millbury Federated Church; listed on the National Register in 2010.",
+      "source": "https://en.wikipedia.org/wiki/First_Presbyterian_Society_Meeting_House"
+    },
+    {
+      "name": "Millbury Town Common",
+      "line": "The town common at Main and Elm Streets, with the Lower Common at South Main and Elm.",
+      "source": "https://www.millburyma.gov/1367/Parks-Fields"
+    },
+    {
+      "name": "US Post Office, Millbury Main",
+      "line": "The post office at 119 Elm Street, next to the Asa Waters Mansion, listed on the National Register in 1987.",
+      "source": "https://en.wikipedia.org/wiki/National_Register_of_Historic_Places_listings_in_Worcester_County,_Massachusetts"
+    },
+    {
+      "name": "Little Dorothy Recreation Area",
+      "line": "A town recreation area on Riverlin Street.",
+      "source": "https://www.millburyma.gov/1367/Parks-Fields"
+    },
+    {
+      "name": "The Shoppes at Blackstone Valley",
+      "line": "A retail, restaurant and entertainment center of more than 750,000 square feet with direct access from Routes 122A and 146, near the Turnpike.",
+      "source": "https://www.millburyma.gov/sites/g/files/vyhlif4706/f/uploads/millbury_master_plan.pdf"
+    }
+  ],
+  "history": [
+    {
+      "year": "1808",
+      "text": "Asa and Elijah Waters built an armory on the Blackstone River, the core of Armory Village.",
+      "source": "https://en.wikipedia.org/wiki/Millbury,_Massachusetts"
+    },
+    {
+      "year": "1813",
+      "text": "On June 11, the North Parish of Sutton was incorporated as the separate town of Millbury.",
+      "source": "https://www.millburyma.gov/1196/History-of-Millbury"
+    },
+    {
+      "year": "1826",
+      "text": "Josiah Holbrook founded the first formal lyceum in Millbury.",
+      "source": "https://en.wikipedia.org/wiki/Millbury,_Massachusetts"
+    },
+    {
+      "year": "1848",
+      "text": "The Blackstone Canal, which ran through Millbury from about 1829, ceased operating.",
+      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/mlb.pdf"
+    },
+    {
+      "year": "2005",
+      "text": "The first 2.5-mile segment of the Blackstone River Greenway opened between Worcester and Millbury.",
+      "source": "https://en.wikipedia.org/wiki/Blackstone_River_Greenway"
+    }
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 123,
+    "sf_sales_2024": 136,
+    "sf_median_2025": 490000,
+    "sf_median_2024": 465000,
+    "condo_sales_2025": 43,
+    "condo_sales_2024": 66,
+    "condo_median_2025": 480000,
+    "condo_median_2024": 557557,
+    "reading_1": "MILLBURY (single-family, Dec 2024 / Dec 2025 / % change): \"Number of Sales 137 -46.2%\"; \"YTD Number of Sales 136 123 -9.6%\"; \"Median Sale Price $500,000 $475,000 -5.0%\"; \"YTD Median Sale Price $465,000 $490,000 5.4%\"",
+    "reading_2": "Second fetch, MILLBURY (single-family): \"YTD Number of Sales 136 123 -9.6%\"; \"YTD Median Sale Price $465,000 $490,000 5.4%\". Condo row not read in this session (the fetch truncated the condo table at BROOKLI); condo fields come from tools/data/condo-2025.json (pdf.js extraction of the same PDF, accessed 2026-10-22): \"MILLBURY (condos) YTD Number of Sales 66 43 -34.8%; YTD Median Sale Price $557,557 $480,000 -13.9%\""
+  },
+  "tax": {
+    "fy": "FY2026",
+    "residential_rate": 12.87,
+    "commercial_rate": 12.87,
+    "residential_exemption": false,
+    "source": "https://www.millburyma.gov/1232/Millbury-Historical-Tax-Rates",
+    "note": "Single rate for all classes. The town's historical table lists 2026 at $12.87 and 2025 at $13.39 (a revaluation year); it shows a residential and commercial split only for 2007. No residential exemption is mentioned."
+  },
+  "nearby": [
+    "worcester",
+    "auburn",
+    "sutton",
+    "grafton"
+  ],
+  "search_notes": "Not checked in this session: the shared web-search budget ran out before the ranking searches for 'Millbury MA real estate agent' and 'moving to Millbury MA' could be run. A sourced guide covering the Blackstone River Greenway, the mill villages, the Asa Waters Mansion and the Route 146 and Turnpike junction is the likely gap. Re-run both searches before publishing.",
+  "faq": [
+    {
+      "q": "What is the median home price in Millbury, MA?",
+      "a": "The median single-family sale price in Millbury for calendar year 2025 was $490,000, across 123 sales, up from $465,000 across 136 sales in 2024, according to The Warren Group's MA December 2025 Sales, Prices by Town report. The condo median was $480,000 across 43 sales."
+    },
+    {
+      "q": "Does Millbury have commuter rail?",
+      "a": "No. Millbury has no MBTA station of its own; the Framingham/Worcester Line stops in neighboring Worcester and Grafton. WRTA Route 4 connects Millbury with Worcester's Central Hub."
+    },
+    {
+      "q": "Which school district serves Millbury?",
+      "a": "Millbury Public Schools, which serves prekindergarten through grade 12. Review its profile with DESE, and confirm school assignment for any address with the district."
+    },
+    {
+      "q": "What is the property tax rate in Millbury?",
+      "a": "Millbury's fiscal year 2026 tax rate is $12.87 per $1,000 of assessed value, a single rate for all property classes, according to the town's historical tax rate table."
+    },
+    {
+      "q": "Can you walk or bike the Blackstone River in Millbury?",
+      "a": "Yes. The Blackstone River Greenway is a ten-foot-wide paved path from Worcester into Millbury that ends at Route 122A; its first 2.5-mile segment opened in 2005. State plans for the segments south toward Uxbridge are on hold."
+    }
+  ],
+  "notes": "Written 2026-10-22. Sources: Wikipedia (town article, Asa Waters Mansion, First Presbyterian Society Meeting House, Blackstone River Greenway, Worcester County NRHP list), the town's History of Millbury, Parks & Fields, Historical Tax Rates and Housing Production Plan pages, the 1984 MHC reconnaissance report (OCR-scanned; used for village history and housing types), the 2019 Comprehensive Master Plan by BSC Group, the mass.gov SNETT and Blackstone River Greenway projects page (https://mass.gov/info-details/southern-new-england-trunkline-trail-snett-and-blackstone-river-greenway-projects: Segments 3 to 5 'design and permitting was suspended'; Segments 6 and 7 opened 2010 through 2019), the WRTA community profiles PDF (undated), the MBTA Framingham/Worcester timetable, DESE (district code 01860000, PK-12; note that 01850000 is Milford), and the state's MBTA Communities compliance list ('As of October 21, 2026', no. 82 Millbury). Population: Wikipedia gives 13,831 (2020 Census); the MMA community page shows 14,002 (likely a later estimate), so the Census figure is used. Market: single-family rows read twice from the PDF; the condo table truncated at BROOKLI in this session's fetches, so condo fields are taken from tools/data/condo-2025.json, which was extracted from the same PDF with pdf.js (its Auburn condo row matches this session's direct reading exactly). Conflicts: Wikipedia says the armory closed in 1841 and reopened in 1861, while the MHC report says it supplied the government until 1845, so no end date is given; the MHC report gives both 1828 and 1829 for the canal and both eight and nine locks, so the record says 'from about 1829' and gives no lock count. Fair-housing judgment calls: the master plan's household-composition figure (31% non-family households) and the Council on Aging van service were left out. 'High-income' houses on Prospect Hill (MHC wording) became 'larger houses'. Left out or unconfirmed: a 192-unit 40B proposal at 17 Rice Road (Worcester Business Journal, May 31, 2022) whose outcome could not be confirmed; Singletary Lake, Ramshorn Pond and Dorothy Pond access details (the MassWildlife page did not load); the Housing Production Plan text (cmrpc.org page returned binary); the town's MBTA Communities category and district."
+}

@@ -13,16 +13,17 @@
   "answer": "Springfield is the seat of Hampden County, on the eastern bank of the Connecticut River about 24 miles north of Hartford. Sixty-eight percent of its housing is single-family homes and duplexes, and 41 percent was built before 1940. Union Station offers Amtrak and Hartford Line trains, and I-91 and I-291 run through the city.",
   "overview": [
     "Springfield sits on the eastern bank of the Connecticut River, about 24 miles north of Hartford, and serves as the Hampden County seat. William Pynchon founded it in 1636 as Agawam Plantation, and it became a city in 1852. The federal armory here began making small arms in 1794 and closed in 1968; its Main Arsenal now holds the National Park Service's collection of historic military firearms. James Naismith invented basketball in Springfield in 1891, and the Hall of Fame stands on the riverfront.",
-    "The city calls itself the City of Homes, a name tied to its Victorian houses. The McKnight Historic District, planned in 1881, has more than 900 of them, and the neighborhood around Forest Park has more than 600. Sixteen Acres holds much of the city's post-World War II building, and Indian Orchard grew up as its own mill town on the Chicopee River. Forest Park covers about 735 acres, with a zoo, Porter Lake and the Bright Nights holiday display. Union Station handles Amtrak, Hartford Line trains and intercity buses."
+    "The city calls itself the City of Homes, a name tied to its Victorian houses. The McKnight Historic District, planned in 1881, has more than 900 of them, and the neighborhood around Forest Park has more than 600. Sixteen Acres holds much of the city's post-World War II building, and Indian Orchard grew up as its own mill town on the Chicopee River. Forest Park covers about 735 acres, with a zoo, Porter Lake and the Bright Nights holiday display. Union Station handles Amtrak, Hartford Line trains and intercity buses.",
+    "The city's 2018 Housing Study counted 61,851 housing units and a homeownership rate of 47 percent, and it named Old Hill and the South End as focus areas for new construction and rehabilitation after the foreclosure crisis; both are among the city's Neighborhood Revitalization Strategy Areas, with Six Corners, Memorial Square and Brightwood. Rebuilding also followed the EF-4 tornado of June 1, 2011, which hit the South End hard. Downtown changed in the late 2010s: Union Station reopened on June 24, 2017 after restoration, Hartford Line trains began serving it on June 16, 2018, and MGM Springfield opened in Metro Center on August 24, 2018. Springfield lies outside the MBTA system and does not appear on the state's MBTA Communities compliance list, so the multifamily zoning mandate that shapes eastern Massachusetts towns does not frame its planning."
   ],
   "housing": {
-    "text": "The city's 2018 Housing Study found that 68 percent of Springfield's housing stock is single-family homes and duplexes, and that only 10 percent of units are in buildings with 20 or more units. It also found that 41 percent of units were built before 1940 and only 14 percent since 1980.",
+    "text": "The city's 2018 Housing Study found that 68 percent of Springfield's housing stock is single-family homes and duplexes, and that only 10 percent of units are in buildings with 20 or more units. It also found that 41 percent of units were built before 1940 and only 14 percent since 1980. The study counted 61,851 housing units (2016 ACS), with single-family homes alone making up 44 percent and a homeownership rate of 47 percent.",
     "source": "https://www.springfield-ma.gov/housing/fileadmin/housing/Housing_Study/Housing_Study_June_2018.pdf"
   },
   "villages": [
     {
       "name": "Forest Park",
-      "line": "Garden district around the park of the same name, with more than 600 Victorian houses.",
+      "line": "Residential district around the 735-acre park of the same name, including the Forest Park Heights Historic District with more than 600 Victorian houses.",
       "source": "https://en.wikipedia.org/wiki/Springfield,_Massachusetts"
     },
     {
@@ -42,7 +43,7 @@
     },
     {
       "name": "Indian Orchard",
-      "line": "Former mill town on the Chicopee River that grew separately before joining Springfield.",
+      "line": "Former mill town on the Chicopee River that grew separately before joining Springfield; some of its mill buildings now hold artists' spaces, and Lake Lorraine State Park is here.",
       "source": "https://en.wikipedia.org/wiki/Springfield,_Massachusetts"
     },
     {
@@ -103,6 +104,21 @@
       "name": "Springfield Union Station",
       "line": "The 1926 station, redeveloped as the city's rail and bus hub on Frank B. Murray Street.",
       "source": "https://en.wikipedia.org/wiki/Springfield_Union_Station_(Massachusetts)"
+    },
+    {
+      "name": "Court Square",
+      "line": "The civic center on Main Street, ringed by historic buildings, with monuments to Miles Morgan and President William McKinley; Old First Church, an 1819 rebuilding of the 1638 congregation's church, stands on it.",
+      "source": "https://en.wikipedia.org/wiki/Springfield,_Massachusetts"
+    },
+    {
+      "name": "Stearns Square",
+      "line": "A downtown square designed in 1897 by Stanford White and Augustus Saint-Gaudens, at the center of the Club Quarter.",
+      "source": "https://en.wikipedia.org/wiki/Springfield,_Massachusetts"
+    },
+    {
+      "name": "Symphony Hall",
+      "line": "Part of the Springfield Municipal Group, dedicated in 1913, and home of the Springfield Symphony Orchestra.",
+      "source": "https://en.wikipedia.org/wiki/Springfield,_Massachusetts"
     }
   ],
   "history": [
@@ -110,6 +126,16 @@
       "year": "1636",
       "text": "Founded by William Pynchon as Agawam Plantation.",
       "source": "https://en.wikipedia.org/wiki/Springfield,_Massachusetts"
+    },
+    {
+      "year": "1787",
+      "text": "During Shays' Rebellion, insurgents nearly captured the armory, an episode that helped lead to the U.S. Constitutional Convention.",
+      "source": "https://en.wikipedia.org/wiki/Springfield,_Massachusetts"
+    },
+    {
+      "year": "1794",
+      "text": "The armory, an arsenal since the Revolutionary War, began making muskets; it closed in 1968 and reopened as a National Historic Site in 1978.",
+      "source": "https://www.nps.gov/spar/learn/historyculture/index.htm"
     },
     {
       "year": "1852",
@@ -136,6 +162,14 @@
     "reading_1": "Springfield (single-family), columns Dec 2024 | Dec 2025 | Percent Change. YTD Number of Sales: 1,030 | 1,040 | 1.0%. YTD Median Sale Price: $280,000 | $290,000 | 3.6%.",
     "reading_2": "SPRINGFIELD: \"YTD Number of Sales 1,030 1,040 1.0%\"; \"YTD Median Sale Price $280,000 $290,000 3.6%\""
   },
+  "tax": {
+    "fy": "FY2026",
+    "residential_rate": 15.46,
+    "commercial_rate": 34.35,
+    "residential_exemption": false,
+    "source": "https://thereminder.com/?p=97357",
+    "note": "From The Reminder, December 3, 2025 ('Springfield City Council split on raising taxes, sets residential rate'): the council voted 10-2 for the maximum 1.78 shift, giving $15.46 residential and $34.35 commercial, industrial and personal. The article says 'this year' rather than naming FY2026; the city assessors' page blocked fetching and the DLS Municipal Databank could not be reached, so confirm against the Databank. No residential exemption is mentioned."
+  },
   "nearby": [
     "chicopee",
     "west-springfield",
@@ -158,9 +192,17 @@
       "a": "Springfield Public Schools. Review its profile with DESE."
     },
     {
+      "q": "What is the property tax rate in Springfield, MA?",
+      "a": "For fiscal year 2026 the City Council set a residential rate of $15.46 per $1,000 of assessed value and a commercial, industrial and personal property rate of $34.35, as reported by The Reminder in December 2025."
+    },
+    {
       "q": "Why is Springfield called the City of Homes?",
       "a": "The nickname comes from its Victorian residential architecture. The McKnight Historic District alone has more than 900 Victorian houses."
+    },
+    {
+      "q": "Is Springfield subject to the MBTA Communities zoning law?",
+      "a": "Springfield lies outside the MBTA system and is not on the state's MBTA Communities compliance list. Its housing planning draws instead on studies such as the city's 2018 Housing Study."
     }
   ],
-  "notes": "The Warren Group condo table could not be read: both fetches returned text cut off partway through Brookline, so all condo fields are null. Springfield is outside the MBTA commuter rail system, so the rail fields list Amtrak and CTrail at Union Station, sourced from Wikipedia; mbta.com has nothing to cite here. I-291 and the Turnpike's route north of the city come from AARoads (https://www.aaroads.com/guides/i-291-ma); the Turnpike is not listed as passing through the city. US Route 20 is mentioned on the same AARoads page near Indian Orchard. The 2018 Housing Study uses 2016 ACS data. Wikipedia gives both 1968 and 1969 for the Armory's closing; the NPS site says 1968. 'City of Homes' is confirmed on springfield-ma.gov. Population is from Wikipedia, citing the 2020 Census."
+  "notes": "The Warren Group condo table could not be read: both fetches returned text cut off partway through Brookline, so all condo fields are null. Springfield is outside the MBTA commuter rail system, so the rail fields list Amtrak and CTrail at Union Station, sourced from Wikipedia; mbta.com has nothing to cite here. I-291 and the Turnpike's route north of the city come from AARoads (https://www.aaroads.com/guides/i-291-ma); the Turnpike is not listed as passing through the city. US Route 20 is mentioned on the same AARoads page near Indian Orchard. The 2018 Housing Study uses 2016 ACS data. Wikipedia gives both 1968 and 1969 for the Armory's closing; the NPS site says 1968. 'City of Homes' is confirmed on springfield-ma.gov. Population is from Wikipedia, citing the 2020 Census. Deepened 2026-10-22: added a third overview paragraph on housing and planning (2018 Housing Study, https://www.springfield-ma.gov/housing/fileadmin/housing/Housing_Study/Housing_Study_June_2018.pdf, for 61,851 units, 47 percent homeownership, Old Hill and South End as development focus areas and the NRSA list; Wikipedia, https://en.wikipedia.org/wiki/Springfield,_Massachusetts, for the 2011 tornado; Union Station article, https://en.wikipedia.org/wiki/Springfield_Union_Station_(Massachusetts), for the June 24, 2017 reopening and June 16, 2018 Hartford Line start; https://en.wikipedia.org/wiki/MGM_Springfield for the August 24, 2018 opening; state MBTA Communities compliance list 'As of October 21, 2026', https://www.mass.gov/doc/mbta-communities-district-compliance-letters/download, on which Springfield does not appear). Housing text adds the unit total, 44 percent single-family and 47 percent homeownership. Enriched the Forest Park and Indian Orchard lines; added places Court Square, Stearns Square and Symphony Hall; history entries 1787 (Wikipedia) and 1794 (NPS); the tax object and FAQs on tax and MBTA Communities. Unconfirmed: the tax rate comes from a local news report, not the assessors or DLS (both unreachable here); the statement that Springfield is not an MBTA community rests on its absence from the compliance list and its location outside the MBTA system, not on the state's list of 177 communities, which was an unreadable map. Fair-housing calls: the Housing Study describes neighborhoods by race, ethnicity and poverty concentration, and Wikipedia uses 'middle-class' and 'upper-class'; none of that was used, and neighborhoods are described only by buildings, parks and planning designations. The Forest Park line now says 'residential district' instead of 'garden district'."
 }
