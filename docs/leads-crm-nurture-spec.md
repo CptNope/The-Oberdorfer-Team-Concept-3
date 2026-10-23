@@ -142,7 +142,7 @@ Rules run in this order; the first match wins.
 **Email delivery requirements:**
 - A dedicated email service (Amazon SES, Postmark or Mailgun), with SPF, DKIM and DMARC published for oberdorferteam.com.
 - One-click unsubscribe (RFC 8058): a `List-Unsubscribe` HTTPS URL plus `List-Unsubscribe-Post: List-Unsubscribe=One-Click`, both covered by the DKIM signature, and a visible unsubscribe link. The endpoint unsubscribes on POST only, without a login or confirmation; a GET (link scanners prefetch) never unsubscribes. Unsubscribes take effect immediately (Gmail and Yahoo allow at most two days).
-- A valid physical postal address in every marketing email (CAN-SPAM): a street address, or a P.O. box or private mailbox registered to the business. **The Worcester street address (652 B Park Ave, Worcester, MA 01603, confirmed 2026-10-22), or a registered box, is therefore a launch blocker for nurture.**
+- A valid physical postal address in every marketing email (CAN-SPAM): a street address, or a P.O. box or private mailbox registered to the business. **The Worcester street address (652 Park Ave, Unit B, Worcester, MA 01603, confirmed 2026-10-22), or a registered box, is therefore a launch blocker for nurture.**
 - Bounces and complaints from the provider's webhooks go to `ot_suppressions` automatically.
 
 ## 9. AI module

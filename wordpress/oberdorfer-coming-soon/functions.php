@@ -12,7 +12,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-const OT_CS_VERSION = '1.0.3';
+const OT_CS_VERSION = '1.0.4';
 const OT_CS_PHONE   = '406-250-7620';
 const OT_CS_HOST    = 'oberdorferteam.com';
 
@@ -96,7 +96,7 @@ add_action( 'wp_head', function () {
 		'telephone'          => OT_CS_PHONE,
 		'slogan'             => 'Luxury at every price point.',
 		'areaServed'         => array( '@type' => 'State', 'name' => 'Massachusetts' ),
-		'address'            => array( '@type' => 'PostalAddress', 'streetAddress' => '652 B Park Ave', 'addressLocality' => 'Worcester', 'addressRegion' => 'MA', 'postalCode' => '01603', 'addressCountry' => 'US' ),
+		'address'            => array( '@type' => 'PostalAddress', 'streetAddress' => '652 Park Ave, Unit B', 'addressLocality' => 'Worcester', 'addressRegion' => 'MA', 'postalCode' => '01603', 'addressCountry' => 'US' ),
 		'parentOrganization' => array( '@type' => 'Organization', 'name' => 'REWAP Brokerage LLC', 'url' => 'https://rewapbrokerage.com/' ),
 	);
 	echo '<script type="application/ld+json">' . wp_json_encode( $ld, JSON_UNESCAPED_SLASHES ) . "</script>\n";

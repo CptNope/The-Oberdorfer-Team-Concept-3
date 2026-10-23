@@ -51,7 +51,7 @@ Two things set the team apart:
   - Materials carry the attribution "Powered by" REWAP, as in the source publication.
 - **Service area:** all of Massachusetts, with Worcester as home base and the Wakefield/North Shore area as established editorial ground (confirmed 2026-10-15 and 2026-10-22). The site carries 16 community guides in five regions as a **proposed** list from the October 2026 SEO review (`tools/data/`); the team has not confirmed it.
 - **Domain:** oberdorferteam.com (confirmed 2026-10-22).
-- **Office:** the team is opening a new office at **652 B Park Ave, Worcester, MA 01603** (city and address confirmed 2026-10-22). Its hours, formal status under the principal brokerage and advertising requirements are unconfirmed.
+- **Office:** the team is opening a new office at **652 Park Ave, Unit B, Worcester, MA 01603** (city and address confirmed 2026-10-22). Its hours, formal status under the principal brokerage and advertising requirements are unconfirmed.
 - **Growth:** the team plans to recruit additional agents.
 - **Seasonal print publications:** 8.5×11 in, saddle-stitched, 8 pages, community-specific. *Wakefield at Home* is the first, and the website journal extends it.
 - **Before production:** Massachusetts advertising rules, brokerage approval and MLS attribution requirements must be confirmed.

@@ -180,7 +180,7 @@ TEAM_ID = SITE + "#team"
 BROKER_ID = SITE + "#brokerage"
 UPDATED = "2026-10-22"
 # Office address confirmed 2026-10-22 (as supplied by the team; hours and formal status still open).
-STREET, POSTCODE = "652 B Park Ave", "01603"
+STREET, POSTCODE = "652 Park Ave, Unit B", "01603"
 ADDRESS = f"{STREET}, Worcester, MA {POSTCODE}"
 MAPS = "https://www.google.com/maps/search/?api=1&query=" + ADDRESS.replace(" ", "+").replace(",", "%2C")
 WRITTEN = []   # every page path, for sitemap.xml and llms.txt
