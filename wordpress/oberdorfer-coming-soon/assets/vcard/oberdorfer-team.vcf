@@ -13,14 +13,12 @@ EMAIL;TYPE=INTERNET,WORK,pref:kaitlynoberdorfer@gmail.com
 ADR;TYPE=WORK,pref:;;652 Park Ave\, Unit B;Worcester;MA;01603;USA
 LABEL;TYPE=WORK:652 Park Ave\, Unit B\nWorcester\, MA 01603\nUSA
 URL;TYPE=WORK,pref:https://oberdorferteam.com/
-item1.URL:https://calendly.com/kaitlynoberdorfer/30min
-item1.X-ABLabel:Book a meeting
-item2.URL:https://blinq.me/WXgsLzUBTC2V
-item2.X-ABLabel:Digital card
+item1.URL:https://blinq.me/WXgsLzUBTC2V
+item1.X-ABLabel:Digital card
 X-SOCIALPROFILE;TYPE=instagram;X-USER=_ma_real_estate:https://instagram.com
  /_ma_real_estate
-item3.URL:https://instagram.com/_ma_real_estate
-item3.X-ABLabel:Instagram
+item2.URL:https://instagram.com/_ma_real_estate
+item2.X-ABLabel:Instagram
 CATEGORIES:Real Estate,The Oberdorfer Team
 NOTE:Luxury service at every price point. Top Producing Agent. Record Break
  ing. MA Licensed Realtor with The Oberdorfer Team\, powered by REWAP Broke

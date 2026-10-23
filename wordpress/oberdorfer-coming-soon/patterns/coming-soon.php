@@ -74,7 +74,7 @@ $img = get_theme_file_uri( 'assets/img/' );
 
 <!-- wp:group {"anchor":"contact","className":"cs-contacts","layout":{"type":"default"}} -->
 <div id="contact" class="wp-block-group cs-contacts"><!-- wp:paragraph {"className":"cs-person"} -->
-<p class="cs-person"><strong>Kaitlyn Oberdorfer <span class="cs-role">MA Licensed Realtor</span></strong> <a href="tel:+19782574938">978-257-4938</a> <a href="mailto:kaitlynoberdorfer@gmail.com">kaitlynoberdorfer@gmail.com</a> <a class="cs-vcard" href="<?php echo esc_url( home_url( '/?vcard=kaitlyn-oberdorfer' ) ); ?>" aria-label="Add Kaitlyn Oberdorfer to your contacts">Add to contacts</a> <a class="cs-minor" href="https://calendly.com/kaitlynoberdorfer/30min" rel="noopener">Book a meeting</a> <a class="cs-minor" href="https://instagram.com/_ma_real_estate" rel="noopener">Instagram</a> <a class="cs-minor" href="https://blinq.me/WXgsLzUBTC2V" rel="noopener">Digital card</a></p>
+<p class="cs-person"><strong>Kaitlyn Oberdorfer <span class="cs-role">MA Licensed Realtor</span></strong> <a href="tel:+19782574938">978-257-4938</a> <a href="mailto:kaitlynoberdorfer@gmail.com">kaitlynoberdorfer@gmail.com</a> <a class="cs-vcard" href="<?php echo esc_url( home_url( '/?vcard=kaitlyn-oberdorfer' ) ); ?>" aria-label="Add Kaitlyn Oberdorfer to your contacts">Add to contacts</a> <a class="cs-minor" href="https://instagram.com/_ma_real_estate" rel="noopener">Instagram</a> <a class="cs-minor" href="https://blinq.me/WXgsLzUBTC2V" rel="noopener">Digital card</a></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"cs-person"} -->
