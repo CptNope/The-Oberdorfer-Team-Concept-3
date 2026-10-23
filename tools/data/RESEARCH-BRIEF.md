@@ -100,3 +100,22 @@ Depth target: 2 to 3 overview paragraphs, 2 to 4 areas, 5 to 7 places, 2 to 4 hi
 - Do not edit any other file (the generator, other records, the site). Do not run git.
 - Finish with a short report: what you wrote, anything you could not confirm, and any fair-housing
   judgment calls you made.
+
+## Fact-checking a record
+
+A fact-checker did not write the record and verifies it independently.
+
+1. See what changed: `git diff 50a0ef3 -- <path>` (50a0ef3 is the last commit before the October 22,
+   2026 research round; a new record shows as entirely added). Check every added or changed fact;
+   spot-check the rest.
+2. For each fact, open its cited source with WebFetch and confirm the source says it: numbers,
+   dates, names, addresses, unit counts and rates exactly. Web search may be unavailable; work from
+   the cited URLs and the official sites they link to. Do not use browser tools.
+3. If a fact is wrong, correct it from the source. If it cannot be confirmed from any page you can
+   open, remove it (or soften it to what the source does say). Never add a new fact without a source.
+4. Re-read every sentence for the fair-housing rules and the voice rules above, and fix any slip.
+5. Check internal consistency: the FAQ answers, `answer`, `meta` and overview must agree with each
+   other and with `market` and `tax`.
+6. Append to `notes`: "Fact-check 2026-10-22: <what you verified, what you corrected, what you
+   removed, and anything still unconfirmed>."
+7. Keep valid JSON and the file's existing formatting (edit values in place; do not re-indent).
