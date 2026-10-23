@@ -34,6 +34,8 @@ Find the server's public IP under Server → Master Credentials.
 | CNAME | `www` | `oberdorferteam.com` | 3600 |
 | TXT | `@` | the Google Search Console verification string (step 5) | 3600 |
 
+DNS has since moved to Cloudflare (section 2b); edit records there, not at GoDaddy.
+
 - **Do not touch MX records** if email already runs on the domain. When the team sets up Google Workspace (the recommended team email), add Google's MX records plus SPF (`v=spf1 include:_spf.google.com ~all`), DKIM from the Workspace admin console, and DMARC (`v=DMARC1; p=none; rua=mailto:<a team address>`), tightening DMARC to `quarantine` after a month of clean reports.
 - If the registrar offers DNSSEC, turn it on after the records settle.
 - Check propagation with `dig oberdorferteam.com +short` before issuing the SSL certificate.
@@ -88,7 +90,31 @@ Leave `oberdorferteam.com` without these. It gets the Google Workspace records i
 - The account has two-step verification.
 - The registrant contact is the business, with an email the team controls.
 
+## 2b. Cloudflare (free plan)
+
+**Status, 2026-10-22:** all six domains were added to Cloudflare (free plan) and their nameservers at GoDaddy were changed to `marlowe.ns.cloudflare.com` and `yahir.ns.cloudflare.com`. Cloudflare activates each zone once the change propagates (minutes to 24 hours). DNS is now edited **in Cloudflare, not GoDaddy**. This is the free Cloudflare plan in its own account, not the Cloudways Cloudflare add-on. For now the zones sit in the developer's Cloudflare account; move them to a team account (or add a team member under Manage account → Members) at handover.
+
+| Area | Setting | Why |
+|---|---|---|
+| DNS | Records copied from GoDaddy: `A @` and `CNAME www` proxied (orange cloud); `_domainconnect` DNS only; the SPF, DMARC and Google verification TXT records unchanged | Same records, now behind Cloudflare |
+| SSL/TLS | **Full (strict)** on all six zones | Cloudways keeps its Let's Encrypt certificate; Cloudflare checks it |
+| Edge certificates (primary) | Always Use HTTPS on, minimum TLS 1.2, TLS 1.3 on, Automatic HTTPS Rewrites on | |
+| Speed (primary) | HTTP/2, HTTP/3, 0-RTT, Early Hints and Speed Brain on; Rocket Loader off | Free-plan speed features; Rocket Loader can break block-theme scripts |
+| Caching (primary) | Browser Cache TTL: respect existing headers; Crawler Hints on | |
+| Cache rule (primary) | "Cache pages for visitors": host `oberdorferteam.com`, eligible for cache, except `/wp-admin`, `/wp-login.php`, `/wp-json`, `wp-cron.php`, preview URLs and the `wordpress_logged_in`, `wp-postpass` and `comment_author` cookies | HTML is served from Cloudflare's edge (default 2 hours, since WordPress sends no cache header). **After editing the page, purge it**: Caching → Configuration → Purge Everything |
+| Security rules (primary) | Block `/xmlrpc.php`; Managed Challenge on `/wp-login.php` | Free plan allows five custom rules |
+| AI crawlers | Allowed (search, agent and training); Bot Preference Sync **off** so `robots.txt` comes only from the theme | Matches the decisions page |
+| Redirects | Account-level Bulk Redirect list `oberdorfer_alias_domains`: the five other domains (and `www`) → `https://oberdorferteam.com/` with a 301, keeping the path and query string | Visitors are redirected at Cloudflare without reaching the server; the theme's redirect stays as a fallback |
+
+**Still to do after activation:**
+- Turn on **DNSSEC** in Cloudflare (DNS → Settings) for each zone and add the DS record it gives at GoDaddy (Domain → DNS → DNSSEC).
+- Check `curl -sI https://oberdorferteam.com/` shows `server: cloudflare` and, on a second request, `cf-cache-status: HIT`; check that each alias domain returns a 301 to `https://oberdorferteam.com/`.
+- When Google Workspace is chosen, add its MX, SPF, DKIM and DMARC records in **Cloudflare** DNS (DNS only, grey cloud).
+- Bot Fight Mode is left off: on the free plan it can't be bypassed for Let's Encrypt renewals or uptime monitors.
+
 ## 3. WordPress settings
+
+**Status, 2026-10-22:** set as below (Site Title, Tagline, `https` addresses, New York timezone, `F j, Y` dates, registration off, search engines allowed, comments and pingbacks off, post-name permalinks). Theme 1.0.1 is active. Still to do by hand: move "Hello world!", "Sample Page" and the draft Privacy Policy to the Trash, delete Akismet and Hello Dolly, delete two of the three default themes, and add a two-factor plugin.
 
 | Screen | Setting | Value |
 |---|---|---|
