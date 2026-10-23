@@ -5506,175 +5506,6 @@
     "notes": "Written 2026-10-22. Population: Boston Planning & Development Agency Research Division, 'Boston in Context: Neighborhoods, 2020 Decennial Census Redistricting Data and 2016-2020 American Community Survey' (April 2022), table 'Population by Age Group', total 41,012. This is a neighborhood figure (BPDA approximates neighborhoods with 2020 census block groups), not a planning-district figure; I did not find a planning-district table. The same agency's 'Boston in Context: Neighborhoods' (estimates as of January 1, 2025, https://bostonplans.org/documents/research/population-and-demographics/2025/boston-in-context-2025, approximated with census tracts) gives 42,949; not used because the schema field is 2020. Housing tenure is from the 2022 report's Housing Tenure table (ACS 2016-2020, B25003/B25001); the triple-decker and estate dates in the housing text are from Wikipedia's Jamaica Plain article. Market: Warren Group single-family row read twice in this session with identical YTD figures; condo table truncated at Brookline in both fetches, so condo fields are null. The 4.4 square miles, settlement, Eliot School, aqueduct, brewery and sub-area facts are from Wikipedia. Conflicts left out: Wikipedia's Jamaica Plain article gives Franklin Park as 527 acres and Jamaica Pond as about 60 acres, while the City of Boston gives Franklin Park as 485 acres and the Jamaica Pond article gives 68 acres; the city figure is used for Franklin Park and the pond's acreage is omitted. Forest Hills Cemetery acreage is given as both 275 and 250 acres on Wikipedia, so it is omitted. Southwest Corridor Park length is given as both 4.1 and 4.7 miles, so it is omitted. Forest Hills station is also served by some Providence/Stoughton and Franklin/Foxboro trains per Wikipedia; only the Needham Line (confirmed on the MBTA timetable, https://www.mbta.com/schedules/CR-Needham/timetable) is listed. The MBTA stop page (https://www.mbta.com/stops/place-forhl) confirms the Washington St and Hyde Park Ave address. The Soldiers' Monument is named from Wikipedia; its date was not confirmed. No historic district designations were confirmed for Jamaica Plain. Schools: assignment is by address and set by Boston Public Schools; no school is named. Nearby: Roxbury and Roslindale border Jamaica Plain but are not in the current neighborhood slug list. Fair housing: Wikipedia's account of the 1970s and 1980s describes redlining and who moved in as rents fell; that people-focused history was left out, and only the highway cancellation and the transit and park outcomes are described. Fact-check 2026-10-22: verified 4.4 square miles, Parker Hill settlement and 1650s maps, 1676 Eliot School land, the aqueduct (1795 to 1886), 1834 railroad, 1851 secession, 1873 vote and 1874 annexation, the breweries, triple-decker and estate dates, the four Orange Line stations, Heath Street and the 39 bus (Wikipedia); PLAN: JP/ROX adopted March 2, 2017, about 250 acres, bounds and topics (bostonplans.org); Forest Hills station dates (May 4 and 7, 1987), location and 16 bus routes; Jamaica Pond (city page); Arboretum 281 acres, 1872, free daily (Harvard); Franklin Park 485 acres (city); Forest Hills Cemetery; Loring-Greenough House; Southwest Corridor Park and the 1969 highway cancellation (Wikipedia's Southwest Corridor Park page); Needham Line stops (MBTA timetable); population 41,012 and tenure (BPDA April 2022 report, reached at www.bostonplans.org). Market row checked against reading_1: YTD sales 64 to 69 and medians $1,157,500 to $1,256,250 match the fields and FAQ, and 7.8% and 8.5% agree with the numbers. Corrected: the boundaries sentence (Wikipedia does not describe Jackson Square as Roxbury's or give the parks as compass boundaries; it is now written from the page's section definitions, with Egleston Square on the Roxbury border); the parks paragraph and parks FAQ (dropped 'four of the eight' and the compass directions); the aqueduct 'piped ... for most of a century' to the sourced 1795 to 1886; settlement wording; Hyde Square extends toward Roxbury, not Jackson Square; the Monument is no longer called the 'traditional center'; the Forest Hills section bounds now come from the Jamaica Plain article; Boston Beer Company is a tenant of the old Haffenreffer buildings. Removed: the 1.5-mile path around Jamaica Pond (not on the city page) and 'at the neighborhood's northern edge' for Heath Street (unsourced). Fair housing: re-read every sentence; the record describes places, housing, parks and transit only. Wikipedia's text on who moved to the neighborhood, its race and ethnicity breakdown and its language-group descriptions of Hyde, Jackson and Egleston Squares remain excluded. 2026-10-22 condo row: not read; condo_sales_2025, condo_sales_2024, condo_median_2025 and condo_median_2024 stay null. The Warren Group PDF could not be downloaded directly (the session's egress proxy refused www.thewarrengroup.com with a 403), and the fetched text of the PDF stops at 66,208 characters partway through the condo table, whose rows run from ALLSTON to 'BROOKLI' (cut off), so the JAMAICA PLAIN condo row, which sorts later, was not reached on two fetches. Condo row filled 2026-10-22: read the JAMAICA PLAIN row of the Warren Group condominium table (page 52) with pdf.js in the browser; columns are Dec 2024 then Dec 2025, and the YTD lines are calendar years 2024 and 2025. Values: sales 289 (2024), 324 (2025); median $720,000 (2024), $670,000 (2025). This supersedes the earlier note that the row could not be read."
    },
    {
-    "slug": "south-boston",
-    "name": "South Boston",
-    "parent": "boston",
-    "city_name": "Boston",
-    "county": "Suffolk County",
-    "region": "Greater Boston (the city)",
-    "population_2020": 37917,
-    "population_source": "https://bostonplans.org/getattachment/86f801a8-f8a6-4d0c-83ed-b9a63684d6b5",
-    "official_site": "https://www.boston.gov/",
-    "headline": [
-     "Dorchester Heights at the center,",
-     "Castle Island and three miles of beach and parkland at the end of Broadway."
-    ],
-    "answer": "South Boston is a Boston neighborhood on the former Dorchester Neck, south and east of Fort Point Channel along Dorchester Bay, annexed to Boston in 1804. Its housing includes 19th-century brick and mansard row houses and flat-roofed triple-deckers, and the Boston Planning & Development Agency counted 37,917 people there in 2020, with the South Boston Waterfront counted separately. The Red Line stops at Broadway and Andrew, and Castle Island anchors three miles of shoreline parks.",
-    "meta": "South Boston: row houses and triple-deckers from Dorchester Heights to Castle Island, with Red Line stops at Broadway and Andrew and three miles of shoreline parks.",
-    "boundaries": {
-     "text": "South Boston lies south and east of Fort Point Channel, along Dorchester Bay, with Castle Island beside City Point and Andrew station on its west side. The Seaport, or South Boston Waterfront, north of the residential streets is treated by the city's planners as a separate neighborhood.",
-     "source": "https://en.wikipedia.org/wiki/South_Boston"
-    },
-    "overview": [
-     "South Boston was Dorchester Neck, a narrow peninsula belonging to the town of Dorchester. On the night of March 4, 1776, Continental troops fortified Dorchester Heights, and the British evacuated Boston on March 17. Boston annexed the peninsula in 1804, bridges over Fort Point Channel tied it to downtown, and landfill widened its connection to the mainland. In 1822 land on the peninsula was set aside for public institutions, including a jail and an almshouse; after they moved, East Broadway was extended to the end of the peninsula in 1854 and 4.5 acres became Independence Square.",
-     "The streets climb to Dorchester Heights, the highest area of South Boston. Near the top of Telegraph Hill, an 1849 reservoir was later filled and replaced by South Boston High School in 1901, and the rest of the summit was laid out in the 1850s as Thomas Park, now centered on a 115-foot marble monument completed in 1902. Mansard and brick row houses, some with marble and sandstone fronts, went up around Independence Square in the fifteen years after the Civil War. At City Point the granite Fort Independence, built between 1833 and 1848, stands on Castle Island, which the city joined to the mainland by filling the flats between 1890 and the 1920s; Day Boulevard now runs past Pleasure Bay, M Street Beach and Carson Beach.",
-     "Recent city planning has looked at the neighborhood's edges. The Boston Planning & Development Agency completed PLAN: South Boston Dorchester Avenue in December 2016, with the projects reviewed under it mostly on Dorchester Avenue, Old Colony Avenue and nearby streets, and a follow-up transportation plan was finalized in 2021. To the north, the waterfront along Fort Point Channel and Boston Harbor was the focus of the city's 1,000-acre Innovation District plan announced in 2010, and the city's research tables report it as the separate South Boston Waterfront neighborhood."
-    ],
-    "housing": {
-     "text": "South Boston's housing includes mansard and brick row houses from the 1860s and 1870s around Independence Square and along East Broadway, and triple-deckers, which here were mostly built with flat roofs. The Boston Housing Authority's Mary Ellen McCormack (1936) and Old Colony (1941) developments are in the neighborhood, and the second phase of Old Colony's redevelopment was completed in 2014. The Boston Planning & Development Agency's tabulation of the 2016-2020 American Community Survey counts 17,109 occupied housing units, 43.4% of them owner-occupied, compared with 35.3% citywide.",
-     "source": "https://bostonplans.org/getattachment/86f801a8-f8a6-4d0c-83ed-b9a63684d6b5"
-    },
-    "areas": [
-     {
-      "name": "City Point",
-      "line": "The eastern end of the peninsula near Castle Island, reached by East Broadway and Day Boulevard, where MBTA bus routes 7, 9, 10 and 11 end at the City Point bus terminal.",
-      "source": "https://en.wikipedia.org/wiki/South_Boston"
-     },
-     {
-      "name": "Independence Square",
-      "line": "A 4.5-acre square on East Broadway laid out in 1854, ringed by mansard and brick row houses built mostly in the fifteen years after the Civil War, including the Harrison Loring House at 789 East Broadway, the first house on the square.",
-      "source": "https://sah-archipedia.org/buildings/MA-01-SB19"
-     },
-     {
-      "name": "Dorchester Heights and Telegraph Hill",
-      "line": "The highest area of South Boston, with Thomas Park and the Dorchester Heights Monument on the summit of Telegraph Hill and South Boston High School on the site of an 1849 reservoir; a 40-acre area centered on Thomas Park was listed on the National Register as the Dorchester Heights Historic District in 2001.",
-      "source": "https://en.wikipedia.org/wiki/Dorchester_Heights"
-     },
-     {
-      "name": "West Broadway and Andrew Square",
-      "line": "The western side along Broadway and Dorchester Avenue, served by the Broadway and Andrew Red Line stations; Andrew Square is where Dorchester Avenue, Dorchester Street, Southampton Street and Boston Street meet.",
-      "source": "https://en.wikipedia.org/wiki/Andrew_station"
-     }
-    ],
-    "commute": {
-     "rail": [
-      {
-       "line": "Red Line",
-       "stations": [
-        "Broadway",
-        "Andrew"
-       ]
-      }
-     ],
-     "rail_source": "https://en.wikipedia.org/wiki/Broadway_station_(MBTA)",
-     "highways": [
-      "I-93",
-      "William J. Day Boulevard"
-     ],
-     "text": "The Red Line's Broadway station, at Dorchester Avenue and Broadway, opened in 1917, and Andrew station, at Andrew Square, in 1918; both run north to South Station, where the Fairmount, Needham, Providence/Stoughton and other south-side commuter rail lines end. MBTA bus routes 7, 9, 10 and 11 cross the neighborhood to the City Point terminal, and Andrew connects with routes including the 10, 16, 17, 18 and 171. The Silver Line serves the separate Waterfront area, and the Big Dig put I-93 below ground."
-    },
-    "schools": {
-     "district": "Boston Public Schools",
-     "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=00350000&orgtypecode=5"
-    },
-    "places": [
-     {
-      "name": "Castle Island and Fort Independence",
-      "line": "A DCR park at 2010 Day Boulevard, where the Castle Island Loop circles the granite Fort Independence, built from 1833 and listed on the National Register in 1970; open sunrise to sunset.",
-      "source": "https://www.mass.gov/locations/castle-island-pleasure-bay-m-street-beach-and-carson-beach"
-     },
-     {
-      "name": "Pleasure Bay, M Street Beach and Carson Beach",
-      "line": "Part of a three-mile stretch of beach and parkland along Day Boulevard, with an accessible loop around Pleasure Bay; dogs are not allowed on the beach from May 1 through September 15.",
-      "source": "https://www.mass.gov/locations/castle-island-pleasure-bay-m-street-beach-and-carson-beach"
-     },
-     {
-      "name": "Dorchester Heights Monument",
-      "line": "A white marble Georgian Revival tower by Peabody and Stearns, completed in 1902 to mark the fortification of March 4, 1776, and stewarded by the National Park Service as part of Boston National Historical Park.",
-      "source": "https://www.nps.gov/bost/learn/historyculture/dohe.htm"
-     },
-     {
-      "name": "Thomas Park",
-      "line": "A roughly elliptical park of walks and ornamental plantings laid out in the 1850s on the summit of Telegraph Hill on Dorchester Heights, centered on the monument.",
-      "source": "https://en.wikipedia.org/wiki/Dorchester_Heights"
-     },
-     {
-      "name": "Independence Square",
-      "line": "A 4.5-acre park created in 1854 on East Broadway, which received 150 trees and granite steps in 1874.",
-      "source": "https://sah-archipedia.org/buildings/MA-01-SB19"
-     },
-     {
-      "name": "Saint Augustine Chapel",
-      "line": "A chapel completed in 1819 and described as the oldest Catholic church in Massachusetts.",
-      "source": "https://en.wikipedia.org/wiki/South_Boston"
-     }
-    ],
-    "history": [
-     {
-      "year": "1776",
-      "text": "Continental troops fortified Dorchester Heights on March 4, and the British evacuated Boston on March 17.",
-      "source": "https://www.nps.gov/bost/learn/historyculture/dohe.htm"
-     },
-     {
-      "year": "1804",
-      "text": "Boston annexed South Boston, part of the town of Dorchester's Dorchester Neck.",
-      "source": "https://en.wikipedia.org/wiki/South_Boston"
-     },
-     {
-      "year": "1833",
-      "text": "Work began on the present granite Fort Independence on Castle Island, substantially complete by 1848.",
-      "source": "https://en.wikipedia.org/wiki/Fort_Independence_(Massachusetts)"
-     },
-     {
-      "year": "1917",
-      "text": "Broadway station opened on December 15 as part of the Red Line's Dorchester Extension; Andrew followed in 1918.",
-      "source": "https://en.wikipedia.org/wiki/Broadway_station_(MBTA)"
-     }
-    ],
-    "market": {
-     "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
-     "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
-     "period": "Calendar year 2025",
-     "sf_sales_2025": 62,
-     "sf_sales_2024": 61,
-     "sf_median_2025": 1031500,
-     "sf_median_2024": 1025000,
-     "condo_sales_2025": 485,
-     "condo_sales_2024": 458,
-     "condo_median_2025": 837000,
-     "condo_median_2024": 850000,
-     "reading_condo": "SOUTH BOSTON (condominium table, 'MA December 2025 Sales, Prices By Town For Condos', page 65; Dec 2024, Dec 2025, Percent Change): Number of Sales 33 36 9.1%; YTD Number of Sales 458 485 5.9%; Median Sale Price $904,500 $796,250 -12.0%; YTD Median Sale Price $850,000 $837,000 -1.5%. Read 2026-10-22 from the PDF's text with pdf.js in a browser.",
-     "reading_1": "SOUTH BOSTON (single-family; Dec 2024, Dec 2025, Percent Change): Number of Sales 1 4 300.0% [printed run together as 'Number of Sales14 300.0%']; YTD Number of Sales 61 62 1.6%; Median Sale Price $1,050,000 $872,500 -16.9%; YTD Median Sale Price $1,025,000 $1,031,500 0.6%",
-     "reading_2": "SOUTH BOSTON (single-family): YTD Number of Sales 61 62 1.6%; YTD Median Sale Price $1,025,000 $1,031,500 0.6%"
-    },
-    "nearby": [
-     "dorchester",
-     "south-end",
-     "back-bay",
-     "beacon-hill"
-    ],
-    "search_notes": "Not checked in this session: the shared web search budget ran out before search results for 'South Boston real estate agent' and 'moving to South Boston' could be reviewed. Recheck before launch.",
-    "faq": [
-     {
-      "q": "What is the median home price in South Boston?",
-      "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, which lists South Boston on its own row, the median single-family sale price for calendar year 2025 was $1,031,500, across 62 sales. In 2024 it was $1,025,000, across 61 sales. Condominium figures for South Boston could not be read from the table. The same report's condominium median for South Boston was $837,000 in 2025, across 485 sales, against $850,000 across 458 sales in 2024."
-     },
-     {
-      "q": "Does South Boston have commuter rail?",
-      "a": "No commuter rail station is in South Boston itself. The Red Line runs from Broadway and Andrew stations to South Station, where the Fairmount, Needham, Providence/Stoughton and other south-side commuter rail lines end."
-     },
-     {
-      "q": "Which school district serves South Boston?",
-      "a": "Boston Public Schools. School assignment is set by the district; review its profile with DESE."
-     },
-     {
-      "q": "Is the Seaport part of South Boston?",
-      "a": "Historically the waterfront north of the residential streets is part of South Boston, but the city's planners tabulate it as a separate neighborhood, the South Boston Waterfront. The population and housing figures in this guide exclude it."
-     }
-    ],
-    "notes": "Written 2026-10-22. Population: Boston Planning & Development Agency Research Division, 'Boston in Context: Neighborhoods, 2020 Decennial Census Redistricting Data and 2016-2020 American Community Survey' (April 2022), 'Population by Age Group' table, total 37,917; neighborhood boundaries approximated with 2020 block groups, with South Boston Waterfront as its own row. It is a neighborhood figure, not a planning-district figure. The January 1, 2025 estimate in the agency's 2025 'Boston in Context: Neighborhoods' is 40,904 (not used). Housing tenure from the same 2022 report (ACS 2016-2020, B25003/B25001). Flat-roofed triple-deckers: Boston Preservation Alliance, 'A Short History of Boston's Triple Deckers' (https://bostonpreservation.org/news-item/short-history-bostons-triple-deckers), citing geographer Arthur Krim. Row-house dates from SAH Archipedia's Independence Square entry; the Harrison Loring House is dated 1861 there and 1865 on Wikipedia, so no date is given. BHA developments, Saint Augustine Chapel and bus routes from Wikipedia's South Boston article. Monument height (115 feet), Thomas Park and the 1849 reservoir from Wikipedia's Dorchester Heights article; dates and designers confirmed on the NPS page. Castle Island fill dates and the fort's National Register listing from Wikipedia's Fort Independence article; DCR page gives address, hours, loop trails and dog rule. 'Three miles' of beach and parkland is Wikipedia's figure; the DCR page gives no length. Not confirmed and left out: Castle Island acreage (Wikipedia gives 22 acres for the park and 15 for the fort), whether Fort Independence is a National Historic Landmark (not on the fort's own Wikipedia page), the M Street Park Vietnam memorial claim, Marine Park, the L Street Bathhouse details (page not found). Commuter rail lines at South Station are from the city record's MBTA source and were not reopened this session. 'I-93 below ground' rests on Wikipedia's South Boston article, which says the Big Dig buried the elevated I-93 that had cut off the waterfront. Market: single-family row read twice in this session with identical YTD figures; condo table truncated at Brookline. Schools: assignment is by address and set by Boston Public Schools. Nearby: Beacon Hill is not adjacent; it is included because the neighborhood slug list offers few closer options (South End and Dorchester border South Boston, Back Bay is across the South End). Fair housing: Wikipedia's article covers 1970s opposition to court-ordered school busing and describes areas by what 'lifelong residents' call them; both were left out, and the 'East Side'/'West Side' realtor labels are replaced with City Point and West Broadway. Public housing developments are named only as part of the housing stock, by name and year. Fact-check 2026-10-22: verified the Fort Point Channel/Dorchester Bay location, 1804 annexation, bridges and landfill, City Point and routes 7, 9, 10 and 11, the BHA developments and 2014 Old Colony phase, Saint Augustine Chapel, Big Dig, the 2010 Innovation District and the three-mile stretch of parkland and beach (Wikipedia); 1822, 1854 and 4.5 acres, 1874 trees and steps, the Loring House as the first house on the square, most houses built in the fifteen years after the Civil War (SAH Archipedia); March 4 and 17, 1776 and the Peabody and Stearns 1902 monument (NPS); Thomas Park, 115 feet, the 1849 reservoir and 1901 high school, and the 2001 historic district (Wikipedia); Fort Independence 1833 to 1848, filling 1890 to the 1920s, NRHP 1970; DCR address, hours, loop, accessible trail and dog rule; Broadway (December 15, 1917) and Andrew (1918, bus connections); flat-roofed triple-deckers (Boston Preservation Alliance); PLAN: Dot Ave December 2016 and the 2021 transportation plan (bostonplans.org); population 37,917 and tenure (BPDA April 2022). Market row checked against reading_1: YTD sales 61 to 62 and medians $1,025,000 to $1,031,500 match the fields and FAQ, and 1.6% and 0.6% agree. Corrected: Thomas Park and the reservoir are on Telegraph Hill (Wikipedia places the park on 'the rest of the summit' of Telegraph Hill, not a separate 'neighboring' hill); Andrew Square is where four streets meet; the 1822 land is no longer placed 'near the top of the peninsula'; the PLAN: Dot Ave study-area limits and the 2020 launch of the transportation plan were not on the city page and were softened; 'three miles of beach(es)' in headline, meta and places now reads beach and parkland, as Wikipedia does. Removed: 'Castle Island at its eastern tip' and 'Andrew Square marks its southwestern corner' (unsourced), the Castle Island Association partnership (not on the DCR page). Fair housing: re-read every sentence; nothing describes residents. Wikipedia's 'working class Irish Catholic', 'young professionals and families', 'desirable', busing and 'lifelong residents' passages remain excluded. 2026-10-22 condo row: not read; condo_sales_2025, condo_sales_2024, condo_median_2025 and condo_median_2024 stay null. The Warren Group PDF could not be downloaded directly (the session's egress proxy refused www.thewarrengroup.com with a 403), and the fetched text of the PDF stops at 66,208 characters partway through the condo table, whose rows run from ALLSTON to 'BROOKLI' (cut off), so the SOUTH BOSTON condo row, which sorts later, was not reached on two fetches. tools/data/condo-2025.json (BOSTON entry, caveat) quotes 'SOUTH BOSTON 458 485, $850,000 $837,000' for this row from an earlier pdf.js browser reading; those figures were not re-read here and are not used in this record until someone confirms them against the PDF. Condo row filled 2026-10-22: read the SOUTH BOSTON row of the Warren Group condominium table (page 65) with pdf.js in the browser; columns are Dec 2024 then Dec 2025, and the YTD lines are calendar years 2024 and 2025. Values: sales 458 (2024), 485 (2025); median $850,000 (2024), $837,000 (2025). This supersedes the earlier note that the row could not be read."
-   },
-   {
     "slug": "west-roxbury",
     "name": "West Roxbury",
     "parent": "boston",
@@ -6043,6 +5874,175 @@
      }
     ],
     "notes": "Written 2026-10-22. Population: Boston Planning & Development Agency Research Division, 'Boston in Context: Neighborhoods, 2020 Decennial Census Redistricting Data and 2016-2020 American Community Survey' (April 2022), 'Population by Age Group' table, total 122,191 for Dorchester as one neighborhood (approximated with 2020 block groups; the report does not split North and South Dorchester and gives no planning-district figure). The agency's January 1, 2025 estimate is 123,056 (not used). Housing tenure from the same report (ACS 2016-2020). Housing types and the streetcar-suburb framing from Wikipedia's Dorchester article; 'around 1890' for streetcars and three-deckers from the Boston Preservation Alliance's 'A Short History of Boston's Triple Deckers' (https://bostonpreservation.org/news-item/short-history-bostons-triple-deckers), quoting Arthur Krim that the two 'collided in Dorchester' in 1890. Savin Hill post-Civil War lots from Wikipedia's Savin Hill article (which also says Savin Hill was listed on the National Register on May 9, 2003; not repeated because the listing's name and boundary were not confirmed). Areas: six sections are given instead of the brief's 2 to 4 because the task asked for Savin Hill, Fields Corner, Ashmont and Lower Mills plus others, and Dorchester is the city's largest neighborhood. Red Line station dates (1927 and 1928) from Wikipedia's Ashmont branch article; Ashmont address and Mattapan Line transfer from the MBTA stop page. Fairmount stations from the MBTA timetable; Dorchester location of Talbot Avenue (near Codman Square) and Four Corners/Geneva (Mount Bowdoin section, 171 Geneva Avenue) from their Wikipedia articles; Uphams Corner station from Wikipedia's Uphams Corner article. Wikipedia says Dorchester has five Fairmount stations but does not name them; Newmarket and Morton Street may be counted but their neighborhood was not confirmed, so only three are listed. The Mattapan Line stops in Dorchester beyond Ashmont and Cedar Grove were not confirmed. Highways and roads from Wikipedia's Dorchester article, listed as named there; which streets carry Route 203 was not confirmed. Annexation: Wikipedia gives January 3 in the text and January 4 in the infobox, so only the year is used. 'First town meeting' and 'first public elementary school' are Wikipedia's claims, attributed as 'described as'; the Mather School is not named as a current school to avoid any school characterization. JFK Library facts from jfklibrary.org; the Kennedy Institute (2015) and Massachusetts Archives from Wikipedia. Fields Corner Squares + Streets: launched May 14 and 18, 2024; the Planning Department page (https://www.bostonplans.org/fields-corner) shows no adoption date as of this session, and the department's December 31, 2024 news release (https://www.boston.gov/node/16267656) says recommendations were to be refined in 2025. Dorchester Park was left out because Wikipedia gives a conflicting founding date (1861) and Olmsted commission (1895) and the boston.gov page failed to load. Market: single-family row read twice in this session with identical YTD figures; condo table truncated at Brookline. Schools: assignment is by address and set by Boston Public Schools. Fair housing: Wikipedia's Fields Corner article describes the area by the national cuisine of its restaurants, and the Dorchester article covers the Columbia Point public housing project and demographic change; none of this was used. No section is characterized by who lives there, and no crime or change-over-time framing about residents is used. Wikipedia describes Victorian 'commuter bedroom communities'; only the built-form point (streetcar suburb) is kept. Fact-check 2026-10-22: verified more than 6 square miles, the bordering neighborhoods and Neponset/Quincy/Milton, North Dorchester's definition, the June 17, 1630 landing, the October 8, 1633 town meeting, the 1639 Mather School, the 1634 Stoughton mill, Walter Baker until 1965, the June 22, 1869 vote, the Old Colony Railroad in 1845, the commercial squares and residential sections, the housing mix (27.3% single-family, 23.1% two-family, 24.6% three-family, 25.0% condo units), Columbia Point institutions, the roads, and 'five Red Line, five Mattapan Line and five Fairmount Line stations' (Wikipedia); Fairmount stops in order (MBTA timetable); Uphams Corner, Four Corners/Geneva (Mount Bowdoin, opened July 1, 2013) and Talbot Avenue (near Codman Square, opened November 12, 2012) are each placed in Dorchester by their station articles; Morton Street is in Mattapan and Newmarket's neighborhood is not given, so the record keeps three Fairmount stations; Cedar Grove is in southern Dorchester; Red Line openings November 5, 1927 and September 1, 1928 (Ashmont branch article); Savin Hill, Fields Corner, Lower Mills (1765, 1868, NRHP 1980), Uphams Corner, Codman Square District (1983), James Blake House, Pope John Paul II Park (66 acres, 2001), JFK Library (jfklibrary.org), Franklin Park (city), Fields Corner Squares + Streets (launched May 14 and 18, 2024, no adoption shown); population 122,191 and tenure (BPDA April 2022). Market row checked against reading_1: YTD sales 110 to 103 and medians $730,000 to $800,000 match the fields and FAQ, and -6.4% and 9.6% agree. Corrected: the boundaries no longer list Mattapan as a western neighbor or say 'planners' divide North and South Dorchester (Wikipedia lists South Boston, Roxbury, Jamaica Plain, Hyde Park and the South End); the answer now says annexation came in stages ending in 1870; 'electric streetcars arrived around 1890' (no source says electric) is now the Preservation Alliance's point that the streetcar and three-decker came together in Dorchester by 1890, and the horsecar line is described as Wikipedia does; Lower Mills buildings are 'a major part' built from 1868; Franklin Park is described by the neighborhoods it connects, not as 'Dorchester's western edge'; the Mattapan Line 'runs along the Neponset' is replaced with its Cedar Grove stop; the Squares + Streets sentence no longer calls the program zoning reform for housing near transit (the project page does not). Fair housing: re-read every sentence; sections are described by streets, buildings and transit only. Wikipedia's Fields Corner list of resident groups, Savin Hill's gentrification and population lines and the Dorchester article's demographic content remain excluded. 2026-10-22 condo row: not read; condo_sales_2025, condo_sales_2024, condo_median_2025 and condo_median_2024 stay null. The Warren Group PDF could not be downloaded directly (the session's egress proxy refused www.thewarrengroup.com with a 403), and the fetched text of the PDF stops at 66,208 characters partway through the condo table, whose rows run from ALLSTON to 'BROOKLI' (cut off), so the DORCHESTER condo row, which sorts later, was not reached on two fetches. tools/data/condo-2025.json (BOSTON entry, caveat) quotes 'DORCHESTER 377 360, $580,000 $575,000' for this row from an earlier pdf.js browser reading; those figures were not re-read here and are not used in this record until someone confirms them against the PDF. Condo row filled 2026-10-22: read the DORCHESTER row of the Warren Group condominium table (page 45) with pdf.js in the browser; columns are Dec 2024 then Dec 2025, and the YTD lines are calendar years 2024 and 2025. Values: sales 377 (2024), 360 (2025); median $580,000 (2024), $575,000 (2025). This supersedes the earlier note that the row could not be read."
+   },
+   {
+    "slug": "south-boston",
+    "name": "South Boston",
+    "parent": "boston",
+    "city_name": "Boston",
+    "county": "Suffolk County",
+    "region": "Greater Boston (the city)",
+    "population_2020": 37917,
+    "population_source": "https://bostonplans.org/getattachment/86f801a8-f8a6-4d0c-83ed-b9a63684d6b5",
+    "official_site": "https://www.boston.gov/",
+    "headline": [
+     "Dorchester Heights at the center,",
+     "Castle Island and three miles of beach and parkland at the end of Broadway."
+    ],
+    "answer": "South Boston is a Boston neighborhood on the former Dorchester Neck, south and east of Fort Point Channel along Dorchester Bay, annexed to Boston in 1804. Its housing includes 19th-century brick and mansard row houses and flat-roofed triple-deckers, and the Boston Planning & Development Agency counted 37,917 people there in 2020, with the South Boston Waterfront counted separately. The Red Line stops at Broadway and Andrew, and Castle Island anchors three miles of shoreline parks.",
+    "meta": "South Boston: row houses and triple-deckers from Dorchester Heights to Castle Island, with Red Line stops at Broadway and Andrew and three miles of shoreline parks.",
+    "boundaries": {
+     "text": "South Boston lies south and east of Fort Point Channel, along Dorchester Bay, with Castle Island beside City Point and Andrew station on its west side. The Seaport, or South Boston Waterfront, north of the residential streets is treated by the city's planners as a separate neighborhood.",
+     "source": "https://en.wikipedia.org/wiki/South_Boston"
+    },
+    "overview": [
+     "South Boston was Dorchester Neck, a narrow peninsula belonging to the town of Dorchester. On the night of March 4, 1776, Continental troops fortified Dorchester Heights, and the British evacuated Boston on March 17. Boston annexed the peninsula in 1804, bridges over Fort Point Channel tied it to downtown, and landfill widened its connection to the mainland. In 1822 land on the peninsula was set aside for public institutions, including a jail and an almshouse; after they moved, East Broadway was extended to the end of the peninsula in 1854 and 4.5 acres became Independence Square.",
+     "The streets climb to Dorchester Heights, the highest area of South Boston. Near the top of Telegraph Hill, an 1849 reservoir was later filled and replaced by South Boston High School in 1901, and the rest of the summit was laid out in the 1850s as Thomas Park, now centered on a 115-foot marble monument completed in 1902. Mansard and brick row houses, some with marble and sandstone fronts, went up around Independence Square in the fifteen years after the Civil War. At City Point the granite Fort Independence, built between 1833 and 1848, stands on Castle Island, which the city joined to the mainland by filling the flats between 1890 and the 1920s; Day Boulevard now runs past Pleasure Bay, M Street Beach and Carson Beach.",
+     "Recent city planning has looked at the neighborhood's edges. The Boston Planning & Development Agency completed PLAN: South Boston Dorchester Avenue in December 2016, with the projects reviewed under it mostly on Dorchester Avenue, Old Colony Avenue and nearby streets, and a follow-up transportation plan was finalized in 2021. To the north, the waterfront along Fort Point Channel and Boston Harbor was the focus of the city's 1,000-acre Innovation District plan announced in 2010, and the city's research tables report it as the separate South Boston Waterfront neighborhood."
+    ],
+    "housing": {
+     "text": "South Boston's housing includes mansard and brick row houses from the 1860s and 1870s around Independence Square and along East Broadway, and triple-deckers, which here were mostly built with flat roofs. The Boston Housing Authority's Mary Ellen McCormack (1936) and Old Colony (1941) developments are in the neighborhood, and the second phase of Old Colony's redevelopment was completed in 2014. The Boston Planning & Development Agency's tabulation of the 2016-2020 American Community Survey counts 17,109 occupied housing units, 43.4% of them owner-occupied, compared with 35.3% citywide.",
+     "source": "https://bostonplans.org/getattachment/86f801a8-f8a6-4d0c-83ed-b9a63684d6b5"
+    },
+    "areas": [
+     {
+      "name": "City Point",
+      "line": "The eastern end of the peninsula near Castle Island, reached by East Broadway and Day Boulevard, where MBTA bus routes 7, 9, 10 and 11 end at the City Point bus terminal.",
+      "source": "https://en.wikipedia.org/wiki/South_Boston"
+     },
+     {
+      "name": "Independence Square",
+      "line": "A 4.5-acre square on East Broadway laid out in 1854, ringed by mansard and brick row houses built mostly in the fifteen years after the Civil War, including the Harrison Loring House at 789 East Broadway, the first house on the square.",
+      "source": "https://sah-archipedia.org/buildings/MA-01-SB19"
+     },
+     {
+      "name": "Dorchester Heights and Telegraph Hill",
+      "line": "The highest area of South Boston, with Thomas Park and the Dorchester Heights Monument on the summit of Telegraph Hill and South Boston High School on the site of an 1849 reservoir; a 40-acre area centered on Thomas Park was listed on the National Register as the Dorchester Heights Historic District in 2001.",
+      "source": "https://en.wikipedia.org/wiki/Dorchester_Heights"
+     },
+     {
+      "name": "West Broadway and Andrew Square",
+      "line": "The western side along Broadway and Dorchester Avenue, served by the Broadway and Andrew Red Line stations; Andrew Square is where Dorchester Avenue, Dorchester Street, Southampton Street and Boston Street meet.",
+      "source": "https://en.wikipedia.org/wiki/Andrew_station"
+     }
+    ],
+    "commute": {
+     "rail": [
+      {
+       "line": "Red Line",
+       "stations": [
+        "Broadway",
+        "Andrew"
+       ]
+      }
+     ],
+     "rail_source": "https://en.wikipedia.org/wiki/Broadway_station_(MBTA)",
+     "highways": [
+      "I-93",
+      "William J. Day Boulevard"
+     ],
+     "text": "The Red Line's Broadway station, at Dorchester Avenue and Broadway, opened in 1917, and Andrew station, at Andrew Square, in 1918; both run north to South Station, where the Fairmount, Needham, Providence/Stoughton and other south-side commuter rail lines end. MBTA bus routes 7, 9, 10 and 11 cross the neighborhood to the City Point terminal, and Andrew connects with routes including the 10, 16, 17, 18 and 171. The Silver Line serves the separate Waterfront area, and the Big Dig put I-93 below ground."
+    },
+    "schools": {
+     "district": "Boston Public Schools",
+     "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=00350000&orgtypecode=5"
+    },
+    "places": [
+     {
+      "name": "Castle Island and Fort Independence",
+      "line": "A DCR park at 2010 Day Boulevard, where the Castle Island Loop circles the granite Fort Independence, built from 1833 and listed on the National Register in 1970; open sunrise to sunset.",
+      "source": "https://www.mass.gov/locations/castle-island-pleasure-bay-m-street-beach-and-carson-beach"
+     },
+     {
+      "name": "Pleasure Bay, M Street Beach and Carson Beach",
+      "line": "Part of a three-mile stretch of beach and parkland along Day Boulevard, with an accessible loop around Pleasure Bay; dogs are not allowed on the beach from May 1 through September 15.",
+      "source": "https://www.mass.gov/locations/castle-island-pleasure-bay-m-street-beach-and-carson-beach"
+     },
+     {
+      "name": "Dorchester Heights Monument",
+      "line": "A white marble Georgian Revival tower by Peabody and Stearns, completed in 1902 to mark the fortification of March 4, 1776, and stewarded by the National Park Service as part of Boston National Historical Park.",
+      "source": "https://www.nps.gov/bost/learn/historyculture/dohe.htm"
+     },
+     {
+      "name": "Thomas Park",
+      "line": "A roughly elliptical park of walks and ornamental plantings laid out in the 1850s on the summit of Telegraph Hill on Dorchester Heights, centered on the monument.",
+      "source": "https://en.wikipedia.org/wiki/Dorchester_Heights"
+     },
+     {
+      "name": "Independence Square",
+      "line": "A 4.5-acre park created in 1854 on East Broadway, which received 150 trees and granite steps in 1874.",
+      "source": "https://sah-archipedia.org/buildings/MA-01-SB19"
+     },
+     {
+      "name": "Saint Augustine Chapel",
+      "line": "A chapel completed in 1819 and described as the oldest Catholic church in Massachusetts.",
+      "source": "https://en.wikipedia.org/wiki/South_Boston"
+     }
+    ],
+    "history": [
+     {
+      "year": "1776",
+      "text": "Continental troops fortified Dorchester Heights on March 4, and the British evacuated Boston on March 17.",
+      "source": "https://www.nps.gov/bost/learn/historyculture/dohe.htm"
+     },
+     {
+      "year": "1804",
+      "text": "Boston annexed South Boston, part of the town of Dorchester's Dorchester Neck.",
+      "source": "https://en.wikipedia.org/wiki/South_Boston"
+     },
+     {
+      "year": "1833",
+      "text": "Work began on the present granite Fort Independence on Castle Island, substantially complete by 1848.",
+      "source": "https://en.wikipedia.org/wiki/Fort_Independence_(Massachusetts)"
+     },
+     {
+      "year": "1917",
+      "text": "Broadway station opened on December 15 as part of the Red Line's Dorchester Extension; Andrew followed in 1918.",
+      "source": "https://en.wikipedia.org/wiki/Broadway_station_(MBTA)"
+     }
+    ],
+    "market": {
+     "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+     "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+     "period": "Calendar year 2025",
+     "sf_sales_2025": 62,
+     "sf_sales_2024": 61,
+     "sf_median_2025": 1031500,
+     "sf_median_2024": 1025000,
+     "condo_sales_2025": 485,
+     "condo_sales_2024": 458,
+     "condo_median_2025": 837000,
+     "condo_median_2024": 850000,
+     "reading_condo": "SOUTH BOSTON (condominium table, 'MA December 2025 Sales, Prices By Town For Condos', page 65; Dec 2024, Dec 2025, Percent Change): Number of Sales 33 36 9.1%; YTD Number of Sales 458 485 5.9%; Median Sale Price $904,500 $796,250 -12.0%; YTD Median Sale Price $850,000 $837,000 -1.5%. Read 2026-10-22 from the PDF's text with pdf.js in a browser.",
+     "reading_1": "SOUTH BOSTON (single-family; Dec 2024, Dec 2025, Percent Change): Number of Sales 1 4 300.0% [printed run together as 'Number of Sales14 300.0%']; YTD Number of Sales 61 62 1.6%; Median Sale Price $1,050,000 $872,500 -16.9%; YTD Median Sale Price $1,025,000 $1,031,500 0.6%",
+     "reading_2": "SOUTH BOSTON (single-family): YTD Number of Sales 61 62 1.6%; YTD Median Sale Price $1,025,000 $1,031,500 0.6%"
+    },
+    "nearby": [
+     "dorchester",
+     "south-end",
+     "back-bay",
+     "beacon-hill"
+    ],
+    "search_notes": "Not checked in this session: the shared web search budget ran out before search results for 'South Boston real estate agent' and 'moving to South Boston' could be reviewed. Recheck before launch.",
+    "faq": [
+     {
+      "q": "What is the median home price in South Boston?",
+      "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, which lists South Boston on its own row, the median single-family sale price for calendar year 2025 was $1,031,500, across 62 sales. In 2024 it was $1,025,000, across 61 sales. Condominium figures for South Boston could not be read from the table. The same report's condominium median for South Boston was $837,000 in 2025, across 485 sales, against $850,000 across 458 sales in 2024."
+     },
+     {
+      "q": "Does South Boston have commuter rail?",
+      "a": "No commuter rail station is in South Boston itself. The Red Line runs from Broadway and Andrew stations to South Station, where the Fairmount, Needham, Providence/Stoughton and other south-side commuter rail lines end."
+     },
+     {
+      "q": "Which school district serves South Boston?",
+      "a": "Boston Public Schools. School assignment is set by the district; review its profile with DESE."
+     },
+     {
+      "q": "Is the Seaport part of South Boston?",
+      "a": "Historically the waterfront north of the residential streets is part of South Boston, but the city's planners tabulate it as a separate neighborhood, the South Boston Waterfront. The population and housing figures in this guide exclude it."
+     }
+    ],
+    "notes": "Written 2026-10-22. Population: Boston Planning & Development Agency Research Division, 'Boston in Context: Neighborhoods, 2020 Decennial Census Redistricting Data and 2016-2020 American Community Survey' (April 2022), 'Population by Age Group' table, total 37,917; neighborhood boundaries approximated with 2020 block groups, with South Boston Waterfront as its own row. It is a neighborhood figure, not a planning-district figure. The January 1, 2025 estimate in the agency's 2025 'Boston in Context: Neighborhoods' is 40,904 (not used). Housing tenure from the same 2022 report (ACS 2016-2020, B25003/B25001). Flat-roofed triple-deckers: Boston Preservation Alliance, 'A Short History of Boston's Triple Deckers' (https://bostonpreservation.org/news-item/short-history-bostons-triple-deckers), citing geographer Arthur Krim. Row-house dates from SAH Archipedia's Independence Square entry; the Harrison Loring House is dated 1861 there and 1865 on Wikipedia, so no date is given. BHA developments, Saint Augustine Chapel and bus routes from Wikipedia's South Boston article. Monument height (115 feet), Thomas Park and the 1849 reservoir from Wikipedia's Dorchester Heights article; dates and designers confirmed on the NPS page. Castle Island fill dates and the fort's National Register listing from Wikipedia's Fort Independence article; DCR page gives address, hours, loop trails and dog rule. 'Three miles' of beach and parkland is Wikipedia's figure; the DCR page gives no length. Not confirmed and left out: Castle Island acreage (Wikipedia gives 22 acres for the park and 15 for the fort), whether Fort Independence is a National Historic Landmark (not on the fort's own Wikipedia page), the M Street Park Vietnam memorial claim, Marine Park, the L Street Bathhouse details (page not found). Commuter rail lines at South Station are from the city record's MBTA source and were not reopened this session. 'I-93 below ground' rests on Wikipedia's South Boston article, which says the Big Dig buried the elevated I-93 that had cut off the waterfront. Market: single-family row read twice in this session with identical YTD figures; condo table truncated at Brookline. Schools: assignment is by address and set by Boston Public Schools. Nearby: Beacon Hill is not adjacent; it is included because the neighborhood slug list offers few closer options (South End and Dorchester border South Boston, Back Bay is across the South End). Fair housing: Wikipedia's article covers 1970s opposition to court-ordered school busing and describes areas by what 'lifelong residents' call them; both were left out, and the 'East Side'/'West Side' realtor labels are replaced with City Point and West Broadway. Public housing developments are named only as part of the housing stock, by name and year. Fact-check 2026-10-22: verified the Fort Point Channel/Dorchester Bay location, 1804 annexation, bridges and landfill, City Point and routes 7, 9, 10 and 11, the BHA developments and 2014 Old Colony phase, Saint Augustine Chapel, Big Dig, the 2010 Innovation District and the three-mile stretch of parkland and beach (Wikipedia); 1822, 1854 and 4.5 acres, 1874 trees and steps, the Loring House as the first house on the square, most houses built in the fifteen years after the Civil War (SAH Archipedia); March 4 and 17, 1776 and the Peabody and Stearns 1902 monument (NPS); Thomas Park, 115 feet, the 1849 reservoir and 1901 high school, and the 2001 historic district (Wikipedia); Fort Independence 1833 to 1848, filling 1890 to the 1920s, NRHP 1970; DCR address, hours, loop, accessible trail and dog rule; Broadway (December 15, 1917) and Andrew (1918, bus connections); flat-roofed triple-deckers (Boston Preservation Alliance); PLAN: Dot Ave December 2016 and the 2021 transportation plan (bostonplans.org); population 37,917 and tenure (BPDA April 2022). Market row checked against reading_1: YTD sales 61 to 62 and medians $1,025,000 to $1,031,500 match the fields and FAQ, and 1.6% and 0.6% agree. Corrected: Thomas Park and the reservoir are on Telegraph Hill (Wikipedia places the park on 'the rest of the summit' of Telegraph Hill, not a separate 'neighboring' hill); Andrew Square is where four streets meet; the 1822 land is no longer placed 'near the top of the peninsula'; the PLAN: Dot Ave study-area limits and the 2020 launch of the transportation plan were not on the city page and were softened; 'three miles of beach(es)' in headline, meta and places now reads beach and parkland, as Wikipedia does. Removed: 'Castle Island at its eastern tip' and 'Andrew Square marks its southwestern corner' (unsourced), the Castle Island Association partnership (not on the DCR page). Fair housing: re-read every sentence; nothing describes residents. Wikipedia's 'working class Irish Catholic', 'young professionals and families', 'desirable', busing and 'lifelong residents' passages remain excluded. 2026-10-22 condo row: not read; condo_sales_2025, condo_sales_2024, condo_median_2025 and condo_median_2024 stay null. The Warren Group PDF could not be downloaded directly (the session's egress proxy refused www.thewarrengroup.com with a 403), and the fetched text of the PDF stops at 66,208 characters partway through the condo table, whose rows run from ALLSTON to 'BROOKLI' (cut off), so the SOUTH BOSTON condo row, which sorts later, was not reached on two fetches. tools/data/condo-2025.json (BOSTON entry, caveat) quotes 'SOUTH BOSTON 458 485, $850,000 $837,000' for this row from an earlier pdf.js browser reading; those figures were not re-read here and are not used in this record until someone confirms them against the PDF. Condo row filled 2026-10-22: read the SOUTH BOSTON row of the Warren Group condominium table (page 65) with pdf.js in the browser; columns are Dec 2024 then Dec 2025, and the YTD lines are calendar years 2024 and 2025. Values: sales 458 (2024), 485 (2025); median $850,000 (2024), $837,000 (2025). This supersedes the earlier note that the row could not be read."
    }
   ]
  },
