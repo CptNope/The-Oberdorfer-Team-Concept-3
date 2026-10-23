@@ -13,47 +13,43 @@
   "answer": "Quincy is a coastal city in Norfolk County, on Boston Harbor, and the birthplace of John Adams and John Quincy Adams. About a third of its homes are detached single-family houses, and most of the rest are in buildings with two or more units. Four Red Line stations and three commuter rail lines connect it to Boston.",
   "overview": [
     "Quincy calls itself the City of Presidents, and the reason is on Franklin Street: the houses where John Adams was born in 1735 and John Quincy Adams in 1767 still stand side by side there. The family's later home, the Old House at Peacefield, and its Stone Library are part of Adams National Historical Park. Quincy split from Braintree as a town in 1792 and became a city in 1888. Granite quarrying was its major industry for more than a century, and in 1826 the Granite Railway carried stone for the Bunker Hill Monument.",
-    "The shoreline runs from Squantum and Marina Bay around to Houghs Neck, with Wollaston Beach stretching about 2.3 miles along Quincy Shore Drive. Inland, the Blue Hills Reservation covers roughly a quarter of the city's land, and the old quarries in West Quincy are now a state reservation that climbers use. Four Red Line stations, North Quincy, Wollaston, Quincy Center and Quincy Adams, connect the city to Boston, and the Kingston, Greenbush and Fall River/New Bedford commuter rail lines all stop at Quincy Center."
+    "The shoreline runs from Squantum and Marina Bay around to Houghs Neck, with Wollaston Beach stretching about 2.3 miles along Quincy Shore Drive. Inland, the Blue Hills Reservation covers roughly a quarter of the city's land, and the old quarries in West Quincy are now a state reservation that climbers use. Four Red Line stations, North Quincy, Wollaston, Quincy Center and Quincy Adams, connect the city to Boston, and the Kingston, Greenbush and Fall River/New Bedford commuter rail lines all stop at Quincy Center.",
+    "Quincy permitted 3,008 units from 2015 through 2021, most of them in multifamily and mixed-use buildings, according to Housing Quincy, the 2022 MAPC study. Its zoning allows multifamily housing by right or by special permit in every district except Residential A, which is limited to single-family homes, and two special districts are aimed at transit: the Quincy Center districts and a transit-oriented district at North Quincy station. Projects of ten or more units must make at least 10 percent of them affordable. Quincy Center has been the focus of an Urban Revitalization and Development Plan since 2007, covering 62 acres around the MBTA station, and Wollaston Center gained its own revitalization district in 2021. The state lists Quincy as compliant with the MBTA Communities law."
   ],
   "housing": {
-    "text": "Housing Quincy, a 2022 study by the Metropolitan Area Planning Council, found that about a third of the city's housing units are detached single-family homes, two-thirds are in buildings with two or more units, and 63 percent were built after 1940. It describes the oceanfront areas of Squantum, Merrymount, Adams Shore and Houghs Neck as having predominantly older single-family housing.",
+    "text": "Housing Quincy, a 2022 study by the Metropolitan Area Planning Council, found that about a third of the city's housing units are detached single-family homes, two-thirds are in buildings with two or more units, and 63 percent were built after 1940. It describes the oceanfront areas of Squantum, Merrymount, Adams Shore and Houghs Neck as having predominantly older single-family housing. The same study found that 54 percent of occupied units are rented, and the 2020 Census counted 51,156 housing units in the city.",
     "source": "https://www.mapc.org/wp-content/uploads/2022/12/Housing-Quincy-Executive-Summary_FINAL.pdf"
   },
   "villages": [
     {
       "name": "Quincy Center",
-      "line": "The downtown, with the city's main Red Line and commuter rail station and few single-family homes.",
-      "source": "https://www.mapc.org/wp-content/uploads/2022/12/Housing-Quincy-Executive-Summary_FINAL.pdf"
+      "line": "The downtown and seat of government, with City Hall, the Thomas Crane Public Library, United First Parish Church and the city's main Red Line and commuter rail station; few single-family homes stand here.",
+      "source": "https://en.wikipedia.org/wiki/Quincy,_Massachusetts"
     },
     {
       "name": "Wollaston",
-      "line": "Neighborhood with its own Red Line station between North Quincy and Quincy Center.",
+      "line": "Named for Captain Richard Wollaston, an early rail commuter neighborhood that is now densely built, with its own Red Line station and the Wollaston Center revitalization district, started in 2021.",
       "source": "https://en.wikipedia.org/wiki/Quincy,_Massachusetts"
     },
     {
       "name": "North Quincy",
-      "line": "Northern neighborhood with a Red Line station at Hancock and Hunt Streets.",
+      "line": "A residential and commercial neighborhood along Hancock Street and Quincy Shore Drive, with a Red Line station at Hancock and Hunt Streets and a transit-oriented zoning district around it.",
       "source": "https://www.mbta.com/stops/place-nqncy"
     },
     {
       "name": "Squantum",
-      "line": "Oceanfront peninsula with mostly older single-family homes.",
-      "source": "https://www.mapc.org/wp-content/uploads/2022/12/Housing-Quincy-Executive-Summary_FINAL.pdf"
+      "line": "The northernmost peninsula, once a summer seaside resort and now year-round, with mostly older single-family homes.",
+      "source": "https://en.wikipedia.org/wiki/Quincy,_Massachusetts"
     },
     {
       "name": "Marina Bay",
-      "line": "Waterfront residential and commercial area with a large marina, built on the former Naval Air Station Squantum.",
+      "line": "Waterfront area developed in the 1980s on the former Naval Air Station Squantum, with high-rise condominiums, restaurants and a large marina.",
       "source": "https://en.wikipedia.org/wiki/Quincy,_Massachusetts"
     },
     {
       "name": "Houghs Neck",
-      "line": "Oceanfront neighborhood on the city's eastern end with mostly older single-family homes.",
-      "source": "https://www.mapc.org/wp-content/uploads/2022/12/Housing-Quincy-Executive-Summary_FINAL.pdf"
-    },
-    {
-      "name": "West Quincy",
-      "line": "Area with a mix of single-family and multifamily housing.",
-      "source": "https://www.mapc.org/wp-content/uploads/2022/12/Housing-Quincy-Executive-Summary_FINAL.pdf"
+      "line": "Peninsula at the city's northeastern end, named for Atherton Hough, who was granted the land in 1636, with mostly older single-family homes.",
+      "source": "https://en.wikipedia.org/wiki/Quincy,_Massachusetts"
     }
   ],
   "commute": {
@@ -125,6 +121,21 @@
       "name": "Thomas Crane Public Library",
       "line": "The main library, designed by H. H. Richardson and completed in 1882, is a National Historic Landmark.",
       "source": "https://en.wikipedia.org/wiki/Thomas_Crane_Public_Library"
+    },
+    {
+      "name": "United First Parish Church",
+      "line": "The 1828 Greek Revival church at 1306 Hancock Street, designed by Alexander Parris and built of local granite; John Adams, John Quincy Adams and their wives are interred in its basement crypt. It was designated a National Historic Landmark in 1970.",
+      "source": "https://en.wikipedia.org/wiki/United_First_Parish_Church"
+    },
+    {
+      "name": "Squantum Point Park",
+      "line": "A DCR waterfront park on Victory Road, on a former Naval airfield, with paved accessible trails and views of the harbor and the Boston skyline.",
+      "source": "https://www.mass.gov/locations/squantum-point-park"
+    },
+    {
+      "name": "Faxon Park",
+      "line": "A wooded, 66-acre protected park in South Quincy.",
+      "source": "https://en.wikipedia.org/wiki/Quincy,_Massachusetts"
     }
   ],
   "history": [
@@ -139,9 +150,19 @@
       "source": "https://en.wikipedia.org/wiki/Quincy,_Massachusetts"
     },
     {
+      "year": "1845",
+      "text": "The Old Colony Railroad opened through Quincy, beginning its growth as a suburb.",
+      "source": "https://en.wikipedia.org/wiki/Quincy,_Massachusetts"
+    },
+    {
       "year": "1888",
       "text": "Incorporated as a city.",
       "source": "https://en.wikipedia.org/wiki/Quincy,_Massachusetts"
+    },
+    {
+      "year": "1971",
+      "text": "Quincy Center station opened on September 1 as part of the Red Line's Braintree extension; commuter rail returned there in 1997.",
+      "source": "https://en.wikipedia.org/wiki/Quincy_Center_station"
     }
   ],
   "market": {
@@ -157,6 +178,14 @@
     "condo_median_2024": null,
     "reading_1": "Quincy (single-family), columns Dec 2024 | Dec 2025 | Percent Change. YTD Number of Sales: 364 | 418 | 14.8%. YTD Median Sale Price: $700,000 | $706,250 | 0.9%.",
     "reading_2": "QUINCY: \"YTD Number of Sales 364 418 14.8%\"; \"YTD Median Sale Price $700,000 $706,250 0.9%\""
+  },
+  "tax": {
+    "fy": "FY2026",
+    "residential_rate": 11.78,
+    "commercial_rate": 23.53,
+    "residential_exemption": false,
+    "source": "https://assessors.quincyma.gov/tax-rates",
+    "note": "FY2025 rates were $11.53 residential and $23.01 commercial. The assessors' tax-rate page does not mention a residential exemption. The DLS Municipal Databank could not be reached."
   },
   "nearby": [
     "milton",
@@ -179,9 +208,17 @@
       "a": "Quincy Public Schools. Review its profile with DESE."
     },
     {
+      "q": "What is the property tax rate in Quincy, MA?",
+      "a": "For fiscal year 2026, Quincy's rates are $11.78 per $1,000 of assessed value for residential property and $23.53 per $1,000 for commercial property, according to the city assessors. In fiscal 2025 they were $11.53 and $23.01."
+    },
+    {
       "q": "Is there a beach in Quincy?",
       "a": "Yes. Wollaston Beach runs about 2.3 miles along Quincy Shore Drive and is part of the state's Quincy Shores Reservation."
+    },
+    {
+      "q": "What kinds of housing are being built in Quincy?",
+      "a": "Quincy permitted 3,008 housing units from 2015 through 2021, most of them in multifamily and mixed-use buildings, according to MAPC's 2022 Housing Quincy study. Projects of ten or more units must include at least 10 percent affordable units."
     }
   ],
-  "notes": "The Warren Group condo table could not be read: both fetches returned text cut off partway through Brookline, so all condo fields are null. Commuter rail lines at Quincy Center are confirmed from the mbta.com timetables for the Kingston (cited), Greenbush (https://www.mbta.com/schedules/CR-Greenbush/timetable) and Fall River/New Bedford (https://www.mbta.com/schedules/CR-Middleborough/timetable) lines. The Red Line station list comes from Wikipedia plus mbta.com stop pages for North Quincy and Quincy Adams, because the Red Line page did not render its stops. Blue Hills covering about 23 percent of the city's land is from Wikipedia. The Thomas Crane completion year is 1882 in the article text but 1881 in the infobox. Population is from Wikipedia, citing the 2020 Census."
+  "notes": "The Warren Group condo table could not be read: both fetches returned text cut off partway through Brookline, so all condo fields are null. Commuter rail lines at Quincy Center are confirmed from the mbta.com timetables for the Kingston (cited), Greenbush (https://www.mbta.com/schedules/CR-Greenbush/timetable) and Fall River/New Bedford (https://www.mbta.com/schedules/CR-Middleborough/timetable) lines. The Red Line station list comes from Wikipedia plus mbta.com stop pages for North Quincy and Quincy Adams, because the Red Line page did not render its stops. Blue Hills covering about 23 percent of the city's land is from Wikipedia. The Thomas Crane completion year is 1882 in the article text but 1881 in the infobox. Population is from Wikipedia, citing the 2020 Census. Deepened 2026-10-22: added a third overview paragraph on permits, zoning, Quincy Center and Wollaston revitalization plans and MBTA Communities (MAPC Housing Quincy executive summary, https://www.mapc.org/wp-content/uploads/2022/12/Housing-Quincy-Executive-Summary_FINAL.pdf; state compliance list 'As of October 21, 2026', no. 106, https://www.mass.gov/doc/mbta-communities-district-compliance-letters/download). Housing text adds the 54 percent rental share (MAPC) and the 2020 Census count of 51,156 units (Wikipedia). Neighborhoods trimmed to six; West Quincy was dropped from the list (its granite quarries remain under places), and lines were enriched from Wikipedia and MAPC. Added places United First Parish Church, Squantum Point Park and Faxon Park; history entries 1845 and 1971 (Quincy Center station article); the tax object (city assessors' tax-rate page, FY2026 $11.78 residential, $23.53 commercial) and FAQs on tax and new housing. Fair-housing calls: the MAPC study groups neighborhoods into submarkets by income and household type, and Wikipedia describes some neighborhoods by ethnic make-up and as 'tight-knit'; none of that was used. The MAPC summary gives two conflicting Subsidized Housing Inventory counts (4,253 and 4,259), so SHI is left out. The USS Salem was not added because its current berth could not be confirmed. Details of Quincy's MBTA Communities district (date, location, capacity) were not found; only the state listing is used."
 }
