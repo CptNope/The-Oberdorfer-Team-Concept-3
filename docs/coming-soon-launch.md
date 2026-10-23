@@ -130,7 +130,7 @@ Do **not** install a "maintenance mode" or "coming soon" plugin. They return a 5
    - the `www` and `http` versions redirect to it in one hop;
    - `https://oberdorferteam.com/robots.txt` shows the sitemap line;
    - `https://oberdorferteam.com/wp-sitemap.xml` lists the home page.
-2. **Search Console.** Add a **Domain** property for `oberdorferteam.com`, verify it with the DNS TXT record, and submit `https://oberdorferteam.com/wp-sitemap.xml`. Use URL Inspection → Request indexing on the home page. Own it from the team's Google account, not a personal one.
+2. **Search Console.** *Done 2026-10-22:* Domain property `sc-domain:oberdorferteam.com` verified by a TXT record at GoDaddy (keep that record), sitemap submitted and home-page indexing requested. It is owned for now by the developer's Google account; add the team's Google account as an **Owner** (Settings → Users and permissions) once it exists, then hand over. Original step: add a **Domain** property for `oberdorferteam.com`, verify it with the DNS TXT record, and submit `https://oberdorferteam.com/wp-sitemap.xml`. Use URL Inspection → Request indexing on the home page. Own it from the team's Google account, not a personal one.
 3. **Rich Results Test.** Check the home page; the `RealEstateAgent` item should be detected with no errors.
 4. **Google Business Profile.** When the Worcester address is confirmed, verify the profile and set its website to `https://oberdorferteam.com/`.
 5. **HarborRank.** Connect Search Console to the project.
