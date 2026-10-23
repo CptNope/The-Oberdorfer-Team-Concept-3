@@ -12,7 +12,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-const OT_CS_VERSION = '1.0.4';
+const OT_CS_VERSION = '1.0.5';
 const OT_CS_PHONE   = '406-250-7620';
 const OT_CS_HOST    = 'oberdorferteam.com';
 
@@ -64,7 +64,7 @@ add_filter( 'document_title_separator', fn() => '|' );
 
 /** Head: description, Open Graph, icons, preload and structured data. */
 add_action( 'wp_head', function () {
-	$desc  = 'Brandon and Kaitlyn Oberdorfer are a husband-and-wife real estate team opening an office in Worcester and serving all of Massachusetts. Call or text ' . OT_CS_PHONE . '.';
+	$desc  = 'Brandon and Kaitlyn Oberdorfer bring strategic marketing, skilled negotiation and attentive guidance to buyers and sellers across Massachusetts. Call ' . OT_CS_PHONE . '.';
 	$title = wp_get_document_title();
 	$home  = home_url( '/' );
 	$img   = get_theme_file_uri( 'assets/img/' );
@@ -76,6 +76,7 @@ add_action( 'wp_head', function () {
 	printf( '<meta property="og:type" content="website"><meta property="og:url" content="%s"><meta property="og:title" content="%s"><meta property="og:description" content="%s"><meta property="og:image" content="%s"><meta name="twitter:card" content="summary">' . "\n",
 		esc_url( $home ), esc_attr( $title ), esc_attr( $desc ), esc_url( $img . 'social-avatar.png' ) );
 	printf( '<link rel="preload" as="image" href="%s" type="image/svg+xml">' . "\n", esc_url( $img . 'logo-primary-gold.svg' ) );
+	printf( '<link rel="preload" as="image" href="%s" type="image/webp" fetchpriority="high">' . "\n", esc_url( $img . 'team-portrait.webp' ) );
 	// Icons (tools/build_icons.py). A Site Icon set in Settings > General takes over if one is added.
 	if ( ! has_site_icon() ) {
 		printf( '<link rel="icon" href="%s" sizes="32x32">' . "\n", esc_url( home_url( '/favicon.ico' ) ) );
@@ -93,11 +94,17 @@ add_action( 'wp_head', function () {
 		'name'               => 'The Oberdorfer Team',
 		'url'                => $home,
 		'logo'               => $img . 'social-avatar.png',
+		'image'              => $img . 'team-portrait.webp',
 		'telephone'          => OT_CS_PHONE,
 		'slogan'             => 'Luxury at every price point.',
 		'areaServed'         => array( '@type' => 'State', 'name' => 'Massachusetts' ),
 		'address'            => array( '@type' => 'PostalAddress', 'streetAddress' => '652 Park Ave, Unit B', 'addressLocality' => 'Worcester', 'addressRegion' => 'MA', 'postalCode' => '01603', 'addressCountry' => 'US' ),
 		'parentOrganization' => array( '@type' => 'Organization', 'name' => 'REWAP Brokerage LLC', 'url' => 'https://rewapbrokerage.com/' ),
+		// Team leaders and their direct contact details (supplied by the team, 2026-10-22).
+		'member'             => array(
+			array( '@type' => 'Person', 'name' => 'Kaitlyn Oberdorfer', 'telephone' => '978-257-4938', 'email' => 'kaitlynoberdorfer@gmail.com' ),
+			array( '@type' => 'Person', 'name' => 'Brandon Oberdorfer', 'telephone' => '406-250-7620', 'email' => 'brandonoberdorfer@gmail.com' ),
+		),
 	);
 	echo '<script type="application/ld+json">' . wp_json_encode( $ld, JSON_UNESCAPED_SLASHES ) . "</script>\n";
 }, 1 );

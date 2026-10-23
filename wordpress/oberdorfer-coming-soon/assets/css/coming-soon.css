@@ -27,25 +27,33 @@ body { margin: 0; background: var(--cs-navy); color: var(--cs-ivory); font-famil
   display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
   padding: clamp(3rem, 8vw, 6rem) clamp(1.25rem, 5vw, 4rem) 0; overflow: hidden;
 }
-.cs-frame > * { margin: 0; max-width: 46rem; }
+.cs-frame > * { margin: 0; }
 
+/* Brand: the wordmark with the typographic "Powered by" line (never a redrawn REWAP logo). */
+.cs-brand { display: flex; flex-direction: column; align-items: center; gap: 0.9rem; }
+.cs-brand > * { margin: 0 !important; }
 .cs-logo { width: min(22rem, 80%); }
 .cs-logo img { display: block; width: 100%; height: auto; }
+.cs-powered { font: 600 0.6875rem/1.4 var(--cs-sans); letter-spacing: 0.24em; text-transform: uppercase; color: var(--cs-mist); }
 
-.cs-kicker {
-  margin-top: clamp(2.5rem, 6vw, 4rem) !important; font: 600 0.75rem/1.5 var(--cs-sans) !important; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cs-gold);
+/* Portrait beside the copy; stacked on small screens. */
+.cs-grid {
+  margin-top: clamp(2.5rem, 6vw, 4.5rem) !important; width: 100%; max-width: 70rem;
+  display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; text-align: left;
 }
-.cs-display {
-  margin-top: 1.25rem !important; font: 300 clamp(2.6rem, 6.4vw, 5.25rem)/1.02 var(--cs-display); letter-spacing: -0.015em; color: var(--cs-ivory);
-}
+.cs-portrait { margin: 0 !important; position: relative; }
+.cs-portrait::after { content: ""; position: absolute; inset: 0.75rem -0.75rem -0.75rem 0.75rem; border: 1px solid var(--cs-gold); pointer-events: none; }
+.cs-portrait img { display: block; position: relative; z-index: 1; width: 100%; height: auto; aspect-ratio: 5 / 6; object-fit: cover; object-position: 50% 20%; }
+.cs-copy > * { margin: 0 !important; max-width: 38rem; }
+
+.cs-kicker { font: 600 0.75rem/1.5 var(--cs-sans) !important; letter-spacing: 0.22em; text-transform: uppercase; color: var(--cs-gold); }
+.cs-display { margin-top: 1rem !important; font: 300 clamp(2.5rem, 5.2vw, 4.5rem)/1.02 var(--cs-display); letter-spacing: -0.015em; color: var(--cs-ivory); text-wrap: balance; }
 .cs-display em { font-style: italic; color: var(--cs-gold-pale); }
-.cs-lead { margin-top: 1.75rem !important; max-width: 38rem !important; font-size: clamp(1rem, 1.6vw, 1.125rem); line-height: 1.7; color: #D9D5CC; }
+.cs-pillars { margin-top: 1.25rem !important; font: 400 italic clamp(1.15rem, 1.9vw, 1.4rem)/1.4 var(--cs-display); color: var(--cs-gold-pale); }
+.cs-lead { margin-top: 1.25rem !important; font-size: clamp(1rem, 1.5vw, 1.0625rem); line-height: 1.7; color: #D9D5CC; }
+.cs-soon { margin-top: 1rem !important; font-size: 1rem; line-height: 1.6; color: var(--cs-ivory); font-weight: 600; }
 
-.cs-phone { margin-top: 2.25rem !important; font: 300 clamp(2rem, 4.4vw, 3rem)/1 var(--cs-display); letter-spacing: 0.01em; }
-.cs-phone a { color: var(--cs-ivory); text-decoration: none; border-bottom: 1px solid var(--cs-gold); padding-bottom: 0.15em; }
-.cs-phone a:hover { color: var(--cs-gold-pale); }
-
-.cs-actions { margin-top: 1.75rem !important; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; }
+.cs-actions { margin-top: 1.75rem !important; display: flex; flex-wrap: wrap; gap: 0.75rem; }
 .cs-btn { margin: 0 !important; }
 .cs-btn .wp-block-button__link {
   display: inline-block; box-sizing: border-box; min-height: 48px; padding: 0.95rem 1.6rem; border-radius: 0; border: 1px solid var(--cs-ivory);
@@ -56,12 +64,30 @@ body { margin: 0; background: var(--cs-navy); color: var(--cs-ivory); font-famil
 .cs-btn--gold .wp-block-button__link { background: var(--cs-gold); border-color: var(--cs-gold); color: var(--cs-navy); }
 .cs-btn--gold .wp-block-button__link:hover { background: var(--cs-gold-pale); border-color: var(--cs-gold-pale); }
 
-.cs-sign { margin-top: 1.5rem !important; font-size: 0.8125rem; letter-spacing: 0.02em; color: var(--cs-mist); }
+/* Contact lines: name, phone and email, each on its own line on phones. */
+.cs-contacts { margin-top: 2rem !important; padding-top: 1.5rem; border-top: 1px solid color-mix(in srgb, var(--cs-gold) 45%, transparent); scroll-margin-top: 2rem; }
+.cs-contacts > * { margin: 0 !important; }
+.cs-contacts > * + * { margin-top: 0.75rem !important; }
+.cs-person { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 1.25rem; font-size: 0.9375rem; line-height: 1.5; color: #D9D5CC; }
+.cs-person strong { font: 400 1.25rem/1.2 var(--cs-display); color: var(--cs-ivory); min-width: 11.5rem; }
+.cs-person a { color: var(--cs-ivory); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--cs-gold) 60%, transparent); overflow-wrap: anywhere; }
+.cs-person a:hover { color: var(--cs-gold-pale); border-bottom-color: var(--cs-gold-pale); }
+.cs-serving { margin-top: 1.5rem !important; font: 400 italic 1.125rem/1.4 var(--cs-display); color: var(--cs-mist); }
+
+@media (max-width: 52rem) {
+  .cs-grid { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+  .cs-portrait { width: min(22rem, 86%); }
+  .cs-copy { display: flex; flex-direction: column; align-items: center; }
+  .cs-actions { justify-content: center; }
+  .cs-contacts { width: 100%; }
+  .cs-person { flex-direction: column; align-items: center; gap: 0.15rem; }
+  .cs-person strong { min-width: 0; margin-bottom: 0.15rem; }
+}
 
 /* The townscape sits below the content, like the publication's house linework. */
 .cs-townscape {
-  display: block; margin-top: clamp(2.5rem, 6vw, 4rem) !important; margin-bottom: -1px !important;
-  width: min(34rem, 100%); max-width: none !important; height: auto; color: var(--cs-gold); opacity: 0.6; pointer-events: none;
+  display: block; margin-top: clamp(2rem, 4vw, 3rem) !important; margin-bottom: -1px !important;
+  width: min(28rem, 100%); max-width: none !important; height: auto; color: var(--cs-gold); opacity: 0.6; pointer-events: none;
 }
 
 /* ---- Footer: the brokerage on its own ivory plate ---------------------------- */

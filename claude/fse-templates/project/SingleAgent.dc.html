@@ -58,8 +58,8 @@ body{margin:0}
 <dt>Service area</dt><dd>{{a.area}}</dd>
 <dt>Specialties</dt><dd><span class="placeholder-value">[Specialties to confirm]</span></dd>
 <dt>Languages</dt><dd><span class="placeholder-value">[Languages to confirm]</span></dd>
-<dt>Phone</dt><dd><sc-if value="{{a.isPerson}}" hint-placeholder-val="{{true}}"><a href="#">406-250-7620</a> (team line) · direct line <span class="placeholder-value">[to confirm]</span></sc-if><sc-if value="{{a.isTemplate}}" hint-placeholder-val="{{false}}"><span class="placeholder-value">[Direct phone]</span></sc-if></dd>
-<dt>Email</dt><dd><span class="placeholder-value">[Email to confirm]</span></dd>
+<dt>Phone</dt><dd><sc-if value="{{a.isPerson}}" hint-placeholder-val="{{true}}"><a href="#">{{a.direct}}</a> {{a.phoneNote}}</sc-if><sc-if value="{{a.isTemplate}}" hint-placeholder-val="{{false}}"><span class="placeholder-value">[Direct phone]</span></sc-if></dd>
+<dt>Email</dt><dd><sc-if value="{{a.isPerson}}" hint-placeholder-val="{{true}}"><a href="#">{{a.email}}</a></sc-if><sc-if value="{{a.isTemplate}}" hint-placeholder-val="{{false}}"><span class="placeholder-value">[Email to confirm]</span></sc-if></dd>
 <dt>License</dt><dd><span class="placeholder-value">[MA license number to be supplied and verified]</span></dd>
 </dl>
 <p class="caption">Profile updated <time datetime="2026-10-22">October 22, 2026</time>.</p>
@@ -177,8 +177,8 @@ class Component extends DCLogic {
 renderVals() {
 const on = this.props.showTags ?? true;
 const people = {
-brandon: { name: 'Brandon Oberdorfer', given: 'Brandon', partnerName: 'Kaitlyn Oberdorfer', partnerGiven: 'Kaitlyn', relation: 'his wife', relationCap: 'His wife', photo: '/_blob/580884f9c011d43c295ca9e660290e3d', partnerPhoto: '/_blob/beeffc56b18ce27c49180d106d48441d' },
-kaitlyn: { name: 'Kaitlyn Oberdorfer', given: 'Kaitlyn', partnerName: 'Brandon Oberdorfer', partnerGiven: 'Brandon', relation: 'her husband', relationCap: 'Her husband', photo: '/_blob/beeffc56b18ce27c49180d106d48441d', partnerPhoto: '/_blob/580884f9c011d43c295ca9e660290e3d' }
+brandon: { name: 'Brandon Oberdorfer', given: 'Brandon', partnerName: 'Kaitlyn Oberdorfer', partnerGiven: 'Kaitlyn', relation: 'his wife', relationCap: 'His wife', direct: '406-250-7620', phoneNote: '(direct, and the team line)', email: 'brandonoberdorfer@gmail.com', photo: '/_blob/580884f9c011d43c295ca9e660290e3d', partnerPhoto: '/_blob/beeffc56b18ce27c49180d106d48441d' },
+kaitlyn: { name: 'Kaitlyn Oberdorfer', given: 'Kaitlyn', partnerName: 'Brandon Oberdorfer', partnerGiven: 'Brandon', relation: 'her husband', relationCap: 'Her husband', direct: '978-257-4938', phoneNote: '(direct) · team line 406-250-7620', email: 'kaitlynoberdorfer@gmail.com', photo: '/_blob/beeffc56b18ce27c49180d106d48441d', partnerPhoto: '/_blob/580884f9c011d43c295ca9e660290e3d' }
 };
 const key = this.props.agent ?? 'kaitlyn';
 let a;

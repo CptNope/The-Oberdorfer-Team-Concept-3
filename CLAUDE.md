@@ -26,17 +26,17 @@ The visual language evolves the team's print publication, *Wakefield at Home*, F
 ## Ground rules
 
 1. **Never invent facts.** This covers listings, testimonials, awards, production statistics, agent profiles, license numbers, office addresses, brokerage approvals, commissions and recruiting benefits. Anything unconfirmed is shown as a `[bracketed placeholder]` or carries a badge: `.badge--demo`, `--verify`, `--proposed` or `--source`.
-2. **Confirmed by the client on 2026-10-15:** all data in the publication is correct. That includes the phone **406-250-7620**, **"Top Producer"**, and the Wakefield market figures (Redfin, accessed Oct 10, 2026). **Confirmed 2026-10-22:** the team is opening its office in **Worcester**, serves all of Massachusetts, and its production domain is **oberdorferteam.com** (canonical, sitemap and schema URLs use it, without the prototype's `/site/` prefix). The office address is **652 Park Ave, Unit B, Worcester, MA 01603** (the building has two units; always write "Unit B") (`STREET`/`POSTCODE` in `build_site.py`).
+2. **Confirmed by the client on 2026-10-15:** all data in the publication is correct. That includes the phone **406-250-7620**, **"Top Producer"**, and the Wakefield market figures (Redfin, accessed Oct 10, 2026). **Confirmed 2026-10-22:** the team is opening its office in **Worcester**, serves all of Massachusetts, and its production domain is **oberdorferteam.com** (canonical, sitemap and schema URLs use it, without the prototype's `/site/` prefix). The office address is **652 Park Ave, Unit B, Worcester, MA 01603** (the building has two units; always write "Unit B") (`STREET`/`POSTCODE` in `build_site.py`). Direct contacts: Kaitlyn **978-257-4938**, kaitlynoberdorfer@gmail.com; Brandon **406-250-7620** (also the team line), brandonoberdorfer@gmail.com. The coming-soon copy ("Exceptional homes. Thoughtful representation. Personal attention.") was supplied by the team.
 3. **Still unconfirmed:**
    - whether the portraits are real photographs or AI-generated (the publication was made with ChatGPT)
-   - team email (the domain, oberdorferteam.com, is confirmed)
+   - team email (the domain, oberdorferteam.com, is confirmed; Brandon's and Kaitlyn's personal emails are confirmed)
    - MA license numbers
    - office hours and formal status (the street address is confirmed)
    - REWAP disclosures
    - privacy policy
    - IDX/MLS provider (options in `docs/idx-options.md`); outside CRM (optional; the built-in `ot-leads` is planned)
    - final community list (the 27 guides in `tools/data/communities.json`, Tiers 1 to 3, are a proposed list; Boston neighborhood guides are planned)
-   - Brandon's and Kaitlyn's individual biographies, titles, direct lines, emails, specialties, languages and headshots (their profiles use placeholders and interim crops of the team portrait)
+   - Brandon's and Kaitlyn's individual biographies, titles, specialties, languages and headshots (their profiles use placeholders and interim crops of the team portrait)
 4. **Market data:** always show the source, period and geography. Never present the Wakefield figures as live or statewide. Town figures are The Warren Group's calendar-year 2025 single-family table; the statewide figures are its January 20, 2026 release.
 5. **Community guides follow fair housing rules.** Describe places, housing, transit, history and amenities. Never describe who lives somewhere, never call an area "safe", "exclusive" or "family-friendly", and never rate schools: link to the district's DESE profile instead. Every fact carries a source in the town's record.
 6. **The team and the brokerage are separate brands.** Never redraw the REWAP logo. Show it only on its own ivory plate, or use the typographic "Powered by" lockup.

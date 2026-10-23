@@ -30,6 +30,7 @@ ASSETS = {
     "assets/logo/site.webmanifest": "site.webmanifest",
     "assets/logo/social-avatar.png": "social-avatar.png",
     "assets/img/rewap-logo.webp": "rewap-logo.webp",
+    "assets/img/photo/team-portrait.webp": "team-portrait.webp",
 }
 
 def theme_json():
@@ -66,8 +67,8 @@ def preview(pattern):
     body = pattern[pattern.index("?>") + 2:]
     body = re.sub(r"<!-- /?wp:[^>]*-->\n?", "", body)
     body = body.replace("<?php echo esc_url( $img . '", "assets/img/").replace("' ); ?>", "")
-    head_desc = ("Brandon and Kaitlyn Oberdorfer are a husband-and-wife real estate team opening an office in Worcester "
-                 "and serving all of Massachusetts. Call or text 406-250-7620.")
+    head_desc = ("Brandon and Kaitlyn Oberdorfer bring strategic marketing, skilled negotiation "
+                 "and attentive guidance to buyers and sellers across Massachusetts.")
     html = f"""<!doctype html>
 <html lang="en">
 <head>

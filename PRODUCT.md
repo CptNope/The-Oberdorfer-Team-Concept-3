@@ -123,7 +123,7 @@ Two things set the team apart:
 - Client testimonials
 - Years of experience and production statistics
 - Agent profiles beyond Brandon and Kaitlyn
-- Brandon's and Kaitlyn's individual biographies, titles, direct lines, emails, specialties, languages and headshots (their profiles show placeholders and interim crops of the team portrait)
+- Brandon's and Kaitlyn's individual biographies, titles, specialties, languages and headshots (direct lines and emails confirmed 2026-10-22: Kaitlyn 978-257-4938, kaitlynoberdorfer@gmail.com; Brandon 406-250-7620, brandonoberdorfer@gmail.com) (their profiles show placeholders and interim crops of the team portrait)
 - Office hours and formal status
 - Recruiting terms, commissions, benefits and training details
 - Awards

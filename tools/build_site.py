@@ -985,13 +985,13 @@ AGENTS = [
          role="Team leader", partner="kaitlyn-oberdorfer", relation="his wife",
          photo="assets/img/photo/brandon-oberdorfer.webp", photo_w=440, photo_h=550,
          photo_note="Cropped from the team portrait in <em>Wakefield at Home</em>. Individual headshot to be supplied.",
-         title=None, license=None, email=None, direct=None, languages=None, specialties=None, bio=None, socials=None,
+         title=None, license=None, email="brandonoberdorfer@gmail.com", direct="406-250-7620", languages=None, specialties=None, bio=None, socials=None,
          lead="agent:brandon-oberdorfer"),
     dict(slug="kaitlyn-oberdorfer", name="Kaitlyn Oberdorfer", given="Kaitlyn", family="Oberdorfer",
          role="Team leader", partner="brandon-oberdorfer", relation="her husband",
          photo="assets/img/photo/kaitlyn-oberdorfer.webp", photo_w=440, photo_h=550,
          photo_note="Cropped from the team portrait in <em>Wakefield at Home</em>. Individual headshot to be supplied.",
-         title=None, license=None, email=None, direct=None, languages=None, specialties=None, bio=None, socials=None,
+         title=None, license=None, email="kaitlynoberdorfer@gmail.com", direct="978-257-4938", languages=None, specialties=None, bio=None, socials=None,
          lead="agent:kaitlyn-oberdorfer"),
 ]
 TEMPLATE_AGENT = dict(slug="agent-template", name="[Agent name]", given="[First name]", family="[Last name]",
@@ -1033,7 +1033,8 @@ def agent_faq(a):
 def profile_ld(R, a, url, faq):
     pid = prod(f"site/agents/{a['slug']}/#person")
     person = {"@type": "Person", "@id": pid, "name": a["name"], "givenName": a["given"], "familyName": a["family"],
-              "url": url, "image": SITE + a["photo"], "telephone": PHONE,
+              "url": url, "image": SITE + a["photo"], "telephone": a.get("direct") or PHONE,
+              **({"email": a["email"]} if a.get("email") else {}),
               "jobTitle": "Real estate team leader",
               "worksFor": {"@id": TEAM_ID}, "affiliation": {"@id": BROKER_ID},
               "areaServed": {"@type": "State", "name": "Massachusetts"},
@@ -1079,8 +1080,11 @@ def page_profile(a):
         ("Service area", "Massachusetts" if not tpl else ph("Service areas")),
         ("Specialties", ph("Specialties to confirm")),
         ("Languages", ph("Languages to confirm")),
-        ("Phone", f'<a href="tel:{TEL}">{PHONE}</a> (team line) · direct line ' + ph("to confirm") if not tpl else ph("Direct phone")),
-        ("Email", ph("Email to confirm")),
+        ("Phone", ph("Direct phone") if tpl else
+                  (f'<a href="tel:{TEL}">{PHONE}</a> (direct, and the team line)' if a.get("direct") == PHONE else
+                   f'<a href="tel:+1{a["direct"].replace("-", "")}">{a["direct"]}</a> (direct) · team line <a href="tel:{TEL}">{PHONE}</a>' if a.get("direct") else
+                   f'<a href="tel:{TEL}">{PHONE}</a> (team line) · direct line ' + ph("to confirm"))),
+        ("Email", f'<a href="mailto:{a["email"]}">{a["email"]}</a>' if a.get("email") and not tpl else ph("Email to confirm")),
         ("License", ph("MA license number to be supplied and verified")),
     ]
     facts_html = "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in facts)
