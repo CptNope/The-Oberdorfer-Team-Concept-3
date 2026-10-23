@@ -822,6 +822,7 @@ def page_town(t):
     addsrc("2020 Census population", t.get("population_source"))
     addsrc("MBTA commuter rail", c.get("rail_source"))
     addsrc("Massachusetts DESE district profile", sch.get("dese_url"))
+    addsrc("Massachusetts DESE regional district profile", sch.get("dese_url_regional"))
     addsrc("The Warren Group, 2025 sales by town", WARREN_URL)
     if t.get("housing"): addsrc("Housing", t["housing"].get("source"))
     if t.get("tax"): addsrc(f"Property tax rates, {t['tax'].get('fy', '')}".strip(", "), t["tax"].get("source"))
@@ -849,7 +850,7 @@ def page_town(t):
 {villages}
 <section class="section" id="commute" aria-labelledby="commute-title"><div class="container split" style="align-items:start">
   <div class="stack" style="grid-column:1/span 6;--stack:var(--space-4)"><p class="label">Getting around</p><h2 class="h2" id="commute-title">Commuting from {name}</h2><p>{commute_txt}</p>{rail_block}<p class="caption">Check current schedules with the <a href="https://www.mbta.com/schedules/commuter-rail">MBTA</a>; compare the trip from each address before you buy.</p></div>
-  <div class="stack" style="grid-column:8/span 5;--stack:var(--space-4)"><p class="label">Schools</p><h2 class="h2">Public schools</h2><p>{name} is served by {sch.get("district", "[district to confirm]")}. Review the district's profile with the Massachusetts Department of Elementary and Secondary Education, and confirm school assignment for any address with the district.</p>{link_arrow(R, sch.get("dese_url", "#"), "DESE district profile")}</div>
+  <div class="stack" style="grid-column:8/span 5;--stack:var(--space-4)"><p class="label">Schools</p><h2 class="h2">Public schools</h2><p>{name} is served by {sch.get("district", "[district to confirm]")}. Review the district's profile with the Massachusetts Department of Elementary and Secondary Education, and confirm school assignment for any address with the district.</p>{link_arrow(R, sch.get("dese_url", "#"), "DESE district profile")}{link_arrow(R, sch["dese_url_regional"], "DESE regional district profile") if sch.get("dese_url_regional") else ""}</div>
 </div></section>
 <section class="section surface-muted" id="places" aria-labelledby="places-title"><div class="container">
   {section_head("Things to do", name, ["Places to know", f"in {name}."], title_id="places-title")}
