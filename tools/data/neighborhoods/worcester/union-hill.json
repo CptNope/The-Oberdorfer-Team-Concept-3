@@ -1,0 +1,96 @@
+{
+  "slug": "union-hill",
+  "parent": "worcester",
+  "city_name": "Worcester",
+  "name": "Union Hill",
+  "county": "Worcester County",
+  "region": "Central Massachusetts",
+  "official_site": "https://www.worcesterma.gov/",
+  "headline": ["A school campus, a synagogue and three-deckers", "on Providence Street's hill."],
+  "answer": "Union Hill is an East Side neighborhood in southeastern Worcester, on the hill once called Sagatabscot, one of the city's seven hills. Providence Street holds the Worcester Academy campus, on the hill since 1869, and the 1906 Shaarai Torah Synagogue, and the city's 1977-78 historic survey names Union Hill among the places built up with three-deckers. WRTA Route 1 runs via Providence Street, and Union Station is downtown.",
+  "meta": "Union Hill, Worcester: the Worcester Academy campus, the 1906 Shaarai Torah Synagogue, three-deckers and the city's 2015 revitalization initiative. A sourced guide.",
+  "boundaries": {
+    "text": "Union Hill has no official city boundary. Wikipedia lists it as an East Side neighborhood on the hill anchored by Grafton Street and Providence Street in southeastern Worcester, and names Massasoit Road as spanning Union Hill, Grafton Hill and Broadmeadow Brook; its documented landmarks stand on Providence Street (numbers 32 and 81) and Chapin Street.",
+    "source": "https://en.wikipedia.org/wiki/Neighborhoods_in_Worcester,_Massachusetts"
+  },
+  "overview": [
+    "Union Hill is one of the hills Worcester grew up onto in the 19th century. Wikipedia counts it, under its old name Sagatabscot, among the seven hills the city government lists, and notes that it is also called Grafton Hill. The Massachusetts Historical Commission's survey of Worcester records that between 1830 and 1870 the town spread east up Chandler, Oak and Union Hills, and that Worcester Academy operated in town until its relocation to Union Hill. That move came in 1869, when Isaac Davis, the academy's first president, bought the abandoned Dale General Hospital on Providence Street, a building designed by Elbridge Boyden in 1852 for a medical school and used as a Civil War military hospital, and gave it to the school as Davis Hall.",
+    "The campus filled in over the next two decades. The academy's National Register nomination calls Walker Hall (1889, Fuller & Delano) the first substantial building designed for the school on its Union Hill campus; Adams and Dexter Halls followed in 1892 and Kingsley Laboratories (Barker & Nourse) in 1897, and the campus was listed on the National Register as the Worcester Academy Historic District in 1980. Davis Hall lost a tower in the 1938 hurricane and was demolished in 1965. Down Providence Street, at number 32, the Shaarai Torah congregation opened a Classical Revival synagogue designed by Edwin T. Chapin on September 14, 1906. The survey behind Worcester's 1980 Multiple Resource Area nomination names Union Hill among the places where whole new neighborhoods of three-deckers were built in the period it dates 1890 to 1950.",
+    "In August 2015 the city announced the Union Hill Neighborhood Revitalization Initiative, committing $4 million in federal Community Development Block Grant funds to housing rehabilitation and code enforcement, new sidewalks, road resurfacing and school health partnerships, with Oak Hill Community Development Corporation, Habitat for Humanity, Worcester Academy and HUD as partners. The program was launched at Worcester Academy's Alumni House, 51 Providence Street, and in November 2015 it received the National Community Development Association's Community Development Achievement Award. The academy's Walker Hall hosted a Union Hill neighborhood meeting on the city's calendar in June 2025."
+  ],
+  "housing": {
+    "text": "The survey for Worcester's 1977-78 Multiple Resource Area National Register nomination names Union Hill among the places where whole new neighborhoods of three-deckers were built, in the period it dates 1890 to 1950; it did not nominate individual three-deckers because of their number. Housing rehabilitation and code enforcement were among the four focus areas of the city's 2015 Union Hill initiative. No published count of housing types or ownership for Union Hill alone, with a dated source and a stated boundary, was found.",
+    "source": "https://npgallery.nps.gov/NRHP/GetAsset/NRHP/64000304_text"
+  },
+  "areas": [
+    {
+      "name": "Providence Street",
+      "line": "The neighborhood's documented spine, with the former Shaarai Torah Synagogue at number 32, Worcester Academy's Alumni House at 51 and the academy's campus at 81; WRTA Route 1 runs via Providence Street.",
+      "source": "https://en.wikipedia.org/wiki/Shaarai_Torah_Synagogue"
+    },
+    {
+      "name": "Worcester Academy campus",
+      "line": "A school campus on Providence Street since 1869, with Walker Hall (1889), Adams and Dexter Halls (1892) and Kingsley Laboratories (1897), listed on the National Register as the Worcester Academy Historic District in 1980.",
+      "source": "https://npgallery.nps.gov/GetAsset/e4a3679d-e1cc-4117-89ea-de6d2aa07ecb"
+    },
+    {
+      "name": "Chapin Street",
+      "line": "Home to the Union Hill School, a Worcester Public Schools building at 1 Chapin Street.",
+      "source": "https://www.worcesterschools.org/o/uhs/"
+    }
+  ],
+  "commute": {
+    "rail": [{"line": "Framingham/Worcester Line", "stations": ["Worcester (Union Station, 2 Washington Square)"]}],
+    "rail_source": "https://www.mbta.com/stops/place-WML-0442",
+    "highways": [],
+    "text": "Union Hill has no rail station of its own; the nearest is Worcester station at Union Station, 2 Washington Square, downtown, on the MBTA Framingham/Worcester Line. WRTA Route 1 (Walmart 146 via Providence and Granite Streets) runs via Providence Street, and Routes 5 and 12 run on Grafton Street."
+  },
+  "schools": {
+    "district": "Worcester Public Schools",
+    "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=03480000&orgtypecode=5"
+  },
+  "places": [
+    {
+      "name": "Worcester Academy Historic District",
+      "line": "The campus of Worcester Academy, founded in 1834, at 81 Providence Street; the academy bought its Union Hill site in 1869 and the campus was listed on the National Register on March 5, 1980.",
+      "source": "https://en.wikipedia.org/wiki/Worcester_Academy"
+    },
+    {
+      "name": "Walker Hall",
+      "line": "Built in 1889 to a design by Fuller & Delano, the first substantial building on the Union Hill campus designed for Worcester Academy, according to its National Register nomination; it hosted a city-listed Union Hill neighborhood meeting in June 2025.",
+      "source": "https://npgallery.nps.gov/GetAsset/e4a3679d-e1cc-4117-89ea-de6d2aa07ecb"
+    },
+    {
+      "name": "Shaarai Torah Synagogue",
+      "line": "A Classical Revival building at 32 Providence Street by Edwin T. Chapin, opened on September 14, 1906 and listed on the National Register in 1990; after a 2003 sale it was planned for conversion into 11 apartments known as Red Oak Condominiums.",
+      "source": "https://en.wikipedia.org/wiki/Shaarai_Torah_Synagogue"
+    },
+    {
+      "name": "Site of Dale General Hospital",
+      "line": "Elbridge Boyden's 1852 building on Providence Street served as a Civil War military hospital in 1864 and 1865, became Worcester Academy's Davis Hall in 1869 and was demolished in 1965; the Davol Hall dormitory was later built on roughly the same site.",
+      "source": "https://en.wikipedia.org/wiki/Dale_General_Hospital"
+    },
+    {
+      "name": "Union Hill School",
+      "line": "A Worcester Public Schools building at 1 Chapin Street, where student volunteers with Working for Worcester, joined by Consigli Construction and the United Way of Central Massachusetts, built a new playground.",
+      "source": "https://www.aol.com/student-volunteers-working-worcester-build-184155886.html"
+    }
+  ],
+  "history": [
+    {"year": "1869", "text": "Isaac Davis bought the former Dale General Hospital on Providence Street and gave it to Worcester Academy, which moved to Union Hill.", "source": "https://en.wikipedia.org/wiki/Worcester_Academy"},
+    {"year": "1889", "text": "Walker Hall, the first substantial building on the Union Hill campus designed for Worcester Academy, was built.", "source": "https://npgallery.nps.gov/GetAsset/e4a3679d-e1cc-4117-89ea-de6d2aa07ecb"},
+    {"year": "1906", "text": "The Shaarai Torah Synagogue opened at 32 Providence Street on September 14.", "source": "https://en.wikipedia.org/wiki/Shaarai_Torah_Synagogue"},
+    {"year": "2015", "text": "The city announced the Union Hill Neighborhood Revitalization Initiative, a $4 million Community Development Block Grant program for housing, code enforcement, sidewalks and roads.", "source": "https://worcesterma.gov/announcements/city-partners-to-outline-union-hill-revitalization-initiative"}
+  ],
+  "market": null,
+  "nearby": ["grafton-hill", "vernon-hill", "canal-district", "downtown"],
+  "search_notes": "Exact-ranking queries for 'Union Hill Worcester real estate' and 'moving to Union Hill Worcester' were not run. Research searches returned the Grafton Hill Wikipedia stub, Redfin and Zumper neighborhood listing pages, Walk Score pages for Providence Street addresses, and the city's 2015 press releases on the revitalization initiative. No sourced guide ties Worcester Academy's 1869 move, the Shaarai Torah building and the 2015 city program together, which is the gap this page fills.",
+  "faq": [
+    {"q": "What is the median home price in Union Hill, Worcester?", "a": "The Warren Group does not report Union Hill separately. Citywide, the median single-family sale price in Worcester for calendar year 2025 was $430,000 across 884 sales, up from $420,000 across 904 sales in 2024, according to its MA December 2025 Sales, Prices by Town report."},
+    {"q": "Is there commuter rail near Union Hill?", "a": "Union Hill has no station of its own. The nearest is Worcester station at Union Station, 2 Washington Square, downtown, on the MBTA Framingham/Worcester Line. WRTA Route 1 runs via Providence Street."},
+    {"q": "Which school district serves Union Hill?", "a": "Worcester Public Schools, which runs the Union Hill School at 1 Chapin Street. School assignment is by address and is set by the district; review the district's profile with DESE."},
+    {"q": "Is Union Hill the same as Grafton Hill?", "a": "The names overlap. Wikipedia's Grafton Hill article says Union Hill is also called Grafton Hill and was once Sagatabscot Hill, while its list of Worcester neighborhoods names Union Hill, Grafton Hill and Vernon Hill as separate East Side neighborhoods."},
+    {"q": "What was the Union Hill revitalization initiative?", "a": "A city program announced in August 2015 that committed $4 million in federal Community Development Block Grant funds to housing rehabilitation and code enforcement, new sidewalks, road resurfacing and school health partnerships, with Oak Hill CDC, Habitat for Humanity, Worcester Academy and HUD as partners. It received a national Community Development Achievement Award in November 2015."}
+  ],
+  "notes": "Written 2026-10-23. Boundaries: no official city boundary for Union Hill was found. The boundary text uses Wikipedia's neighborhood list (Union Hill under East Side; Sunderland/Massasoit Road/Rice Square spanning Union Hill, Grafton Hill and Broadmeadow Brook) and its Grafton Hill stub (Union Hill also called Grafton Hill, originally Sagatabscot Hill, in southeastern Worcester, anchored by Grafton and Providence Streets; one of the seven hills the city lists). Documented Union Hill landmarks: the Shaarai Torah article ('Union Hill neighborhood') and the Worcester Academy article and nomination ('Union Hill campus'); the Union Hill School takes the name. Definitions differ: Oak Hill CDC's 2017 Community Investment Plan (https://macdc.org/sites/default/files/user17/OHCDC_CIP_2017.pdf) says Union Hill includes Grafton Hill, Vernon Hill and the Upsala Street neighborhoods; that broader use was not adopted. The same plan gives a share of homes built before 1939 without a source, year or clear geography, a 2010 population and code-sweep counts; none were used (population is not for a stated boundary, and the housing figures could not be tied to Union Hill). Left out because no source places them in Union Hill: the Providence Street Firehouse (98 Providence St, 1899, now Worcester EMS; its article says only 'southeast of the city's downtown'); the Providence Street Historic District (127-145 Providence St) and the David Dworman Three-Decker (159 Providence St), which their articles place in Vernon Hill; the Morris Levenson (38 Plantation St, c. 1920) and Edna Stoliker (41 Plantation St, c. 1916) three-deckers ('southeastern Worcester' only); and the Providence Street Playground and Glodis Field (239 Providence St), which the city page does not place in a neighborhood. No city park was found that a source places in Union Hill. Worcester Academy: building dates and architects are from the OCR text of its National Register nomination (https://npgallery.nps.gov/GetAsset/e4a3679d-e1cc-4117-89ea-de6d2aa07ecb), where the firm reads 'Puller & Delano', taken as Fuller & Delano; listing date March 5, 1980 is from Wikipedia's eastern Worcester NRHP list (https://en.wikipedia.org/wiki/National_Register_of_Historic_Places_listings_in_eastern_Worcester,_Massachusetts). The Megaron is dated 1906 in the nomination and 1905 in Wikipedia; it was left undated. The academy's own campus page (https://worcesteracademy.org/our-campus) lists Walker Hall, the Megaron, Adams, Kingsley and the Warner Theater as landmark buildings. Three-deckers: the 1977-78 Multiple Resource Area survey text (https://npgallery.nps.gov/NRHP/GetAsset/NRHP/64000304_text) is OCR; the sentence reads 'Whole new neighborhoods of three deckers were built on IMon Hill, near Webster Square', read here as Union Hill (the same document's 1919-1930 section names 'southeast of Union Hill' as a growth area). MHC town report (https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/wor.pdf): Early Industrial Period settlement east up Chandler, Oak and Union Hills, and Worcester Academy's relocation to Union Hill. Dale General Hospital: Wikipedia gives the 1852 Boyden building, 1864 opening and 1865 closing, the 1869 purchase, the 1938 hurricane, the 1965 demolition and Davol Hall; the article does not name Union Hill, but the academy article and nomination place the campus there. Shaarai Torah: the article says the 2003 buyer hired Kopec Contracting to convert it into 11 apartments; completion was not confirmed, so the line says 'planned'. Revitalization: city releases of August 13, 2015 (press conference August 17, 2015, at the Alumni House, 51 Providence St; $4 million CDBG; focus areas; partners) and November 23, 2015 (NCDA 2015 Community Development Achievement Award, https://worcesterma.gov/announcements/city-receives-community-development-achievement-award-for-union-hill-revitalization-efforts). The releases name no streets or boundary and give no count of homes. A rapid health impact assessment of the proposed strategy by the Worcester Division of Public Health, the Massachusetts DPH and the city's Office of Economic Development is recorded by Pew (https://www.pewtrusts.org/en/research-and-analysis/data-visualizations/2015/hia-map/state/massachusetts/the-city-of-worcester-union-hill-revitalization-hia) and Community Commons (dated 2011); its dates are inconsistent between the two, so it was left out of the history. The June 19, 2025 neighborhood meeting at Walker Hall, 81 Providence St, is from a city police calendar entry (https://www.worcesterma.gov/node/47460). Union Hill School address from the district's page; the playground article (AOL/Telegram, https://www.aol.com/student-volunteers-working-worcester-build-184155886.html) carries no publication date (it mentions a next build day of April 13, 2024), so the build is left undated. WRTA routes from https://www.therta.com/routes/ (Route 1 'via Providence & Granite St.'; Routes 5 and 12 'via Grafton St.'). No highway is listed because no source ties one to Union Hill. Market null: the Warren Group PDF lists Worcester only as a citywide row; the FAQ figures repeat the citywide row recorded in the Grafton Hill and Greendale records (2024: 904 sales, $420,000; 2025: 884 sales, $430,000); the PDF was not re-read this session. School assignment is by address and set by the district. Fair housing: the revitalization sources describe the area in terms of income, foreclosure, homeownership rates and crime, and one describes the neighborhood as having declined; none of that was used. The program is described only by its dated funding, focus areas, partners and award, and its 'public health and safety' focus is not repeated. The synagogue is described as a building, with no statement about who lives nearby."
+}
