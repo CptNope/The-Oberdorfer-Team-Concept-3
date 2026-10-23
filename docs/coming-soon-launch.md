@@ -102,7 +102,7 @@ Leave `oberdorferteam.com` without these. It gets the Google Workspace records i
 | Speed (primary) | HTTP/2, HTTP/3, 0-RTT, Early Hints and Speed Brain on; Rocket Loader off | Free-plan speed features; Rocket Loader can break block-theme scripts |
 | Caching (primary) | Browser Cache TTL: respect existing headers; Crawler Hints on | |
 | Cache rule (primary) | "Cache pages for visitors": host `oberdorferteam.com`, eligible for cache, except `/wp-admin`, `/wp-login.php`, `/wp-json`, `wp-cron.php`, preview URLs and the `wordpress_logged_in`, `wp-postpass` and `comment_author` cookies | HTML is served from Cloudflare's edge (default 2 hours, since WordPress sends no cache header). **After editing the page, purge it**: Caching → Configuration → Purge Everything |
-| Security rules (primary) | Block `/xmlrpc.php`; Managed Challenge on `/wp-login.php` | Free plan allows five custom rules |
+| Security rules (primary) | Block `/xmlrpc.php`; Managed Challenge on `/wp-login.php` and everything under `/wp-admin` except `/wp-admin/admin-ajax.php` (front-end features call it) | Free plan allows five custom rules; the challenge is passed once per session |
 | AI crawlers | Allowed (search, agent and training); Bot Preference Sync **off** so `robots.txt` comes only from the theme | Matches the decisions page |
 | Redirects | Account-level Bulk Redirect list `oberdorfer_alias_domains`: the five other domains (and `www`) → `https://oberdorferteam.com/` with a 301, keeping the path and query string | Visitors are redirected at Cloudflare without reaching the server; the theme's redirect stays as a fallback |
 
