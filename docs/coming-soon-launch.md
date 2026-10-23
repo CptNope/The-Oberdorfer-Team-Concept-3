@@ -109,7 +109,7 @@ Leave `oberdorferteam.com` without these. It gets the Google Workspace records i
 
 **Activation:** all six zones were active on 2026-10-22; Google's public DNS returns Cloudflare's addresses for oberdorferteam.com.
 
-**DNSSEC:** turned on in Cloudflare for all six zones on 2026-10-22. Each zone is *pending* until its DS record is added at GoDaddy (Domain → DNS → DNSSEC → Add DS record). Every zone uses key tag **2371**, algorithm **13** (ECDSA P-256 SHA-256), digest type **2** (SHA-256), with its own digest:
+**DNSSEC:** on for all six zones since 2026-10-22. The DS records below were added at GoDaddy the same night (Domain → DNS → DS Records → Add), and Cloudflare reported the zones active (oberdorferluxury.com, added last, was still finishing). Every zone uses key tag **2371**, algorithm **13** (ECDSA P-256 SHA-256), digest type **2** (SHA-256), with its own digest:
 
 | Domain | Digest |
 |---|---|
@@ -123,7 +123,7 @@ Leave `oberdorferteam.com` without these. It gets the Google Workspace records i
 Cloudflare's DNS → Settings page shows the same values and switches each zone to *active* once it sees the DS record (usually within an hour). **If the domains ever leave Cloudflare, remove the DS records at GoDaddy first**, or the domains stop resolving.
 
 **Still to do:**
-- Add the six DS records above at GoDaddy, if not yet done.
+- Confirm oberdorferluxury.com shows DNSSEC *active* in Cloudflare (DNS → Settings).
 - Check `curl -sI https://oberdorferteam.com/` shows `server: cloudflare` and, on a second request, `cf-cache-status: HIT`; check that each alias domain returns a 301 to `https://oberdorferteam.com/`.
 - When Google Workspace is chosen, add its MX, SPF, DKIM and DMARC records in **Cloudflare** DNS (DNS only, grey cloud). For receiving only, Cloudflare Email Routing can forward addresses such as `team@oberdorferteam.com` to Brandon's and Kaitlyn's Gmail for free.
 - Bot Fight Mode is left off: on the free plan it can't be bypassed for Let's Encrypt renewals or uptime monitors.
