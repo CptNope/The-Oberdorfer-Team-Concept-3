@@ -27,7 +27,7 @@
   .opt--rec { border-color: var(--ot-gold); box-shadow: inset 0 3px 0 var(--ot-gold); }
   .opt h4 { font: 400 1.25rem/1.2 var(--font-display); color: var(--text-display); }
   .opt .cost { font-size: var(--step-caption); color: var(--text-muted); }
-  .opt ul { margin: 0; padding-left: 1.1rem; font-size: var(--step-body-s); display: grid; gap: var(--space-1); }
+  .opt ul { overflow-wrap: anywhere; margin: 0; padding-left: 1.1rem; font-size: var(--step-body-s); display: grid; gap: var(--space-1); }
   .opt .badge { justify-self: start; }
   .surface-muted .opt { background: var(--surface-page); }
   .glance td, .glance th { vertical-align: top; }
@@ -104,7 +104,7 @@
         <tr><td><a href="#d-profiles">Agent profile details</a></td><td>Supply bios, titles, headshots; say "Kaitlyn" or "Kait"</td><td>Brandon and Kaitlyn</td><td>Profiles</td></tr>
         <tr><td><a href="#d-towns">Community list</a></td><td>Keep all 27 guides; add Boston neighborhood guides next</td><td>Brandon and Kaitlyn</td><td>Town guides</td></tr>
         <tr><td><a href="#d-pubtitle">Umbrella publication title</a></td><td>Keep "<em>[Town] at Home</em>" per town for now</td><td>Brandon and Kaitlyn</td><td>Journal</td></tr>
-        <tr><td><a href="#d-email">Team email</a></td><td>Google Workspace on oberdorferteam.com</td><td>Brandon and Kaitlyn</td><td>Google tools, forms</td></tr>
+        <tr><td><a href="#d-email">Team email</a></td><td>A team Gmail now, with team@oberdorferteam.com forwarding; Google Workspace when the team is ready</td><td>Brandon and Kaitlyn</td><td>Google tools, forms</td></tr>
         <tr><td><a href="#d-office">Worcester office address and hours</a></td><td>Publish the street address; a registered P.O. box can cover marketing email</td><td>Brandon and Kaitlyn</td><td><span class="badge badge--verify">Launch</span></td></tr>
         <tr><td><a href="#d-phone">Local phone line</a></td><td>Keep 406-250-7620; consider adding a 508 or 774 office line</td><td>Brandon and Kaitlyn</td><td>Google Business Profile</td></tr>
         <tr><td><a href="#d-coming-soon">Coming-soon page on the domain</a></td><td>Publish the built page once REWAP approves its wording</td><td>Brandon and Kaitlyn, with REWAP</td><td>Search history, Business Profile link</td></tr>
@@ -114,7 +114,7 @@
         <tr><td><a href="#d-product">Long-term product goal</a></td><td>Decide later; it only changes the IDX path after launch</td><td>Team</td><td>Nothing yet</td></tr>
         <tr><td><a href="#d-crm">CRM mode</a></td><td>Built-in only at launch; add Follow Up Boss later if wanted</td><td>Brandon and Kaitlyn</td><td>Lead handling</td></tr>
         <tr><td><a href="#d-routing">Response window and town owners</a></td><td>15 minutes in business hours; both leaders own every town until agents join</td><td>Brandon and Kaitlyn</td><td>Lead routing</td></tr>
-        <tr><td><a href="#d-mail">Email service and sender addresses</a></td><td>Pick one transactional service; send as each agent at oberdorferteam.com</td><td>Team and developer</td><td>Nurture</td></tr>
+        <tr><td><a href="#d-mail">Email service and sender addresses</a></td><td>Elastic Email through Cloudways for site notifications; a separate sender for marketing</td><td>Team and developer</td><td>Nurture</td></tr>
         <tr><td><a href="#d-ai">Automatic AI sending</a></td><td>Approval required for every message at first</td><td>Team leaders</td><td>Nurture</td></tr>
         <tr><td><a href="#d-retention">Lead retention period</a></td><td>24 months for unconverted leads</td><td>Team with REWAP</td><td>Privacy policy</td></tr>
         <tr><td><a href="#d-keywords">Keyword data tool</a></td><td>HarborRank free allowance now, Search Console after launch</td><td>Team</td><td>Keyword plan</td></tr>
@@ -191,8 +191,9 @@
     <article class="dec" id="d-email">
       <div class="dec__q"><h3>Team email</h3><p class="body-s">The account that owns Google Ads, Search Console, Analytics and the Business Profile should belong to the business.</p><dl class="dec__meta"><dt>Decides</dt><dd>Brandon and Kaitlyn</dd><dt>Holds up</dt><dd>Google tools, forms, nurture</dd></dl></div>
       <div class="opts">
-        <div class="opt opt--rec"><span class="badge badge--proposed">Recommended</span><h4>Google Workspace on oberdorferteam.com</h4><p class="cost">Paid per user</p><ul><li>Real addresses such as team@ and brandon@</li><li>Needs access to the domain's DNS</li></ul></div>
-        <div class="opt"><h4>A new free Gmail for the business</h4><p class="cost">Free</p><ul><li>Quick to start; Brandon or Kaitlyn holds the password</li><li>Move tools to a domain account later</li></ul></div>
+        <div class="opt opt--rec"><span class="badge badge--proposed">Recommended now</span><h4>Team Gmail + forwarding</h4><p class="cost">Free</p><ul><li>One business Gmail owns Search Console, the Business Profile and Analytics; Brandon, Kaitlyn and the developer are added as users, never a shared password</li><li>team@oberdorferteam.com forwards to it (for example ImprovMX, free): two MX records and an SPF record at GoDaddy</li><li>Receive only: replies come from the Gmail address until a paid plan or Workspace</li></ul></div>
+        <div class="opt opt--rec"><span class="badge badge--proposed">Recommended next</span><h4>Google Workspace on oberdorferteam.com</h4><p class="cost">Paid per user</p><ul><li>Real mailboxes such as team@, brandon@ and kaitlyn@</li><li>Add it as owner of each Google tool, then remove the Gmail; nothing is lost</li><li>Its MX, SPF, DKIM and DMARC records replace the forwarding records</li></ul></div>
+        <div class="opt"><h4>Another provider</h4><p class="cost">Paid per user</p><ul><li>Microsoft 365 or similar, if REWAP or the team already uses it</li><li>Same switch-over: new owner on each tool, then new DNS records</li></ul></div>
       </div>
     </article>
 
@@ -296,11 +297,10 @@
     </article>
 
     <article class="dec" id="d-mail">
-      <div class="dec__q"><h3>Email service and sender addresses</h3><p class="body-s">Marketing email must not send from the web server.</p><dl class="dec__meta"><dt>Decides</dt><dd>Team and developer</dd><dt>Holds up</dt><dd>Nurture, newsletter</dd></dl></div>
+      <div class="dec__q"><h3>Email service and sender addresses</h3><p class="body-s">Marketing email must not send from the web server. Whichever service is chosen, marketing and nurture email stays separate from the site's notifications, so a complaint about marketing never delays a lead alert.</p><dl class="dec__meta"><dt>Decides</dt><dd>Team and developer</dd><dt>Holds up</dt><dd>Nurture, newsletter</dd></dl></div>
       <div class="opts">
-        <div class="opt"><h4>Amazon SES</h4><ul><li>Lowest cost at volume; more setup</li></ul></div>
-        <div class="opt"><h4>Postmark</h4><ul><li>Strong deliverability; simple setup</li></ul></div>
-        <div class="opt"><h4>Mailgun</h4><ul><li>Flexible; good webhooks</li></ul></div>
+        <div class="opt opt--rec"><span class="badge badge--proposed">Recommended</span><h4>Elastic Email through Cloudways</h4><p class="cost">Cloudways SMTP add-on; check current pricing there</p><ul><li>Sends the site's own email: form and lead notifications, password resets</li><li>Not a mailbox; not needed until the site has forms</li><li>Needs Elastic Email's SPF and DKIM records on oberdorferteam.com; send as <span style="overflow-wrap:anywhere">notifications@oberdorferteam.com</span></li></ul></div>
+        <div class="opt"><h4>A dedicated email service</h4><p class="cost">Billed by volume</p><ul><li>Amazon SES: lowest cost at volume, more setup</li><li>Postmark: strong deliverability, simple setup</li><li>Mailgun: flexible, good webhooks</li></ul></div>
       </div>
     </article>
 
@@ -379,6 +379,7 @@
       <li><time datetime="2026-10-22">Oct 22, 2026</time><span>Individual agent profiles for Brandon and Kaitlyn, and a template for future agents.</span></li>
       <li><time datetime="2026-10-22">Oct 22, 2026</time><span>Massachusetts-wide SEO with 16 researched town guides (list proposed).</span></li>
       <li><time datetime="2026-10-22">Oct 22, 2026</time><span>Tier 3 added: Boston as one city guide, plus anchor towns for the South Shore, Cape Cod, the South Coast and the Berkshires (27 guides in all).</span></li>
+      <li><time datetime="2026-10-22">Oct 22, 2026</time><span>All six domains point to the Cloudways app under one SSL certificate. oberdorferteam.com is the primary domain; theoberdorferteam.com, oberdorferhomes.com, oberdorferluxury.com, maluxuryhomes.com and maluxury.homes redirect to it and are protected against email spoofing.</span></li>
     </ol>
     <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Decisions · 2026</span><span>07</span></div>
   </div>
