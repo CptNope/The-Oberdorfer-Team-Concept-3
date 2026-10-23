@@ -88,7 +88,7 @@ def main(src):
         if slug in ART: t["art"] = ART[slug]
         t.update(EXTRA.get(slug, {}))
         c, m = condos.get(slug), t.get("market")
-        if c and m:
+        if c and m and not c.get("caveat"):   # caveated rows (Boston, Barnstable) are not whole-town figures
             for k in ("condo_sales_2025", "condo_sales_2024", "condo_median_2025", "condo_median_2024"):
                 if m.get(k) is None and c.get(k) is not None: m[k] = c[k]
             if c.get("row"): m["condo_row"] = c["row"]

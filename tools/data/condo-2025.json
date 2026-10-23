@@ -1,0 +1,242 @@
+{
+  "source": "The Warren Group, MA December 2025 Sales, Prices By Town For Condos",
+  "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+  "period": "Calendar year 2025 vs 2024 (YTD through December); table columns are 'Dec 2024 | Dec 2025 | Percent Change'",
+  "accessed": "2026-10-22",
+  "method": "PDF text extracted in a browser with pdf.js (73 pages; condo table begins after the single-family table on page 38); rows are the YTD lines with pdf.js cell separators removed.",
+  "towns": {
+    "worcester": {
+      "condo_sales_2025": 291,
+      "condo_sales_2024": 294,
+      "condo_median_2025": 285000,
+      "condo_median_2024": 285000,
+      "row": "WORCESTER (condos) YTD Number of Sales 294 291 -1.0%; YTD Median Sale Price $285,000 $285,000 0.0%"
+    },
+    "shrewsbury": {
+      "condo_sales_2025": 77,
+      "condo_sales_2024": 93,
+      "condo_median_2025": 529000,
+      "condo_median_2024": 447000,
+      "row": "SHREWSBURY (condos) YTD Number of Sales 93 77 -17.2%; YTD Median Sale Price $447,000 $529,000 18.3%"
+    },
+    "grafton": {
+      "condo_sales_2025": 160,
+      "condo_sales_2024": 142,
+      "condo_median_2025": 460000,
+      "condo_median_2024": 499500,
+      "row": "GRAFTON (condos) YTD Number of Sales 142 160 12.7%; YTD Median Sale Price $499,500 $460,000 -7.9%"
+    },
+    "westborough": {
+      "condo_sales_2025": 88,
+      "condo_sales_2024": 58,
+      "condo_median_2025": 474950,
+      "condo_median_2024": 517000,
+      "row": "WESTBOROUGH (condos) YTD Number of Sales 58 88 51.7%; YTD Median Sale Price $517,000 $474,950 -8.1%"
+    },
+    "holden": {
+      "condo_sales_2025": 47,
+      "condo_sales_2024": 25,
+      "condo_median_2025": 370000,
+      "condo_median_2024": 375000,
+      "row": "HOLDEN (condos) YTD Number of Sales 25 47 88.0%; YTD Median Sale Price $375,000 $370,000 -1.3%"
+    },
+    "leominster": {
+      "condo_sales_2025": 101,
+      "condo_sales_2024": 118,
+      "condo_median_2025": 310000,
+      "condo_median_2024": 297450,
+      "row": "LEOMINSTER (condos) YTD Number of Sales 118 101 -14.4%; YTD Median Sale Price $297,450 $310,000 4.2%"
+    },
+    "framingham": {
+      "condo_sales_2025": 139,
+      "condo_sales_2024": 110,
+      "condo_median_2025": 330000,
+      "condo_median_2024": 355000,
+      "row": "FRAMINGHAM (condos) YTD Number of Sales 110 139 26.4%; YTD Median Sale Price $355,000 $330,000 -7.0%"
+    },
+    "marlborough": {
+      "condo_sales_2025": 88,
+      "condo_sales_2024": 91,
+      "condo_median_2025": 404750,
+      "condo_median_2024": 422000,
+      "row": "MARLBOROUGH (condos) YTD Number of Sales 91 88 -3.3%; YTD Median Sale Price $422,000 $404,750 -4.1%"
+    },
+    "wakefield": {
+      "condo_sales_2025": 136,
+      "condo_sales_2024": 71,
+      "condo_median_2025": 599500,
+      "condo_median_2024": 560000,
+      "row": "WAKEFIELD (condos) YTD Number of Sales 71 136 91.5%; YTD Median Sale Price $560,000 $599,500 7.1%"
+    },
+    "reading": {
+      "condo_sales_2025": 91,
+      "condo_sales_2024": 84,
+      "condo_median_2025": 595000,
+      "condo_median_2024": 559500,
+      "row": "READING (condos) YTD Number of Sales 84 91 8.3%; YTD Median Sale Price $559,500 $595,000 6.3%"
+    },
+    "melrose": {
+      "condo_sales_2025": 77,
+      "condo_sales_2024": 72,
+      "condo_median_2025": 555000,
+      "condo_median_2024": 592500,
+      "row": "MELROSE (condos) YTD Number of Sales 72 77 6.9%; YTD Median Sale Price $592,500 $555,000 -6.3%"
+    },
+    "stoneham": {
+      "condo_sales_2025": 91,
+      "condo_sales_2024": 68,
+      "condo_median_2025": 426000,
+      "condo_median_2024": 444500,
+      "row": "STONEHAM (condos) YTD Number of Sales 68 91 33.8%; YTD Median Sale Price $444,500 $426,000 -4.2%"
+    },
+    "lowell": {
+      "condo_sales_2025": 265,
+      "condo_sales_2024": 307,
+      "condo_median_2025": 332000,
+      "condo_median_2024": 326633,
+      "row": "LOWELL (condos) YTD Number of Sales 307 265 -13.7%; YTD Median Sale Price $326,633 $332,000 1.6%"
+    },
+    "newton": {
+      "condo_sales_2025": 330,
+      "condo_sales_2024": 321,
+      "condo_median_2025": 1072500,
+      "condo_median_2024": 1050000,
+      "row": "NEWTON (condos) YTD Number of Sales 321 330 2.8%; YTD Median Sale Price $1,050,000 $1,072,500 2.1%"
+    },
+    "quincy": {
+      "condo_sales_2025": 344,
+      "condo_sales_2024": 322,
+      "condo_median_2025": 456500,
+      "condo_median_2024": 448000,
+      "row": "QUINCY (condos) YTD Number of Sales 322 344 6.8%; YTD Median Sale Price $448,000 $456,500 1.9%"
+    },
+    "springfield": {
+      "condo_sales_2025": 115,
+      "condo_sales_2024": 59,
+      "condo_median_2025": 208000,
+      "condo_median_2024": 217000,
+      "row": "SPRINGFIELD (condos) YTD Number of Sales 59 115 94.9%; YTD Median Sale Price $217,000 $208,000 -4.1%"
+    },
+    "boston": {
+      "condo_sales_2025": 1611,
+      "condo_sales_2024": 1505,
+      "condo_median_2025": 945000,
+      "condo_median_2024": 970000,
+      "row": "BOSTON (condos) YTD Number of Sales 1,505 1,611 7.0%; YTD Median Sale Price $970,000 $945,000 -2.6%",
+      "caveat": "The Warren Group lists several Boston neighborhoods as separate rows (e.g. CHARLESTOWN 255 202, $899,000 $934,500; SOUTH BOSTON 458 485, $850,000 $837,000; DORCHESTER 377 360, $580,000 $575,000; BRIGHTON 247 266, $515,000 $548,000), so the BOSTON row likely excludes those neighborhoods and is not the citywide total."
+    },
+    "cambridge": {
+      "condo_sales_2025": 573,
+      "condo_sales_2024": 541,
+      "condo_median_2025": 940000,
+      "condo_median_2024": 903000,
+      "row": "CAMBRIDGE (condos) YTD Number of Sales 541 573 5.9%; YTD Median Sale Price $903,000 $940,000 4.1%"
+    },
+    "somerville": {
+      "condo_sales_2025": 430,
+      "condo_sales_2024": 420,
+      "condo_median_2025": 875000,
+      "condo_median_2024": 900000,
+      "row": "SOMERVILLE (condos) YTD Number of Sales 420 430 2.4%; YTD Median Sale Price $900,000 $875,000 -2.8%"
+    },
+    "plymouth": {
+      "condo_sales_2025": 271,
+      "condo_sales_2024": 274,
+      "condo_median_2025": 630000,
+      "condo_median_2024": 574500,
+      "row": "PLYMOUTH (condos) YTD Number of Sales 274 271 -1.1%; YTD Median Sale Price $574,500 $630,000 9.7%"
+    },
+    "braintree": {
+      "condo_sales_2025": 84,
+      "condo_sales_2024": 85,
+      "condo_median_2025": 465000,
+      "condo_median_2024": 450000,
+      "row": "BRAINTREE (condos) YTD Number of Sales 85 84 -1.2%; YTD Median Sale Price $450,000 $465,000 3.3%"
+    },
+    "barnstable": {
+      "condo_sales_2025": 3,
+      "condo_sales_2024": 1,
+      "condo_median_2025": 579900,
+      "condo_median_2024": 630000,
+      "row": "BARNSTABLE (condos) YTD Number of Sales 1 3 200.0%; YTD Median Sale Price $630,000 $579,900 -8.0%",
+      "caveat": "The Warren Group lists Barnstable's villages as separate rows; this BARNSTABLE row covers Barnstable village only, not the whole town. Other condo rows in the same table: HYANNIS YTD Number of Sales 42 55 31.0%, YTD Median Sale Price $351,250 $345,000 -1.8%; CENTERVILLE 6 10, $958,750 $394,950; OSTERVILLE 6 3, $635,000 $410,000; MARSTONS MILLS 1 3, $250,000 $545,000; COTUIT 0 2, $0 $1,032,500. Do not present the BARNSTABLE row as the town's condo market."
+    },
+    "falmouth": {
+      "condo_sales_2025": 72,
+      "condo_sales_2024": 73,
+      "condo_median_2025": 589500,
+      "condo_median_2024": 620000,
+      "row": "FALMOUTH (condos) YTD Number of Sales 73 72 -1.4%; YTD Median Sale Price $620,000 $589,500 -4.9%"
+    },
+    "new-bedford": {
+      "condo_sales_2025": 40,
+      "condo_sales_2024": 34,
+      "condo_median_2025": 233000,
+      "condo_median_2024": 230750,
+      "row": "NEW BEDFORD (condos) YTD Number of Sales 34 40 17.6%; YTD Median Sale Price $230,750 $233,000 1.0%"
+    },
+    "fall-river": {
+      "condo_sales_2025": 112,
+      "condo_sales_2024": 88,
+      "condo_median_2025": 267500,
+      "condo_median_2024": 264000,
+      "row": "FALL RIVER (condos) YTD Number of Sales 88 112 27.3%; YTD Median Sale Price $264,000 $267,500 1.3%"
+    },
+    "pittsfield": {
+      "condo_sales_2025": 31,
+      "condo_sales_2024": 35,
+      "condo_median_2025": 255000,
+      "condo_median_2024": 330000,
+      "row": "PITTSFIELD (condos) YTD Number of Sales 35 31 -11.4%; YTD Median Sale Price $330,000 $255,000 -22.7%"
+    },
+    "great-barrington": {
+      "condo_sales_2025": 18,
+      "condo_sales_2024": 10,
+      "condo_median_2025": 495000,
+      "condo_median_2024": 481000,
+      "row": "GREAT BARRINGTON (condos) YTD Number of Sales 10 18 80.0%; YTD Median Sale Price $481,000 $495,000 2.9%"
+    },
+    "auburn": {
+      "condo_sales_2025": 19,
+      "condo_sales_2024": 25,
+      "condo_median_2025": 345000,
+      "condo_median_2024": 351500,
+      "row": "AUBURN (condos) YTD Number of Sales 25 19 -24.0%; YTD Median Sale Price $351,500 $345,000 -1.8%"
+    },
+    "millbury": {
+      "condo_sales_2025": 43,
+      "condo_sales_2024": 66,
+      "condo_median_2025": 480000,
+      "condo_median_2024": 557557,
+      "row": "MILLBURY (condos) YTD Number of Sales 66 43 -34.8%; YTD Median Sale Price $557,557 $480,000 -13.9%"
+    },
+    "northborough": {
+      "condo_sales_2025": 38,
+      "condo_sales_2024": 29,
+      "condo_median_2025": 451000,
+      "condo_median_2024": 435000,
+      "row": "NORTHBOROUGH (condos) YTD Number of Sales 29 38 31.0%; YTD Median Sale Price $435,000 $451,000 3.7%"
+    },
+    "paxton": {
+      "condo_sales_2025": 1,
+      "condo_sales_2024": 1,
+      "condo_median_2025": 449900,
+      "condo_median_2024": 452000,
+      "row": "PAXTON (condos) YTD Number of Sales 1 1 0.0%; YTD Median Sale Price $452,000 $449,900 -0.5%"
+    },
+    "sutton": {
+      "condo_sales_2025": 12,
+      "condo_sales_2024": 12,
+      "condo_median_2025": 562933,
+      "condo_median_2024": 517500,
+      "row": "SUTTON (condos) YTD Number of Sales 12 12 0.0%; YTD Median Sale Price $517,500 $562,933 8.8%"
+    },
+    "boylston": {
+      "condo_sales_2025": 30,
+      "condo_sales_2024": 13,
+      "condo_median_2025": 625800,
+      "condo_median_2024": 565000,
+      "row": "BOYLSTON (condos) YTD Number of Sales 13 30 130.8%; YTD Median Sale Price $565,000 $625,800 10.8%"
+    }
+  }
+}
