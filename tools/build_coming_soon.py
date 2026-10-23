@@ -39,8 +39,8 @@ ASSETS = {
 # Contact cards ("Add to contacts"). Every value comes from the team: the confirmed contacts
 # (CLAUDE.md, ground rule 2) and their own Blinq digital business cards, read 2026-10-22
 # (Brandon: blinq.me/cmere9vg301rxs60mq7nu5g5g, Kaitlyn: blinq.me/WXgsLzUBTC2V). No license
-# numbers: they are not on the cards and are still unconfirmed. The photos are the interim crops
-# of the team portrait; swap in the Blinq profile photos by replacing the "photo" files.
+# numbers: they are not on the cards and are still unconfirmed. The photos are the Blinq profile
+# photos, supplied by Jeremy on 2026-10-22 (assets/img/photo/*-contact.jpg).
 #
 # Format: vCard 3.0, the version iPhone, Android (Google Contacts), Outlook and macOS all import.
 # CRLF line endings, lines folded at 75 octets, commas and semicolons escaped in text values.
@@ -56,7 +56,7 @@ CONTACTS = [
                ("Digital card", "https://blinq.me/WXgsLzUBTC2V")],
      "instagram": ("_ma_real_estate", "https://instagram.com/_ma_real_estate"),
      "note": "Luxury service at every price point. Top Producing Agent. Record Breaking. MA Licensed Realtor with The Oberdorfer Team, powered by REWAP Brokerage LLC.",
-     "photo": "assets/img/photo/kaitlyn-oberdorfer.webp"},
+     "photo": "assets/img/photo/kaitlyn-oberdorfer-contact.jpg"},
     {"slug": "brandon-oberdorfer", "given": "Brandon", "family": "Oberdorfer",
      "uid": "urn:uuid:6f1d0c52-6a1e-4f5b-9a37-0b5f3f8c1a02",
      "title": "MA Licensed Realtor", "tel": "+14062507620", "tel_type": "CELL",
@@ -64,7 +64,7 @@ CONTACTS = [
      "links": [("Digital card", "https://blinq.me/cmere9vg301rxs60mq7nu5g5g")],
      "instagram": ("oberdorferrealtygroup", "https://www.instagram.com/oberdorferrealtygroup/"),
      "note": "Luxury at every price point. Top Producer. Realtor's Choice Winner. MA Licensed Realtor with The Oberdorfer Team, powered by REWAP Brokerage LLC. Also the team line.",
-     "photo": "assets/img/photo/brandon-oberdorfer.webp"},
+     "photo": "assets/img/photo/brandon-oberdorfer-contact.jpg"},
 ]
 
 def _esc(v):
@@ -83,7 +83,7 @@ def _card(c):
     im = Image.open(os.path.join(ROOT, c["photo"])).convert("RGB")
     w, h = im.size
     side = min(w, h)
-    im = im.crop(((w - side) // 2, 0, (w + side) // 2, side)).resize((400, 400), Image.LANCZOS)
+    im = im.crop(((w - side) // 2, 0, (w + side) // 2, side)).resize((min(side, 400),) * 2, Image.LANCZOS)
     buf = io.BytesIO()
     im.save(buf, "JPEG", quality=82, optimize=True, progressive=False)
     street, city, region, code, country = OFFICE
