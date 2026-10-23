@@ -12,7 +12,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-const OT_CS_VERSION = '1.0.1';
+const OT_CS_VERSION = '1.0.2';
 const OT_CS_PHONE   = '406-250-7620';
 const OT_CS_HOST    = 'oberdorferteam.com';
 
@@ -76,10 +76,14 @@ add_action( 'wp_head', function () {
 	printf( '<meta property="og:type" content="website"><meta property="og:url" content="%s"><meta property="og:title" content="%s"><meta property="og:description" content="%s"><meta property="og:image" content="%s"><meta name="twitter:card" content="summary">' . "\n",
 		esc_url( $home ), esc_attr( $title ), esc_attr( $desc ), esc_url( $img . 'social-avatar.png' ) );
 	printf( '<link rel="preload" as="image" href="%s" type="image/svg+xml">' . "\n", esc_url( $img . 'logo-primary-gold.svg' ) );
-	printf( '<link rel="apple-touch-icon" href="%s">' . "\n", esc_url( $img . 'apple-touch-icon.png' ) );
+	// Icons (tools/build_icons.py). A Site Icon set in Settings > General takes over if one is added.
 	if ( ! has_site_icon() ) {
+		printf( '<link rel="icon" href="%s" sizes="32x32">' . "\n", esc_url( home_url( '/favicon.ico' ) ) );
 		printf( '<link rel="icon" href="%s" type="image/svg+xml">' . "\n", esc_url( $img . 'favicon.svg' ) );
+		printf( '<link rel="apple-touch-icon" href="%s">' . "\n", esc_url( $img . 'apple-touch-icon.png' ) );
 	}
+	printf( '<link rel="manifest" href="%s">' . "\n", esc_url( $img . 'site.webmanifest' ) );
+	echo '<meta name="theme-color" content="#071D2D">' . "\n";
 
 	// Same entity as the prototype's graph (@id), with only confirmed facts.
 	$ld = array(
@@ -97,6 +101,20 @@ add_action( 'wp_head', function () {
 	);
 	echo '<script type="application/ld+json">' . wp_json_encode( $ld, JSON_UNESCAPED_SLASHES ) . "</script>\n";
 }, 1 );
+
+/**
+ * /favicon.ico. Browsers and Google ask for it at the site root. Without a Site Icon,
+ * WordPress answers with a redirect to its own "W" logo; serve the brand icon instead.
+ */
+add_action( 'do_faviconico', function () {
+	if ( has_site_icon() ) {
+		return; // WordPress redirects to the Site Icon
+	}
+	header( 'Content-Type: image/x-icon' );
+	header( 'Cache-Control: public, max-age=604800' );
+	readfile( get_theme_file_path( 'assets/img/favicon.ico' ) );
+	exit;
+}, 1 ); // before core's do_favicon (priority 10), which redirects
 
 /** WordPress prints its own canonical on singular views; this page prints one for the home. */
 remove_action( 'wp_head', 'rel_canonical' );

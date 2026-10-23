@@ -23,7 +23,11 @@ DIST = os.path.join(ROOT, "wordpress", "dist")
 ASSETS = {
     "assets/logo/logo-primary-gold.svg": "logo-primary-gold.svg",
     "assets/logo/favicon.svg": "favicon.svg",
+    "assets/logo/favicon.ico": "favicon.ico",
     "assets/logo/apple-touch-icon.png": "apple-touch-icon.png",
+    "assets/logo/icon-192.png": "icon-192.png",
+    "assets/logo/icon-512.png": "icon-512.png",
+    "assets/logo/site.webmanifest": "site.webmanifest",
     "assets/logo/social-avatar.png": "social-avatar.png",
     "assets/img/rewap-logo.webp": "rewap-logo.webp",
 }
@@ -73,7 +77,10 @@ def preview(pattern):
 <meta name="description" content="{head_desc}">
 <!-- Preview of the WordPress coming-soon theme (wordpress/oberdorfer-coming-soon). Not the live site. -->
 <meta name="robots" content="noindex">
+<link rel="icon" href="assets/img/favicon.ico" sizes="32x32">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#071D2D">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Manrope:wght@400;600&display=swap">
 <link rel="stylesheet" href="assets/css/coming-soon.css">
