@@ -114,7 +114,7 @@ Leave `oberdorferteam.com` without these. It gets the Google Workspace records i
 
 ## 3. WordPress settings
 
-**Status, 2026-10-22:** set as below (Site Title, Tagline, `https` addresses, New York timezone, `F j, Y` dates, registration off, search engines allowed, comments and pingbacks off, post-name permalinks). Theme 1.0.1 is active. Still to do by hand: move "Hello world!", "Sample Page" and the draft Privacy Policy to the Trash, delete Akismet and Hello Dolly, delete two of the three default themes, and add a two-factor plugin.
+**Status, 2026-10-22:** set as below (Site Title, Tagline, `https` addresses, New York timezone, `F j, Y` dates, registration off, search engines allowed, comments and pingbacks off, post-name permalinks). Theme 1.0.1 is active. "Hello world!", "Sample Page" and the draft Privacy Policy are in the Trash. The Two Factor plugin (WordPress.org) is active, with auto-updates on for it and Breeze. Still to do by hand: each administrator turns on two-factor in Users → Profile; delete Akismet and Hello Dolly; delete two of the three default themes; empty the Trash.
 
 | Screen | Setting | Value |
 |---|---|---|
