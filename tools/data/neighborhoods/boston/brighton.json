@@ -1,0 +1,82 @@
+{
+  "slug": "brighton",
+  "name": "Brighton",
+  "parent": "boston",
+  "city_name": "Boston",
+  "county": "Suffolk County",
+  "region": "Greater Boston",
+  "population_2020": 52047,
+  "population_source": "https://www.bostonplans.org/getattachment/c55502f3-3a70-4772-a894-0c51c325b216",
+  "official_site": "https://www.bostonplans.org/neighborhoods/brighton",
+  "headline": ["A cattle-market town on the Charles,", "with a reservoir loop, Green Line stops and a rail station at Boston Landing."],
+  "answer": "Brighton is a neighborhood in the northwestern corner of Boston, incorporated as its own town in 1807 and annexed to Boston in 1874, with 52,047 residents in 2020 (2020 Census, Boston Planning Department tabulation). Its housing mixes wood-frame triple-deckers, single-family houses and brick apartment buildings. The Green Line B branch runs along Commonwealth Avenue to Boston College, and Boston Landing station is on the Framingham/Worcester commuter rail line.",
+  "meta": "Brighton, Boston: triple-deckers, Victorian Aberdeen and brick apartments by the Chestnut Hill Reservoir, with the Green Line and Boston Landing rail station.",
+  "boundaries": {
+    "text": "The northwestern corner of Boston: the Charles River separates it from Cambridge and Watertown, Newton lies to the west and Brookline to the south, and it meets Allston generally along Everett, Gordon and Kelton Streets.",
+    "source": "https://en.wikipedia.org/wiki/Brighton,_Boston"
+  },
+  "overview": [
+    "The land that became Brighton was assigned to Watertown in 1630 and moved to Newtowne, later Cambridge, in 1634; the settlement south of the Charles was known as Little Cambridge. In 1775 Jonathan Winship I and Jonathan Winship II established a cattle market here to supply the Continental Army. After disputes with Cambridge over the cattle trade and the failure to repair the Great Bridge, Little Cambridge was incorporated as the town of Brighton on February 24, 1807. The Boston & Worcester Railroad came through in 1834, and by 1866 the town had 41 slaughterhouses, later consolidated into the Brighton Stock Yards and the Brighton Abattoir. Brighton, then in Middlesex County, voted in October 1873 to join Boston, and annexation took effect on January 5, 1874.",
+    "The old town center runs along Washington Street. The Brighton Center Historic District, 15 acres around the junction of Washington Street with Market Street and Chestnut Hill Avenue, was listed on the National Register on February 20, 2001; its oldest resource is the Market Street Burial Ground of 1764. In the southwest corner, the Chestnut Hill Reservoir was dedicated on October 25, 1870, as part of Boston's water supply. Nearby, the Aberdeen section was developed after 1887 as a suburb of detached houses along winding roads, served by the Beacon Street trolley, in Colonial Revival, Georgian Revival, Queen Anne and Shingle styles. Brighton is also home to Saint John's Seminary, whose classes began in 1884, part of Boston College's campus, and St. Elizabeth's Medical Center, founded in 1868.",
+    "The Boston Planning Department describes Brighton's housing as wooden triple-deckers, suburban-style single-family houses and brick apartment buildings, with business districts in Brighton Center, Cleveland Circle and Oak Square. Since the mid-2010s, the Boston Landing area in northern Brighton has filled with mixed-use development: New Balance built its headquarters on Guest Street in 2015, the Warrior Ice Arena opened on September 8, 2016, and Boston Landing station opened on May 22, 2017, with New Balance funding its design, construction and maintenance. WGBH built its headquarters on Guest Street in 2007. On the river, the Charles River Speedway headquarters at 525 Western Avenue, built between 1899 and 1940, was rehabilitated from 2019 and reopened as The Speedway in 2021."
+  ],
+  "housing": {
+    "text": "Brighton's housing includes wooden triple-deckers, suburban-style single-family houses and brick apartment buildings, according to the Boston Planning Department; the Aberdeen section holds detached houses in Colonial Revival, Georgian Revival, Queen Anne and Shingle styles, along with apartment and condominium buildings. The Boston Planning & Development Agency's tabulation of the 2016-2020 American Community Survey counts 21,002 occupied housing units in Brighton, 22.7% of them owner-occupied and 77.3% renter-occupied, compared with 35.3% owner-occupied citywide.",
+    "source": "https://www.bostonplans.org/getattachment/86f801a8-f8a6-4d0c-83ed-b9a63684d6b5"
+  },
+  "areas": [
+    {"name": "Brighton Center", "line": "The historic town center along Washington Street; the 15-acre Brighton Center Historic District, centered on Washington Street's junction with Market Street and Chestnut Hill Avenue, holds Greek Revival and Italianate buildings and the 1764 Market Street Burial Ground.", "source": "https://en.wikipedia.org/wiki/Brighton_Center_Historic_District"},
+    {"name": "Oak Square", "line": "A residential section west of Brighton Center, next to the Newton line, with a business district; it was a stop on the Green Line A branch until that service was replaced by buses in 1969.", "source": "https://en.wikipedia.org/wiki/Brighton,_Boston"},
+    {"name": "Aberdeen and Cleveland Circle", "line": "Aberdeen, developed after 1887 with detached houses along winding roads, was designated an architectural conservation district by the Boston Landmarks Commission in 2002; Cleveland Circle, at Brighton's southern tip, is the end of the Green Line C branch.", "source": "https://www.boston.gov/historic-district/aberdeen-architectural-conservation-district"},
+    {"name": "Boston Landing", "line": "A mixed-use district in northern Brighton built since the mid-2010s, with New Balance's headquarters, the Warrior Ice Arena at 90 Guest Street and Boston Landing commuter rail station at Everett and Guest Streets.", "source": "https://en.wikipedia.org/wiki/Boston_Landing_station"}
+  ],
+  "commute": {
+    "rail": [
+      {"line": "Green Line B branch", "stations": ["Warren Street", "Washington Street", "Sutherland Road", "Chiswick Road", "Chestnut Hill Avenue", "South Street", "Boston College (terminus)"]},
+      {"line": "Green Line C branch", "stations": ["Cleveland Circle (terminus)"]},
+      {"line": "Framingham/Worcester Line (commuter rail)", "stations": ["Boston Landing"]}
+    ],
+    "rail_source": "https://en.wikipedia.org/wiki/Green_Line_B_branch",
+    "highways": ["I-90 (Massachusetts Turnpike)", "Soldiers Field Road"],
+    "text": "The Green Line B branch runs along Commonwealth Avenue to its terminus at Boston College, the C branch ends at Cleveland Circle, and the D branch's Reservoir station is one block south of Brighton. Boston Landing station, at Everett and Guest Streets, is on the Framingham/Worcester commuter rail line. MBTA bus routes 57, 64, 65, 66, 70, 86, 501 and 503 serve the neighborhood. The Massachusetts Turnpike passes through northern Brighton, and Soldiers Field Road follows the Charles toward Storrow Drive and downtown."
+  },
+  "schools": {"district": "Boston Public Schools", "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=00350000&orgtypecode=5"},
+  "places": [
+    {"name": "Chestnut Hill Reservoir", "line": "Dedicated on October 25, 1870, as part of Boston's water supply; its remaining Bradlee Basin covers 87.5 acres with a 1.56-mile circumference, and the reservoir was designated a Boston Landmark in 1989.", "source": "https://www.bahistory.org/HistoryWaterForBoston.html"},
+    {"name": "Market Street Burial Ground", "line": "Established in 1764, the oldest resource in the Brighton Center Historic District, which was listed on the National Register in 2001.", "source": "https://en.wikipedia.org/wiki/Brighton_Center_Historic_District"},
+    {"name": "The Speedway", "line": "The former Charles River Speedway headquarters at 525 Western Avenue, built between 1899 and 1940 to designs by William D. Austin, listed on the National Register in 2010 and reopened in 2021 after a rehabilitation under DCR's Historic Curatorship Program.", "source": "https://en.wikipedia.org/wiki/Charles_River_Reservation_(Speedway)-Upper_Basin_Headquarters"},
+    {"name": "Warrior Ice Arena", "line": "A hockey arena and Boston Bruins practice rink at 90 Guest Street in Boston Landing, built by New Balance and opened on September 8, 2016.", "source": "https://en.wikipedia.org/wiki/Warrior_Ice_Arena"},
+    {"name": "Saint John's Seminary", "line": "The archdiocesan seminary, whose first classes began on September 22, 1884; after land sales to Boston College in 2004 and 2007, its campus consists of Saint John's Hall.", "source": "https://en.wikipedia.org/wiki/Saint_John%27s_Seminary_(Massachusetts)"},
+    {"name": "St. Elizabeth's Medical Center", "line": "A teaching hospital founded in 1868, operated by Boston Medical Center Health System since October 1, 2024.", "source": "https://en.wikipedia.org/wiki/St._Elizabeth%27s_Medical_Center_(Boston)"}
+  ],
+  "history": [
+    {"year": "1775", "text": "Jonathan Winship I and Jonathan Winship II established a cattle market in Little Cambridge to supply the Continental Army.", "source": "https://en.wikipedia.org/wiki/Brighton,_Boston"},
+    {"year": "1807", "text": "Little Cambridge separated from Cambridge and was incorporated as the town of Brighton on February 24.", "source": "https://en.wikipedia.org/wiki/Brighton,_Boston"},
+    {"year": "1874", "text": "Annexation to Boston took effect on January 5, after Brighton voters approved it in October 1873.", "source": "https://en.wikipedia.org/wiki/Brighton,_Boston"},
+    {"year": "2017", "text": "Boston Landing station opened on May 22 on the Framingham/Worcester Line, built by New Balance in a public-private partnership.", "source": "https://en.wikipedia.org/wiki/Boston_Landing_station"}
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 37,
+    "sf_sales_2024": 25,
+    "sf_median_2025": 1000000,
+    "sf_median_2024": 1000000,
+    "condo_sales_2025": 266,
+    "condo_sales_2024": 247,
+    "condo_median_2025": 548000,
+    "condo_median_2024": 515000, "reading_condo": "BRIGHTON | YTD Number of Sales 247 266 7.7% | YTD Median Sale Price $515,000 $548,000 6.4%",
+    "reading_1": "BRIGHTON | YTD Number of Sales 25 37 48.0% | YTD Median Sale Price $1,000,000 $1,000,000 0.0%"
+  },
+  "nearby": ["allston", "jamaica-plain", "west-roxbury", "back-bay"],
+  "search_notes": "Not researched in this session: what ranks for 'Brighton MA real estate agent' and 'moving to Brighton Boston' was not checked. To do before launch.",
+  "faq": [
+    {"q": "What is the median home price in Brighton?", "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, which lists Brighton on its own row, the median single-family sale price for calendar year 2025 was $1,000,000, across 37 sales, the same median as in 2024, when there were 25 sales. The condominium median was $548,000 in 2025, across 266 sales, against $515,000 across 247 sales in 2024."},
+    {"q": "Does Brighton have commuter rail?", "a": "Yes. Boston Landing station, at Everett and Guest Streets, opened on May 22, 2017, on the Framingham/Worcester Line. Brighton is also served by the Green Line B branch along Commonwealth Avenue, the C branch at Cleveland Circle and several MBTA bus routes."},
+    {"q": "Which school district serves Brighton?", "a": "Boston Public Schools. School assignment is by address and set by the district under its own rules; review the district's profile with DESE."},
+    {"q": "What is Boston Landing?", "a": "A mixed-use district in northern Brighton developed since the mid-2010s, with New Balance's headquarters (2015), the Warrior Ice Arena (opened September 8, 2016) and Boston Landing commuter rail station (opened May 22, 2017), which New Balance funded."},
+    {"q": "How long is the path around the Chestnut Hill Reservoir?", "a": "The Brighton Allston Historical Society gives the reservoir's remaining Bradlee Basin a circumference of 1.56 miles and an area of 87.5 acres; it was dedicated on October 25, 1870."}
+  ],
+  "notes": "Written 2026-10-23. Population: 52,047 from the BPDA Research Division's '2020 U.S. Census Redistricting Data Release' (August 2021, revised April 2024), table 'Boston Adult and Child Populations', row 'Brighton 52,047 7.7% 47,657 91.6% 4,390 8.4%', which 'Uses consistent 2020 tract-defined neighborhood boundaries'; the same release's change table reads 'Total 48,284 52,047 3,763 7.8%'. The release lists Allston and Brighton separately, so this is Brighton's own boundary. The April 2022 'Boston in Context: Neighborhoods' report gives a different, much lower total (21,874) in its age-group table under block-group boundaries; it was not used for population. Housing: tenure row 'Brighton 21,002 94.9% 4,767 22.7% 16,235 77.3%' and Boston 'Boston 273,188 91.5% 96,502 35.3% 176,686 64.7%' from that April 2022 report (2016-2020 ACS, tract-approximated boundaries, which differ from the population release); 21,002 is the occupied-unit count (4,767 + 16,235). The housing-type description is from the Planning Department's Brighton page (https://www.bostonplans.org/neighborhoods/brighton); the Aberdeen description is from the City of Boston district page. Wikipedia's 'median home age 67 years, 39.8% built before 1939' cites BestPlaces for ZIP 02134 (Allston's ZIP), so it was left out. Annexation: Wikipedia gives the October 1873 vote and January 5, 1874 effective date; the Planning Department page and the Aberdeen page say 'annexed ... in 1873', referring to the vote. Aberdeen designation: the City of Boston page says 2002, Wikipedia says 2001; the city's 2002 is used. Chestnut Hill Reservoir figures (dedication, 87.5 acres, 1.56 miles) are from the Brighton Allston Historical Society; the 1989 Boston Landmark designation is from Wikipedia's reservoir page. Wikipedia's Chestnut Hill Reservation page gives the reservation as 120 acres and a 'one-mile' walking path, which conflicts with 1.56 miles; the FAQ is phrased as the basin's circumference, per the historical society. Green Line stations: Wikipedia's B branch page places Warren Street and stations west of it under Brighton, and Boston College under 'Brighton/Newton'; it reports planned consolidations (Warren Street with Allston Street, Chestnut Hill Avenue with South Street) without completion dates, so the current stations are listed. Bus routes are from Wikipedia's Brighton page and were not checked against MBTA schedules (the MBTA stop page for Boston Landing failed to load). Saint John's Seminary's Lake Street address was not confirmed and is omitted. St. Elizabeth's Medical Center's Cambridge Street address was not confirmed and is omitted. The Speedway: Wikipedia credits the rehabilitation to the Architectural Heritage Foundation under DCR's Historic Curatorship Program. Not used: the I-90 Allston Multimodal project is described in the Allston record, since the viaduct and Beacon Park Yard are in Allston; Brighton's northern edge is near it. Schools: Boston Public Schools (DESE orgcode 00350000); assignment is by address and set by the district; no school is named or described. Nearby: Allston, Jamaica Plain, West Roxbury and Back Bay chosen from the existing slug list; Brighton's direct neighbors other than Allston are Newton, Brookline, Watertown and Cambridge, which are separate municipalities. Fair housing: Boston College, Saint John's Seminary and St. Elizabeth's are named only as institutions and landmarks; the Planning Department page's age statistics and every Wikipedia demographic and ancestry passage were left out, and no sentence describes who lives in Brighton. Search notes not researched."
+}

@@ -1,0 +1,79 @@
+{
+  "slug": "allston",
+  "name": "Allston",
+  "parent": "boston",
+  "city_name": "Boston",
+  "county": "Suffolk County",
+  "region": "Greater Boston",
+  "population_2020": 24904,
+  "population_source": "https://www.bostonplans.org/getattachment/c55502f3-3a70-4772-a894-0c51c325b216",
+  "official_site": "https://www.bostonplans.org/neighborhoods/allston-brighton",
+  "headline": ["Brick apartments on Commonwealth Avenue,", "rail yards turned campus land on the Charles."],
+  "answer": "Allston is a Boston neighborhood on the Charles River, the eastern part of the former town of Brighton, named in 1868 when its railroad station and post office took the name of the painter Washington Allston; it became part of Boston with Brighton in 1874. The Boston Planning Department counted 24,904 residents in 2020. Its housing runs from brick apartment buildings on Commonwealth Avenue to triple-deckers and Victorian houses, and the Green Line B branch runs along Commonwealth Avenue.",
+  "meta": "Allston, Boston: brick apartments, triple-deckers and Victorian houses on the Charles, by Harvard Stadium, with the Green Line B branch and the I-90 project.",
+  "boundaries": {
+    "text": "The Charles River forms Allston's northern and eastern edges, across from Cambridge; it borders Brighton, generally along Everett, Gordon and Kelton Streets, as well as the Fenway-Kenmore area and the town of Brookline. The Massachusetts Turnpike crosses it, with Lower (North) Allston north of Cambridge Street and the Turnpike.",
+    "source": "https://en.wikipedia.org/wiki/Allston"
+  },
+  "overview": [
+    "Allston grew up as the eastern part of Little Cambridge, which became the town of Brighton in 1807. The Boston and Albany Railroad opened a new depot here in 1867, and in 1868 the station and post office in Brighton's eastern portion took the name Allston, after the painter Washington Allston. Allston became part of Boston when Brighton was annexed in 1874, and it has never been a separate municipality. Railroad and livestock operations shaped the area; the livestock trade ended by the mid-20th century, and the Beacon Park rail yard, later CSX's Beacon Park Yard, stayed in use until 2013. Streetcar service along Commonwealth Avenue began on May 18, 1896, from Governors Square to Brighton Avenue.",
+    "Large institutions arrived in the 20th century. Harvard Stadium, an early large structure in reinforced concrete, opened on November 14, 1903, and was designated a National Historic Landmark in 1987. Harvard Business School, founded in 1908, built its campus across the river from Cambridge; its Morgan Hall dates from 1927. Braves Field opened on August 18, 1915, at Commonwealth Avenue and Babcock Street on the site of the Allston Golf Club, and Boston University bought it on July 30, 1953; Boston University's buildings now line Commonwealth Avenue from Kenmore Square to Packard's Corner. The Massachusetts Turnpike Extension opened through Allston in 1964 and 1965, largely on the old Boston and Albany right-of-way. The Boston Planning Department counts 358 acres of academic space in Allston, the most of any Boston neighborhood, and notes that Harvard owns more land in Boston than in Cambridge.",
+    "Brick apartment buildings line Commonwealth Avenue and nearby streets, wooden triple-deckers stand along Brighton Avenue toward Brighton, and Lower Allston has Victorian single- and multi-family houses built between the 1890s and 1920s. Harvard's Science and Engineering Complex opened in 2020. In 2019 work began on a bus lane from Union Square to Packard's Corner. The largest pending change is MassDOT's I-90 Allston Multimodal Project, which is designing a replacement for the elevated stretch of the Turnpike; an independent review team is analyzing cost and engineering, and MassDOT will examine the results in 2026. The plans include West Station, proposed at Ashford Street in the former Beacon Park Yard on the Framingham/Worcester Line."
+  ],
+  "housing": {
+    "text": "Allston's housing is mostly brick apartment buildings, especially on Commonwealth Avenue and nearby streets, with wooden triple-deckers along Brighton Avenue and Victorian single- and multi-family houses from the 1890s to the 1920s in Lower Allston. The Boston Planning & Development Agency's tabulation of the 2016-2020 American Community Survey counts 8,040 occupied housing units in Allston, 14.0% of them owner-occupied and 86.0% renter-occupied, compared with 35.3% owner-occupied citywide.",
+    "source": "https://www.bostonplans.org/getattachment/86f801a8-f8a6-4d0c-83ed-b9a63684d6b5"
+  },
+  "areas": [
+    {"name": "Lower Allston (North Allston)", "line": "The section north of Cambridge Street and the Turnpike, from Everett Street east to the Charles River, centered on Allston Square at Western Avenue and North Harvard Street; Harvard Business School and most of Harvard's athletic facilities are here.", "source": "https://en.wikipedia.org/wiki/Allston"},
+    {"name": "Union Square", "line": "Home to the Allston fire station (Engine 41 and Ladder 14), and the start of a bus lane to Packard's Corner built from 2019.", "source": "https://en.wikipedia.org/wiki/Allston"},
+    {"name": "Harvard Avenue and Allston Village", "line": "The commercial blocks between Commonwealth Avenue and Cambridge Street, with shops and restaurants and a Green Line stop at Harvard Avenue.", "source": "https://en.wikipedia.org/wiki/Allston"},
+    {"name": "Packard's Corner", "line": "Named after Packard's Sales Stable and Riding School, with a Green Line stop; Boston University's buildings extend along Commonwealth Avenue from Kenmore Square to here.", "source": "https://en.wikipedia.org/wiki/Allston"}
+  ],
+  "commute": {
+    "rail": [
+      {"line": "Green Line B branch", "stations": ["Babcock Street", "Packards Corner", "Harvard Avenue", "Griggs Street", "Allston Street"]}
+    ],
+    "rail_source": "https://en.wikipedia.org/wiki/Green_Line_B_branch",
+    "highways": ["I-90 (Massachusetts Turnpike)", "Soldiers Field Road"],
+    "text": "The Green Line B branch runs along Commonwealth Avenue, with stops from Babcock Street to Allston Street, toward Kenmore and downtown. MBTA bus route 57 follows the path of the former A branch along Brighton Avenue, and routes 64, 66, 70 and 86 also serve Allston. Allston has no commuter rail station today; the nearest is Boston Landing in Brighton, and West Station is planned in the former Beacon Park Yard. The Massachusetts Turnpike crosses the neighborhood, and the Paul Dudley White Bicycle Path follows the Charles River along its northern and eastern edges."
+  },
+  "schools": {"district": "Boston Public Schools", "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=00350000&orgtypecode=5"},
+  "places": [
+    {"name": "Harvard Stadium", "line": "Opened on November 14, 1903, on North Harvard Street, a pioneering large structure in reinforced concrete that seats just over 25,000; a National Historic Landmark since 1987.", "source": "https://en.wikipedia.org/wiki/Harvard_Stadium"},
+    {"name": "Harvard Business School", "line": "Founded in 1908, with its campus in Lower Allston across the Charles from Cambridge; Morgan Hall (1927) and Loeb House (1940) were designed by McKim, Mead & White.", "source": "https://en.wikipedia.org/wiki/Harvard_Business_School"},
+    {"name": "Harvard Science and Engineering Complex", "line": "Home to Harvard's John A. Paulson School of Engineering and Applied Sciences, opened in 2020 next to Harvard Business School and the Harvard Innovation Labs.", "source": "https://en.wikipedia.org/wiki/Harvard_John_A._Paulson_School_of_Engineering_and_Applied_Sciences"},
+    {"name": "Nickerson Field", "line": "Boston University's field at 285 Babcock Street, on the site of Braves Field, the Boston Braves' ballpark from 1915 to 1952; the entry gate, right field pavilion and old ticket office survive.", "source": "https://en.wikipedia.org/wiki/Nickerson_Field"},
+    {"name": "Ringer Park", "line": "A city park established in 1916, with a Little League field, tennis and basketball courts, a playground, walking paths and a wooded area with trails; a multi-phase renovation was paused in September 2023 while the city sought grants.", "source": "https://boston.gov/node/13664651"},
+    {"name": "Charles River and the Paul Dudley White Bicycle Path", "line": "The river and its shared-use path border Allston to the north and east, with bridges across to Cambridge.", "source": "https://www.bostonplans.org/neighborhoods/allston-brighton"}
+  ],
+  "history": [
+    {"year": "1868", "text": "The railroad station and post office in eastern Brighton took the name Allston, after the painter Washington Allston.", "source": "https://en.wikipedia.org/wiki/Allston"},
+    {"year": "1874", "text": "Allston became part of Boston when the town of Brighton was annexed on January 5.", "source": "https://en.wikipedia.org/wiki/Brighton,_Boston"},
+    {"year": "1903", "text": "Harvard Stadium opened on November 14.", "source": "https://en.wikipedia.org/wiki/Harvard_Stadium"},
+    {"year": "1964", "text": "The Massachusetts Turnpike Extension opened through Allston in 1964 and 1965, largely on the former Boston and Albany Railroad right-of-way.", "source": "https://en.wikipedia.org/wiki/Allston"}
+  ],
+  "market": {
+    "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
+    "source_url": "https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf",
+    "period": "Calendar year 2025",
+    "sf_sales_2025": 11,
+    "sf_sales_2024": 6,
+    "sf_median_2025": 889900,
+    "sf_median_2024": 1007500,
+    "condo_sales_2025": 66,
+    "condo_sales_2024": 69,
+    "condo_median_2025": 516250,
+    "condo_median_2024": 585000, "reading_condo": "ALLSTON | YTD Number of Sales 69 66 -4.3% | YTD Median Sale Price $585,000 $516,250 -11.8%",
+    "reading_1": "ALLSTON | YTD Number of Sales 6 11 83.3% | YTD Median Sale Price $1,007,500 $889,900 -11.7%"
+  },
+  "nearby": ["brighton", "back-bay", "jamaica-plain", "south-end"],
+  "search_notes": "Not researched in this session: what ranks for 'Allston MA real estate agent' and 'moving to Allston Boston' was not checked. To do before launch.",
+  "faq": [
+    {"q": "What is the median home price in Allston?", "a": "According to The Warren Group's MA December 2025 Sales, Prices by Town table, which lists Allston on its own row, the median condominium sale price for calendar year 2025 was $516,250, across 66 sales, against $585,000 across 69 sales in 2024. The single-family median was $889,900 in 2025, but that row is a very small sample: 11 sales in 2025 and 6 in 2024 (when the median was $1,007,500)."},
+    {"q": "Does Allston have commuter rail?", "a": "Not today. The nearest station is Boston Landing in Brighton, on the Framingham/Worcester Line. West Station is proposed at Ashford Street in the former Beacon Park Yard as part of the I-90 Allston Multimodal Project, but it has no confirmed opening date. Allston is served by the Green Line B branch along Commonwealth Avenue and several MBTA bus routes."},
+    {"q": "Which school district serves Allston?", "a": "Boston Public Schools. School assignment is by address and set by the district under its own rules; review the district's profile with DESE."},
+    {"q": "What is the I-90 Allston Multimodal Project?", "a": "A MassDOT project to replace the elevated stretch of the Massachusetts Turnpike in Allston. Design work is ongoing, and MassDOT says it will examine an independent cost and engineering review in 2026 to decide how to deliver the most transportation benefits with available resources."}
+  ],
+  "notes": "Written 2026-10-23. Population: 24,904 from the BPDA Research Division's '2020 U.S. Census Redistricting Data Release' (August 2021, revised April 2024), table 'Boston Adult and Child Populations', row 'Allston 24,904 3.7% 23,140 92.9% 1,764 7.1%', which 'Uses consistent 2020 tract-defined neighborhood boundaries'; the change table reads 'Total 26,713 24,904 -1,809 -6.8%'. The release lists Allston and Brighton separately, so this is Allston's own boundary. The April 2022 'Boston in Context: Neighborhoods' report gives a much lower total (12,527) under block-group boundaries; not used for population. Housing: tenure row 'Allston 8,040 93.1% 1,128 14.0% 6,912 86.0%' and Boston 35.3% owner-occupied from the April 2022 report (2016-2020 ACS, tract-approximated boundaries, which differ from the population release); 8,040 is the occupied-unit count (1,128 + 6,912). Housing types are from Wikipedia's Allston article. official_site: the Planning Department URL reads 'allston-brighton' but the page covers Allston only; its age statistics were not used. I-90 Allston Multimodal Project: status and the 2026 review are from MassDOT (https://www.mass.gov/allston-multimodal-project), which does not mention West Station, costs or a construction schedule. West Station's location (Ashford Street, former Beacon Park Yard, Framingham/Worcester Line) is from Wikipedia (https://en.wikipedia.org/wiki/West_Station_(MBTA)); that article also reports an August 2023 commitment of $300 million by the City, Harvard, Boston University and MassDOT toward a $1.9 billion project, and gives conflicting timelines ('not proceeded beyond conceptual studies' as of 2026 versus 'construction set to begin in 2027'), so no costs or dates are used. The street intersections of Union Square and Packard's Corner, and the street the 2019 bus lane runs on, were not stated in the pages read, so they are omitted. Ringer Park facts are from the City of Boston 'Ringer Park Improvements' page (boston.gov/node/13664651); its street address was not given. Harvard Science and Engineering Complex: opened 2020 per Wikipedia's SEAS article; no street address or floor area used (the article's 600,000 square feet refers to the school's total space). Harvard Stadium: Wikipedia gives two addresses (95 and 60 N. Harvard Street), so only the street is used. Wikipedia's 1888 'first trolley route' claim was not used. Nickerson Field: Braves Field dates from Wikipedia's Braves Field article (opened August 18, 1915; last game September 21, 1952; BU purchase July 30, 1953). Green Line stations: Wikipedia's B branch page places Babcock Street through Allston Street under Allston and does not assign Amory Street or the Boston University stops to a neighborhood, so those are not listed; a planned consolidation of Allston Street and Warren Street has no completion date. Bus routes are from Wikipedia and were not checked against MBTA schedules. Market: rows from tools/data/boston-neighborhood-rows-2025.json (Warren Group, read with pdf.js 2026-10-23). The single-family row is a very small sample (11 sales in 2025, 6 in 2024), so the FAQ leads with the condo figure and flags the sample size. Schools: Boston Public Schools (DESE orgcode 00350000); assignment is by address and set by the district; no school is named or described. Nearby: Brighton, Back Bay, Jamaica Plain and South End chosen from the slug list; Allston's other neighbors (Fenway-Kenmore, Brookline, Cambridge) have no slug. Fair housing: Allston sits beside Boston University and Harvard, and many sources describe its residents by age and enrollment; none of that is used. The Planning Department's statement on the share of residents aged 18 to 34, Wikipedia's descriptions of Brighton Avenue's cuisines and nightlife, its 'densely populated' wording (also on the Ringer Park page) and all demographic tables were left out. Universities appear only as landholders, buildings and landmarks. Search notes not researched."
+}
