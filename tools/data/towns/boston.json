@@ -43,14 +43,14 @@
     {"name": "Emerald Necklace", "line": "Frederick Law Olmsted's 1,100-acre chain of eight parks over 7 miles, from Charlesgate and the Back Bay Fens to Franklin Park.", "source": "https://www.emeraldnecklace.org/park-overview/"},
     {"name": "Arnold Arboretum", "line": "A 281-acre preserve founded in 1872 and part of the Emerald Necklace, free and open every day.", "source": "https://arboretum.harvard.edu/about/"},
     {"name": "Boston Harbor Islands", "line": "A national and state park of 34 islands and peninsulas, with public ferries to Spectacle, Georges and Peddocks Islands among others.", "source": "https://www.nps.gov/boha/index.htm"},
-    {"name": "Rose Kennedy Greenway", "line": "A 1.5-mile park opened in October 2008 on the land freed when the Big Dig removed the elevated highway, with the Greenway Carousel, fountains and public art.", "source": "https://www.rosekennedygreenway.org/history/"}
+    {"name": "Rose Kennedy Greenway", "line": "A 1.5-mile park opened in October 2008 on the land freed when the Big Dig removed the elevated highway, with the Greenway Carousel.", "source": "https://www.rosekennedygreenway.org/history/"}
   ],
   "history": [
     {"year": "1630", "text": "Puritan settlers founded Boston on the Shawmut Peninsula, naming the town on September 7, 1630 (Old Style).", "source": "https://en.wikipedia.org/wiki/Boston"},
     {"year": "1634", "text": "Boston Common was set aside, now described as the nation's first public park.", "source": "https://en.wikipedia.org/wiki/Boston"},
     {"year": "1822", "text": "Boston was incorporated as a city on March 19, 1822.", "source": "https://en.wikipedia.org/wiki/Boston"},
     {"year": "1897", "text": "The Tremont Street subway opened, the first subway in the United States.", "source": "https://en.wikipedia.org/wiki/Boston"},
-    {"year": "2007", "text": "The Big Dig concluded in December, having rerouted the elevated Central Artery of I-93 into the O'Neill Tunnel; the Rose Kennedy Greenway opened in its place in 2008.", "source": "https://en.wikipedia.org/wiki/Big_Dig"}
+    {"year": "2007", "text": "The Big Dig concluded in December, having rerouted the elevated Central Artery of I-93 into the O'Neill Tunnel; the Rose Kennedy Greenway was created in the space the elevated roadway left.", "source": "https://en.wikipedia.org/wiki/Big_Dig"}
   ],
   "market": {
     "source": "The Warren Group, MA December 2025 Sales, Prices by Town",
