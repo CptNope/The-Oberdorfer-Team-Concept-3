@@ -21,7 +21,9 @@
     {"name": "South Braintree", "line": "The old industrial center along the Monatiquot River, where mills developed in the 1820s and the Old Colony railroad made a junction in 1845.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/bra.pdf"},
     {"name": "East Braintree", "line": "The area at the head of navigation on the Fore River, with Colonial-era Capes along the Monatiquot; its rail stop is Weymouth Landing/East Braintree.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/bra.pdf"},
     {"name": "Braintree Highlands", "line": "Laid out as a street grid in the 1870s and built up in the 20th century; the Thayer house was built here in 1720 before its move.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/bra.pdf"},
-    {"name": "Washington Street", "line": "The town's civic spine since a town house was built midway along it in 1829, with the Thayer and French houses and Town Hall.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/bra.pdf"}
+    {"name": "Washington Street", "line": "The town's civic spine since a town house was built midway along it in 1829, with the Thayer and French houses and Town Hall.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/bra.pdf"},
+    {"name": "Five Corners", "line": "The junction on West Street in South Braintree where the former Route 128 met other roads, which drew commercial building and gas stations in the early 20th century.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/bra.pdf"},
+    {"name": "Elm and Middle Streets", "line": "High ground north of the Monatiquot River where the earliest settlement grew, and the site of the Braintree iron forge of 1646.", "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/bra.pdf"}
   ],
   "commute": {
     "rail": [
@@ -41,7 +43,8 @@
     {"name": "Asa French House", "line": "A house built about 1699 at 766 Washington Street, now owned by the Braintree Historical Society.", "source": "https://www.braintreema.gov/382/Thayer-French-Houses"},
     {"name": "Thayer Public Library", "line": "The town library across from Town Hall, on land acquired in 1953 and rebuilt in 1997, with more than 125,000 items.", "source": "https://www.braintreema.gov/411/Thayer-Public-Library"},
     {"name": "Blue Hills Reservation", "line": "A DCR reservation of more than 7,000 acres and 125 miles of trails, with a paved accessible path on Old Route 128 off West Street in Braintree.", "source": "https://www.mass.gov/locations/blue-hills-reservation"},
-    {"name": "Sunset Lake and the Town Forest", "line": "Two of the town's recreation areas, along with Smith Beach and the Cranberry Pond Conservation District.", "source": "https://www.braintreema.gov/9/About-Us"}
+    {"name": "Sunset Lake and the Town Forest", "line": "Two of the town's recreation areas, along with Smith Beach and the Cranberry Pond Conservation District.", "source": "https://www.braintreema.gov/9/About-Us"},
+    {"name": "Monatiquot River and Rock Falls", "line": "The river through South Braintree, where removal of the Armstrong and Ames Pond dams began in 2023; a fish bypass at Rock Falls now lets river herring reach Great Pond Reservoir for the first time in more than 200 years.", "source": "https://braintreema.gov/958/RiverFisheries-Restoration"}
   ],
   "history": [
     {"year": "1640", "text": "Braintree, colonized in 1635, was incorporated as a town.", "source": "https://en.wikipedia.org/wiki/Braintree,_Massachusetts"},
