@@ -13,11 +13,12 @@
   "answer": "Marlborough is a city of 41,793 people (2020 Census) in Middlesex County, where I-495 meets the eastern end of I-290. Its downtown grew from two 1800s shoe-making villages, and its housing includes three-deckers, double houses and converted factory condominiums. The city has no rail station; buses connect to Southborough and Framingham on the Framingham/Worcester Line.",
   "overview": [
     "Families from Sudbury petitioned for a new town in 1656, and Marlborough was incorporated in 1660. The early settlement was largely destroyed during King Philip's War, then rebuilt along the Post Road, where George Washington stopped at Williams Tavern in 1789. Shoemaking defined the 1800s. Samuel and Joseph Boyd opened the first shoe business in 1836, factory output rose into the millions of dollars by 1865, and Marlborough incorporated as a city in 1890. Its land once also included today's Northborough, Southborough, Westborough, Berlin and Hudson.",
-    "Downtown took shape from two villages, an East Village along Main and Maple Streets and a West Village along Pleasant and Main, which grew together once the railroad ran between them. In 2014 the city created a 50-acre Downtown Village district to encourage mixed-use building, and some old shoe factories and churches nearby are now condominiums. The Assabet River Rail Trail heads north toward Hudson past an overlook above Fort Meadow Reservoir, and the 615-acre Desert Natural Area protects pitch pine and scrub forest on the Sudbury line."
+    "Downtown took shape from two villages, an East Village along Main and Maple Streets and a West Village along Pleasant and Main, which grew together once the railroad ran between them. In 2014 the city created a 50-acre Downtown Village district to encourage mixed-use building, and some old shoe factories and churches nearby are now condominiums. The Assabet River Rail Trail heads north toward Hudson past an overlook above Fort Meadow Reservoir, and the 615-acre Desert Natural Area protects pitch pine and scrub forest on the Sudbury line.",
+    "Most of Marlborough's recent housing has been multifamily rental. The city's draft Marlborough Forward plan (March 2026) describes the existing stock as largely single-family homes built before 1990, and names the Green District in the Southwest Quadrant, with 235 units on 10.2 acres, and Alta French Hill on Lincoln Street among the projects that added hundreds of apartments. Downtown zoning currently limits buildings to four stories or 60 feet, and the plan recommends allowing five. It puts Marlborough at 10.83 percent on the state's Subsidized Housing Inventory, above the 10 percent threshold of Chapter 40B, while warning that expiring affordability restrictions could change that. Marlborough is on the state's list of communities compliant with the MBTA Communities multifamily zoning law, as of October 21, 2026."
   ],
   "housing": {
-    "text": "The Massachusetts Historical Commission's survey of Marlborough records central-chimney Colonial houses, Greek Revival and Italianate side-hall houses and cottages, wood-frame row and double houses, and three-deckers and apartment houses in the West Village and along Mechanic Street, with Dutch Colonial and bungalow houses from the early 1900s. The city's economic development office lists former factories and churches converted to condominiums.",
-    "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/mrb.pdf"
+    "text": "The Massachusetts Historical Commission's survey of Marlborough records central-chimney Colonial houses, Greek Revival and Italianate side-hall houses and cottages, wood-frame row and double houses, and three-deckers and apartment houses in the West Village and along Mechanic Street, with Dutch Colonial and bungalow houses from the early 1900s. The city's economic development office lists former factories and churches converted to condominiums. The 2020 Census counted 17,547 housing units, 4.6 percent of them vacant. The draft Marlborough Forward plan (March 2026), citing American Community Survey estimates, reports that 56 percent of households own their homes and 44 percent rent, and that much of the stock is single-family homes built before 1990.",
+    "source": "https://marlboroughedc.com/wp-content/uploads/2026/07/Forward-Plan-Building-the-Next-Chapter-for-Marlborough_DRAFT.pdf"
   },
   "villages": [
     {
@@ -94,6 +95,16 @@
       "name": "Lake Williams Trail",
       "line": "One of the city's mapped conservation trails, at the lake on the old Post Road.",
       "source": "https://www.marlborough-ma.gov/node/934"
+    },
+    {
+      "name": "Marlborough Center Historic District",
+      "line": "About 23 acres along Main Street from Mechanic Street to Bolton Street (Route 85), listed on the National Register in 1998, including the 1905 Beaux-Arts City Hall and the Old Common Cemetery of 1706.",
+      "source": "https://en.wikipedia.org/wiki/Marlborough_Center_Historic_District"
+    },
+    {
+      "name": "Fort Meadow Reservoir",
+      "line": "About 260 acres on the Hudson line, with Memorial Beach on the Marlborough side and Centennial Beach on the Hudson side; motorized boating is allowed.",
+      "source": "https://en.wikipedia.org/wiki/Fort_Meadow_Reservoir"
     }
   ],
   "history": [
@@ -101,6 +112,16 @@
       "year": "1660",
       "text": "Incorporated as the Town of Marlborough, after Sudbury families petitioned for it in 1656.",
       "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/mrb.pdf"
+    },
+    {
+      "year": "1676",
+      "text": "The settlement was nearly destroyed during King Philip's War.",
+      "source": "https://en.wikipedia.org/wiki/Marlborough,_Massachusetts"
+    },
+    {
+      "year": "1789",
+      "text": "George Washington stopped at Williams Tavern soon after his inauguration.",
+      "source": "https://en.wikipedia.org/wiki/Marlborough,_Massachusetts"
     },
     {
       "year": "1836",
@@ -127,6 +148,14 @@
     "reading_1": "MARLBOROUGH | YTD Number of Sales 233 230 -1.3% | YTD Median Sale Price $592,000 $606,500 2.4% (columns: Dec 2024, Dec 2025, Percent Change)",
     "reading_2": "MARLBOROUGH | YTD Number of Sales 233 230 -1.3% | YTD Median Sale Price $592,000 $606,500 2.4% (columns: Dec 2024, Dec 2025, Percent Change)"
   },
+  "tax": {
+    "fy": "FY2026",
+    "residential_rate": 10.54,
+    "commercial_rate": 18.43,
+    "residential_exemption": false,
+    "source": "https://www.marlborough-ma.gov/369/Present-Past-Tax-Rates",
+    "note": "Commercial rate is the single CIP rate (commercial, industrial and personal property). The city's table lists N/A for residential exemption and open space. FY2025 was $9.86 residential and $16.96 CIP."
+  },
   "nearby": [
     "hudson",
     "sudbury",
@@ -148,7 +177,15 @@
     {
       "q": "Which school district serves Marlborough?",
       "a": "Marlborough Public Schools. Review its profile with DESE."
+    },
+    {
+      "q": "What is the property tax rate in Marlborough?",
+      "a": "For fiscal year 2026, the City of Marlborough lists a residential rate of $10.54 per $1,000 of assessed value and a commercial, industrial and personal property rate of $18.43, with no residential exemption. In fiscal 2025 the rates were $9.86 and $16.96."
+    },
+    {
+      "q": "What kind of housing has been built in Marlborough recently?",
+      "a": "Mostly multifamily rental. The city's draft Marlborough Forward plan (March 2026) names the Green District, with 235 units on 10.2 acres, and Alta French Hill among recent projects, and notes that the existing stock is largely single-family homes built before 1990."
     }
   ],
-  "notes": "Condo fields are null: in both WebFetch readings the converted PDF text of the condo table ended at 'BROOKLI', so Marlborough's condo rows could not be read. Wikipedia lists the Massachusetts Turnpike among Marlborough's highways, but it was left out because no source confirmed it passes through city limits. The MWRTA bus connection is confirmed on MWRTA's site: Route 7 runs from Marlborough to the Framingham station's north lot (https://www.mwrta.com/application/files/1017/0690/7593/Route_7_FULL.pdf), and the Marlborough Commuter Shuttle, run by MWRTA since July 1, 2026, serves Southborough station (https://mwrta.com/routes/commuter-shuttles). Callahan State Park's mass.gov page lists only a Framingham address; Marlborough's conservation page lists it among the city's lands. The MHC survey dates from 1980. Wikipedia credits the population figure to the 2020 Decennial Census. The I-290 'begins here' wording rests on Wikipedia's note that its eastern terminus is in Marlborough."
+  "notes": "Condo fields are null: in both WebFetch readings the converted PDF text of the condo table ended at 'BROOKLI', so Marlborough's condo rows could not be read. Wikipedia lists the Massachusetts Turnpike among Marlborough's highways, but it was left out because no source confirmed it passes through city limits. The MWRTA bus connection is confirmed on MWRTA's site: Route 7 runs from Marlborough to the Framingham station's north lot (https://www.mwrta.com/application/files/1017/0690/7593/Route_7_FULL.pdf), and the Marlborough Commuter Shuttle, run by MWRTA since July 1, 2026, serves Southborough station (https://mwrta.com/routes/commuter-shuttles). Callahan State Park's mass.gov page lists only a Framingham address; Marlborough's conservation page lists it among the city's lands. The MHC survey dates from 1980. Wikipedia credits the population figure to the 2020 Decennial Census. The I-290 'begins here' wording rests on Wikipedia's note that its eastern terminus is in Marlborough. Deepened 2026-10-22: added a third overview paragraph on housing and planning, from the draft Marlborough Forward plan, March 2026 (https://marlboroughedc.com/wp-content/uploads/2026/07/Forward-Plan-Building-the-Next-Chapter-for-Marlborough_DRAFT.pdf; Green District 235 units on 10.2 acres, Alta French Hill, the 4-story/60-foot downtown limit and the 5-story recommendation, SHI 10.83%, 56% own and 44% rent from ACS 5-year estimates with no year stated) and the state's MBTA Communities compliance list (https://www.mass.gov/doc/mbta-communities-district-compliance-letters/download, 'As of October 21, 2026', no. 74 Marlborough). The plan does not discuss MBTA Communities zoning, so which district the city used, and when it was adopted, are unconfirmed. Alta French Hill's street (303 Lincoln Street) is from the economic development office's housing page. Housing text extended with the 2020 Census unit count as reported by Wikipedia (Marlborough article, which credits the Census) and the Forward plan figures; the MHC survey text is kept and its source remains on the village entries. No housing production plan could be found. Places added: Marlborough Center Historic District and Fort Meadow Reservoir (both Wikipedia). History added: 1676 and 1789 (Wikipedia, Marlborough). Tax object and FAQ from the city's Present & Past Tax Rates page; the DLS Databank report page returned no data. The MMA profile's $9.86/$16.96 are the FY2025 rates. The economic development office's French Hill description of who first settled the area was left out under the fair housing rules."
 }

@@ -13,7 +13,8 @@
   "answer": "Lowell is a Middlesex County city of 115,554 people (2020 Census), founded as a textile mill town and incorporated in 1826. Most of its housing was built before 1960, with a mix of multi-family buildings, duplexes, single-family homes and converted mills. The MBTA Lowell Line runs from Lowell station to Boston's North Station, and I-495 and US-3 cross the city.",
   "overview": [
     "The first large textile mill went up in 1822 on land that would become Lowell, and the town of Lowell was incorporated on March 1, 1826, then chartered as a city in 1836. By the 1850s it had the largest industrial complex in the United States. Much of that landscape survives: Lowell National Historical Park, created in 1978, runs boat tours through the canal system and recreates 19th-century textile work in the Boott Cotton Mills Museum. Along the river, the Vandenberg Esplanade is part of the state's Lowell Heritage State Park.",
-    "Lowell's neighborhoods differ widely. Downtown, the Acre and Back Central hold most of the city's rental housing, while parts of Belvidere, Pawtucketville and the Highlands are mostly single-family streets. Beyond the mill core, the Lowell-Dracut-Tyngsboro State Forest, shared with two neighboring towns, adds about six miles of trails."
+    "Lowell's neighborhoods differ widely. Downtown, the Acre and Back Central hold most of the city's rental housing, while parts of Belvidere, Pawtucketville and the Highlands are mostly single-family streets. Beyond the mill core, the Lowell-Dracut-Tyngsboro State Forest, shared with two neighboring towns, adds about six miles of trails.",
+    "Lowell's zoning ordinance dates to 2004, and the city is rewriting it, with Community Scale, Levine Planning Strategies and BBHS Law as consultants; a public forum on data centers in June 2026 was part of that work. The Hamilton Canal District, 13 acres of vacant and underused land beside former mills downtown, became the first part of the city governed by a form-based code, under a September 2008 master plan and a February 2009 zoning section, with Trinity Financial as master developer. As a Gateway City, Lowell offers the state's Housing Development Incentive Program, a tax exemption and credit for market-rate housing created by substantial rehabilitation, and its 2024 to 2028 Housing Production Plan credits conversions of downtown buildings and mills with much of the city's recent production. The state lists Lowell as compliant with the MBTA Communities law, as of October 21, 2026."
   ],
   "housing": {
     "text": "Lowell's Housing Production Plan for 2024 to 2028 reports that 77% of the city's housing was built before 1960, with nearly a third predating 1900, and that 45% of units are in buildings of three or more units. Conversions of downtown buildings and mills account for much of recent production, and parts of Belvidere, Pawtucketville and the Highlands are predominantly single-family.",
@@ -112,12 +113,37 @@
       "name": "Lowell Folk Festival",
       "line": "A free festival held downtown on the last full weekend of July, with stages at Boarding House Park and along Market Street.",
       "source": "https://lowellfolkfestival.org/pages/faq"
+    },
+    {
+      "name": "Pollard Memorial Library",
+      "line": "Designed by Frederick W. Stickney and built in 1890 and 1891 as Memorial Hall, renamed in 1981 and renovated in the mid-2000s.",
+      "source": "https://en.wikipedia.org/wiki/Lowell,_Massachusetts"
+    },
+    {
+      "name": "Western Avenue Studios",
+      "line": "A converted mill at 122 Western Avenue with studios for more than 300 working artists and musicians.",
+      "source": "https://en.wikipedia.org/wiki/Lowell,_Massachusetts"
+    },
+    {
+      "name": "Pawtucket Falls",
+      "line": "A mile-long set of rapids with a total drop of about 32 feet, which powered the city's 19th-century industry.",
+      "source": "https://en.wikipedia.org/wiki/Lowell,_Massachusetts"
     }
   ],
   "history": [
     {
+      "year": "1822",
+      "text": "The Merrimack Manufacturing Company was incorporated, and work began rebuilding the Pawtucket Canal.",
+      "source": "https://libguides.uml.edu/early_lowell/time_line"
+    },
+    {
       "year": "1826",
       "text": "The Town of Lowell was incorporated on March 1, 1826.",
+      "source": "https://libguides.uml.edu/early_lowell/time_line"
+    },
+    {
+      "year": "1835",
+      "text": "The Boston & Lowell Railroad began service.",
       "source": "https://libguides.uml.edu/early_lowell/time_line"
     },
     {
@@ -145,6 +171,14 @@
     "reading_1": "LOWELL (single-family; Dec 2024, Dec 2025, Percent Change): YTD Number of Sales 414 412 -0.5%; YTD Median Sale Price $500,000 $510,000 2.0%",
     "reading_2": "LOWELL (single-family): YTD Number of Sales 414 412 -0.5%; YTD Median Sale Price $500,000 $510,000 2.0%"
   },
+  "tax": {
+    "fy": "FY2026",
+    "residential_rate": 11.35,
+    "commercial_rate": 22.04,
+    "residential_exemption": false,
+    "source": "https://lowellma.gov/1611/Assessors",
+    "note": "Commercial rate is the single rate for commercial, industrial and personal property. The assessor's page lists no residential exemption. FY2027 assessments were with the Department of Revenue for certification as of the page's reading."
+  },
   "nearby": [
     "dracut",
     "chelmsford",
@@ -164,7 +198,15 @@
     {
       "q": "Which school district serves Lowell?",
       "a": "Lowell Public Schools. Review its profile with DESE."
+    },
+    {
+      "q": "What is the property tax rate in Lowell?",
+      "a": "For fiscal year 2026, the Lowell Board of Assessors lists a residential rate of $11.35 per $1,000 of assessed value and a commercial, industrial and personal property rate of $22.04 per $1,000."
+    },
+    {
+      "q": "What is the Hamilton Canal District?",
+      "a": "Thirteen acres of formerly vacant and underused land beside the old mills downtown, the first part of Lowell governed by a form-based code, under a 2008 master plan and 2009 zoning, with Trinity Financial as master developer."
     }
   ],
-  "notes": "Condo figures set to null: the PDF's extracted text ends partway through the condo table (at Brookline), so Lowell's condo rows could not be read. Wikipedia gives both 1823 and 1826 for incorporation; the UMass Lowell library timeline confirms March 1, 1826, which is used. The Highlands line comes from Wikipedia; the HPP also names Middlesex Village within the Highlands. The HPP gives 57% of units as renter-occupied in 2020; tenure is mentioned only at the neighborhood level. The Lowell Folk Festival is an annual event rather than a fixed place, and it is included because it occupies downtown public spaces."
+  "notes": "Condo figures set to null: the PDF's extracted text ends partway through the condo table (at Brookline), so Lowell's condo rows could not be read. Wikipedia gives both 1823 and 1826 for incorporation; the UMass Lowell library timeline confirms March 1, 1826, which is used. The Highlands line comes from Wikipedia; the HPP also names Middlesex Village within the Highlands. The HPP gives 57% of units as renter-occupied in 2020; tenure is mentioned only at the neighborhood level. The Lowell Folk Festival is an annual event rather than a fixed place, and it is included because it occupies downtown public spaces. Deepened 2026-10-22: added a third overview paragraph on zoning and planning (sources: the city's Zoning Rewrite page, https://www.lowellma.gov/2234/Zoning-Rewrite, for the 2004 ordinance and consultants; the city news item https://www.lowellma.gov/CivicAlerts.aspx?AID=1062 for the June 29, 2026 data center forum; Wikipedia's Lowell article for the Hamilton Canal District facts; the city's HDIP page, https://www.lowellma.gov/1033/Housing-Development-Incentive-Program-HD; the 2024-2028 HPP already cited in housing; and the state list at https://www.mass.gov/doc/mbta-communities-district-compliance-letters/download, 'As of October 21, 2026', no. 67 Lowell). Which districts Lowell used for MBTA Communities compliance, and when, were not found; the city's planning pages do not mention it. The HPP PDF could not be reread this session (it returned binary data), so no new HPP figures were added; the existing housing text is kept. Places added: Pollard Memorial Library, Western Avenue Studios and Pawtucket Falls (Wikipedia, Lowell); Wikipedia calls Western Avenue Studios the largest artists' studio complex in the country, a superlative left out. History added: 1822 and 1835 (UMass Lowell library timeline). Tax object and FAQ from the Board of Assessors page; the MMA profile lists $11.48 and $22.37 with no year, apparently earlier rates, not used; the DLS Databank report page returned no data. The village list stays at eight because it matches the city's eight neighborhoods as listed by Wikipedia (the Acre, Back Central, Belvidere, Centralville, Downtown, Highlands, Pawtucketville, South Lowell), above the brief's 4 to 6."
 }
