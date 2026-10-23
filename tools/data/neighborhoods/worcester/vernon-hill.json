@@ -1,0 +1,111 @@
+{
+  "slug": "vernon-hill",
+  "parent": "worcester",
+  "city_name": "Worcester",
+  "name": "Vernon Hill",
+  "county": "Worcester County",
+  "region": "Central Massachusetts",
+  "official_site": "https://www.worcesterma.gov/",
+  "headline": ["Three-decker streets on one of the seven hills,", "climbed by Vernon and Providence Streets."],
+  "answer": "Vernon Hill is a neighborhood in southeastern Worcester on one of the city's seven named hills, climbed by Vernon Street and by Providence Street, which carries Route 122A. Streetcars reached its slopes from the 1890s, and three-deckers built mostly from the 1910s to 1930 line its streets, four groups of them listed as National Register historic districts. The 15-acre Vernon Hill Park sits atop the hill at 144 Providence Street.",
+  "meta": "Vernon Hill, Worcester: three-decker historic districts on Providence Street, View Street and Euclid Avenue, Vernon Hill Park and WRTA Routes 1 and 11.",
+  "boundaries": {
+    "text": "Vernon Hill rises in southeastern Worcester, along Vernon Street and Providence Street, with Vernon Hill Park at its top at 144 Providence Street. Perry Avenue, which runs parallel to and east of I-290, lies on its lower western slopes, and Wikipedia's list of Worcester neighborhoods places Vernon Hill on the East Side.",
+    "source": "https://en.wikipedia.org/wiki/George_Fontaine_Three-Decker"
+  },
+  "overview": [
+    "Vernon Hill is one of the seven hills on which Worcester, like Rome, is said to stand. Its main streets follow old routes: the Massachusetts Historical Commission's survey of the city infers a native trail running south toward Singletary Pond along the line of Vernon Street and Greenwood Street. In the Early Industrial period (1830 to 1870) the survey records housing spreading onto the west slope of Vernon Hill along the Ward Street and Millbury Street axis. The Upsala Street School, a Romanesque Revival building by the Worcester architect George Clemence at Upsala and Louise Streets, was finished in 1894 and enlarged in 1902 and 1923.",
+    "The street railway opened the hilltop. After the last horsecars ran in November 1893, the electric system added a line on Providence Street; Upsala Street cars crossed Vernon Hill, and tracks laid across Vernon Square in 1902 let them reach downtown by Green Street. In September 1912 the Providence Street line was extended 3,605 feet along Holcombe and Granite Streets. A streetcar also ran on Vernon Street, and as development pushed into the hill's steeper terrain in the 1910s, View Street was laid out and built with three-deckers. The George Fontaine Three-Decker at 141 Vernon Street, built about 1918 while the area was developing as a streetcar suburb, and the 40 three-deckers of the Euclid Avenue and Montrose Street district, most built between 1910 and 1930 and 27 of them with gambrel roofs, date from this phase.",
+    "The last wave came in the late 1920s. Ten three-deckers with seven period garages at 127 to 145 Providence Street, built between 1926 and 1930, and four on Perry Avenue, built about 1928 as infill on the lower slopes, date from Worcester's last period of three-decker construction. The National Register listed these groups, with View Street, Euclid Avenue and Montrose Street and several single houses on the hill, on February 9, 1990. The summit is public land: Vernon Hill Park, at 144 Providence Street, has ballfields, tennis and basketball courts, a pool run by the state Department of Conservation and Recreation, and the city's first off-leash dog park, opened in August 2017."
+  ],
+  "housing": {
+    "text": "The three-decker is the documented housing type on Vernon Hill. National Register records describe groups built from the 1910s to 1930 on View Street, Euclid Avenue and Montrose Street, Providence Street and Perry Avenue, mostly in Colonial Revival and Craftsman styles, many with gambrel roofs and some with period garages, plus single listed three-deckers such as 90 and 141 Vernon Street and 159 Providence Street. The 1894 Upsala Street School has been converted into apartments. No published count of housing types or ownership for Vernon Hill alone was found.",
+    "source": "https://en.wikipedia.org/wiki/Euclid_Avenue-Montrose_Street_Historic_District"
+  },
+  "areas": [
+    {
+      "name": "Providence Street",
+      "line": "The hill's eastern spine and Route 122A, with the Providence Street Historic District (127-145), the David Dworman Three-Decker (159) and Vernon Hill Park (144) on the summit.",
+      "source": "https://en.wikipedia.org/wiki/Providence_Street_Historic_District"
+    },
+    {
+      "name": "Vernon Street and Euclid Avenue",
+      "line": "The old streetcar street, lined with three-deckers such as 90 and 141 Vernon Street, with the Euclid Avenue and Montrose Street historic district on the hillside between Vernon Street and Perry Avenue.",
+      "source": "https://en.wikipedia.org/wiki/Euclid_Avenue-Montrose_Street_Historic_District"
+    },
+    {
+      "name": "View Street",
+      "line": "A street laid out in the 1910s on the hill's steeper ground, with eleven Colonial Revival three-deckers built between 1916 and 1930 at 7-17 and 8-16 View Street.",
+      "source": "https://en.wikipedia.org/wiki/View_Street_Historic_District"
+    },
+    {
+      "name": "Perry Avenue and the lower slopes",
+      "line": "A residential street running parallel to and east of I-290, where four three-deckers of about 1928 were built as infill on the lower slopes of Vernon Hill.",
+      "source": "https://en.wikipedia.org/wiki/Perry_Avenue_Historic_District"
+    }
+  ],
+  "commute": {
+    "rail": [{"line": "Framingham/Worcester Line", "stations": ["Worcester (Union Station, 2 Washington Square)"]}],
+    "rail_source": "https://www.mbta.com/stops/place-WML-0442",
+    "highways": ["Route 122A (Providence Street)", "I-290", "Route 146"],
+    "text": "Route 122A leaves Route 146 at Providence Street and follows Providence and Winthrop Streets to cross I-290 before meeting Route 122 at Kelley Square. WRTA Route 1 runs via Providence and Granite Streets and Route 11 via Vernon Hill and Greenwood Street toward Quinsigamond Village. Commuter rail leaves from Worcester station at Union Station, downtown, on the MBTA Framingham/Worcester Line."
+  },
+  "schools": {
+    "district": "Worcester Public Schools",
+    "dese_url": "https://profiles.doe.mass.edu/general/general.aspx?topNavID=1&leftNavId=100&orgcode=03480000&orgtypecode=5"
+  },
+  "places": [
+    {
+      "name": "Vernon Hill Park",
+      "line": "A 15-acre city park atop the hill at 144 Providence Street with baseball and softball fields, tennis, basketball and handball courts, a playground, a spray park, the Dennis F. Shine Jr. pool (dedicated 1970, renovated 2009) and the city's first off-leash dog park, opened in August 2017.",
+      "source": "https://www.worcesterma.gov/city-parks/vernon-hill-park"
+    },
+    {
+      "name": "Providence Street Historic District",
+      "line": "Ten three-deckers and seven period garages at 127-145 Providence Street, built between 1926 and 1930 with Colonial Revival and Craftsman detail, on 1.39 acres; listed on the National Register in 1990.",
+      "source": "https://en.wikipedia.org/wiki/Providence_Street_Historic_District"
+    },
+    {
+      "name": "Euclid Avenue-Montrose Street Historic District",
+      "line": "Forty Colonial Revival three-deckers on a steep hillside between Vernon Street and Perry Avenue, most built between 1910 and 1930 and 27 of them with gambrel roofs; listed on the National Register in 1990.",
+      "source": "https://en.wikipedia.org/wiki/Euclid_Avenue-Montrose_Street_Historic_District"
+    },
+    {
+      "name": "View Street Historic District",
+      "line": "Eleven Colonial Revival three-deckers built between 1916 and 1930 on a street laid out as building reached the hill's steeper terrain; listed on the National Register in 1990.",
+      "source": "https://en.wikipedia.org/wiki/View_Street_Historic_District"
+    },
+    {
+      "name": "Upsala Street School",
+      "line": "A Romanesque Revival school at 36 Upsala Street, designed by George Clemence, finished in 1894 and enlarged in 1902 and 1923; listed on the National Register in 1980 and converted into apartments.",
+      "source": "https://en.wikipedia.org/wiki/Upsala_Street_School"
+    },
+    {
+      "name": "David Dworman Three-Decker",
+      "line": "A Craftsman three-decker of about 1926 at 159 Providence Street, across from Vernon Hill Park, listed on the National Register in 1990.",
+      "source": "https://en.wikipedia.org/wiki/David_Dworman_Three-Decker"
+    },
+    {
+      "name": "Providence Street Playground",
+      "line": "A 4.6-acre city park at 239 Providence Street since 2010, with a two-section playground and Glodis Field, an artificial turf field named for the late State Rep. William J. Glodis.",
+      "source": "https://www.worcesterma.gov/city-parks/providence-street-playground"
+    }
+  ],
+  "history": [
+    {"year": "1894", "text": "The Upsala Street School, designed by George Clemence, was finished; it was enlarged in 1902 and 1923.", "source": "https://en.wikipedia.org/wiki/Upsala_Street_School"},
+    {"year": "1902", "text": "Streetcar tracks were laid across Vernon Square, letting Upsala Street cars reach downtown via Green Street.", "source": "https://en.wikipedia.org/wiki/Worcester_Consolidated_Street_Railway"},
+    {"year": "1912", "text": "In September the Providence Street streetcar line was extended 3,605 feet along Holcombe and Granite Streets.", "source": "https://en.wikipedia.org/wiki/Worcester_Consolidated_Street_Railway"},
+    {"year": "1990", "text": "On February 9 the National Register listed the Providence Street, View Street, Perry Avenue and Euclid Avenue-Montrose Street historic districts with other Worcester three-deckers.", "source": "https://en.wikipedia.org/wiki/National_Register_of_Historic_Places_listings_in_eastern_Worcester,_Massachusetts"}
+  ],
+  "market": null,
+  "nearby": ["grafton-hill", "union-hill", "quinsigamond-village", "canal-district"],
+  "search_notes": "A search for 'Vernon Hill Worcester MA real estate' returned Redfin's Vernon Hill listing pages, NeighborhoodScout profiles (statistical, with demographic and crime content a fair-housing guide cannot repeat), a Bean Group page and Boston.com listings. Wikipedia has no Vernon Hill article; the neighborhood appears in its neighborhood list and in the articles for individual National Register three-deckers. No sourced guide connects the streetcar lines, the 1990 three-decker listings and Vernon Hill Park, which is the gap this page fills.",
+  "faq": [
+    {"q": "What is the median home price in Vernon Hill, Worcester?", "a": "The Warren Group does not report Vernon Hill separately. Citywide, the median single-family sale price in Worcester for calendar year 2025 was $430,000 across 884 sales, up from $420,000 across 904 sales in 2024, according to its MA December 2025 Sales, Prices by Town report."},
+    {"q": "Is there commuter rail near Vernon Hill?", "a": "Vernon Hill has no station of its own. The nearest is Worcester station at Union Station, 2 Washington Square, downtown, on the MBTA Framingham/Worcester Line. WRTA Routes 1 and 11 serve the hill, and Providence Street carries Route 122A."},
+    {"q": "Which school district serves Vernon Hill?", "a": "Worcester Public Schools. School assignment is by address and is set by the district; review the district's profile with DESE."},
+    {"q": "Is Vernon Hill one of Worcester's seven hills?", "a": "Yes. Vernon Hill is one of the seven hills Worcester is traditionally said to stand on, with Airport Hill, Bancroft Hill, Belmont Hill (Bell Hill), Grafton Hill, Green Hill and Pakachoag Hill. The 15-acre Vernon Hill Park sits on its top."},
+    {"q": "What kind of housing is on Vernon Hill?", "a": "Mostly three-deckers. Four groups built from the 1910s to 1930, on View Street, Euclid Avenue and Montrose Street, Providence Street and Perry Avenue, are National Register historic districts, many with Colonial Revival or Craftsman detail and gambrel roofs."}
+  ],
+  "notes": "Written 2026-10-23. Boundaries: no official city boundary was found. The boundary text combines Wikipedia's George Fontaine Three-Decker article ('southeastern Worcester's Vernon Hill neighborhood', 141 Vernon Street), the city's Vernon Hill Park page ('a 15-acre park located atop Vernon Hill', 144 Providence Street), the Perry Avenue Historic District article (lower slopes of Vernon Hill; Perry Avenue 'parallel to and east of Interstate 290') and Wikipedia's neighborhood list (https://en.wikipedia.org/wiki/Neighborhoods_in_Worcester,_Massachusetts; Vernon Hill under East Side). The Euclid Avenue-Montrose Street article does not name Vernon Hill; it places the district between Vernon Street and Perry Avenue, which the other sources put on the hill. The Peter Baker Three-Decker article (90 Vernon Street, c. 1902) says only 'Worcester's south east side'. Task-brief checks: Quinsigamond Village to the south is supported only indirectly (the MHC report's inferred trail along 'Vernon Street-Greenwood Street', WRTA Route 11 'via Vernon Hill and Greenwood St.', and the Quinsigamond Village record's Greenwood Street); the record says only that Route 11 runs toward the village. Green Hill Park was NOT confirmed as nearby: the city's page (https://www.worcesterma.gov/city-parks/green-hill-park, 301 Green Hill Parkway, District 2) names no bounding streets and no source ties it to Vernon Hill, so it is left out. The seven hills list is from Wikipedia's Worcester article (https://en.wikipedia.org/wiki/Worcester,_Massachusetts): 'Airport Hill, Bancroft Hill, Belmont Hill (Bell Hill), Grafton Hill, Green Hill, Pakachoag Hill and Vernon Hill'. The MHC town report (https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/wor.pdf) supplies the inferred trail and the Early Industrial settlement on the west slope along the Ward/Millbury Street axis; the report describes that settlement by the national origin of its residents, which is not repeated. Streetcar facts are from Wikipedia's Worcester Consolidated Street Railway article (Providence Street line in the 1893-94 build-out after the last horsecars ran in November 1893; Upsala Street route over Vernon Hill; Vernon Square tracks 1902; Providence Street extension September 1912); the Vernon Street streetcar is from the View Street article. Where Vernon Square is was not confirmed. Upsala Street School: Wikipedia says it 'has been converted into senior living apartments'; the record says 'apartments' (age wording left out under the fair-housing rules). Providence Street Playground (239 Providence Street) is on the neighborhood's spine street, but no source names Vernon Hill for it; confirm. Left out: the Providence Street Firehouse (98 Providence Street; its article says only 'southeast of the city's downtown'; now Worcester EMS), Worcester Academy (81 Providence Street; Wikipedia places it on Union Hill), the Patrick Murphy and Bridget Shea three-deckers on Jefferson Street (Wikipedia places them in Oak Hill), the Richard O'Brien Three-Decker (43 Suffolk Street; no neighborhood named), Shaarai Torah Synagogue (32 Providence Street; Union Hill per the Grafton Hill record), and the Patrick McGrath Three-Decker (Grafton Hill). Fair housing: the Perry Avenue, View Street and Worcester articles describe who first owned or settled the houses (by national origin and class) and Wikipedia's Worcester article associates Vernon Hill with one ethnic community; none of this is used. NeighborhoodScout's demographic and crime content was not used. The Vernon Hill Park page says the pool's namesake was 'a Vernon Hill corporal'; the record names him only by the pool. Market null: the Warren Group PDF lists Worcester only as a citywide row (read this session: 'YTD Number of Sales 904 884 -2.2%'; 'YTD Median Sale Price $420,000 $430,000 2.4%'); Vernon Hill is not listed. No population figure: no source gives one for this boundary. School assignment is by address and set by the district. WRTA route names are from https://www.therta.com/routes/ (Route 1 'Walmart 146 via Providence & Granite St.'; Route 11 'The Fair Plaza via Vernon Hill and Greenwood St.'). Route 122A wording is from https://en.wikipedia.org/wiki/Massachusetts_Route_122A."
+}
