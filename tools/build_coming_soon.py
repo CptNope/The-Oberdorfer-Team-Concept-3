@@ -31,6 +31,7 @@ ASSETS = {
     "assets/logo/social-avatar.png": "social-avatar.png",
     "assets/img/rewap-logo.webp": "rewap-logo.webp",
     "assets/img/photo/team-portrait.webp": "team-portrait.webp",
+    "assets/img/share-oberdorfer-team-v1.jpg": "share-oberdorfer-team-v1.jpg",
 }
 
 def theme_json():

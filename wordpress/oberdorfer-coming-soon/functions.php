@@ -12,7 +12,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-const OT_CS_VERSION = '1.0.5';
+const OT_CS_VERSION = '1.0.6';
 const OT_CS_PHONE   = '406-250-7620';
 const OT_CS_HOST    = 'oberdorferteam.com';
 
@@ -73,8 +73,14 @@ add_action( 'wp_head', function () {
 	if ( is_front_page() ) {
 		printf( '<link rel="canonical" href="%s">' . "\n", esc_url( $home ) );
 	}
-	printf( '<meta property="og:type" content="website"><meta property="og:url" content="%s"><meta property="og:title" content="%s"><meta property="og:description" content="%s"><meta property="og:image" content="%s"><meta name="twitter:card" content="summary">' . "\n",
-		esc_url( $home ), esc_attr( $title ), esc_attr( $desc ), esc_url( $img . 'social-avatar.png' ) );
+	// Link previews (iMessage, Facebook, LinkedIn, X): a 1200 x 630 image from tools/build_share_image.py.
+	// Apps cache previews by image URL, so a new design gets a new file name (v2, v3 ...).
+	$share = $img . 'share-oberdorfer-team-v1.jpg';
+	printf( '<meta property="og:type" content="website"><meta property="og:site_name" content="The Oberdorfer Team"><meta property="og:url" content="%s"><meta property="og:title" content="%s"><meta property="og:description" content="%s">' . "\n",
+		esc_url( $home ), esc_attr( $title ), esc_attr( $desc ) );
+	printf( '<meta property="og:image" content="%1$s"><meta property="og:image:secure_url" content="%1$s"><meta property="og:image:type" content="image/jpeg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="%2$s">' . "\n",
+		esc_url( $share ), esc_attr( 'Kaitlyn and Brandon Oberdorfer, The Oberdorfer Team: Luxury at every price point.' ) );
+	printf( '<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="%s">' . "\n", esc_url( $share ) );
 	printf( '<link rel="preload" as="image" href="%s" type="image/svg+xml">' . "\n", esc_url( $img . 'logo-primary-gold.svg' ) );
 	printf( '<link rel="preload" as="image" href="%s" type="image/webp" fetchpriority="high">' . "\n", esc_url( $img . 'team-portrait.webp' ) );
 	// Icons (tools/build_icons.py). A Site Icon set in Settings > General takes over if one is added.
