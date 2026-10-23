@@ -97,7 +97,14 @@ body { margin: 0; background: var(--cs-navy); color: var(--cs-ivory); font-famil
   font: 600 0.6875rem/1.4 var(--cs-sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--cs-gold);
 }
 .cs-person a.cs-vcard::before { content: "+"; display: inline-grid; place-items: center; width: 1.35rem; height: 1.35rem; border: 1px solid var(--cs-gold); font: 400 1rem/1 var(--cs-sans); letter-spacing: 0; }
-.cs-person a.cs-vcard:hover { color: var(--cs-gold-pale); }
+.cs-person a.cs-vcard:hover, .cs-saveall a.cs-vcard:hover { color: var(--cs-gold-pale); }
+.cs-saveall a.cs-vcard { display: inline-flex; align-items: center; gap: 0.45rem; min-height: 32px; text-decoration: none; font: 600 0.6875rem/1.4 var(--cs-sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--cs-gold); }
+.cs-saveall a.cs-vcard::before { content: "+"; display: inline-grid; place-items: center; width: 1.35rem; height: 1.35rem; border: 1px solid var(--cs-gold); font: 400 1rem/1 var(--cs-sans); letter-spacing: 0; }
+.cs-saveall a.cs-vcard:hover::before { background: var(--cs-gold); color: var(--cs-navy); }
+.cs-saveall { padding-top: 0.25rem; }
+.cs-role { display: block; margin-top: 0.2rem; font: 600 0.625rem/1.4 var(--cs-sans); letter-spacing: 0.18em; text-transform: uppercase; color: var(--cs-mist); }
+.cs-person a.cs-minor { border-bottom-color: transparent; font-size: 0.875rem; color: var(--cs-gold-pale); }
+.cs-person a.cs-minor:hover { border-bottom-color: var(--cs-gold-pale); }
 .cs-person a.cs-vcard:hover::before { background: var(--cs-gold); color: var(--cs-navy); }
 .cs-serving { margin-top: 1.5rem !important; font: 400 italic 1.125rem/1.4 var(--cs-display); color: var(--cs-mist); }
 
@@ -109,6 +116,8 @@ body { margin: 0; background: var(--cs-navy); color: var(--cs-ivory); font-famil
   .cs-contacts { width: 100%; }
   .cs-person { flex-direction: column; align-items: center; gap: 0.15rem; }
   .cs-person strong { min-width: 0; margin-bottom: 0.15rem; }
+  .cs-saveall { text-align: center; }
+  .cs-contacts > * + * { margin-top: 1.75rem !important; }
 }
 
 /* The townscape sits below the content, like the publication's house linework. */

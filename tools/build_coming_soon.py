@@ -36,21 +36,42 @@ ASSETS = {
     "assets/img/share-oberdorfer-team-v1.jpg": "share-oberdorfer-team-v1.jpg",
 }
 
-# Contact cards ("Add to contacts"). Names, numbers, emails and the office are confirmed
-# (CLAUDE.md, ground rule 2). No titles or license numbers: those are still unconfirmed.
-# The photos are the interim crops of the team portrait used on the demo site's agent pages.
-OFFICE = ("652 Park Ave\\, Unit B", "Worcester", "MA", "01603", "USA")
+# Contact cards ("Add to contacts"). Every value comes from the team: the confirmed contacts
+# (CLAUDE.md, ground rule 2) and their own Blinq digital business cards, read 2026-10-22
+# (Brandon: blinq.me/cmere9vg301rxs60mq7nu5g5g, Kaitlyn: blinq.me/WXgsLzUBTC2V). No license
+# numbers: they are not on the cards and are still unconfirmed. The photos are the interim crops
+# of the team portrait; swap in the Blinq profile photos by replacing the "photo" files.
+#
+# Format: vCard 3.0, the version iPhone, Android (Google Contacts), Outlook and macOS all import.
+# CRLF line endings, lines folded at 75 octets, commas and semicolons escaped in text values.
+# Apple's grouped labels (itemN.X-ABLabel) name the extra links; other apps ignore them safely.
+OFFICE = ("652 Park Ave, Unit B", "Worcester", "MA", "01603", "USA")
+REV = "2026-10-22T00:00:00Z"
 CONTACTS = [
-    {"slug": "kaitlyn-oberdorfer", "given": "Kaitlyn", "family": "Oberdorfer",
-     "tel": "+1-978-257-4938", "email": "kaitlynoberdorfer@gmail.com",
+    {"slug": "kaitlyn-oberdorfer", "given": "Kaitlyn", "family": "Oberdorfer", "maiden": "Flynn",
+     "uid": "urn:uuid:6f1d0c52-6a1e-4f5b-9a37-0b5f3f8c1a01",
+     "title": "MA Licensed Realtor", "tel": "+19782574938", "tel_type": "CELL",
+     "email": "kaitlynoberdorfer@gmail.com",
+     "links": [("Book a meeting", "https://calendly.com/kaitlynoberdorfer/30min"),
+               ("Digital card", "https://blinq.me/WXgsLzUBTC2V")],
+     "instagram": ("_ma_real_estate", "https://instagram.com/_ma_real_estate"),
+     "note": "Luxury service at every price point. Top Producing Agent. Record Breaking. MA Licensed Realtor with The Oberdorfer Team, powered by REWAP Brokerage LLC.",
      "photo": "assets/img/photo/kaitlyn-oberdorfer.webp"},
     {"slug": "brandon-oberdorfer", "given": "Brandon", "family": "Oberdorfer",
-     "tel": "+1-406-250-7620", "email": "brandonoberdorfer@gmail.com",
+     "uid": "urn:uuid:6f1d0c52-6a1e-4f5b-9a37-0b5f3f8c1a02",
+     "title": "MA Licensed Realtor", "tel": "+14062507620", "tel_type": "CELL",
+     "email": "brandonoberdorfer@gmail.com",
+     "links": [("Digital card", "https://blinq.me/cmere9vg301rxs60mq7nu5g5g")],
+     "instagram": ("oberdorferrealtygroup", "https://www.instagram.com/oberdorferrealtygroup/"),
+     "note": "Luxury at every price point. Top Producer. Realtor's Choice Winner. MA Licensed Realtor with The Oberdorfer Team, powered by REWAP Brokerage LLC. Also the team line.",
      "photo": "assets/img/photo/brandon-oberdorfer.webp"},
 ]
 
+def _esc(v):
+    return v.replace("\\", "\\\\").replace(",", "\\,").replace(";", "\\;").replace("\n", "\\n")
+
 def _fold(line):
-    """vCard lines fold at 75 octets; continuation lines start with a space."""
+    """vCard lines fold at 75 octets; continuation lines start with a space (ASCII content)."""
     out = [line[:75]]
     line = line[75:]
     while line:
@@ -58,32 +79,51 @@ def _fold(line):
         line = line[74:]
     return "\r\n".join(out)
 
+def _card(c):
+    im = Image.open(os.path.join(ROOT, c["photo"])).convert("RGB")
+    w, h = im.size
+    side = min(w, h)
+    im = im.crop(((w - side) // 2, 0, (w + side) // 2, side)).resize((400, 400), Image.LANCZOS)
+    buf = io.BytesIO()
+    im.save(buf, "JPEG", quality=82, optimize=True, progressive=False)
+    street, city, region, code, country = OFFICE
+    fn = f"{c['given']} {c['family']}"
+    L = ["BEGIN:VCARD", "VERSION:3.0", "PRODID:-//The Oberdorfer Team//oberdorferteam.com//EN",
+         f"UID:{c['uid']}", f"REV:{REV}",
+         f"N:{_esc(c['family'])};{_esc(c['given'])};;;", f"FN:{_esc(fn)}"]
+    if c.get("maiden"):
+        L.append(f"X-MAIDENNAME:{_esc(c['maiden'])}")
+    L += [f"ORG:The Oberdorfer Team;REWAP Brokerage LLC",
+          f"TITLE:{_esc(c['title'])}",
+          f"TEL;TYPE={c['tel_type']},VOICE,pref:{c['tel']}",
+          f"EMAIL;TYPE=INTERNET,WORK,pref:{c['email']}",
+          f"ADR;TYPE=WORK,pref:;;{_esc(street)};{_esc(city)};{_esc(region)};{code};{_esc(country)}",
+          f"LABEL;TYPE=WORK:{_esc(street)}\\n{_esc(city)}\\, {region} {code}\\n{_esc(country)}",
+          "URL;TYPE=WORK,pref:https://oberdorferteam.com/"]
+    n = 1
+    for label, url in c["links"]:
+        L += [f"item{n}.URL:{url}", f"item{n}.X-ABLabel:{_esc(label)}"]
+        n += 1
+    user, ig = c["instagram"]
+    L += [f"X-SOCIALPROFILE;TYPE=instagram;X-USER={user}:{ig}",
+          f"item{n}.URL:{ig}", f"item{n}.X-ABLabel:Instagram",
+          "CATEGORIES:Real Estate,The Oberdorfer Team",
+          f"NOTE:{_esc(c['note'])}",
+          "PHOTO;ENCODING=b;TYPE=JPEG:" + base64.b64encode(buf.getvalue()).decode(),
+          "END:VCARD"]
+    return "\r\n".join(_fold(l) for l in L) + "\r\n"
+
 def vcards():
     out = os.path.join(THEME, "assets", "vcard")
     os.makedirs(out, exist_ok=True)
+    both = ""
     for c in CONTACTS:
-        im = Image.open(os.path.join(ROOT, c["photo"])).convert("RGB")
-        w, h = im.size
-        side = min(w, h)
-        im = im.crop(((w - side) // 2, 0, (w + side) // 2, side)).resize((360, 360), Image.LANCZOS)
-        buf = io.BytesIO()
-        im.save(buf, "JPEG", quality=82, optimize=True)
-        street, city, region, code, country = OFFICE
-        lines = [
-            "BEGIN:VCARD", "VERSION:3.0",
-            f"N:{c['family']};{c['given']};;;",
-            f"FN:{c['given']} {c['family']}",
-            "ORG:The Oberdorfer Team",
-            f"TEL;TYPE=WORK,VOICE:{c['tel']}",
-            f"EMAIL;TYPE=INTERNET,WORK:{c['email']}",
-            f"ADR;TYPE=WORK:;;{street};{city};{region};{code};{country}",
-            "URL:https://oberdorferteam.com/",
-            "NOTE:The Oberdorfer Team is a real estate team operating under REWAP Brokerage LLC\\, Massachusetts.",
-            "PHOTO;ENCODING=b;TYPE=JPEG:" + base64.b64encode(buf.getvalue()).decode(),
-            "END:VCARD",
-        ]
-        with open(os.path.join(out, c["slug"] + ".vcf"), "w", newline="") as f:
-            f.write("\r\n".join(_fold(l) for l in lines) + "\r\n")
+        card = _card(c)
+        both += card
+        with open(os.path.join(out, c["slug"] + ".vcf"), "w", newline="", encoding="utf-8") as f:
+            f.write(card)
+    with open(os.path.join(out, "oberdorfer-team.vcf"), "w", newline="", encoding="utf-8") as f:
+        f.write(both)
 
 def theme_json():
     src = json.load(open(os.path.join(ROOT, "assets", "tokens", "theme.json")))

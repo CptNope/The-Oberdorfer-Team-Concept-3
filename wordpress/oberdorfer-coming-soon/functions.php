@@ -53,6 +53,7 @@ add_action( 'init', function () {
 	$names = array(
 		'kaitlyn-oberdorfer' => 'Kaitlyn Oberdorfer',
 		'brandon-oberdorfer' => 'Brandon Oberdorfer',
+		'oberdorfer-team'    => 'The Oberdorfer Team',
 	);
 	$file = get_theme_file_path( 'assets/vcard/' . $slug . '.vcf' );
 	if ( ! isset( $names[ $slug ] ) || ! is_readable( $file ) ) {
@@ -60,6 +61,7 @@ add_action( 'init', function () {
 	}
 	header( 'Content-Type: text/vcard; charset=utf-8' );
 	header( 'Content-Disposition: inline; filename="' . $names[ $slug ] . '.vcf"' );
+	header( 'X-Content-Type-Options: nosniff' );
 	header( 'Content-Length: ' . filesize( $file ) );
 	header( 'Cache-Control: public, max-age=86400' );
 	header( 'X-Robots-Tag: noindex' );
@@ -135,8 +137,8 @@ add_action( 'wp_head', function () {
 		'parentOrganization' => array( '@type' => 'Organization', 'name' => 'REWAP Brokerage LLC', 'url' => 'https://rewapbrokerage.com/' ),
 		// Team leaders and their direct contact details (supplied by the team, 2026-10-22).
 		'member'             => array(
-			array( '@type' => 'Person', 'name' => 'Kaitlyn Oberdorfer', 'telephone' => '978-257-4938', 'email' => 'kaitlynoberdorfer@gmail.com' ),
-			array( '@type' => 'Person', 'name' => 'Brandon Oberdorfer', 'telephone' => '406-250-7620', 'email' => 'brandonoberdorfer@gmail.com' ),
+			array( '@type' => 'Person', 'name' => 'Kaitlyn Oberdorfer', 'jobTitle' => 'MA Licensed Realtor', 'telephone' => '978-257-4938', 'email' => 'kaitlynoberdorfer@gmail.com', 'sameAs' => array( 'https://instagram.com/_ma_real_estate', 'https://blinq.me/WXgsLzUBTC2V' ) ),
+			array( '@type' => 'Person', 'name' => 'Brandon Oberdorfer', 'jobTitle' => 'MA Licensed Realtor', 'telephone' => '406-250-7620', 'email' => 'brandonoberdorfer@gmail.com', 'sameAs' => array( 'https://www.instagram.com/oberdorferrealtygroup/', 'https://blinq.me/cmere9vg301rxs60mq7nu5g5g' ) ),
 		),
 	);
 	echo '<script type="application/ld+json">' . wp_json_encode( $ld, JSON_UNESCAPED_SLASHES ) . "</script>\n";
