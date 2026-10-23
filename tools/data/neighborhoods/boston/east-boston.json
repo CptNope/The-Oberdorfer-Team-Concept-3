@@ -9,7 +9,7 @@
   "population_source": "https://www.bostonplans.org/getattachment/c55502f3-3a70-4772-a894-0c51c325b216",
   "official_site": "https://www.bostonplans.org/neighborhoods/east-boston",
   "headline": ["Former harbor islands joined by landfill,", "with five Blue Line stops, Piers Park and Logan Airport on the water."],
-  "answer": "East Boston is a Boston neighborhood across Boston Harbor from downtown, built on several former islands joined by landfill and laid out on a street grid by the East Boston Company from 1833. The Boston Planning Department counted 43,066 residents there in 2020. Its housing runs from Greek Revival brick bowfront houses of 1847 to about 1852 on Jeffries Point to Italianate and Second Empire houses on Eagle Hill, and the Blue Line stops at Maverick, Airport, Wood Island, Orient Heights and Suffolk Downs.",
+  "answer": "East Boston is a Boston neighborhood across Boston Harbor from downtown, built on several former islands joined by landfill and laid out on a street grid by the East Boston Company in the 1830s. The Boston Planning Department counted 43,066 residents there in 2020. Its housing runs from Greek Revival brick bowfront houses of 1847 to about 1852 on Jeffries Point to Italianate and Second Empire houses on Eagle Hill, and the Blue Line stops at Maverick, Airport, Wood Island, Orient Heights and Suffolk Downs.",
   "meta": "East Boston: former harbor islands laid out on a grid from 1833, with Jeffries Point and Eagle Hill, five Blue Line stops, Piers Park and 2025 Warren Group prices.",
   "boundaries": {
     "text": "East Boston lies across Boston Harbor from downtown and Charlestown and borders Winthrop, Revere and Chelsea. Logan International Airport lies mainly in East Boston, with part of the airfield in Winthrop.",
@@ -25,7 +25,7 @@
     "source": "https://www.bostonplans.org/getattachment/86f801a8-f8a6-4d0c-83ed-b9a63684d6b5"
   },
   "areas": [
-    {"name": "Jeffries Point", "line": "The earliest-settled part of East Boston, at the southern end facing downtown, developed by the East Boston Company from 1833; nine Greek Revival brick bowfront houses at 177 to 193 Webster Street line Belmont Square (Brophy Memorial Park) on Camp Hill.", "source": "https://sah-archipedia.org/node/13667"},
+    {"name": "Jeffries Point", "line": "The earliest-settled part of East Boston, at the southern end facing downtown, developed by the East Boston Company in the 1830s; nine Greek Revival brick bowfront houses at 177 to 193 Webster Street line Belmont Square (Brophy Memorial Park) on Camp Hill.", "source": "https://sah-archipedia.org/node/13667"},
     {"name": "Eagle Hill", "line": "A National Register historic district, listed on February 26, 1998, roughly bounded by Meridian, Princeton and White Streets meeting in Prescott Square, with mostly Italianate, Second Empire and Renaissance Revival buildings from about 1834 to 1900.", "source": "https://en.wikipedia.org/wiki/Eagle_Hill_Historic_District"},
     {"name": "Maverick Square", "line": "One of East Boston's two main commercial areas, with Central Square, and the site of the Blue Line's Maverick station, opened on April 18, 1924.", "source": "https://www.bostonplans.org/neighborhoods/east-boston"},
     {"name": "Orient Heights", "line": "The section of East Boston around Constitution Beach, across the water from the runways of Logan Airport, and the Orient Heights Blue Line station, opened on January 5, 1952.", "source": "https://en.wikipedia.org/wiki/Constitution_Beach"}
@@ -46,7 +46,7 @@
     {"name": "Constitution Beach", "line": "A public beach in Orient Heights with a bathhouse, snack bar, playground, courts, baseball fields and an indoor ice rink, about 2,000 feet from Logan's runways 22L and 22R.", "source": "https://en.wikipedia.org/wiki/Constitution_Beach"},
     {"name": "East Boston Greenway", "line": "A path on a former Grand Junction Railroad freight line, opened in 2007, linking Piers Park, Memorial Stadium, Bremen Street Park, Wood Island Bay Marsh and Belle Isle Marsh; it is planned to run 3.3 miles when complete.", "source": "https://en.wikipedia.org/wiki/East_Boston_Greenway"},
     {"name": "Bremen Street Park", "line": "A park on the Greenway with an entrance to the Blue Line's Airport station.", "source": "https://en.wikipedia.org/wiki/East_Boston_Greenway"},
-    {"name": "Belmont Square (Brophy Memorial Park)", "line": "A square at the top of Camp Hill, developed by the East Boston Company from 1833, with views of Boston Harbor, Greek Revival bowfront houses on Webster Street, and the Golden Stairs descending to Marginal Street at the water's edge.", "source": "https://sah-archipedia.org/node/13667"},
+    {"name": "Belmont Square (Brophy Memorial Park)", "line": "A square at the top of Camp Hill, developed by the East Boston Company in the 1830s, with views of Boston Harbor, Greek Revival bowfront houses on Webster Street, and the Golden Stairs descending to Marginal Street at the water's edge.", "source": "https://sah-archipedia.org/node/13667"},
     {"name": "Donald McKay House", "line": "The shipbuilder's house on White Street, a Boston Landmark since 1977 and listed on the National Register; it is a private residence.", "source": "https://en.wikipedia.org/wiki/Donald_McKay"}
   ],
   "history": [
