@@ -4,7 +4,7 @@
  * Slug: oberdorfer-coming-soon/coming-soon
  * Categories: featured
  * Inserter: no
- * Description: The single coming-soon page: logo, team portrait, search-facing heading, brand line, contact details and the brokerage disclosure.
+ * Description: The single coming-soon page: logo, the coming-soon announcement, team portrait, search-facing heading, brand line, contact details and the brokerage disclosure.
  *
  * Every text block here is editable in Appearance > Editor. Nothing on this page may be
  * invented. The copy was supplied by the team on 2026-10-22, with Kaitlyn's and Brandon's
@@ -23,6 +23,16 @@ $img = get_theme_file_uri( 'assets/img/' );
 
 <!-- wp:paragraph {"className":"cs-powered"} -->
 <p class="cs-powered">Powered by REWAP</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"cs-announce","layout":{"type":"default"}} -->
+<div class="wp-block-group cs-announce"><!-- wp:paragraph {"className":"cs-announce__pre"} -->
+<p class="cs-announce__pre">Our new website is</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"cs-announce__big"} -->
+<p class="cs-announce__big">Coming soon</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -49,7 +59,7 @@ $img = get_theme_file_uri( 'assets/img/' );
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"cs-soon"} -->
-<p class="cs-soon">Our new website is coming soon. Your next chapter can begin today.</p>
+<p class="cs-soon">Your next chapter can begin today.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"className":"cs-actions"} -->
@@ -64,11 +74,11 @@ $img = get_theme_file_uri( 'assets/img/' );
 
 <!-- wp:group {"anchor":"contact","className":"cs-contacts","layout":{"type":"default"}} -->
 <div id="contact" class="wp-block-group cs-contacts"><!-- wp:paragraph {"className":"cs-person"} -->
-<p class="cs-person"><strong>Kaitlyn Oberdorfer</strong> <a href="tel:+19782574938">978-257-4938</a> <a href="mailto:kaitlynoberdorfer@gmail.com">kaitlynoberdorfer@gmail.com</a></p>
+<p class="cs-person"><strong>Kaitlyn Oberdorfer</strong> <a href="tel:+19782574938">978-257-4938</a> <a href="mailto:kaitlynoberdorfer@gmail.com">kaitlynoberdorfer@gmail.com</a> <a class="cs-vcard" href="<?php echo esc_url( home_url( '/?vcard=kaitlyn-oberdorfer' ) ); ?>" aria-label="Add Kaitlyn Oberdorfer to your contacts">Add to contacts</a></p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"className":"cs-person"} -->
-<p class="cs-person"><strong>Brandon Oberdorfer</strong> <a href="tel:+14062507620">406-250-7620</a> <a href="mailto:brandonoberdorfer@gmail.com">brandonoberdorfer@gmail.com</a></p>
+<p class="cs-person"><strong>Brandon Oberdorfer</strong> <a href="tel:+14062507620">406-250-7620</a> <a href="mailto:brandonoberdorfer@gmail.com">brandonoberdorfer@gmail.com</a> <a class="cs-vcard" href="<?php echo esc_url( home_url( '/?vcard=brandon-oberdorfer' ) ); ?>" aria-label="Add Brandon Oberdorfer to your contacts">Add to contacts</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 

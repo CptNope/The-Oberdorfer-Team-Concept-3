@@ -36,6 +36,26 @@ body { margin: 0; background: var(--cs-navy); color: var(--cs-ivory); font-famil
 .cs-logo img { display: block; width: 100%; height: auto; }
 .cs-powered { font: 600 0.6875rem/1.4 var(--cs-sans); letter-spacing: 0.24em; text-transform: uppercase; color: var(--cs-mist); }
 
+/* The announcement: a gold-ruled small-caps line over a large italic "Coming soon". */
+.cs-announce { margin-top: clamp(2.5rem, 6vw, 4.5rem) !important; display: flex; flex-direction: column; align-items: center; width: 100%; }
+.cs-announce > * { margin: 0 !important; }
+.cs-announce__pre {
+  display: flex; align-items: center; gap: 1.1rem; width: min(34rem, 100%);
+  font: 600 0.75rem/1.4 var(--cs-sans); letter-spacing: 0.32em; text-transform: uppercase; color: var(--cs-gold);
+}
+.cs-announce__pre::before, .cs-announce__pre::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--cs-gold)); }
+.cs-announce__pre::after { background: linear-gradient(90deg, var(--cs-gold), transparent); }
+.cs-announce__big {
+  margin-top: 0.1em !important; font: 300 italic clamp(3.75rem, 15vw, 10rem)/0.95 var(--cs-display); letter-spacing: -0.02em;
+  color: var(--cs-gold-pale); white-space: nowrap; padding-bottom: 0.08em;
+  background: linear-gradient(180deg, #EFE4CB 0%, var(--cs-gold-pale) 45%, var(--cs-gold) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  animation: cs-rise 1.4s cubic-bezier(.2, .7, .2, 1) both;
+}
+.cs-announce__pre { animation: cs-fade 1.4s ease both 0.2s; }
+@keyframes cs-rise { from { opacity: 0; transform: translateY(0.12em); letter-spacing: 0.02em; } to { opacity: 1; transform: none; letter-spacing: -0.02em; } }
+@keyframes cs-fade { from { opacity: 0; } to { opacity: 1; } }
+@media (forced-colors: active) { .cs-announce__big { -webkit-text-fill-color: CanvasText; background: none; } }
+
 /* Portrait beside the copy; stacked on small screens. */
 .cs-grid {
   margin-top: clamp(2.5rem, 6vw, 4.5rem) !important; width: 100%; max-width: 70rem;
@@ -72,6 +92,13 @@ body { margin: 0; background: var(--cs-navy); color: var(--cs-ivory); font-famil
 .cs-person strong { font: 400 1.25rem/1.2 var(--cs-display); color: var(--cs-ivory); min-width: 11.5rem; }
 .cs-person a { color: var(--cs-ivory); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--cs-gold) 60%, transparent); overflow-wrap: anywhere; }
 .cs-person a:hover { color: var(--cs-gold-pale); border-bottom-color: var(--cs-gold-pale); }
+.cs-person a.cs-vcard {
+  display: inline-flex; align-items: center; gap: 0.45rem; min-height: 32px; border-bottom: 0;
+  font: 600 0.6875rem/1.4 var(--cs-sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--cs-gold);
+}
+.cs-person a.cs-vcard::before { content: "+"; display: inline-grid; place-items: center; width: 1.35rem; height: 1.35rem; border: 1px solid var(--cs-gold); font: 400 1rem/1 var(--cs-sans); letter-spacing: 0; }
+.cs-person a.cs-vcard:hover { color: var(--cs-gold-pale); }
+.cs-person a.cs-vcard:hover::before { background: var(--cs-gold); color: var(--cs-navy); }
 .cs-serving { margin-top: 1.5rem !important; font: 400 italic 1.125rem/1.4 var(--cs-display); color: var(--cs-mist); }
 
 @media (max-width: 52rem) {
@@ -107,4 +134,4 @@ a:focus-visible, .wp-block-button__link:focus-visible { outline: 2px solid var(-
 .cs-footer a:focus-visible { outline-color: var(--cs-gold-ink); }
 .skip-link:not(:focus) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 .skip-link:focus { position: fixed; top: 1rem; left: 1rem; z-index: 10; padding: 0.75rem 1rem; background: var(--cs-ivory); color: var(--cs-navy); }
-@media (prefers-reduced-motion: reduce) { * { transition-duration: 1ms !important; } }
+@media (prefers-reduced-motion: reduce) { * { transition-duration: 1ms !important; animation: none !important; } }

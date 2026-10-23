@@ -40,6 +40,33 @@ add_action( 'init', function () {
 	exit;
 }, 1 );
 
+/**
+ * Contact cards. /?vcard=kaitlyn-oberdorfer and /?vcard=brandon-oberdorfer send the theme's
+ * .vcf files (built by tools/build_coming_soon.py) as text/vcard, so a phone offers to add the
+ * contact. Served through PHP because the server's static-file MIME types may not include .vcf.
+ */
+add_action( 'init', function () {
+	if ( empty( $_GET['vcard'] ) || is_admin() ) {
+		return;
+	}
+	$slug = sanitize_key( wp_unslash( $_GET['vcard'] ) );
+	$names = array(
+		'kaitlyn-oberdorfer' => 'Kaitlyn Oberdorfer',
+		'brandon-oberdorfer' => 'Brandon Oberdorfer',
+	);
+	$file = get_theme_file_path( 'assets/vcard/' . $slug . '.vcf' );
+	if ( ! isset( $names[ $slug ] ) || ! is_readable( $file ) ) {
+		return;
+	}
+	header( 'Content-Type: text/vcard; charset=utf-8' );
+	header( 'Content-Disposition: inline; filename="' . $names[ $slug ] . '.vcf"' );
+	header( 'Content-Length: ' . filesize( $file ) );
+	header( 'Cache-Control: public, max-age=86400' );
+	header( 'X-Robots-Tag: noindex' );
+	readfile( $file );
+	exit;
+}, 2 );
+
 /** Styles: the page CSS and the brand fonts (self-hosted in the full theme). */
 add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style(

@@ -7,13 +7,15 @@ This script, which is safe to run repeatedly:
   1. writes the theme's theme.json from assets/tokens/theme.json (the design tokens), without
      the self-hosted font faces, which the full theme ships;
   2. copies the logo, icons and REWAP plate into the theme's assets/img/;
+  2b. writes the two contact cards (assets/vcard/*.vcf) from CONTACTS below;
   3. inlines the current townscape drawing from assets/img/illustrations.svg into the pattern;
   4. renders coming-soon/index.html, a static preview of the page for client review (noindex),
      with a copy of the theme's assets so it can be published on its own;
   5. zips the theme to wordpress/dist/oberdorfer-coming-soon.zip.
 Run tools/screenshot.py afterwards to refresh the theme's screenshot.png (see the end of main()).
 """
-import json, os, re, shutil, zipfile
+import base64, io, json, os, re, shutil, zipfile
+from PIL import Image
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 THEME = os.path.join(ROOT, "wordpress", "oberdorfer-coming-soon")
@@ -33,6 +35,55 @@ ASSETS = {
     "assets/img/photo/team-portrait.webp": "team-portrait.webp",
     "assets/img/share-oberdorfer-team-v1.jpg": "share-oberdorfer-team-v1.jpg",
 }
+
+# Contact cards ("Add to contacts"). Names, numbers, emails and the office are confirmed
+# (CLAUDE.md, ground rule 2). No titles or license numbers: those are still unconfirmed.
+# The photos are the interim crops of the team portrait used on the demo site's agent pages.
+OFFICE = ("652 Park Ave\\, Unit B", "Worcester", "MA", "01603", "USA")
+CONTACTS = [
+    {"slug": "kaitlyn-oberdorfer", "given": "Kaitlyn", "family": "Oberdorfer",
+     "tel": "+1-978-257-4938", "email": "kaitlynoberdorfer@gmail.com",
+     "photo": "assets/img/photo/kaitlyn-oberdorfer.webp"},
+    {"slug": "brandon-oberdorfer", "given": "Brandon", "family": "Oberdorfer",
+     "tel": "+1-406-250-7620", "email": "brandonoberdorfer@gmail.com",
+     "photo": "assets/img/photo/brandon-oberdorfer.webp"},
+]
+
+def _fold(line):
+    """vCard lines fold at 75 octets; continuation lines start with a space."""
+    out = [line[:75]]
+    line = line[75:]
+    while line:
+        out.append(" " + line[:74])
+        line = line[74:]
+    return "\r\n".join(out)
+
+def vcards():
+    out = os.path.join(THEME, "assets", "vcard")
+    os.makedirs(out, exist_ok=True)
+    for c in CONTACTS:
+        im = Image.open(os.path.join(ROOT, c["photo"])).convert("RGB")
+        w, h = im.size
+        side = min(w, h)
+        im = im.crop(((w - side) // 2, 0, (w + side) // 2, side)).resize((360, 360), Image.LANCZOS)
+        buf = io.BytesIO()
+        im.save(buf, "JPEG", quality=82, optimize=True)
+        street, city, region, code, country = OFFICE
+        lines = [
+            "BEGIN:VCARD", "VERSION:3.0",
+            f"N:{c['family']};{c['given']};;;",
+            f"FN:{c['given']} {c['family']}",
+            "ORG:The Oberdorfer Team",
+            f"TEL;TYPE=WORK,VOICE:{c['tel']}",
+            f"EMAIL;TYPE=INTERNET,WORK:{c['email']}",
+            f"ADR;TYPE=WORK:;;{street};{city};{region};{code};{country}",
+            "URL:https://oberdorferteam.com/",
+            "NOTE:The Oberdorfer Team is a real estate team operating under REWAP Brokerage LLC\\, Massachusetts.",
+            "PHOTO;ENCODING=b;TYPE=JPEG:" + base64.b64encode(buf.getvalue()).decode(),
+            "END:VCARD",
+        ]
+        with open(os.path.join(out, c["slug"] + ".vcf"), "w", newline="") as f:
+            f.write("\r\n".join(_fold(l) for l in lines) + "\r\n")
 
 def theme_json():
     src = json.load(open(os.path.join(ROOT, "assets", "tokens", "theme.json")))
@@ -67,6 +118,7 @@ def preview(pattern):
     """The pattern's block markup as a plain page, with the theme's CSS."""
     body = pattern[pattern.index("?>") + 2:]
     body = re.sub(r"<!-- /?wp:[^>]*-->\n?", "", body)
+    body = re.sub(r"<\?php echo esc_url\( home_url\( '/\?vcard=([a-z-]+)' \) \); \?>", r"assets/vcard/\1.vcf", body)
     body = body.replace("<?php echo esc_url( $img . '", "assets/img/").replace("' ); ?>", "")
     head_desc = ("Brandon and Kaitlyn Oberdorfer bring strategic marketing, skilled negotiation "
                  "and attentive guidance to buyers and sellers across Massachusetts.")
@@ -115,6 +167,7 @@ def zip_theme():
 def main():
     theme_json()
     copy_assets()
+    vcards()
     pattern = inline_townscape()
     preview(pattern)
     out = zip_theme()
