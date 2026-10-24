@@ -53,7 +53,7 @@ CONTACTS = [
      "title": "MA Licensed Realtor", "tel": "+19782574938", "tel_type": "CELL",
      "email": "kaitlynoberdorfer@gmail.com",
      "links": [("Digital card", "https://blinq.me/WXgsLzUBTC2V")],
-     "instagram": ("_ma_real_estate", "https://instagram.com/_ma_real_estate"),
+     "instagram": ("oberdorferteam", "https://www.instagram.com/oberdorferteam/"),
      "note": "Luxury service at every price point. Top Producing Agent. Record Breaking. MA Licensed Realtor with The Oberdorfer Team, powered by REWAP Brokerage LLC.",
      "photo": "assets/img/photo/kaitlyn-oberdorfer-contact.jpg"},
     {"slug": "brandon-oberdorfer", "given": "Brandon", "family": "Oberdorfer",
@@ -61,7 +61,7 @@ CONTACTS = [
      "title": "MA Licensed Realtor", "tel": "+14062507620", "tel_type": "CELL",
      "email": "brandonoberdorfer@gmail.com",
      "links": [("Digital card", "https://blinq.me/cmere9vg301rxs60mq7nu5g5g")],
-     "instagram": ("oberdorferrealtygroup", "https://www.instagram.com/oberdorferrealtygroup/"),
+     "instagram": ("oberdorferteam", "https://www.instagram.com/oberdorferteam/"),
      "note": "Luxury at every price point. Top Producer. Realtor's Choice Winner. MA Licensed Realtor with The Oberdorfer Team, powered by REWAP Brokerage LLC. Also the team line.",
      "photo": "assets/img/photo/brandon-oberdorfer-contact.jpg"},
 ]
