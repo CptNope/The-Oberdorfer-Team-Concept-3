@@ -1,0 +1,46 @@
+# Publishes the WordPress build (block theme + ot-core) as a GitHub release.
+# To release: bump the versions (docs/wordpress-build.md, Releases), add release notes in
+# wordpress/release-notes/, update wordpress/release.json, and push to main. The workflow builds
+# oberdorfer.zip and ot-core.zip with tools/build_wp.py, tags v<version> and attaches both zips.
+# An existing release with the same tag is left alone (bump the version to publish again).
+name: WordPress release
+
+on:
+  push:
+    branches: [main]
+    paths: ["wordpress/release.json"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build the theme and plugin zips
+        run: python3 tools/build_wp.py
+      - name: Check the versions agree
+        run: |
+          V=$(python3 -c "import json;print(json.load(open('wordpress/release.json'))['version'])")
+          grep -q "Version: $V" wordpress/oberdorfer/style.css
+          grep -q "Version:           $V" wordpress/ot-core/ot-core.php
+          grep -q "OT_CORE_VERSION = '$V'" wordpress/ot-core/ot-core.php
+          echo "VERSION=$V" >> "$GITHUB_ENV"
+      - name: Publish the release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if gh release view "v$VERSION" >/dev/null 2>&1; then
+            echo "Release v$VERSION already exists; bump the version to publish again."
+            exit 0
+          fi
+          TITLE=$(python3 -c "import json;print(json.load(open('wordpress/release.json'))['title'])")
+          NOTES=$(python3 -c "import json;print(json.load(open('wordpress/release.json'))['notes'])")
+          PRE=$(python3 -c "import json;print('--prerelease' if json.load(open('wordpress/release.json')).get('prerelease') else '')")
+          gh release create "v$VERSION" wordpress/dist/oberdorfer.zip wordpress/dist/ot-core.zip \
+            --target "$GITHUB_SHA" --title "$TITLE" --notes-file "$NOTES" $PRE

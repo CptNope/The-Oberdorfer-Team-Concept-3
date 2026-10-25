@@ -82,7 +82,7 @@ ot-core also outputs: title tags and meta descriptions, canonical URLs on `https
 
 ## Releases
 
-Each release is a GitHub release tagged `vX.Y.Z` with `oberdorfer.zip` and `ot-core.zip` attached. Bump the version in `wordpress/oberdorfer/style.css`, `wordpress/ot-core/ot-core.php` (header and `OT_CORE_VERSION`), both `readme.txt` files and `VERSION` in `tools/build_wp.py`; run `python3 tools/build_wp.py`; then tag and publish. Pre-releases are for staging only.
+Each release is a GitHub release tagged `vX.Y.Z` with `oberdorfer.zip` and `ot-core.zip` attached. Bump the version in `wordpress/oberdorfer/style.css`, `wordpress/ot-core/ot-core.php` (header and `OT_CORE_VERSION`), both `readme.txt` files and `VERSION` in `tools/build_wp.py`; add notes in `wordpress/release-notes/v<version>.md`; update `wordpress/release.json`; push to `main`. The workflow `.github/workflows/wp-release.yml` builds both zips, tags `v<version>` and publishes the release. Pre-releases are for staging only.
 
 ### v0.1.0 (pre-release, 2026-10-25)
 
