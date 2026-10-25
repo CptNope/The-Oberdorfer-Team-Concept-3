@@ -7,3 +7,4 @@ claude/design-system/project/assets/**/*.svg
 claude/design-system/project/assets/**/*.webp
 claude/design-system/project/assets/**/*.png
 claude/design-system/project/assets/**/*.pdf
+__pycache__/
