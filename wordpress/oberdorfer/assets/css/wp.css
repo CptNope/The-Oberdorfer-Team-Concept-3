@@ -1,0 +1,108 @@
+/* ==========================================================================
+   wp.css: WordPress block wrappers, reset to the design system
+   Loaded last, after tokens.css, base.css, components.css and site.css.
+   No new colors or type: every value is a design token or a value the
+   prototype already writes inline (tools/build_site.py).
+
+   1. Resets: template parts, root spacing, block-library defaults
+   2. Core blocks inside design-system components (query loop, photo hero)
+   3. Layout bridges: classes that stand in for the prototype's inline
+      layout styles (grid placement, stack and cluster gaps, alignment,
+      measures, margins), which core blocks cannot store as raw CSS
+   ========================================================================== */
+
+/* ---- 1. Resets ----------------------------------------------------------- */
+
+/* Template parts are plain wrappers. display: contents lets the sticky
+   .site-header stick to the page instead of to its wrapper. */
+.wp-site-blocks > .wp-block-template-part { display: contents; }
+
+/* The design system sets its own page margins (.container) and section rhythm
+   (.section); WordPress's root padding and block gap stay out of the way.
+   theme.json sets the block gap to 0, so the layout rules for .is-layout-flow
+   add no margins; design-system spacing (.stack, .prose) applies as written. */
+.wp-site-blocks { padding: 0; }
+:where(.wp-site-blocks) > * { margin-block: 0; }
+:where(.wp-site-blocks) main { display: block; }
+
+/* Groups, figures and lists keep the design-system box model. */
+:where(.wp-block-group, .wp-block-image, .wp-block-post-featured-image) { margin: 0; }
+:where(.wp-block-list.toc-mini, .wp-block-list.steps) { padding: 0; }
+
+/* Separators: .dim-rule draws its own rule. */
+.wp-block-separator.dim-rule { border: 0; opacity: 1; }
+
+/* Accordion items built from core/details. */
+.accordion .wp-block-details { margin: 0; }
+
+/* ---- 2. Core blocks inside design-system components ---------------------- */
+
+/* Journal cards from the query loop: the card is a group, not a link. */
+.wp-block-post-template.card-grid-3 { margin: 0; padding: 0; list-style: none; }
+.article-card__media > a { display: block; height: 100%; }
+.article-card .wp-block-post-title a,
+.article-card .wp-block-post-terms a { color: inherit; text-decoration: none; }
+.article-card .wp-block-post-excerpt__excerpt { margin: 0; }
+
+/* Article hero: the featured image fills the photo hero under the scrim,
+   as `.page-hero--photo > img` does in the prototype. */
+.page-hero--photo > .page-hero__photo { position: absolute; inset: 0; z-index: 0; }
+.page-hero--photo > .page-hero__photo img { width: 100%; height: 100%; object-fit: cover; }
+
+/* The excerpt as the hero lead. */
+.page-hero__lead .wp-block-post-excerpt__excerpt { margin: 0; }
+
+/* Query pagination on the journal. */
+.wp-block-query-pagination { font-size: var(--step-body-s); }
+
+/* ---- 3. Layout bridges --------------------------------------------------- */
+
+/* Grid placement inside .split (12 columns). Below 52rem, components.css
+   stacks every .split child to full width. */
+.ot-col-1-5 { grid-column: 1 / span 5; }
+.ot-col-1-6 { grid-column: 1 / span 6; }
+.ot-col-1-7 { grid-column: 1 / span 7; }
+.ot-col-7-6 { grid-column: 7 / span 6; }
+.ot-col-8-5 { grid-column: 8 / span 5; }
+.ot-col-9-4 { grid-column: 9 / span 4; }
+
+.ot-align-start  { align-items: start; }
+.ot-align-center { align-items: center; }
+.ot-align-end    { align-items: end; }
+
+/* Stack and cluster gaps (the prototype's --stack / --cluster). */
+.ot-stack-3 { --stack: var(--space-3); }
+.ot-stack-4 { --stack: var(--space-4); }
+.ot-stack-5 { --stack: var(--space-5); }
+.ot-stack-6 { --stack: var(--space-6); }
+.ot-cluster-6 { --cluster: var(--space-6); }
+
+/* Margins. */
+.ot-mt-2 { margin-top: var(--space-2); }
+.ot-mt-3 { margin-top: var(--space-3); }
+.ot-mt-4 { margin-top: var(--space-4); }
+.ot-mt-5 { margin-top: var(--space-5); }
+.ot-mt-6 { margin-top: var(--space-6); }
+.ot-mt-7 { margin-top: var(--space-7); }
+.ot-mb-3 { margin-bottom: var(--space-3); }
+.ot-mb-4 { margin-bottom: var(--space-4); }
+
+/* Measures, widths and alignment. */
+.ot-measure-30 { max-width: 30ch; }
+.ot-measure-40 { max-width: 40ch; }
+.ot-measure-44 { max-width: 44ch; }
+.ot-rule-short { width: min(30rem, 80%); }
+.ot-w-full { width: 100%; }
+.ot-text-start { text-align: left; }
+
+/* The CTA panel's tighter frame. */
+.ot-frame-tight { --frame-inset: .85rem; }
+
+/* Text colors and sizes the prototype sets inline (tokens only). */
+.ot-text-gold  { color: var(--ot-gold); }   /* on navy only */
+.ot-text-ivory { color: var(--ot-ivory); }
+.ot-text-mist  { color: var(--ot-mist); }
+.ot-text-navy  { color: var(--ot-navy); }
+.ot-fs-1 { font-size: 1rem; }
+.ot-fs-2 { font-size: 2rem; }
+.ot-fs-display-m { font-size: var(--step-display-m); }

@@ -22,6 +22,7 @@ The visual language evolves the team's print publication, *Wakefield at Home*, F
 | `docs/leads-crm-nurture-spec.md` | The built-in CRM, CRM connectors and AI nurture |
 | `docs/idx-options.md` | IDX and MLS PIN options still to decide, with costs, fit and vendor questions |
 | `docs/coming-soon-launch.md` | Cloudways, DNS and WordPress settings for the coming-soon page on oberdorferteam.com |
+| `docs/wordpress-build.md` | The production WordPress build: the `oberdorfer` block theme and the `ot-core` plugin, their URLs, post types, meta and blocks |
 
 ## Ground rules
 
@@ -71,6 +72,7 @@ The visual language evolves the team's print publication, *Wakefield at Home*, F
   - Downloadable PDFs belong in `assets/publications/`, as web-compressed copies.
   - If you add a new top-level folder that pages need, add it to the workflow's `cp` line.
 - **The coming-soon theme** is a one-page WordPress block theme in `wordpress/oberdorfer-coming-soon/` that holds the domain until launch. Edit its pattern, CSS or `functions.php` there, then run `python3 tools/build_coming_soon.py`, which writes its `theme.json` from the tokens, refreshes the `coming-soon/` preview and rebuilds `wordpress/dist/oberdorfer-coming-soon.zip`. Setup steps: `docs/coming-soon-launch.md`.
+- **The production WordPress build** is the block theme `wordpress/oberdorfer/` plus the plugin `wordpress/ot-core/` (contract: `docs/wordpress-build.md`). Run `python3 tools/build_wp.py`: it generates the theme's `theme.json` from the tokens (merged with `theme-overrides.json`), copies the design-system CSS, JS and images into the theme (those copies are git-ignored), snapshots the guides and agents into `ot-core/data/content.json` for the importer, and zips both to `wordpress/dist/`. The guides and profiles render from their records in `ot-core/includes/render-*.php`, ported from `tools/build_site.py`: when a page's markup changes in the prototype, change it there too. Releases are GitHub releases with both zips attached (`docs/wordpress-build.md`, Releases).
 - **Design workflow:** the Impeccable design skill was used. `PRODUCT.md`, `DESIGN.md` and `.impeccable/` are its project files.
 
 ## Claude artifacts

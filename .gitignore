@@ -8,3 +8,14 @@ claude/design-system/project/assets/**/*.webp
 claude/design-system/project/assets/**/*.png
 claude/design-system/project/assets/**/*.pdf
 __pycache__/
+# WordPress build: release zips are GitHub release assets; the theme's design-system copies are made by tools/build_wp.py
+wordpress/dist/oberdorfer.zip
+wordpress/dist/ot-core.zip
+wordpress/oberdorfer/assets/css/tokens.css
+wordpress/oberdorfer/assets/css/base.css
+wordpress/oberdorfer/assets/css/components.css
+wordpress/oberdorfer/assets/css/site.css
+wordpress/oberdorfer/assets/js/
+wordpress/oberdorfer/assets/img/
+wordpress/oberdorfer/assets/logo/
+wordpress/oberdorfer/assets/publications/

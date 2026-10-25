@@ -1,6 +1,6 @@
 # WordPress architecture: what is built in, what is a plugin
 
-**Status:** proposed, 2026-10-22. **Hosting:** Cloudways, PHP 8.4, WordPress 7.x.
+**Status:** proposed 2026-10-22; first build (theme and `ot-core`) released as v0.1.0, a pre-release for staging, 2026-10-25 (`docs/wordpress-build.md`). **Hosting:** Cloudways, PHP 8.4, WordPress 7.x.
 
 The production site for oberdorferteam.com is a custom block theme plus a small set of first-party plugins. Every responsibility below sits in exactly one place. The rule for choosing is simple: **if losing it on a theme change would lose data or break saved content, it is not in the theme.**
 

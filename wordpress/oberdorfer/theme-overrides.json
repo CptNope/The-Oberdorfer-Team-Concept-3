@@ -1,0 +1,28 @@
+{
+	"settings": {
+		"layout": { "contentSize": "46rem", "wideSize": "82rem" },
+		"spacing": { "blockGap": true }
+	},
+	"styles": {
+		"spacing": { "blockGap": "0" },
+		"elements": {
+			"heading": { "color": { "text": "var(--text-display)" } },
+			"link": {
+				"color": { "text": "var(--text-link)" },
+				":hover": { "color": { "text": "var(--text-link-hover)" } }
+			}
+		}
+	},
+	"customTemplates": [
+		{ "name": "page-buy", "title": "Buy", "postTypes": [ "page" ] },
+		{ "name": "page-sell", "title": "Sell", "postTypes": [ "page" ] },
+		{ "name": "page-market", "title": "Market insights", "postTypes": [ "page" ] },
+		{ "name": "page-team", "title": "Our Team", "postTypes": [ "page" ] },
+		{ "name": "page-join", "title": "Join Our Team", "postTypes": [ "page" ] },
+		{ "name": "page-contact", "title": "Contact", "postTypes": [ "page" ] }
+	],
+	"templateParts": [
+		{ "name": "header", "title": "Header", "area": "header" },
+		{ "name": "footer", "title": "Footer", "area": "footer" }
+	]
+}

@@ -79,3 +79,14 @@ ot-core also outputs: title tags and meta descriptions, canonical URLs on `https
 - Parts: `header.html`, `footer.html` (each a single pattern reference, so PHP can resolve asset and page URLs).
 - Patterns: one per page section, named on the FSE canvas boards (`oberdorfer/<name>`).
 - JavaScript: `site.js` (menu, accordions and filters) and `site-demo.js` (demo form behavior, until `ot-leads`).
+
+## Releases
+
+Each release is a GitHub release tagged `vX.Y.Z` with `oberdorfer.zip` and `ot-core.zip` attached. Bump the version in `wordpress/oberdorfer/style.css`, `wordpress/ot-core/ot-core.php` (header and `OT_CORE_VERSION`), both `readme.txt` files and `VERSION` in `tools/build_wp.py`; run `python3 tools/build_wp.py`; then tag and publish. Pre-releases are for staging only.
+
+### v0.1.0 (pre-release, 2026-10-25)
+
+- Block theme: 17 templates, header and footer parts, 49 patterns named after the FSE canvas boards, `theme.json` from the design tokens, the design-system CSS and JS. Every block passes WordPress 7.1's block validator.
+- `ot-core`: post types, meta, eleven server-rendered blocks, titles, descriptions, canonicals on oberdorferteam.com, JSON-LD, sitemap adjustments, `/llms.txt` and the importer (33 town guides, 28 neighborhood guides, three agent profiles, the Worcester office and eight pages).
+- Tested on WordPress 7.1.3 (PHP 8.3, SQLite) installed from the zips: every page type returns 200 (404 for missing pages) with no PHP notices, and the guides match the prototype side by side at 1440 and fit a 390-pixel phone without horizontal scroll.
+- Known gaps: forms are demonstrations until `ot-leads`; listings wait for IDX; journal posts are not imported; guide fields are edited as data until `ot-blocks`; fonts load from Google Fonts (self-host before launch); the prototype's buyer, seller and recruiting form fields (timing, preapproval, licensing) are reduced to the standard inquiry form.

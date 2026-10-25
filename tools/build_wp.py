@@ -29,7 +29,8 @@ ASSET_DIRS = ["assets/img/photo", "assets/logo"]
 ASSET_FILES = ["assets/css/tokens.css", "assets/css/base.css", "assets/css/components.css", "assets/css/site.css",
                "assets/js/site.js", "assets/js/site-demo.js",
                "assets/img/icons.svg", "assets/img/illustrations.svg", "assets/img/rewap-logo.webp",
-               "assets/img/share-oberdorfer-team-v1.jpg"]
+               "assets/img/share-oberdorfer-team-v1.jpg", "assets/img/source-pages/page-1.webp",
+               "assets/publications/wakefield-at-home-fall-2026.pdf"]
 
 
 def deep_merge(a, b):

@@ -222,6 +222,11 @@ add_filter( 'query_vars', function ( $v ) {
 	return $v;
 } );
 
+// Without this, the trailing-slash permalink structure redirects /llms.txt to /llms.txt/.
+add_filter( 'redirect_canonical', function ( $redirect ) {
+	return get_query_var( 'ot_llms' ) ? false : $redirect;
+} );
+
 add_action( 'template_redirect', function () {
 	if ( ! get_query_var( 'ot_llms' ) ) {
 		return;

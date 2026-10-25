@@ -1,0 +1,15 @@
+/*
+Theme Name: The Oberdorfer Team
+Theme URI: https://oberdorferteam.com/
+Author: The Oberdorfer Team
+Description: The block theme for The Oberdorfer Team, a husband-and-wife Massachusetts real estate team operating under REWAP Brokerage LLC. A faithful WordPress version of the static example site, built from the team's design system (tokens, type, components). Presentation only: content, fields, SEO and the guide and agent blocks come from the ot-core plugin, which the community guide and agent profile templates require.
+Requires at least: 7.1
+Tested up to: 7.1
+Requires PHP: 8.3
+Version: 0.1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: oberdorfer
+*/
+
+/* The theme's styles live in assets/css/ (the design system plus wp.css); see functions.php. */
