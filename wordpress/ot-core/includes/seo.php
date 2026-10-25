@@ -211,6 +211,36 @@ add_filter( 'wp_sitemaps_taxonomies', function ( $taxonomies ) {
 	return $taxonomies;
 } );
 
+/* --------------------------------------------------------------------- contact cards */
+
+/**
+ * /?vcard=kaitlyn-oberdorfer, brandon-oberdorfer or oberdorfer-team sends the contact card
+ * (data/vcard/, built by tools/build_coming_soon.py) as text/vcard, so a phone offers to add it.
+ * Served through PHP because the server's static MIME types may not include .vcf.
+ */
+add_action( 'init', function () {
+	if ( empty( $_GET['vcard'] ) || is_admin() ) {
+		return;
+	}
+	$names = array(
+		'kaitlyn-oberdorfer' => 'Kaitlyn Oberdorfer',
+		'brandon-oberdorfer' => 'Brandon Oberdorfer',
+		'oberdorfer-team'    => 'The Oberdorfer Team',
+	);
+	$slug = sanitize_key( wp_unslash( $_GET['vcard'] ) );
+	$file = OT_CORE_DIR . '/data/vcard/' . $slug . '.vcf';
+	if ( ! isset( $names[ $slug ] ) || ! is_readable( $file ) ) {
+		return;
+	}
+	header( 'Content-Type: text/vcard; charset=utf-8' );
+	header( 'Content-Disposition: inline; filename="' . $names[ $slug ] . '.vcf"' );
+	header( 'Content-Length: ' . filesize( $file ) );
+	header( 'X-Content-Type-Options: nosniff' );
+	header( 'X-Robots-Tag: noindex' );
+	readfile( $file );
+	exit;
+}, 2 );
+
 /* --------------------------------------------------------------------- llms.txt */
 
 add_action( 'init', function () {

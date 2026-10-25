@@ -23,7 +23,7 @@ import build_site as S  # noqa: E402  (data and the tested title/description rul
 THEME = os.path.join(ROOT, "wordpress", "oberdorfer")
 CORE = os.path.join(ROOT, "wordpress", "ot-core")
 DIST = os.path.join(ROOT, "wordpress", "dist")
-VERSION = "0.1.0"
+VERSION = "0.1.1"
 
 ASSET_DIRS = ["assets/img/photo", "assets/logo"]
 ASSET_FILES = ["assets/css/tokens.css", "assets/css/base.css", "assets/css/components.css", "assets/css/site.css",
@@ -119,6 +119,7 @@ def agent_entries():
     out = []
     for i, a in enumerate(S.AGENTS):
         rec = {k: a[k] for k in ("name", "given", "family", "role", "partner", "relation", "photo", "photo_w", "photo_h", "photo_note", "email", "direct")}
+        rec["card"] = a.get("card")
         rec.update(AGENT_EXTRA.get(a["slug"], {}))
         meta = {"ot_record": rec, "ot_role": a["role"], "ot_job_title": rec.get("title", ""), "ot_phone": a["direct"] or "",
                 "ot_email": a["email"] or "", "ot_instagram": "https://www.instagram.com/oberdorferteam/", "ot_photo": a["photo"],
@@ -178,6 +179,10 @@ def main():
     theme_json()
     copy_assets()
     data = content()
+    vdst = os.path.join(CORE, "data", "vcard")  # contact cards, served by ot-core at /?vcard=<slug>
+    os.makedirs(vdst, exist_ok=True)
+    for name in os.listdir(os.path.join(ROOT, "assets", "vcard")):
+        shutil.copyfile(os.path.join(ROOT, "assets", "vcard", name), os.path.join(vdst, name))
     a = zip_dir(THEME, "oberdorfer")
     b = zip_dir(CORE, "ot-core")
     print(f"content: {len(data['communities'])} communities, {len(data['agents'])} agents, {len(data['pages'])} pages")

@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.1.0
+Stable tag: 0.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -35,6 +35,9 @@ To run it as a must-use plugin (it then cannot be deactivated from the admin): c
 If an SEO plugin is installed, only one of the two may print meta tags: add `define( 'OT_CORE_SEO_OUTPUT', false );` to wp-config.php to switch this plugin's output off.
 
 == Changelog ==
+
+= 0.1.1 =
+* Contact details from the coming-soon page: Kaitlyn's and Brandon's direct phones and emails, their "MA Licensed Realtor" title and recognition from their digital cards, the team Instagram, and contact cards (vCards) to save to a phone.
 
 = 0.1.0 =
 * First pre-release for staging: post types, meta, server-rendered blocks, search output, llms.txt and the importer for 33 town guides, 28 neighborhood guides, three agent profiles, the Worcester office and the site's pages.

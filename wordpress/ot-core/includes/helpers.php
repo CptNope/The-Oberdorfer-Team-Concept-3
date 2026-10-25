@@ -8,6 +8,7 @@ defined( 'ABSPATH' ) || exit;
 
 const OT_PHONE    = '406-250-7620';
 const OT_TEL      = '+14062507620';
+const OT_INSTAGRAM = 'https://www.instagram.com/oberdorferteam/'; // the team asked (2026-10-24) that every Instagram link go here
 const OT_UPDATED  = '2026-10-22';
 const OT_UPDATED_LABEL = 'October 22, 2026';
 const OT_WARREN_URL = 'https://www.thewarrengroup.com/wp-content/uploads/2026/01/MA-December-2025-Sales_Town.pdf';

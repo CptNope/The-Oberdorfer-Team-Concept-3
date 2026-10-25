@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.1.0
+Stable tag: 0.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,9 @@ Fonts: Cormorant Garamond and Manrope (SIL Open Font License 1.1), loaded from G
 this version; self-hosting is a launch task.
 
 == Changelog ==
+
+= 0.1.1 =
+* Contact details from the coming-soon page: Kaitlyn's and Brandon's direct phones and emails, their "MA Licensed Realtor" title and recognition from their digital cards, the team Instagram, and contact cards (vCards) to save to a phone.
 
 = 0.1.0 =
 * First staging release: templates, header and footer parts, and page-section patterns for

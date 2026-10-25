@@ -4,16 +4,18 @@
  * Slug: oberdorfer/contact-tabs
  * Categories: oberdorfer
  * Inserter: yes
- * Description: The team phone, the contact lines (call or text, email placeholder, office by appointment, service area) and four inquiry forms in tabs: general, buying, selling, joining the team.
+ * Description: The team phone, the contact lines (call or text, email, contact cards, Instagram, office by appointment, service area) and four inquiry forms in tabs: general, buying, selling, joining the team.
  *
  * The contact lines (icons) and the tab list (ARIA tabs driven by site-demo.js) are HTML
  * fragments; each tab panel is a group holding an ot/inquiry-form.
  */
 $i     = fn( $n ) => oberdorfer_icon( $n );
 $lines = oberdorfer_html( '<div>
-      <div class="contact-line">' . $i( 'phone' ) . '<div><p class="h5">Call or text</p><p class="body-s">Brandon &amp; Kaitlyn Oberdorfer · <a href="tel:' . OBERDORFER_TEL . '">' . OBERDORFER_PHONE . '</a></p></div></div>
-      <div class="contact-line">' . $i( 'mail' ) . '<div><p class="h5">Email</p><p class="body-s">[Team email to be confirmed]</p></div></div>
-      <div class="contact-line">' . $i( 'door' ) . '<div><p class="h5">Team office</p><p class="body-s">Worcester, Massachusetts. By appointment. <a href="' . esc_url( oberdorfer_url( '/office/worcester/' ) ) . '">Office details</a></p></div></div>
+      <div class="contact-line">' . $i( 'phone' ) . '<div><p class="h5">Call or text</p><p class="body-s">Kaitlyn Oberdorfer · <a href="tel:+19782574938">978-257-4938</a><br>Brandon Oberdorfer · <a href="tel:' . OBERDORFER_TEL . '">' . OBERDORFER_PHONE . '</a> (also the team line)</p></div></div>
+      <div class="contact-line">' . $i( 'mail' ) . '<div><p class="h5">Email</p><p class="body-s">Kaitlyn · <a href="mailto:kaitlynoberdorfer@gmail.com">kaitlynoberdorfer@gmail.com</a><br>Brandon · <a href="mailto:brandonoberdorfer@gmail.com">brandonoberdorfer@gmail.com</a></p></div></div>
+      <div class="contact-line">' . $i( 'download' ) . '<div><p class="h5">Save our contacts</p><p class="body-s"><a href="' . esc_url( home_url( '/?vcard=kaitlyn-oberdorfer' ) ) . '">Kaitlyn</a> · <a href="' . esc_url( home_url( '/?vcard=brandon-oberdorfer' ) ) . '">Brandon</a> · <a href="' . esc_url( home_url( '/?vcard=oberdorfer-team' ) ) . '">Both</a> (vCard, for your phone\'s contacts)</p></div></div>
+      <div class="contact-line">' . $i( 'external' ) . '<div><p class="h5">Follow along</p><p class="body-s"><a href="https://www.instagram.com/oberdorferteam/" rel="noopener">Instagram @oberdorferteam</a></p></div></div>
+      <div class="contact-line">' . $i( 'door' ) . '<div><p class="h5">Team office</p><p class="body-s">' . esc_html( oberdorfer_address() ) . '. By appointment. <a href="' . esc_url( oberdorfer_url( '/office/worcester/' ) ) . '">Office details</a></p></div></div>
       <div class="contact-line">' . $i( 'pin' ) . '<div><p class="h5">Service area</p><p class="body-s">Massachusetts</p></div></div>
     </div>' );
 $left = oberdorfer_group( oberdorfer_phone_link( 'cta-panel__phone ot-text-navy ot-fs-display-m' ) . $lines, 'stack ot-stack-6' );

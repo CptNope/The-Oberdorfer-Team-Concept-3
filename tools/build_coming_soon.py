@@ -123,6 +123,11 @@ def vcards():
             f.write(card)
     with open(os.path.join(out, "oberdorfer-team.vcf"), "w", newline="", encoding="utf-8") as f:
         f.write(both)
+    # The website links the same cards (assets/vcard/ is published on Pages and copied into the WordPress build).
+    site_out = os.path.join(ROOT, "assets", "vcard")
+    os.makedirs(site_out, exist_ok=True)
+    for name in os.listdir(out):
+        shutil.copyfile(os.path.join(out, name), os.path.join(site_out, name))
 
 def theme_json():
     src = json.load(open(os.path.join(ROOT, "assets", "tokens", "theme.json")))

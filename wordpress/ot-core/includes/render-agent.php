@@ -115,6 +115,8 @@ function ot_render_person_section( $section, $x ) {
 				array( 'Languages', ot_ph( 'Languages to confirm' ) ),
 				array( 'Phone', $phone ),
 				array( 'Email', ! empty( $r['email'] ) ? '<a href="mailto:' . esc_attr( $r['email'] ) . '">' . esc_html( $r['email'] ) . '</a>' : ot_ph( 'Email to confirm' ) ),
+				array( 'Online', '<a href="' . OT_INSTAGRAM . '" rel="noopener">Instagram @oberdorferteam</a>' . ( ! empty( $r['card'] ) ? ' · <a href="' . esc_url( $r['card'] ) . '" rel="noopener">Digital card</a>' : '' ) ),
+				array( 'Contacts', '<a href="' . esc_url( home_url( '/?vcard=' . $x['p']->post_name ) ) . '">Add ' . $g . ' to your contacts</a> (vCard)' ),
 				array( 'License', ot_ph( 'MA license number to be supplied and verified' ) ),
 			);
 			$facts_html = '';
@@ -130,7 +132,7 @@ function ot_render_person_section( $section, $x ) {
       <p class="label">' . esc_html( $r['role'] ) . ' · The Oberdorfer Team</p>
       <h1 class="display-l" id="page-title">' . $name . '</h1>
       <p class="lead profile__summary">' . $summary . '</p>
-      <div class="cluster profile__actions"><a class="btn" href="#contact-agent">Message ' . $g . '</a><a class="btn btn--secondary" href="tel:' . OT_TEL . '">Call ' . OT_PHONE . '</a></div>
+      <div class="cluster profile__actions"><a class="btn" href="#contact-agent">Message ' . $g . '</a><a class="btn btn--secondary" href="' . esc_attr( ot_tel_href( $direct ?: OT_PHONE ) ) . '">Call ' . esc_html( $direct ?: OT_PHONE ) . '</a></div>
       <p class="caption profile__trust">Husband. Wife. Your Team. · REWAP Brokerage LLC · Serving Massachusetts</p>
       <dl class="quick-facts" aria-label="' . esc_attr( $r['given'] ) . ' at a glance">' . $facts_html . '</dl>
       <p class="caption">Profile updated ' . ot_updated_time() . '.</p>
@@ -191,7 +193,7 @@ function ot_render_person_section( $section, $x ) {
   <div style="grid-column:1/span 5" class="stack"><p class="label">Contact ' . $g . '</p><h2 class="display-m answer"><span>Start with</span><span>a conversation.</span></h2><p>Tell ' . $g . ' what you are planning. Expect a reply by your preferred method; no account, no obligation.</p><a class="cta-panel__phone" href="tel:' . OT_TEL . '" style="color:var(--ot-navy);font-size:var(--step-h2)">' . OT_PHONE . '</a></div>
   <div style="grid-column:7/span 6" class="panel">' . $form . '</div>
 </div></section>
-<nav class="action-bar" aria-label="Contact ' . $g . '"><a class="btn btn--gold" href="tel:' . OT_TEL . '">' . ot_icon( 'phone' ) . 'Call</a><a class="btn" href="#contact-agent" style="--btn-bg:var(--ot-ivory);--btn-fg:var(--ot-navy);--btn-border:var(--ot-ivory)">Message ' . $g . '</a></nav>';
+<nav class="action-bar" aria-label="Contact ' . $g . '"><a class="btn btn--gold" href="' . esc_attr( ot_tel_href( $x['r']['direct'] ?? OT_PHONE ) ) . '">' . ot_icon( 'phone' ) . 'Call</a><a class="btn" href="#contact-agent" style="--btn-bg:var(--ot-ivory);--btn-fg:var(--ot-navy);--btn-border:var(--ot-ivory)">Message ' . $g . '</a></nav>';
 	}
 	return '';
 }
@@ -216,8 +218,12 @@ function ot_render_team_section( $section, $x ) {
       <p class="label label--quiet">Husband. Wife. Your Team.</p>
       <div class="prose">' . $prose . '</div>
       <dl>
-        <dt>Phone</dt><dd><a href="tel:' . OT_TEL . '">' . OT_PHONE . '</a></dd>
-        <dt>Email</dt><dd>[team email to confirm]</dd>
+        <dt>Team line</dt><dd><a href="tel:' . OT_TEL . '">' . OT_PHONE . '</a></dd>
+        <dt>Kaitlyn</dt><dd><a href="tel:+19782574938">978-257-4938</a> · <a href="mailto:kaitlynoberdorfer@gmail.com">kaitlynoberdorfer@gmail.com</a></dd>
+        <dt>Brandon</dt><dd><a href="tel:' . OT_TEL . '">' . OT_PHONE . '</a> · <a href="mailto:brandonoberdorfer@gmail.com">brandonoberdorfer@gmail.com</a></dd>
+        <dt>Title</dt><dd>MA Licensed Realtors</dd>
+        <dt>Instagram</dt><dd><a href="' . OT_INSTAGRAM . '" rel="noopener">@oberdorferteam</a></dd>
+        <dt>Contacts</dt><dd><a href="' . esc_url( home_url( '/?vcard=oberdorfer-team' ) ) . '">Save both to your contacts</a> (vCard)</dd>
         <dt>Specialties</dt><dd>Buyers · Sellers · First homes · Move-up moves</dd>
         <dt>Service area</dt><dd>Massachusetts</dd>
         <dt>Brokerage</dt><dd>REWAP Brokerage LLC</dd>

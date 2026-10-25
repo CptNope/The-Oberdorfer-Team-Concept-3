@@ -182,6 +182,9 @@ UPDATED = "2026-10-22"
 # Office address confirmed 2026-10-22 (as supplied by the team; hours and formal status still open).
 STREET, POSTCODE = "652 Park Ave, Unit B", "01603"
 ADDRESS = f"{STREET}, Worcester, MA {POSTCODE}"
+INSTAGRAM = "https://www.instagram.com/oberdorferteam/"   # the team asked (2026-10-24) that every Instagram link go here
+# Contact cards built by tools/build_coming_soon.py (also served on the coming-soon page).
+VCARD_TEAM = "assets/vcard/oberdorfer-team.vcf"
 MAPS = "https://www.google.com/maps/search/?api=1&query=" + ADDRESS.replace(" ", "+").replace(",", "%2C")
 WRITTEN = []   # every page path, for sitemap.xml and llms.txt
 
@@ -190,7 +193,7 @@ def head(R, title, desc, extra_ld=None, canonical_path="", og_type="website", og
           "url": SITE, "logo": SITE + "assets/logo/social-avatar.png", "image": SITE + "assets/img/photo/team-portrait.webp",
           "telephone": PHONE, "areaServed": {"@type": "State", "name": "Massachusetts"},
           "address": {"@type": "PostalAddress", "streetAddress": STREET, "addressLocality": "Worcester", "addressRegion": "MA", "postalCode": POSTCODE, "addressCountry": "US"},
-          "slogan": "Luxury at every price point.",
+          "slogan": "Luxury at every price point.", "sameAs": [INSTAGRAM],
           "parentOrganization": {"@type": "Organization", "@id": BROKER_ID, "name": "REWAP Brokerage LLC", "url": "https://rewapbrokerage.com/"}}
     blocks = [ld] + (extra_ld or [])
     lds = "".join(f'<script type="application/ld+json">{json.dumps(b)}</script>' for b in blocks)
@@ -251,7 +254,7 @@ def footer(R):
       </div>
       <div><h2>Explore</h2><ul><li><a href="{R}site/buy/">Buy a home</a></li><li><a href="{R}site/sell/">Sell your home</a></li><li><a href="{R}site/market/">Market insights</a></li><li><a href="{R}site/communities/">Communities</a></li></ul></div>
       <div><h2>Communities</h2><ul>{"".join(f'<li><a href="{R}site/communities/{k}/">{n}, MA</a></li>' for k, n in FOOTER_TOWNS)}<li><a href="{R}site/communities/">All town guides</a></li></ul></div>
-      <div><h2>Team</h2><ul><li><a href="{R}site/team/">Meet the team</a></li><li><a href="{R}site/agents/brandon-kaitlyn-oberdorfer/">Brandon &amp; Kaitlyn</a></li><li><a href="{R}site/agents/brandon-oberdorfer/">Brandon Oberdorfer</a></li><li><a href="{R}site/agents/kaitlyn-oberdorfer/">Kaitlyn Oberdorfer</a></li><li><a href="{R}site/join/">Join our team</a></li><li><a href="{R}site/office/">Team office</a></li></ul></div>
+      <div><h2>Team</h2><ul><li><a href="{R}site/team/">Meet the team</a></li><li><a href="{R}site/agents/brandon-kaitlyn-oberdorfer/">Brandon &amp; Kaitlyn</a></li><li><a href="{R}site/agents/brandon-oberdorfer/">Brandon Oberdorfer</a></li><li><a href="{R}site/agents/kaitlyn-oberdorfer/">Kaitlyn Oberdorfer</a></li><li><a href="{R}site/join/">Join our team</a></li><li><a href="{R}site/office/">Team office</a></li><li><a href="{INSTAGRAM}" rel="noopener">Instagram</a></li></ul></div>
       <div><h2>Read</h2><ul><li><a href="{R}site/journal/">Journal</a></li><li><a href="{R}site/journal/#archive">At Home archive</a></li><li><a href="{R}site/contact/">Contact</a></li></ul></div>
     </div>
     <div class="attribution">
@@ -1134,8 +1137,12 @@ def page_agent():
         <p>Whether you are buying your first home, making room for your next chapter, or preparing to sell, we want you to feel heard, informed, and supported from the first conversation through closing.</p>
       </div>
       <dl>
-        <dt>Phone</dt><dd><a href="tel:{TEL}">{PHONE}</a></dd>
-        <dt>Email</dt><dd>[team email to confirm]</dd>
+        <dt>Team line</dt><dd><a href="tel:{TEL}">{PHONE}</a></dd>
+        <dt>Kaitlyn</dt><dd><a href="tel:+19782574938">978-257-4938</a> · <a href="mailto:kaitlynoberdorfer@gmail.com">kaitlynoberdorfer@gmail.com</a></dd>
+        <dt>Brandon</dt><dd><a href="tel:{TEL}">{PHONE}</a> · <a href="mailto:brandonoberdorfer@gmail.com">brandonoberdorfer@gmail.com</a></dd>
+        <dt>Title</dt><dd>MA Licensed Realtors</dd>
+        <dt>Instagram</dt><dd><a href="{INSTAGRAM}" rel="noopener">@oberdorferteam</a></dd>
+        <dt>Contacts</dt><dd><a href="{R}{VCARD_TEAM}">Save both to your contacts</a> (vCard)</dd>
         <dt>Specialties</dt><dd>Buyers · Sellers · First homes · Move-up moves</dd>
         <dt>Service area</dt><dd>Massachusetts</dd>
         <dt>Brokerage</dt><dd>REWAP Brokerage LLC</dd>
@@ -1170,13 +1177,17 @@ AGENTS = [
          role="Team leader", partner="kaitlyn-oberdorfer", relation="his wife",
          photo="assets/img/photo/brandon-oberdorfer.webp", photo_w=440, photo_h=550,
          photo_note="Cropped from the team portrait in <em>Wakefield at Home</em>. Individual headshot to be supplied.",
-         title=None, license=None, email="brandonoberdorfer@gmail.com", direct="406-250-7620", languages=None, specialties=None, bio=None, socials=None,
+         title="MA Licensed Realtor", license=None, email="brandonoberdorfer@gmail.com", direct="406-250-7620", languages=None, specialties=None, bio=None, socials=None,
+         accolades=[("Top Producer", "Wakefield at Home, Fall 2026"), ("Realtor's Choice Winner", "Brandon's digital card")],
+         card="https://blinq.me/cmere9vg301rxs60mq7nu5g5g", vcard="assets/vcard/brandon-oberdorfer.vcf",
          lead="agent:brandon-oberdorfer"),
     dict(slug="kaitlyn-oberdorfer", name="Kaitlyn Oberdorfer", given="Kaitlyn", family="Oberdorfer",
          role="Team leader", partner="brandon-oberdorfer", relation="her husband",
          photo="assets/img/photo/kaitlyn-oberdorfer.webp", photo_w=440, photo_h=550,
          photo_note="Cropped from the team portrait in <em>Wakefield at Home</em>. Individual headshot to be supplied.",
-         title=None, license=None, email="kaitlynoberdorfer@gmail.com", direct="978-257-4938", languages=None, specialties=None, bio=None, socials=None,
+         title="MA Licensed Realtor", license=None, email="kaitlynoberdorfer@gmail.com", direct="978-257-4938", languages=None, specialties=None, bio=None, socials=None,
+         accolades=[("Top Producing Agent", "Kaitlyn's digital card"), ("Record Breaking", "Kaitlyn's digital card")],
+         card="https://blinq.me/WXgsLzUBTC2V", vcard="assets/vcard/kaitlyn-oberdorfer.vcf",
          lead="agent:kaitlyn-oberdorfer"),
 ]
 TEMPLATE_AGENT = dict(slug="agent-template", name="[Agent name]", given="[First name]", family="[Last name]",
@@ -1220,7 +1231,8 @@ def profile_ld(R, a, url, faq):
     person = {"@type": "Person", "@id": pid, "name": a["name"], "givenName": a["given"], "familyName": a["family"],
               "url": url, "image": SITE + a["photo"], "telephone": a.get("direct") or PHONE,
               **({"email": a["email"]} if a.get("email") else {}),
-              "jobTitle": "Real estate team leader",
+              "jobTitle": a.get("title") or "Real estate team leader",
+              **({"sameAs": [INSTAGRAM, a["card"]]} if a.get("card") else {}),
               "worksFor": {"@id": TEAM_ID}, "affiliation": {"@id": BROKER_ID},
               "areaServed": {"@type": "State", "name": "Massachusetts"},
               "knowsAbout": ["Buying a home in Massachusetts", "Selling a home in Massachusetts", "Wakefield, Massachusetts real estate"]}
@@ -1259,9 +1271,9 @@ def page_profile(a):
                f"{a['name']} is a Massachusetts real estate agent who leads The Oberdorfer Team with {a['relation']}, {partner['name']}. The husband-and-wife team works from Worcester, helps buyers and sellers across the state and operates under REWAP Brokerage LLC.")
     facts = [
         ("Role", f"{a['role']}, The Oberdorfer Team" if not tpl else ph("Role on the team")),
-        ("Title", ph("Professional title to confirm")),
+        ("Title", a["title"] if a.get("title") and not tpl else ph("Professional title to confirm")),
         ("Brokerage", "REWAP Brokerage LLC"),
-        ("Recognition", ph("Verified awards only") if tpl else 'Top Producer <span class="badge badge--source">Wakefield at Home, Fall 2026</span>'),
+        ("Recognition", ph("Verified awards only") if tpl else "<br>".join(f'{t} <span class="badge badge--source">{src}</span>' for t, src in a.get("accolades", []))),
         ("Service area", "Massachusetts" if not tpl else ph("Service areas")),
         ("Specialties", ph("Specialties to confirm")),
         ("Languages", ph("Languages to confirm")),
@@ -1270,9 +1282,14 @@ def page_profile(a):
                    f'<a href="tel:+1{a["direct"].replace("-", "")}">{a["direct"]}</a> (direct) · team line <a href="tel:{TEL}">{PHONE}</a>' if a.get("direct") else
                    f'<a href="tel:{TEL}">{PHONE}</a> (team line) · direct line ' + ph("to confirm"))),
         ("Email", f'<a href="mailto:{a["email"]}">{a["email"]}</a>' if a.get("email") and not tpl else ph("Email to confirm")),
+        ("Online", ph("Profiles to confirm") if tpl else f'<a href="{INSTAGRAM}" rel="noopener">Instagram @oberdorferteam</a> · <a href="{a["card"]}" rel="noopener">Digital card</a>'),
+        ("Contacts", ph("Contact card") if tpl else f'<a href="{R}{a["vcard"]}">Add {g} to your contacts</a> (vCard)'),
         ("License", ph("MA license number to be supplied and verified")),
     ]
     facts_html = "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in facts)
+    # Each person's own profile dials their direct line; the team line is in the facts.
+    dial = a.get("direct") if a.get("direct") and not tpl else PHONE
+    dial_href = "tel:+1" + dial.replace("-", "")
 
     if tpl:
         bio = f'''<div class="placeholder-block"><p class="label">Biography · 120 to 250 words, first person</p>
@@ -1314,7 +1331,7 @@ def page_profile(a):
       <p class="label">{a['role']} · The Oberdorfer Team</p>
       <h1 class="display-l" id="page-title">{a['name']}</h1>
       <p class="lead profile__summary">{summary}</p>
-      <div class="cluster profile__actions"><a class="btn" href="#contact-agent">Message {g}</a><a class="btn btn--secondary" href="tel:{TEL}">Call {PHONE}</a></div>
+      <div class="cluster profile__actions"><a class="btn" href="#contact-agent">Message {g}</a><a class="btn btn--secondary" href="{dial_href}">Call {dial}</a></div>
       <p class="caption profile__trust">Husband. Wife. Your Team. · REWAP Brokerage LLC · Serving Massachusetts</p>
       <dl class="quick-facts" aria-label="{g} at a glance">{facts_html}</dl>
       <p class="caption">Profile updated <time datetime="{UPDATED}">October 22, 2026</time>.</p>
@@ -1346,7 +1363,7 @@ def page_profile(a):
   <div style="grid-column:1/span 5" class="stack"><p class="label">Contact {g}</p><h2 class="display-m answer"><span>Start with</span><span>a conversation.</span></h2><p>Tell {g} what you are planning. Expect a reply by your preferred method; no account, no obligation.</p><a class="cta-panel__phone" href="tel:{TEL}" style="color:var(--ot-navy);font-size:var(--step-h2)">{PHONE}</a></div>
   <div style="grid-column:7/span 6" class="panel">{contact_form}</div>
 </div></section>
-<nav class="action-bar" aria-label="Contact {g}"><a class="btn btn--gold" href="tel:{TEL}">{icon(R, 'phone')}Call</a><a class="btn" href="#contact-agent" style="--btn-bg:var(--ot-ivory);--btn-fg:var(--ot-navy);--btn-border:var(--ot-ivory)">Message {g}</a></nav>'''
+<nav class="action-bar" aria-label="Contact {g}"><a class="btn btn--gold" href="{dial_href}">{icon(R, 'phone')}Call</a><a class="btn" href="#contact-agent" style="--btn-bg:var(--ot-ivory);--btn-fg:var(--ot-navy);--btn-border:var(--ot-ivory)">Message {g}</a></nav>'''
 
     if tpl:
         write(f"agents/{a['slug']}", R, "[Agent name], Real Estate Agent | The Oberdorfer Team",
@@ -1495,9 +1512,11 @@ def page_contact():
   <div class="stack" style="--stack:var(--space-6)">
     <a class="cta-panel__phone" href="tel:{TEL}" style="color:var(--ot-navy);font-size:var(--step-display-m)">{PHONE}</a>
     <div>
-      <div class="contact-line">{icon(R,'phone')}<div><p class="h5">Call or text</p><p class="body-s">Brandon &amp; Kaitlyn Oberdorfer · <a href="tel:{TEL}">{PHONE}</a></p></div></div>
-      <div class="contact-line">{icon(R,'mail')}<div><p class="h5">Email</p><p class="body-s">[Team email to be confirmed]</p></div></div>
-      <div class="contact-line">{icon(R,'door')}<div><p class="h5">Team office</p><p class="body-s">Worcester, Massachusetts. By appointment. <a href="{R}site/office/">Office details</a></p></div></div>
+      <div class="contact-line">{icon(R,'phone')}<div><p class="h5">Call or text</p><p class="body-s">Kaitlyn Oberdorfer · <a href="tel:+19782574938">978-257-4938</a><br>Brandon Oberdorfer · <a href="tel:{TEL}">{PHONE}</a> (also the team line)</p></div></div>
+      <div class="contact-line">{icon(R,'mail')}<div><p class="h5">Email</p><p class="body-s">Kaitlyn · <a href="mailto:kaitlynoberdorfer@gmail.com">kaitlynoberdorfer@gmail.com</a><br>Brandon · <a href="mailto:brandonoberdorfer@gmail.com">brandonoberdorfer@gmail.com</a></p></div></div>
+      <div class="contact-line">{icon(R,'download')}<div><p class="h5">Save our contacts</p><p class="body-s"><a href="{R}assets/vcard/kaitlyn-oberdorfer.vcf">Kaitlyn</a> · <a href="{R}assets/vcard/brandon-oberdorfer.vcf">Brandon</a> · <a href="{R}{VCARD_TEAM}">Both</a> (vCard, for your phone's contacts)</p></div></div>
+      <div class="contact-line">{icon(R,'external')}<div><p class="h5">Follow along</p><p class="body-s"><a href="{INSTAGRAM}" rel="noopener">Instagram @oberdorferteam</a></p></div></div>
+      <div class="contact-line">{icon(R,'door')}<div><p class="h5">Team office</p><p class="body-s">{ADDRESS}. By appointment. <a href="{R}site/office/">Office details</a></p></div></div>
       <div class="contact-line">{icon(R,'pin')}<div><p class="h5">Service area</p><p class="body-s">Massachusetts</p></div></div>
     </div>
   </div>

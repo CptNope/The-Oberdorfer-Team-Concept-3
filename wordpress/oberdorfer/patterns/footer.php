@@ -112,6 +112,10 @@ $u = fn( $p ) => esc_url( oberdorfer_url( $p ) );
 
 <!-- wp:list-item -->
 <li><a href="<?php echo $u( '/office/worcester/' ); ?>">Team office</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="https://www.instagram.com/oberdorferteam/" rel="noopener">Instagram</a></li>
 <!-- /wp:list-item --></ul>
 <!-- /wp:list --></div>
 <!-- /wp:group -->
