@@ -1,5 +1,5 @@
 {
- "version": "0.2.1 (2026-10-22)",
+ "version": "0.3.0 (2026-10-22)",
  "front_page": "home",
  "posts_page": "journal",
  "regions": [
@@ -279,7 +279,7 @@
      "tier": 1,
      "art": "triple-decker"
     },
-    "ot_headline": "Getting to know Worcester,\nstreet by street and hill by hill.",
+    "ot_headline": "Getting to know Worcester, street by street and hill by hill.",
     "ot_answer": "Worcester is a city of 206,518 people (2020 Census) in Central Massachusetts and the historic seat of Worcester County. Its housing ranges from 19th-century triple-deckers to single-family homes, with 884 single-family sales in 2025. Worcester station at Union Station is the western end of the MBTA Framingham/Worcester Line to Boston, and I-290 runs through the city.",
     "ot_kicker": "Living in Worcester, MA",
     "ot_county": "Worcester County",
@@ -444,7 +444,7 @@
       }
      ]
     },
-    "ot_headline": "City Hall, the Common and Mechanics Hall,\nwith the commuter rail a short walk east.",
+    "ot_headline": "City Hall, the Common and Mechanics Hall, with the commuter rail a short walk east.",
     "ot_answer": "Downtown is Worcester's city center, running along Main Street from Lincoln Square past City Hall and the 4.4-acre Common, with Union Station in Washington Square on its eastern side. Its housing is mostly apartments and condominiums in converted commercial and civic buildings, such as the 118 Courthouse Lofts in the former county courthouse. Union Station is the western end of the MBTA Framingham/Worcester Line, and the WRTA bus hub is on Foster Street.",
     "ot_kicker": "Living in Downtown, Worcester, MA",
     "ot_county": "Worcester County",
@@ -618,7 +618,7 @@
       }
      ]
     },
-    "ot_headline": "Brick mills over a buried canal,\nbetween Union Station and Polar Park.",
+    "ot_headline": "Brick mills over a buried canal, between Union Station and Polar Park.",
     "ot_answer": "The Canal District is a Worcester neighborhood between Union Station and Kelley Square, named for the Blackstone Canal, which opened in 1828 and still runs underground beneath Harding Street. Its housing mixes apartments and condominiums in 19th-century factories and schools with new apartment buildings beside Polar Park, the 9,508-seat ballpark that opened in 2021. Union Station, the western end of the MBTA Framingham/Worcester Line, is at its northern edge.",
     "ot_kicker": "Living in Canal District, Worcester, MA",
     "ot_county": "Worcester County",
@@ -773,7 +773,7 @@
       }
      ]
     },
-    "ot_headline": "A restaurant corridor from Union Station\nto East Park and the hills beyond.",
+    "ot_headline": "A restaurant corridor from Union Station to East Park and the hills beyond.",
     "ot_answer": "Shrewsbury Street is a neighborhood on Worcester's East Side, named for the commercial street that runs about 7,000 feet from I-290 near Union Station to Route 9. The street is known for its restaurants, the 1936 Boulevard Diner and the 23-acre East Park, and in 2023 a Telegram & Gazette opinion column counted several apartment projects under construction or approved on or near it. Union Station's footbridge has an entrance at 45 Shrewsbury Street, a short walk to the MBTA Framingham/Worcester Line.",
     "ot_kicker": "Living in Shrewsbury Street, Worcester, MA",
     "ot_county": "Worcester County",
@@ -935,7 +935,7 @@
       }
      ]
     },
-    "ot_headline": "Three-deckers and Victorian houses\naround Clark University and University Park.",
+    "ot_headline": "Three-deckers and Victorian houses around Clark University and University Park.",
     "ot_answer": "Main South is a neighborhood in southern Worcester named for Main Street, the city's central roadway, with Clark University and the 14.3-acre University Park near its center. Much of its street plan and housing dates from before 1900: three-deckers, multi-unit houses and Victorian houses, several of them on the National Register. WRTA Routes 19 and 27 run along Main Street, and Union Station's commuter rail is downtown.",
     "ot_kicker": "Living in Main South, Worcester, MA",
     "ot_county": "Worcester County",
@@ -1099,7 +1099,7 @@
       }
      ]
     },
-    "ot_headline": "Three-decker rows on the hill\nthat Grafton Street climbs out of downtown.",
+    "ot_headline": "Three-decker rows on the hill that Grafton Street climbs out of downtown.",
     "ot_answer": "Grafton Hill is a neighborhood on Worcester's East Side, on one of the city's seven named hills, anchored by Grafton Street (Route 122) and Providence Street in southeastern Worcester. Its western slope along Dorchester Street holds rows of three-deckers from the 1890s, among the earliest in the Grafton Hill and Vernon Hill area. WRTA Routes 5 and 12 run on Grafton Street, and Worcester's Union Station, on the MBTA Framingham/Worcester Line, is downtown.",
     "ot_kicker": "Living in Grafton Hill, Worcester, MA",
     "ot_county": "Worcester County",
@@ -1256,7 +1256,7 @@
       }
      ]
     },
-    "ot_headline": "A square where Pleasant and Chandler meet,\nat the end of the old streetcar line.",
+    "ot_headline": "A square where Pleasant and Chandler meet, at the end of the old streetcar line.",
     "ot_answer": "Tatnuck is a neighborhood on Worcester's West Side centered on Tatnuck Square, where Pleasant and Chandler Streets meet. It was a small cluster of houses by about 1830 and grew after the streetcar reached it along Pleasant Street in 1899. WRTA Route 2 still ends at Tatnuck Square, which has a city fire station, a branch library and a church, and Liberty Farm, a National Historic Landmark, stands on Mower Street.",
     "ot_kicker": "Living in Tatnuck, Worcester, MA",
     "ot_county": "Worcester County",
@@ -1411,7 +1411,7 @@
       }
      ]
     },
-    "ot_headline": "A factory village on West Boylston Street,\nwith its library and meeting hall side by side.",
+    "ot_headline": "A factory village on West Boylston Street, with its library and meeting hall side by side.",
     "ot_answer": "Greendale is a North Worcester neighborhood along West Boylston Street that grew around the Norton Company's abrasives works, built on the city's outskirts in 1886 and now part of Saint-Gobain. Its civic block on West Boylston Street holds a fire station, a 1913 branch library and the Greendale Village Improvement Society building, put up between 1897 and 1900. WRTA Routes 30 and 31 run on West Boylston Street, and I-190 passes Indian Lake nearby.",
     "ot_kicker": "Living in Greendale, Worcester, MA",
     "ot_county": "Worcester County",
@@ -1581,7 +1581,7 @@
       }
      ]
     },
-    "ot_headline": "A wire-mill village in the Blackstone valley,\nwhere the river path to Millbury begins.",
+    "ot_headline": "A wire-mill village in the Blackstone valley, where the river path to Millbury begins.",
     "ot_answer": "Quinsigamond Village is a South Worcester neighborhood in the narrow Blackstone River valley that grew around Washburn & Moen's South Works wire mill after 1846. Millbury Street was its spine, built up with three-deckers, churches, a firehouse and a 1913 Carnegie library. Route 146 has an exit signed for Millbury Street and Quinsigamond Village, and the Blackstone River Bikeway starts at the visitor center beside it.",
     "ot_kicker": "Living in Quinsigamond Village, Worcester, MA",
     "ot_county": "Worcester County",
@@ -1751,7 +1751,7 @@
       }
      ]
     },
-    "ot_headline": "The old New Worcester crossroads,\nwhere Stafford Street leaves Main Street for Leicester.",
+    "ot_headline": "The old New Worcester crossroads, where Stafford Street leaves Main Street for Leicester.",
     "ot_answer": "Webster Square is a South Worcester neighborhood named for the junction of Main, Webster and Cambridge Streets, now also met by Mill Street, in the area once called New Worcester. Loring and Aury Coes built their wrench and knife works here, and Coes Reservoir and its parks lie along Mill Street. Stafford Street begins at the square, Route 12 crosses it on Mill Street, and WRTA Route 19 runs from Webster Square to Clark University on Main Street.",
     "ot_kicker": "Living in Webster Square, Worcester, MA",
     "ot_county": "Worcester County",
@@ -1922,7 +1922,7 @@
       }
      ]
     },
-    "ot_headline": "Three-decker streets on one of the seven hills,\nclimbed by Vernon and Providence Streets.",
+    "ot_headline": "Three-decker streets on one of the seven hills, climbed by Vernon and Providence Streets.",
     "ot_answer": "Vernon Hill is a neighborhood in southeastern Worcester on one of the city's seven named hills, climbed by Vernon Street and by Providence Street, which carries Route 122A. Streetcars reached its slopes from the 1890s, and three-deckers built mostly from the 1910s to 1930 line its streets, with groups on View Street, Providence Street and Perry Avenue listed as National Register historic districts. The 15-acre Vernon Hill Park sits atop the hill at 144 Providence Street.",
     "ot_kicker": "Living in Vernon Hill, Worcester, MA",
     "ot_county": "Worcester County",
@@ -2079,7 +2079,7 @@
       }
      ]
     },
-    "ot_headline": "A school campus, a synagogue and three-deckers\non Providence Street's hill.",
+    "ot_headline": "A school campus, a synagogue and three-deckers on Providence Street's hill.",
     "ot_answer": "Union Hill is an East Side neighborhood in southeastern Worcester, on the hill once called Sagatabscot, one of the city's seven hills. Providence Street holds the Worcester Academy campus, on the hill since 1869, and the 1906 Shaarai Torah Synagogue, and the city's 1977-78 historic survey names Union Hill among the places built up with three-deckers. WRTA Route 1 runs via Providence Street, and Union Station is downtown.",
     "ot_kicker": "Living in Union Hill, Worcester, MA",
     "ot_county": "Worcester County",
@@ -2238,7 +2238,7 @@
       }
      ]
     },
-    "ot_headline": "An old road north out of the city,\nwith stone walls at its side streets.",
+    "ot_headline": "An old road north out of the city, with stone walls at its side streets.",
     "ot_answer": "Burncoat is a North Worcester neighborhood along Burncoat Street, a road the Massachusetts Historical Commission traces to a Native trail used as the Lancaster Way. The city's 1977-78 historic survey names Burncoat Street as one of the places of largest single-family house building between 1890 and 1950, and stone walls of about 1900 to 1910 still mark side-street entrances. Burncoat Park lies just north of I-290, and WRTA Route 14 runs on Burncoat Street.",
     "ot_kicker": "Living in Burncoat, Worcester, MA",
     "ot_county": "Worcester County",
@@ -2449,7 +2449,7 @@
      "tier": 1,
      "art": "colonial"
     },
-    "ot_headline": "A closer look at Shrewsbury,\nfrom the lakeshore to Main Street.",
+    "ot_headline": "A closer look at Shrewsbury, from the lakeshore to Main Street.",
     "ot_answer": "Shrewsbury is a Worcester County town of 38,325 people (2020 Census), across Lake Quinsigamond from Worcester. Single-family homes grew along its 19th-century streetcar routes, and The Warren Group counted 234 single-family sales in 2025. I-290, Route 9, Route 20 and Route 140 cross the town; the nearest commuter rail stops are in neighboring Worcester, Grafton and Westborough.",
     "ot_kicker": "Living in Shrewsbury, MA",
     "ot_county": "Worcester County",
@@ -2662,7 +2662,7 @@
      "tier": 1,
      "art": "cape"
     },
-    "ot_headline": "Grafton, village by village,\nfrom the common to the river.",
+    "ot_headline": "Grafton, village by village, from the common to the river.",
     "ot_answer": "Grafton is a Worcester County town of 19,664 people (2020 Census) bordering Worcester, established in 1735. Its housing runs from the 19th-century homes around Grafton Common to worker housing in its Blackstone River mill villages. Grafton station in North Grafton is on the MBTA Framingham/Worcester Line, and Routes 122, 140 and 30 cross the town.",
     "ot_kicker": "Living in Grafton, MA",
     "ot_county": "Worcester County",
@@ -2856,7 +2856,7 @@
      "tier": 1,
      "art": "colonial"
     },
-    "ot_headline": "Westborough, mapped out:\nthe center, the lake and the trails.",
+    "ot_headline": "Westborough, mapped out: the center, the lake and the trails.",
     "ot_answer": "Westborough is a Worcester County town of 21,567 people (2020 Census), incorporated in 1717. Its center keeps colonial and 19th-century homes, and The Warren Group counted 134 single-family sales in 2025. Westborough station is on the MBTA Framingham/Worcester Line, and the Massachusetts Turnpike, I-495 and Route 9 cross the town, linking it east to Boston and west to Worcester.",
     "ot_kicker": "Living in Westborough, MA",
     "ot_county": "Worcester County",
@@ -3071,7 +3071,7 @@
      "tier": 1,
      "art": "cape"
     },
-    "ot_headline": "Old mill villages and open hills,\njust over the line from Worcester.",
+    "ot_headline": "Old mill villages and open hills, just over the line from Worcester.",
     "ot_answer": "Holden is a town of 19,905 people (2020 Census) in Worcester County, set in rolling hills on Worcester's northwest border. Its houses range from 1800s mill-village homes to suburban streets that grew after World War II. Routes 122A, 31 and 68 cross the town, and the commuter rail stops at Worcester station next door.",
     "ot_kicker": "Living in Holden, MA",
     "ot_county": "Worcester County",
@@ -3287,7 +3287,7 @@
      "tier": 2,
      "art": "cape"
     },
-    "ot_headline": "A city that once made combs,\nwith a state forest at its back door.",
+    "ot_headline": "A city that once made combs, with a state forest at its back door.",
     "ot_answer": "Leominster is a city of 43,782 people (2020 Census) in northern Worcester County, just south of Fitchburg. Its housing includes worker cottages, three-deckers and duplexes from its comb and plastics years. Route 2 and I-190 pass through, and North Leominster station is on the MBTA Fitchburg Line to Boston's North Station.",
     "ot_kicker": "Living in Leominster, MA",
     "ot_county": "Worcester County",
@@ -3508,7 +3508,7 @@
      "tier": 2,
      "art": "colonial"
     },
-    "ot_headline": "Several old centers, one city,\non the road and rail line west of Boston.",
+    "ot_headline": "Several old centers, one city, on the road and rail line west of Boston.",
     "ot_answer": "Framingham is a city of 72,362 people (2020 Census) in Middlesex County, on the main western corridor out of Boston. It grew from separate centers, including Saxonville, Framingham Centre and South Framingham, and its housing runs from mill-era double houses to two-families and suburban homes. Framingham station serves the Framingham/Worcester Line, and the Massachusetts Turnpike crosses the city.",
     "ot_kicker": "Living in Framingham, MA",
     "ot_county": "Middlesex County",
@@ -3719,7 +3719,7 @@
      "tier": 2,
      "art": "cape"
     },
-    "ot_headline": "A shoe-making city at the crossroads\nof I-495 and I-290.",
+    "ot_headline": "A shoe-making city at the crossroads of I-495 and I-290.",
     "ot_answer": "Marlborough is a city of 41,793 people (2020 Census) in Middlesex County, where I-495 meets the eastern end of I-290. Its downtown grew from two 1800s shoe-making villages, and its housing includes three-deckers, double houses and converted factory condominiums. The city has no rail station; buses connect to Southborough and Framingham on the Framingham/Worcester Line.",
     "ot_kicker": "Living in Marlborough, MA",
     "ot_county": "Middlesex County",
@@ -3945,7 +3945,7 @@
      "photo_credit": "An evening on Lake Quannapowitt. Photo: RedSoxFan274 / Wikimedia Commons, CC BY-SA 4.0, cropped.",
      "extra_market_html": "<p class=\"body-s\" style=\"margin-top:var(--space-4)\">More recent, all home types: the median sale price was $786,979 for the three months ending August 2026, with a median of 21 days on market and a 103.3% sale-to-list ratio in August (Redfin, accessed October 10, 2026). <a href=\"../../../site/journal/the-best-plans-are-close-to-home/\">Six ways to enjoy Wakefield this fall</a>.</p>"
     },
-    "ot_headline": "A lake to walk around,\na town to come home to.",
+    "ot_headline": "A lake to walk around, a town to come home to.",
     "ot_answer": "Wakefield is a Middlesex County town about 10 miles north of Boston, centered on Lake Quannapowitt and a downtown along Main Street. Single-family detached homes make up 55 percent of its housing, and about a third of its structures predate World War II. The Haverhill Line stops at Wakefield and Greenwood stations.",
     "ot_kicker": "Living in Wakefield, MA",
     "ot_county": "Middlesex County",
@@ -4137,7 +4137,7 @@
      "tier": 1,
      "art": "colonial"
     },
-    "ot_headline": "A town common, a commuter line,\nand woods a short walk from the front door.",
+    "ot_headline": "A town common, a commuter line, and woods a short walk from the front door.",
     "ot_answer": "Reading is a Middlesex County town of 25,518 people (2020 Census) whose housing is mostly single-family, with a large share built before 1960. It grew around a traditional New England common and keeps conservation land such as the Town Forest. Reading station on the MBTA Haverhill Line runs to Boston's North Station, and I-93 and I-95/Route 128 cross the town.",
     "ot_kicker": "Living in Reading, MA",
     "ot_county": "Middlesex County",
@@ -4350,7 +4350,7 @@
      "tier": 1,
      "art": "townscape"
     },
-    "ot_headline": "Three train stops, one pond in the middle,\nand Victorian streets that lead to the Fells.",
+    "ot_headline": "Three train stops, one pond in the middle, and Victorian streets that lead to the Fells.",
     "ot_answer": "Melrose is a Middlesex County city of 29,817 people (2020 Census), about seven miles north of Boston. More than half its homes predate World War II, many Victorian near downtown and the rail line. Three MBTA Haverhill Line stations serve the city, and Oak Grove on the Orange Line sits just over the Malden border.",
     "ot_kicker": "Living in Melrose, MA",
     "ot_county": "Middlesex County",
@@ -4553,7 +4553,7 @@
      "tier": 2,
      "art": "cape"
     },
-    "ot_headline": "A shoe town's square, a zoo by the pond,\nand a third of the map left to the Fells.",
+    "ot_headline": "A shoe town's square, a zoo by the pond, and a third of the map left to the Fells.",
     "ot_answer": "Stoneham is a Middlesex County town of 23,244 people (2020 Census), less than 10 miles northwest of Boston. About a third of its land lies in the Middlesex Fells Reservation. Slightly more than half its homes are single-family. I-93 runs through town, and Boston-bound rail stations sit in Melrose, Winchester and Malden next door.",
     "ot_kicker": "Living in Stoneham, MA",
     "ot_county": "Middlesex County",
@@ -4785,7 +4785,7 @@
      "tier": 2,
      "art": "townscape"
     },
-    "ot_headline": "Brick mills, working canals,\nand a city still built around its river.",
+    "ot_headline": "Brick mills, working canals, and a city still built around its river.",
     "ot_answer": "Lowell is a Middlesex County city of 115,554 people (2020 Census), founded as a textile mill town and incorporated in 1826. Most of its housing was built before 1960, with a mix of multi-family buildings, duplexes, single-family homes and converted mills. The MBTA Lowell Line runs from Lowell station to Boston's North Station, and I-495 and US-3 cross the city.",
     "ot_kicker": "Living in Lowell, MA",
     "ot_county": "Middlesex County",
@@ -5018,7 +5018,7 @@
      "tier": 2,
      "art": "colonial"
     },
-    "ot_headline": "Learn the villages first,\nthen find the street that fits.",
+    "ot_headline": "Learn the villages first, then find the street that fits.",
     "ot_answer": "Newton is a city of thirteen villages in Middlesex County, about eight miles west of downtown Boston. Much of its housing is older: as of the 2000 Census, only 19 percent of its homes had been built after 1960. The Green Line D branch and the Framingham/Worcester commuter rail line connect it to Boston.",
     "ot_kicker": "Living in Newton, MA",
     "ot_county": "Middlesex County",
@@ -5262,7 +5262,7 @@
      "tier": 2,
      "art": "townscape"
     },
-    "ot_headline": "Between the harbor and the hills,\na city with deep roots.",
+    "ot_headline": "Between the harbor and the hills, a city with deep roots.",
     "ot_answer": "Quincy is a coastal city in Norfolk County, on Boston Harbor, and the birthplace of John Adams and John Quincy Adams. About a third of its homes are detached single-family houses, and most of the rest are in buildings with two or more units. Four Red Line stations and three commuter rail lines connect it to Boston.",
     "ot_kicker": "Living in Quincy, MA",
     "ot_county": "Norfolk County",
@@ -5490,7 +5490,7 @@
      "tier": 2,
      "art": "triple-decker"
     },
-    "ot_headline": "Porches, parks and river light,\nin a city that knows its neighborhoods.",
+    "ot_headline": "Porches, parks and river light, in a city that knows its neighborhoods.",
     "ot_answer": "Springfield is the seat of Hampden County, on the eastern bank of the Connecticut River about 24 miles north of Hartford. Sixty-eight percent of its housing is single-family homes and duplexes, and 41 percent was built before 1940. Union Station offers Amtrak and Hartford Line trains, and I-91 and I-291 run through the city.",
     "ot_kicker": "Living in Springfield, MA",
     "ot_county": "Hampden County",
@@ -5719,7 +5719,7 @@
      "tier": 3,
      "art": "townscape"
     },
-    "ot_headline": "Brownstones on filled marsh, three-deckers on the hills,\nand every commuter rail line running home to it.",
+    "ot_headline": "Brownstones on filled marsh, three-deckers on the hills, and every commuter rail line running home to it.",
     "ot_answer": "Boston is the capital of Massachusetts, a Suffolk County city of 675,647 people (2020 Census) made up of 23 neighborhoods. Its housing is mostly attached and multi-unit: brownstone and brick row houses near the center, and triple-deckers, mostly built between the 1880s and 1930s, farther out. Single-family sales are a small and unrepresentative slice of the market: The Warren Group's Boston row counted 50 in 2025 against 1,611 condo sales, and it reports neighborhoods such as Dorchester, Jamaica Plain and Charlestown on separate rows. Every MBTA commuter rail line ends at South Station or North Station, and I-93 and I-90 meet downtown.",
     "ot_kicker": "Living in Boston, MA",
     "ot_county": "Suffolk County",
@@ -5901,7 +5901,7 @@
       }
      ]
     },
-    "ot_headline": "Brownstone rows on filled tidal flats,\nlaid out one alphabetical cross street at a time.",
+    "ot_headline": "Brownstone rows on filled tidal flats, laid out one alphabetical cross street at a time.",
     "ot_answer": "Back Bay is a Boston neighborhood built on tidal flats filled between 1857 and 1882, with 18,190 residents in 2020 (2020 Census, Boston Planning Department tabulation). Its housing is mostly Victorian brownstone row houses of three to five stories on Beacon, Marlborough and Commonwealth, with shops along Newbury and Boylston Streets. Back Bay station serves the Orange Line, four commuter rail lines and Amtrak, and the Green Line stops at Arlington, Copley, Hynes Convention Center and Prudential.",
     "ot_kicker": "Living in Back Bay, Boston, MA",
     "ot_county": "Suffolk County",
@@ -6086,7 +6086,7 @@
       }
      ]
     },
-    "ot_headline": "Brick rows and cobblestone lanes\nclimbing from Charles Street to the State House.",
+    "ot_headline": "Brick rows and cobblestone lanes climbing from Charles Street to the State House.",
     "ot_answer": "Beacon Hill is a Boston neighborhood on the hill behind the Massachusetts State House, between Boston Common and the Charles River, with 9,336 residents in 2020 (2020 Census, Boston Planning Department tabulation). Its housing is mostly Federal and Greek Revival brick row houses built after the State House was completed in 1798, protected since 1955 as the Historic Beacon Hill District. The Red Line stops at Charles/MGH and Park Street, and the Blue Line at Bowdoin.",
     "ot_kicker": "Living in Beacon Hill, Boston, MA",
     "ot_county": "Suffolk County",
@@ -6267,7 +6267,7 @@
       }
      ]
     },
-    "ot_headline": "Brick and brownstone rows around small squares,\nbuilt on the marsh around Boston Neck.",
+    "ot_headline": "Brick and brownstone rows around small squares, built on the marsh around Boston Neck.",
     "ot_answer": "The South End is a Boston neighborhood built from 1849 on filled tidal marsh around Boston Neck, with 30,904 residents in 2020 (2020 Census, Boston Planning Department tabulation, which counts Bay Village with the South End). Its housing is brick and brownstone row houses built from 1850 to 1880 around residential squares such as Union Park, protected as the South End Landmark District since 1983. The Orange Line stops at Back Bay and Massachusetts Avenue, and Silver Line SL4 and SL5 buses run on Washington Street.",
     "ot_kicker": "Living in South End, Boston, MA",
     "ot_county": "Suffolk County",
@@ -6452,7 +6452,7 @@
       }
      ]
     },
-    "ot_headline": "Brick apartment buildings on narrow streets,\nbetween the Greenway and the harbor, from North Square to Copp's Hill.",
+    "ot_headline": "Brick apartment buildings on narrow streets, between the Greenway and the harbor, from North Square to Copp's Hill.",
     "ot_answer": "The North End is a Boston neighborhood of about a third of a square mile in the city's northeastern corner, bounded by the Rose Kennedy Greenway and by Boston Harbor on two sides, and settled in the 1630s. The Boston Planning Department counted 10,805 residents there in 2020. Most of its housing is four- and five-story brick apartment buildings from the 1880s onward, around colonial landmarks such as the Paul Revere House and Old North Church; Haymarket, North Station and Aquarium stations are within walking distance.",
     "ot_kicker": "Living in North End, Boston, MA",
     "ot_county": "Suffolk County",
@@ -6643,7 +6643,7 @@
       }
      ]
     },
-    "ot_headline": "Red-brick rows on Breed's Hill,\nand a navy yard turned to new uses on the harbor.",
+    "ot_headline": "Red-brick rows on Breed's Hill, and a navy yard turned to new uses on the harbor.",
     "ot_answer": "Charlestown is Boston's oldest neighborhood, founded in 1629 on a peninsula between the Charles and Mystic Rivers and annexed to Boston in 1874, with 19,120 residents in 2020 (2020 Census, Boston Planning Department tabulation). Its housing is largely red-brick row houses on Bunker Hill and Breed's Hill, plus buildings of the former Navy Yard converted to residential and other uses. The Orange Line stops at Community College and Sullivan Square, and the MBTA's Charlestown Ferry runs from the Navy Yard to Long Wharf.",
     "ot_kicker": "Living in Charlestown, Boston, MA",
     "ot_county": "Suffolk County",
@@ -6845,7 +6845,7 @@
       }
      ]
     },
-    "ot_headline": "Former harbor islands joined by landfill,\nwith five Blue Line stops, Piers Park and Logan Airport on the water.",
+    "ot_headline": "Former harbor islands joined by landfill, with five Blue Line stops, Piers Park and Logan Airport on the water.",
     "ot_answer": "East Boston is a Boston neighborhood across Boston Harbor from downtown, built on several former islands joined by landfill and laid out on a street grid by the East Boston Company in the 1830s. The Boston Planning Department counted 43,066 residents there in 2020. Its housing runs from Greek Revival brick bowfront houses of 1847 to about 1852 on Jeffries Point to Italianate and Second Empire houses on Eagle Hill, and the Blue Line stops at Maverick, Airport, Wood Island, Orient Heights and Suffolk Downs.",
     "ot_kicker": "Living in East Boston, Boston, MA",
     "ot_county": "Suffolk County",
@@ -7048,7 +7048,7 @@
       }
      ]
     },
-    "ot_headline": "A kettle pond, an arboretum and a cemetery park,\nwith the Orange Line running under a linear park.",
+    "ot_headline": "A kettle pond, an arboretum and a cemetery park, with the Orange Line running under a linear park.",
     "ot_answer": "Jamaica Plain is a Boston neighborhood of 4.4 square miles between Jamaica Pond and Franklin Park, part of the town of West Roxbury until it was annexed to Boston in 1874. Its housing runs from triple-deckers built from the 1870s onward to Victorian houses on former estates such as Sumner Hill. The Boston Planning & Development Agency counted 41,012 people there in 2020. Four Orange Line stations run under the Southwest Corridor Park, and the Needham Line stops at Forest Hills.",
     "ot_kicker": "Living in Jamaica Plain, Boston, MA",
     "ot_county": "Suffolk County",
@@ -7230,7 +7230,7 @@
       }
      ]
     },
-    "ot_headline": "A 1911 substation on the square,\nthe Needham Line and the Arboretum's Peters Hill.",
+    "ot_headline": "A 1911 substation on the square, the Needham Line and the Arboretum's Peters Hill.",
     "ot_answer": "Roslindale is a Boston neighborhood about six miles south-southwest of downtown, between the Arnold Arboretum and the George Wright Golf Course, and was part of the town of West Roxbury until annexation to Boston took effect in 1874. One- and two-family houses make up much of its housing, with newer apartment buildings around Roslindale Square. The Boston Planning & Development Agency counted 29,386 people there in 2020, and the Needham Line stops at Roslindale Village.",
     "ot_kicker": "Living in Roslindale, Boston, MA",
     "ot_county": "Suffolk County",
@@ -7410,7 +7410,7 @@
       }
      ]
     },
-    "ot_headline": "Centre Street, three Needham Line stops,\nand Bellevue Hill, the city's highest natural point.",
+    "ot_headline": "Centre Street, three Needham Line stops, and Bellevue Hill, the city's highest natural point.",
     "ot_answer": "West Roxbury is Boston's southwestern neighborhood, bordering Brookline, Newton, Needham and Dedham, set off from Roxbury as its own town in 1851 and annexed to Boston in 1874. Its housing is mostly single-family homes with some two-family houses, and the Boston Planning & Development Agency counted 31,561 people there in 2020. Three Needham Line stations, Bellevue, Highland and West Roxbury, run to South Station, and Centre Street is the main business district.",
     "ot_kicker": "Living in West Roxbury, Boston, MA",
     "ot_county": "Suffolk County",
@@ -7607,7 +7607,7 @@
       }
      ]
     },
-    "ot_headline": "Three commuter rail lines, Mother Brook\nand the Neponset River at the city's southern edge.",
+    "ot_headline": "Three commuter rail lines, Mother Brook and the Neponset River at the city's southern edge.",
     "ot_answer": "Hyde Park is Boston's southernmost neighborhood, 7.9 miles south of downtown, incorporated as a town in 1868 from parts of Dorchester, Dedham and Milton and annexed to Boston in 1912. Single-family and two-family homes made up nearly three-quarters of its housing units in the city's open space plan, and the Boston Planning & Development Agency counted 33,009 people there in 2020. Three commuter rail lines stop at its Hyde Park, Fairmount and Readville stations.",
     "ot_kicker": "Living in Hyde Park, Boston, MA",
     "ot_county": "Suffolk County",
@@ -7816,7 +7816,7 @@
       }
      ]
     },
-    "ot_headline": "A puddingstone hill with an 1869 standpipe tower,\nrow houses and triple-deckers around Nubian Square.",
+    "ot_headline": "A puddingstone hill with an 1869 standpipe tower, row houses and triple-deckers around Nubian Square.",
     "ot_answer": "Roxbury is a Boston neighborhood that the city's planning department describes as the geographic heart of Boston, settled in 1630 and annexed to Boston in 1868. Its housing runs from Greek Revival and Italianate houses on Fort Hill to brick row houses and triple-deckers, and the Boston Planning & Development Agency counted 54,905 people there in 2020. The Silver Line runs on Washington Street from Nubian Square, and the Orange Line and commuter rail stop at Ruggles.",
     "ot_kicker": "Living in Roxbury, Boston, MA",
     "ot_county": "Suffolk County",
@@ -8011,7 +8011,7 @@
       }
      ]
     },
-    "ot_headline": "The trolley's last stop at Mattapan Square,\ntriple-deckers, a nature sanctuary and the Neponset trail.",
+    "ot_headline": "The trolley's last stop at Mattapan Square, triple-deckers, a nature sanctuary and the Neponset trail.",
     "ot_answer": "Mattapan is a neighborhood in southern Boston, part of the town of Dorchester when Boston annexed it in 1870, centered on Mattapan Square, where Blue Hill Avenue, River Street and Cummins Highway meet. Its housing includes triple-deckers, two- and three-family houses, single-family houses and small apartment buildings, and the Boston Planning & Development Agency counted 23,834 people there in 2020. The Mattapan Line trolley ends at Mattapan station, and the Fairmount Line stops at Morton Street and Blue Hill Avenue.",
     "ot_kicker": "Living in Mattapan, Boston, MA",
     "ot_county": "Suffolk County",
@@ -8231,7 +8231,7 @@
       }
      ]
     },
-    "ot_headline": "Squares strung along the Red Line,\nthree-deckers between them, the Neponset at the edge.",
+    "ot_headline": "Squares strung along the Red Line, three-deckers between them, the Neponset at the edge.",
     "ot_answer": "Dorchester is Boston's largest neighborhood, more than 6 square miles between South Boston and the Neponset River, founded as a separate town in 1630 and annexed to Boston in stages that ended in 1870. Its housing mixes single-family, two-family and three-decker homes and condominiums, and the Boston Planning & Development Agency counted 122,191 people there in 2020. Five Red Line stations, the Mattapan Line and Fairmount Line commuter rail stations including Uphams Corner, Four Corners/Geneva and Talbot Avenue serve it.",
     "ot_kicker": "Living in Dorchester, Boston, MA",
     "ot_county": "Suffolk County",
@@ -8415,7 +8415,7 @@
       }
      ]
     },
-    "ot_headline": "Dorchester Heights at the center,\nCastle Island and three miles of beach and parkland at the end of Broadway.",
+    "ot_headline": "Dorchester Heights at the center, Castle Island and three miles of beach and parkland at the end of Broadway.",
     "ot_answer": "South Boston is a Boston neighborhood on the former Dorchester Neck, south and east of Fort Point Channel along Dorchester Bay, annexed to Boston in 1804. Its housing includes 19th-century brick and mansard row houses and flat-roofed triple-deckers, and the Boston Planning & Development Agency counted 37,917 people there in 2020, with the South Boston Waterfront counted separately. The Red Line stops at Broadway and Andrew, and Castle Island anchors three miles of shoreline parks.",
     "ot_kicker": "Living in South Boston, Boston, MA",
     "ot_county": "Suffolk County",
@@ -8601,7 +8601,7 @@
       }
      ]
     },
-    "ot_headline": "Brick apartments on Commonwealth Avenue,\nformer rail yards and Harvard's Lower Allston campus on the Charles.",
+    "ot_headline": "Brick apartments on Commonwealth Avenue, former rail yards and Harvard's Lower Allston campus on the Charles.",
     "ot_answer": "Allston is a Boston neighborhood on the Charles River, the eastern part of the former town of Brighton, named in 1868 when its railroad station and post office took the name of the painter Washington Allston; it became part of Boston with Brighton in 1874. It had 24,904 residents in the 2020 Census, as tabulated by the Boston Planning Department. Its housing runs from brick apartment buildings on Commonwealth Avenue to triple-deckers and Victorian houses, and the Green Line B branch runs along Commonwealth Avenue.",
     "ot_kicker": "Living in Allston, Boston, MA",
     "ot_county": "Suffolk County",
@@ -8805,7 +8805,7 @@
       }
      ]
     },
-    "ot_headline": "A cattle-market town on the Charles,\nwith a reservoir loop, Green Line stops and a rail station at Boston Landing.",
+    "ot_headline": "A cattle-market town on the Charles, with a reservoir loop, Green Line stops and a rail station at Boston Landing.",
     "ot_answer": "Brighton is a neighborhood in the northwestern corner of Boston, incorporated as its own town in 1807 and annexed to Boston in 1874, with 52,047 residents in 2020 (2020 Census, Boston Planning Department tabulation). Its housing mixes wood-frame triple-deckers, single-family houses and brick apartment buildings. The Green Line B branch runs along Commonwealth Avenue to Boston College, and Boston Landing station is on the Framingham/Worcester commuter rail line.",
     "ot_kicker": "Living in Brighton, Boston, MA",
     "ot_county": "Suffolk County",
@@ -9040,7 +9040,7 @@
      "tier": 3,
      "art": "colonial"
     },
-    "ot_headline": "Newtowne of 1630 on the Charles,\nfive Red Line stops and a reservoir to the west.",
+    "ot_headline": "Newtowne of 1630 on the Charles, five Red Line stops and a reservoir to the west.",
     "ot_answer": "Cambridge is a Middlesex County city of 118,403 people (2020 Census) on the north bank of the Charles River, across from Boston. Single-family homes are a small share of its housing: 6.4% of units, against 34.1% in buildings of more than 100 units, by the city's own count. The Warren Group recorded 105 single-family sales in 2025, a small market for a city of this size. Five Red Line stations run through Cambridge, from Alewife to Kendall/MIT, and Porter also has commuter rail.",
     "ot_kicker": "Living in Cambridge, MA",
     "ot_county": "Middlesex County",
@@ -9275,7 +9275,7 @@
      "tier": 3,
      "art": "triple-decker"
     },
-    "ot_headline": "A powder house, a hilltop castle,\nand five Green Line stops opened in 2022.",
+    "ot_headline": "A powder house, a hilltop castle, and five Green Line stops opened in 2022.",
     "ot_answer": "Somerville is a Middlesex County city of 81,045 people (2020 Census) on about 4.1 square miles of land just north of Cambridge and Boston, often described as the most densely populated municipality in New England. It is known for its triple-deckers, and since November 2023 three-unit buildings have been allowed citywide by right. The Warren Group counted only 72 single-family sales in 2025. Davis Square is on the Red Line, Assembly on the Orange Line, and five Green Line stations opened in 2022.",
     "ot_kicker": "Living in Somerville, MA",
     "ot_county": "Middlesex County",
@@ -9497,7 +9497,7 @@
      "tier": 3,
      "art": "cape"
     },
-    "ot_headline": "A harbor town of 1620,\nwith pine forest and ponds filling its western miles.",
+    "ot_headline": "A harbor town of 1620, with pine forest and ponds filling its western miles.",
     "ot_answer": "Plymouth is a Plymouth County town of 61,217 people (2020 Census) on Cape Cod Bay, about 40 miles south of Boston, and the largest municipality in Massachusetts by area. Founded by the Mayflower Pilgrims in 1620, it is one of the county's two seats. About 71 percent of its homes are detached single-family houses. Route 3 serves the town with six exits, and Plymouth's own commuter rail station has been suspended since 2021, so the nearest active stop is Kingston.",
     "ot_kicker": "Living in Plymouth, MA",
     "ot_county": "Plymouth County",
@@ -9732,7 +9732,7 @@
      "tier": 3,
      "art": "colonial"
     },
-    "ot_headline": "Saltbox houses on Washington Street,\nand a station where three rail lines meet.",
+    "ot_headline": "Saltbox houses on Washington Street, and a station where three rail lines meet.",
     "ot_answer": "Braintree is a Norfolk County community of 39,143 people (2020 Census), about ten miles south of Boston, where I-93 and Route 3 meet. Most of its housing, 64 percent, is single-family detached homes. Braintree station on Ivory Street is served by the Red Line and two commuter rail lines, and the Greenbush Line stops at Weymouth Landing/East Braintree on the town line. It is legally a city with a mayor and council, though it keeps the name Town of Braintree.",
     "ot_kicker": "Living in Braintree, MA",
     "ot_county": "Norfolk County",
@@ -10009,7 +10009,7 @@
      "tier": 3,
      "art": "cape"
     },
-    "ot_headline": "Seven villages between two shores,\nfrom the Great Marsh to the Hyannis ferries.",
+    "ot_headline": "Seven villages between two shores, from the Great Marsh to the Hyannis ferries.",
     "ot_answer": "Barnstable is the seat of Barnstable County, a town of 48,916 people (2020 Census) made up of seven villages that run from Cape Cod Bay to Nantucket Sound. Detached single-family homes make up 84.8 percent of its residential properties, and the town's housing plan counts at least 23 percent of its housing units as second homes. Hyannis holds the town's transit links: the seasonal CapeFLYER train from Boston ends at the Hyannis Transportation Center, and ferries leave Hyannis for Nantucket and Martha's Vineyard. U.S. Route 6 crosses the town as a four-lane freeway.",
     "ot_kicker": "Living in Barnstable, MA",
     "ot_county": "Barnstable County",
@@ -10239,7 +10239,7 @@
      "tier": 3,
      "art": "cape"
     },
-    "ot_headline": "A village green, a seaside bikeway,\nand the ferry to the Vineyard at Woods Hole.",
+    "ot_headline": "A village green, a seaside bikeway, and the ferry to the Vineyard at Woods Hole.",
     "ot_answer": "Falmouth is an Upper Cape town of 32,517 people (2020 Census) in Barnstable County, bordered by Buzzards Bay to the west and Vineyard Sound to the south. Its 2024 Housing Production Plan counts 22,817 housing units, about 86 percent of them detached single-family homes, with 30 percent counted as seasonal units. Falmouth has no rail station: Steamship Authority ferries leave Woods Hole for Martha's Vineyard, and buses link the town to Hyannis and to Boston and Logan Airport. The median single-family sale price was $804,000 in 2025, across 424 sales.",
     "ot_kicker": "Living in Falmouth, MA",
     "ot_county": "Barnstable County",
@@ -10463,7 +10463,7 @@
      "tier": 3,
      "art": "triple-decker"
     },
-    "ot_headline": "Cobblestones above the working harbor,\nand the train back on Acushnet Avenue.",
+    "ot_headline": "Cobblestones above the working harbor, and the train back on Acushnet Avenue.",
     "ot_answer": "New Bedford is a Bristol County city of 101,079 people (2020 Census) on the Acushnet River where it meets Buzzards Bay. Its downtown waterfront is part of New Bedford Whaling National Historical Park, established in 1996. The Warren Group counted 401 single-family sales in 2025. Since March 24, 2025, the MBTA Fall River/New Bedford Line has run from New Bedford and Church Street stations to Boston's South Station, and I-195 crosses the city.",
     "ot_kicker": "Living in New Bedford, MA",
     "ot_county": "Bristol County",
@@ -10683,7 +10683,7 @@
      "tier": 3,
      "art": "triple-decker"
     },
-    "ot_headline": "Granite mills on a falling river,\na battleship at the foot of the hill.",
+    "ot_headline": "Granite mills on a falling river, a battleship at the foot of the hill.",
     "ot_answer": "Fall River is a Bristol County city of 94,000 people (2020 Census) on the Taunton River and Mount Hope Bay, at the Rhode Island line. It grew into a leading U.S. textile city in the 1800s, and its housing still includes many 19th-century triple-deckers. The Warren Group counted 300 single-family sales in 2025. Since March 24, 2025, Fall River Depot station has linked the city to Boston's South Station on the MBTA Fall River/New Bedford Line, and I-195 and Route 24 meet here.",
     "ot_kicker": "Living in Fall River, MA",
     "ot_county": "Bristol County",
@@ -10907,7 +10907,7 @@
      "tier": 3,
      "art": "colonial"
     },
-    "ot_headline": "A county seat around Park Square,\nwith two lakes and a state forest at its edges.",
+    "ot_headline": "A county seat around Park Square, with two lakes and a state forest at its edges.",
     "ot_answer": "Pittsfield is a city of 43,927 people (2020 Census) and the seat of Berkshire County. A city housing analysis describes its homes as mostly single-family houses and small two- and three-unit buildings, and The Warren Group counted 434 single-family sales in 2025. Amtrak's Lake Shore Limited stops at the Joseph Scelsi Intermodal Transportation Center, and the seasonal Berkshire Flyer runs from there to New York. US 7 and US 20 meet in the city, and the Massachusetts Turnpike is about 10 miles south in Lee.",
     "ot_kicker": "Living in Pittsfield, MA",
     "ot_county": "Berkshire County",
@@ -11116,7 +11116,7 @@
      "tier": 3,
      "art": "townscape"
     },
-    "ot_headline": "A Main Street on the Housatonic,\nand Monument Mountain up Route 7.",
+    "ot_headline": "A Main Street on the Housatonic, and Monument Mountain up Route 7.",
     "ot_answer": "Great Barrington is a Berkshire County town of 7,172 people (2020 Census) in the Housatonic River valley. US 7 runs through its center as Main Street, and the town also takes in the villages of Housatonic and Van Deusenville. There is no passenger rail station in town; BRTA buses run to Lee and to Pittsfield, where Amtrak stops. The Warren Group counted 77 single-family sales in Great Barrington in 2025.",
     "ot_kicker": "Living in Great Barrington, MA",
     "ot_county": "Berkshire County",
@@ -11330,7 +11330,7 @@
      "tier": 4,
      "art": "cape"
     },
-    "ot_headline": "Auburn, where three highways meet\nand the first liquid-fueled rocket flew.",
+    "ot_headline": "Auburn, where three highways meet and the first liquid-fueled rocket flew.",
     "ot_answer": "Auburn is a Worcester County town of 16,889 people (2020 Census), incorporated in 1778 as Ward and renamed Auburn in 1837. Its housing runs from 19th-century mill-village houses at Stoneville to bungalows and Colonial Revival houses of the 1930s and 1940s, and two former elementary schools became apartments in 2022. The Massachusetts Turnpike, I-290 and I-395 meet in town, WRTA buses run to Worcester, and the nearest MBTA station is Worcester Union Station on the Framingham/Worcester Line.",
     "ot_kicker": "Living in Auburn, MA",
     "ot_county": "Worcester County",
@@ -11545,7 +11545,7 @@
      "tier": 4,
      "art": "townscape"
     },
-    "ot_headline": "Millbury, on the Blackstone:\narmory village, mill brooks and a river path.",
+    "ot_headline": "Millbury, on the Blackstone: armory village, mill brooks and a river path.",
     "ot_answer": "Millbury is a Worcester County town of 13,831 people (2020 Census), set off from Sutton in 1813 and drained by the Blackstone River. Its housing is mostly detached single-family, with 19th-century mill housing in villages such as Bramanville. Route 146 and the Massachusetts Turnpike meet in town, WRTA Route 4 runs to Worcester, and the nearest MBTA stations are Worcester and Grafton on the Framingham/Worcester Line.",
     "ot_kicker": "Living in Millbury, MA",
     "ot_county": "Worcester County",
@@ -11760,7 +11760,7 @@
      "tier": 4,
      "art": "colonial"
     },
-    "ot_headline": "Northborough, along the Post Road:\nmill villages, an aqueduct and Mount Pisgah.",
+    "ot_headline": "Northborough, along the Post Road: mill villages, an aqueduct and Mount Pisgah.",
     "ot_answer": "Northborough is a Worcester County town of 15,741 people (2020 Census), set off from Westborough as a district in 1766 and made a town in 1775. Its center lines the old Boston Post Road, now Route 20, with colonial, Federal and Greek Revival houses and later subdivisions around it. I-290 has three Northborough exits, Route 9 crosses the south end, and the nearest MBTA station is Westborough.",
     "ot_kicker": "Living in Northborough, MA",
     "ot_county": "Worcester County",
@@ -11953,7 +11953,7 @@
      "tier": 4,
      "art": "cape"
     },
-    "ot_headline": "A hill town on the Worcester line,\nwith a state park and reservoir land.",
+    "ot_headline": "A hill town on the Worcester line, with a state park and reservoir land.",
     "ot_answer": "Paxton is a hill town of 5,004 people (2020 Census) in Worcester County, bordering Worcester. Its houses run from 18th-century center-chimney homes and mid-1800s side-passage houses in Paxton Center to bungalows and post-1945 suburban streets, and the town contains Moore State Park and large tracts of Worcester watershed land. Routes 31, 56 and 122 cross the town; commuter rail is reached at Worcester station.",
     "ot_kicker": "Living in Paxton, MA",
     "ot_county": "Worcester County",
@@ -12167,7 +12167,7 @@
      "tier": 4,
      "art": "colonial"
     },
-    "ot_headline": "Five villages, old mill sites,\nand a granite chasm in the southeast.",
+    "ot_headline": "Five villages, old mill sites, and a granite chasm in the southeast.",
     "ot_answer": "Sutton is a Blackstone Valley town of 9,357 people (2020 Census) in Worcester County, made up of five villages: Sutton Center, Manchaug, Wilkinsonville, West Sutton and South Sutton. The town's 2025 Housing Production Plan reports that 86% of homes are single-family detached houses. Route 146 and Route 122A run through town, and commuter rail is reached at Grafton and Worcester stations on the Framingham/Worcester Line.",
     "ot_kicker": "Living in Sutton, MA",
     "ot_county": "Worcester County",
@@ -12385,7 +12385,7 @@
      "tier": 4,
      "art": "cape"
     },
-    "ot_headline": "A reservoir town between Shrewsbury and Clinton,\nwith the gardens at Tower Hill.",
+    "ot_headline": "A reservoir town between Shrewsbury and Clinton, with the gardens at Tower Hill.",
     "ot_answer": "Boylston is a Worcester County town of 4,849 people (2020 Census) on the Wachusett Reservoir, between Shrewsbury and Clinton. Most of its 1,823 housing units are detached single-family homes (74%, per the town's 2021 Housing Production Plan), and 67% of units were built in 1960 or later. Routes 70 and 140 cross the town, I-290 passes through, and commuter rail is reached in Worcester.",
     "ot_kicker": "Living in Boylston, MA",
     "ot_county": "Worcester County",
@@ -12457,6 +12457,7 @@
     "ot_instagram": "https://www.instagram.com/oberdorferteam/",
     "ot_photo": "assets/img/photo/brandon-oberdorfer.webp",
     "ot_card_url": "https://blinq.me/cmere9vg301rxs60mq7nu5g5g",
+    "ot_summary": "Brandon Oberdorfer is a Massachusetts real estate agent who leads The Oberdorfer Team with his wife, Kaitlyn Oberdorfer. The husband-and-wife team works from Worcester, helps buyers and sellers across the state and operates under REWAP Brokerage LLC.",
     "ot_seo_title": "Brandon Oberdorfer, Real Estate Agent | The Oberdorfer Team",
     "ot_seo_description": "Meet Brandon Oberdorfer, who leads The Oberdorfer Team with his wife, Kaitlyn Oberdorfer. Helping buyers and sellers across Massachusetts. Call 406-250-7620."
    }
@@ -12503,6 +12504,7 @@
     "ot_instagram": "https://www.instagram.com/oberdorferteam/",
     "ot_photo": "assets/img/photo/kaitlyn-oberdorfer.webp",
     "ot_card_url": "https://blinq.me/WXgsLzUBTC2V",
+    "ot_summary": "Kaitlyn Oberdorfer is a Massachusetts real estate agent who leads The Oberdorfer Team with her husband, Brandon Oberdorfer. The husband-and-wife team works from Worcester, helps buyers and sellers across the state and operates under REWAP Brokerage LLC.",
     "ot_seo_title": "Kaitlyn Oberdorfer, Real Estate Agent | The Oberdorfer Team",
     "ot_seo_description": "Meet Kaitlyn Oberdorfer, who leads The Oberdorfer Team with her husband, Brandon Oberdorfer. Helping buyers and sellers across Massachusetts. Call 406-250-7620."
    }

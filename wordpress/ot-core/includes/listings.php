@@ -198,6 +198,72 @@ function ot_render_community_homes( $x ) {
 	return '<section class="section" id="homes" aria-labelledby="homes-title"><div class="container">' . ot_section_head( 'Homes for sale', 'Brandon &amp; Kaitlyn\'s listings', array( 'Homes in ' . $name . '.' ), null, ot_link_arrow( ot_page_url( 'buy' ), 'All homes' ), 'h2', 'homes-title' ) . $grid . '</div></section>';
 }
 
+function ot_listing_gallery_html( $l ) {
+	$photos = array_values( array_filter( array_merge( array( $l['photo_id'] ), $l['gallery'] ) ) );
+	$gallery = '';
+	if ( $photos ) {
+		$tiles = '';
+		$span = count( $photos ) < 3 ? ' style="grid-row:auto"' : '';
+		foreach ( array_slice( $photos, 0, 3 ) as $i => $id ) {
+			$tiles .= '<div' . $span . '>' . wp_get_attachment_image( $id, 0 === $i ? 'full' : 'large', false, array( 'loading' => 0 === $i ? 'eager' : 'lazy', 'fetchpriority' => 0 === $i ? 'high' : 'auto' ) ) . '</div>';
+		}
+		$n       = min( 3, count( $photos ) );
+		// One photo fills the frame; two sit side by side; three or more use the prototype's gallery.
+		$style   = 1 === $n ? 'aspect-ratio:16/7.5;grid-template-columns:1fr;grid-template-rows:1fr' : ( 2 === $n ? 'aspect-ratio:16/7.5;grid-template-rows:1fr' : 'aspect-ratio:16/7.5' );
+		$gallery = '<div class="gallery" style="' . $style . '">' . $tiles . '</div>';
+		if ( count( $photos ) > 3 ) {
+			$more = '';
+			foreach ( array_slice( $photos, 3 ) as $id ) {
+				$more .= wp_get_attachment_image( $id, 'large', false, array( 'loading' => 'lazy' ) );
+			}
+			$gallery .= '<details class="listing-photos"><summary class="btn btn--secondary btn--small">All ' . count( $photos ) . ' photos</summary><div class="card-grid-3" style="margin-top:var(--space-5)">' . $more . '</div></details>';
+		}
+	} else {
+		$gallery = '<div class="demo-illu demo-illu--light" style="aspect-ratio:16/6">' . ot_art( 'colonial', 'Photos to come' ) . '</div>';
+	}
+	return $gallery;
+}
+
+/** Facts row, details table, links and the aside (form and contact) of a listing page. */
+function ot_listing_detail_parts( $l, $post_id ) {
+	$where = trim( ( $l['town'] ? $l['town'] . ', Massachusetts' : 'Massachusetts' ) . ( $l['zip'] ? ' ' . $l['zip'] : '' ) );
+	$facts = '';
+	foreach ( array( array( $l['beds'], 'Bedrooms' ), array( $l['baths'], 'Baths' ), array( $l['sqft'] ? ot_num( $l['sqft'] ) : '', 'Sq. ft.' ), array( $l['year'], 'Built' ) ) as $f ) {
+		if ( '' !== (string) $f[0] ) {
+			$facts .= '<div><b>' . esc_html( $f[0] ) . '</b><span>' . $f[1] . '</span></div>';
+		}
+	}
+	$rows = '';
+	foreach ( array( 'Status' => OT_LISTING_STATUSES[ $l['status'] ][0], 'Home type' => $l['kind'], 'Style' => $l['style'], 'Lot' => $l['lot'], 'MLS number' => $l['mls'] ) as $k => $v ) {
+		if ( $v ) {
+			$rows .= '<tr><th scope="row">' . $k . '</th><td>' . esc_html( $v ) . '</td></tr>';
+		}
+	}
+	$post  = get_post( $post_id );
+	$story = trim( (string) $post->post_content ) ? apply_filters( 'the_content', $post->post_content ) : '';
+	$guide = '';
+	if ( $l['town_slug'] ) {
+		$g = get_page_by_path( $l['town_slug'], OBJECT, 'ot_community' );
+		if ( $g && ! ot_community_off( $g->ID ) ) {
+			$guide = ot_link_arrow( get_permalink( $g ), 'Living in ' . get_the_title( $g ) );
+		}
+	}
+	$maps   = 'https://www.google.com/maps/search/?api=1&query=' . rawurlencode( $l['address'] . ', ' . $where );
+	$agent  = $l['agent'] ? get_page_by_path( $l['agent'], OBJECT, 'ot_agent' ) : null;
+	$who    = $agent ? get_the_title( $agent ) : 'Brandon &amp; Kaitlyn Oberdorfer';
+	$phone  = $agent ? ( get_post_meta( $agent->ID, 'ot_phone', true ) ?: OT_PHONE ) : OT_PHONE;
+	$form   = ot_inquiry_form( 'show', 'Request a showing', array( 'This week, weekday', 'This week, weekend', 'Next week', 'Flexible' ), 'Request a showing', 'showing:' . $l['slug'], 'h2', 'Your request is attached to ' . $l['address'] . ' and goes to ' . wp_strip_all_tags( html_entity_decode( $who ) ) . '. [Privacy policy to be published before launch.]' );
+	return array(
+		'facts' => $facts ? '<div class="facts">' . $facts . '</div>' : '',
+		'story' => $story,
+		'specs' => ( $rows ? '<div><h2 class="h3" style="margin-bottom:var(--space-4)">Details</h2><table class="spec-table"><tbody>' . $rows . '</tbody></table></div>' : '' )
+			. '<div class="cluster">' . ot_link_arrow( $maps, 'See it on a map' ) . $guide . '</div>'
+			. '<p class="form-note">Listing courtesy of ' . esc_html( $l['courtesy'] ) . '. Information deemed reliable but not guaranteed; confirm details before you rely on them.</p>',
+		'aside' => '<div class="panel">' . $form . '</div>'
+			. '<div class="panel" style="grid-template-columns:5rem 1fr;align-items:center;gap:var(--space-4)"><img src="' . esc_url( ot_asset( 'assets/img/photo/team-portrait.webp' ) ) . '" alt="" style="aspect-ratio:1;object-fit:cover;object-position:50% 15%"><div><p class="h5">' . $who . '</p><a href="' . esc_attr( ot_tel_href( $phone ) ) . '" class="body-s">' . esc_html( $phone ) . '</a></div></div>',
+	);
+}
+
 /** The listing page, one section at a time: hero (with gallery), details, more. */
 function ot_render_listing_section( $section, $post_id ) {
 	$l = ot_listing( $post_id );
@@ -206,30 +272,23 @@ function ot_render_listing_section( $section, $post_id ) {
 	}
 	$where = trim( ( $l['town'] ? $l['town'] . ', Massachusetts' : 'Massachusetts' ) . ( $l['zip'] ? ' ' . $l['zip'] : '' ) );
 	switch ( $section ) {
+		// Pieces used by the block template; the address (post title), the main photo and the
+		// story (post content) are core blocks there, edited on the page.
+		case 'badge':
+			return ot_listing_badge( $l );
+		case 'location':
+			return '<p class="lead" style="max-width:none">' . esc_html( $where ) . '</p>';
+		case 'price':
+			return ( $l['price'] ? '<p class="display-m tabular" style="font-size:var(--step-h1)">' . ot_money( $l['price'] ) . '</p>' : '' ) . ( $l['open_house'] && 'sold' !== $l['status'] ? '<p class="label">Open house · ' . esc_html( $l['open_house'] ) . '</p>' : '' );
+		case 'gallery':
+			return ot_listing_gallery_html( $l );
+		case 'facts':
+		case 'specs':
+		case 'aside':
+			return ot_listing_detail_parts( $l, $post_id )[ $section ];
 		case 'hero':
 			$trail  = array( array( 'Home', home_url( '/' ) ), array( 'Buy', ot_page_url( 'buy' ) ), array( esc_html( $l['address'] ), $l['url'] ) );
-			$photos = array_values( array_filter( array_merge( array( $l['photo_id'] ), $l['gallery'] ) ) );
-			$gallery = '';
-			if ( $photos ) {
-				$tiles = '';
-				$span = count( $photos ) < 3 ? ' style="grid-row:auto"' : '';
-				foreach ( array_slice( $photos, 0, 3 ) as $i => $id ) {
-					$tiles .= '<div' . $span . '>' . wp_get_attachment_image( $id, 0 === $i ? 'full' : 'large', false, array( 'loading' => 0 === $i ? 'eager' : 'lazy', 'fetchpriority' => 0 === $i ? 'high' : 'auto' ) ) . '</div>';
-				}
-				$n       = min( 3, count( $photos ) );
-				// One photo fills the frame; two sit side by side; three or more use the prototype's gallery.
-				$style   = 1 === $n ? 'aspect-ratio:16/7.5;grid-template-columns:1fr;grid-template-rows:1fr' : ( 2 === $n ? 'aspect-ratio:16/7.5;grid-template-rows:1fr' : 'aspect-ratio:16/7.5' );
-				$gallery = '<div class="gallery" style="' . $style . '">' . $tiles . '</div>';
-				if ( count( $photos ) > 3 ) {
-					$more = '';
-					foreach ( array_slice( $photos, 3 ) as $id ) {
-						$more .= wp_get_attachment_image( $id, 'large', false, array( 'loading' => 'lazy' ) );
-					}
-					$gallery .= '<details class="listing-photos"><summary class="btn btn--secondary btn--small">All ' . count( $photos ) . ' photos</summary><div class="card-grid-3" style="margin-top:var(--space-5)">' . $more . '</div></details>';
-				}
-			} else {
-				$gallery = '<div class="demo-illu demo-illu--light" style="aspect-ratio:16/6">' . ot_art( 'colonial', 'Photos to come' ) . '</div>';
-			}
+			$gallery = ot_listing_gallery_html( $l );
 			return '<section class="section--tight"><div class="container stack" style="--stack:var(--space-5)">
   ' . ot_breadcrumbs_html( $trail ) . '
   <div class="cluster" style="justify-content:space-between;align-items:end">
@@ -240,44 +299,10 @@ function ot_render_listing_section( $section, $post_id ) {
 </div></section>';
 
 		case 'details':
-			$facts = '';
-			foreach ( array( array( $l['beds'], 'Bedrooms' ), array( $l['baths'], 'Baths' ), array( $l['sqft'] ? ot_num( $l['sqft'] ) : '', 'Sq. ft.' ), array( $l['year'], 'Built' ) ) as $f ) {
-				if ( '' !== (string) $f[0] ) {
-					$facts .= '<div><b>' . esc_html( $f[0] ) . '</b><span>' . $f[1] . '</span></div>';
-				}
-			}
-			$rows = '';
-			foreach ( array( 'Status' => OT_LISTING_STATUSES[ $l['status'] ][0], 'Home type' => $l['kind'], 'Style' => $l['style'], 'Lot' => $l['lot'], 'MLS number' => $l['mls'] ) as $k => $v ) {
-				if ( $v ) {
-					$rows .= '<tr><th scope="row">' . $k . '</th><td>' . esc_html( $v ) . '</td></tr>';
-				}
-			}
-			$post  = get_post( $post_id );
-			$story = trim( (string) $post->post_content ) ? apply_filters( 'the_content', $post->post_content ) : '';
-			$guide = '';
-			if ( $l['town_slug'] ) {
-				$g = get_page_by_path( $l['town_slug'], OBJECT, 'ot_community' );
-				if ( $g && ! ot_community_off( $g->ID ) ) {
-					$guide = ot_link_arrow( get_permalink( $g ), 'Living in ' . get_the_title( $g ) );
-				}
-			}
-			$maps   = 'https://www.google.com/maps/search/?api=1&query=' . rawurlencode( $l['address'] . ', ' . $where );
-			$agent  = $l['agent'] ? get_page_by_path( $l['agent'], OBJECT, 'ot_agent' ) : null;
-			$who    = $agent ? get_the_title( $agent ) : 'Brandon &amp; Kaitlyn Oberdorfer';
-			$phone  = $agent ? ( get_post_meta( $agent->ID, 'ot_phone', true ) ?: OT_PHONE ) : OT_PHONE;
-			$form   = ot_inquiry_form( 'show', 'Request a showing', array( 'This week, weekday', 'This week, weekend', 'Next week', 'Flexible' ), 'Request a showing', 'showing:' . $l['slug'], 'h2', 'Your request is attached to ' . $l['address'] . ' and goes to ' . wp_strip_all_tags( html_entity_decode( $who ) ) . '. [Privacy policy to be published before launch.]' );
+			$d = ot_listing_detail_parts( $l, $post_id );
 			return '<section class="section" id="details" style="padding-top:var(--space-6)"><div class="container detail">
-  <div class="stack" style="--stack:var(--space-7)">
-    ' . ( $facts ? '<div class="facts">' . $facts . '</div>' : '' ) . '
-    ' . ( $story ? '<div class="prose stack"><h2 class="h3">The property</h2>' . $story . '</div>' : '' ) . '
-    ' . ( $rows ? '<div><h2 class="h3" style="margin-bottom:var(--space-4)">Details</h2><table class="spec-table"><tbody>' . $rows . '</tbody></table></div>' : '' ) . '
-    <div class="cluster">' . ot_link_arrow( $maps, 'See it on a map' ) . $guide . '</div>
-    <p class="form-note">Listing courtesy of ' . esc_html( $l['courtesy'] ) . '. Information deemed reliable but not guaranteed; confirm details before you rely on them.</p>
-  </div>
-  <aside class="detail__aside" aria-label="Contact about this home">
-    <div class="panel">' . $form . '</div>
-    <div class="panel" style="grid-template-columns:5rem 1fr;align-items:center;gap:var(--space-4)"><img src="' . esc_url( ot_asset( 'assets/img/photo/team-portrait.webp' ) ) . '" alt="" style="aspect-ratio:1;object-fit:cover;object-position:50% 15%"><div><p class="h5">' . $who . '</p><a href="' . esc_attr( ot_tel_href( $phone ) ) . '" class="body-s">' . esc_html( $phone ) . '</a></div></div>
-  </aside>
+  <div class="stack" style="--stack:var(--space-7)">' . $d['facts'] . ( $d['story'] ? '<div class="prose stack"><h2 class="h3">The property</h2>' . $d['story'] . '</div>' : '' ) . $d['specs'] . '</div>
+  <aside class="detail__aside" aria-label="Contact about this home">' . $d['aside'] . '</aside>
 </div></section>';
 
 		case 'more':

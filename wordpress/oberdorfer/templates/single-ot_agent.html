@@ -1,9 +1,45 @@
 <!-- wp:template-part {"slug":"header","tagName":"div","area":"header"} /-->
 
 <!-- wp:group {"tagName":"main","layout":{"type":"default"}} -->
-<main id="main" class="wp-block-group"><!-- wp:ot/agent-profile {"section":"hero"} /-->
+<main id="main" class="wp-block-group"><!-- wp:group {"tagName":"section","className":"section profile-hero ot-pt-7","layout":{"type":"default"}} -->
+<section class="wp-block-group section profile-hero ot-pt-7"><!-- wp:group {"className":"container stack ot-stack-6","layout":{"type":"default"}} -->
+<div class="wp-block-group container stack ot-stack-6"><!-- wp:ot/breadcrumbs /-->
 
-<!-- wp:ot/agent-profile {"section":"about"} /-->
+<!-- wp:group {"className":"profile","layout":{"type":"default"}} -->
+<div class="wp-block-group profile"><!-- wp:ot/agent-profile {"section":"photo"} /-->
+
+<!-- wp:group {"className":"profile__body","layout":{"type":"default"}} -->
+<div class="wp-block-group profile__body"><!-- wp:paragraph {"className":"label","metadata":{"bindings":{"content":{"source":"core/post-meta","args":{"key":"ot_role"}}}}} -->
+<p class="label">Role on the team</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:post-title {"level":1,"className":"display-l"} /-->
+
+<!-- wp:paragraph {"className":"lead profile__summary","metadata":{"bindings":{"content":{"source":"core/post-meta","args":{"key":"ot_summary"}}}}} -->
+<p class="lead profile__summary">One-sentence summary</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:ot/agent-profile {"section":"actions"} /-->
+
+<!-- wp:ot/agent-profile {"section":"facts"} /--></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
+
+<!-- wp:group {"tagName":"section","className":"section surface-muted","layout":{"type":"default"}} -->
+<section class="wp-block-group section surface-muted"><!-- wp:group {"className":"container split ot-align-start","layout":{"type":"default"}} -->
+<div class="wp-block-group container split ot-align-start"><!-- wp:group {"className":"stack ot-col-1-7 ot-stack-5","layout":{"type":"default"}} -->
+<div class="wp-block-group stack ot-col-1-7 ot-stack-5"><!-- wp:ot/agent-profile {"section":"about-intro"} /-->
+
+<!-- wp:post-content {"className":"prose ot-bio","layout":{"type":"default"}} /--></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"tagName":"aside","className":"stack ot-col-9-4 ot-stack-5","layout":{"type":"default"}} -->
+<aside class="wp-block-group stack ot-col-9-4 ot-stack-5"><!-- wp:ot/agent-profile {"section":"partner"} /--></aside>
+<!-- /wp:group --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
 
 <!-- wp:ot/agent-profile {"section":"help"} /-->
 

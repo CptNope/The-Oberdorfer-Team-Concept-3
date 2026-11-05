@@ -1,7 +1,23 @@
 <!-- wp:template-part {"slug":"header","tagName":"div","area":"header"} /-->
 
 <!-- wp:group {"tagName":"main","layout":{"type":"default"}} -->
-<main id="main" class="wp-block-group"><!-- wp:ot/community-section {"section":"hero"} /-->
+<main id="main" class="wp-block-group"><!-- wp:group {"tagName":"section","className":"page-hero ot-hero ot-labelledby-page-title","layout":{"type":"default"}} -->
+<section class="wp-block-group page-hero ot-hero ot-labelledby-page-title"><!-- wp:group {"className":"container page-hero__grid","layout":{"type":"default"}} -->
+<div class="wp-block-group container page-hero__grid"><!-- wp:ot/breadcrumbs /-->
+
+<!-- wp:heading {"level":1,"className":"label page-hero__kicker","metadata":{"bindings":{"content":{"source":"core/post-meta","args":{"key":"ot_kicker"}}}}} -->
+<h1 class="wp-block-heading label page-hero__kicker" id="page-title">Living in this town, MA</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"page-hero__title display-l answer","metadata":{"bindings":{"content":{"source":"core/post-meta","args":{"key":"ot_headline"}}}}} -->
+<p class="page-hero__title display-l answer">The guide's headline</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"page-hero__lead lead","metadata":{"bindings":{"content":{"source":"core/post-meta","args":{"key":"ot_answer"}}}}} -->
+<p class="page-hero__lead lead">The guide's summary</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></section>
+<!-- /wp:group -->
 
 <!-- wp:ot/community-section {"section":"about"} /-->
 

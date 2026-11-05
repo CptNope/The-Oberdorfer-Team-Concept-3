@@ -72,6 +72,19 @@ ot-core also outputs: title tags and meta descriptions, canonical URLs on `https
 
 **Importer:** Tools > Import Oberdorfer content, or `wp ot import`. It creates or updates (by slug) every community, both agents and the Worcester office, the region terms, and the pages listed above, sets the static front page and the posts page, and sets pretty permalinks. Running it again updates in place.
 
+## Editing on the page (v0.3.0)
+
+`ot_community`, `ot_agent`, `ot_listing` and `ot_office` support the editor with `default-mode` `template-locked`, so each opens showing its whole template (`includes/editing.php`). The post's own text in the templates is core blocks bound with Block Bindings (`core/post-meta`):
+
+| Template | Bound block | Meta key |
+|---|---|---|
+| `single-ot_community` | h1 heading, headline paragraph, summary paragraph | `ot_kicker`, `ot_headline`, `ot_answer` |
+| `single-ot_agent` | role label, summary paragraph | `ot_role`, `ot_summary` |
+
+The title is `core/post-title`; the biography and a listing's description are `core/post-content`. WordPress disables template blocks in this mode, so `assets/editor.js` sets every block with a `core/post-meta` binding, and every `ot/*` block, to the `contentOnly` editing mode: bound text can be typed into, and an `ot/*` section shows where it is edited when selected. Their settings panels show only in the Site Editor. The agent "Agent details" box posts the value each field had on load and skips unchanged fields, so it does not overwrite page edits saved in the same request. New templates must bind with `core/post-meta` keys registered with `show_in_rest`.
+
+The importer stores `_ot_import_<key>` (md5 of what it wrote) and updates a field only while it still matches; `ot_record` always refreshes.
+
 ## Editable agent profiles
 
 Each agent's edit screen has an "Agent details" box (`includes/agent-fields.php`): role, title, summary, direct phone, email, specialties, languages, service area, license number, recognition (`Award | Source` per line), digital card, headshot and caption. The biography is the post body. `ot_agent_rec()` merges these over the imported record; an emptied field is marked `<key>_cleared` so the import does not show through; the importer seeds agent meta once and never overwrites it. Empty fields render the [bracketed placeholder] with a "To confirm" badge. The joint profile's introduction is its post body.

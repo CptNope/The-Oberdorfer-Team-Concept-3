@@ -124,6 +124,9 @@ function ot_agent_box( $post ) {
 		} else {
 			echo '<input class="regular-text" type="text" id="' . $id . '" name="' . $id . '" value="' . esc_attr( $v ) . '">';
 		}
+		// What the box showed when the page loaded: on save, a field still holding it is left
+		// alone, so an edit typed on the page (bound blocks save the same meta) is not overwritten.
+		echo '<input type="hidden" name="ot_orig[' . $id . ']" value="' . esc_attr( 'photo' === $d[2] ? (string) ( (int) $v ?: '' ) : (string) $v ) . '">';
 		echo $help . '</td></tr>';
 	}
 	echo '</tbody></table>';
@@ -161,6 +164,9 @@ add_action( 'save_post_ot_agent', function ( $post_id ) {
 			continue;
 		}
 		$raw = wp_unslash( $_POST[ $meta ] );
+		if ( isset( $_POST['ot_orig'][ $meta ] ) && (string) $raw === (string) wp_unslash( $_POST['ot_orig'][ $meta ] ) ) {
+			continue; // unchanged in the box
+		}
 		switch ( $d[2] ) {
 			case 'textarea':
 			case 'accolades':

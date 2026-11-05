@@ -23,7 +23,7 @@ import build_site as S  # noqa: E402  (data and the tested title/description rul
 THEME = os.path.join(ROOT, "wordpress", "oberdorfer")
 CORE = os.path.join(ROOT, "wordpress", "ot-core")
 DIST = os.path.join(ROOT, "wordpress", "dist")
-VERSION = "0.2.1"
+VERSION = "0.3.0"
 
 ASSET_DIRS = ["assets/img/photo", "assets/logo"]
 ASSET_FILES = ["assets/css/tokens.css", "assets/css/base.css", "assets/css/components.css", "assets/css/site.css",
@@ -83,7 +83,7 @@ def community_entries():
         out.append({
             "slug": t["slug"], "parent": None, "title": t["name"], "order": i, "region": t.get("region_key"),
             "excerpt": S.first_sentence(t["answer"]),
-            "meta": {"ot_record": rec, "ot_headline": "\n".join(t.get("headline", [])), "ot_answer": t["answer"],
+            "meta": {"ot_record": rec, "ot_headline": " ".join(t.get("headline", [])), "ot_answer": t["answer"],
                      "ot_kicker": f"Living in {t['name']}, MA", "ot_county": t.get("county", ""),
                      "ot_population": str(t.get("population_2020") or ""),
                      "ot_seo_title": S.town_title(t["name"]), "ot_seo_description": S.town_desc(t)},
@@ -93,7 +93,7 @@ def community_entries():
             out.append({
                 "slug": n["slug"], "parent": t["slug"], "title": n["name"], "order": j, "region": t.get("region_key"),
                 "excerpt": S.first_sentence(n["answer"]),
-                "meta": {"ot_record": nrec, "ot_headline": "\n".join(n.get("headline", [])), "ot_answer": n["answer"],
+                "meta": {"ot_record": nrec, "ot_headline": " ".join(n.get("headline", [])), "ot_answer": n["answer"],
                          "ot_kicker": f"Living in {n['name']}, {t['name']}, MA", "ot_county": t.get("county", ""),
                          "ot_population": str(n.get("population_2020") or ""),
                          "ot_seo_title": S.nbhd_title(n["name"], t["name"]), "ot_seo_description": S.nbhd_desc(n)},
@@ -123,7 +123,9 @@ def agent_entries():
         rec.update(AGENT_EXTRA.get(a["slug"], {}))
         meta = {"ot_record": rec, "ot_role": a["role"], "ot_job_title": rec.get("title", ""), "ot_phone": a["direct"] or "",
                 "ot_email": a["email"] or "", "ot_instagram": "https://www.instagram.com/oberdorferteam/", "ot_photo": a["photo"],
-                "ot_card_url": next((u for u in rec.get("same_as", []) if "blinq" in u), "")}
+                "ot_card_url": next((u for u in rec.get("same_as", []) if "blinq" in u), ""),
+                # The one-sentence summary under the name: a field the team edits on the page.
+                "ot_summary": f"{a['name']} is a Massachusetts real estate agent who leads The Oberdorfer Team with {a['relation']}, {S.AGENT_BY_SLUG[a['partner']]['name']}. The husband-and-wife team works from Worcester, helps buyers and sellers across the state and operates under REWAP Brokerage LLC."}
         meta.update(page_meta(f"agents/{a['slug']}"))
         out.append({"slug": a["slug"], "title": a["name"], "order": i + 1, "meta": meta})
     team = {"kind": "team", "name": "Brandon & Kaitlyn Oberdorfer", "given": "Brandon & Kaitlyn", "prose": [

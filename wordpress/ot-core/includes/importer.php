@@ -55,13 +55,28 @@ function ot_upsert( $type, $slug, $title, $parent, $order, $meta, $excerpt = '' 
 		return $id;
 	}
 	foreach ( $meta as $k => $v ) {
-		// On agents, fields the team edits in "Agent details" (and their SEO fields) are seeded once
-		// and never overwritten; the imported record (ot_record) is still refreshed.
-		if ( ! $created && 'ot_agent' === $type && 'ot_record' !== $k
-			&& ( '' !== (string) get_post_meta( $id, $k, true ) || get_post_meta( $id, $k . '_cleared', true ) ) ) {
-			continue;
+		$new = is_array( $v ) ? wp_json_encode( $v, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) : (string) $v;
+		// The research record is data and always refreshes. Every other field (headline, summary,
+		// titles, contact details...) can be edited on the site: the importer remembers what it last
+		// wrote and only updates a field the team has not changed since.
+		if ( ! $created && 'ot_record' !== $k ) {
+			$cur  = (string) get_post_meta( $id, $k, true );
+			$last = get_post_meta( $id, '_ot_import_' . $k, true );
+			if ( get_post_meta( $id, $k . '_cleared', true ) ) {
+				continue; // emptied on purpose
+			}
+			if ( '' === $last ) {
+				// Imported before edit tracking (v0.3.0): keep an agent's non-empty value, which may be an edit.
+				if ( 'ot_agent' === $type && '' !== $cur && $cur !== $new ) {
+					update_post_meta( $id, '_ot_import_' . $k, md5( $new ) );
+					continue;
+				}
+			} elseif ( md5( $cur ) !== $last ) {
+				continue; // edited on the site since the last import
+			}
 		}
-		update_post_meta( $id, $k, is_array( $v ) ? wp_slash( wp_json_encode( $v, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) ) : wp_slash( $v ) );
+		update_post_meta( $id, $k, wp_slash( $new ) );
+		update_post_meta( $id, '_ot_import_' . $k, md5( $new ) );
 	}
 	return array( $id, $created );
 }

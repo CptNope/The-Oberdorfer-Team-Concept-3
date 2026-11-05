@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.2.1
+Stable tag: 0.3.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,13 @@ Listings are off by default. Settings > Listings (IDX) switches the home search 
 If an SEO plugin is installed, only one of the two may print meta tags: add `define( 'OT_CORE_SEO_OUTPUT', false );` to wp-config.php to switch this plugin's output off.
 
 == Changelog ==
+
+= 0.3.0 =
+* Edit on the page. Guides, agent profiles, listings and the office open in the editor showing the whole page. The text that belongs to the post (a guide's h1, headline and summary; an agent's role line and summary) is an ordinary block bound to the post's own field with the Block Bindings API (core/post-meta), so the team clicks it and types. The biography and a listing's description are the post body. Sections drawn from research data stay previews and, when clicked, say where they are edited.
+* A short notice at the top of each editor explains how the page works; a "Start here" panel on the dashboard links the common tasks. Comments are hidden and Posts are called Journal.
+* The "Agent details" box saves only the fields changed in it, so it never overwrites text typed on the page.
+* The importer remembers what it last wrote to each field and leaves anything edited on the site alone (guides as well as agents). The research record still refreshes.
+* Section settings are hidden on guides, profiles and listings; in the Site Editor each section is labelled.
 
 = 0.2.1 =
 * Editable agent profiles: an "Agent details" box on each agent (role, title, summary, direct phone, email, specialties, languages, service area, license number, recognition, digital card, headshot, photo caption). The biography is the main editor. Saved values override the imported data, emptied fields stay empty, and re-running the importer never overwrites them. The joint profile's introduction is its main editor.

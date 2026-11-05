@@ -106,3 +106,19 @@
 .ot-fs-1 { font-size: 1rem; }
 .ot-fs-2 { font-size: 2rem; }
 .ot-fs-display-m { font-size: var(--step-display-m); }
+
+/* ---- v0.3.0: block-built profile, guide and listing headers ----------------- */
+.ot-pt-6 { padding-top: var(--space-6); }
+.ot-pt-7 { padding-top: var(--space-7); }
+.ot-stack-2 { --stack: var(--space-2); }
+.ot-stack-7 { --stack: var(--space-7); }
+.ot-text-end { text-align: right; }
+.ot-split-end { justify-content: space-between; align-items: end; }
+.ot-measure-none { max-width: none; }
+/* A bound heading or paragraph left empty in the editor keeps its line height. */
+.editor-styles-wrapper .page-hero__title:empty::before,
+.editor-styles-wrapper .profile__summary:empty::before { content: "\00a0"; }
+
+/* Editor: server-rendered blocks sit inside a wrapper div, so grid placement follows the wrapper. */
+.profile > .wp-block-ot-agent-profile { grid-column: 1 / span 5; }
+@media (max-width: 52rem) { .profile > .wp-block-ot-agent-profile { grid-column: 1 / -1; } }
