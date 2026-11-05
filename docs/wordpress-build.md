@@ -72,6 +72,14 @@ ot-core also outputs: title tags and meta descriptions, canonical URLs on `https
 
 **Importer:** Tools > Import Oberdorfer content, or `wp ot import`. It creates or updates (by slug) every community, both agents and the Worcester office, the region terms, and the pages listed above, sets the static front page and the posts page, and sets pretty permalinks. Running it again updates in place.
 
+## Show or hide guides
+
+Communities > Show or hide guides has a checkbox for every town and neighborhood (meta `ot_hidden`, never touched by the importer). A hidden guide returns 404 to visitors (logged-in editors can still preview it), leaves the sitemap and `/llms.txt`, and drops out of everything built from the guide list: the index and region counts, cards, the market table, town stats, nearby links and the city's neighborhood list. List items linking to it (the footer's town list) are removed. Hiding a city hides its neighborhoods.
+
+## The team's own listings
+
+Post type `ot_listing` (Listings in the admin, `/listings/<slug>/`): title = address line, body = property story, featured image = main photo, and a "Listing details" box (status: coming soon, for sale, under agreement, sold; price; street, unit, town guide, ZIP; home type, style, beds, baths, area, lot, year; open house; MLS number; listing brokerage, default REWAP Brokerage LLC; listing agent; featured; more photos). Blocks: `ot/team-listings` (`limit`, `town` = guide path; a city matches its neighborhoods) and `ot/listing` (`section`: `hero`, `details`, `more`), plus the guide section `homes`. Theme sections tagged `ot-team-listings` show only when there are listings; `ot-homes` (Featured homes) shows when there are listings or IDX is on. Sold listings stay at their URL but leave the grids. Listings are independent of the IDX switch.
+
 ## Listings (IDX) switch
 
 Until the IDX provider is chosen, Settings > Listings (IDX) in ot-core keeps everything that searches or shows homes off the site without removing it. Off by default. While off, the server drops:

@@ -121,7 +121,9 @@ function ot_current_trail() {
 	if ( ! $post instanceof WP_Post ) {
 		return $trail;
 	}
-	if ( 'ot_agent' === $post->post_type ) {
+	if ( 'ot_listing' === $post->post_type ) {
+		$trail[] = array( 'Buy', ot_page_url( 'buy' ) );
+	} elseif ( 'ot_agent' === $post->post_type ) {
 		$trail[] = array( 'Our Team', ot_page_url( 'team' ) );
 	} elseif ( 'ot_office' === $post->post_type ) {
 		$trail[] = array( 'Team office', get_permalink( $post ) );

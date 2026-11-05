@@ -14,7 +14,7 @@ function ot_cx( $post_id ) {
 		return null;
 	}
 	$all  = ot_communities();
-	$city = $c['parent'] && isset( $all[ $c['parent'] ] ) ? $all[ $c['parent'] ] : null;
+	$city = $c['parent'] ? ( $all[ $c['parent'] ] ?? ot_community( $c['parent'] ) ) : null;
 	return array(
 		'c'        => $c,
 		'r'        => $c['rec'],
@@ -531,6 +531,7 @@ function ot_render_community_section( $section, $post_id ) {
 		'commute'       => ot_render_community_commute( $x ),
 		'places'        => ot_render_community_places( $x ),
 		'market'        => ot_render_community_market( $x ),
+		'homes'         => ot_render_community_homes( $x ),
 		'questions'     => ot_render_community_questions( $x ),
 		'contact'       => ot_render_community_contact( $x ),
 		'sources'       => ot_render_community_sources( $x ),

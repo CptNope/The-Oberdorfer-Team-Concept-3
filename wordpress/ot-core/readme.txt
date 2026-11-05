@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.1.2
+Stable tag: 0.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,10 @@ Listings are off by default. Settings > Listings (IDX) switches the home search 
 If an SEO plugin is installed, only one of the two may print meta tags: add `define( 'OT_CORE_SEO_OUTPUT', false );` to wp-config.php to switch this plugin's output off.
 
 == Changelog ==
+
+= 0.2.0 =
+* Show or hide guides (Communities > Show or hide guides): a switch for every town and neighborhood guide. A hidden guide returns "not found", leaves the sitemap and llms.txt, and drops out of the index, cards, the market table and links from other guides; nothing is deleted. Hiding a city hides its neighborhoods. Logged-in editors can still preview it.
+* Listings: the team's own listings, entered by hand (Listings > Add listing) with status, price, address, guide, beds, baths, area, lot, year, open house, MLS number, brokerage, agent, main photo and more photos. They show on the home page (Featured homes), the Buy page (Our listings) and the matching town or neighborhood guide, each with its own page and a showing-request form, whether or not the IDX switch is on.
 
 = 0.1.2 =
 * Listings (IDX) switch, Settings > Listings (IDX): turns off the home search bar, Featured homes, the header search icon, the mobile menu's "Search homes" label and the Buy page search without removing them, with fields for the provider's shortcodes so listings can go live by pasting them and ticking one box. Off by default.

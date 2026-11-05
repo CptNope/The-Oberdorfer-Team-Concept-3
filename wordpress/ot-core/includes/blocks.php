@@ -36,7 +36,7 @@ function ot_block_definitions() {
 		),
 		'ot/community-section'    => array(
 			'title'    => 'Community guide section',
-			'attrs'    => array( 'section' => array( 'type' => 'string', 'default' => 'about', 'enum' => array( 'hero', 'about', 'neighborhoods', 'commute', 'places', 'market', 'questions', 'contact', 'sources' ) ) ),
+			'attrs'    => array( 'section' => array( 'type' => 'string', 'default' => 'about', 'enum' => array( 'hero', 'about', 'neighborhoods', 'commute', 'places', 'market', 'homes', 'questions', 'contact', 'sources' ) ) ),
 			'render'   => fn( $a, $b ) => ot_render_community_section( $a['section'] ?? 'about', ot_block_post_id( $b ) ),
 		),
 		'ot/community-index'      => array(
@@ -80,6 +80,16 @@ function ot_block_definitions() {
 				'note'    => array( 'type' => 'string', 'default' => '' ),
 			),
 			'render'   => fn( $a, $b ) => ot_inquiry_form( $a['context'] ?? 'contact', $a['title'] ?? '', $a['topics'] ?? array(), $a['submit'] ?? 'Send', $a['context'] ?? 'contact', $a['level'] ?? 'h2', ( $a['note'] ?? '' ) ?: null ),
+		),
+		'ot/team-listings'        => array(
+			'title'    => 'Team listings',
+			'attrs'    => array( 'limit' => array( 'type' => 'integer', 'default' => 6 ), 'town' => array( 'type' => 'string', 'default' => '' ) ),
+			'render'   => fn( $a, $b ) => ot_render_team_listings( (int) ( $a['limit'] ?? 6 ), (string) ( $a['town'] ?? '' ) ),
+		),
+		'ot/listing'              => array(
+			'title'    => 'Listing section',
+			'attrs'    => array( 'section' => array( 'type' => 'string', 'default' => 'hero', 'enum' => array( 'hero', 'details', 'more' ) ) ),
+			'render'   => fn( $a, $b ) => ot_render_listing_section( $a['section'] ?? 'hero', ot_block_post_id( $b ) ),
 		),
 		'ot/listings-placeholder' => array(
 			'title'    => 'Listings (IDX placeholder)',

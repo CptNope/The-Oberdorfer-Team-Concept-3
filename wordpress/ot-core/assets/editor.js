@@ -49,7 +49,7 @@
 
 	[
 		'ot/breadcrumbs', 'ot/page-hero', 'ot/community-section', 'ot/community-index', 'ot/community-cards',
-		'ot/market-table', 'ot/town-stats', 'ot/agent-profile', 'ot/agent-cards', 'ot/inquiry-form', 'ot/listings-placeholder'
+		'ot/market-table', 'ot/town-stats', 'ot/agent-profile', 'ot/agent-cards', 'ot/inquiry-form', 'ot/listings-placeholder', 'ot/team-listings', 'ot/listing'
 	].forEach( function ( name ) {
 		if ( wp.blocks.getBlockType( name ) && wp.blocks.getBlockType( name ).edit ) {
 			return;

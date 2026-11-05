@@ -41,6 +41,18 @@ function ot_communities() {
 			'children' => array(),
 		);
 	}
+	// Guides switched off (Communities > Show or hide guides) are left out everywhere, and a
+	// hidden city takes its neighborhoods with it.
+	foreach ( array_keys( $all ) as $id ) {
+		if ( ot_community_hidden( $id ) ) {
+			unset( $all[ $id ] );
+		}
+	}
+	foreach ( $all as $id => $c ) {
+		if ( $c['parent'] && ! isset( $all[ $c['parent'] ] ) ) {
+			unset( $all[ $id ] );
+		}
+	}
 	foreach ( $all as $id => $c ) {
 		if ( $c['parent'] && isset( $all[ $c['parent'] ] ) ) {
 			$all[ $c['parent'] ]['children'][] = $id;
@@ -65,7 +77,20 @@ function ot_town_by_slug( $slug ) {
 
 function ot_community( $post_id ) {
 	$all = ot_communities();
-	return $all[ $post_id ] ?? null;
+	if ( isset( $all[ $post_id ] ) ) {
+		return $all[ $post_id ];
+	}
+	// A hidden guide (previewed by a logged-in editor): build its entry directly.
+	$p = get_post( $post_id );
+	if ( ! $p || 'ot_community' !== $p->post_type ) {
+		return null;
+	}
+	$rec = json_decode( (string) get_post_meta( $p->ID, 'ot_record', true ), true ) ?: array();
+	$rec['name'] = $rec['name'] ?? $p->post_title;
+	$rec['slug'] = $p->post_name;
+	$kids = array_values( array_filter( $all, fn( $c ) => $c['parent'] === $p->ID ) );
+	return array( 'id' => $p->ID, 'slug' => $p->post_name, 'parent' => (int) $p->post_parent, 'url' => get_permalink( $p ),
+		'title' => $p->post_title, 'order' => (int) $p->menu_order, 'rec' => $rec, 'children' => array_column( $kids, 'id' ) );
 }
 
 /** Regions in display order: [ key, name, blurb ]. */
