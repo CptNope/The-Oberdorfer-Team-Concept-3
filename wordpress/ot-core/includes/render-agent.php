@@ -12,8 +12,7 @@ function ot_ax( $post_id ) {
 	if ( ! $p || 'ot_agent' !== $p->post_type ) {
 		return null;
 	}
-	$rec = json_decode( (string) get_post_meta( $p->ID, 'ot_record', true ), true ) ?: array();
-	$rec['name'] = $rec['name'] ?? $p->post_title;
+	$rec    = ot_agent_rec( $p );
 	$agents      = ot_agents();
 	$partner     = ! empty( $rec['partner'] ) && isset( $agents[ $rec['partner'] ] ) ? $agents[ $rec['partner'] ] : null;
 	return array(
@@ -37,7 +36,7 @@ function ot_agent_card( $a ) {
 	$href = esc_url( $a['url'] );
 	$name = esc_html( $r['name'] );
 	return '<article class="agent-card" data-specialty="buyers sellers first-time move-up" data-area="massachusetts wakefield worcester boston" data-lang="english">
-  <a class="agent-card__photo" href="' . $href . '"><img src="' . esc_url( ot_asset( $r['photo'] ) ) . '" alt="' . esc_attr( $r['name'] ) . '" width="' . (int) ( $r['photo_w'] ?? 440 ) . '" height="' . (int) ( $r['photo_h'] ?? 550 ) . '" loading="lazy"></a>
+  <a class="agent-card__photo" href="' . $href . '"><img src="' . esc_url( $r['photo_url'] ) . '" alt="' . esc_attr( $r['name'] ) . '" width="' . (int) ( $r['photo_w'] ?? 440 ) . '" height="' . (int) ( $r['photo_h'] ?? 550 ) . '" loading="lazy"></a>
   <div class="stack" style="--stack:var(--space-2)"><p class="agent-card__title">' . esc_html( $r['role'] ) . ' · The Oberdorfer Team</p><h3 class="agent-card__name"><a href="' . $href . '" style="text-decoration:none;color:inherit">' . $name . '</a></h3><p class="body-s muted">Husband. Wife. Your Team.</p></div>
   <div class="agent-card__meta"><span class="chip">Buyers</span><span class="chip">Sellers</span><span class="chip">Massachusetts</span></div>
   <div class="cluster" style="--cluster:var(--space-5)"><a class="link-arrow" href="' . $href . '">Meet ' . esc_html( $r['given'] ) . ' ' . ot_arrow() . '</a><a class="link-arrow" href="tel:' . OT_TEL . '">' . OT_PHONE . '</a></div>
@@ -92,7 +91,7 @@ function ot_render_person_section( $section, $x ) {
 		case 'hero':
 			$trail   = array( array( 'Home', home_url( '/' ) ), array( 'Our Team', ot_page_url( 'team' ) ), array( $name, $x['url'] ) );
 			$partner = $x['partner'] ? $x['partner']['rec'] : null;
-			$summary = $name . ' is a Massachusetts real estate agent who leads The Oberdorfer Team with ' . esc_html( $r['relation'] ?? '' ) . ( $partner ? ', ' . esc_html( $partner['name'] ) : '' ) . '. The husband-and-wife team works from Worcester, helps buyers and sellers across the state and operates under REWAP Brokerage LLC.';
+			$summary = ! empty( $r['summary'] ) ? esc_html( $r['summary'] ) : $name . ' is a Massachusetts real estate agent who leads The Oberdorfer Team with ' . esc_html( $r['relation'] ?? '' ) . ( $partner ? ', ' . esc_html( $partner['name'] ) : '' ) . '. The husband-and-wife team works from Worcester, helps buyers and sellers across the state and operates under REWAP Brokerage LLC.';
 			$direct  = $r['direct'] ?? '';
 			if ( $direct && OT_PHONE === $direct ) {
 				$phone = '<a href="tel:' . OT_TEL . '">' . OT_PHONE . '</a> (direct, and the team line)';
@@ -103,27 +102,28 @@ function ot_render_person_section( $section, $x ) {
 			}
 			$recog = array();
 			foreach ( (array) ( $r['accolades'] ?? array() ) as $acc ) {
-				$recog[] = esc_html( $acc['text'] ) . ' <span class="badge badge--source">' . esc_html( $acc['source'] ) . '</span>';
+				$recog[] = esc_html( $acc['text'] ) . ( ! empty( $acc['source'] ) ? ' <span class="badge badge--source">' . esc_html( $acc['source'] ) . '</span>' : '' );
 			}
 			$facts = array(
 				array( 'Role', esc_html( $r['role'] ) . ', The Oberdorfer Team' ),
 				array( 'Title', ! empty( $r['title'] ) ? esc_html( $r['title'] ) : ot_ph( 'Professional title to confirm' ) ),
 				array( 'Brokerage', 'REWAP Brokerage LLC' ),
 				array( 'Recognition', $recog ? implode( '<br>', $recog ) : ot_ph( 'Verified awards only' ) ),
-				array( 'Service area', 'Massachusetts' ),
-				array( 'Specialties', ot_ph( 'Specialties to confirm' ) ),
-				array( 'Languages', ot_ph( 'Languages to confirm' ) ),
+				array( 'Service area', ! empty( $r['service_area'] ) ? esc_html( $r['service_area'] ) : 'Massachusetts' ),
+				array( 'Specialties', ! empty( $r['specialties'] ) ? esc_html( $r['specialties'] ) : ot_ph( 'Specialties to confirm' ) ),
+				array( 'Languages', ! empty( $r['languages'] ) ? esc_html( $r['languages'] ) : ot_ph( 'Languages to confirm' ) ),
 				array( 'Phone', $phone ),
 				array( 'Email', ! empty( $r['email'] ) ? '<a href="mailto:' . esc_attr( $r['email'] ) . '">' . esc_html( $r['email'] ) . '</a>' : ot_ph( 'Email to confirm' ) ),
 				array( 'Online', '<a href="' . OT_INSTAGRAM . '" rel="noopener">Instagram @oberdorferteam</a>' . ( ! empty( $r['card'] ) ? ' · <a href="' . esc_url( $r['card'] ) . '" rel="noopener">Digital card</a>' : '' ) ),
 				array( 'Contacts', '<a href="' . esc_url( home_url( '/?vcard=' . $x['p']->post_name ) ) . '">Add ' . $g . ' to your contacts</a> (vCard)' ),
-				array( 'License', ot_ph( 'MA license number to be supplied and verified' ) ),
+				array( 'License', ! empty( $r['license'] ) ? esc_html( $r['license'] ) : ot_ph( 'MA license number to be supplied and verified' ) ),
 			);
 			$facts_html = '';
 			foreach ( $facts as $f ) {
 				$facts_html .= '<dt>' . $f[0] . '</dt><dd>' . $f[1] . '</dd>';
 			}
-			$photo = '<figure class="profile__photo"><img src="' . esc_url( ot_asset( $r['photo'] ) ) . '" alt="' . esc_attr( $r['name'] . ', ' . strtolower( $r['role'] ) . ' of The Oberdorfer Team' ) . '" width="' . (int) ( $r['photo_w'] ?? 440 ) . '" height="' . (int) ( $r['photo_h'] ?? 550 ) . '"><figcaption class="caption">' . ot_txt( $r['photo_note'] ?? '' ) . ' <span class="badge badge--verify">Interim photo</span></figcaption></figure>';
+			$caption = trim( ot_txt( $r['photo_note'] ?? '' ) . ( $r['photo_interim'] ? ' <span class="badge badge--verify">Interim photo</span>' : '' ) );
+			$photo   = '<figure class="profile__photo"><img src="' . esc_url( $r['photo_url'] ) . '" alt="' . esc_attr( $r['name'] . ', ' . strtolower( (string) $r['role'] ) . ' of The Oberdorfer Team' ) . '" width="' . (int) ( $r['photo_w'] ?? 440 ) . '" height="' . (int) ( $r['photo_h'] ?? 550 ) . '">' . ( $caption ? '<figcaption class="caption">' . $caption . '</figcaption>' : '' ) . '</figure>';
 			return '<section class="section profile-hero" style="padding-top:var(--space-7)"><div class="container stack" style="--stack:var(--space-6)">
   ' . ot_breadcrumbs_html( $trail ) . '
   <div class="profile">
@@ -155,7 +155,7 @@ function ot_render_person_section( $section, $x ) {
 			if ( $x['partner'] ) {
 				$pr  = $x['partner']['rec'];
 				$rel = (string) ( $x['r']['relation'] ?? '' );
-				$partner_html = '<div class="panel"><p class="label">Works alongside</p><a class="agent-mini" href="' . esc_url( $x['partner']['url'] ) . '" style="text-decoration:none;color:inherit"><img src="' . esc_url( ot_asset( $pr['photo'] ) ) . '" alt="" width="' . (int) ( $pr['photo_w'] ?? 440 ) . '" height="' . (int) ( $pr['photo_h'] ?? 550 ) . '"><span><span class="agent-mini__name">' . esc_html( $pr['name'] ) . '</span><br><span class="agent-mini__meta">' . esc_html( $pr['role'] ) . ' · ' . esc_html( ucfirst( $rel ) ) . '</span></span></a>' . ot_link_arrow( ot_agent_url( 'brandon-kaitlyn-oberdorfer' ), 'Their story together' ) . '</div>';
+				$partner_html = '<div class="panel"><p class="label">Works alongside</p><a class="agent-mini" href="' . esc_url( $x['partner']['url'] ) . '" style="text-decoration:none;color:inherit"><img src="' . esc_url( $pr['photo_url'] ) . '" alt="" width="' . (int) ( $pr['photo_w'] ?? 440 ) . '" height="' . (int) ( $pr['photo_h'] ?? 550 ) . '"><span><span class="agent-mini__name">' . esc_html( $pr['name'] ) . '</span><br><span class="agent-mini__meta">' . esc_html( $pr['role'] ) . ' · ' . esc_html( ucfirst( $rel ) ) . '</span></span></a>' . ot_link_arrow( ot_agent_url( 'brandon-kaitlyn-oberdorfer' ), 'Their story together' ) . '</div>';
 			}
 			return '<section class="section surface-muted"><div class="container split" style="align-items:start">
   <div class="stack" style="grid-column:1/span 7;--stack:var(--space-5)"><p class="label">About ' . $g . '</p><h2 class="display-m">Meet ' . $g . '.</h2>' . $bio . '</div>
@@ -204,9 +204,14 @@ function ot_render_team_section( $section, $x ) {
 	switch ( $section ) {
 		case 'hero':
 			$trail = array( array( 'Home', home_url( '/' ) ), array( 'Our Team', ot_page_url( 'team' ) ), array( 'Brandon &amp; Kaitlyn Oberdorfer', $x['url'] ) );
-			$prose = '';
-			foreach ( (array) ( $r['prose'] ?? array() ) as $p ) {
-				$prose .= '<p>' . ot_txt( $p ) . '</p>';
+			$prose   = '';
+			$content = trim( (string) $x['p']->post_content );
+			if ( '' !== $content ) {
+				$prose = apply_filters( 'the_content', $content ); // the team's own introduction, written in the editor
+			} else {
+				foreach ( (array) ( $r['prose'] ?? array() ) as $p ) {
+					$prose .= '<p>' . ot_txt( $p ) . '</p>';
+				}
 			}
 			return '<section class="section" style="padding-top:var(--space-7)"><div class="container stack" style="--stack:var(--space-7)">
   ' . ot_breadcrumbs_html( $trail ) . '

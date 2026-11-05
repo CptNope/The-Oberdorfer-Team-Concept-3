@@ -137,7 +137,7 @@ function ot_agents( $include_team = false ) {
 		'no_found_rows'  => true,
 	) );
 	foreach ( $posts as $p ) {
-		$rec = json_decode( (string) get_post_meta( $p->ID, 'ot_record', true ), true ) ?: array();
+		$rec = ot_agent_rec( $p );
 		if ( ! $include_team && ( $rec['kind'] ?? '' ) === 'team' ) {
 			continue;
 		}

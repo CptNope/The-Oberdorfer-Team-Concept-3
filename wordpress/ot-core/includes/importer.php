@@ -55,6 +55,12 @@ function ot_upsert( $type, $slug, $title, $parent, $order, $meta, $excerpt = '' 
 		return $id;
 	}
 	foreach ( $meta as $k => $v ) {
+		// On agents, fields the team edits in "Agent details" (and their SEO fields) are seeded once
+		// and never overwritten; the imported record (ot_record) is still refreshed.
+		if ( ! $created && 'ot_agent' === $type && 'ot_record' !== $k
+			&& ( '' !== (string) get_post_meta( $id, $k, true ) || get_post_meta( $id, $k . '_cleared', true ) ) ) {
+			continue;
+		}
 		update_post_meta( $id, $k, is_array( $v ) ? wp_slash( wp_json_encode( $v, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) ) : wp_slash( $v ) );
 	}
 	return array( $id, $created );

@@ -169,8 +169,8 @@ function ot_jsonld_graph() {
 		} else {
 			$r      = $x['r'];
 			$person = array( '@type' => 'Person', '@id' => $url . '#person', 'name' => $r['name'], 'givenName' => $r['given'] ?? '', 'familyName' => $r['family'] ?? '',
-				'url' => $url, 'image' => get_theme_file_uri( $r['photo'] ), 'telephone' => $r['direct'] ?? OT_PHONE,
-				'jobTitle' => $r['title'] ?? 'Real estate team leader', 'worksFor' => array( '@id' => $team_id ), 'affiliation' => array( '@id' => $broker_id ),
+				'url' => $url, 'image' => $r['photo_url'], 'telephone' => $r['direct'] ?? OT_PHONE,
+				'jobTitle' => ! empty( $r['title'] ) ? $r['title'] : 'Real estate team leader', 'worksFor' => array( '@id' => $team_id ), 'affiliation' => array( '@id' => $broker_id ),
 				'areaServed' => array( '@type' => 'State', 'name' => 'Massachusetts' ),
 				'knowsAbout' => array( 'Buying a home in Massachusetts', 'Selling a home in Massachusetts', 'Wakefield, Massachusetts real estate' ) );
 			if ( ! empty( $r['email'] ) ) {

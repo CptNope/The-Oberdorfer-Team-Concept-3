@@ -72,6 +72,10 @@ ot-core also outputs: title tags and meta descriptions, canonical URLs on `https
 
 **Importer:** Tools > Import Oberdorfer content, or `wp ot import`. It creates or updates (by slug) every community, both agents and the Worcester office, the region terms, and the pages listed above, sets the static front page and the posts page, and sets pretty permalinks. Running it again updates in place.
 
+## Editable agent profiles
+
+Each agent's edit screen has an "Agent details" box (`includes/agent-fields.php`): role, title, summary, direct phone, email, specialties, languages, service area, license number, recognition (`Award | Source` per line), digital card, headshot and caption. The biography is the post body. `ot_agent_rec()` merges these over the imported record; an emptied field is marked `<key>_cleared` so the import does not show through; the importer seeds agent meta once and never overwrites it. Empty fields render the [bracketed placeholder] with a "To confirm" badge. The joint profile's introduction is its post body.
+
 ## Show or hide guides
 
 Communities > Show or hide guides has a checkbox for every town and neighborhood (meta `ot_hidden`, never touched by the importer). A hidden guide returns 404 to visitors (logged-in editors can still preview it), leaves the sitemap and `/llms.txt`, and drops out of everything built from the guide list: the index and region counts, cards, the market table, town stats, nearby links and the city's neighborhood list. List items linking to it (the footer's town list) are removed. Hiding a city hides its neighborhoods.
