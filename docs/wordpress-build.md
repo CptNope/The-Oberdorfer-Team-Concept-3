@@ -66,11 +66,21 @@ Out of scope for v0.1.0: `ot-blocks` (editable structured blocks), `ot-leads` (f
 | `ot/agent-profile` | `section`: `hero`, `about`, `help`, `stories`, `questions`, `contact` | One section of an agent profile |
 | `ot/agent-cards` | none | Agent cards plus the open seat card (Team page) |
 | `ot/inquiry-form` | `context`, `title`, `topics` (array), `submit` | The prototype's inquiry form; demo behavior until `ot-leads` |
-| `ot/listings-placeholder` | `heading` | Where IDX listings will appear |
+| `ot/listings-placeholder` | `heading` | Where IDX listings will appear: the provider's shortcode for that placement when listings are on and one is set, the placeholder when none is set, nothing when listings are off |
 
 ot-core also outputs: title tags and meta descriptions, canonical URLs on `https://oberdorferteam.com/`, Open Graph tags, the JSON-LD graph (RealEstateAgent, Person/ProfilePage, City/Place WebPage), removes the users sitemap, and serves `/llms.txt`.
 
 **Importer:** Tools > Import Oberdorfer content, or `wp ot import`. It creates or updates (by slug) every community, both agents and the Worcester office, the region terms, and the pages listed above, sets the static front page and the posts page, and sets pretty permalinks. Running it again updates in place.
+
+## Listings (IDX) switch
+
+Until the IDX provider is chosen, Settings > Listings (IDX) in ot-core keeps everything that searches or shows homes off the site without removing it. Off by default. While off, the server drops:
+
+- blocks whose class list includes `ot-idx` (the theme's Featured homes section and the Buy page's search section);
+- elements marked `data-ot-idx` inside core/html blocks (the header search icon, the home search bar, the mobile menu's "Search homes" label);
+- the `ot/listings-placeholder` block.
+
+The same screen holds the provider's shortcodes (Buy page search; home page featured homes). Going live: install the provider's plugin, paste its shortcodes, tick "Show listings", save, purge Breeze and Cloudflare. `define( 'OT_IDX_ENABLED', true );` (or false) in wp-config.php overrides the checkbox. New listing or search UI in the theme must carry `ot-idx` or `data-ot-idx` so the switch covers it.
 
 ## Theme
 

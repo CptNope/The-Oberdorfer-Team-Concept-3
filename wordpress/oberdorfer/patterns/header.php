@@ -26,7 +26,7 @@ foreach ( $nav as $item ) {
 	if ( 'Join Our Team' !== $item[0] ) {
 		$links .= '<a href="' . esc_url( oberdorfer_url( $item[1] ) ) . '">' . esc_html( $item[0] ) . '</a>';
 	}
-	$sub   = 'Buy' === $item[0] ? ' <span>Search homes</span>' : ( 'Sell' === $item[0] ? ' <span>Market review</span>' : '' );
+	$sub   = 'Buy' === $item[0] ? ' <span data-ot-idx>Search homes</span>' : ( 'Sell' === $item[0] ? ' <span>Market review</span>' : '' );
 	$menu .= '<li><a href="' . esc_url( oberdorfer_url( $item[1] ) ) . '">' . esc_html( $item[0] ) . $sub . '</a></li>';
 }
 ?>
@@ -45,7 +45,7 @@ foreach ( $nav as $item ) {
     <a class="site-header__brand" href="<?php echo esc_url( oberdorfer_url( '/' ) ); ?>"><img src="<?php echo esc_url( oberdorfer_asset( 'assets/logo/logo-compact-ivory.svg' ) ); ?>" alt="The Oberdorfer Team, home" width="320" height="68" style="height:2.1rem"></a>
     <nav class="nav" aria-label="Primary"><?php echo $links; // phpcs:ignore WordPress.Security.EscapeOutput -- escaped above ?></nav>
     <div class="site-header__actions">
-      <a class="icon-btn" href="<?php echo esc_url( oberdorfer_url( '/buy/#search' ) ); ?>" aria-label="Search properties"><?php echo oberdorfer_icon( 'search' ); // phpcs:ignore ?></a>
+      <a class="icon-btn" data-ot-idx href="<?php echo esc_url( oberdorfer_url( '/buy/#search' ) ); ?>" aria-label="Search properties"><?php echo oberdorfer_icon( 'search' ); // phpcs:ignore ?></a>
       <a class="btn btn--gold btn--small" href="tel:<?php echo esc_attr( OBERDORFER_TEL ); ?>"><?php echo esc_html( OBERDORFER_PHONE ); ?></a>
       <button class="icon-btn nav-toggle" type="button" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"><?php echo oberdorfer_icon( 'menu' ); // phpcs:ignore ?></button>
     </div>

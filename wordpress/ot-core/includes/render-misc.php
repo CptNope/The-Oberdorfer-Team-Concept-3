@@ -93,6 +93,13 @@ function ot_inquiry_form( $id, $title, $topics, $submit, $context, $level = 'h3'
 }
 
 function ot_render_listings_placeholder( $heading ) {
+	if ( ! ot_idx_enabled() ) {
+		return ''; // listings switched off: Settings > Listings (IDX)
+	}
+	$code = ot_idx_shortcode( str_contains( strtolower( (string) $heading ), 'featured' ) ? 'featured' : 'search' );
+	if ( $code ) {
+		return '<div class="idx-embed">' . do_shortcode( $code ) . '</div>';
+	}
 	return '<div class="placeholder-block"><p class="label">' . esc_html( $heading ?: 'Homes for sale' ) . '</p><p>Listings appear here from the MLS PIN feed once the IDX provider is chosen and connected, with each listing brokerage credited. <span class="badge badge--proposed">IDX to be decided</span></p></div>';
 }
 

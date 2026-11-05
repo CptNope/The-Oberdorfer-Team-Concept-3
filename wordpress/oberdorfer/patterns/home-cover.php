@@ -14,7 +14,7 @@ $media  = oberdorfer_html( '<div class="hero-cover__media"><img src="' . esc_url
 $copy   = oberdorfer_h( 'Massachusetts real estate team · Based in Worcester', 1, 'label home-hero__issue', 'home-title' )
 	. oberdorfer_p( oberdorfer_lines( array( 'Luxury at', 'every price point.' ) ), 'display-xl answer' )
 	. oberdorfer_p( 'Brandon and Kaitlyn Oberdorfer are a husband-and-wife real estate team based in Worcester, helping buyers and sellers across Massachusetts. Thoughtful service. Creative marketing. A personal connection to every move.', 'lead' );
-$form   = oberdorfer_html( '<form class="search-bar" role="search" action="' . esc_url( oberdorfer_url( '/buy/' ) ) . '" method="get" aria-label="Search homes">
+$form   = oberdorfer_html( '<form class="search-bar" data-ot-idx role="search" action="' . esc_url( oberdorfer_url( '/buy/' ) ) . '" method="get" aria-label="Search homes">
       <div class="field"><label class="field__label" for="h-q">Location</label><input class="input" id="h-q" name="q" type="text" placeholder="Town, neighborhood or ZIP" autocomplete="off"></div>
       <div class="field"><label class="field__label" for="h-price">Price</label><select class="select" id="h-price" name="price"><option value="">Any price</option><option value="0-600000">Up to $600k</option><option value="600000-900000">$600k – $900k</option><option value="900000-99999999">$900k +</option></select></div>
       <div class="field"><label class="field__label" for="h-beds">Beds</label><select class="select" id="h-beds" name="beds"><option value="">Any</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option></select></div>

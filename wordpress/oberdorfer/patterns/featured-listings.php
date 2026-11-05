@@ -4,7 +4,7 @@
  * Slug: oberdorfer/featured-listings
  * Categories: oberdorfer
  * Inserter: yes
- * Description: Sandstone section for featured homes. Until the IDX provider is chosen and connected it shows the listings placeholder (ot/listings-placeholder); demonstration listings are not part of the WordPress build.
+ * Description: Sandstone section for featured homes. Hidden while listings are switched off (ot-core: Settings > Listings (IDX)). Until the IDX provider is chosen and connected it shows the listings placeholder (ot/listings-placeholder); demonstration listings are not part of the WordPress build.
  */
 echo oberdorfer_section( // phpcs:ignore WordPress.Security.EscapeOutput
 	oberdorfer_group(
@@ -13,5 +13,5 @@ echo oberdorfer_section( // phpcs:ignore WordPress.Security.EscapeOutput
 		. oberdorfer_p( 'Listings appear here through the team\'s authorized IDX feed once it is connected.', 'form-note ot-mt-7' ),
 		'container'
 	),
-	'section surface-muted', '', 'feat-title'
+	'section surface-muted ot-idx', '', 'feat-title'
 );

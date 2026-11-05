@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.1.1
+Stable tag: 0.1.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,9 +32,14 @@ What it does not do yet (v0.1.0): forms show the prototype's demo behavior and s
 
 To run it as a must-use plugin (it then cannot be deactivated from the admin): copy the `ot-core` folder to `wp-content/mu-plugins/ot-core/` and copy `mu-plugin/ot-core-loader.php` to `wp-content/mu-plugins/`. Must-use plugins are not updated automatically; replace the folder when a new version ships.
 
+Listings are off by default. Settings > Listings (IDX) switches the home search and listings on, and holds the IDX provider's shortcodes for the Buy page and the home page.
+
 If an SEO plugin is installed, only one of the two may print meta tags: add `define( 'OT_CORE_SEO_OUTPUT', false );` to wp-config.php to switch this plugin's output off.
 
 == Changelog ==
+
+= 0.1.2 =
+* Listings (IDX) switch, Settings > Listings (IDX): turns off the home search bar, Featured homes, the header search icon, the mobile menu's "Search homes" label and the Buy page search without removing them, with fields for the provider's shortcodes so listings can go live by pasting them and ticking one box. Off by default.
 
 = 0.1.1 =
 * Contact details from the coming-soon page: Kaitlyn's and Brandon's direct phones and emails, their "MA Licensed Realtor" title and recognition from their digital cards, the team Instagram, and contact cards (vCards) to save to a phone.

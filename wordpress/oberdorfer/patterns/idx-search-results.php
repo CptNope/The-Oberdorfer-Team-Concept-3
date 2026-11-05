@@ -4,7 +4,7 @@
  * Slug: oberdorfer/idx-search-results
  * Categories: oberdorfer
  * Inserter: yes
- * Description: The #search section of the Buy page. Until the IDX provider is selected (docs/idx-options.md) it shows the listings placeholder; the demonstration search and listings of the prototype are not part of the WordPress build.
+ * Description: The #search section of the Buy page. Hidden while listings are switched off (ot-core: Settings > Listings (IDX)). Until the IDX provider is selected (docs/idx-options.md) it shows the listings placeholder; the demonstration search and listings of the prototype are not part of the WordPress build.
  */
 echo oberdorfer_group( // phpcs:ignore WordPress.Security.EscapeOutput
 	oberdorfer_group(
@@ -13,5 +13,5 @@ echo oberdorfer_group( // phpcs:ignore WordPress.Security.EscapeOutput
 		. oberdorfer_p( 'The live search will come from the team\'s authorized IDX provider [to be selected], with MLS attribution and update times shown on every listing.', 'form-note ot-mt-7' ),
 		'container'
 	),
-	'section--tight', 'section', 'search', 'Property search'
+	'section--tight ot-idx', 'section', 'search', 'Property search'
 );
