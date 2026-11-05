@@ -641,10 +641,8 @@ def town_art(t, i=0):
 def community_card(R, t, i=0):
     m = t.get("market") or {}
     med = f" · 2025 median {money(m['sf_median_2025'])}" if m.get("sf_median_2025") and m.get("citywide", True) else ""
-    if t["slug"] == "wakefield":
-        media = f'<img src="{R}assets/img/photo/lake-quannapowitt.webp" alt="" loading="lazy" style="object-position:30% 50%">'
-    else:
-        media = f'<div class="demo-illu" style="position:absolute;inset:0">{art(R, town_art(t, i))}</div>'
+    # Every card shows a house drawing, so the grid reads as one set (Wakefield's lake photo stays on its guide).
+    media = f'<div class="demo-illu" style="position:absolute;inset:0">{art(R, town_art(t, i))}</div>'
     return f'''<a class="community-card" href="{R}site/communities/{t['slug']}/">{media}<div class="community-card__body"><span class="community-card__meta">{t['county']}{med}</span><span class="community-card__name">{t['name']}</span></div></a>'''
 
 def towns_in(region_key):

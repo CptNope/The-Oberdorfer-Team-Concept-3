@@ -55,7 +55,7 @@ EXTRA = {
 ART = {"worcester": "triple-decker", "lowell": "townscape", "springfield": "triple-decker", "quincy": "townscape",
        "newton": "colonial", "framingham": "colonial", "marlborough": "cape", "leominster": "cape",
        "shrewsbury": "colonial", "grafton": "cape", "westborough": "colonial", "holden": "cape",
-       "reading": "colonial", "melrose": "townscape", "stoneham": "cape",
+       "wakefield": "triple-decker", "reading": "colonial", "melrose": "townscape", "stoneham": "cape",
        "boston": "townscape", "cambridge": "colonial", "somerville": "triple-decker", "plymouth": "cape",
        "braintree": "colonial", "barnstable": "cape", "falmouth": "cape", "new-bedford": "triple-decker",
        "fall-river": "triple-decker", "pittsfield": "colonial", "great-barrington": "townscape",

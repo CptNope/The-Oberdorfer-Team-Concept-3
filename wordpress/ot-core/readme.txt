@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.4.3
+Stable tag: 0.4.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,9 @@ Listings are off by default. Settings > Listings (IDX) switches the home search 
 If an SEO plugin is installed, only one of the two may print meta tags: add `define( 'OT_CORE_SEO_OUTPUT', false );` to wp-config.php to switch this plugin's output off.
 
 == Changelog ==
+
+= 0.4.4 =
+* Community cards: Wakefield's card shows a house drawing (the triple-decker) like every other town instead of the lake photo, so the grid reads as one set. The photo stays at the top of the Wakefield guide.
 
 = 0.4.3 =
 * The theme's stylesheets and scripts now carry the theme version, so browsers and server caches pick up each update. They were tagged 0.1.0 since the first release, so staging kept serving old CSS (the 0.4.2 drawing fix did not show).

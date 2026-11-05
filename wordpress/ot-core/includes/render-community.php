@@ -549,11 +549,8 @@ function ot_community_card( $c, $i = 0 ) {
 	$r   = $c['rec'];
 	$m   = $r['market'] ?? array();
 	$med = ( ! empty( $m['sf_median_2025'] ) && ( $m['citywide'] ?? true ) ) ? ' · 2025 median ' . ot_money( $m['sf_median_2025'] ) : '';
-	if ( ! empty( $r['photo'] ) ) {
-		$media = '<img src="' . esc_url( ot_asset( $r['photo'] ) ) . '" alt="" loading="lazy" style="object-position:' . esc_attr( $r['card_focal'] ?? '30% 50%' ) . '">';
-	} else {
-		$media = '<div class="demo-illu" style="position:absolute;inset:0">' . ot_art( ot_town_art( $r, $i ) ) . '</div>';
-	}
+	// Every card shows a house drawing, so the grid reads as one set; a guide's photo (Wakefield) stays on the guide.
+	$media = '<div class="demo-illu" style="position:absolute;inset:0">' . ot_art( ot_town_art( $r, $i ) ) . '</div>';
 	return '<a class="community-card" href="' . esc_url( $c['url'] ) . '">' . $media . '<div class="community-card__body"><span class="community-card__meta">' . esc_html( $r['county'] ?? '' ) . $med . '</span><span class="community-card__name">' . esc_html( $r['name'] ) . '</span></div></a>';
 }
 

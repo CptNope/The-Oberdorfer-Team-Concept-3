@@ -1,5 +1,5 @@
 {
- "version": "0.4.3 (2026-10-22)",
+ "version": "0.4.4 (2026-10-22)",
  "front_page": "home",
  "posts_page": "journal",
  "regions": [
@@ -3939,6 +3939,7 @@
      ],
      "region_key": "north",
      "tier": 1,
+     "art": "triple-decker",
      "photo": "assets/img/photo/lake-quannapowitt.webp",
      "photo_alt": "Lake Quannapowitt at dusk",
      "focal": "35% 55%",
