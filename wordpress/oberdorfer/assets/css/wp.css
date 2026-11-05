@@ -137,3 +137,8 @@
 .contact-line .wp-block-group > p + p { margin-block-start: 1em; }
 .nav > .nav__links { display: contents; }
 .ot-fs-h2 { font-size: var(--step-h2); }
+/* Editor: the block list makes every block position: relative and wraps images in a resize box. */
+.editor-styles-wrapper .wp-block-image.hero-cover__media { position: absolute !important; margin: 0 !important; }
+.editor-styles-wrapper .hero-cover__media .components-resizable-box__container { width: 100% !important; height: 100% !important; }
+/* Editor: a core/button with design-system classes draws as the link it renders on the site. */
+.editor-styles-wrapper .wp-block-button:is(.btn, .link-arrow, .cta-panel__phone) > .wp-block-button__link { background: none; color: inherit; padding: 0; border: 0; border-radius: 0; font: inherit; letter-spacing: inherit; text-transform: inherit; }
