@@ -176,3 +176,44 @@ function oberdorfer_details( $summary, $body_blocks, $open = false ) {
 	$o = $open ? ' open' : '';
 	return "<!-- wp:details{$a} -->\n<details class=\"wp-block-details\"{$o}><summary>{$summary}</summary>" . oberdorfer_group( $body_blocks, 'accordion__body body-s' ) . "</details>\n<!-- /wp:details -->\n\n";
 }
+
+/*
+ * Text the team edits is written as core blocks, never as core/html: these helpers build the
+ * design-system components (stat tiles, numbered steps, row-header tables, contact lines,
+ * cover photos) from paragraphs, headings, groups, tables and images. wp.css bridges the few
+ * places where a block's wrapper differs from the prototype's element.
+ */
+
+/** A stat tile: value, label and period as paragraphs. */
+function oberdorfer_stat( $value, $label, $period ) {
+	return oberdorfer_group( oberdorfer_p( $value, 'stat__value tabular' ) . oberdorfer_p( $label, 'stat__label' ) . oberdorfer_p( $period, 'stat__period' ), 'stat' );
+}
+
+/** Numbered steps: each item is a heading and a paragraph (the number comes from CSS). */
+function oberdorfer_steps( $items, $class = '' ) {
+	$out = '';
+	foreach ( $items as $it ) {
+		$out .= oberdorfer_group( oberdorfer_group( oberdorfer_h( $it[0], 3 ) . oberdorfer_p( $it[1], 'body-s' ) ), 'steps__item' );
+	}
+	return oberdorfer_group( $out, trim( 'steps ' . $class ) );
+}
+
+/** A table with a row header per line, as core/table. */
+function oberdorfer_spec_table( $rows, $class = 'spec-table' ) {
+	$tr = '';
+	foreach ( $rows as $r ) {
+		$tr .= '<tr><th scope="row">' . $r[0] . '</th><td>' . $r[1] . '</td></tr>';
+	}
+	return '<!-- wp:table {"hasFixedLayout":false,"className":"' . $class . '"} -->' . "\n" . '<figure class="wp-block-table ' . $class . '"><table><tbody>' . $tr . '</tbody></table></figure>' . "\n<!-- /wp:table -->\n\n";
+}
+
+/** A contact line: an icon, then a heading paragraph and a text paragraph. */
+function oberdorfer_contact_line( $icon, $title, $text ) {
+	return oberdorfer_group( oberdorfer_html( oberdorfer_icon( $icon ) ) . oberdorfer_group( oberdorfer_p( $title, 'h5' ) . oberdorfer_p( $text, 'body-s' ) ), 'contact-line' );
+}
+
+/** A photo as core/image, so it can be replaced from the editor. */
+function oberdorfer_image( $src, $alt, $class = '' ) {
+	$a = $class ? '{"className":"' . $class . '"} ' : '';
+	return '<!-- wp:image ' . $a . "-->\n" . '<figure class="wp-block-image' . ( $class ? ' ' . $class : '' ) . '"><img src="' . esc_url( $src ) . '" alt="' . esc_attr( $alt ) . '"/></figure>' . "\n<!-- /wp:image -->\n\n";
+}

@@ -10,14 +10,14 @@
  * fragments; each tab panel is a group holding an ot/inquiry-form.
  */
 $i     = fn( $n ) => oberdorfer_icon( $n );
-$lines = oberdorfer_html( '<div>
-      <div class="contact-line">' . $i( 'phone' ) . '<div><p class="h5">Call or text</p><p class="body-s">Kaitlyn Oberdorfer · <a href="tel:+19782574938">978-257-4938</a><br>Brandon Oberdorfer · <a href="tel:' . OBERDORFER_TEL . '">' . OBERDORFER_PHONE . '</a> (also the team line)</p></div></div>
-      <div class="contact-line">' . $i( 'mail' ) . '<div><p class="h5">Email</p><p class="body-s">Kaitlyn · <a href="mailto:kaitlynoberdorfer@gmail.com">kaitlynoberdorfer@gmail.com</a><br>Brandon · <a href="mailto:brandonoberdorfer@gmail.com">brandonoberdorfer@gmail.com</a></p></div></div>
-      <div class="contact-line">' . $i( 'download' ) . '<div><p class="h5">Save our contacts</p><p class="body-s"><a href="' . esc_url( home_url( '/?vcard=kaitlyn-oberdorfer' ) ) . '">Kaitlyn</a> · <a href="' . esc_url( home_url( '/?vcard=brandon-oberdorfer' ) ) . '">Brandon</a> · <a href="' . esc_url( home_url( '/?vcard=oberdorfer-team' ) ) . '">Both</a> (vCard, for your phone\'s contacts)</p></div></div>
-      <div class="contact-line">' . $i( 'external' ) . '<div><p class="h5">Follow along</p><p class="body-s"><a href="https://www.instagram.com/oberdorferteam/" rel="noopener">Instagram @oberdorferteam</a></p></div></div>
-      <div class="contact-line">' . $i( 'door' ) . '<div><p class="h5">Team office</p><p class="body-s">' . esc_html( oberdorfer_address() ) . '. By appointment. <a href="' . esc_url( oberdorfer_url( '/office/worcester/' ) ) . '">Office details</a></p></div></div>
-      <div class="contact-line">' . $i( 'pin' ) . '<div><p class="h5">Service area</p><p class="body-s">Massachusetts</p></div></div>
-    </div>' );
+$lines = oberdorfer_group(
+	oberdorfer_contact_line( 'phone', 'Call or text', 'Kaitlyn Oberdorfer · <a href="tel:+19782574938">978-257-4938</a><br>Brandon Oberdorfer · <a href="tel:' . OBERDORFER_TEL . '">' . OBERDORFER_PHONE . '</a> (also the team line)' )
+	. oberdorfer_contact_line( 'mail', 'Email', 'Kaitlyn · <a href="mailto:kaitlynoberdorfer@gmail.com">kaitlynoberdorfer@gmail.com</a><br>Brandon · <a href="mailto:brandonoberdorfer@gmail.com">brandonoberdorfer@gmail.com</a>' )
+	. oberdorfer_contact_line( 'download', 'Save our contacts', '<a href="' . esc_url( home_url( '/?vcard=kaitlyn-oberdorfer' ) ) . '">Kaitlyn</a> · <a href="' . esc_url( home_url( '/?vcard=brandon-oberdorfer' ) ) . '">Brandon</a> · <a href="' . esc_url( home_url( '/?vcard=oberdorfer-team' ) ) . '">Both</a> (vCard, for your phone\'s contacts)' )
+	. oberdorfer_contact_line( 'external', 'Follow along', '<a href="https://www.instagram.com/oberdorferteam/" rel="noopener">Instagram @oberdorferteam</a>' )
+	. oberdorfer_contact_line( 'door', 'Team office', '' . esc_html( oberdorfer_address() ) . '. By appointment. <a href="' . esc_url( oberdorfer_url( '/office/worcester/' ) ) . '">Office details</a>' )
+	. oberdorfer_contact_line( 'pin', 'Service area', 'Massachusetts' )
+);
 $left = oberdorfer_group( oberdorfer_phone_link( 'cta-panel__phone ot-text-navy ot-fs-display-m' ) . $lines, 'stack ot-stack-6' );
 
 $tabs   = array(

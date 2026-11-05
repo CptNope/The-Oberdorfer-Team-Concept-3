@@ -16,6 +16,7 @@ const OBERDORFER_VERSION = '0.1.0';
 
 require_once __DIR__ . '/inc/helpers.php';
 require_once __DIR__ . '/inc/markup.php';
+require_once __DIR__ . '/inc/pages.php';
 
 /** Google Fonts, as the prototype's head(). Self-hosting the fonts is a launch task. */
 const OBERDORFER_FONTS = 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap';
@@ -209,28 +210,76 @@ function oberdorfer_active_nav() {
 }
 
 /**
- * aria-current="page" on the active header link. Runs at render time on the header's
- * navigation fragment, so it also works after the header is edited in the Site Editor.
+ * The header navigation. Its links are a paragraph inside the `nav` group, so the team edits
+ * them as text. At render time: aria-current="page" goes on the active link, and the links
+ * are remembered so the mobile menu (`<ul data-ot-menu>` in the header's HTML) lists the same
+ * pages, plus "Join Our Team" before Contact, with the prototype's sub-labels.
  */
-add_filter( 'render_block_core/html', function ( $html ) {
-	if ( ! str_contains( $html, 'class="nav"' ) || ! str_contains( $html, 'aria-label="Primary"' ) ) {
+add_filter( 'render_block_core/group', function ( $html, $block ) {
+	if ( ! in_array( 'nav', preg_split( '/\s+/', (string) ( $block['attrs']['className'] ?? '' ) ), true ) ) {
 		return $html;
+	}
+	$GLOBALS['oberdorfer_nav_links'] = array();
+	if ( preg_match_all( '#<a\b[^>]*\bhref="([^"]*)"[^>]*>(.*?)</a>#s', $html, $m, PREG_SET_ORDER ) ) {
+		foreach ( $m as $a ) {
+			$GLOBALS['oberdorfer_nav_links'][] = array( html_entity_decode( $a[1] ), wp_strip_all_tags( $a[2] ) );
+		}
 	}
 	$path = oberdorfer_active_nav();
 	if ( ! $path ) {
 		return $html;
 	}
-	$want = untrailingslashit( home_url( $path ) );
+	$want = untrailingslashit( wp_make_link_relative( home_url( $path ) ) );
 	$p    = new WP_HTML_Tag_Processor( $html );
-	$in   = false;
-	while ( $p->next_tag( array( 'tag_closers' => 'visit' ) ) ) {
-		if ( 'NAV' === $p->get_tag() ) {
-			$in = ! $p->is_tag_closer();
-			continue;
-		}
-		if ( $in && 'A' === $p->get_tag() && ! $p->is_tag_closer() && untrailingslashit( (string) $p->get_attribute( 'href' ) ) === $want ) {
+	while ( $p->next_tag( 'a' ) ) {
+		if ( untrailingslashit( wp_make_link_relative( (string) $p->get_attribute( 'href' ) ) ) === $want ) {
 			$p->set_attribute( 'aria-current', 'page' );
 		}
 	}
 	return $p->get_updated_html();
-} );
+}, 20, 2 );
+
+add_filter( 'render_block_core/html', function ( $html ) {
+	if ( ! str_contains( $html, 'data-ot-menu' ) ) {
+		return $html;
+	}
+	$links = $GLOBALS['oberdorfer_nav_links'] ?? array();
+	if ( ! $links ) {
+		foreach ( array( 'Buy' => '/buy/', 'Sell' => '/sell/', 'Communities' => '/communities/', 'Our Team' => '/team/', 'Journal' => '/journal/', 'Contact' => '/contact/' ) as $label => $path ) {
+			$links[] = array( oberdorfer_url( $path ), $label );
+		}
+	}
+	$rel  = fn( $u ) => trailingslashit( (string) wp_parse_url( $u, PHP_URL_PATH ) );
+	$join = oberdorfer_url( '/join/' );
+	if ( ! in_array( $rel( $join ), array_map( fn( $l ) => $rel( $l[0] ), $links ), true ) ) {
+		$at = count( $links );
+		foreach ( $links as $i => $l ) {
+			if ( '/contact/' === $rel( $l[0] ) ) {
+				$at = $i;
+			}
+		}
+		array_splice( $links, $at, 0, array( array( $join, 'Join Our Team' ) ) );
+	}
+	$items = '';
+	foreach ( $links as $l ) {
+		// "Search homes" follows the listings (IDX) switch in ot-core.
+		$idx    = ! function_exists( 'ot_idx_enabled' ) || ot_idx_enabled();
+		$sub    = array( '/buy/' => $idx ? ' <span data-ot-idx>Search homes</span>' : '', '/sell/' => ' <span>Market review</span>' )[ $rel( $l[0] ) ] ?? '';
+		$items .= '<li><a href="' . esc_url( $l[0] ) . '">' . esc_html( $l[1] ) . $sub . '</a></li>';
+	}
+	return str_replace( '<ul data-ot-menu></ul>', '<ul>' . $items . '</ul>', $html );
+}, 5 );
+
+/* The cover photo is the page's largest image: load it first, never lazily. */
+add_filter( 'render_block_core/image', function ( $html, $block ) {
+	if ( ! str_contains( ' ' . ( $block['attrs']['className'] ?? '' ) . ' ', ' hero-cover__media ' ) ) {
+		return $html;
+	}
+	$p = new WP_HTML_Tag_Processor( $html );
+	if ( $p->next_tag( 'img' ) ) {
+		$p->remove_attribute( 'loading' );
+		$p->set_attribute( 'fetchpriority', 'high' );
+		$html = $p->get_updated_html();
+	}
+	return $html;
+}, 10, 2 );

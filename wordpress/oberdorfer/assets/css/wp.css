@@ -122,3 +122,18 @@
 /* Editor: server-rendered blocks sit inside a wrapper div, so grid placement follows the wrapper. */
 .profile > .wp-block-ot-agent-profile { grid-column: 1 / span 5; }
 @media (max-width: 52rem) { .profile > .wp-block-ot-agent-profile { grid-column: 1 / -1; } }
+
+/* Components built from core blocks (inc/markup.php) instead of HTML fragments. */
+.stat > p { margin: 0; }
+.steps > .steps__item { counter-increment: step; display: grid; grid-template-columns: 2.5rem 1fr; gap: var(--space-3); }
+.steps > .steps__item::before { content: counter(step, decimal-leading-zero); font: 400 1.125rem/1.4 var(--font-display); color: var(--text-accent); }
+.steps--auto { grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: var(--space-7) var(--gutter); }
+.wp-block-table.spec-table { margin: 0; overflow: visible; }
+.wp-block-table.spec-table table { width: 100%; border-collapse: collapse; }
+.wp-block-table.spec-table th, .wp-block-table.spec-table td { border: 0; border-bottom: 1px solid var(--border-subtle); padding: 0.7rem 0; text-align: left; vertical-align: top; }
+.wp-block-table.spec-table th { font-weight: 500; color: var(--text-muted); width: 40%; }
+.wp-block-image.hero-cover__media { margin: 0; }
+.wp-block-image.hero-cover__media img { width: 100%; height: 100%; max-width: none; object-fit: cover; }
+.contact-line .wp-block-group > p + p { margin-block-start: 1em; }
+.nav > .nav__links { display: contents; }
+.ot-fs-h2 { font-size: var(--step-h2); }

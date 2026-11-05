@@ -14,8 +14,8 @@ $copy  = oberdorfer_p( 'Market insight · Massachusetts, 2025', 'label' )
 	. oberdorfer_p( 'The Massachusetts single-family median sale price was $638,000 in 2025. Town by town it ranges widely, which is why every plan starts with comparable closed sales.' )
 	. oberdorfer_link_arrow( 'Compare 2025 prices by town', oberdorfer_url( '/market/' ) );
 $stats = oberdorfer_group(
-	oberdorfer_html( '<div class="stat"><span class="stat__value tabular">$638,000</span><span class="stat__label">Massachusetts single-family median</span><span class="stat__period">2025, up 3.7% from 2024</span></div>
-<div class="stat"><span class="stat__value tabular">$537,000</span><span class="stat__label">Massachusetts condominium median</span><span class="stat__period">2025</span></div>' )
+	oberdorfer_stat( '$638,000', 'Massachusetts single-family median', '2025, up 3.7% from 2024' )
+	. oberdorfer_stat( '$537,000', 'Massachusetts condominium median', '2025' )
 	. "<!-- wp:ot/town-stats {\"slugs\":[\"worcester\",\"wakefield\"]} /-->\n\n",
 	'stat-panel'
 );

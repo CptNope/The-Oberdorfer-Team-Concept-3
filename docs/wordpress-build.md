@@ -85,6 +85,13 @@ The title is `core/post-title`; the biography and a listing's description are `c
 
 The importer stores `_ot_import_<key>` (md5 of what it wrote) and updates a field only while it still matches; `ot_record` always refreshes.
 
+## Editing everything by block (v0.4.0)
+
+- **Main pages:** `page-<slug>.html` and `front-page.html` render only `core/post-content` (class `ot-page-body`). `oberdorfer/inc/pages.php` lists each page's patterns (`oberdorfer_page_sections()`); `ot_seed_page_body()` in the importer writes them into the page once (root-relative URLs) and records `_ot_import_content`, so later imports skip edited pages. An empty body renders the patterns. On `admin_init`, empty bodies are seeded once per plugin and theme version.
+- **No text in core/html:** stat tiles, steps, spec tables, contact lines and cover images are built with `oberdorfer_stat()`, `oberdorfer_steps()`, `oberdorfer_spec_table()`, `oberdorfer_contact_line()` and `oberdorfer_image()` (`inc/markup.php`); `wp.css` bridges the wrappers. core/html is kept for forms, SVG, ARIA-driven controls, logos and the REWAP plate.
+- **Header:** links are a paragraph `nav__links` inside a `nav` group; the mobile menu's `<ul data-ot-menu>` is filled at render from those links (plus Join Our Team), with "Search homes" only while IDX is on.
+- **Agent template:** patterns `agent-about-intro`, `agent-help`, `agent-stories`, `agent-contact`; ot-core replaces `{first name}` on agent pages; the form is `ot/agent-profile` section `contact-form`.
+
 ## Editable agent profiles
 
 Each agent's edit screen has an "Agent details" box (`includes/agent-fields.php`): role, title, summary, direct phone, email, specialties, languages, service area, license number, recognition (`Award | Source` per line), digital card, headshot and caption. The biography is the post body. `ot_agent_rec()` merges these over the imported record; an emptied field is marked `<key>_cleared` so the import does not show through; the importer seeds agent meta once and never overwrites it. Empty fields render the [bracketed placeholder] with a "To confirm" badge. The joint profile's introduction is its post body.

@@ -14,7 +14,7 @@
 defined( 'ABSPATH' ) || exit;
 
 add_action( 'init', function () {
-	foreach ( array( 'ot_community', 'ot_agent', 'ot_listing', 'ot_office' ) as $type ) {
+	foreach ( array( 'page', 'ot_community', 'ot_agent', 'ot_listing', 'ot_office' ) as $type ) {
 		add_post_type_support( $type, 'editor', array( 'default-mode' => 'template-locked' ) );
 	}
 }, 20 );
@@ -38,6 +38,13 @@ add_filter( 'render_block', function ( $html, $block ) {
 	// An agent's biography is the post content; while it is empty, show the placeholder.
 	if ( 'core/post-content' === $name && is_singular( 'ot_agent' ) && '' === trim( wp_strip_all_tags( (string) get_post_field( 'post_content', get_queried_object_id() ) ) ) ) {
 		return ot_render_agent_section( 'bio-placeholder', get_queried_object_id() );
+	}
+
+	// Text shared by every profile (Appearance > Editor > Templates > agent) writes {first name}
+	// where the agent's first name goes.
+	if ( is_singular( 'ot_agent' ) && str_contains( $html, '{first name}' ) ) {
+		$rec  = function_exists( 'ot_agent_rec' ) ? ot_agent_rec( get_queried_object_id() ) : array();
+		$html = str_replace( '{first name}', esc_html( $rec['given'] ?? get_the_title( get_queried_object_id() ) ), $html );
 	}
 
 	// A listing without a description drops its "The property" heading.

@@ -11,12 +11,7 @@
  */
 $left = oberdorfer_p( 'Spotlight · Wakefield · Data through August 2026 · All home types', 'label ot-mb-3' )
 	. oberdorfer_h( 'Wakefield, from <em>Wakefield at Home</em>', 2, 'h3 ot-mb-4', 'wk-title' )
-	. oberdorfer_html( '<div class="stat-panel">
-      <div class="stat"><span class="stat__value tabular">$786,979</span><span class="stat__label">Median sale price</span><span class="stat__period">3 months ending August 2026</span></div>
-      <div class="stat"><span class="stat__value tabular">21</span><span class="stat__label">Median days on market</span><span class="stat__period">August 2026</span></div>
-      <div class="stat"><span class="stat__value tabular">$483</span><span class="stat__label">Median sold price / sq. ft.</span><span class="stat__period">Redfin rolling 3-month snapshot</span></div>
-      <div class="stat"><span class="stat__value tabular">103.3%</span><span class="stat__label">Sale-to-list price</span><span class="stat__period">August 2026</span></div>
-    </div>' )
+	. oberdorfer_group( oberdorfer_stat( '$786,979', 'Median sale price', '3 months ending August 2026' ) . oberdorfer_stat( '21', 'Median days on market', 'August 2026' ) . oberdorfer_stat( '$483', 'Median sold price / sq. ft.', 'Redfin rolling 3-month snapshot' ) . oberdorfer_stat( '103.3%', 'Sale-to-list price', 'August 2026' ), 'stat-panel' )
 	. oberdorfer_p( 'Source: Redfin, Wakefield Housing Market, accessed October 10, 2026. Geography: Wakefield town; all home types. Figures may be revised; this is not a valuation of an individual home.', 'stat-source' );
 $right = oberdorfer_p( 'Different sources measure different things: the Warren Group table counts single-family sales for a full calendar year, while this Redfin snapshot covers all home types over recent months. Compare like with like.', 'body-s' )
 	. oberdorfer_link_arrow( 'The Wakefield guide', oberdorfer_url( '/communities/wakefield/' ) );

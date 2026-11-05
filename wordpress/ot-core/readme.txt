@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.3.0
+Stable tag: 0.4.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,13 @@ Listings are off by default. Settings > Listings (IDX) switches the home search 
 If an SEO plugin is installed, only one of the two may print meta tags: add `define( 'OT_CORE_SEO_OUTPUT', false );` to wp-config.php to switch this plugin's output off.
 
 == Changelog ==
+
+= 0.4.0 =
+* Every main page is edited in the page itself. Home, Buy, Sell, Market, Team, Join and Contact now hold their sections in the page body: open the page under Pages, click any heading, paragraph, button or photo, type, Save. The importer copies the theme's sections into each page once and never over the team's edits; a page whose body is empty still shows its sections. Links and images in the bodies are root-relative, so they move between Local, staging and oberdorferteam.com.
+* Text that was raw HTML is now ordinary blocks: the market figure tiles, the buying and selling steps, the Massachusetts seller checklist (a table block), the contact lines, the home cover photo (an image block that can be replaced) and the header's navigation links and phone button.
+* The mobile menu is built from the header's navigation links, so one edit changes both; "Search homes" still follows the IDX switch.
+* The standard agent profile sections (about heading, how we can help, client stories, contact) are blocks in the agent template, edited once in Appearance > Editor for both profiles; {first name} is replaced with each agent's first name. The questions and the message form stay built from each profile.
+* Guide research sections stay protected, as before.
 
 = 0.3.0 =
 * Edit on the page. Guides, agent profiles, listings and the office open in the editor showing the whole page. The text that belongs to the post (a guide's h1, headline and summary; an agent's role line and summary) is an ordinary block bound to the post's own field with the Block Bindings API (core/post-meta), so the team clicks it and types. The biography and a listing's description are the post body. Sections drawn from research data stay previews and, when clicked, say where they are edited.

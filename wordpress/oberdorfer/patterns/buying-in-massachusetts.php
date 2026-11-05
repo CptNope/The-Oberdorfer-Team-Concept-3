@@ -9,14 +9,14 @@
  * The numbered steps are an HTML fragment: each item holds a heading and a paragraph, which a
  * list item's rich text cannot keep as separate elements.
  */
-$steps = oberdorfer_html( '<ol class="steps ot-col-7-6">
-      <li><div><h3>The offer to purchase</h3><p class="body-s">A short standard form sets the price, deposit and contingencies, such as the home inspection and financing. Because the signed offer is usually binding on its own, the contingencies belong in it from the start.</p></div></li>
-      <li><div><h3>The home inspection</h3><p class="body-s">The inspection period is set in the offer, often about a week to ten days. Repairs or credits are negotiated before the next contract is signed.</p></div></li>
-      <li><div><h3>The purchase and sale agreement</h3><p class="body-s">The longer, detailed contract, usually drafted or reviewed by attorneys. It becomes the final agreement between buyer and seller.</p></div></li>
-      <li><div><h3>An attorney-led closing</h3><p class="body-s">Massachusetts closings are conducted by attorneys. The closing attorney searches the title, prepares the closing documents and records the deed and mortgage at the county registry of deeds.</p></div></li>
-      <li><div><h3>Homes built before 1978</h3><p class="body-s">Before you sign a purchase and sale agreement, the seller gives you the state\'s Property Transfer Lead Paint Notification and any lead reports for the home.</p></div></li>
-      <li><div><h3>Homes on a septic system</h3><p class="body-s">A Title 5 inspection is generally required within two years before the sale. Ask for the report early.</p></div></li>
-    </ol>' );
+$steps = oberdorfer_steps( array(
+	array( 'The offer to purchase', 'A short standard form sets the price, deposit and contingencies, such as the home inspection and financing. Because the signed offer is usually binding on its own, the contingencies belong in it from the start.' ),
+	array( 'The home inspection', 'The inspection period is set in the offer, often about a week to ten days. Repairs or credits are negotiated before the next contract is signed.' ),
+	array( 'The purchase and sale agreement', 'The longer, detailed contract, usually drafted or reviewed by attorneys. It becomes the final agreement between buyer and seller.' ),
+	array( 'An attorney-led closing', 'Massachusetts closings are conducted by attorneys. The closing attorney searches the title, prepares the closing documents and records the deed and mortgage at the county registry of deeds.' ),
+	array( 'Homes built before 1978', 'Before you sign a purchase and sale agreement, the seller gives you the state\'s Property Transfer Lead Paint Notification and any lead reports for the home.' ),
+	array( 'Homes on a septic system', 'A Title 5 inspection is generally required within two years before the sale. Ask for the report early.' ),
+), 'ot-col-7-6' );
 $intro = oberdorfer_group(
 	oberdorfer_p( 'Buying in Massachusetts', 'label' )
 	. oberdorfer_h( oberdorfer_lines( array( 'What is different', 'about buying here.' ) ), 2, 'display-m answer', 'ma-buy-title' )

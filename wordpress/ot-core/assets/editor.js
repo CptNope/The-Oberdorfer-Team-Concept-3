@@ -96,10 +96,11 @@
 	 * selectable so each can show where it is edited. A short notice says how the page works.
 	 */
 	var NOTICES = {
-		ot_agent: 'Click the role line, the summary or the biography on the page and type to change them. Phone, title, specialties and headshot are in "Agent details": open "Meta Boxes" at the bottom of the screen. Click any other section to see where it is edited. Then click Save.',
+		ot_agent: 'Click the role line, the summary or the biography on the page and type to change them. Phone, title, specialties and headshot are in "Agent details": open "Meta Boxes" at the bottom of the screen. Sections shared by both profiles (how we can help, client stories, contact) are edited once in Appearance > Editor > Templates > Agent profile. Then click Save.',
 		ot_community: 'Click the headline or the summary on the page and type to change them. The research sections below (facts, prices, sources) are kept separate so they stay accurate; click one to see where it comes from. Then click Save.',
 		ot_listing: 'Type the address as the title and write the description on the page. Price, status, rooms and more photos are in "Listing details": open "Meta Boxes" at the bottom of the screen; the main photo is "Featured image" in the sidebar. Then click Publish or Save.',
-		ot_office: 'Click the text on the page to change it, then click Save.'
+		ot_office: 'Click the text on the page to change it, then click Save.',
+		page: 'Click any text on the page and type to change it; click a photo to replace it. The header and footer are shared by every page: change them in Appearance > Editor > Patterns. Then click Save.'
 	};
 	var noticeShown = false;
 	var busy = false;

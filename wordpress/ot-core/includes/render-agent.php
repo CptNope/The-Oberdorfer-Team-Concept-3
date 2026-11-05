@@ -206,6 +206,9 @@ function ot_render_person_section( $section, $x ) {
   <div class="accordion" style="grid-column:7/span 6">' . $faq . '</div>
 </div></section>';
 
+		case 'contact-form':
+			return ot_inquiry_form( 'pf', 'Message ' . $x['r']['given'], array( 'Buying', 'Selling', 'Both', 'A market review', 'Something else' ), 'Send to ' . $x['r']['given'], 'agent:' . $x['p']->post_name, 'h3', 'Your message goes to ' . $x['r']['given'] . ' and is used only to respond to your request. [Privacy policy to be published before launch.]' );
+
 		case 'contact':
 			$form = ot_inquiry_form( 'pf', 'Message ' . $x['r']['given'], array( 'Buying', 'Selling', 'Both', 'A market review', 'Something else' ), 'Send to ' . $x['r']['given'], 'agent:' . $x['p']->post_name, 'h3', 'Your message goes to ' . $x['r']['given'] . ' and is used only to respond to your request. [Privacy policy to be published before launch.]' );
 			return '<section class="section surface-muted" id="contact-agent"><div class="container split" style="align-items:start">

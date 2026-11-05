@@ -61,7 +61,7 @@ function ot_block_definitions() {
 		),
 		'ot/agent-profile'        => array(
 			'title'    => 'Agent profile section',
-			'attrs'    => array( 'section' => array( 'type' => 'string', 'default' => 'hero', 'enum' => array( 'hero', 'photo', 'actions', 'facts', 'about-intro', 'partner', 'about', 'help', 'stories', 'questions', 'contact' ) ) ),
+			'attrs'    => array( 'section' => array( 'type' => 'string', 'default' => 'hero', 'enum' => array( 'hero', 'photo', 'actions', 'facts', 'about-intro', 'partner', 'about', 'help', 'stories', 'questions', 'contact', 'contact-form' ) ) ),
 			'render'   => fn( $a, $b ) => ot_render_agent_section( $a['section'] ?? 'hero', ot_block_post_id( $b ) ),
 		),
 		'ot/agent-cards'          => array(

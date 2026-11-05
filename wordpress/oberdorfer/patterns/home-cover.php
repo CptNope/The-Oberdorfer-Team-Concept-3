@@ -10,7 +10,7 @@
  * gradient scrim (.hero-cover__media) and the search form submits to the Buy page.
  */
 $search = oberdorfer_icon( 'search' );
-$media  = oberdorfer_html( '<div class="hero-cover__media"><img src="' . esc_url( oberdorfer_asset( 'assets/img/photo/cover-portrait.webp' ) ) . '" alt="Brandon and Kaitlyn Oberdorfer outside a Massachusetts home in autumn" width="1103" height="1426" fetchpriority="high"></div>' );
+$media  = oberdorfer_image( oberdorfer_asset( 'assets/img/photo/cover-portrait.webp' ), 'Brandon and Kaitlyn Oberdorfer outside a Massachusetts home in autumn', 'hero-cover__media' );
 $copy   = oberdorfer_h( 'Massachusetts real estate team · Based in Worcester', 1, 'label home-hero__issue', 'home-title' )
 	. oberdorfer_p( oberdorfer_lines( array( 'Luxury at', 'every price point.' ) ), 'display-xl answer' )
 	. oberdorfer_p( 'Brandon and Kaitlyn Oberdorfer are a husband-and-wife real estate team based in Worcester, helping buyers and sellers across Massachusetts. Thoughtful service. Creative marketing. A personal connection to every move.', 'lead' );

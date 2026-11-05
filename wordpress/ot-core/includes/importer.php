@@ -81,6 +81,60 @@ function ot_upsert( $type, $slug, $title, $parent, $order, $meta, $excerpt = '' 
 	return array( $id, $created );
 }
 
+/**
+ * Fill a main page's body with the theme's sections for it (oberdorfer_page_body()), so the
+ * team edits every block in the page itself. Only an empty body, or one nobody has changed
+ * since the importer wrote it, is (re)filled: `_ot_import_content` holds the md5 of what it wrote.
+ */
+function ot_seed_page_body( $page_id, $slug ) {
+	if ( ! function_exists( 'oberdorfer_page_body' ) ) {
+		return false;
+	}
+	$body = oberdorfer_page_body( $slug );
+	if ( '' === $body ) {
+		return false;
+	}
+	$cur  = (string) get_post_field( 'post_content', $page_id );
+	$last = (string) get_post_meta( $page_id, '_ot_import_content', true );
+	if ( '' !== trim( $cur ) && md5( $cur ) !== $last ) {
+		return false; // written or changed by the team
+	}
+	if ( $cur === $body ) {
+		return false;
+	}
+	kses_remove_filters(); // the sections include markup (forms, SVG) that post filters would strip
+	$res = wp_update_post( wp_slash( array( 'ID' => $page_id, 'post_content' => $body ) ), true );
+	kses_init_filters();
+	if ( is_wp_error( $res ) ) {
+		return false;
+	}
+	update_post_meta( $page_id, '_ot_import_content', md5( (string) get_post_field( 'post_content', $page_id ) ) );
+	return true;
+}
+
+/** Pages whose body is still empty get their sections the next time someone opens the admin. */
+add_action( 'admin_init', function () {
+	if ( ! current_user_can( 'edit_pages' ) || ! function_exists( 'oberdorfer_page_sections' ) ) {
+		return;
+	}
+	$key = 'ot_pages_seeded';
+	$ver = OT_CORE_VERSION . '|' . wp_get_theme()->get( 'Version' );
+	if ( get_option( $key ) === $ver ) {
+		return;
+	}
+	foreach ( array_keys( oberdorfer_page_sections() ) as $slug ) {
+		$id = 'home' === $slug ? (int) get_option( 'page_on_front' ) : 0;
+		if ( ! $id ) {
+			$p  = get_page_by_path( $slug );
+			$id = $p ? $p->ID : 0;
+		}
+		if ( $id && '' === trim( (string) get_post_field( 'post_content', $id ) ) ) {
+			ot_seed_page_body( $id, $slug );
+		}
+	}
+	update_option( $key, $ver, false );
+} );
+
 /** Run the import. Returns a summary array, or WP_Error. */
 function ot_import( $file = null ) {
 	$file = $file ?: ot_import_file();
@@ -146,6 +200,11 @@ function ot_import( $file = null ) {
 	if ( ! empty( $data['front_page'] ) && ! empty( $page_ids[ $data['front_page'] ] ) ) {
 		update_option( 'show_on_front', 'page' );
 		update_option( 'page_on_front', $page_ids[ $data['front_page'] ] );
+	}
+	foreach ( $page_ids as $slug => $pid ) {
+		if ( $pid ) {
+			ot_seed_page_body( $pid, $slug );
+		}
 	}
 	if ( ! empty( $data['posts_page'] ) && ! empty( $page_ids[ $data['posts_page'] ] ) ) {
 		update_option( 'page_for_posts', $page_ids[ $data['posts_page'] ] );
