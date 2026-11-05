@@ -24,11 +24,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
       - name: Assemble the published site
         run: |
           mkdir -p _site
           cp index.html .nojekyll _site/
           cp -r assets discovery brand-book design-system site decisions coming-soon _site/
+          # The current WordPress build (same zips as the latest GitHub release), at a stable URL
+          # that the staging site can download from: wordpress/oberdorfer.zip and wordpress/ot-core.zip.
+          python3 tools/build_wp.py
+          mkdir -p _site/wordpress
+          cp wordpress/dist/oberdorfer.zip wordpress/dist/ot-core.zip wordpress/release.json _site/wordpress/
           echo "Published size:" && du -sh _site
 
       - uses: actions/configure-pages@v5
