@@ -12,7 +12,8 @@
 
 defined( 'ABSPATH' ) || exit;
 
-const OBERDORFER_VERSION = '0.1.0';
+/* The theme's version (style.css) tags its CSS and JS, so each release reaches browsers and caches. */
+define( 'OBERDORFER_VERSION', (string) wp_get_theme( get_template() )->get( 'Version' ) );
 
 require_once __DIR__ . '/inc/helpers.php';
 require_once __DIR__ . '/inc/markup.php';

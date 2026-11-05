@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.4.2
+Stable tag: 0.4.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,9 @@ Fonts: Cormorant Garamond and Manrope (SIL Open Font License 1.1), loaded from G
 this version; self-hosting is a launch task.
 
 == Changelog ==
+
+= 0.4.3 =
+* The theme's stylesheets and scripts now carry the theme version, so browsers and server caches pick up each update. They were tagged 0.1.0 since the first release, so staging kept serving old CSS (the 0.4.2 drawing fix did not show).
 
 = 0.4.2 =
 * House drawings: on community cards the drawing is centered above the town name instead of pinned to the top-left corner (the photo rule was stretching it), and on listing pages it fits its frame instead of being cut off at the bottom.
