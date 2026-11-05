@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.4.0
+Stable tag: 0.4.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,9 @@ Fonts: Cormorant Garamond and Manrope (SIL Open Font License 1.1), loaded from G
 this version; self-hosting is a launch task.
 
 == Changelog ==
+
+= 0.4.1 =
+* Editor only: the home cover photo and the design-system buttons (header phone, link arrows) now look in the editor as they do on the site.
 
 = 0.4.0 =
 * Every main page is edited in the page itself. Home, Buy, Sell, Market, Team, Join and Contact now hold their sections in the page body: open the page under Pages, click any heading, paragraph, button or photo, type, Save. The importer copies the theme's sections into each page once and never over the team's edits; a page whose body is empty still shows its sections. Links and images in the bodies are root-relative, so they move between Local, staging and oberdorferteam.com.
