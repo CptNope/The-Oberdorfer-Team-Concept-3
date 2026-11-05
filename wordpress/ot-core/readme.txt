@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.4.1
+Stable tag: 0.4.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,9 @@ Listings are off by default. Settings > Listings (IDX) switches the home search 
 If an SEO plugin is installed, only one of the two may print meta tags: add `define( 'OT_CORE_SEO_OUTPUT', false );` to wp-config.php to switch this plugin's output off.
 
 == Changelog ==
+
+= 0.4.2 =
+* House drawings: on community cards the drawing is centered above the town name instead of pinned to the top-left corner (the photo rule was stretching it), and on listing pages it fits its frame instead of being cut off at the bottom.
 
 = 0.4.1 =
 * Editor only: the home cover photo and the design-system buttons (header phone, link arrows) now look in the editor as they do on the site.

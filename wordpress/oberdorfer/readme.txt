@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.4.1
+Stable tag: 0.4.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,9 @@ Fonts: Cormorant Garamond and Manrope (SIL Open Font License 1.1), loaded from G
 this version; self-hosting is a launch task.
 
 == Changelog ==
+
+= 0.4.2 =
+* House drawings: on community cards the drawing is centered above the town name instead of pinned to the top-left corner (the photo rule was stretching it), and on listing pages it fits its frame instead of being cut off at the bottom.
 
 = 0.4.1 =
 * Editor only: the home cover photo and the design-system buttons (header phone, link arrows) now look in the editor as they do on the site.
