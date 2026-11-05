@@ -137,5 +137,8 @@ function ot_current_trail() {
 		$trail[] = array( esc_html( get_the_title( $a ) ), get_permalink( $a ) );
 	}
 	$trail[] = array( esc_html( get_the_title( $post ) ), get_permalink( $post ) );
+	if ( function_exists( 'ot_is_agent_listings' ) && ot_is_agent_listings() ) {
+		$trail[] = array( 'Listings', ot_agent_listings_url( $post ) );
+	}
 	return $trail;
 }

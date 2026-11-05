@@ -21,28 +21,51 @@ const OT_LISTING_STATUSES = array(
 /** Field key => [label, type, help]. Stored as post meta with the key as written. */
 function ot_listing_fields() {
 	return array(
-		'ot_status'     => array( 'Status', 'status', '' ),
-		'ot_price'      => array( 'Price ($)', 'int', 'Asking price, or the sale price once sold. Digits only.' ),
-		'ot_street'     => array( 'Street address', 'text', 'For example, 12 Elm Street. Shown on the listing.' ),
-		'ot_unit'       => array( 'Unit', 'text', 'Optional, for condominiums.' ),
-		'ot_town_slug'  => array( 'Town or neighborhood guide', 'town', 'Links the listing to its guide and shows it there.' ),
-		'ot_town'       => array( 'Town (as written in the address)', 'text', 'For example, Worcester. Filled from the guide when left empty.' ),
-		'ot_zip'        => array( 'ZIP code', 'text', '' ),
-		'ot_kind'       => array( 'Home type', 'kind', '' ),
-		'ot_style'      => array( 'Style', 'text', 'For example, Colonial, Cape, Triple-decker.' ),
-		'ot_beds'       => array( 'Bedrooms', 'text', '' ),
-		'ot_baths'      => array( 'Bathrooms', 'text', 'For example, 2.5.' ),
-		'ot_sqft'       => array( 'Living area (sq ft)', 'int', '' ),
-		'ot_lot'        => array( 'Lot', 'text', 'For example, 0.25 acres.' ),
-		'ot_year'       => array( 'Year built', 'text', '' ),
-		'ot_open_house' => array( 'Open house', 'text', 'For example, Sunday, November 9, 1 to 3 pm. Leave empty when none is scheduled.' ),
-		'ot_mls'        => array( 'MLS number', 'text', 'Optional.' ),
-		'ot_courtesy'   => array( 'Listing brokerage', 'text', 'Shown as "Listing courtesy of ...". Defaults to REWAP Brokerage LLC.' ),
-		'ot_agent'      => array( 'Listing agent', 'agent', '' ),
-		'ot_featured'   => array( 'Feature on the home page', 'bool', 'Featured listings come first on the home page.' ),
-		'ot_gallery'    => array( 'More photos', 'gallery', 'The featured image is the main photo; these follow it in the gallery.' ),
+		'ot_status'         => array( 'Status', 'status', '' ),
+		'ot_price'          => array( 'Price ($)', 'int', 'Asking price, or the sale price once sold. Digits only.' ),
+		'ot_street'         => array( 'Street address', 'text', 'For example, 12 Elm Street. Shown on the listing.' ),
+		'ot_unit'           => array( 'Unit', 'text', 'Optional, for condominiums.' ),
+		'ot_town_slug'      => array( 'Town or neighborhood guide', 'town', 'Links the listing to its guide and shows it there.' ),
+		'ot_town'           => array( 'Town (as written in the address)', 'text', 'For example, Worcester. Filled from the guide when left empty.' ),
+		'ot_zip'            => array( 'ZIP code', 'text', '' ),
+		'ot_kind'           => array( 'Home type', 'kind', '' ),
+		'ot_style'          => array( 'Style', 'text', 'For example, Colonial, Cape, Triple-decker.' ),
+		'ot_beds'           => array( 'Bedrooms', 'text', '' ),
+		'ot_baths'          => array( 'Bathrooms', 'text', 'For example, 2.5.' ),
+		'ot_sqft'           => array( 'Living area (sq ft)', 'int', '' ),
+		'ot_lot'            => array( 'Lot', 'text', 'For example, 0.25 acres.' ),
+		'ot_year'           => array( 'Year built', 'text', '' ),
+		'ot_mls'            => array( 'MLS number', 'text', 'Optional.' ),
+		'ot_taxes'          => array( 'Property tax ($ a year)', 'int', 'Optional. Prefills the payment estimate. From the assessor\'s current bill.' ),
+		'ot_hoa'            => array( 'Condo or HOA fee ($ a month)', 'int', 'Optional. Prefills the payment estimate.' ),
+		'ot_open_start'     => array( 'Open house starts', 'datetime', 'Visitors can add it to their calendar. It disappears from the page once it is over.' ),
+		'ot_open_end'       => array( 'Open house ends', 'datetime', 'Empty means two hours after the start.' ),
+		'ot_open_house'     => array( 'Open house (as written)', 'text', 'Optional wording, for example "Sunday, November 9, 1 to 3 pm". Empty writes it from the times above.' ),
+		'ot_video'          => array( 'Video tour', 'url', 'A YouTube or Vimeo link, for example https://www.youtube.com/watch?v=... It plays on the page when a visitor clicks.' ),
+		'ot_tour'           => array( '3D tour', 'url', 'A Matterport, iGuide, Kuula or CloudPano link, for example https://my.matterport.com/show/?m=...' ),
+		'ot_facebook'       => array( 'Facebook post', 'url', 'Link to the listing\'s post or video on Facebook.' ),
+		'ot_instagram_post' => array( 'Instagram post', 'url', 'Link to the listing\'s post or reel on the team account, instagram.com/oberdorferteam.' ),
+		'ot_tiktok'         => array( 'TikTok video', 'url', 'Optional.' ),
+		'ot_floorplan'      => array( 'Floor plan', 'file', 'An image (shown on the page) or a PDF (offered as a download).' ),
+		'ot_brochure'       => array( 'Property brochure', 'file', 'A PDF, offered as a download.' ),
+		'ot_agent'          => array( 'Listing agent', 'agent', 'The listing shows on this agent\'s page.' ),
+		'ot_coagent'        => array( 'Co-listing agent', 'agent', 'Optional. The listing shows on both agents\' pages.' ),
+		'ot_courtesy'       => array( 'Listing brokerage', 'text', 'Shown as "Listing courtesy of ...". Defaults to REWAP Brokerage LLC.' ),
+		'ot_featured'       => array( 'Feature on the home page', 'bool', 'Featured listings come first on the home page.' ),
+		'ot_gallery'        => array( 'More photos', 'gallery', 'The featured image is the main photo; these follow it in the gallery.' ),
 	);
 }
+
+/** Headings in the "Listing details" box, before the field they introduce. */
+const OT_LISTING_GROUPS = array(
+	'ot_status'     => 'The home',
+	'ot_taxes'      => 'Costs (they prefill the payment estimate)',
+	'ot_open_start' => 'Open house',
+	'ot_video'      => 'Video, 3D tour and social posts',
+	'ot_floorplan'  => 'Floor plan and brochure',
+	'ot_agent'      => 'Agents and brokerage',
+	'ot_featured'   => 'On the site',
+);
 
 add_action( 'init', function () {
 	register_post_type( 'ot_listing', array(
@@ -67,7 +90,7 @@ add_action( 'init', function () {
 	) );
 	$auth = fn() => current_user_can( 'edit_posts' );
 	foreach ( ot_listing_fields() as $key => $f ) {
-		$type = in_array( $f[1], array( 'int' ), true ) ? 'integer' : ( 'bool' === $f[1] ? 'boolean' : 'string' );
+		$type = in_array( $f[1], array( 'int', 'file' ), true ) ? 'integer' : ( 'bool' === $f[1] ? 'boolean' : 'string' );
 		register_post_meta( 'ot_listing', $key, array( 'type' => $type, 'single' => true, 'show_in_rest' => true, 'auth_callback' => $auth ) );
 	}
 	register_post_meta( 'ot_listing', 'ot_seo_title', array( 'type' => 'string', 'single' => true, 'show_in_rest' => true, 'auth_callback' => $auth ) );
@@ -105,7 +128,7 @@ function ot_listing( $post ) {
  * "boston/roxbury"; a city also matches its neighborhoods), exclude (post ID).
  */
 function ot_listings( $args = array() ) {
-	$args = wp_parse_args( $args, array( 'limit' => 6, 'statuses' => array( 'coming-soon', 'active', 'under-agreement' ), 'town' => '', 'exclude' => 0 ) );
+	$args = wp_parse_args( $args, array( 'limit' => 6, 'statuses' => array( 'coming-soon', 'active', 'under-agreement' ), 'town' => '', 'exclude' => 0, 'agent' => '' ) );
 	$q    = array(
 		'post_type'      => 'ot_listing',
 		'post_status'    => 'publish',
@@ -120,6 +143,10 @@ function ot_listings( $args = array() ) {
 	foreach ( get_posts( $q ) as $p ) {
 		$l = ot_listing( $p );
 		if ( ! in_array( $l['status'], (array) $args['statuses'], true ) ) {
+			continue;
+		}
+		// An agent's listings: listing or co-listing agent. The joint profile lists every team listing.
+		if ( $args['agent'] && 'brandon-kaitlyn-oberdorfer' !== $args['agent'] && $l['agent'] !== $args['agent'] && $l['coagent'] !== $args['agent'] ) {
 			continue;
 		}
 		if ( $args['town'] ) {
@@ -168,7 +195,7 @@ function ot_listing_card( $l ) {
 		? wp_get_attachment_image( $l['photo_id'], 'large', false, array( 'loading' => 'lazy', 'alt' => 'Front of ' . $l['address'] . ', ' . $l['town'] ) )
 		: '<div class="demo-illu" style="position:absolute;inset:0">' . ot_art( 'colonial', 'Photo to come' ) . '</div>';
 	$price = $l['price'] ? '<p class="listing-card__price tabular">' . ot_money( $l['price'] ) . '</p>' : '';
-	$open  = $l['open_house'] && 'sold' !== $l['status'] ? 'Open house ' . esc_html( $l['open_house'] ) . ' · ' : '';
+	$open  = ot_open_house_text( $l ) ? 'Open house ' . esc_html( ot_open_house_text( $l ) ) . ' · ' : '';
 	return '<article class="listing-card">
   <div class="listing-card__media">' . $media . ot_listing_badge( $l ) . '</div>
   ' . $price . '
@@ -252,6 +279,7 @@ function ot_listing_detail_parts( $l, $post_id ) {
 	$agent  = $l['agent'] ? get_page_by_path( $l['agent'], OBJECT, 'ot_agent' ) : null;
 	$who    = $agent ? get_the_title( $agent ) : 'Brandon &amp; Kaitlyn Oberdorfer';
 	$phone  = $agent ? ( get_post_meta( $agent->ID, 'ot_phone', true ) ?: OT_PHONE ) : OT_PHONE;
+	$pic    = $agent ? ot_agent_rec( $agent )['photo_url'] : ot_asset( 'assets/img/photo/team-portrait.webp' );
 	$form   = ot_inquiry_form( 'show', 'Request a showing', array( 'This week, weekday', 'This week, weekend', 'Next week', 'Flexible' ), 'Request a showing', 'showing:' . $l['slug'], 'h2', 'Your request is attached to ' . $l['address'] . ' and goes to ' . wp_strip_all_tags( html_entity_decode( $who ) ) . '. [Privacy policy to be published before launch.]' );
 	return array(
 		'facts' => $facts ? '<div class="facts">' . $facts . '</div>' : '',
@@ -259,8 +287,8 @@ function ot_listing_detail_parts( $l, $post_id ) {
 		'specs' => ( $rows ? '<div><h2 class="h3" style="margin-bottom:var(--space-4)">Details</h2><table class="spec-table"><tbody>' . $rows . '</tbody></table></div>' : '' )
 			. '<div class="cluster">' . ot_link_arrow( $maps, 'See it on a map' ) . $guide . '</div>'
 			. '<p class="form-note">Listing courtesy of ' . esc_html( $l['courtesy'] ) . '. Information deemed reliable but not guaranteed; confirm details before you rely on them.</p>',
-		'aside' => '<div class="panel">' . $form . '</div>'
-			. '<div class="panel" style="grid-template-columns:5rem 1fr;align-items:center;gap:var(--space-4)"><img src="' . esc_url( ot_asset( 'assets/img/photo/team-portrait.webp' ) ) . '" alt="" style="aspect-ratio:1;object-fit:cover;object-position:50% 15%"><div><p class="h5">' . $who . '</p><a href="' . esc_attr( ot_tel_href( $phone ) ) . '" class="body-s">' . esc_html( $phone ) . '</a></div></div>',
+		'aside' => '<div class="panel" id="request-showing">' . $form . '</div>'
+			. '<div class="panel" style="grid-template-columns:5rem 1fr;align-items:center;gap:var(--space-4)"><img src="' . esc_url( $pic ) . '" alt="" style="aspect-ratio:1;object-fit:cover;object-position:50% 15%"><div><p class="h5">' . ( $agent ? '<a href="' . esc_url( get_permalink( $agent ) ) . '" style="color:inherit">' . $who . '</a>' : $who ) . '</p><a href="' . esc_attr( ot_tel_href( $phone ) ) . '" class="body-s">' . esc_html( $phone ) . '</a></div></div>',
 	);
 }
 
@@ -279,7 +307,13 @@ function ot_render_listing_section( $section, $post_id ) {
 		case 'location':
 			return '<p class="lead" style="max-width:none">' . esc_html( $where ) . '</p>';
 		case 'price':
-			return ( $l['price'] ? '<p class="display-m tabular" style="font-size:var(--step-h1)">' . ot_money( $l['price'] ) . '</p>' : '' ) . ( $l['open_house'] && 'sold' !== $l['status'] ? '<p class="label">Open house · ' . esc_html( $l['open_house'] ) . '</p>' : '' );
+			return ( $l['price'] ? '<p class="display-m tabular" style="font-size:var(--step-h1)">' . ot_money( $l['price'] ) . '</p>' : '' ) . ( ot_open_house_text( $l ) ? '<p class="label">Open house · ' . esc_html( ot_open_house_text( $l ) ) . '</p>' : '' );
+		case 'actions':
+			return ot_listing_actions( $l ) . ot_listing_cta_bar( $l );
+		case 'media':
+			return ot_listing_media( $l );
+		case 'estimator':
+			return ot_listing_estimator( $l );
 		case 'gallery':
 			return ot_listing_gallery_html( $l );
 		case 'facts':
@@ -293,7 +327,7 @@ function ot_render_listing_section( $section, $post_id ) {
   ' . ot_breadcrumbs_html( $trail ) . '
   <div class="cluster" style="justify-content:space-between;align-items:end">
     <div class="stack" style="--stack:var(--space-3)">' . ot_listing_badge( $l ) . '<h1 class="display-m" id="page-title">' . esc_html( $l['address'] ) . '</h1><p class="lead" style="max-width:none">' . esc_html( $where ) . '</p></div>
-    <div class="stack" style="--stack:var(--space-2);text-align:right">' . ( $l['price'] ? '<p class="display-m tabular" style="font-size:var(--step-h1)">' . ot_money( $l['price'] ) . '</p>' : '' ) . ( $l['open_house'] && 'sold' !== $l['status'] ? '<p class="label">Open house · ' . esc_html( $l['open_house'] ) . '</p>' : '' ) . '</div>
+    <div class="stack" style="--stack:var(--space-2);text-align:right">' . ( $l['price'] ? '<p class="display-m tabular" style="font-size:var(--step-h1)">' . ot_money( $l['price'] ) . '</p>' : '' ) . ( ot_open_house_text( $l ) ? '<p class="label">Open house · ' . esc_html( ot_open_house_text( $l ) ) . '</p>' : '' ) . '</div>
   </div>
   ' . $gallery . '
 </div></section>';
@@ -301,7 +335,7 @@ function ot_render_listing_section( $section, $post_id ) {
 		case 'details':
 			$d = ot_listing_detail_parts( $l, $post_id );
 			return '<section class="section" id="details" style="padding-top:var(--space-6)"><div class="container detail">
-  <div class="stack" style="--stack:var(--space-7)">' . $d['facts'] . ( $d['story'] ? '<div class="prose stack"><h2 class="h3">The property</h2>' . $d['story'] . '</div>' : '' ) . $d['specs'] . '</div>
+  <div class="stack" style="--stack:var(--space-7)">' . $d['facts'] . ot_listing_media( $l ) . ( $d['story'] ? '<div class="prose stack"><h2 class="h3">The property</h2>' . $d['story'] . '</div>' : '' ) . $d['specs'] . ot_listing_estimator( $l ) . '</div>
   <aside class="detail__aside" aria-label="Contact about this home">' . $d['aside'] . '</aside>
 </div></section>';
 
@@ -365,6 +399,12 @@ add_action( 'wp_head', function () {
 		'offers' => $l['price'] && 'sold' !== $l['status'] ? array( '@type' => 'Offer', 'price' => (int) $l['price'], 'priceCurrency' => 'USD', 'availability' => 'https://schema.org/InStock' ) : null,
 		'provider' => array( '@id' => OT_SITE_URL . '#team' ),
 	);
+	// The agent who lists it: the Offer is made by that person (their profile's #person node).
+	$agent = $l['agent'] ? get_page_by_path( $l['agent'], OBJECT, 'ot_agent' ) : null;
+	if ( ! empty( $data['offers'] ) && $agent ) {
+		$data['offers']['offeredBy'] = array( '@id' => ot_prod_url( get_permalink( $agent ) ) . '#person' );
+	}
+	// No VideoObject for the tour video: Google requires its upload date, which the team does not enter.
 	echo ot_jsonld( array_filter( $data ) ) . "\n";
 }, 3 );
 
@@ -381,6 +421,9 @@ function ot_listing_box( $post ) {
 	$agents = get_posts( array( 'post_type' => 'ot_agent', 'post_status' => 'publish', 'posts_per_page' => -1, 'orderby' => 'menu_order', 'order' => 'ASC' ) );
 	echo '<p>The title is the address line people see (for example, 12 Elm Street). Write the property story in the main editor; set the main photo with "Main photo" in the sidebar. Only homes the team is authorized to advertise. Describe the home and the place, never who it would suit.</p><table class="form-table" role="presentation"><tbody>';
 	foreach ( ot_listing_fields() as $key => $f ) {
+		if ( isset( OT_LISTING_GROUPS[ $key ] ) ) {
+			echo '<tr><th colspan="2" scope="rowgroup" style="padding-bottom:0"><h3 style="margin:1.2em 0 0;font-size:1.05em">' . esc_html( OT_LISTING_GROUPS[ $key ] ) . '</h3></th></tr>';
+		}
 		$v    = get_post_meta( $post->ID, $key, true );
 		$id   = esc_attr( $key );
 		$help = $f[2] ? '<p class="description">' . esc_html( $f[2] ) . '</p>' : '';
@@ -418,6 +461,17 @@ function ot_listing_box( $post ) {
 					echo '<option value="' . esc_attr( $a->post_name ) . '"' . selected( $v, $a->post_name, false ) . '>' . esc_html( $a->post_title ) . '</option>';
 				}
 				echo '</select>';
+				break;
+			case 'url':
+				$ok = '' === (string) $v || ( in_array( $key, array( 'ot_video', 'ot_tour' ), true ) ? (bool) ot_media_embed( $v ) : true );
+				echo '<input class="large-text" type="url" id="' . $id . '" name="' . $id . '" value="' . esc_attr( $v ) . '" placeholder="https://">' . ( $ok ? '' : '<p class="description" style="color:#b32d2e">This link is not from an accepted site, so it will not show. Use a YouTube or Vimeo link for video; Matterport, iGuide, Kuula or CloudPano for a 3D tour.</p>' );
+				break;
+			case 'datetime':
+				echo '<input type="datetime-local" id="' . $id . '" name="' . $id . '" value="' . esc_attr( $v ) . '"> <span class="description">Massachusetts time</span>';
+				break;
+			case 'file':
+				$fid = (int) $v;
+				echo '<input type="hidden" id="' . $id . '" name="' . $id . '" value="' . ( $fid ?: '' ) . '"><span class="ot-file-name" data-for="' . $id . '" style="margin-right:8px">' . ( $fid ? esc_html( basename( (string) get_attached_file( $fid ) ) ) : 'None' ) . '</span><button type="button" class="button ot-file-pick" data-for="' . $id . '">Choose file</button> <button type="button" class="button-link ot-file-clear" data-for="' . $id . '">Remove</button>';
 				break;
 			case 'bool':
 				echo '<label><input type="checkbox" id="' . $id . '" name="' . $id . '" value="1"' . checked( (bool) $v, true, false ) . '> Yes</label>';
@@ -463,6 +517,18 @@ function ot_listing_box( $post ) {
 			frame.open();
 		} );
 		document.getElementById( 'ot-gallery-clear' ).addEventListener( 'click', function () { field.value = ''; prev.innerHTML = ''; } );
+		// Floor plan and brochure: one file each from the media library.
+		Array.prototype.forEach.call( document.querySelectorAll( '.ot-file-pick' ), function ( b ) {
+			var key = b.getAttribute( 'data-for' ), input = document.getElementById( key ), name = document.querySelector( '.ot-file-name[data-for="' + key + '"]' ), f;
+			b.addEventListener( 'click', function () {
+				if ( ! f ) {
+					f = wp.media( { title: b.closest( 'tr' ).querySelector( 'label' ).textContent, button: { text: 'Use this file' }, multiple: false } );
+					f.on( 'select', function () { var a = f.state().get( 'selection' ).first().toJSON(); input.value = a.id; name.textContent = a.filename || a.title; } );
+				}
+				f.open();
+			} );
+			document.querySelector( '.ot-file-clear[data-for="' + key + '"]' ).addEventListener( 'click', function () { input.value = ''; name.textContent = 'None'; } );
+		} );
 	} )();
 	</script>
 	<?php
@@ -489,6 +555,15 @@ add_action( 'save_post_ot_listing', function ( $post_id ) {
 				break;
 			case 'gallery':
 				$val = implode( ',', array_filter( array_map( 'intval', explode( ',', (string) $raw ) ) ) );
+				break;
+			case 'url':
+				$val = esc_url_raw( trim( (string) $raw ), array( 'https', 'http' ) );
+				break;
+			case 'datetime':
+				$val = preg_match( '/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$/', (string) $raw ) ? (string) $raw : '';
+				break;
+			case 'file':
+				$val = (int) $raw ?: '';
 				break;
 			default:
 				$val = sanitize_text_field( (string) $raw );

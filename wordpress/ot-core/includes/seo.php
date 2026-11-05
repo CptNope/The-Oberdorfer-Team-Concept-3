@@ -16,6 +16,9 @@ function ot_seo_enabled() {
 
 /** Title and description for the current view. */
 function ot_seo_current() {
+	if ( function_exists( 'ot_is_agent_listings' ) && ot_is_agent_listings() ) {
+		return ot_agent_listings_seo();
+	}
 	$title = '';
 	$desc  = '';
 	if ( is_post_type_archive( 'ot_community' ) ) {
@@ -69,7 +72,7 @@ add_action( 'wp_head', function () {
 	$s   = ot_seo_current();
 	$url = '';
 	if ( is_singular() ) {
-		$url = ot_prod_url( get_permalink( get_queried_object_id() ) );
+		$url = ot_prod_url( ot_is_agent_listings() ? ot_agent_listings_url( get_queried_object_id() ) : get_permalink( get_queried_object_id() ) );
 	} elseif ( is_post_type_archive( 'ot_community' ) ) {
 		$url = ot_prod_url( get_post_type_archive_link( 'ot_community' ) );
 		echo '<link rel="canonical" href="' . esc_url( $url ) . '">' . "\n";
@@ -82,7 +85,7 @@ add_action( 'wp_head', function () {
 	if ( $s['desc'] ) {
 		echo '<meta name="description" content="' . esc_attr( $s['desc'] ) . '">' . "\n";
 	}
-	$type  = is_singular( 'ot_agent' ) ? 'profile' : ( is_singular( 'post' ) ? 'article' : 'website' );
+	$type  = is_singular( 'ot_agent' ) && ! ot_is_agent_listings() ? 'profile' : ( is_singular( 'post' ) ? 'article' : 'website' );
 	$image = get_theme_file_uri( 'assets/img/share-oberdorfer-team-v1.jpg' );
 	$tags  = array(
 		'og:type'        => $type,
@@ -159,6 +162,17 @@ function ot_jsonld_graph() {
 			$page['isPartOf'] = array( '@id' => ot_prod_url( $x['city']['url'] ) . '#page' );
 		}
 		$out[] = $page;
+	} elseif ( ot_is_agent_listings() ) {
+		$x     = ot_ax( get_queried_object_id() );
+		$lurl  = ot_prod_url( ot_agent_listings_url( $x['p'] ) );
+		$items = array();
+		list( $current, $sold ) = ot_agent_listing_sets( $x['p']->post_name );
+		foreach ( array_merge( $current, $sold ) as $i => $l ) {
+			$items[] = array( '@type' => 'ListItem', 'position' => $i + 1, 'url' => ot_prod_url( $l['url'] ), 'name' => $l['address'] . ( $l['town'] ? ', ' . $l['town'] . ', MA' : '' ) );
+		}
+		$about = $x['team'] ? array( '@id' => $team_id ) : array( '@id' => ot_prod_url( $x['url'] ) . '#person' );
+		$out[] = array( '@context' => 'https://schema.org', '@type' => 'CollectionPage', 'url' => $lurl, 'name' => ot_agent_listings_seo()['title'], 'about' => $about, 'isPartOf' => array( '@type' => 'WebSite', 'url' => OT_SITE_URL ),
+			'mainEntity' => array( '@type' => 'ItemList', 'numberOfItems' => count( $items ), 'itemListElement' => $items ) );
 	} elseif ( is_singular( 'ot_agent' ) ) {
 		$x   = ot_ax( get_queried_object_id() );
 		$url = ot_prod_url( $x['url'] );
@@ -272,6 +286,10 @@ function ot_llms_txt() {
 		$r       = $a['rec'];
 		$partner = ! empty( $r['partner'] ) ? ( ot_agents()[ $r['partner'] ]['rec']['name'] ?? '' ) : '';
 		$people .= '- [' . $r['name'] . '](' . ot_prod_url( $a['url'] ) . '): ' . $r['role'] . ', The Oberdorfer Team.' . ( $partner ? ' Leads the team with ' . $r['relation'] . ', ' . $partner . '.' : '' ) . "\n";
+		list( $cur, $sold ) = ot_agent_listing_sets( $a['slug'] ?? get_post_field( 'post_name', $a['id'] ) );
+		if ( $cur || $sold ) {
+			$people .= '  - [' . $r['name'] . '\'s listings](' . ot_prod_url( trailingslashit( $a['url'] ) . 'listings/' ) . '): ' . count( $cur ) . ' current, ' . count( $sold ) . ' recently sold.' . "\n";
+		}
 	}
 	$line = function ( $id, $url ) {
 		$t = (string) get_post_meta( $id, 'ot_seo_title', true ) ?: get_the_title( $id );

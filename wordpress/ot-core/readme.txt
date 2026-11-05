@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.4.4
+Stable tag: 0.5.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,11 @@ Listings are off by default. Settings > Listings (IDX) switches the home search 
 If an SEO plugin is installed, only one of the two may print meta tags: add `define( 'OT_CORE_SEO_OUTPUT', false );` to wp-config.php to switch this plugin's output off.
 
 == Changelog ==
+
+= 0.5.0 =
+* Agent listing pages at /agents/<agent>/listings/: the homes each agent is listing or co-listing, recently sold homes and the towns they serve. Their own title, description, canonical, breadcrumbs and CollectionPage JSON-LD; listed in the sitemap and llms.txt once they have listings, noindex until then. Profiles show a strip of current listings.
+* Listings: video tour (YouTube, Vimeo) and 3D tour (Matterport, iGuide, Kuula, CloudPano) that load only when a visitor presses play; links to the listing's Facebook, Instagram and TikTok posts; floor plan and brochure; request-a-showing and watch-the-tour buttons; open house with add-to-calendar (.ics and Google Calendar), hidden once it is over; share (phone share sheet, copy link, Facebook, email, text); a payment estimate; a phone action bar. Co-listing agent field; the Offer names the listing agent in JSON-LD.
+* Agent details: introduction video and towns served.
 
 = 0.4.4 =
 * Community cards: Wakefield's card shows a house drawing (the triple-decker) like every other town instead of the lake photo, so the grid reads as one set. The photo stays at the top of the Wakefield guide.

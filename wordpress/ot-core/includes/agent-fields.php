@@ -27,12 +27,14 @@ function ot_agent_field_defs() {
 		'ot_card_url'     => array( 'card', 'Digital business card', 'text', 'The full link, for example https://blinq.me/...' ),
 		'ot_photo_id'     => array( 'photo_id', 'Headshot', 'photo', 'A 4:5 portrait. Empty uses the interim crop of the team portrait.' ),
 		'ot_photo_note'   => array( 'photo_note', 'Photo caption', 'text', 'Optional, for example the photographer\'s credit.' ),
+		'ot_intro_video'  => array( 'intro_video', 'Introduction video', 'url', 'Optional. A YouTube or Vimeo link; it plays beside the biography when a visitor clicks.' ),
+		'ot_areas'        => array( 'areas', 'Towns served', 'guides', 'Tick the town guides to show on this agent\'s listings page.' ),
 	);
 }
 
 add_action( 'init', function () {
 	$auth = fn() => current_user_can( 'edit_posts' );
-	foreach ( array( 'ot_summary', 'ot_specialties', 'ot_languages', 'ot_service_area', 'ot_license', 'ot_accolades', 'ot_photo_note' ) as $k ) {
+	foreach ( array( 'ot_summary', 'ot_specialties', 'ot_languages', 'ot_service_area', 'ot_license', 'ot_accolades', 'ot_photo_note', 'ot_intro_video', 'ot_areas' ) as $k ) {
 		register_post_meta( 'ot_agent', $k, array( 'type' => 'string', 'single' => true, 'show_in_rest' => true, 'auth_callback' => $auth ) );
 	}
 	register_post_meta( 'ot_agent', 'ot_photo_id', array( 'type' => 'integer', 'single' => true, 'show_in_rest' => true, 'auth_callback' => $auth ) );
@@ -121,6 +123,15 @@ function ot_agent_box( $post ) {
 		} elseif ( 'photo' === $d[2] ) {
 			$pid = (int) $v;
 			echo '<input type="hidden" id="' . $id . '" name="' . $id . '" value="' . ( $pid ?: '' ) . '"><div id="ot-headshot-preview" style="margin-bottom:8px">' . ( $pid ? wp_get_attachment_image( $pid, array( 120, 150 ) ) : '' ) . '</div><button type="button" class="button" id="ot-headshot-pick">Choose headshot</button> <button type="button" class="button-link" id="ot-headshot-clear">Use the interim photo</button>';
+		} elseif ( 'url' === $d[2] ) {
+			echo '<input class="large-text" type="url" id="' . $id . '" name="' . $id . '" value="' . esc_attr( $v ) . '" placeholder="https://">';
+		} elseif ( 'guides' === $d[2] ) {
+			$on = array_filter( array_map( 'trim', explode( ',', (string) $v ) ) );
+			echo '<input type="hidden" name="' . $id . '[]" value=""><div style="columns:14rem;max-width:56rem">';
+			foreach ( get_posts( array( 'post_type' => 'ot_community', 'post_status' => 'publish', 'post_parent' => 0, 'posts_per_page' => -1, 'orderby' => 'title', 'order' => 'ASC' ) ) as $g ) {
+				echo '<label style="display:block;margin:0 0 4px"><input type="checkbox" name="' . $id . '[]" value="' . esc_attr( $g->post_name ) . '"' . checked( in_array( $g->post_name, $on, true ), true, false ) . '> ' . esc_html( $g->post_title ) . '</label>';
+			}
+			echo '</div>';
 		} else {
 			echo '<input class="regular-text" type="text" id="' . $id . '" name="' . $id . '" value="' . esc_attr( $v ) . '">';
 		}
@@ -164,6 +175,9 @@ add_action( 'save_post_ot_agent', function ( $post_id ) {
 			continue;
 		}
 		$raw = wp_unslash( $_POST[ $meta ] );
+		if ( is_array( $raw ) ) {
+			$raw = implode( ',', array_filter( array_map( 'sanitize_title', $raw ) ) );
+		}
 		if ( isset( $_POST['ot_orig'][ $meta ] ) && (string) $raw === (string) wp_unslash( $_POST['ot_orig'][ $meta ] ) ) {
 			continue; // unchanged in the box
 		}
@@ -176,7 +190,7 @@ add_action( 'save_post_ot_agent', function ( $post_id ) {
 				$val = (int) $raw ?: '';
 				break;
 			default:
-				$val = 'ot_card_url' === $meta ? esc_url_raw( $raw ) : sanitize_text_field( $raw );
+				$val = in_array( $meta, array( 'ot_card_url', 'ot_intro_video' ), true ) ? esc_url_raw( $raw ) : sanitize_text_field( $raw );
 		}
 		if ( 'ot_email' === $meta && $val && ! is_email( $val ) ) {
 			continue; // keep the previous value rather than store an invalid address

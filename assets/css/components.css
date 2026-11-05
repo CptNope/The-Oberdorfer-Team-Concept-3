@@ -472,3 +472,28 @@
   .action-bar .btn { min-height: 2.9rem; padding-inline: var(--space-3); }
   body:has(.action-bar) .site-footer { padding-bottom: calc(var(--space-9) + 4rem); }
 }
+
+/* Click-to-load video and 3D tour (ot-core listing-media.php). Nothing loads from the video
+   host until the visitor presses play; the poster is the video's thumbnail or the main photo. */
+.embed { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: var(--ot-navy); }
+.embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.embed__play { position: absolute; inset: 0; display: grid; place-items: center; width: 100%; padding: 0; border: 0; background: none; color: var(--ot-ivory); cursor: pointer; }
+.embed__play > img, .embed__play > .demo-illu { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.embed__play::after { content: ""; position: absolute; inset: 0; background: rgb(7 25 43 / 0.28); transition: background var(--dur-fast) ease; }
+.embed__label { position: relative; z-index: 1; display: inline-flex; align-items: center; gap: var(--space-3); padding: 0.85rem 1.25rem; background: var(--ot-navy); border: 1px solid var(--ot-gold); font: 600 0.75rem/1 var(--font-sans); letter-spacing: 0.14em; text-transform: uppercase; }
+.embed__label .icon { width: 1.1rem; height: 1.1rem; }
+.embed__play:hover::after { background: rgb(7 25 43 / 0.12); }
+.embed__play:hover .embed__label, .embed__play:focus-visible .embed__label { background: var(--ot-gold); color: var(--ot-navy); }
+.embed__play:focus-visible { outline: var(--focus-width) solid var(--focus-ring-inverse); outline-offset: -6px; }
+.media-grid { display: grid; gap: var(--space-5); grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); }
+.media-grid figure { margin: 0; }
+.floor-plan { width: 100%; height: auto; background: var(--surface-raised); border: 1px solid var(--border-subtle); }
+
+/* Listing actions: request a showing, the tour, add-to-calendar and share. */
+.listing-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-4) var(--space-6); }
+.share-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3) var(--space-5); }
+
+/* Payment estimate. */
+.estimator__fields { display: grid; align-items: start; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr)); }
+.estimator__result { display: grid; gap: var(--space-2); padding-top: var(--space-4); border-top: 1px solid var(--border-subtle); }
+.estimator__result p { margin: 0; }

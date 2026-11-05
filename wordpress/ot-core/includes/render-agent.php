@@ -78,6 +78,10 @@ function ot_render_agent_section( $section, $post_id ) {
 	if ( ! $x ) {
 		return '';
 	}
+	$shared = ot_render_agent_listings_section( $section, $x );
+	if ( null !== $shared ) {
+		return $shared;
+	}
 	return $x['team'] ? ot_render_team_section( $section, $x ) : ot_render_person_section( $section, $x );
 }
 
