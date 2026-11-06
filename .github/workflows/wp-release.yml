@@ -1,4 +1,4 @@
-# Publishes the WordPress build (block theme + ot-core) as a GitHub release.
+# Publishes the WordPress build (block theme, ot-core and ot-leads) as a GitHub release.
 # To release: bump the versions (docs/wordpress-build.md, Releases), add release notes in
 # wordpress/release-notes/, update wordpress/release.json, and push to main. The workflow builds
 # oberdorfer.zip and ot-core.zip with tools/build_wp.py, tags v<version> and attaches both zips.
@@ -30,6 +30,7 @@ jobs:
           grep -q "Version: $V" wordpress/oberdorfer/style.css
           grep -q "Version:           $V" wordpress/ot-core/ot-core.php
           grep -q "OT_CORE_VERSION = '$V'" wordpress/ot-core/ot-core.php
+          grep -q "OT_LEADS_VERSION = '$V'" wordpress/ot-leads/ot-leads.php
           echo "VERSION=$V" >> "$GITHUB_ENV"
       - name: Publish the release
         env:
@@ -42,5 +43,5 @@ jobs:
           TITLE=$(python3 -c "import json;print(json.load(open('wordpress/release.json'))['title'])")
           NOTES=$(python3 -c "import json;print(json.load(open('wordpress/release.json'))['notes'])")
           PRE=$(python3 -c "import json;print('--prerelease' if json.load(open('wordpress/release.json')).get('prerelease') else '')")
-          gh release create "v$VERSION" wordpress/dist/oberdorfer.zip wordpress/dist/ot-core.zip \
+          gh release create "v$VERSION" wordpress/dist/oberdorfer.zip wordpress/dist/ot-core.zip wordpress/dist/ot-leads.zip \
             --target "$GITHUB_SHA" --title "$TITLE" --notes-file "$NOTES" $PRE

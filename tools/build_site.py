@@ -168,7 +168,7 @@ def form(R, fid, title, inner, submit, lead_type, title_level="h2", note=None):
 
 def contact_fields(p, phone_opt=True):
     return (f'<div class="form__row">{field(p+"-name","Full name",req=True,auto="name")}{field(p+"-email","Email","email",req=True,auto="email")}</div>'
-            f'<div class="form__row">{field(p+"-phone","Phone","tel",auto="tel",opt=True,pattern="[0-9()+\\-\\s.]{7,}",pattern_msg="Use digits, spaces or dashes, for example 406-250-7620.")}</div>')
+            f'<div class="form__row">{field(p+"-phone","Phone","tel",auto="tel",opt=True,pattern="[0-9\\s\\(\\)\\+\\.\\-]{7,}",pattern_msg="Use digits, spaces or dashes, for example 406-250-7620.")}</div>')
 
 # --------------------------------------------------------------------------- chrome
 SITE = "https://oberdorferteam.com/"   # production domain, confirmed 2026-10-22

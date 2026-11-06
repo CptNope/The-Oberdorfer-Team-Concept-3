@@ -33,7 +33,7 @@ $links = implode( ' ', $links );
 <!-- /wp:html -->
 
 <!-- wp:paragraph {"className":"demo-ribbon"} -->
-<p class="demo-ribbon">Staging preview: forms are demonstrations and listings arrive with the IDX feed.</p>
+<p class="demo-ribbon">Staging preview: not yet public. Listings arrive with the IDX feed.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"tagName":"header","className":"site-header","layout":{"type":"default"}} -->

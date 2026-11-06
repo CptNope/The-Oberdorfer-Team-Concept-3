@@ -37,7 +37,7 @@ jobs:
           # that the staging site can download from: wordpress/oberdorfer.zip and wordpress/ot-core.zip.
           python3 tools/build_wp.py
           mkdir -p _site/wordpress
-          cp wordpress/dist/oberdorfer.zip wordpress/dist/ot-core.zip wordpress/release.json _site/wordpress/
+          cp wordpress/dist/oberdorfer.zip wordpress/dist/ot-core.zip wordpress/dist/ot-leads.zip wordpress/release.json _site/wordpress/
           echo "Published size:" && du -sh _site
 
       - uses: actions/configure-pages@v5

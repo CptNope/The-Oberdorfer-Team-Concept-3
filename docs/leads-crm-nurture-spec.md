@@ -1,6 +1,13 @@
 # `ot-leads`: built-in CRM, connectors and AI nurture
 
-**Status:** proposed spec, 2026-10-22. **Owner:** the `ot-leads` plugin (see `docs/wordpress-architecture.md`).
+**Status:** built in v0.6.0 (2026-11-05), phases 1 to 4; setup steps in `docs/leads-setup.md`. **Owner:** the `ot-leads` plugin (`wordpress/ot-leads/`; see `docs/wordpress-architecture.md`).
+
+**As built, where it differs from this spec:**
+- **Email:** Brevo's transactional API sends everything (alerts, confirmations, nurture, new-listing alerts, newsletter); Rackspace mailboxes on Cloudways are for people. Without a Brevo key the plugin falls back to WordPress mail.
+- **Scheduling:** WP-Cron with a one-minute schedule, run by a Cloudways server cron (`DISABLE_WP_CRON`), instead of the Action Scheduler library.
+- **Admin screens:** WordPress list tables and admin markup, with no build step, instead of DataViews.
+- **Added:** new-listing alert sign-ups on agent listing pages, a monthly town-update sign-up on town guides, an open-house sign-in page (`/?ot_signin=<listing id>`), and alerts drafted when a team listing is published.
+- **Not yet:** SMS (phase 5, after 10DLC registration), inbound email parsing and two-way CRM sync.
 
 `ot-leads` is the team's built-in CRM. Every form on oberdorferteam.com saves into it, and it can also forward leads to an outside CRM if the team chooses one. It nurtures leads by email, drafted with AI and approved by a person. Its admin screens are mocked up on the FSE canvas in the "Lead management" row.
 

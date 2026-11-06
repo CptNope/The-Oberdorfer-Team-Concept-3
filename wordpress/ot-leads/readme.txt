@@ -1,0 +1,19 @@
+=== Oberdorfer Leads ===
+Contributors: oberdorferteam
+Requires at least: 7.1
+Requires PHP: 8.3
+Stable tag: 0.6.0
+License: GPL-2.0-or-later
+
+The Oberdorfer Team's built-in CRM: lead capture, routing and alerts, inbox and pipeline, CRM forwarding, email nurture through Brevo, and AI drafts a person approves.
+
+== Description ==
+
+Every form on oberdorferteam.com saves here first. Leads are routed to the right agent with an instant alert, worked in an inbox and a pipeline board, optionally forwarded to an outside CRM, and nurtured by email with sequences, monthly town updates, new-listing alerts and the At Home newsletter. Setup: docs/leads-setup.md in the project repository. Spec: docs/leads-crm-nurture-spec.md.
+
+Requires the ot-core plugin.
+
+== Changelog ==
+
+= 0.6.0 =
+* First release: capture (Turnstile, honeypot, rate limit, consent records, merging), routing and alerts with "I'm on it" and escalation, inbox, lead screen, board, approval queue, sequences, newsletter, settings, Brevo sending with one-click unsubscribe and the bounce webhook, webhook and Follow Up Boss connectors with retries, AI drafting with checks, roles, privacy export and erase, retention.

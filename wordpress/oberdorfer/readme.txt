@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.5.0
+Stable tag: 0.6.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,11 @@ Fonts: Cormorant Garamond and Manrope (SIL Open Font License 1.1), loaded from G
 this version; self-hosting is a launch task.
 
 == Changelog ==
+
+= 0.6.0 =
+* Forms are real when the new Oberdorfer Leads plugin is active: the inquiry form gains the email-updates consent box and spam protection through two filters (ot_inquiry_form_attr, ot_inquiry_form_extra); without the plugin it stays a demonstration.
+* The phone field's format check works in current browsers (its pattern was invalid under the stricter rules Chrome now applies).
+* Staging banner reworded: forms are no longer demonstrations.
 
 = 0.5.0 =
 * Agent listing pages at /agents/<agent>/listings/: the homes each agent is listing or co-listing, recently sold homes and the towns they serve. Their own title, description, canonical, breadcrumbs and CollectionPage JSON-LD; listed in the sitemap and llms.txt once they have listings, noindex until then. Profiles show a strip of current listings.

@@ -73,7 +73,7 @@ function ot_inquiry_form( $id, $title, $topics, $submit, $context, $level = 'h3'
 	$p    = substr( preg_replace( '/[^a-z]/', '', strtolower( $fid ) ), 0, 2 ) . $n;
 	$note = $note ?: 'Your inquiry goes to Brandon and Kaitlyn and is used only to respond to your request. [Privacy policy to be published before launch.]';
 	$inner  = '<div class="form__row">' . ot_field( $p . '-name', 'Full name', 'text', true, 'name' ) . ot_field( $p . '-email', 'Email', 'email', true, 'email' ) . '</div>';
-	$inner .= '<div class="form__row">' . ot_field( $p . '-phone', 'Phone', 'tel', false, 'tel', true, '[0-9()+\-\s.]{7,}', 'Use digits, spaces or dashes, for example 406-250-7620.' ) . '</div>';
+	$inner .= '<div class="form__row">' . ot_field( $p . '-phone', 'Phone', 'tel', false, 'tel', true, '[0-9\s\(\)\+\.\-]{7,}', 'Use digits, spaces or dashes, for example 406-250-7620.' ) . '</div>';
 	if ( $topics ) {
 		$inner .= ot_select( $p . '-topic', "I'm interested in", $topics );
 	}
@@ -83,7 +83,11 @@ function ot_inquiry_form( $id, $title, $topics, $submit, $context, $level = 'h3'
 		. '<label class="choice"><input type="radio" name="' . $p . '-pref" value="text"><span>Text</span></label>'
 		. '<label class="choice"><input type="radio" name="' . $p . '-pref" value="email"><span>Email</span></label></div></fieldset>';
 	$level = in_array( $level, array( 'h2', 'h3', 'h4' ), true ) ? $level : 'h3';
-	return '<form class="form" id="' . esc_attr( $fid ) . '" data-demo-form data-icons="' . esc_url( ot_asset( 'assets/img/icons.svg' ) ) . '" data-lead-type="' . esc_attr( $context ) . '" aria-labelledby="' . esc_attr( $fid ) . '-title">
+	// ot-leads makes the form real: it swaps the demo attribute for its own and adds the consent box,
+	// spam protection and the sign-up options (filters below). Without it the form stays a demo.
+	$mode   = apply_filters( 'ot_inquiry_form_attr', 'data-demo-form', $context );
+	$inner .= apply_filters( 'ot_inquiry_form_extra', '', $context, $p );
+	return '<form class="form" id="' . esc_attr( $fid ) . '" ' . $mode . ' data-icons="' . esc_url( ot_asset( 'assets/img/icons.svg' ) ) . '" data-lead-type="' . esc_attr( $context ) . '" aria-labelledby="' . esc_attr( $fid ) . '-title">
 <' . $level . ' class="h3" id="' . esc_attr( $fid ) . '-title">' . esc_html( $title ) . '</' . $level . '>
 ' . $inner . '
 <p class="form-note">' . esc_html( $note ) . '</p>

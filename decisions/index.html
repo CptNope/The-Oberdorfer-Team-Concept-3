@@ -114,7 +114,7 @@
         <tr><td><a href="#d-product">Long-term product goal</a></td><td>Decide later; it only changes the IDX path after launch</td><td>Team</td><td>Nothing yet</td></tr>
         <tr><td><a href="#d-crm">CRM mode</a></td><td>Built-in only at launch; add Follow Up Boss later if wanted</td><td>Brandon and Kaitlyn</td><td>Lead handling</td></tr>
         <tr><td><a href="#d-routing">Response window and town owners</a></td><td>15 minutes in business hours; both leaders own every town until agents join</td><td>Brandon and Kaitlyn</td><td>Lead routing</td></tr>
-        <tr><td><a href="#d-mail">Email service and sender addresses</a></td><td>Elastic Email through Cloudways for site notifications; a separate sender for marketing</td><td>Team and developer</td><td>Nurture</td></tr>
+        <tr><td><a href="#d-mail">Email service and sender addresses</a></td><td>Decided Nov 5: Brevo sends the site's email; Rackspace mailboxes for people. Still to set: Brevo plan, sender address and DNS</td><td>Team and developer</td><td>Nurture</td></tr>
         <tr><td><a href="#d-ai">Automatic AI sending</a></td><td>Approval required for every message at first</td><td>Team leaders</td><td>Nurture</td></tr>
         <tr><td><a href="#d-retention">Lead retention period</a></td><td>24 months for unconverted leads</td><td>Team with REWAP</td><td>Privacy policy</td></tr>
         <tr><td><a href="#d-keywords">Keyword data tool</a></td><td>HarborRank free allowance now, Search Console after launch</td><td>Team</td><td>Keyword plan</td></tr>
@@ -297,10 +297,10 @@
     </article>
 
     <article class="dec" id="d-mail">
-      <div class="dec__q"><h3>Email service and sender addresses</h3><p class="body-s">Marketing email must not send from the web server. Whichever service is chosen, marketing and nurture email stays separate from the site's notifications, so a complaint about marketing never delays a lead alert.</p><dl class="dec__meta"><dt>Decides</dt><dd>Team and developer</dd><dt>Holds up</dt><dd>Nurture, newsletter</dd></dl></div>
+      <div class="dec__q"><h3>Email service and sender addresses</h3><p class="body-s"><strong>Decided Nov 5, 2026:</strong> Brevo sends everything the website sends; Rackspace (the Cloudways add-on) holds the mailboxes people read and reply from. The site sends from one team address with the agent's name, and replies go to the agent's own mailbox. Still to set: the Brevo plan, the sender address and the DNS records.</p><dl class="dec__meta"><dt>Decides</dt><dd>Team and developer</dd><dt>Holds up</dt><dd>Nurture, newsletter (needs the DNS records)</dd></dl></div>
       <div class="opts">
-        <div class="opt opt--rec"><span class="badge badge--proposed">Recommended</span><h4>Elastic Email through Cloudways</h4><p class="cost">Cloudways SMTP add-on; check current pricing there</p><ul><li>Sends the site's own email: form and lead notifications, password resets</li><li>Not a mailbox; not needed until the site has forms</li><li>Needs Elastic Email's SPF and DKIM records on oberdorferteam.com; send as <span style="overflow-wrap:anywhere">notifications@oberdorferteam.com</span></li></ul></div>
-        <div class="opt"><h4>A dedicated email service</h4><p class="cost">Billed by volume</p><ul><li>Amazon SES: lowest cost at volume, more setup</li><li>Postmark: strong deliverability, simple setup</li><li>Mailgun: flexible, good webhooks</li></ul></div>
+        <div class="opt opt--rec"><span class="badge badge--source">Decided</span><h4>Brevo, for the site's email</h4><p class="cost">Free plan to 300 emails a day; paid plans by volume (check current pricing at brevo.com)</p><ul><li>Lead alerts, confirmations, nurture, new-listing alerts and the <em>At Home</em> newsletter, through Brevo's API</li><li>Bounces, spam complaints and unsubscribes come back to the site by webhook, so those addresses are never emailed again</li><li>Needs Brevo's domain-authentication records (DKIM, and its SPF include) plus a DMARC record on oberdorferteam.com</li></ul></div>
+        <div class="opt opt--rec"><span class="badge badge--source">Decided</span><h4>Rackspace mailboxes, for people</h4><p class="cost">Cloudways add-on: $1.50 per mailbox a month from Sept 1, 2026 (Cloudways' Aug 5, 2026 article)</p><ul><li>Proposed: brandon@ and kaitlyn@oberdorferteam.com, plus a shared hello@ for the team</li><li>Its MX and SPF records go on oberdorferteam.com; the SPF record must list both Rackspace and Brevo</li><li>Rackspace's direct price rose sharply in March 2026; the Cloudways add-on is priced separately</li></ul></div>
       </div>
     </article>
 
@@ -383,6 +383,7 @@
       <li><time datetime="2026-10-22">Oct 22, 2026</time><span>All six domains point to the Cloudways app under one SSL certificate. oberdorferteam.com is the primary domain; theoberdorferteam.com, oberdorferhomes.com, oberdorferluxury.com, maluxuryhomes.com and maluxury.homes redirect to it and are protected against email spoofing.</span></li>
       <li><time datetime="2026-10-22">Oct 22, 2026</time><span>Office address: 652 Park Ave, Unit B, Worcester, MA 01603. Published on the site, in its search data and in the coming-soon footer.</span></li>
       <li><time datetime="2026-10-22">Oct 22, 2026</time><span>Cloudflare (free plan) in front of all six domains for DNS, caching and security. The site stays on Cloudways; oberdorferteam.com is verified in Google Search Console.</span></li>
+      <li><time datetime="2026-11-05">Nov 5, 2026</time><span>Email: Brevo sends the site's email (alerts, nurture, newsletter); Rackspace mailboxes on Cloudways for people.</span></li>
     </ol>
     <div class="folio-bar chapter__folio"><span>The Oberdorfer Team</span><span>Decisions · 2026</span><span>07</span></div>
   </div>

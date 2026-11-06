@@ -11,7 +11,7 @@ theme-overrides.json) and wordpress/ot-core/ (plugin PHP). This script, safe to 
   3. snapshots the researched content (tools/data/communities.json, the agents in
      tools/build_site.py, page titles and descriptions from the prototype in site/) into
      wordpress/ot-core/data/content.json for the importer;
-  4. zips both to wordpress/dist/oberdorfer.zip and wordpress/dist/ot-core.zip.
+  4. zips them to wordpress/dist/oberdorfer.zip, ot-core.zip and ot-leads.zip (the lead plugin).
 Contract between the two: docs/wordpress-build.md.
 """
 import copy, html, json, os, re, shutil, sys, zipfile
@@ -23,7 +23,7 @@ import build_site as S  # noqa: E402  (data and the tested title/description rul
 THEME = os.path.join(ROOT, "wordpress", "oberdorfer")
 CORE = os.path.join(ROOT, "wordpress", "ot-core")
 DIST = os.path.join(ROOT, "wordpress", "dist")
-VERSION = "0.5.0"
+VERSION = "0.6.0"
 
 ASSET_DIRS = ["assets/img/photo", "assets/logo"]
 ASSET_FILES = ["assets/css/tokens.css", "assets/css/base.css", "assets/css/components.css", "assets/css/site.css",
@@ -187,8 +187,9 @@ def main():
         shutil.copyfile(os.path.join(ROOT, "assets", "vcard", name), os.path.join(vdst, name))
     a = zip_dir(THEME, "oberdorfer")
     b = zip_dir(CORE, "ot-core")
+    c = zip_dir(os.path.join(ROOT, "wordpress", "ot-leads"), "ot-leads")
     print(f"content: {len(data['communities'])} communities, {len(data['agents'])} agents, {len(data['pages'])} pages")
-    for p in (a, b):
+    for p in (a, b, c):
         print("wrote", os.path.relpath(p, ROOT), os.path.getsize(p), "bytes")
 
 

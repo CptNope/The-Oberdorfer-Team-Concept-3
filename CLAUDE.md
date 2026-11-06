@@ -19,7 +19,8 @@ The visual language evolves the team's print publication, *Wakefield at Home*, F
 | `brand-book/` § 20 Governance | Approvals, the "never publish" list and open items |
 | `decisions/` | The client-facing page of open decisions, their options and recommendations; update it when a decision is made or a new one opens |
 | `docs/wordpress-architecture.md` | What goes in the theme, the `ot-core` must-use plugin, `ot-blocks`, `ot-leads` and third-party code |
-| `docs/leads-crm-nurture-spec.md` | The built-in CRM, CRM connectors and AI nurture |
+| `docs/leads-crm-nurture-spec.md` | The built-in CRM, CRM connectors and AI nurture (built in `wordpress/ot-leads/`) |
+| `docs/leads-setup.md` | Setting up `ot-leads`: Rackspace mailboxes, Brevo and DNS, Turnstile, the server cron |
 | `docs/idx-options.md` | IDX and MLS PIN options still to decide, with costs, fit and vendor questions |
 | `docs/coming-soon-launch.md` | Cloudways, DNS and WordPress settings for the coming-soon page on oberdorferteam.com |
 | `docs/wordpress-build.md` | The production WordPress build: the `oberdorfer` block theme and the `ot-core` plugin, their URLs, post types, meta and blocks |
@@ -35,7 +36,7 @@ The visual language evolves the team's print publication, *Wakefield at Home*, F
    - office hours and formal status (the street address is confirmed)
    - REWAP disclosures
    - privacy policy
-   - IDX/MLS provider (options in `docs/idx-options.md`); outside CRM (optional; the built-in `ot-leads` is planned)
+   - IDX/MLS provider (options in `docs/idx-options.md`); outside CRM (optional; the built-in `ot-leads` is built, v0.6.0)
    - final community list (the 27 guides in `tools/data/communities.json`, Tiers 1 to 3, are a proposed list; Boston neighborhood guides are planned)
    - Brandon's and Kaitlyn's individual biographies, titles, specialties, languages and headshots (their profiles use placeholders and interim crops of the team portrait)
 4. **Market data:** always show the source, period and geography. Never present the Wakefield figures as live or statewide. Town figures are The Warren Group's calendar-year 2025 single-family table; the statewide figures are its January 20, 2026 release.
@@ -72,7 +73,8 @@ The visual language evolves the team's print publication, *Wakefield at Home*, F
   - Downloadable PDFs belong in `assets/publications/`, as web-compressed copies.
   - If you add a new top-level folder that pages need, add it to the workflow's `cp` line.
 - **The coming-soon theme** is a one-page WordPress block theme in `wordpress/oberdorfer-coming-soon/` that holds the domain until launch. Edit its pattern, CSS or `functions.php` there, then run `python3 tools/build_coming_soon.py`, which writes its `theme.json` from the tokens, refreshes the `coming-soon/` preview and rebuilds `wordpress/dist/oberdorfer-coming-soon.zip`. Setup steps: `docs/coming-soon-launch.md`.
-- **The production WordPress build** is the block theme `wordpress/oberdorfer/` plus the plugin `wordpress/ot-core/` (contract: `docs/wordpress-build.md`). Run `python3 tools/build_wp.py`: it generates the theme's `theme.json` from the tokens (merged with `theme-overrides.json`), copies the design-system CSS, JS and images into the theme (those copies are git-ignored), snapshots the guides and agents into `ot-core/data/content.json` for the importer, and zips both to `wordpress/dist/`. The guides and profiles render from their records in `ot-core/includes/render-*.php`, ported from `tools/build_site.py`: when a page's markup changes in the prototype, change it there too. Releases are GitHub releases with both zips attached (`docs/wordpress-build.md`, Releases).
+- **The production WordPress build** is the block theme `wordpress/oberdorfer/` plus the plugin `wordpress/ot-core/` (contract: `docs/wordpress-build.md`). Run `python3 tools/build_wp.py`: it generates the theme's `theme.json` from the tokens (merged with `theme-overrides.json`), copies the design-system CSS, JS and images into the theme (those copies are git-ignored), snapshots the guides and agents into `ot-core/data/content.json` for the importer, and zips both to `wordpress/dist/`. The guides and profiles render from their records in `ot-core/includes/render-*.php`, ported from `tools/build_site.py`: when a page's markup changes in the prototype, change it there too. Releases are GitHub releases with the three zips attached (`docs/wordpress-build.md`, Releases).
+- **Leads (`wordpress/ot-leads/`)** is the lead plugin: forms, routing, alerts, inbox, pipeline, nurture (Brevo), connectors and AI drafts. `tools/build_wp.py` zips it with the others; its version moves with the release. Email: Brevo sends the site's email; Rackspace mailboxes are for people (decided 2026-11-05). Leads live in custom tables, never as posts. Same rules as the site: no invented facts, fair housing in every message, consent before marketing email.
 - **Design workflow:** the Impeccable design skill was used. `PRODUCT.md`, `DESIGN.md` and `.impeccable/` are its project files.
 
 ## Claude artifacts
