@@ -33,6 +33,9 @@ def icon(R, name, cls="icon", vb=None):
     v = f' viewBox="{vb}"' if vb else ""
     return f'<svg class="{cls}" aria-hidden="true"{v}><use href="{R}assets/img/icons.svg#i-{name}"/></svg>'
 
+REVIEWS = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "reviews.json")))
+
+
 def arrow(R): return icon(R, "arrow", vb="0 0 34 12")
 
 def art(R, name, label=None):
@@ -1309,10 +1312,25 @@ def page_profile(a):
     elif tpl:
         partner_html = f'''<div class="panel"><p class="label">Profile checklist</p><ul class="checklist body-s"><li>Verified MA license number</li><li>Headshot, 4:5</li><li>Biography, 120 to 250 words</li><li>Specialties and service areas</li><li>Languages</li><li>Direct phone and email</li><li>Principal broker approval</li></ul><p class="caption">The profile stays unpublished until every item is complete.</p></div>'''
 
-    stories = ('<figure class="testimonial testimonial--placeholder"><span class="testimonial__mark"></span>'
-               f'<blockquote>Verified client words about {g} appear here, quoted exactly, with the client\u2019s written permission on file.</blockquote>'
-               '<figcaption class="caption">Client first name, town · Year <span class="badge badge--proposed">Empty state</span></figcaption></figure>'
-               '<p class="caption" style="margin-top:var(--space-4)">No review or rating markup is published until real, permitted reviews exist.</p>')
+    # Client stories: the template shows the empty state; a profile links to its reviews on other
+    # sites (tools/data/reviews.json) and is left out when there are none. Quotes need the
+    # client's permission and REWAP's approval, so none are copied here.
+    review_links = REVIEWS["profiles"].get(a["slug"], []) if not tpl else []
+    if tpl:
+        stories = ('<figure class="testimonial testimonial--placeholder"><span class="testimonial__mark"></span>'
+                   f'<blockquote>Verified client words about {g} appear here, quoted exactly, with the client\u2019s written permission on file.</blockquote>'
+                   '<figcaption class="caption">Client first name, town · Year <span class="badge badge--proposed">Empty state</span></figcaption></figure>'
+                   '<p class="caption" style="margin-top:var(--space-4)">No review or rating markup is published until real, permitted reviews exist.</p>')
+    elif review_links:
+        stories = ('<div class="review-links"><p class="label">Reviews on other sites</p><ul>'
+                   + "".join(f'<li><a class="link-arrow" href="{r["url"]}" rel="noopener">{r["label"]} {arrow(R)}</a><span class="caption">{r["note"]}</span></li>' for r in review_links)
+                   + '</ul></div>')
+    else:
+        stories = ""
+    stories_html = f'''<section class="section surface-inverse"><div class="container split" style="align-items:center">
+  <div class="stack" style="grid-column:1/span 5"><p class="label">Client stories</p><h2 class="display-m answer"><span>In their</span><span>own words.</span></h2></div>
+  <div class="testimonial-list" style="grid-column:7/span 6">{stories}</div>
+</div></section>''' if stories else ""
 
     note = f"Your message goes to {g} and is used only to respond to your request. [Privacy policy to be published before launch.]"
     contact_form = form(R, "pf", f"Message {g}" if not tpl else f"Message {g}",
@@ -1348,10 +1366,7 @@ def page_profile(a):
     <div class="stack"><h3 class="h4">A market review</h3><p class="body-s">A property-specific look at recent closed sales before you decide what to offer or where to price.</p>{link_arrow(R, R + "site/sell/#consult", "Request a market review")}</div>
   </div>
 </div></section>
-<section class="section surface-inverse"><div class="container split" style="align-items:center">
-  <div class="stack" style="grid-column:1/span 5"><p class="label">Client stories</p><h2 class="display-m answer"><span>In their</span><span>own words.</span></h2></div>
-  <div style="grid-column:7/span 6">{stories}</div>
-</div></section>
+{stories_html}
 <section class="section"><div class="container">{section_head("Listings", "Demonstration", ["Homes " + g + " is", "presenting now."], title_id="al-title")}<div class="listing-grid">{homes}</div><p class="form-note" style="margin-top:var(--space-6)">On the live site this shows only listings {g} is authorized to advertise, from the IDX feed, with MLS attribution.</p></div></section>
 <section class="section surface-muted"><div class="container">{section_head("From the journal", g, ["Recent writing."], title_id="aj-title")}<div class="card-grid-3">{arts}</div></div></section>
 <section class="section"><div class="container split" style="align-items:start">

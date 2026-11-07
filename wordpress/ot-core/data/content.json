@@ -1,5 +1,5 @@
 {
- "version": "0.6.2 (2026-10-22)",
+ "version": "0.7.0 (2026-10-22)",
  "front_page": "home",
  "posts_page": "journal",
  "regions": [
@@ -12459,6 +12459,7 @@
     "ot_photo": "assets/img/photo/brandon-oberdorfer.webp",
     "ot_card_url": "https://blinq.me/cmere9vg301rxs60mq7nu5g5g",
     "ot_summary": "Brandon Oberdorfer is a Massachusetts real estate agent who leads The Oberdorfer Team with his wife, Kaitlyn Oberdorfer. The husband-and-wife team works from Worcester, helps buyers and sellers across the state and operates under REWAP Brokerage LLC.",
+    "ot_review_links": "13 reviews on RateMyAgent | https://www.ratemyagent.com/real-estate-agent/brandon-oberdorfer-b0mub8/sales/reviews | All 13 rated 5 stars. Written 2021 to 2022. Counted November 6, 2026.",
     "ot_seo_title": "Brandon Oberdorfer, Real Estate Agent | The Oberdorfer Team",
     "ot_seo_description": "Meet Brandon Oberdorfer, who leads The Oberdorfer Team with his wife, Kaitlyn Oberdorfer. Helping buyers and sellers across Massachusetts. Call 406-250-7620."
    }
@@ -12604,6 +12605,125 @@
     "ot_seo_title": "Contact The Oberdorfer Team | Worcester, MA Real Estate",
     "ot_seo_description": "Call or text Brandon and Kaitlyn Oberdorfer at 406-250-7620, or send a buyer, seller, recruiting or general inquiry. Based in Worcester, serving Massachusetts."
    }
+  }
+ ],
+ "testimonials": [
+  {
+   "key": "rma-brandon-01",
+   "agent": "brandon-oberdorfer",
+   "platform": "RateMyAgent",
+   "title": "Great experience for my first time buying a home",
+   "context": "First home, Orange",
+   "written": "about 2022",
+   "url": "https://www.ratemyagent.com/real-estate-agent/brandon-oberdorfer-b0mub8/sales/reviews"
+  },
+  {
+   "key": "rma-brandon-02",
+   "agent": "brandon-oberdorfer",
+   "platform": "RateMyAgent",
+   "title": "Above and Beyond",
+   "context": "Sale, Worcester County",
+   "written": "about 2021",
+   "url": "https://www.ratemyagent.com/real-estate-agent/brandon-oberdorfer-b0mub8/sales/reviews"
+  },
+  {
+   "key": "rma-brandon-03",
+   "agent": "brandon-oberdorfer",
+   "platform": "RateMyAgent",
+   "title": "Hands-down best realtor in Worcester",
+   "context": "Sale, Worcester",
+   "written": "about 2021",
+   "url": "https://www.ratemyagent.com/real-estate-agent/brandon-oberdorfer-b0mub8/sales/reviews"
+  },
+  {
+   "key": "rma-brandon-04",
+   "agent": "brandon-oberdorfer",
+   "platform": "RateMyAgent",
+   "title": "Smooth process from beginning to end!",
+   "context": "Purchase, Webster",
+   "written": "about 2021",
+   "url": "https://www.ratemyagent.com/real-estate-agent/brandon-oberdorfer-b0mub8/sales/reviews"
+  },
+  {
+   "key": "rma-brandon-05",
+   "agent": "brandon-oberdorfer",
+   "platform": "RateMyAgent",
+   "title": "Incredibly dedicated agent",
+   "context": "Purchase and sale, Orange",
+   "written": "about 2021",
+   "url": "https://www.ratemyagent.com/real-estate-agent/brandon-oberdorfer-b0mub8/sales/reviews"
+  },
+  {
+   "key": "rma-brandon-06",
+   "agent": "brandon-oberdorfer",
+   "platform": "RateMyAgent",
+   "title": "Knowledgeable Realtor",
+   "context": "Sale and purchase, Athol",
+   "written": "about 2021",
+   "url": "https://www.ratemyagent.com/real-estate-agent/brandon-oberdorfer-b0mub8/sales/reviews"
+  },
+  {
+   "key": "rma-brandon-07",
+   "agent": "brandon-oberdorfer",
+   "platform": "RateMyAgent",
+   "title": "Thank you Brandon!",
+   "context": "Worcester",
+   "written": "about 2021",
+   "url": "https://www.ratemyagent.com/real-estate-agent/brandon-oberdorfer-b0mub8/sales/reviews"
+  },
+  {
+   "key": "rma-brandon-08",
+   "agent": "brandon-oberdorfer",
+   "platform": "RateMyAgent",
+   "title": "Greatest realtor!",
+   "context": "Purchase and sale, Worcester",
+   "written": "about 2021",
+   "url": "https://www.ratemyagent.com/real-estate-agent/brandon-oberdorfer-b0mub8/sales/reviews"
+  },
+  {
+   "key": "rma-brandon-09",
+   "agent": "brandon-oberdorfer",
+   "platform": "RateMyAgent",
+   "title": "Work performance of Brandon O",
+   "context": "Purchase, Worcester",
+   "written": "about 2021",
+   "url": "https://www.ratemyagent.com/real-estate-agent/brandon-oberdorfer-b0mub8/sales/reviews"
+  },
+  {
+   "key": "rma-brandon-10",
+   "agent": "brandon-oberdorfer",
+   "platform": "RateMyAgent",
+   "title": "Great Responsive Realtor",
+   "context": "New summer home, Barre",
+   "written": "about 2021",
+   "url": "https://www.ratemyagent.com/real-estate-agent/brandon-oberdorfer-b0mub8/sales/reviews"
+  },
+  {
+   "key": "rma-brandon-11",
+   "agent": "brandon-oberdorfer",
+   "platform": "RateMyAgent",
+   "title": "I had the most wonderful experience",
+   "context": "Sale, Worcester",
+   "written": "about 2021",
+   "url": "https://www.ratemyagent.com/real-estate-agent/brandon-oberdorfer-b0mub8/sales/reviews"
+  },
+  {
+   "key": "rma-brandon-12",
+   "agent": "brandon-oberdorfer",
+   "platform": "RateMyAgent",
+   "title": "Prompt, Friendly, and Organized!",
+   "context": "Purchase",
+   "written": "2021",
+   "url": "https://www.ratemyagent.com/real-estate-agent/brandon-oberdorfer-b0mub8/sales/reviews"
+  },
+  {
+   "key": "rma-brandon-13",
+   "agent": "brandon-oberdorfer",
+   "platform": "RateMyAgent",
+   "title": "Highly recommended!",
+   "context": "Sale of a first home",
+   "written": "about 2021",
+   "url": "https://www.ratemyagent.com/real-estate-agent/brandon-oberdorfer-b0mub8/sales/reviews"
   }
  ]
 }

@@ -23,7 +23,7 @@ import build_site as S  # noqa: E402  (data and the tested title/description rul
 THEME = os.path.join(ROOT, "wordpress", "oberdorfer")
 CORE = os.path.join(ROOT, "wordpress", "ot-core")
 DIST = os.path.join(ROOT, "wordpress", "dist")
-VERSION = "0.6.2"
+VERSION = "0.7.0"
 
 ASSET_DIRS = ["assets/img/photo", "assets/logo"]
 ASSET_FILES = ["assets/css/tokens.css", "assets/css/base.css", "assets/css/components.css", "assets/css/site.css",
@@ -115,6 +115,14 @@ AGENT_EXTRA = {
 }
 
 
+REVIEWS = json.load(open(os.path.join(ROOT, "tools", "data", "reviews.json")))
+
+
+def review_lines(slug):
+    """Review profiles on other sites, as the "Reviews on other sites" field writes them."""
+    return "\n".join(f"{r['label']} | {r['url']} | {r['note']}" for r in REVIEWS["profiles"].get(slug, []))
+
+
 def agent_entries():
     out = []
     for i, a in enumerate(S.AGENTS):
@@ -126,6 +134,8 @@ def agent_entries():
                 "ot_card_url": next((u for u in rec.get("same_as", []) if "blinq" in u), ""),
                 # The one-sentence summary under the name: a field the team edits on the page.
                 "ot_summary": f"{a['name']} is a Massachusetts real estate agent who leads The Oberdorfer Team with {a['relation']}, {S.AGENT_BY_SLUG[a['partner']]['name']}. The husband-and-wife team works from Worcester, helps buyers and sellers across the state and operates under REWAP Brokerage LLC."}
+        if review_lines(a["slug"]):
+            meta["ot_review_links"] = review_lines(a["slug"])
         meta.update(page_meta(f"agents/{a['slug']}"))
         out.append({"slug": a["slug"], "title": a["name"], "order": i + 1, "meta": meta})
     team = {"kind": "team", "name": "Brandon & Kaitlyn Oberdorfer", "given": "Brandon & Kaitlyn", "prose": [
@@ -154,7 +164,9 @@ def content():
     pages = [{"slug": s, "title": t, "order": o, "meta": page_meta(rel)} for s, t, rel, o in PAGES]
     data = {"version": f"{VERSION} ({S.UPDATED})", "front_page": "home", "posts_page": "journal",
             "regions": regions, "communities": community_entries(), "agents": agent_entries(),
-            "offices": [office], "pages": pages}
+            "offices": [office], "pages": pages,
+            # Drafts only: shown once the client agrees and REWAP approves (ot-core testimonials.php).
+            "testimonials": [dict(t, url=REVIEWS["profiles"][t["agent"]][0]["url"]) for t in REVIEWS["testimonials"]]}
     os.makedirs(os.path.join(CORE, "data"), exist_ok=True)
     with open(os.path.join(CORE, "data", "content.json"), "w") as f:
         json.dump(data, f, indent=1, ensure_ascii=False)

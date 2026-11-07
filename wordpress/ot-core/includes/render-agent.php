@@ -196,10 +196,7 @@ function ot_render_person_section( $section, $x ) {
 </div></section>';
 
 		case 'stories':
-			return '<section class="section surface-inverse"><div class="container split" style="align-items:center">
-  <div class="stack" style="grid-column:1/span 5"><p class="label">Client stories</p><h2 class="display-m answer"><span>In their</span><span>own words.</span></h2></div>
-  <div style="grid-column:7/span 6"><figure class="testimonial testimonial--placeholder"><span class="testimonial__mark"></span><blockquote>Verified client words about ' . $g . ' appear here, quoted exactly, with the client’s written permission on file.</blockquote><figcaption class="caption">Client first name, town · Year <span class="badge badge--proposed">Empty state</span></figcaption></figure><p class="caption" style="margin-top:var(--space-4)">No review or rating markup is published until real, permitted reviews exist.</p></div>
-</div></section>';
+			return ot_render_agent_stories( $x );
 
 		case 'questions':
 			$faq = '';

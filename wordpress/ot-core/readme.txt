@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.6.2
+Stable tag: 0.7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,12 @@ Listings are off by default. Settings > Listings (IDX) switches the home search 
 If an SEO plugin is installed, only one of the two may print meta tags: add `define( 'OT_CORE_SEO_OUTPUT', false );` to wp-config.php to switch this plugin's output off.
 
 == Changelog ==
+
+= 0.7.0 =
+* Testimonials (new menu): a client's words show on their agent's profile only once the client agreed to be quoted on this website and REWAP approved it, word for word, with a link to the original review. Each screen says what is still needed.
+* "Reviews on other sites" (Agent details): links to an agent's reviews on RateMyAgent, Zillow or Google under "Client stories", without copying them. Brandon's 13 RateMyAgent reviews are linked.
+* Brandon's 13 RateMyAgent reviews are added as hidden draft testimonials (title, site, link; no text) for the team to ask each client.
+* The Client stories section is left out of a profile with neither, instead of showing an empty state. No review or rating markup is published.
 
 = 0.6.2 =
 * Agent profiles: the Specialties line is left out until specialties are entered in "Agent details" (it used to show a "to confirm" placeholder).

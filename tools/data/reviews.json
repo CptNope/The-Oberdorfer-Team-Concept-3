@@ -1,0 +1,28 @@
+{
+  "_about": "Public reviews of the team found on other sites. Nothing here is shown as a quotation: the review profiles are linked from each agent's page, and each review becomes a draft testimonial in WordPress that stays hidden until the client agrees to be quoted and REWAP approves. Review text is not copied here; paste the client's exact words into the testimonial once they agree. Found and counted 2026-11-06.",
+  "profiles": {
+    "brandon-oberdorfer": [
+      {
+        "label": "13 reviews on RateMyAgent",
+        "url": "https://www.ratemyagent.com/real-estate-agent/brandon-oberdorfer-b0mub8/sales/reviews",
+        "note": "All 13 rated 5 stars. Written 2021 to 2022. Counted November 6, 2026."
+      }
+    ],
+    "kaitlyn-oberdorfer": []
+  },
+  "testimonials": [
+    {"key": "rma-brandon-01", "agent": "brandon-oberdorfer", "platform": "RateMyAgent", "title": "Great experience for my first time buying a home", "context": "First home, Orange", "written": "about 2022"},
+    {"key": "rma-brandon-02", "agent": "brandon-oberdorfer", "platform": "RateMyAgent", "title": "Above and Beyond", "context": "Sale, Worcester County", "written": "about 2021"},
+    {"key": "rma-brandon-03", "agent": "brandon-oberdorfer", "platform": "RateMyAgent", "title": "Hands-down best realtor in Worcester", "context": "Sale, Worcester", "written": "about 2021"},
+    {"key": "rma-brandon-04", "agent": "brandon-oberdorfer", "platform": "RateMyAgent", "title": "Smooth process from beginning to end!", "context": "Purchase, Webster", "written": "about 2021"},
+    {"key": "rma-brandon-05", "agent": "brandon-oberdorfer", "platform": "RateMyAgent", "title": "Incredibly dedicated agent", "context": "Purchase and sale, Orange", "written": "about 2021"},
+    {"key": "rma-brandon-06", "agent": "brandon-oberdorfer", "platform": "RateMyAgent", "title": "Knowledgeable Realtor", "context": "Sale and purchase, Athol", "written": "about 2021"},
+    {"key": "rma-brandon-07", "agent": "brandon-oberdorfer", "platform": "RateMyAgent", "title": "Thank you Brandon!", "context": "Worcester", "written": "about 2021"},
+    {"key": "rma-brandon-08", "agent": "brandon-oberdorfer", "platform": "RateMyAgent", "title": "Greatest realtor!", "context": "Purchase and sale, Worcester", "written": "about 2021"},
+    {"key": "rma-brandon-09", "agent": "brandon-oberdorfer", "platform": "RateMyAgent", "title": "Work performance of Brandon O", "context": "Purchase, Worcester", "written": "about 2021"},
+    {"key": "rma-brandon-10", "agent": "brandon-oberdorfer", "platform": "RateMyAgent", "title": "Great Responsive Realtor", "context": "New summer home, Barre", "written": "about 2021"},
+    {"key": "rma-brandon-11", "agent": "brandon-oberdorfer", "platform": "RateMyAgent", "title": "I had the most wonderful experience", "context": "Sale, Worcester", "written": "about 2021"},
+    {"key": "rma-brandon-12", "agent": "brandon-oberdorfer", "platform": "RateMyAgent", "title": "Prompt, Friendly, and Organized!", "context": "Purchase", "written": "2021"},
+    {"key": "rma-brandon-13", "agent": "brandon-oberdorfer", "platform": "RateMyAgent", "title": "Highly recommended!", "context": "Sale of a first home", "written": "about 2021"}
+  ]
+}

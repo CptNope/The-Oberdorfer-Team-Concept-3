@@ -119,6 +119,13 @@ Until the IDX provider is chosen, Settings > Listings (IDX) in ot-core keeps eve
 
 The same screen holds the provider's shortcodes (Buy page search; home page featured homes). Going live: install the provider's plugin, paste its shortcodes, tick "Show listings", save, purge Breeze and Cloudflare. `define( 'OT_IDX_ENABLED', true );` (or false) in wp-config.php overrides the checkbox. New listing or search UI in the theme must carry `ot-idx` or `data-ot-idx` so the switch covers it.
 
+## Testimonials and reviews (v0.7.0)
+
+- **Reviews on other sites** (Agent details field `ot_review_links`, one per line: `label | URL | note`) are linked from the profile's "Client stories" section, never copied. Brandon's RateMyAgent profile is seeded from `tools/data/reviews.json` (found and counted 2026-11-06).
+- **Testimonials** (CPT `ot_testimonial`, menu Testimonials) quote a client's words. One shows only when it is published, has the words, and both boxes are ticked: the client agreed to be quoted on this website, and REWAP approved it. Each links to the original review. Up to three per profile; "Both" shows on each person's profile.
+- Reviews found elsewhere are added once as hidden drafts (title, site, link and context; never the text) so the team can ask each client. Deleting a draft is permanent: it is not re-added.
+- With neither testimonials nor review links, the section is left out (Kaitlyn today). No review or rating JSON-LD: Google shows no stars for a business's reviews of itself, and the FTC rule on reviews (16 CFR 465) makes accuracy the point.
+
 ## Theme
 
 - `theme.json` is generated; never edit it by hand.

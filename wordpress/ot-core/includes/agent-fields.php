@@ -29,12 +29,13 @@ function ot_agent_field_defs() {
 		'ot_photo_note'   => array( 'photo_note', 'Photo caption', 'text', 'Optional, for example the photographer\'s credit.' ),
 		'ot_intro_video'  => array( 'intro_video', 'Introduction video', 'url', 'Optional. A YouTube or Vimeo link; it plays beside the biography when a visitor clicks.' ),
 		'ot_areas'        => array( 'areas', 'Towns served', 'guides', 'Tick the town guides to show on this agent\'s listings page.' ),
+		'ot_review_links' => array( 'review_links', 'Reviews on other sites', 'textarea', 'One per line: what the link says, a vertical bar, the link, and optionally another bar and a short note. For example: 13 reviews on RateMyAgent | https://www.ratemyagent.com/... | All rated 5 stars. Counted November 6, 2026. Shown under "Client stories" as links; the reviews themselves are not copied. Quotes go under Testimonials, with the client\'s permission.' ),
 	);
 }
 
 add_action( 'init', function () {
 	$auth = fn() => current_user_can( 'edit_posts' );
-	foreach ( array( 'ot_summary', 'ot_specialties', 'ot_languages', 'ot_service_area', 'ot_license', 'ot_accolades', 'ot_photo_note', 'ot_intro_video', 'ot_areas' ) as $k ) {
+	foreach ( array( 'ot_summary', 'ot_specialties', 'ot_languages', 'ot_service_area', 'ot_license', 'ot_accolades', 'ot_photo_note', 'ot_intro_video', 'ot_areas', 'ot_review_links' ) as $k ) {
 		register_post_meta( 'ot_agent', $k, array( 'type' => 'string', 'single' => true, 'show_in_rest' => true, 'auth_callback' => $auth ) );
 	}
 	register_post_meta( 'ot_agent', 'ot_photo_id', array( 'type' => 'integer', 'single' => true, 'show_in_rest' => true, 'auth_callback' => $auth ) );

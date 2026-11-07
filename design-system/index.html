@@ -822,7 +822,7 @@
       </div>
     </div>
     <div class="block">
-      <div class="block__label"><h3>Pull quote and testimonial</h3><p>Testimonials appear only with the client's written permission. Until then the block shows its empty state.</p></div>
+      <div class="block__label"><h3>Pull quote and testimonial</h3><p>Testimonials appear only once the client agreed to be quoted on this website and REWAP approved it, quoted exactly, with a link to the original review. Reviews on other sites are linked, never copied. With neither, the profile leaves the section out; the agent template shows the empty state. No review or rating markup.</p></div>
       <div class="block__body stack" style="--stack:var(--space-7)">
         <p class="pull-quote">Home holds the everyday moments that become a life.</p>
         <figure class="testimonial testimonial--placeholder">
@@ -830,6 +830,13 @@
           <blockquote>Verified client testimonial will appear here, quoted exactly, with the client's permission on file.</blockquote>
           <figcaption class="caption">Client first name, town · Year · <span class="badge badge--demo">Empty state</span></figcaption>
         </figure>
+        <div class="surface-inverse" style="padding:var(--space-6)">
+          <div class="testimonial-list">
+            <figure class="testimonial"><span class="testimonial__mark" aria-hidden="true"></span><blockquote><p>[The client's exact words, once they agree to be quoted here.]</p></blockquote><figcaption class="caption">Client first name and initial · Sale, Worcester · Year · <a href="#">Read it on RateMyAgent</a> <span class="badge badge--demo">Demo</span></figcaption></figure>
+            <figure class="testimonial testimonial--compact"><span class="testimonial__mark" aria-hidden="true"></span><blockquote><p>[A second testimonial: compact.]</p></blockquote><figcaption class="caption">Client · Purchase, Webster · Year <span class="badge badge--demo">Demo</span></figcaption></figure>
+            <div class="review-links"><p class="label">More reviews</p><ul><li><a class="link-arrow" href="https://www.ratemyagent.com/real-estate-agent/brandon-oberdorfer-b0mub8/sales/reviews" rel="noopener">13 reviews on RateMyAgent <svg class="icon" aria-hidden="true" viewBox="0 0 34 12"><use href="../assets/img/icons.svg#i-arrow"/></svg></a><span class="caption">All 13 rated 5 stars. Written 2021 to 2022. Counted November 6, 2026.</span></li></ul></div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="block">
@@ -1031,7 +1038,7 @@
         <tr><td><code>ot/market-stats</code></td><td>Statistics panel</td><td>4 values, labels, periods, source, access date, geography (all required)</td><td>Fields per report</td></tr>
         <tr><td><code>ot/inquiry-form</code></td><td>Forms</td><td>Lead type, routing agent, consent copy, success copy</td><td>Form plugin → CRM (TBD)</td></tr>
         <tr><td><code>ot/triad</code> · <code>ot/steps</code> · <code>ot/pull-quote</code></td><td>Editorial furniture</td><td>Text only</td><td>Post content</td></tr>
-        <tr><td><code>ot/testimonial</code></td><td>Testimonial</td><td>Quote, name, town, permission on file (required)</td><td>CPT <code>testimonial</code></td></tr>
+        <tr><td><code>ot/agent-profile</code> (section: stories)</td><td>Testimonial, review links</td><td>Quote, name, what we helped with, year, original site and link; shown only with the client's permission and REWAP's approval. Review links: "Reviews on other sites" in Agent details</td><td>CPT <code>ot_testimonial</code>; meta <code>ot_review_links</code></td></tr>
         <tr><td><code>ot/faq</code></td><td>Accordion</td><td>Q &amp; A pairs; outputs FAQPage JSON-LD</td><td>Post content</td></tr>
         <tr><td><code>ot/office</code></td><td>Office card + map</td><td>Address, hours, phone, agents</td><td>CPT <code>office</code></td></tr>
         <tr><td><code>ot/brokerage-attribution</code></td><td>Footer attribution</td><td>Locked; edited in Site Settings only</td><td>Global options</td></tr>

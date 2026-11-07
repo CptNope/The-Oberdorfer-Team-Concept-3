@@ -16,6 +16,7 @@
 
 	// Where each section's content is edited, shown above its preview for people new to WordPress.
 	var HINTS = {
+		'ot/agent-profile:stories': 'Client stories: hidden until there is something real to show. Quotes: Testimonials in the left menu (shown once the client agreed and REWAP approved). Links to reviews on other sites: "Reviews on other sites" in Agent details.',
 		'ot/agent-profile': 'Filled from the "Agent details" box ("Meta Boxes" at the bottom of the screen). The biography is the text area on the page.',
 		'ot/listing': 'Filled from the "Listing details" box ("Meta Boxes" at the bottom of the screen). Main photo: the sidebar.',
 		'ot/team-listings': 'Shows your listings. Add or change them under Listings in the left menu.',
@@ -54,7 +55,7 @@
 				}
 			} );
 			var postId = props.context && props.context.postId;
-			var hint = HINTS[ name ];
+			var hint = HINTS[ name + ':' + ( props.attributes.section || '' ) ] || HINTS[ name ];
 			// Settings only where the layout itself is edited (Site Editor), never on a guide, profile or listing.
 			var mode = wp.blockEditor.useBlockEditingMode ? wp.blockEditor.useBlockEditingMode() : 'default';
 			return el( 'div', useBlockProps(),
@@ -67,6 +68,10 @@
 						// On a guide, profile or listing an empty section simply has nothing to show yet
 						// (no intro video, no listings): show nothing, or the hint while it is selected.
 						if ( postId ) {
+							// Client stories is left out while empty: say so, so the section can be found.
+							if ( 'stories' === props.attributes.section ) {
+								return el( 'p', { style: { margin: 0, padding: '10px 12px', font: '13px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', color: '#3c434a', border: '1px dashed #8c8f94', background: '#fff' } }, hint );
+							}
 							return hint && props.isSelected ? el( 'p', { style: { margin: 0, padding: '10px 12px', font: '13px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', color: '#3c434a', border: '1px dashed #8c8f94' } }, 'Nothing to show yet. ' + hint ) : null;
 						}
 						var t = wp.blocks.getBlockType( name );
