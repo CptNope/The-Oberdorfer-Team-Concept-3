@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.6.0
+Stable tag: 0.6.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,11 @@ Listings are off by default. Settings > Listings (IDX) switches the home search 
 If an SEO plugin is installed, only one of the two may print meta tags: add `define( 'OT_CORE_SEO_OUTPUT', false );` to wp-config.php to switch this plugin's output off.
 
 == Changelog ==
+
+= 0.6.1 =
+* Agent profiles: the biography has a visible "Click here and write …'s biography" box under "Meet {name}." (added once to profiles with no biography yet), so it is clear where to type.
+* In the editor, the shared profile text shows the agent's first name instead of {first name}, as the site does.
+* An empty intro-video section no longer shows a grey placeholder box on a profile in the editor.
 
 = 0.6.0 =
 * Forms are real when the new Oberdorfer Leads plugin is active: the inquiry form gains the email-updates consent box and spam protection through two filters (ot_inquiry_form_attr, ot_inquiry_form_extra); without the plugin it stays a demonstration.

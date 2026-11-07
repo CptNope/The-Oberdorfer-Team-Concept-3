@@ -27,6 +27,30 @@ add_filter( 'register_post_type_args', function ( $args, $type ) {
 	return $args;
 }, 10, 2 );
 
+/**
+ * A profile with no biography yet opens with an empty paragraph that says what to write, so the
+ * biography's place on the page is obvious. An empty paragraph still shows the placeholder text
+ * on the site (see below). Done once per plugin version, only for profiles with no body.
+ */
+add_action( 'admin_init', function () {
+	if ( get_option( 'ot_bio_seeded' ) === OT_CORE_VERSION || ! current_user_can( 'edit_posts' ) ) {
+		return;
+	}
+	foreach ( get_posts( array( 'post_type' => 'ot_agent', 'post_status' => 'any', 'posts_per_page' => -1 ) ) as $a ) {
+		// The joint profile's page has no biography block (its story comes from the record).
+		if ( 'brandon-kaitlyn-oberdorfer' !== $a->post_name && '' === trim( (string) $a->post_content ) ) {
+			wp_update_post( array( 'ID' => $a->ID, 'post_content' => ot_bio_prompt_block( $a ) ) );
+		}
+	}
+	update_option( 'ot_bio_seeded', OT_CORE_VERSION, false );
+} );
+
+function ot_bio_prompt_block( $post ) {
+	$who = strtok( $post->post_title, ' ' ) . '\'s biography';
+	$tip = '120 to 250 words, in the first person: how you came to real estate, the part of each move you lead for clients, and a Massachusetts place you know well.';
+	return '<!-- wp:paragraph {"placeholder":' . wp_json_encode( 'Click here and write ' . $who . '. ' . $tip ) . '} -->' . "\n" . '<p></p>' . "\n" . '<!-- /wp:paragraph -->';
+}
+
 /* --------------------------------------------------------------------- front end */
 
 add_filter( 'render_block', function ( $html, $block ) {

@@ -64,6 +64,11 @@
 				el( Disabled, null, el( SSR, { block: name, attributes: props.attributes, urlQueryArgs: postId ? { post_id: postId } : {},
 					// In a template (Site Editor) there is no guide, profile or listing to draw from: name the section instead.
 					EmptyResponsePlaceholder: function () {
+						// On a guide, profile or listing an empty section simply has nothing to show yet
+						// (no intro video, no listings): show nothing, or the hint while it is selected.
+						if ( postId ) {
+							return hint && props.isSelected ? el( 'p', { style: { margin: 0, padding: '10px 12px', font: '13px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', color: '#3c434a', border: '1px dashed #8c8f94' } }, 'Nothing to show yet. ' + hint ) : null;
+						}
 						var t = wp.blocks.getBlockType( name );
 						var label = ( t && t.title ) || name;
 						var part = props.attributes.section || props.attributes.part || '';
@@ -128,10 +133,38 @@
 			} );
 		} )( be.getBlockOrder() );
 		busy = false;
+		showFirstName( type );
 		if ( ! noticeShown ) {
 			noticeShown = true;
 			wp.data.dispatch( 'core/notices' ).createInfoNotice( NOTICES[ type ], { id: 'ot-how-to-edit', isDismissible: true } );
 		}
+	}
+	/*
+	 * Text shared by both profiles is written with {first name} in the template. On a profile, the
+	 * editor shows the agent's name there instead, as the site does. Display only: those blocks
+	 * belong to the template, are not editable here and are never saved from this screen.
+	 */
+	var watching = null;
+	function showFirstName( type ) {
+		if ( 'ot_agent' !== type ) { return; }
+		var frame = document.querySelector( 'iframe[name="editor-canvas"]' );
+		var doc = frame && frame.contentDocument;
+		if ( ! doc || ! doc.body || watching === doc ) { return; }
+		watching = doc;
+		var title = wp.data.select( 'core/editor' ).getEditedPostAttribute( 'title' ) || '';
+		var given = /&| and /.test( title ) ? title.replace( / Oberdorfer$/, '' ) : title.split( ' ' )[ 0 ];
+		var timer = null;
+		function swap() {
+			var walker = doc.createTreeWalker( doc.body, NodeFilter.SHOW_TEXT ), n;
+			while ( ( n = walker.nextNode() ) ) {
+				// Only in the template's locked blocks; never in text the person can edit here.
+				if ( n.nodeValue.indexOf( '{first name}' ) !== -1 && n.parentElement && n.parentElement.closest( '.is-editing-disabled' ) ) {
+					n.nodeValue = n.nodeValue.split( '{first name}' ).join( given );
+				}
+			}
+		}
+		new MutationObserver( function () { clearTimeout( timer ); timer = setTimeout( swap, 100 ); } ).observe( doc.body, { childList: true, subtree: true, characterData: true } );
+		swap();
 	}
 	if ( wp.data && wp.data.subscribe ) {
 		wp.data.subscribe( unlock, 'core/block-editor' );

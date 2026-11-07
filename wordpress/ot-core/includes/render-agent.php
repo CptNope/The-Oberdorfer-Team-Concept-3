@@ -177,7 +177,7 @@ function ot_render_person_section( $section, $x ) {
 		case 'about':
 			$bio     = $bio_placeholder;
 			$content = trim( (string) $x['p']->post_content );
-			if ( '' !== $content ) {
+			if ( '' !== trim( wp_strip_all_tags( $content ) ) ) {
 				$bio = '<div class="prose">' . apply_filters( 'the_content', $content ) . '</div>';
 			}
 			return '<section class="section surface-muted"><div class="container split" style="align-items:start">
@@ -232,7 +232,7 @@ function ot_render_team_section( $section, $x ) {
 			$trail = array( array( 'Home', home_url( '/' ) ), array( 'Our Team', ot_page_url( 'team' ) ), array( 'Brandon &amp; Kaitlyn Oberdorfer', $x['url'] ) );
 			$prose   = '';
 			$content = trim( (string) $x['p']->post_content );
-			if ( '' !== $content ) {
+			if ( '' !== trim( wp_strip_all_tags( $content ) ) ) {
 				$prose = apply_filters( 'the_content', $content ); // the team's own introduction, written in the editor
 			} else {
 				foreach ( (array) ( $r['prose'] ?? array() ) as $p ) {
