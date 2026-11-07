@@ -1273,7 +1273,8 @@ def page_profile(a):
         ("Brokerage", "REWAP Brokerage LLC"),
         ("Recognition", ph("Verified awards only") if tpl else "<br>".join(f'{t} <span class="badge badge--source">{src}</span>' for t, src in a.get("accolades", []))),
         ("Service area", "Massachusetts" if not tpl else ph("Service areas")),
-        ("Specialties", ph("Specialties to confirm")),
+        # Hidden on a profile until the agent lists specialties; the template shows where they go.
+        ("Specialties", ph("Specialties to confirm")) if tpl else (("Specialties", a["specialties"]) if a.get("specialties") else None),
         ("Languages", ph("Languages to confirm")),
         ("Phone", ph("Direct phone") if tpl else
                   (f'<a href="tel:{TEL}">{PHONE}</a> (direct, and the team line)' if a.get("direct") == PHONE else
@@ -1284,7 +1285,7 @@ def page_profile(a):
         ("Contacts", ph("Contact card") if tpl else f'<a href="{R}{a["vcard"]}">Add {g} to your contacts</a> (vCard)'),
         ("License", ph("MA license number to be supplied and verified")),
     ]
-    facts_html = "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in facts)
+    facts_html = "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in filter(None, facts))
     # Each person's own profile dials their direct line; the team line is in the facts.
     dial = a.get("direct") if a.get("direct") and not tpl else PHONE
     dial_href = "tel:+1" + dial.replace("-", "")

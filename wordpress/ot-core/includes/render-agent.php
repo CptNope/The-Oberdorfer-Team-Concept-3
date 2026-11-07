@@ -112,7 +112,8 @@ function ot_render_person_section( $section, $x ) {
 		array( 'Brokerage', 'REWAP Brokerage LLC' ),
 		array( 'Recognition', $recog ? implode( '<br>', $recog ) : ot_ph( 'Verified awards only' ) ),
 		array( 'Service area', ! empty( $r['service_area'] ) ? esc_html( $r['service_area'] ) : 'Massachusetts' ),
-		array( 'Specialties', ! empty( $r['specialties'] ) ? esc_html( $r['specialties'] ) : ot_ph( 'Specialties to confirm' ) ),
+		// Left out entirely until the agent lists specialties in "Agent details".
+		! empty( trim( (string) ( $r['specialties'] ?? '' ) ) ) ? array( 'Specialties', esc_html( $r['specialties'] ) ) : null,
 		array( 'Languages', ! empty( $r['languages'] ) ? esc_html( $r['languages'] ) : ot_ph( 'Languages to confirm' ) ),
 		array( 'Phone', $phone ),
 		array( 'Email', ! empty( $r['email'] ) ? '<a href="mailto:' . esc_attr( $r['email'] ) . '">' . esc_html( $r['email'] ) . '</a>' : ot_ph( 'Email to confirm' ) ),
@@ -121,7 +122,7 @@ function ot_render_person_section( $section, $x ) {
 		array( 'License', ! empty( $r['license'] ) ? esc_html( $r['license'] ) : ot_ph( 'MA license number to be supplied and verified' ) ),
 	);
 	$facts_html = '';
-	foreach ( $facts as $f ) {
+	foreach ( array_filter( $facts ) as $f ) {
 		$facts_html .= '<dt>' . $f[0] . '</dt><dd>' . $f[1] . '</dd>';
 	}
 	$caption = trim( ot_txt( $r['photo_note'] ?? '' ) . ( $r['photo_interim'] ? ' <span class="badge badge--verify">Interim photo</span>' : '' ) );
