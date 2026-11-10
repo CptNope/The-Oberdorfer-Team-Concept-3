@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.8.0
+Stable tag: 0.8.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,9 @@ Fonts: Cormorant Garamond and Manrope (SIL Open Font License 1.1), loaded from G
 this version; self-hosting is a launch task.
 
 == Changelog ==
+
+= 0.8.1 =
+* Header: the staging ribbon ("Staging preview: not yet public…") is removed, ahead of launch.
 
 = 0.8.0 =
 * New Privacy policy page (pattern privacy-policy, from data/privacy-policy.json): what the site collects, the one cookie set after a form is sent, who data is shared with, email and texts, retention, choices, security, children, Do Not Track and contact. The footer's Privacy link goes there.

@@ -32,10 +32,6 @@ $links = implode( ' ', $links );
 <div id="live" class="visually-hidden" aria-live="polite"></div>
 <!-- /wp:html -->
 
-<!-- wp:paragraph {"className":"demo-ribbon"} -->
-<p class="demo-ribbon">Staging preview: not yet public. Listings arrive with the IDX feed.</p>
-<!-- /wp:paragraph -->
-
 <!-- wp:group {"tagName":"header","className":"site-header","layout":{"type":"default"}} -->
 <header class="wp-block-group site-header"><!-- wp:group {"className":"container site-header__inner","layout":{"type":"default"}} -->
 <div class="wp-block-group container site-header__inner"><!-- wp:html -->

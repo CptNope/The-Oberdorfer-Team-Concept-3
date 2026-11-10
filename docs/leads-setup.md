@@ -90,4 +90,3 @@ Leads > Settings > Status shows when it last ran.
 - REWAP approves the consent wording (Leads > Settings > Email) and any rules for automated email.
 - The privacy policy (/privacy/, written 2026-11-10 from `tools/data/privacy-policy.json`) covers lead storage, the page-visit cookie (`ot_lid`), Brevo, an outside CRM and the AI provider if used, and the 24-month retention. REWAP reviews it; update the JSON and rebuild if any of these change.
 - The postal address in every marketing email is the office: 652 Park Ave, Unit B, Worcester, MA 01603.
-- Remove the staging banner ("Staging preview: not yet public") from the header pattern (Appearance > Editor > Patterns > Header).
