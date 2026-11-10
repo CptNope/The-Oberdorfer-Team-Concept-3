@@ -65,6 +65,13 @@ Until the steps below are done, the plugin still works: forms save every lead, a
 
 ## 4. Spam protection: Cloudflare Turnstile
 
+**Done on 2026-11-10:**
+- The widget "The Oberdorfer Team forms" covers `oberdorferteam.com` and the staging host, so the same keys work after the push.
+- Its keys are set on staging.
+- All 69 pages with forms carry the check.
+- DMARC reports now go to brandon@ (`p=quarantine` kept).
+- The every-minute `wp-cron.php` job is set on both Cloudways apps (staging and live), because a push does not copy cron jobs.
+
 Cloudflare > Turnstile > Add widget: hostnames `oberdorferteam.com` and the staging host, mode **Managed**. Paste the site key into Leads > Settings, and the secret into wp-config.php:
 
 ```php
