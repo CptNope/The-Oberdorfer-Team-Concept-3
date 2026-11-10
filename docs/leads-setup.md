@@ -39,13 +39,29 @@ Until the steps below are done, the plugin still works: forms save every lead, a
 |---|---|---|
 | TXT | `_dmarc` | `v=DMARC1; p=none; rua=mailto:hello@oberdorferteam.com` |
 
-5. Brevo > Senders: add `hello@oberdorferteam.com` (or whatever Leads > Settings > Sender says).
+5. Brevo > Senders: add the address Leads > Settings > Sender uses. It must be a real mailbox at the domain.
 6. Brevo > SMTP & API > **API keys** > Generate. Put it in `wp-config.php` (preferred) or Leads > Settings > Email:
    ```php
    define( 'OT_LEADS_BREVO_KEY', 'xkeysib-…' );
    ```
-7. Brevo > Transactional > Settings > **Webhook**: URL and Bearer token are shown in Leads > Settings > Email. Events: hard bounce, invalid email, blocked, spam, unsubscribed, click. Bounced and complaining addresses are then never emailed again.
-8. Leads > Settings > **Send me a test email**: the Status panel should say Brevo.
+7. Brevo > Transactional > Settings > **Webhook** (it opens Settings > Webhooks) > Add webhook > **Outbound**:
+   - Name: letters, numbers, hyphens and underscores only (e.g. `website-leads-live`).
+   - URL: shown in Leads > Settings > Email.
+   - Authentication: **Token**, with the token shown there (the code only, without "Bearer").
+   - Event category **Transactional email**. Leave on only Blocked, Invalid, Hard Bounced, Clicked, Complaint and Unsubscribed; turn the others off.
+
+   Bounced and complaining addresses are then never emailed again.
+8. Leads > Settings > **Send me a test email**: the Status panel should say Brevo, and Brevo > Transactional > Logs should show it delivered.
+
+**Done on 2026-11-10, for staging.** The Brevo account belongs to brandon@oberdorferteam.com. The domain is authenticated (the `brevo-code` TXT record plus `brevo1`/`brevo2._domainkey` CNAMEs in Cloudflare). The sender is "The Oberdorfer Team" <brandon@oberdorferteam.com> (Leads > Settings > Sender: `brandon`). The webhook `website-leads-staging` points at the staging host. The test email was delivered. DMARC is still the GoDaddy record (`p=quarantine`, reports to onsecureserver.net); point `rua` at brandon@ when convenient.
+
+**At launch (the DNS and domain steps carry over; only the site-specific parts change):**
+- **API key:** if live is a clone of staging it carries over. Otherwise paste it, or better, generate a second key named "live site", so the staging key can be revoked after launch.
+- **Webhook:** edit `website-leads-staging` rather than adding a second one.
+  - Set its URL to `https://oberdorferteam.com/wp-json/ot-leads/v1/brevo`.
+  - Rename it to `website-leads-live`.
+  - If live is a fresh install (not a clone), paste the live site's own token from its Leads > Settings.
+- **Test:** send the test email from the live site's Leads > Settings.
 
 ## 4. Spam protection: Cloudflare Turnstile
 
