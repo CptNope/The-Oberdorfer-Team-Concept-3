@@ -97,24 +97,31 @@ function ot_leads_lead_screen() {
 		. '<div class="ot-tags">' . ot_leads_stage_pill( $lead['stage'] ) . ' <span class="ot-pill' . ( 'Warm' === $intent[0] ? ' ot-pill--warm' : '' ) . '" title="' . esc_attr( $intent[1] ) . '">' . esc_html( $intent[0] ) . '</span> <span class="ot-pill">' . esc_html( OT_LEAD_TYPES[ $lead['lead_type'] ] ?? $lead['lead_type'] ) . '</span> <span class="ot-pill">' . esc_html( ot_leads_agent_name( $lead['assigned_agent'] ) ) . '</span>' . ( $waited ? ' <span class="ot-pill ot-pill--late">' . esc_html( $waited ) . '</span>' : '' ) . '</div></div>'
 		. '<div class="ot-quick">' . ot_leads_contact_buttons( $lead ) . '</div></div><hr class="wp-header-end" style="display:none">'; // phpcs:ignore WordPress.Security.EscapeOutput
 	ot_leads_notice();
-	echo '<div class="ot-grid"><div>';
+	echo '<div class="ot-grid ot-grid--lead"><div>';
+	// One-tap logging, a possible duplicate, then the history: what a phone shows first.
 	echo ot_leads_touch_card( $id ); // phpcs:ignore WordPress.Security.EscapeOutput
+	echo ot_leads_duplicate_card( $lead ); // phpcs:ignore WordPress.Security.EscapeOutput
+	echo '<div class="ot-card"><h2>Timeline</h2>' . ot_leads_form( 'note', $id, 'class="ot-note-form"' ) . '<label class="screen-reader-text" for="ot-note">Add to the timeline</label><textarea id="ot-note" name="note" rows="3" style="width:100%" placeholder="What happened, what they said, what is next"></textarea><p><label><input type="radio" name="kind" value="note" checked> Note</label> &nbsp; <label><input type="radio" name="kind" value="call_logged"> Call</label> &nbsp; <label><input type="radio" name="kind" value="reply"> They replied <span class="ot-muted">(stops the sales sequence)</span></label></p><div class="ot-actions"><button class="button button-primary">Add to the timeline</button></div></form><ul class="ot-timeline">'; // phpcs:ignore WordPress.Security.EscapeOutput
+	foreach ( ot_lead_events( $id ) as $e ) {
+		if ( 'viewed_by' === $e['type'] ) {
+			continue;
+		}
+		echo '<li><strong>' . esc_html( OT_EVENT_LABELS[ $e['type'] ] ?? $e['type'] ) . '</strong> <span class="when">' . esc_html( ot_leads_time( $e['created_at'] ) ) . ' · ' . esc_html( $e['actor'] ) . '</span><br>' . ot_leads_event_text( $e ) . '</li>'; // phpcs:ignore WordPress.Security.EscapeOutput
+	}
+	echo '</ul></div></div><div>';
 
 	// Status and assignment.
-	echo '<div class="ot-card"><h2>Status</h2>' . ot_leads_form( 'update', $id ) . '<table class="form-table"><tr><th>Stage</th><td><select name="stage">'; // phpcs:ignore WordPress.Security.EscapeOutput
+	echo '<div class="ot-card"><h2>Status</h2>' . ot_leads_form( 'update', $id ) . '<table class="form-table"><tr><th>Stage</th><td class="ot-stage"><select name="stage" aria-label="Stage">'; // phpcs:ignore WordPress.Security.EscapeOutput
 	foreach ( OT_LEAD_STAGES as $s => $label ) {
 		echo '<option value="' . esc_attr( $s ) . '"' . selected( $lead['stage'], $s, false ) . '>' . esc_html( $label ) . '</option>';
 	}
-	echo '</select> <input type="text" name="lost_reason" placeholder="Reason, if lost" value="' . esc_attr( $lead['lost_reason'] ) . '"></td></tr>';
+	echo '</select><input class="ot-lost-reason" type="text" name="lost_reason" aria-label="Why it was lost" placeholder="Why it was lost" value="' . esc_attr( $lead['lost_reason'] ) . '"></td></tr>';
 	if ( current_user_can( 'ot_leads_view_all' ) ) {
 		echo '<tr><th>Agent</th><td>' . ot_leads_agent_select( 'assigned_agent', $lead['assigned_agent'] ) . '</td></tr>'; // phpcs:ignore WordPress.Security.EscapeOutput
 	} else {
 		echo '<tr><th>Agent</th><td>' . esc_html( ot_leads_agent_name( $lead['assigned_agent'] ) ) . '</td></tr>';
 	}
-	echo '<tr><th>First reply</th><td>' . ( $lead['contacted_at'] ? esc_html( ot_leads_time( $lead['contacted_at'] ) ) . ' (' . esc_html( human_time_diff( strtotime( $lead['created_at'] . ' UTC' ), strtotime( $lead['contacted_at'] . ' UTC' ) ) ) . ' after the inquiry)' : '<strong>Not yet</strong>' ) . '</td></tr></table><p><button class="button button-primary">Save</button></p></form>';
-	if ( ! $lead['contacted_at'] ) {
-		echo ot_leads_form( 'contacted', $id ) . '<button class="button">Mark contacted</button></form>'; // phpcs:ignore WordPress.Security.EscapeOutput
-	}
+	echo '<tr><th>First reply</th><td>' . ( $lead['contacted_at'] ? esc_html( ot_leads_time( $lead['contacted_at'] ) ) . ' (' . esc_html( human_time_diff( strtotime( $lead['created_at'] . ' UTC' ), strtotime( $lead['contacted_at'] . ' UTC' ) ) ) . ' after the inquiry)' : '<strong>Not yet</strong>' ) . '</td></tr></table><div class="ot-actions"><button class="button button-primary">Save</button>' . ( $lead['contacted_at'] ? '' : '<span class="ot-muted">Logging a call, text or email marks the first reply.</span>' ) . '</div></form>';
 	echo '</div>';
 
 	// Contact facts.
@@ -188,18 +195,6 @@ function ot_leads_lead_screen() {
 	if ( current_user_can( 'ot_leads_manage' ) ) {
 		echo '<div class="ot-card"><h2>Their data</h2><p>' . ot_leads_form( 'export', $id, 'style="display:inline"' ) . '<button class="button">Export (JSON)</button></form> ' . ot_leads_form( 'delete', $id, 'style="display:inline" onsubmit="return confirm(\'Delete this lead and its history? Consent records are kept.\')"' ) . '<button class="button button-link-delete">Delete on request</button></form></p></div>'; // phpcs:ignore WordPress.Security.EscapeOutput
 	}
-	echo '</div><div>';
-
-	// Possible duplicates, then the timeline (one-tap logging leads the first column).
-	echo ot_leads_duplicate_card( $lead ); // phpcs:ignore WordPress.Security.EscapeOutput
-	echo '<div class="ot-card"><h2>Add to the timeline</h2>' . ot_leads_form( 'note', $id ) . '<textarea name="note" rows="3" style="width:100%" placeholder="What happened, what they said, what is next"></textarea><p><label><input type="radio" name="kind" value="note" checked> Note</label> &nbsp; <label><input type="radio" name="kind" value="call_logged"> Call</label> &nbsp; <label><input type="radio" name="kind" value="reply"> They replied <span class="ot-muted">(stops the sales sequence)</span></label></p><p><button class="button button-primary">Add</button></p></form></div>'; // phpcs:ignore WordPress.Security.EscapeOutput
-	echo '<div class="ot-card"><h2>Timeline</h2><ul class="ot-timeline">';
-	foreach ( ot_lead_events( $id ) as $e ) {
-		if ( 'viewed_by' === $e['type'] ) {
-			continue;
-		}
-		echo '<li><strong>' . esc_html( OT_EVENT_LABELS[ $e['type'] ] ?? $e['type'] ) . '</strong> <span class="when">' . esc_html( ot_leads_time( $e['created_at'] ) ) . ' · ' . esc_html( $e['actor'] ) . '</span><br>' . ot_leads_event_text( $e ) . '</li>'; // phpcs:ignore WordPress.Security.EscapeOutput
-	}
-	echo '</ul></div></div></div></div>';
+	echo '</div></div></div>';
 	ot_leads_shell_end();
 }

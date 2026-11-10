@@ -133,7 +133,8 @@ class OT_Leads_Table extends WP_List_Table {
 
 	protected function column_name( $item ) {
 		$url = ot_leads_admin_link( $item['id'] );
-		return '<strong><a class="row-title" href="' . esc_url( $url ) . '">' . esc_html( ot_lead_name( $item ) ) . '</a></strong><br><span class="ot-muted">' . esc_html( $item['email'] ) . ( $item['phone'] ? ' · ' . esc_html( $item['phone'] ) : '' ) . '</span>';
+		return '<strong><a class="row-title" href="' . esc_url( $url ) . '">' . esc_html( ot_lead_name( $item ) ) . '</a></strong><br><span class="ot-muted">' . esc_html( $item['email'] ) . ( $item['phone'] ? ' · ' . esc_html( $item['phone'] ) : '' ) . '</span>'
+			. '<span class="ot-mobile-meta" aria-hidden="true">' . ot_leads_stage_pill( $item['stage'] ) . ' <span>' . esc_html( human_time_diff( strtotime( $item['created_at'] . ' UTC' ) ) ) . ' ago</span></span>';
 	}
 
 	protected function column_default( $item, $col ) {
@@ -150,7 +151,7 @@ class OT_Leads_Table extends WP_List_Table {
 				$i = ot_lead_intent( (int) $item['id'] );
 				return '<span class="ot-pill' . ( 'Warm' === $i[0] ? ' ot-pill--warm' : '' ) . '" title="' . esc_attr( $i[1] ) . '">' . esc_html( $i[0] ) . '</span>';
 			case 'created_at':
-				return esc_html( ot_leads_time( $item['created_at'] ) ) . '<br><span class="ot-muted">' . esc_html( human_time_diff( strtotime( $item['created_at'] . ' UTC' ) ) ) . ' ago</span>';
+				return '<span class="ot-nowrap">' . esc_html( ot_leads_time( $item['created_at'], 'M j' ) ) . '</span> <span class="ot-nowrap">' . esc_html( ot_leads_time( $item['created_at'], 'g:i a' ) ) . '</span><br><span class="ot-muted">' . esc_html( human_time_diff( strtotime( $item['created_at'] . ' UTC' ) ) ) . ' ago</span>';
 		}
 		return '';
 	}
@@ -215,6 +216,7 @@ function ot_leads_inbox_screen() {
 	}
 	$table->views();
 	$table->search_box( 'Search leads', 'ot-leads' );
+	echo '<script>(function(){var s=document.getElementById("ot-leads-search-input");if(s){s.placeholder="Name, email, phone or town";}})();</script>';
 	$table->display();
 	echo '</form></div>';
 	ot_leads_shell_end();

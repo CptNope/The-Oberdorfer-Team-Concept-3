@@ -162,9 +162,6 @@ function ot_leads_today_screen() {
 	echo '<h1 class="ot-title" id="ot-today-title">' . $title . '</h1><hr class="wp-header-end" style="display:none">'; // phpcs:ignore WordPress.Security.EscapeOutput
 	echo '<div class="ot-day__bar"><span class="ot-day__date">' . esc_html( ( new DateTime( 'now', new DateTimeZone( 'America/New_York' ) ) )->format( 'l, F j' ) ) . ( $agent ? ' · ' . esc_html( ot_leads_agent_name( $agent ) ) : '' ) . '</span>' . ( $all ? ot_leads_agent_chips( 'ot-leads-today', $agent ) : '' ) . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput
 	ot_leads_notice();
-	if ( current_user_can( 'ot_leads_manage' ) ) {
-		echo ot_leads_health_notices(); // phpcs:ignore WordPress.Security.EscapeOutput
-	}
 
 	echo '<section class="ot-group" aria-label="Waiting for a first reply"><h2 class="ot-group__head">Waiting for a first reply <b>' . (int) $w . '</b></h2>';
 	if ( ! $w ) {
@@ -194,7 +191,11 @@ function ot_leads_today_screen() {
 	foreach ( $d['back'] as $l ) {
 		echo $row( $l, ot_leads_when( $l['seen_at'] ), $meta( esc_html( ot_leads_last_signal( (int) $l['id'] ) ), esc_html( $owner( $l ) ) ) . ' <span class="ot-pill ot-pill--warm">Warm</span>', false ); // phpcs:ignore WordPress.Security.EscapeOutput
 	}
-	echo '</section></section>';
+	echo '</section>';
+	// Setup problems (email, scheduler, CRM) after the day, so the people come first.
+	$setup = current_user_can( 'ot_leads_manage' ) ? ot_leads_health_notices( false, true ) : '';
+	echo $setup ? '<div class="ot-setup" aria-label="Setup">' . $setup . '</div>' : ''; // phpcs:ignore WordPress.Security.EscapeOutput
+	echo '</section>';
 
 	// The aside: this week, reply speed, approvals.
 	echo '<aside aria-label="This week">';

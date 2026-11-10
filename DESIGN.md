@@ -74,17 +74,45 @@ The components live in `assets/css/components.css`, and each one maps to a plann
 
 The REWAP logo is never redrawn. It always sits on its own ivory plate.
 
-## Admin screens (`ot-leads`)
+## Admin screens (`ot-leads`): the Leads workspace
 
-The lead-management screens live in the WordPress admin, so they follow WordPress's own admin design (`@wordpress/components` and DataViews) rather than the public site's editorial layout. The brand appears as accents only:
+Redesigned 2026-11-10 as a branded workspace inside wp-admin. The team chose the **Day log** layout; the direction contract is in `.impeccable/surfaces/wordpress-ot-leads-includes-admin-php.md`. All styles are in `wordpress/ot-leads/assets/admin.css`, scoped to `body.ot-ws`, so the rest of wp-admin is untouched. WordPress's forms, nonces and list table stay underneath.
 
-- **Navy** for the active state and primary buttons.
-- **Gold** for the "Warm" intent signal. On light admin backgrounds, use `--ot-gold-ink` for text.
-- **Cormorant Garamond** only for the lead's name on the detail screen.
-
-Everything else uses the admin's system font. Density is higher than on the site: 13px body text, 40px table rows. Status and stage use text labels plus color, never color alone. AI-drafted content is always labelled "AI draft", with its grounding sources one click away.
-
-Mock-ups are on the FSE canvas in the "Lead management" row: Leads inbox, Lead detail, Approval queue. The behaviour is specified in `docs/leads-crm-nurture-spec.md`.
+- **Shell** (`ot_leads_shell()` in `admin.php`):
+  - A 216px navy rail lists Today, All leads, Pipeline, Approvals and Reports, then Sequences, Newsletter and Settings. Gold count badges show who is waiting and how many emails need approval. The active item has a 1px gold inset rule.
+  - The page is ivory. WordPress's own menu folds to icons on these screens.
+  - At 960px and below, the rail becomes a top strip that scrolls sideways. It fades at the right edge, and the current screen scrolls into view.
+- **Today is home**, and the Leads menu opens on it.
+  - **Headline:** one Cormorant sentence, with its answer in gold-ink italic ("Three people are waiting. *Start with Dana.*").
+  - **Under it:** the date and the agent chips (Everyone, Team, Brandon, Kaitlyn) on one line.
+  - **Three groups:** waiting for a first reply, follow-ups due, and back on the site. Each has an uppercase hairline heading with its count.
+  - **Each row:** the time, the person's name in Cormorant and one meta line. Then Call, Text and Email, with the person's preferred way filled navy. Then **Log**, a `<details>` disclosure that opens with the top-down clip wipe and holds the one-tap outcomes.
+  - **Late and overdue rows** get a pale red tint (`--ws-err-tint`) plus a red outlined tag. They never get a stripe.
+  - **Setup warnings** sit below the groups.
+  - **Side column:** This week, Reply speed and emails to approve.
+- **Type:**
+  - Cormorant Garamond 400/500/italic for screen titles, people's names and panel titles.
+  - Manrope 400–700 for all UI text: 14px body, 12.5px buttons, 11px tracked uppercase group labels.
+  - Both faces are self-hosted in `assets/fonts` (OFL), so staff screens make no third-party font requests.
+  - Numerals are tabular.
+- **Components:**
+  - **Panels:** paper (`#FFFDF9`) panels with a sandstone hairline, square corners.
+  - **Buttons:** paper buttons, or navy for primary actions; 34px tall on desktop, 40px on phones.
+  - **Chips:** outlined; the current one is filled navy.
+  - **Status tags:** outlined text — navy for new, red for late or failed, gold-ink for warm, green for done or consented. Never colour alone.
+  - **Tables:** sandstone table heads.
+  - **Timeline:** square gold markers on a hairline.
+  - **Shadows:** none.
+- **Lead screen:**
+  - **Header:** the name in Cormorant, with tags for stage, intent, type, agent and waiting time, and Call/Text/Email at the right.
+  - **Wide column (first on phones):** Log a touch, any possible duplicate, then the Timeline with its note form.
+  - **Side column:** Status ("Why it was lost" appears only when the stage is Lost), Contact, AI summary, Tasks, Email nurture and Their data.
+- **Other screens:**
+  - All leads keeps the WordPress list table, restyled. Its saved views are chips; on phones the stage and age sit in the name cell.
+  - Pipeline columns are sandstone and snap one column at a time on phones.
+  - Approvals shows the rendered email, with the HTML behind "Edit the email (HTML)".
+  - Reports figures use Cormorant numerals.
+- **AI-drafted content** is always labelled "AI draft", with its grounding sources one click away.
 
 ## Agent profiles, search and conversion
 

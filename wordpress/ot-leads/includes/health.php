@@ -68,10 +68,11 @@ function ot_leads_health_html() {
 }
 
 /** Problems as admin notices ($compact: errors only, for the dashboard). */
-function ot_leads_health_notices( $compact = false ) {
+function ot_leads_health_notices( $compact = false, $on_today = false ) {
 	$o = '';
 	foreach ( ot_leads_health() as list( $lvl, $msg, $link ) ) {
-		if ( $compact && 'error' !== $lvl ) {
+		// Errors only on the dashboard; on Today, nothing that only points back at Today's own rows.
+		if ( ( $compact && 'error' !== $lvl ) || ( $on_today && str_contains( $link, 'page=ot-leads-today' ) ) ) {
 			continue;
 		}
 		$o .= '<div class="notice notice-' . ( 'error' === $lvl ? 'error' : ( 'warning' === $lvl ? 'warning' : 'info' ) ) . ' inline"><p>' . esc_html( $msg ) . ' <a href="' . esc_url( $link ) . '">Fix it</a></p></div>';

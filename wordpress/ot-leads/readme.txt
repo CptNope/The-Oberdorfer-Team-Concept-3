@@ -2,7 +2,7 @@
 Contributors: oberdorferteam
 Requires at least: 7.1
 Requires PHP: 8.3
-Stable tag: 0.9.1
+Stable tag: 0.10.0
 License: GPL-2.0-or-later
 
 The Oberdorfer Team's built-in CRM: lead capture, routing and alerts, inbox and pipeline, CRM forwarding, email nurture through Brevo, and AI drafts a person approves.
@@ -14,6 +14,9 @@ Every form on oberdorferteam.com saves here first. Leads are routed to the right
 Requires the ot-core plugin.
 
 == Changelog ==
+
+= 0.10.0 =
+* Redesigned Leads screens: one branded workspace (navy menu, ivory page, Cormorant names, self-hosted fonts) that works on phones. Today is home: one sentence names who to answer first, then waiting / follow-ups due / back on the site, with Call, Text, Email and a one-tap Log on every row. The lead screen puts Log a touch and the timeline first. No data or behaviour changes.
 
 = 0.9.1 =
 * The joint Brandon & Kaitlyn profile is no longer listed as an agent in the CRM. Leads with no single owner are "Team (Brandon & Kaitlyn)" leads and alert both; filters have a Team choice. Existing leads, tasks and routing settings move over automatically. The joint page on the site is unchanged.

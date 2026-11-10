@@ -29,7 +29,7 @@ function ot_leads_board_screen() {
 		$cards = $by[ $stage ] ?? array();
 		echo '<section class="ot-col" data-stage="' . esc_attr( $stage ) . '" aria-label="' . esc_attr( $label ) . '"><h2><span>' . esc_html( $label ) . '</span><span class="ot-muted">' . count( $cards ) . '</span></h2>';
 		foreach ( $cards as $c ) {
-			echo '<article class="ot-bcard" draggable="true" data-id="' . (int) $c['id'] . '"><a href="' . esc_url( ot_leads_admin_link( $c['id'] ) ) . '">' . esc_html( ot_lead_name( $c ) ) . '</a><small>' . esc_html( OT_LEAD_TYPES[ $c['lead_type'] ] ?? $c['lead_type'] ) . ' · ' . esc_html( $c['listing_id'] ? get_the_title( $c['listing_id'] ) : ot_leads_towns_label( $c['towns'] ) ) . '</small><small>' . esc_html( ot_leads_agent_name( $c['assigned_agent'] ) ) . ' · ' . esc_html( human_time_diff( strtotime( $c['last_activity_at'] . ' UTC' ) ) ) . '</small>'
+			echo '<article class="ot-bcard" draggable="true" data-id="' . (int) $c['id'] . '"><a href="' . esc_url( ot_leads_admin_link( $c['id'] ) ) . '">' . esc_html( ot_lead_name( $c ) ) . '</a><small>' . esc_html( implode( ' · ', array_filter( array( OT_LEAD_TYPES[ $c['lead_type'] ] ?? $c['lead_type'], $c['listing_id'] ? get_the_title( $c['listing_id'] ) : ot_leads_towns_label( $c['towns'] ) ) ) ) ) . '</small><small>' . esc_html( ot_leads_agent_name( $c['assigned_agent'] ) . ' · last activity ' . human_time_diff( strtotime( $c['last_activity_at'] . ' UTC' ) ) . ' ago' ) . '</small>'
 				. '<label class="screen-reader-text" for="mv' . (int) $c['id'] . '">Move to</label><select id="mv' . (int) $c['id'] . '" data-move="' . (int) $c['id'] . '" style="margin-top:6px;max-width:100%"><option value="">Move to…</option>';
 			foreach ( OT_LEAD_STAGES as $s => $l ) {
 				if ( $s !== $stage ) {

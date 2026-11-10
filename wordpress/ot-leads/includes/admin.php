@@ -46,7 +46,7 @@ add_action( 'admin_enqueue_scripts', function () {
 	if ( ! ot_leads_is_screen() ) {
 		return;
 	}
-	wp_enqueue_style( 'ot-leads-fonts', 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600;700&display=swap', array(), null ); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
+	// The faces are self-hosted in assets/fonts, so no staff request goes to a third party.
 	wp_enqueue_style( 'ot-leads-admin', OT_LEADS_URL . '/assets/admin.css', array( 'dashicons' ), OT_LEADS_VERSION );
 } );
 
@@ -82,7 +82,14 @@ function ot_leads_shell( $current ) {
 }
 
 function ot_leads_shell_end() {
-	echo '</main></div>';
+	// On a phone the rail is a scrolling strip: bring the current screen into view.
+	echo '</main></div><script>(function(){var a=document.querySelector(".ot-rail a[aria-current]");if(a&&window.matchMedia("(max-width: 960px)").matches){a.scrollIntoView({block:"nearest",inline:"center"});}})();</script>';
+}
+
+/** An hour of the day (0 to 24) as "8 am" or "8 pm". */
+function ot_leads_hour( $h ) {
+	$h = (int) $h % 24;
+	return ( 0 === $h % 12 ? 12 : $h % 12 ) . ( $h < 12 ? ' am' : ' pm' );
 }
 
 /** A screen title row: the title, an optional line under it, and actions on the right. */

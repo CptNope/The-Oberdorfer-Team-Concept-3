@@ -3,7 +3,7 @@
  * Plugin Name:       Oberdorfer Leads
  * Plugin URI:        https://oberdorferteam.com/
  * Description:       The team's built-in CRM: every form on the site saves here; leads are routed to the right agent with instant alerts, worked in an inbox and pipeline, forwarded to an outside CRM if chosen, and nurtured by email (Brevo) with AI drafts a person approves. Spec: docs/leads-crm-nurture-spec.md.
- * Version:           0.9.1
+ * Version:           0.10.0
  * Requires at least: 7.1
  * Requires PHP:      8.3
  * Requires Plugins:  ot-core
@@ -19,7 +19,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-const OT_LEADS_VERSION = '0.9.1';
+const OT_LEADS_VERSION = '0.10.0';
 const OT_LEADS_DB      = 2; // bump when a table changes; ot_leads_install() runs dbDelta again
 
 define( 'OT_LEADS_DIR', __DIR__ );
