@@ -86,10 +86,22 @@ function ot_leads_shell_end() {
 	echo '</main></div><script>(function(){var a=document.querySelector(".ot-rail a[aria-current]");if(a&&window.matchMedia("(max-width: 960px)").matches){a.scrollIntoView({block:"nearest",inline:"center"});}})();</script>';
 }
 
-/** An hour of the day (0 to 24) as "8 am" or "8 pm". */
+/** An hour of the day (0 to 24) as "8 am", "8 pm", "noon" or "midnight". */
 function ot_leads_hour( $h ) {
 	$h = (int) $h % 24;
-	return ( 0 === $h % 12 ? 12 : $h % 12 ) . ( $h < 12 ? ' am' : ' pm' );
+	if ( 0 === $h || 12 === $h ) {
+		return $h ? 'noon' : 'midnight';
+	}
+	return ( $h % 12 ) . ( $h < 12 ? ' am' : ' pm' );
+}
+
+/** The sending window from Settings, as words ("between 8 am and 8 pm", or "at any time"). */
+function ot_leads_hours_text() {
+	$start = ot_leads_opt( 'hours_start' );
+	$end   = ot_leads_opt( 'hours_end' );
+	$start = ( '' === $start || null === $start ) ? 8 : (int) $start;
+	$end   = ( '' === $end || null === $end ) ? 20 : (int) $end;
+	return ( 0 === $start && 24 === $end ) ? 'at any time' : 'between ' . ot_leads_hour( $start ) . ' and ' . ot_leads_hour( $end );
 }
 
 /** A screen title row: the title, an optional line under it, and actions on the right. */

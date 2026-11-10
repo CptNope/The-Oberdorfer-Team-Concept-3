@@ -13,6 +13,7 @@
 @font-face { font-family: 'Manrope'; font-style: normal; font-weight: 600; font-display: swap; src: url('fonts/manrope-latin-600-normal.woff2') format('woff2'); }
 @font-face { font-family: 'Manrope'; font-style: normal; font-weight: 700; font-display: swap; src: url('fonts/manrope-latin-700-normal.woff2') format('woff2'); }
 
+body.ot-ws .ot-title, body.ot-ws .ot-speed, body.ot-ws .ot-figures b, body.ot-ws .ot-name, body.ot-ws .ot-entry__who, body.ot-ws .ot-card h2 { font-variant-numeric: lining-nums tabular-nums; }
 body.ot-ws {
 	--ws-navy: #071D2D;
 	--ws-navy-8: #0E2738;
@@ -474,7 +475,7 @@ body.ot-ws ::selection { background: var(--ws-gold); color: var(--ws-navy); }
 .ot-msg { background: var(--ws-paper); border: 1px solid var(--ws-sand-2); padding: 18px 20px; margin-bottom: 16px; }
 .ot-msg__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .ot-msg textarea { width: 100%; min-height: 220px; font: 12px/1.5 ui-monospace, Menlo, Consolas, monospace; }
-.ot-msg .preview { border: 1px solid var(--ws-sand); padding: 12px 16px; background: #fff; max-height: 340px; overflow: auto; }
+.ot-msg__preview { border: 1px solid var(--ws-sand); padding: 12px 16px; background: #fff; max-height: 340px; overflow: auto; }
 .ot-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 12px; }
 .ot-steps td, .ot-steps th { vertical-align: top; }
 .ot-steps textarea { width: 100%; min-height: 110px; font-size: 12.5px; }
