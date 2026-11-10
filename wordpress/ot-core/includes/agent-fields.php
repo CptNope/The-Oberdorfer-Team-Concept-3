@@ -23,7 +23,7 @@ function ot_agent_field_defs() {
 		'ot_languages'    => array( 'languages', 'Languages', 'text', 'For example, English, Spanish.' ),
 		'ot_service_area' => array( 'service_area', 'Service area', 'text', 'Empty shows Massachusetts.' ),
 		'ot_license'      => array( 'license', 'MA license number', 'text', 'Shown only once entered; verify it with the Board of Registration first.' ),
-		'ot_accolades'    => array( 'accolades', 'Recognition', 'accolades', 'One per line: the award, a vertical bar, then where it comes from. For example: Top Producer | Wakefield at Home, Fall 2026. Verified claims only.' ),
+		'ot_accolades'    => array( 'accolades', 'Recognition', 'accolades', 'One per line: the award, a vertical bar, then where it comes from (kept for your records; only the award shows on the page). For example: Top Producer | Wakefield at Home, Fall 2026. Verified claims only.' ),
 		'ot_card_url'     => array( 'card', 'Digital business card', 'text', 'The full link, for example https://blinq.me/...' ),
 		'ot_photo_id'     => array( 'photo_id', 'Headshot', 'photo', 'A 4:5 portrait. Empty uses the interim crop of the team portrait.' ),
 		'ot_photo_note'   => array( 'photo_note', 'Photo caption', 'text', 'Optional, for example the photographer\'s credit.' ),

@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.7.1
+Stable tag: 0.7.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,9 @@ Listings are off by default. Settings > Listings (IDX) switches the home search 
 If an SEO plugin is installed, only one of the two may print meta tags: add `define( 'OT_CORE_SEO_OUTPUT', false );` to wp-config.php to switch this plugin's output off.
 
 == Changelog ==
+
+= 0.7.2 =
+* Agent profiles: Recognition shows the awards only; where each was verified stays in Agent details for the team's records.
 
 = 0.7.1 =
 * The team line is now Kaitlyn's 978-257-4938 (header, mobile menu, calls to action, footer, contact page, schema, lead messages). Brandon's 406-250-7620 stays as his direct line on his card and profile, and each agent card shows that agent's own number.

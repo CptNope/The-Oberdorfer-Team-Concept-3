@@ -104,7 +104,8 @@ function ot_render_person_section( $section, $x ) {
 	}
 	$recog = array();
 	foreach ( (array) ( $r['accolades'] ?? array() ) as $acc ) {
-		$recog[] = esc_html( $acc['text'] ) . ( ! empty( $acc['source'] ) ? ' <span class="badge badge--source">' . esc_html( $acc['source'] ) . '</span>' : '' );
+		// The source stays in Agent details for the team's records; the page shows the award only (team's request, 2026-11-10).
+		$recog[] = esc_html( $acc['text'] );
 	}
 	$facts = array(
 		array( 'Role', esc_html( $r['role'] ) . ', The Oberdorfer Team' ),

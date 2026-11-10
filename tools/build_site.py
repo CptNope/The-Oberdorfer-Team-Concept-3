@@ -1276,7 +1276,7 @@ def page_profile(a):
         ("Role", f"{a['role']}, The Oberdorfer Team" if not tpl else ph("Role on the team")),
         ("Title", a["title"] if a.get("title") and not tpl else ph("Professional title to confirm")),
         ("Brokerage", "REWAP Brokerage LLC"),
-        ("Recognition", ph("Verified awards only") if tpl else "<br>".join(f'{t} <span class="badge badge--source">{src}</span>' for t, src in a.get("accolades", []))),
+        ("Recognition", ph("Verified awards only") if tpl else "<br>".join(t for t, src in a.get("accolades", []))),  # sources kept in the data, not shown (2026-11-10)
         ("Service area", "Massachusetts" if not tpl else ph("Service areas")),
         # Hidden on a profile until the agent lists specialties; the template shows where they go.
         ("Specialties", ph("Specialties to confirm")) if tpl else (("Specialties", a["specialties"]) if a.get("specialties") else None),
