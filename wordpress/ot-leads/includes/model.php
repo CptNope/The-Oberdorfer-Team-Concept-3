@@ -130,6 +130,7 @@ function ot_lead_update( $id, $fields, $actor = '' ) {
 	}
 	if ( isset( $fields['assigned_agent'] ) && $fields['assigned_agent'] !== $old['assigned_agent'] ) {
 		ot_lead_event( $id, 'assigned', array( 'to' => $fields['assigned_agent'] ), $actor );
+		do_action( 'ot_lead_assigned', $id, $fields['assigned_agent'], $old['assigned_agent'], $actor );
 	}
 	return true;
 }
@@ -197,6 +198,7 @@ function ot_leads_suppress( $email, $reason ) {
 		ot_nurture_exit_all( (int) $id, $reason );
 		ot_lead_event( (int) $id, 'unsubscribed', array( 'reason' => $reason ), 'system' );
 	}
+	do_action( 'ot_leads_suppressed', $email, $reason, array_map( 'intval', $ids ) );
 }
 
 /* --------------------------------------------------------------------- agents */

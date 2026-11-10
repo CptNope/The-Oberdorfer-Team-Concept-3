@@ -126,7 +126,7 @@ function ot_leads_install() {
 		"CREATE TABLE {$t('outbox')} (
   id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   lead_id bigint(20) unsigned NOT NULL,
-  connector varchar(20) NOT NULL,
+  connector varchar(120) NOT NULL,
   payload longtext NOT NULL,
   attempts int(11) NOT NULL DEFAULT 0,
   next_attempt_at datetime NOT NULL,

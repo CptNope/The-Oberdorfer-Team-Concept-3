@@ -15,9 +15,11 @@ add_action( 'admin_menu', function () {
 	$badge = $new ? ' <span class="awaiting-mod count-' . $new . '"><span class="pending-count">' . $new . '</span></span>' : '';
 	add_menu_page( 'Leads', 'Leads' . $badge, 'ot_leads_own', 'ot-leads', 'ot_leads_inbox_screen', 'dashicons-groups', 3 );
 	add_submenu_page( 'ot-leads', 'Leads inbox', 'Inbox', 'ot_leads_own', 'ot-leads', 'ot_leads_inbox_screen' );
+	add_submenu_page( 'ot-leads', 'Today', 'Today', 'ot_leads_own', 'ot-leads-today', 'ot_leads_today_screen' );
 	add_submenu_page( 'ot-leads', 'Pipeline board', 'Board', 'ot_leads_own', 'ot-leads-board', 'ot_leads_board_screen' );
 	$drafts = (int) $wpdb->get_var( 'SELECT COUNT(*) FROM ' . ot_leads_table( 'messages' ) . " WHERE status = 'draft'" );
 	add_submenu_page( 'ot-leads', 'Approval queue', 'Approval queue' . ( $drafts ? ' <span class="awaiting-mod"><span class="pending-count">' . $drafts . '</span></span>' : '' ), 'ot_leads_own', 'ot-leads-queue', 'ot_leads_queue_screen' );
+	add_submenu_page( 'ot-leads', 'Reports', 'Reports', 'ot_leads_own', 'ot-leads-reports', 'ot_leads_reports_screen' );
 	add_submenu_page( 'ot-leads', 'Sequences', 'Sequences', 'ot_leads_manage', 'ot-leads-sequences', 'ot_leads_sequences_screen' );
 	add_submenu_page( 'ot-leads', 'Newsletter', 'Newsletter', 'ot_leads_manage', 'ot-leads-newsletter', 'ot_leads_newsletter_screen' );
 	add_submenu_page( 'ot-leads', 'Leads settings', 'Settings', 'ot_leads_manage', 'ot-leads-settings', 'ot_leads_settings_screen' );
@@ -194,6 +196,7 @@ add_action( 'wp_dashboard_setup', function () {
 		$new   = (int) $wpdb->get_var( "SELECT COUNT(*) FROM $t WHERE stage = 'new'$own" );
 		$week  = (int) $wpdb->get_var( $wpdb->prepare( "SELECT COUNT(*) FROM $t WHERE created_at >= %s$own", gmdate( 'Y-m-d H:i:s', time() - 7 * DAY_IN_SECONDS ) ) );
 		$queue = (int) $wpdb->get_var( 'SELECT COUNT(*) FROM ' . ot_leads_table( 'messages' ) . " WHERE status = 'draft'" );
-		echo '<p style="font-size:14px"><strong>' . $new . '</strong> waiting for a first reply · <strong>' . $week . '</strong> in the last 7 days · <strong>' . $queue . '</strong> emails to approve</p><p><a class="button button-primary" href="' . esc_url( admin_url( 'admin.php?page=ot-leads' ) ) . '">Open the inbox</a> <a class="button" href="' . esc_url( admin_url( 'admin.php?page=ot-leads-queue' ) ) . '">Approval queue</a></p>'; // phpcs:ignore WordPress.Security.EscapeOutput
+		echo current_user_can( 'ot_leads_manage' ) ? ot_leads_health_notices( true ) : ''; // phpcs:ignore WordPress.Security.EscapeOutput
+		echo '<p style="font-size:14px"><strong>' . $new . '</strong> waiting for a first reply · <strong>' . $week . '</strong> in the last 7 days · <strong>' . $queue . '</strong> emails to approve</p><p><a class="button button-primary" href="' . esc_url( admin_url( 'admin.php?page=ot-leads-today' ) ) . '">Today</a> <a class="button" href="' . esc_url( admin_url( 'admin.php?page=ot-leads' ) ) . '">Inbox</a> <a class="button" href="' . esc_url( admin_url( 'admin.php?page=ot-leads-queue' ) ) . '">Approval queue</a></p>'; // phpcs:ignore WordPress.Security.EscapeOutput
 	} );
 } );

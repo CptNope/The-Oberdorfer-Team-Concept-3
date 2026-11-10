@@ -44,23 +44,58 @@ add_action( 'ot_leads_daily', function () {
 	ot_leads_retention();
 } );
 
-/** Each agent's tasks due today, and overdue, in one morning email. */
+/**
+ * The morning email, one per agent (the joint profile's to the team leaders): new leads still
+ * waiting for a first reply, follow-ups due today or overdue, and people back on the site.
+ * Nothing is sent to an agent with nothing to do.
+ */
 function ot_leads_task_digest() {
-	global $wpdb;
-	$end  = ( new DateTime( 'tomorrow', new DateTimeZone( 'America/New_York' ) ) )->setTimezone( new DateTimeZone( 'UTC' ) )->format( 'Y-m-d H:i:s' );
-	$rows = $wpdb->get_results( $wpdb->prepare( 'SELECT t.*, l.first_name, l.last_name, l.email FROM ' . ot_leads_table( 'tasks' ) . ' t JOIN ' . ot_leads_table( 'leads' ) . ' l ON l.id = t.lead_id WHERE t.done_at IS NULL AND t.due_at < %s ORDER BY t.due_at', $end ), ARRAY_A );
-	$by   = array();
-	foreach ( $rows as $r ) {
-		$by[ $r['assignee'] ][] = $r;
+	// One email per address: Brandon's own leads and the team's arrive together.
+	$by = array();
+	foreach ( ot_leads_agents() as $slug => $a ) {
+		$d = ot_leads_today_data( $slug );
+		if ( ! $d['waiting'] && ! $d['due'] && ! $d['back'] ) {
+			continue;
+		}
+		foreach ( ot_leads_agent_emails( $slug ) as $to ) {
+			$by[ strtolower( $to ) ][] = array( $slug, $a, $d );
+		}
 	}
-	foreach ( $by as $agent => $tasks ) {
-		$html = '<p>Your follow-ups for today:</p><ul>';
-		foreach ( $tasks as $t ) {
-			$late  = strtotime( $t['due_at'] . ' UTC' ) < time() - DAY_IN_SECONDS / 2;
-			$html .= '<li>' . esc_html( ucfirst( $t['kind'] ) ) . ': <a href="' . esc_url( ot_leads_admin_link( $t['lead_id'] ) ) . '">' . esc_html( trim( $t['first_name'] . ' ' . $t['last_name'] ) ?: $t['email'] ) . '</a>' . ( $t['note'] ? ' · ' . esc_html( $t['note'] ) : '' ) . ( $late ? ' <strong>(overdue)</strong>' : '' ) . '</li>';
+	$li = fn( $l, $extra ) => '<li><a href="' . esc_url( ot_leads_admin_link( $l['id'] ) ) . '">' . esc_html( ot_lead_name( $l ) ) . '</a> · ' . $extra . '</li>';
+	foreach ( $by as $to => $parts ) {
+		$html = '<p>Good morning. Here is today, from oberdorferteam.com.</p>';
+		$n    = 0;
+		$back = 0;
+		foreach ( $parts as list( $slug, $a, $d ) ) {
+			if ( count( $parts ) > 1 ) {
+				$html .= '<h2 style="font:400 20px/1.3 Georgia,serif;margin:26px 0 4px">' . esc_html( $a['team'] ? 'Team leads' : $a['name'] ) . '</h2>';
+			}
+			if ( $d['waiting'] ) {
+				$html .= '<h3 style="font-size:16px;margin:14px 0 6px">Waiting for a first reply (' . count( $d['waiting'] ) . ')</h3><ul>';
+				foreach ( $d['waiting'] as $l ) {
+					$html .= $li( $l, esc_html( ( OT_LEAD_TYPES[ $l['lead_type'] ] ?? '' ) . ', ' . human_time_diff( strtotime( $l['created_at'] . ' UTC' ) ) . ' ago' ) . ' · ' . ot_leads_contact_links( $l ) );
+				}
+				$html .= '</ul>';
+			}
+			if ( $d['due'] ) {
+				$html .= '<h3 style="font-size:16px;margin:14px 0 6px">Follow-ups due (' . count( $d['due'] ) . ')</h3><ul>';
+				foreach ( $d['due'] as $l ) {
+					$late  = strtotime( $l['due_at'] . ' UTC' ) < strtotime( ot_leads_day_end( -1 ) . ' UTC' );
+					$html .= $li( $l, esc_html( ucfirst( $l['kind'] ) . ( $l['note'] ? ': ' . $l['note'] : '' ) ) . ( $late ? ' <strong>(overdue)</strong>' : '' ) . ' · ' . ot_leads_contact_links( $l ) );
+				}
+				$html .= '</ul>';
+			}
+			if ( $d['back'] ) {
+				$html .= '<h3 style="font-size:16px;margin:14px 0 6px">Back on the site</h3><ul>';
+				foreach ( $d['back'] as $l ) {
+					$html .= $li( $l, esc_html( ot_leads_last_signal( (int) $l['id'] ) ) );
+				}
+				$html .= '</ul>';
+			}
+			$n    += count( $d['waiting'] ) + count( $d['due'] );
+			$back += count( $d['back'] );
 		}
-		foreach ( ot_leads_agent_emails( $agent ) as $to ) {
-			ot_leads_mail( $to, 'Today\'s follow-ups (' . count( $tasks ) . ')', $html . '</ul>', array( 'tags' => array( 'digest' ) ) );
-		}
+		$html .= '<p style="margin-top:20px"><a href="' . esc_url( admin_url( 'admin.php?page=ot-leads-today' ) ) . '">Open Today</a>. Tap Called, Voicemail or Texted there and the next follow-up books itself.</p>';
+		ot_leads_mail( $to, 'Today: ' . $n . ' to follow up' . ( $back ? ', ' . $back . ' back on the site' : '' ), $html, array( 'tags' => array( 'digest' ) ) );
 	}
 }

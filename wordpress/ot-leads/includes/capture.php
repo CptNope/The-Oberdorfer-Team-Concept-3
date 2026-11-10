@@ -366,6 +366,7 @@ function ot_leads_rest_seen( WP_REST_Request $r ) {
 	if ( $path && ! get_transient( $key ) ) {
 		set_transient( $key, 1, 30 * MINUTE_IN_SECONDS );
 		ot_lead_event( (int) $id, 'page_view', array( 'path' => $path, 'title' => sanitize_text_field( (string) $r->get_param( 'title' ) ) ), 'visitor' );
+		ot_leads_signal_check( (int) $id, $path );
 	}
 	return array( 'ok' => true );
 }

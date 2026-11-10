@@ -1,6 +1,6 @@
 # `ot-leads`: built-in CRM, connectors and AI nurture
 
-**Status:** built in v0.6.0 (2026-11-05), phases 1 to 4; setup steps in `docs/leads-setup.md`. **Owner:** the `ot-leads` plugin (`wordpress/ot-leads/`; see `docs/wordpress-architecture.md`).
+**Status:** built in v0.6.0 (2026-11-05), phases 1 to 4; strengthened in v0.9.0 (2026-11-10, see § 15); setup steps in `docs/leads-setup.md`. **Owner:** the `ot-leads` plugin (`wordpress/ot-leads/`; see `docs/wordpress-architecture.md`).
 
 **As built, where it differs from this spec:**
 - **Email:** Brevo's transactional API sends everything (alerts, confirmations, nurture, new-listing alerts, newsletter); Rackspace mailboxes on Cloudways are for people. Without a Brevo key the plugin falls back to WordPress mail.
@@ -270,3 +270,19 @@ They use WordPress admin components (`@wordpress/components` and DataViews), so 
 5. **Broker approval:** consent wording and any REWAP advertising rules for automated email.
 6. **Email:** the email service, and the sender address pattern (for example `brandon@oberdorferteam.com`).
 7. **Automatic sending:** whether any sequence may ever send without approval, and who may switch that on.
+
+## 15. v0.9.0: workflow, signals, per-agent CRMs and safeguards (2026-11-10)
+
+Neither Brandon nor Kaitlyn uses an outside CRM, so the built-in one is the system; the per-agent part is ready for when one does.
+
+- **Leads > Today** (`admin-today.php`): new leads waiting for a first reply, follow-ups due today or overdue, people back on the site, and the week ahead. Team leaders can switch between agents.
+- **One-tap logging:** Called, Voicemail, No answer, Texted, Emailed, Met, They replied, on every Today row and the lead screen. A tap logs it, counts as the first reply, closes the task it came from and books the next follow-up (tomorrow after a voicemail or no answer, 3 days after a text or email, or a chosen interval).
+- **Morning email** (`cron.php`): one per person, combining their own leads and the team's: waiting, due, overdue and back on the site. Sent only when there is something to do.
+- **Signals** (`signals.php`): a known visitor coming back after 7+ days, looking at a team listing, opening a new town guide (added to their towns), or viewing three pages in a day. Logged on the timeline; at most every 3 days it creates a call task and emails the agent.
+- **Quiet leads:** daily, a contacted, appointment or active lead with no activity for 14 days and no open task gets a check-in task.
+- **Home anniversary** sequence: enrolled at Closed (with consent), yearly from the closing day; added to saved sequences automatically.
+- **Each agent's CRM** (`agent-crm.php`, Settings > Each agent's CRM): their own webhook or Follow Up Boss key; their leads are forwarded on arrival and on reassignment; "Follow-up emails: sent by their own CRM" stops the site's sequences for their leads (never both); unsubscribes are sent to their webhook. A CRM can send updates back to `POST /wp-json/ot-leads/v1/crm-update` with a bearer token: `unsubscribed` or a `stage`.
+- **Reports** (`admin-reports.php`): inquiries and sign-ups, median time to first reply and % within the response window, by agent, by form, referrer, campaign, page and town, current stages, by month; possible duplicates with Merge and Not a duplicate.
+- **Health** (`health.php`): scheduler stalled, email not on Brevo or failing, CRM deliveries that gave up, escalated leads with no reply, drafts waiting 3+ days, duplicates. Shown on Today, the dashboard widget (errors), Settings > Status and Tools > Site Health.
+- Schema: `ot_outbox.connector` widened to 120 characters (`OT_LEADS_DB` 2) for per-agent connector names.
+

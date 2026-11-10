@@ -3,55 +3,120 @@
   "updated": "November 10, 2026",
   "intro": "This policy explains what information The Oberdorfer Team collects through oberdorferteam.com, how we use it, who we share it with and the choices you have. The Oberdorfer Team, with an office at {address}, is a real estate team operating under REWAP Brokerage LLC, a licensed Massachusetts real estate broker.",
   "sections": [
-    {"h": "What we collect", "blocks": [
-      {"p": "<strong>Information you give us.</strong> When you send a form on this site (a message, a buyer or seller consultation, a showing request, a market review, a recruiting inquiry or a newsletter signup), we collect what you enter. Depending on the form, that is your name, email address, phone number, your message, how you prefer to be contacted, your timing, the towns you are considering, a property address, and whether you hold a Massachusetts real estate license. We also record whether you ticked the box to receive marketing email, and when."},
-      {"p": "<strong>Information collected automatically.</strong> Like most websites, our hosting and security providers keep technical logs (such as IP address, browser type and the pages requested) to run and protect the site."},
-      {"p": "<strong>One cookie, after you contact us.</strong> After you send a form, the site sets a cookie named <code>ot_lid</code> in your browser for up to one year. While it is there, the site notes which pages of this site you view, so the team can follow up on what you were looking at. It is not set before you contact us, it is not used on other websites, and you can delete it at any time in your browser settings."},
-      {"p": "We do not use advertising trackers, and we do not use analytics tools that follow you across other websites."}
-    ]},
-    {"h": "How we use it", "blocks": [
-      {"ul": [
-        "To answer your inquiry and send it to the right agent on the team.",
-        "To send you a short confirmation that we received your message.",
-        "To send market updates, new listings or our newsletter, only if you opted in. Every one of those emails has an unsubscribe link.",
-        "To keep the records a Massachusetts real estate brokerage is required to keep.",
-        "To keep the site secure and to stop spam."
-      ]}
-    ]},
-    {"h": "Who we share it with", "blocks": [
-      {"p": "We do not sell your personal information, and we do not share it with anyone for their own advertising. We share it only as follows:"},
-      {"ul": [
-        "<strong>The team and our brokerage.</strong> Brandon and Kaitlyn Oberdorfer, the agents who work with them, and REWAP Brokerage LLC, which supervises our work.",
-        "<strong>Service providers who run the site and our email for us:</strong> our web host (Cloudways), Cloudflare (domain and security), and Brevo, which delivers our email and tells us when an email could not be delivered, was marked as spam, or had a link clicked.",
-        "<strong>A customer-relationship tool,</strong> if we choose to use one to manage inquiries. It receives your inquiry details to help us follow up.",
-        "<strong>AI drafting,</strong> if we turn it on. Your inquiry details may be sent to Anthropic, our AI provider, to draft a reply. A team member reviews every draft before anything is sent to you.",
-        "<strong>When the law requires it,</strong> or to protect our rights, our clients or the public."
-      ]},
-      {"p": "Some pages load content from other companies. The site's typefaces come from Google Fonts, so your browser connects to Google when a page loads. Listing videos and 3D tours (from providers such as YouTube, Vimeo, Matterport, Kuula or CloudPano) load only when you press play, and those companies' own privacy policies apply from then on. Links to Facebook, Instagram or TikTok posts, and map links to Google Maps, open those sites."}
-    ]},
-    {"h": "Email, calls and texts", "blocks": [
-      {"p": "If you give us a phone number, we may call or text it to answer your inquiry. We do not send marketing text messages unless you separately agree to receive them; if you ever receive a text from us you would rather not get, reply STOP or tell us. Marketing email goes only to people who opted in, and you can unsubscribe from any of our emails with one click."}
-    ]},
-    {"h": "How long we keep it", "blocks": [
-      {"p": "Inquiries that do not lead to working together are deleted after 24 months with no activity. Records of clients and transactions are kept for as long as the law and our brokerage require. When you unsubscribe, we keep a record of that so we never email you again."}
-    ]},
-    {"h": "Your choices", "blocks": [
-      {"p": "You can ask us to show you the personal information we hold about you, to correct it, to give you a copy, or to delete it, except for records we must keep by law. You can unsubscribe from email at any time. To make a request, contact us using the details below; we may need to confirm it is you before we act on it."}
-    ]},
-    {"h": "Security", "blocks": [
-      {"p": "The site uses an encrypted (HTTPS) connection, and access to inquiries is limited to the team. No method of sending or storing information is completely secure. Please do not send Social Security numbers, bank or card details through our forms."}
-    ]},
-    {"h": "Children", "blocks": [
-      {"p": "This site is not directed to children under 13, and we do not knowingly collect their information."}
-    ]},
-    {"h": "Do Not Track", "blocks": [
-      {"p": "Some browsers send a \"Do Not Track\" signal. Because this site does not track visitors across other websites, it does not change how it works when it receives one."}
-    ]},
-    {"h": "Changes to this policy", "blocks": [
-      {"p": "If we change this policy, we will post the new version on this page and update the date at the top."}
-    ]},
-    {"h": "Contact us", "blocks": [
-      {"p": "Questions or requests about your information: call or text {phone}, use the form on our <a href=\"{contact}\">Contact page</a>, or write to The Oberdorfer Team, {address}."}
-    ]}
+    {
+      "h": "What we collect",
+      "blocks": [
+        {
+          "p": "<strong>Information you give us.</strong> When you send a form on this site (a message, a buyer or seller consultation, a showing request, a market review, a recruiting inquiry or a newsletter signup), we collect what you enter. Depending on the form, that is your name, email address, phone number, your message, how you prefer to be contacted, your timing, the towns you are considering, a property address, and whether you hold a Massachusetts real estate license. We also record whether you ticked the box to receive marketing email, and when."
+        },
+        {
+          "p": "<strong>Information collected automatically.</strong> Like most websites, our hosting and security providers keep technical logs (such as IP address, browser type and the pages requested) to run and protect the site."
+        },
+        {
+          "p": "<strong>One cookie, after you contact us.</strong> After you send a form, the site sets a cookie named <code>ot_lid</code> in your browser for up to one year. While it is there, the site notes which pages of this site you view, so the team can follow up on what you were looking at; if you read a town guide, that town is added to the updates you asked for. It is not set before you contact us, it is not used on other websites, and you can delete it at any time in your browser settings."
+        },
+        {
+          "p": "We do not use advertising trackers, and we do not use analytics tools that follow you across other websites."
+        }
+      ]
+    },
+    {
+      "h": "How we use it",
+      "blocks": [
+        {
+          "ul": [
+            "To answer your inquiry and send it to the right agent on the team.",
+            "To send you a short confirmation that we received your message.",
+            "To send market updates, new listings or our newsletter, only if you opted in. Every one of those emails has an unsubscribe link.",
+            "To keep the records a Massachusetts real estate brokerage is required to keep.",
+            "To keep the site secure and to stop spam."
+          ]
+        }
+      ]
+    },
+    {
+      "h": "Who we share it with",
+      "blocks": [
+        {
+          "p": "We do not sell your personal information, and we do not share it with anyone for their own advertising. We share it only as follows:"
+        },
+        {
+          "ul": [
+            "<strong>The team and our brokerage.</strong> Brandon and Kaitlyn Oberdorfer, the agents who work with them, and REWAP Brokerage LLC, which supervises our work.",
+            "<strong>Service providers who run the site and our email for us:</strong> our web host (Cloudways), Cloudflare (domain and security), and Brevo, which delivers our email and tells us when an email could not be delivered, was marked as spam, or had a link clicked.",
+            "<strong>A customer-relationship tool,</strong> if we or an agent on the team choose to use one to manage inquiries. It receives your inquiry details, and is told if you unsubscribe, so you are not emailed from there either.",
+            "<strong>AI drafting,</strong> if we turn it on. Your inquiry details may be sent to Anthropic, our AI provider, to draft a reply. A team member reviews every draft before anything is sent to you.",
+            "<strong>When the law requires it,</strong> or to protect our rights, our clients or the public."
+          ]
+        },
+        {
+          "p": "Some pages load content from other companies. The site's typefaces come from Google Fonts, so your browser connects to Google when a page loads. Listing videos and 3D tours (from providers such as YouTube, Vimeo, Matterport, Kuula or CloudPano) load only when you press play, and those companies' own privacy policies apply from then on. Links to Facebook, Instagram or TikTok posts, and map links to Google Maps, open those sites."
+        }
+      ]
+    },
+    {
+      "h": "Email, calls and texts",
+      "blocks": [
+        {
+          "p": "If you give us a phone number, we may call or text it to answer your inquiry. We do not send marketing text messages unless you separately agree to receive them; if you ever receive a text from us you would rather not get, reply STOP or tell us. Marketing email goes only to people who opted in, and you can unsubscribe from any of our emails with one click."
+        }
+      ]
+    },
+    {
+      "h": "How long we keep it",
+      "blocks": [
+        {
+          "p": "Inquiries that do not lead to working together are deleted after 24 months with no activity. Records of clients and transactions are kept for as long as the law and our brokerage require. When you unsubscribe, we keep a record of that so we never email you again."
+        }
+      ]
+    },
+    {
+      "h": "Your choices",
+      "blocks": [
+        {
+          "p": "You can ask us to show you the personal information we hold about you, to correct it, to give you a copy, or to delete it, except for records we must keep by law. You can unsubscribe from email at any time. To make a request, contact us using the details below; we may need to confirm it is you before we act on it."
+        }
+      ]
+    },
+    {
+      "h": "Security",
+      "blocks": [
+        {
+          "p": "The site uses an encrypted (HTTPS) connection, and access to inquiries is limited to the team. No method of sending or storing information is completely secure. Please do not send Social Security numbers, bank or card details through our forms."
+        }
+      ]
+    },
+    {
+      "h": "Children",
+      "blocks": [
+        {
+          "p": "This site is not directed to children under 13, and we do not knowingly collect their information."
+        }
+      ]
+    },
+    {
+      "h": "Do Not Track",
+      "blocks": [
+        {
+          "p": "Some browsers send a \"Do Not Track\" signal. Because this site does not track visitors across other websites, it does not change how it works when it receives one."
+        }
+      ]
+    },
+    {
+      "h": "Changes to this policy",
+      "blocks": [
+        {
+          "p": "If we change this policy, we will post the new version on this page and update the date at the top."
+        }
+      ]
+    },
+    {
+      "h": "Contact us",
+      "blocks": [
+        {
+          "p": "Questions or requests about your information: call or text {phone}, use the form on our <a href=\"{contact}\">Contact page</a>, or write to The Oberdorfer Team, {address}."
+        }
+      ]
+    }
   ]
 }

@@ -27,6 +27,9 @@ const OT_EVENT_LABELS = array(
 	'crm_failed'   => 'CRM delivery failed',
 	'exported'     => 'Exported',
 	'viewed_by'    => 'Viewed',
+	'signal'       => 'Back on the site',
+	'touch'        => 'Logged',
+	'merged'       => 'Merged a duplicate',
 );
 
 function ot_leads_event_text( $e ) {
@@ -50,6 +53,12 @@ function ot_leads_event_text( $e ) {
 		case 'reply':
 		case 'call_logged':
 			return nl2br( esc_html( $p['note'] ?? '' ) );
+		case 'signal':
+			return esc_html( $p['why'] ?? '' );
+		case 'touch':
+			return esc_html( ( OT_TOUCH_OUTCOMES[ $p['outcome'] ?? '' ] ?? '' ) . ( ! empty( $p['next'] ) ? ' · next: ' . $p['next'] : '' ) ) . ( ! empty( $p['note'] ) ? '<br>' . nl2br( esc_html( $p['note'] ) ) : '' );
+		case 'merged':
+			return esc_html( ( $p['name'] ?? '' ) . ' <' . ( $p['email'] ?? '' ) . '>' );
 		case 'crm_failed':
 			return esc_html( ( $p['connector'] ?? '' ) . ': ' . ( $p['error'] ?? '' ) );
 	}
@@ -172,7 +181,9 @@ function ot_leads_lead_screen() {
 	}
 	echo '</div><div>';
 
-	// Timeline and notes.
+	// One-tap logging, possible duplicates, then the timeline.
+	echo ot_leads_touch_card( $id ); // phpcs:ignore WordPress.Security.EscapeOutput
+	echo ot_leads_duplicate_card( $lead ); // phpcs:ignore WordPress.Security.EscapeOutput
 	echo '<div class="ot-card"><h2>Add to the timeline</h2>' . ot_leads_form( 'note', $id ) . '<textarea name="note" rows="3" style="width:100%" placeholder="What happened, what they said, what is next"></textarea><p><label><input type="radio" name="kind" value="note" checked> Note</label> &nbsp; <label><input type="radio" name="kind" value="call_logged"> Call</label> &nbsp; <label><input type="radio" name="kind" value="reply"> They replied <span class="ot-muted">(stops the sales sequence)</span></label></p><p><button class="button button-primary">Add</button></p></form></div>'; // phpcs:ignore WordPress.Security.EscapeOutput
 	echo '<div class="ot-card"><h2>Timeline</h2><ul class="ot-timeline">';
 	foreach ( ot_lead_events( $id ) as $e ) {

@@ -82,6 +82,8 @@ Leads > Settings > Status shows when it last ran.
 
 ## 7. Optional
 
+- **An agent's own CRM:** Leads > Settings > Each agent's CRM. Their leads are forwarded there; choose whether their CRM or this site sends their follow-up emails. To let a CRM tell the site about unsubscribes or stage changes, give it the endpoint and bearer token shown on that card.
+
 - **Outside CRM:** Leads > Settings > Outside CRM. A Zapier or Make webhook, or Follow Up Boss (API key, plus the X-System name and key from registering the integration with Follow Up Boss).
 - **AI drafting:** an Anthropic API key (`define( 'OT_LEADS_ANTHROPIC_KEY', '…' );`), then tick AI drafting. Off by default; every draft waits for approval unless a team leader sets a sequence to send automatically.
 

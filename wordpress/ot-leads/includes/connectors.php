@@ -12,31 +12,61 @@
  *   /events over /people because it de-duplicates, runs lead flow and alerts the agent.
  *
  * Modes (Settings > CRM): built-in only (default), built-in + forward, forward only.
+ *
+ * Each agent can also have their own CRM (Settings > Each agent's CRM, agent-crm.php): their
+ * leads go there too, as "webhook@<agent>" or "fub@<agent>" in the outbox, whatever the
+ * team-wide mode. The payload's "event" says why it was sent: lead, assigned or unsubscribed.
  */
 
 defined( 'ABSPATH' ) || exit;
 
 const OT_OUTBOX_DELAYS = array( 60, 300, 1800, 7200, 43200 );
 
-function ot_leads_connectors() {
-	if ( 'builtin' === ot_leads_opt( 'crm_mode' ) ) {
-		return array();
-	}
+/** Where a lead is forwarded: the team-wide connectors (unless built-in only), then its agent's own. */
+function ot_leads_connectors( $lead = null ) {
 	$out = array();
-	if ( filter_var( (string) ot_leads_opt( 'webhook_url' ), FILTER_VALIDATE_URL ) && str_starts_with( (string) ot_leads_opt( 'webhook_url' ), 'https://' ) ) {
-		$out[] = 'webhook';
+	if ( 'builtin' !== ot_leads_opt( 'crm_mode' ) ) {
+		if ( ot_leads_https( (string) ot_leads_opt( 'webhook_url' ) ) ) {
+			$out[] = 'webhook';
+		}
+		if ( ot_leads_opt( 'fub_key' ) ) {
+			$out[] = 'fub';
+		}
 	}
-	if ( ot_leads_opt( 'fub_key' ) ) {
-		$out[] = 'fub';
+	$slug = $lead['assigned_agent'] ?? '';
+	if ( $slug ) {
+		$cfg = ot_leads_agent_cfg( $slug );
+		if ( ot_leads_https( $cfg['webhook_url'] ) ) {
+			$out[] = 'webhook@' . $slug;
+		}
+		if ( $cfg['fub_key'] ) {
+			$out[] = 'fub@' . $slug;
+		}
 	}
 	return $out;
 }
 
+function ot_leads_https( $url ) {
+	return (bool) filter_var( $url, FILTER_VALIDATE_URL ) && str_starts_with( $url, 'https://' );
+}
+
+/** A connector id's settings: the team-wide ones, or the named agent's. */
+function ot_leads_connector_cfg( $connector ) {
+	list( $kind, $slug ) = array_pad( explode( '@', $connector, 2 ), 2, '' );
+	if ( $slug ) {
+		$a = ot_leads_agent_cfg( $slug );
+		return array( 'kind' => $kind, 'agent' => $slug, 'url' => $a['webhook_url'], 'secret' => $a['webhook_secret'], 'fub_key' => $a['fub_key'] );
+	}
+	return array( 'kind' => $kind, 'agent' => '', 'url' => (string) ot_leads_opt( 'webhook_url' ), 'secret' => (string) ot_leads_opt( 'webhook_secret' ), 'fub_key' => (string) ot_leads_opt( 'fub_key' ) );
+}
+
 /** The lead as forwarded: contact details, what it is about, and the form's message. */
-function ot_leads_payload( $lead, $form ) {
+function ot_leads_payload( $lead, $form, $event = 'lead' ) {
 	$agent = ot_leads_agents()[ $lead['assigned_agent'] ] ?? array();
 	return array(
+		'event'      => $event,
 		'id'         => (int) $lead['id'],
+		'stage'      => $lead['stage'],
 		'source'     => 'oberdorferteam.com',
 		'type'       => $lead['lead_type'],
 		'context'    => $form['context'] ?? $lead['context'],
@@ -57,19 +87,27 @@ function ot_leads_payload( $lead, $form ) {
 	);
 }
 
-function ot_leads_outbox_add( $lead, $form ) {
+function ot_leads_outbox_add( $lead, $form, $event = 'lead', $only = null ) {
 	global $wpdb;
-	foreach ( ot_leads_connectors() as $c ) {
+	$cons = ot_leads_connectors( $lead );
+	if ( null !== $only ) {
+		$cons = array_values( array_intersect( $cons, $only ) );
+	}
+	if ( 'unsubscribed' === $event ) {
+		// Follow Up Boss's events API cannot unsubscribe a person: webhooks only.
+		$cons = array_values( array_filter( $cons, fn( $c ) => str_starts_with( $c, 'webhook' ) ) );
+	}
+	foreach ( $cons as $c ) {
 		$wpdb->insert( ot_leads_table( 'outbox' ), array(
 			'lead_id'         => $lead['id'],
 			'connector'       => $c,
-			'payload'         => wp_json_encode( ot_leads_payload( $lead, $form ), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ),
+			'payload'         => wp_json_encode( ot_leads_payload( $lead, $form, $event ), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ),
 			'next_attempt_at' => ot_leads_now(),
 			'state'           => 'pending',
 			'created_at'      => ot_leads_now(),
 		) );
 	}
-	if ( ot_leads_connectors() ) {
+	if ( $cons ) {
 		ot_leads_outbox_run( 5 ); // try at once; the scheduler retries anything that fails
 	}
 }
@@ -80,7 +118,8 @@ function ot_leads_outbox_run( $max = 20 ) {
 	$t    = ot_leads_table( 'outbox' );
 	$rows = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $t WHERE state = 'pending' AND next_attempt_at <= %s ORDER BY id ASC LIMIT %d", ot_leads_now(), $max ), ARRAY_A );
 	foreach ( $rows as $row ) {
-		list( $ok, $err ) = 'fub' === $row['connector'] ? ot_leads_send_fub( $row ) : ot_leads_send_webhook( $row );
+		$cfg = ot_leads_connector_cfg( $row['connector'] );
+		list( $ok, $err ) = 'fub' === $cfg['kind'] ? ot_leads_send_fub( $row, $cfg ) : ot_leads_send_webhook( $row, $cfg );
 		$attempts = (int) $row['attempts'] + 1;
 		if ( $ok ) {
 			$wpdb->update( $t, array( 'state' => 'sent', 'attempts' => $attempts, 'last_error' => '' ), array( 'id' => $row['id'] ) );
@@ -96,17 +135,21 @@ function ot_leads_outbox_run( $max = 20 ) {
 	}
 }
 
-function ot_leads_send_webhook( $row ) {
+function ot_leads_send_webhook( $row, $cfg = null ) {
+	$cfg  = $cfg ?: ot_leads_connector_cfg( 'webhook' );
+	if ( ! ot_leads_https( $cfg['url'] ) ) {
+		return array( false, 'No https webhook URL is set' );
+	}
 	$ts   = (string) time();
 	$id   = 'ot-' . $row['id'] . '-' . $row['attempts'];
 	$body = $row['payload'];
-	$res  = wp_remote_post( (string) ot_leads_opt( 'webhook_url' ), array(
+	$res  = wp_remote_post( $cfg['url'], array(
 		'timeout' => 10,
 		'headers' => array(
 			'Content-Type'   => 'application/json',
 			'X-OT-Timestamp' => $ts,
 			'X-OT-Id'        => $id,
-			'X-OT-Signature' => hash_hmac( 'sha256', $ts . '.' . $id . '.' . $body, (string) ot_leads_opt( 'webhook_secret' ) ),
+			'X-OT-Signature' => hash_hmac( 'sha256', $ts . '.' . $id . '.' . $body, (string) $cfg['secret'] ),
 		),
 		'body'    => $body,
 	) );
@@ -117,8 +160,12 @@ function ot_leads_send_webhook( $row ) {
 	return array( $code >= 200 && $code < 300, 'HTTP ' . $code );
 }
 
-function ot_leads_send_fub( $row ) {
+function ot_leads_send_fub( $row, $cfg = null ) {
+	$cfg  = $cfg ?: ot_leads_connector_cfg( 'fub' );
 	$p    = json_decode( $row['payload'], true );
+	if ( ! $cfg['fub_key'] ) {
+		return array( false, 'No Follow Up Boss API key is set' );
+	}
 	$type = array( 'showing' => 'Property Inquiry', 'openhouse' => 'Visited Open House', 'seller' => 'Seller Inquiry', 'newsletter' => 'Registration', 'listings' => 'Registration', 'community' => 'General Inquiry' )[ $p['type'] ] ?? 'General Inquiry';
 	$ev   = array(
 		'source'      => 'oberdorferteam.com',
@@ -140,7 +187,7 @@ function ot_leads_send_fub( $row ) {
 	$res = wp_remote_post( 'https://api.followupboss.com/v1/events', array(
 		'timeout' => 10,
 		'headers' => array(
-			'Authorization' => 'Basic ' . base64_encode( ot_leads_opt( 'fub_key' ) . ':' ),
+			'Authorization' => 'Basic ' . base64_encode( $cfg['fub_key'] . ':' ),
 			'Content-Type'  => 'application/json',
 			'X-System'      => (string) ot_leads_opt( 'fub_system' ),
 			'X-System-Key'  => (string) ot_leads_opt( 'fub_system_key' ),

@@ -76,12 +76,25 @@ function ot_nurture_default_sequences() {
 				array( 'day' => 90, 'subject' => 'How is the new home?', 'body' => "<p>Hi {first_name},</p><p>It has been a few months since your move. I hope the home is treating you well. If anything comes up, a contractor, a question about your assessment, a friend who is thinking of moving, I am always glad to help.</p>" . $sig, 'repeat' => 91 ),
 			),
 		),
+		'anniversary' => array(
+			'name'   => 'Home anniversary',
+			'when'   => 'A lead moved to Closed: once a year, on the anniversary of that day',
+			'mode'   => 'manual',
+			'active' => 1,
+			'steps'  => array(
+				array( 'day' => 365, 'subject' => 'Happy home anniversary, {first_name}', 'body' => "<p>Hi {first_name},</p><p>It has been another year since you got the keys. Happy home anniversary.</p><p>If you would ever like to know what homes like yours have recently sold for nearby, reply and I will put together a short review. No obligation, and no need to be thinking of selling.</p>" . $sig, 'repeat' => 365 ),
+			),
+		),
 	);
 }
 
 function ot_nurture_sequences() {
 	$saved = get_option( 'ot_leads_sequences' );
-	return is_array( $saved ) && $saved ? $saved : ot_nurture_default_sequences();
+	if ( ! is_array( $saved ) || ! $saved ) {
+		return ot_nurture_default_sequences();
+	}
+	// Sequences added in an update (Home anniversary, v0.9) join the team's saved ones.
+	return $saved + array_diff_key( ot_nurture_default_sequences(), $saved );
 }
 
 /* --------------------------------------------------------------------- enrollment */
@@ -95,7 +108,8 @@ function ot_nurture_enroll( $lead_id, $seq_key, $actor = 'system' ) {
 	global $wpdb;
 	$seqs = ot_nurture_sequences();
 	$lead = ot_lead( $lead_id );
-	if ( ! $lead || empty( $seqs[ $seq_key ]['active'] ) || ot_nurture_enrolled( $lead_id, $seq_key ) || ! ot_lead_has_consent( $lead['email'] ) || 'forward' === ot_leads_opt( 'crm_mode' ) ) {
+	// Never both: an agent whose own CRM sends follow-up gets no sequences from the site.
+	if ( ! $lead || empty( $seqs[ $seq_key ]['active'] ) || ot_nurture_enrolled( $lead_id, $seq_key ) || ! ot_lead_has_consent( $lead['email'] ) || 'forward' === ot_leads_opt( 'crm_mode' ) || ot_leads_agent_crm_nurtures( (string) $lead['assigned_agent'] ) ) {
 		return false;
 	}
 	$first = (int) ( $seqs[ $seq_key ]['steps'][0]['day'] ?? 0 );
@@ -166,6 +180,7 @@ add_action( 'ot_lead_stage_changed', function ( $id, $to ) {
 	}
 	if ( 'closed' === $to ) {
 		ot_nurture_enroll( $id, 'past' );
+		ot_nurture_enroll( $id, 'anniversary' );
 	}
 }, 10, 2 );
 

@@ -90,6 +90,7 @@ function ot_leads_settings_screen() {
 		. $row( 'Spam protection', ot_leads_opt( 'turnstile_site' ) && ot_leads_opt( 'turnstile_secret' ) ? '<span class="ot-pill ot-pill--ok">Turnstile, honeypot, rate limit</span>' : '<span class="ot-pill">Honeypot and rate limit</span> Add Turnstile keys for stronger protection.' )
 		. $row( 'Scheduler', $tick ? 'Last ran ' . esc_html( human_time_diff( $tick ) ) . ' ago' . ( $tick < time() - 600 ? ' <span class="ot-pill ot-pill--bad">Not running often</span> Set up the server cron (see below).' : '' ) : '<span class="ot-pill ot-pill--bad">Not yet run</span>' )
 		. $row( 'Postal address in emails', esc_html( OT_LEADS_ADDRESS ) )
+		. $row( 'Health', ot_leads_health_html() )
 		. '</table>' . ot_leads_form( 'test_email' ) . '<button class="button">Send me a test email</button></form></div>'; // phpcs:ignore WordPress.Security.EscapeOutput
 
 	echo ot_leads_form( 'settings' ); // phpcs:ignore WordPress.Security.EscapeOutput
@@ -166,5 +167,6 @@ function ot_leads_settings_screen() {
 		. '</table></div>';
 
 	echo '<p><button class="button button-primary">Save settings</button></p></form>';
+	echo ot_leads_agent_crm_card(); // phpcs:ignore WordPress.Security.EscapeOutput
 	echo '<div class="ot-card"><h2>Server cron (Cloudways)</h2><p>So alerts escalate and emails send on time, add <code>define( \'DISABLE_WP_CRON\', true );</code> to wp-config.php and, in Cloudways > Application Settings > Cron Job Management, a job every minute:</p><p><code>* * * * * wget -q -O - "' . esc_html( site_url( 'wp-cron.php?doing_wp_cron' ) ) . '" &gt;/dev/null 2&gt;&amp;1</code></p></div></div>';
 }

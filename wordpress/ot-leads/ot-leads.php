@@ -3,7 +3,7 @@
  * Plugin Name:       Oberdorfer Leads
  * Plugin URI:        https://oberdorferteam.com/
  * Description:       The team's built-in CRM: every form on the site saves here; leads are routed to the right agent with instant alerts, worked in an inbox and pipeline, forwarded to an outside CRM if chosen, and nurtured by email (Brevo) with AI drafts a person approves. Spec: docs/leads-crm-nurture-spec.md.
- * Version:           0.8.2
+ * Version:           0.9.0
  * Requires at least: 7.1
  * Requires PHP:      8.3
  * Requires Plugins:  ot-core
@@ -19,17 +19,17 @@
 
 defined( 'ABSPATH' ) || exit;
 
-const OT_LEADS_VERSION = '0.8.2';
-const OT_LEADS_DB      = 1; // bump when a table changes; ot_leads_install() runs dbDelta again
+const OT_LEADS_VERSION = '0.9.0';
+const OT_LEADS_DB      = 2; // bump when a table changes; ot_leads_install() runs dbDelta again
 
 define( 'OT_LEADS_DIR', __DIR__ );
 define( 'OT_LEADS_URL', plugins_url( '', __FILE__ ) );
 
-foreach ( array( 'schema', 'model', 'mail', 'capture', 'routing', 'connectors', 'nurture', 'ai', 'cron', 'privacy' ) as $f ) {
+foreach ( array( 'schema', 'model', 'mail', 'capture', 'routing', 'connectors', 'agent-crm', 'nurture', 'signals', 'ai', 'cron', 'privacy', 'health' ) as $f ) {
 	require_once OT_LEADS_DIR . '/includes/' . $f . '.php';
 }
 if ( is_admin() ) {
-	foreach ( array( 'admin', 'admin-inbox', 'admin-lead', 'admin-board', 'admin-queue', 'admin-sequences', 'admin-newsletter', 'admin-settings' ) as $f ) {
+	foreach ( array( 'admin', 'admin-inbox', 'admin-lead', 'admin-today', 'admin-board', 'admin-queue', 'admin-sequences', 'admin-newsletter', 'admin-reports', 'admin-settings' ) as $f ) {
 		require_once OT_LEADS_DIR . '/includes/' . $f . '.php';
 	}
 }
