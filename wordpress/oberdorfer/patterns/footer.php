@@ -148,7 +148,7 @@ $u = fn( $p ) => esc_url( oberdorfer_url( $p ) );
 
 <!-- wp:group {"className":"stack ot-stack-3","layout":{"type":"default"}} -->
 <div class="wp-block-group stack ot-stack-3"><!-- wp:paragraph {"className":"disclosure"} -->
-<p class="disclosure"><strong>The Oberdorfer Team</strong> is a real estate team operating under <strong>REWAP Brokerage LLC</strong>, Massachusetts. Office: <?php echo esc_html( oberdorfer_address() ); ?>. Brokerage license number and required team disclosures [to be supplied and approved by the principal broker]. Listing information is provided by [MLS name] and is deemed reliable but not guaranteed.</p>
+<p class="disclosure"><strong>The Oberdorfer Team</strong> is a real estate team operating under <strong>REWAP Brokerage LLC</strong>, a licensed Massachusetts real estate broker. Office: <?php echo esc_html( oberdorfer_address() ); ?>. Information is deemed reliable but not guaranteed.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:html -->

@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.7.4
+Stable tag: 0.7.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,9 @@ Fonts: Cormorant Garamond and Manrope (SIL Open Font License 1.1), loaded from G
 this version; self-hosting is a launch task.
 
 == Changelog ==
+
+= 0.7.5 =
+* Footer: the brokerage line now reads "operating under REWAP Brokerage LLC, a licensed Massachusetts real estate broker". The brokerage-license-number and [MLS name] placeholders are removed: Massachusetts requires the brokerage's name and broker status on every page, not its license number, and the MLS credit returns with the IDX feed.
 
 = 0.7.4 =
 * Version moves with ot-core 0.7.4. No theme changes.
