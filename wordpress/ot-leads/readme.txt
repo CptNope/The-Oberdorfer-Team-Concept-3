@@ -2,7 +2,7 @@
 Contributors: oberdorferteam
 Requires at least: 7.1
 Requires PHP: 8.3
-Stable tag: 0.7.3
+Stable tag: 0.7.4
 License: GPL-2.0-or-later
 
 The Oberdorfer Team's built-in CRM: lead capture, routing and alerts, inbox and pipeline, CRM forwarding, email nurture through Brevo, and AI drafts a person approves.
@@ -14,6 +14,9 @@ Every form on oberdorferteam.com saves here first. Leads are routed to the right
 Requires the ot-core plugin.
 
 == Changelog ==
+
+= 0.7.4 =
+* Version moves with ot-core 0.7.4. No changes.
 
 = 0.7.3 =
 * Version moves with ot-core 0.7.3. No changes.

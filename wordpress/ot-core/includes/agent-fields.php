@@ -20,7 +20,7 @@ function ot_agent_field_defs() {
 		'ot_phone'        => array( 'direct', 'Direct phone', 'text', 'For example, 978-257-4938. The Call button dials it.' ),
 		'ot_email'        => array( 'email', 'Email', 'text', '' ),
 		'ot_specialties'  => array( 'specialties', 'Specialties', 'text', 'For example, First-time buyers · Sellers · Multi-family.' ),
-		'ot_languages'    => array( 'languages', 'Languages', 'text', 'For example, English, Spanish.' ),
+		'ot_languages'    => array( 'languages', 'Languages', 'text', 'For example, English, Spanish. Not shown on the profile for now.' ),
 		'ot_service_area' => array( 'service_area', 'Service area', 'text', 'Empty shows Massachusetts.' ),
 		'ot_license'      => array( 'license', 'MA license number', 'text', 'Shown only once entered; verify it with the Board of Registration first.' ),
 		'ot_accolades'    => array( 'accolades', 'Recognition', 'accolades', 'One per line: the award, a vertical bar, then where it comes from (kept for your records; only the award shows on the page). For example: Top Producer | Wakefield at Home, Fall 2026. Verified claims only.' ),

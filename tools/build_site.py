@@ -1273,8 +1273,7 @@ def page_profile(a):
         ("Service area", "Massachusetts" if not tpl else ph("Service areas")),
         # Hidden on a profile until the agent lists specialties; the template shows where they go.
         ("Specialties", ph("Specialties to confirm")) if tpl else (("Specialties", a["specialties"]) if a.get("specialties") else None),
-        # Languages: left out until confirmed (team request, 2026-11-10); the template shows where it goes.
-        ("Languages", ph("Languages to confirm")) if tpl else (("Languages", a["languages"]) if a.get("languages") else None),
+        # Languages: not shown on profiles (team request, 2026-11-10).
         ("Phone", ph("Direct phone") if tpl else
                   (f'<a href="tel:{TEL}">{PHONE}</a> (direct, and the team line)' if a.get("direct") == PHONE else
                    f'<a href="tel:+1{a["direct"].replace("-", "")}">{a["direct"]}</a> (direct) · team line <a href="tel:{TEL}">{PHONE}</a>' if a.get("direct") else

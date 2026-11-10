@@ -115,8 +115,7 @@ function ot_render_person_section( $section, $x ) {
 		array( 'Service area', ! empty( $r['service_area'] ) ? esc_html( $r['service_area'] ) : 'Massachusetts' ),
 		// Left out entirely until the agent lists specialties in "Agent details".
 		! empty( trim( (string) ( $r['specialties'] ?? '' ) ) ) ? array( 'Specialties', esc_html( $r['specialties'] ) ) : null,
-		// Left out until languages are entered in "Agent details" (team request, 2026-11-10).
-		! empty( trim( (string) ( $r['languages'] ?? '' ) ) ) ? array( 'Languages', esc_html( $r['languages'] ) ) : null,
+		// Languages are not shown on profiles (team request, 2026-11-10); the field stays in Agent details.
 		array( 'Phone', $phone ),
 		array( 'Email', ! empty( $r['email'] ) ? '<a href="mailto:' . esc_attr( $r['email'] ) . '">' . esc_html( $r['email'] ) . '</a>' : ot_ph( 'Email to confirm' ) ),
 		array( 'Online', '<a href="' . OT_INSTAGRAM . '" rel="noopener">Instagram @oberdorferteam</a>' . ( ! empty( $r['card'] ) ? ' · <a href="' . esc_url( $r['card'] ) . '" rel="noopener">Digital card</a>' : '' ) ),
