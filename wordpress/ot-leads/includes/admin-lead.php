@@ -70,7 +70,11 @@ function ot_leads_lead_screen() {
 	$id   = (int) ( $_GET['id'] ?? 0 );
 	$lead = ot_lead( $id );
 	if ( ! $lead || ! ot_leads_can_see( $lead ) ) {
-		echo '<div class="wrap"><h1>Lead not found</h1><p>It may have been deleted, or it is assigned to another agent.</p></div>';
+		ot_leads_shell( 'inbox' );
+		echo '<div class="wrap ot-wrap">';
+		ot_leads_head( 'Lead not found', 'It may have been deleted, or it is assigned to another agent. <a href="' . esc_url( admin_url( 'admin.php?page=ot-leads' ) ) . '">Back to all leads</a>' );
+		echo '</div>';
+		ot_leads_shell_end();
 		return;
 	}
 	$k = 'ot_viewed_' . get_current_user_id() . '_' . $id;
@@ -87,9 +91,14 @@ function ot_leads_lead_screen() {
 	$msgs    = $wpdb->get_results( $wpdb->prepare( 'SELECT id, subject, status, kind, created_at, sent_at FROM ' . ot_leads_table( 'messages' ) . ' WHERE lead_id = %d ORDER BY id DESC LIMIT 20', $id ), ARRAY_A );
 	$seqs    = ot_nurture_sequences();
 
-	echo '<div class="wrap ot-wrap"><p><a href="' . esc_url( admin_url( 'admin.php?page=ot-leads' ) ) . '">← Inbox</a></p><h1>' . esc_html( ot_lead_name( $lead ) ) . ' ' . ot_leads_stage_pill( $lead['stage'] ) . ' <span class="ot-pill' . ( 'Warm' === $intent[0] ? ' ot-pill--warm' : '' ) . '" title="' . esc_attr( $intent[1] ) . '">' . esc_html( $intent[0] ) . '</span></h1>'; // phpcs:ignore WordPress.Security.EscapeOutput
+	ot_leads_shell( 'inbox' );
+	$waited = ! $lead['contacted_at'] ? 'Waiting ' . human_time_diff( strtotime( $lead['created_at'] . ' UTC' ) ) . ' for a first reply' : '';
+	echo '<div class="wrap ot-wrap"><div class="ot-lead-head"><div><a class="ot-back" href="' . esc_url( admin_url( 'admin.php?page=ot-leads' ) ) . '"><span class="dashicons dashicons-arrow-left-alt2" aria-hidden="true"></span>All leads</a><h1 class="ot-title">' . esc_html( ot_lead_name( $lead ) ) . '</h1>'
+		. '<div class="ot-tags">' . ot_leads_stage_pill( $lead['stage'] ) . ' <span class="ot-pill' . ( 'Warm' === $intent[0] ? ' ot-pill--warm' : '' ) . '" title="' . esc_attr( $intent[1] ) . '">' . esc_html( $intent[0] ) . '</span> <span class="ot-pill">' . esc_html( OT_LEAD_TYPES[ $lead['lead_type'] ] ?? $lead['lead_type'] ) . '</span> <span class="ot-pill">' . esc_html( ot_leads_agent_name( $lead['assigned_agent'] ) ) . '</span>' . ( $waited ? ' <span class="ot-pill ot-pill--late">' . esc_html( $waited ) . '</span>' : '' ) . '</div></div>'
+		. '<div class="ot-quick">' . ot_leads_contact_buttons( $lead ) . '</div></div><hr class="wp-header-end" style="display:none">'; // phpcs:ignore WordPress.Security.EscapeOutput
 	ot_leads_notice();
 	echo '<div class="ot-grid"><div>';
+	echo ot_leads_touch_card( $id ); // phpcs:ignore WordPress.Security.EscapeOutput
 
 	// Status and assignment.
 	echo '<div class="ot-card"><h2>Status</h2>' . ot_leads_form( 'update', $id ) . '<table class="form-table"><tr><th>Stage</th><td><select name="stage">'; // phpcs:ignore WordPress.Security.EscapeOutput
@@ -115,7 +124,7 @@ function ot_leads_lead_screen() {
 		. '<tr><th>Phone</th><td>' . ( $lead['phone'] ? '<a href="tel:' . esc_attr( $tel ) . '">' . esc_html( $lead['phone'] ) . '</a> · <a href="sms:' . esc_attr( $tel ) . '">Text</a>' : '<span class="ot-muted">Not given</span>' ) . '</td></tr>'
 		. '<tr><th>Prefers</th><td>' . esc_html( ucfirst( $lead['preferred'] ) ?: '—' ) . '</td></tr>'
 		. '<tr><th>Type</th><td>' . esc_html( OT_LEAD_TYPES[ $lead['lead_type'] ] ?? $lead['lead_type'] ) . ( $lead['topic'] ? ' · ' . esc_html( $lead['topic'] ) : '' ) . '</td></tr>'
-		. '<tr><th>Towns</th><td>' . esc_html( str_replace( ',', ', ', $lead['towns'] ) ?: '—' ) . '</td></tr>'
+		. '<tr><th>Towns</th><td>' . esc_html( ot_leads_towns_label( $lead['towns'] ) ?: '—' ) . '</td></tr>'
 		. ( $lead['listing_id'] ? '<tr><th>Listing</th><td><a href="' . esc_url( get_permalink( $lead['listing_id'] ) ) . '">' . esc_html( get_the_title( $lead['listing_id'] ) ) . '</a></td></tr>' : '' )
 		. '<tr><th>Email updates</th><td>' . ( $consent ? '<span class="ot-pill ot-pill--ok">Consented</span>' : '<span class="ot-pill">No consent</span>' ) . ( ot_leads_suppressed( $lead['email'] ) ? ' <span class="ot-pill ot-pill--bad">Unsubscribed</span>' : '' ) . '</td></tr>'
 		. '<tr><th>Came from</th><td>' . esc_html( $lead['first_url'] ? wp_parse_url( $lead['first_url'], PHP_URL_PATH ) : '—' ) . ( $lead['referrer'] ? ' <span class="ot-muted">via ' . esc_html( wp_parse_url( $lead['referrer'], PHP_URL_HOST ) ) . '</span>' : '' ) . ( $utm ? '<br><span class="ot-muted">' . esc_html( http_build_query( $utm, '', ' · ' ) ) . '</span>' : '' ) . '</td></tr>'
@@ -137,11 +146,11 @@ function ot_leads_lead_screen() {
 	}
 
 	// Tasks.
-	echo '<div class="ot-card"><h2>Tasks</h2><ul>';
+	echo '<div class="ot-card"><h2>Tasks</h2><ul class="ot-tasks">';
 	foreach ( $tasks as $t ) {
 		echo '<li>' . ( $t['done_at'] ? '<s>' : '' ) . esc_html( ucfirst( $t['kind'] ) . ' · ' . ot_leads_time( $t['due_at'] ) ) . ( $t['note'] ? ' · ' . esc_html( $t['note'] ) : '' ) . ( $t['done_at'] ? '</s>' : ' ' . ot_leads_form( 'task_done', $id, 'style="display:inline"' ) . '<input type="hidden" name="task" value="' . (int) $t['id'] . '"><button class="button-link">Done</button></form>' ) . '</li>'; // phpcs:ignore WordPress.Security.EscapeOutput
 	}
-	echo '</ul>' . ot_leads_form( 'task', $id ) . '<select name="kind"><option value="call">Call</option><option value="email">Email</option><option value="text">Text</option><option value="meeting">Meeting</option><option value="other">Other</option></select> <input type="datetime-local" name="due" value="' . esc_attr( ( new DateTime( '+1 day 9:00', new DateTimeZone( 'America/New_York' ) ) )->format( 'Y-m-d\TH:i' ) ) . '"> <input type="text" name="note" placeholder="Note" style="width:12rem"> <button class="button">Add task</button></form></div>'; // phpcs:ignore WordPress.Security.EscapeOutput
+	echo ( $tasks ? '' : '<li class="ot-muted">No tasks. Logging a touch books the next one.</li>' ) . '</ul>' . ot_leads_form( 'task', $id, 'class="ot-inline-form"' ) . '<label class="screen-reader-text" for="ot-task-kind">Kind</label><select id="ot-task-kind" name="kind"><option value="call">Call</option><option value="email">Email</option><option value="text">Text</option><option value="meeting">Meeting</option><option value="other">Other</option></select> <input type="datetime-local" name="due" aria-label="Due" value="' . esc_attr( ( new DateTime( '+1 day 9:00', new DateTimeZone( 'America/New_York' ) ) )->format( 'Y-m-d\TH:i' ) ) . '"> <input type="text" name="note" aria-label="Task note" placeholder="Note" style="width:12rem"> <button class="button">Add task</button></form></div>'; // phpcs:ignore WordPress.Security.EscapeOutput
 
 	// Nurture.
 	echo '<div class="ot-card"><h2>Email nurture</h2>';
@@ -181,8 +190,7 @@ function ot_leads_lead_screen() {
 	}
 	echo '</div><div>';
 
-	// One-tap logging, possible duplicates, then the timeline.
-	echo ot_leads_touch_card( $id ); // phpcs:ignore WordPress.Security.EscapeOutput
+	// Possible duplicates, then the timeline (one-tap logging leads the first column).
 	echo ot_leads_duplicate_card( $lead ); // phpcs:ignore WordPress.Security.EscapeOutput
 	echo '<div class="ot-card"><h2>Add to the timeline</h2>' . ot_leads_form( 'note', $id ) . '<textarea name="note" rows="3" style="width:100%" placeholder="What happened, what they said, what is next"></textarea><p><label><input type="radio" name="kind" value="note" checked> Note</label> &nbsp; <label><input type="radio" name="kind" value="call_logged"> Call</label> &nbsp; <label><input type="radio" name="kind" value="reply"> They replied <span class="ot-muted">(stops the sales sequence)</span></label></p><p><button class="button button-primary">Add</button></p></form></div>'; // phpcs:ignore WordPress.Security.EscapeOutput
 	echo '<div class="ot-card"><h2>Timeline</h2><ul class="ot-timeline">';
@@ -193,4 +201,5 @@ function ot_leads_lead_screen() {
 		echo '<li><strong>' . esc_html( OT_EVENT_LABELS[ $e['type'] ] ?? $e['type'] ) . '</strong> <span class="when">' . esc_html( ot_leads_time( $e['created_at'] ) ) . ' · ' . esc_html( $e['actor'] ) . '</span><br>' . ot_leads_event_text( $e ) . '</li>'; // phpcs:ignore WordPress.Security.EscapeOutput
 	}
 	echo '</ul></div></div></div></div>';
+	ot_leads_shell_end();
 }

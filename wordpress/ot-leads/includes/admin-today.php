@@ -28,20 +28,49 @@ const OT_TOUCH_NEXT = array( 'called' => 0, 'voicemail' => 1, 'no_answer' => 1, 
 
 /** The one-tap buttons for a lead ($task: the task the row came from, closed on a tap). */
 function ot_leads_touch_form( $id, $task = 0, $compact = true ) {
-	$h = ot_leads_form( 'touch', $id, 'class="ot-touch"' ) . ( $task ? '<input type="hidden" name="task" value="' . (int) $task . '">' : '' );
+	$h = ot_leads_form( 'touch', $id, 'class="ot-touch"' ) . ( $task ? '<input type="hidden" name="task" value="' . (int) $task . '">' : '' ) . '<p class="ot-touch__label">What just happened?</p>';
 	foreach ( OT_TOUCH_OUTCOMES as $k => $label ) {
-		$h .= '<button class="button button-small" name="outcome" value="' . esc_attr( $k ) . '">' . esc_html( $label ) . '</button> ';
+		$h .= '<button class="button button-small" name="outcome" value="' . esc_attr( $k ) . '">' . esc_html( $label ) . '</button>';
 	}
-	$h .= '<select name="next" aria-label="Then follow up"><option value="auto">Next: automatic</option><option value="0">No follow-up</option><option value="1">Tomorrow</option><option value="3">In 3 days</option><option value="7">In a week</option><option value="14">In 2 weeks</option></select>';
+	$h .= '<label class="ot-touch__next">Then <select name="next"><option value="auto">follow up automatically</option><option value="0">no follow-up</option><option value="1">follow up tomorrow</option><option value="3">follow up in 3 days</option><option value="7">follow up in a week</option><option value="14">follow up in 2 weeks</option></select></label>';
 	if ( ! $compact ) {
-		$h .= '<p><input type="text" name="note" class="large-text" placeholder="Optional note: what they said, what is next"></p>';
+		$h .= '<p class="ot-touch__note"><input type="text" name="note" aria-label="Note" placeholder="Optional note: what they said, what is next"></p>';
 	}
 	return $h . '</form>';
+}
+
+/** The Log disclosure on a Today row. */
+function ot_leads_log_menu( $id, $task = 0 ) {
+	return '<details class="ot-log"><summary class="ot-btn">Log <span class="dashicons dashicons-arrow-down-alt2" aria-hidden="true"></span></summary><div class="ot-log__panel">' . ot_leads_touch_form( $id, $task ) . '</div></details>';
 }
 
 /** The lead screen's card. */
 function ot_leads_touch_card( $id ) {
 	return '<div class="ot-card"><h2>Log a touch</h2><p class="ot-muted" style="margin-top:-6px">Tap what just happened. It counts as the first reply, closes today\'s task and books the next one.</p>' . ot_leads_touch_form( $id, 0, false ) . '</div>';
+}
+
+/** Call, Text and Email as buttons, the person's preferred way first and filled. */
+function ot_leads_contact_buttons( $l ) {
+	$tel  = preg_replace( '/[^0-9+]/', '', (string) $l['phone'] );
+	$opts = array();
+	if ( $tel ) {
+		$opts['call'] = '<a class="ot-btn%s" href="tel:' . esc_attr( $tel ) . '"><span class="dashicons dashicons-phone" aria-hidden="true"></span>Call</a>';
+		$opts['text'] = '<a class="ot-btn%s" href="sms:' . esc_attr( $tel ) . '"><span class="dashicons dashicons-format-chat" aria-hidden="true"></span>Text</a>';
+	}
+	if ( $l['email'] ) {
+		$opts['email'] = '<a class="ot-btn%s" href="mailto:' . esc_attr( $l['email'] ) . '"><span class="dashicons dashicons-email" aria-hidden="true"></span>Email</a>';
+	}
+	$pref = isset( $opts[ $l['preferred'] ] ) ? $l['preferred'] : array_key_first( $opts );
+	$out  = '';
+	foreach ( $opts as $k => $html ) {
+		$out = $k === $pref ? sprintf( $html, ' ot-btn--primary' ) . $out : $out . sprintf( $html, '' );
+	}
+	return $out;
+}
+
+/** A time today as "9:42 am", otherwise "Mon, Nov 9". */
+function ot_leads_when( $utc ) {
+	return ot_leads_time( $utc, 'Y-m-d' ) === ( new DateTime( 'now', new DateTimeZone( 'America/New_York' ) ) )->format( 'Y-m-d' ) ? ot_leads_time( $utc, 'g:i a' ) : ot_leads_time( $utc, 'D, M j' );
 }
 
 add_action( 'ot_leads_admin_action', function ( $do, $id ) {
@@ -101,65 +130,104 @@ add_action( 'ot_leads_admin_action', function ( $do, $id ) {
 }, 10, 2 );
 
 function ot_leads_today_screen() {
+	global $wpdb;
 	$all   = current_user_can( 'ot_leads_view_all' );
 	$agent = $all ? sanitize_title( wp_unslash( $_GET['agent'] ?? '' ) ) : ot_leads_user_agent(); // phpcs:ignore WordPress.Security.NonceVerification
 	$d     = ot_leads_today_data( $agent );
-	$who   = fn( $l ) => '<a href="' . esc_url( ot_leads_admin_link( $l['id'] ) ) . '"><strong>' . esc_html( ot_lead_name( $l ) ) . '</strong></a>' . ( $all && ! $agent ? ' <span class="ot-muted">· ' . esc_html( ot_leads_agent_name( $l['assigned_agent'] ) ) . '</span>' : '' );
+	$late  = time() - (int) ot_leads_opt( 'response_minutes' ) * 60;
+	$owner = fn( $l ) => $all && ! $agent ? ot_leads_agent_name( $l['assigned_agent'] ) : '';
+	$about = fn( $l ) => $l['listing_id'] ? get_the_title( $l['listing_id'] ) : ( $l['towns'] ? ot_leads_towns_label( $l['towns'] ) : $l['topic'] );
+	$row   = function ( $l, $time, $meta, $is_late, $task = 0 ) {
+		return '<article class="ot-entry' . ( $is_late ? ' ot-entry--late' : '' ) . '"><div class="ot-entry__time">' . esc_html( $time ) . '</div><div><h3 class="ot-entry__who"><a href="' . esc_url( ot_leads_admin_link( $l['id'] ) ) . '">' . esc_html( ot_lead_name( $l ) ) . '</a></h3><p class="ot-entry__meta">' . $meta . '</p></div><div class="ot-entry__acts">' . ot_leads_contact_buttons( $l ) . ot_leads_log_menu( (int) $l['id'], $task ) . '</div></article>';
+	};
+	$meta  = fn( ...$bits ) => implode( ' · ', array_filter( $bits ) );
 
-	echo '<div class="wrap ot-wrap"><h1>Today</h1>';
+	$words = array( 'No', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine' );
+	$num   = fn( $n ) => $words[ $n ] ?? (string) $n;
+	$w     = count( $d['waiting'] );
+	$due   = count( $d['due'] );
+	$back  = count( $d['back'] );
+	if ( $w ) {
+		$title = esc_html( 1 === $w ? 'One person is waiting.' : $num( $w ) . ' people are waiting.' ) . ' <em>Start with ' . esc_html( $d['waiting'][0]['first_name'] ?: ot_lead_name( $d['waiting'][0] ) ) . '.</em>';
+	} elseif ( $due ) {
+		$title = 'Nothing new is waiting. <em>' . esc_html( 1 === $due ? 'One follow-up is due.' : $num( $due ) . ' follow-ups are due.' ) . '</em>';
+	} elseif ( $back ) {
+		$title = 'Everyone is answered. <em>' . esc_html( 1 === $back ? 'One person is back on the site.' : $num( $back ) . ' people are back on the site.' ) . '</em>';
+	} else {
+		$title = 'All caught up. <em>Nothing is due today.</em>';
+	}
+
+	ot_leads_shell( 'today' );
+	echo '<div class="ot-day"><section aria-labelledby="ot-today-title">';
+	echo '<h1 class="ot-title" id="ot-today-title">' . $title . '</h1><hr class="wp-header-end" style="display:none">'; // phpcs:ignore WordPress.Security.EscapeOutput
+	echo '<div class="ot-day__bar"><span class="ot-day__date">' . esc_html( ( new DateTime( 'now', new DateTimeZone( 'America/New_York' ) ) )->format( 'l, F j' ) ) . ( $agent ? ' · ' . esc_html( ot_leads_agent_name( $agent ) ) : '' ) . '</span>' . ( $all ? ot_leads_agent_chips( 'ot-leads-today', $agent ) : '' ) . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput
 	ot_leads_notice();
 	if ( current_user_can( 'ot_leads_manage' ) ) {
 		echo ot_leads_health_notices(); // phpcs:ignore WordPress.Security.EscapeOutput
 	}
-	if ( $all ) {
-		echo '<form method="get" style="margin:8px 0 16px"><input type="hidden" name="page" value="ot-leads-today">' . ot_leads_agent_select( 'agent', $agent, 'Everyone', true ) . ' <button class="button">Show</button></form>'; // phpcs:ignore WordPress.Security.EscapeOutput
-	}
-	echo '<p style="font-size:14px"><strong>' . count( $d['waiting'] ) . '</strong> waiting for a first reply · <strong>' . count( $d['due'] ) . '</strong> follow-ups due · <strong>' . count( $d['back'] ) . '</strong> back on the site · <a href="' . esc_url( admin_url( 'admin.php?page=ot-leads-queue' ) ) . '"><strong>' . (int) $d['drafts'] . '</strong> emails to approve</a></p>';
 
-	echo '<div class="ot-card"><h2>Waiting for a first reply</h2>';
-	if ( ! $d['waiting'] ) {
-		echo '<p class="ot-muted">Nobody is waiting. Nice work.</p>';
+	echo '<section class="ot-group" aria-label="Waiting for a first reply"><h2 class="ot-group__head">Waiting for a first reply <b>' . (int) $w . '</b></h2>';
+	if ( ! $w ) {
+		echo '<p class="ot-empty">Nobody is waiting. New inquiries land here the moment a form is sent, oldest first.</p>';
 	}
 	foreach ( $d['waiting'] as $l ) {
-		$age = human_time_diff( strtotime( $l['created_at'] . ' UTC' ) );
-		echo '<div class="ot-row"><p>' . $who( $l ) . ' · ' . esc_html( OT_LEAD_TYPES[ $l['lead_type'] ] ?? $l['lead_type'] ) . ' · <span class="' . ( strtotime( $l['created_at'] . ' UTC' ) < time() - (int) ot_leads_opt( 'response_minutes' ) * 60 ? 'ot-late' : 'ot-muted' ) . '">' . esc_html( $age ) . ' ago</span> · ' . ot_leads_contact_links( $l ) . ( $l['preferred'] ? ' <span class="ot-muted">(prefers ' . esc_html( $l['preferred'] ) . ')</span>' : '' ) . '</p>' . ot_leads_touch_form( (int) $l['id'] ) . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput
+		$created = strtotime( $l['created_at'] . ' UTC' );
+		echo $row( $l, ot_leads_when( $l['created_at'] ), $meta( esc_html( OT_LEAD_TYPES[ $l['lead_type'] ] ?? $l['lead_type'] ), esc_html( $about( $l ) ), esc_html( 'waiting ' . human_time_diff( $created ) ), $l['preferred'] ? esc_html( 'prefers ' . $l['preferred'] ) : '', esc_html( $owner( $l ) ) ) . ( $created < $late ? ' <span class="ot-pill ot-pill--late">Late</span>' : '' ), $created < $late ); // phpcs:ignore WordPress.Security.EscapeOutput
 	}
-	echo '</div>';
+	echo '</section>';
 
-	echo '<div class="ot-card"><h2>Follow-ups due today and overdue</h2>';
-	if ( ! $d['due'] ) {
-		echo '<p class="ot-muted">Nothing due.</p>';
+	echo '<section class="ot-group" aria-label="Follow-ups due"><h2 class="ot-group__head">Follow-ups due today <b>' . (int) $due . '</b></h2>';
+	if ( ! $due ) {
+		echo '<p class="ot-empty">Nothing due. Logging a voicemail, text or email books the next follow-up here for you.</p>';
 	}
+	$today_start = strtotime( ot_leads_day_end( -1 ) . ' UTC' );
 	foreach ( $d['due'] as $l ) {
-		$late = strtotime( $l['due_at'] . ' UTC' ) < strtotime( ot_leads_day_end( -1 ) . ' UTC' );
-		echo '<div class="ot-row"><p>' . $who( $l ) . ' · ' . esc_html( ucfirst( $l['kind'] ) ) . ( $l['note'] ? ': ' . esc_html( $l['note'] ) : '' ) . ' · <span class="' . ( $late ? 'ot-late' : 'ot-muted' ) . '">' . ( $late ? 'overdue since ' . esc_html( ot_leads_time( $l['due_at'], 'M j' ) ) : 'today' ) . '</span> · ' . ot_leads_contact_links( $l ) . '</p>' . ot_leads_touch_form( (int) $l['id'], (int) $l['task_id'] ) . '</div>'; // phpcs:ignore WordPress.Security.EscapeOutput
+		$overdue = strtotime( $l['due_at'] . ' UTC' ) < $today_start;
+		echo $row( $l, $overdue ? 'Since ' . ot_leads_time( $l['due_at'], 'M j' ) : ot_leads_time( $l['due_at'], 'g:i a' ), $meta( esc_html( ucfirst( $l['kind'] ) . ( $l['note'] ? ': ' . $l['note'] : '' ) ), esc_html( $owner( $l ) ) ) . ( $overdue ? ' <span class="ot-pill ot-pill--late">Overdue</span>' : '' ), $overdue, (int) $l['task_id'] ); // phpcs:ignore WordPress.Security.EscapeOutput
 	}
-	echo '</div>';
+	echo '</section>';
 
-	echo '<div class="ot-card"><h2>Back on the site <span class="ot-muted" style="font-weight:400">· last 3 days</span></h2>';
-	if ( ! $d['back'] ) {
-		echo '<p class="ot-muted">No returning visitors yet. People who send a form and come back show up here.</p>';
+	echo '<section class="ot-group" aria-label="Back on the site"><h2 class="ot-group__head">Back on the site <b>' . (int) $back . '</b></h2>';
+	if ( ! $back ) {
+		echo '<p class="ot-empty">No one yet. When someone who sent a form comes back, reads a new town guide or looks at a listing, they show up here for three days.</p>';
 	}
 	foreach ( $d['back'] as $l ) {
-		echo '<div class="ot-row"><p>' . $who( $l ) . ' · ' . esc_html( ot_leads_last_signal( (int) $l['id'] ) ) . ' · <span class="ot-muted">' . esc_html( human_time_diff( strtotime( $l['seen_at'] . ' UTC' ) ) ) . ' ago</span> · ' . ot_leads_contact_links( $l ) . '</p></div>'; // phpcs:ignore WordPress.Security.EscapeOutput
+		echo $row( $l, ot_leads_when( $l['seen_at'] ), $meta( esc_html( ot_leads_last_signal( (int) $l['id'] ) ), esc_html( $owner( $l ) ) ) . ' <span class="ot-pill ot-pill--warm">Warm</span>', false ); // phpcs:ignore WordPress.Security.EscapeOutput
+	}
+	echo '</section></section>';
+
+	// The aside: this week, reply speed, approvals.
+	echo '<aside aria-label="This week">';
+	echo '<div class="ot-card"><h2>This week</h2>';
+	if ( ! $d['week'] ) {
+		echo '<p class="ot-muted" style="margin:0">Nothing booked for the next seven days.</p>';
+	} else {
+		echo '<ul class="ot-agenda">';
+		foreach ( $d['week'] as $l ) {
+			echo '<li><time>' . esc_html( ot_leads_time( $l['due_at'], 'D g:i a' ) ) . '</time><span><a href="' . esc_url( ot_leads_admin_link( $l['id'] ) ) . '">' . esc_html( ot_lead_name( $l ) ) . '</a><br><span class="ot-muted">' . esc_html( ucfirst( $l['kind'] ) . ( $l['note'] ? ': ' . $l['note'] : '' ) ) . '</span></span></li>';
+		}
+		echo '</ul>';
 	}
 	echo '</div>';
 
-	echo '<div class="ot-card"><h2>Coming up this week</h2>';
-	if ( ! $d['week'] ) {
-		echo '<p class="ot-muted">Nothing booked.</p>';
-	} else {
-		echo '<table class="widefat striped"><tbody>';
-		foreach ( $d['week'] as $l ) {
-			echo '<tr><td style="width:9rem">' . esc_html( ot_leads_time( $l['due_at'], 'D M j' ) ) . '</td><td>' . $who( $l ) . '</td><td>' . esc_html( ucfirst( $l['kind'] ) . ( $l['note'] ? ': ' . $l['note'] : '' ) ) . '</td></tr>'; // phpcs:ignore WordPress.Security.EscapeOutput
+	$rows = $wpdb->get_results( $wpdb->prepare( 'SELECT created_at, contacted_at FROM ' . ot_leads_table( 'leads' ) . " WHERE created_at >= %s AND lead_type NOT IN ('newsletter','listings')" . ot_leads_agent_where( $agent ), gmdate( 'Y-m-d H:i:s', time() - 30 * DAY_IN_SECONDS ) ), ARRAY_A ); // phpcs:ignore WordPress.DB.PreparedSQL
+	$mins = array();
+	foreach ( $rows as $r ) {
+		if ( $r['contacted_at'] ) {
+			$mins[] = max( 0, ( strtotime( $r['contacted_at'] . ' UTC' ) - strtotime( $r['created_at'] . ' UTC' ) ) / 60 );
 		}
-		echo '</tbody></table>';
 	}
-	echo '</div></div>';
+	$win = max( 5, (int) ot_leads_opt( 'response_minutes' ) );
+	echo '<div class="ot-card"><h2>Reply speed</h2>';
+	if ( $mins ) {
+		echo '<p class="ot-speed">' . esc_html( ot_leads_minutes( ot_leads_median( $mins ) ) ) . '</p><p>Median first reply over the last 30 days, ' . (int) round( count( array_filter( $mins, fn( $m ) => $m <= $win ) ) / count( $rows ) * 100 ) . '% within ' . (int) $win . ' minutes. <a href="' . esc_url( admin_url( 'admin.php?page=ot-leads-reports' ) ) . '">Reports</a></p>';
+	} else {
+		echo '<p class="ot-muted" style="margin:0">Shows here once the first inquiries are answered.</p>';
+	}
+	echo '</div>';
+	if ( $d['drafts'] ) {
+		echo '<div class="ot-card ot-card--note"><h2>' . esc_html( 1 === $d['drafts'] ? 'One email to approve' : $d['drafts'] . ' emails to approve' ) . '</h2><p class="ot-muted">Follow-up emails wait for a person before they send.</p><a class="ot-btn ot-btn--primary" href="' . esc_url( admin_url( 'admin.php?page=ot-leads-queue' ) ) . '">Review them</a></div>';
+	}
+	echo '</aside></div>';
+	ot_leads_shell_end();
 }
-
-add_action( 'admin_head', function () {
-	if ( str_starts_with( sanitize_key( $_GET['page'] ?? '' ), 'ot-lead' ) ) { // phpcs:ignore WordPress.Security.NonceVerification
-		echo '<style>.ot-row{border-top:1px solid #f0f0f1;padding:10px 0}.ot-row:first-of-type{border-top:0}.ot-row p{margin:0 0 6px}.ot-touch .button-small{margin:0 2px 4px 0}.ot-late{color:#b32d2e;font-weight:600}.ot-bar{display:inline-block;height:10px;background:#B49A65;vertical-align:middle;margin-right:6px}.ot-health li{margin:4px 0}</style>';
-	}
-} );

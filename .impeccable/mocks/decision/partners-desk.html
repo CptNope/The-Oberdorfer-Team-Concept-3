@@ -1,0 +1,42 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css"><style>
+header{background:var(--navy);color:var(--ivory);height:64px;display:flex;align-items:center;gap:36px;padding:0 40px}
+.mark{font-family:'Cormorant Garamond';font-size:20px}.mark span{color:var(--gold);font:600 10px Manrope;letter-spacing:.18em;margin-left:10px}
+.tabs{display:flex;height:64px}.tabs a{display:flex;align-items:center;padding:0 16px;color:var(--mist);font-weight:500}
+.tabs a.on{color:var(--ivory);box-shadow:inset 0 -2px var(--gold)}
+.sp{flex:1}.search{width:280px;height:34px;background:var(--navy8);border:1px solid var(--navy7);color:var(--mist);padding:0 12px;display:flex;align-items:center;font-size:13px}
+.top{padding:26px 40px 18px;display:flex;align-items:end;justify-content:space-between}
+h1{font-size:40px;font-weight:400;line-height:1}
+.desk{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:20px;padding:0 40px}
+.col{background:var(--paper);border:1px solid var(--sand2);height:700px;overflow:hidden}
+.col.team{outline:1px solid var(--gold);outline-offset:4px}
+.ch{padding:16px 18px;border-bottom:1px solid var(--sand2);display:flex;justify-content:space-between;align-items:end}
+.ch h2{font-size:24px;font-weight:500;line-height:1}.ch .n{text-align:right;font-size:12px;color:var(--slate)}.ch .n b{font:500 26px 'Cormorant Garamond';color:var(--ink);display:block;line-height:1}
+.sec{padding:10px 18px 0}.sec .lbl{margin:8px 0}
+.c{border:1px solid var(--sand);padding:12px 14px;margin-bottom:10px;background:#fff}
+.c .who{font-size:19px;line-height:1.2;display:flex;justify-content:space-between;align-items:center}
+.c p{font-size:12.5px;color:var(--slate);margin:2px 0 10px}
+.c .acts{display:flex;gap:6px}.c .btn{height:28px;font-size:11.5px}
+.c.late{border-left:2px solid var(--err)}
+</style></head><body>
+<header><div class="mark">The Oberdorfer Team<span>LEADS</span></div><nav class="tabs"><a class="on">Desk</a><a>All leads</a><a>Pipeline</a><a>Approvals · 2</a><a>Reports</a><a>Settings</a></nav><div class="sp"></div><div class="search">Find a person…</div></header>
+<div class="top"><div><p class="lbl">Tuesday, November 10 · sample data</p><h1 class="serif">Who is waiting on whom.</h1></div><div style="display:flex;gap:8px"><span class="btn">This week</span><span class="btn btn--p">+ Add a lead</span></div></div>
+<div class="desk">
+<section class="col"><div class="ch"><h2 class="serif">Brandon</h2><div class="n"><b>2</b>to reply · 3 due</div></div>
+<div class="sec"><p class="lbl">Reply now</p>
+<div class="c late"><div class="who serif">Dana Whitfield <span class="tag tag--late">2 h</span></div><p>Seller · 14 Elm St, Shrewsbury</p><div class="acts"><span class="btn btn--p">Call</span><span class="btn">Text</span><span class="btn">Log ▾</span></div></div>
+<p class="lbl">Due today</p>
+<div class="c"><div class="who serif">Alan Ruiz</div><p>Follow up · voicemail yesterday</p><div class="acts"><span class="btn btn--p">Call</span><span class="btn">Log ▾</span></div></div>
+<div class="c"><div class="who serif">Joanne Pike</div><p>Send comps · Auburn</p><div class="acts"><span class="btn btn--p">Email</span><span class="btn">Log ▾</span></div></div></div></section>
+<section class="col team"><div class="ch"><h2 class="serif">Team · Brandon &amp; Kaitlyn</h2><div class="n"><b>1</b>unclaimed</div></div>
+<div class="sec"><p class="lbl">Unclaimed · whoever takes it</p>
+<div class="c late"><div class="who serif">Marcus Lee <span class="tag tag--new">New</span></div><p>Buyer · Worcester, Holden · prefers text · 25 min</p><div class="acts"><span class="btn btn--p">I'm on it</span><span class="btn">Give to Kaitlyn</span></div></div>
+<p class="lbl">Back on the site</p>
+<div class="c"><div class="who serif">Tom &amp; Ellen Gray <span class="tag tag--warm">Warm</span></div><p>Read the Grafton guide · 3 pages today</p><div class="acts"><span class="btn">Call</span><span class="btn">Log ▾</span></div></div>
+<p class="lbl">Approvals</p>
+<div class="c"><div class="who serif" style="font-size:17px">2 AI drafts to read</div><p>Seller market update · New-listing alert</p><div class="acts"><span class="btn">Review</span></div></div></div></section>
+<section class="col"><div class="ch"><h2 class="serif">Kaitlyn</h2><div class="n"><b>1</b>to reply · 2 due</div></div>
+<div class="sec"><p class="lbl">Reply now</p>
+<div class="c"><div class="who serif">Priya Raman</div><p>Relocation from Austin · prefers email</p><div class="acts"><span class="btn btn--p">Email</span><span class="btn">Log ▾</span></div></div>
+<p class="lbl">Due today</p>
+<div class="c"><div class="who serif">Sofia Mendes</div><p>Showing recap · 9 Oak Ln</p><div class="acts"><span class="btn btn--p">Text</span><span class="btn">Log ▾</span></div></div></div></section>
+</div></body></html>

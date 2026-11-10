@@ -2,9 +2,9 @@
 /**
  * Admin: the Leads menu, the shared action handler and screen styles.
  *
- * Screens (spec § 12): Inbox, Board, Approval queue, Sequences, Newsletter, Settings, and the
- * lead screen. They use WordPress's own admin markup, so they look native and stay accessible;
- * the team's navy and gold appear as accents only.
+ * Screens (spec § 12): Today, Inbox, Board, Approval queue, Reports, Sequences, Newsletter,
+ * Settings, and the lead screen. They share one workspace shell (a navy rail and an ivory page,
+ * assets/admin.css, scoped to body.ot-ws) around WordPress's own forms, list table and nonces.
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -14,8 +14,9 @@ add_action( 'admin_menu', function () {
 	$new   = (int) $wpdb->get_var( 'SELECT COUNT(*) FROM ' . ot_leads_table( 'leads' ) . " WHERE stage = 'new'" . ( current_user_can( 'ot_leads_view_all' ) ? '' : $wpdb->prepare( ' AND assigned_agent = %s', ot_leads_user_agent() ) ) );
 	$badge = $new ? ' <span class="awaiting-mod count-' . $new . '"><span class="pending-count">' . $new . '</span></span>' : '';
 	add_menu_page( 'Leads', 'Leads' . $badge, 'ot_leads_own', 'ot-leads', 'ot_leads_inbox_screen', 'dashicons-groups', 3 );
-	add_submenu_page( 'ot-leads', 'Leads inbox', 'Inbox', 'ot_leads_own', 'ot-leads', 'ot_leads_inbox_screen' );
+	// Today comes first, so the Leads menu opens on it.
 	add_submenu_page( 'ot-leads', 'Today', 'Today', 'ot_leads_own', 'ot-leads-today', 'ot_leads_today_screen' );
+	add_submenu_page( 'ot-leads', 'Leads inbox', 'All leads', 'ot_leads_own', 'ot-leads', 'ot_leads_inbox_screen' );
 	add_submenu_page( 'ot-leads', 'Pipeline board', 'Board', 'ot_leads_own', 'ot-leads-board', 'ot_leads_board_screen' );
 	$drafts = (int) $wpdb->get_var( 'SELECT COUNT(*) FROM ' . ot_leads_table( 'messages' ) . " WHERE status = 'draft'" );
 	add_submenu_page( 'ot-leads', 'Approval queue', 'Approval queue' . ( $drafts ? ' <span class="awaiting-mod"><span class="pending-count">' . $drafts . '</span></span>' : '' ), 'ot_leads_own', 'ot-leads-queue', 'ot_leads_queue_screen' );
@@ -29,21 +30,83 @@ add_action( 'admin_menu', function () {
 // The lead screen is reached from the inbox, not the menu.
 add_action( 'admin_head', function () {
 	remove_submenu_page( 'ot-leads', 'ot-lead' );
-	$page = sanitize_key( $_GET['page'] ?? '' );
-	if ( str_starts_with( $page, 'ot-lead' ) ) {
+	if ( ot_leads_is_screen() ) {
 		nocache_headers();
-		echo '<style>
-.ot-wrap{max-width:1280px}.ot-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:20px;align-items:start}@media(max-width:1100px){.ot-grid{grid-template-columns:1fr}}
-.ot-card{background:#fff;border:1px solid #dcdcde;padding:16px 18px;margin:0 0 16px}.ot-card h2{margin:0 0 12px;font-size:15px}.ot-card table.form-table th{width:150px;padding:8px 10px 8px 0}.ot-card table.form-table td{padding:8px 0}
-.ot-pill{display:inline-block;padding:2px 8px;border-radius:2px;font-size:12px;line-height:1.6;background:#f0f0f1;color:#1d2327}.ot-pill--new{background:#071D2D;color:#F7F3EC}.ot-pill--warm{background:#B49A65;color:#071D2D}.ot-pill--ok{background:#d1e7dd;color:#0a3622}.ot-pill--bad{background:#f8d7da;color:#58151c}
-.ot-timeline{list-style:none;margin:0;padding:0}.ot-timeline li{border-left:2px solid #dcdcde;padding:0 0 14px 14px;margin-left:6px;position:relative}.ot-timeline li:before{content:"";position:absolute;left:-6px;top:3px;width:10px;height:10px;border-radius:50%;background:#B49A65}.ot-timeline .when{color:#646970;font-size:12px}
-.ot-board{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(220px,1fr);gap:12px;overflow-x:auto;padding-bottom:12px}.ot-col{background:#f6f7f7;border:1px solid #dcdcde;min-height:300px;padding:8px}.ot-col h2{font-size:13px;margin:4px 4px 10px;display:flex;justify-content:space-between}.ot-col.is-over{outline:2px dashed #B49A65}
-.ot-bcard{background:#fff;border:1px solid #dcdcde;border-left:3px solid #071D2D;padding:8px 10px;margin-bottom:8px;cursor:grab}.ot-bcard a{font-weight:600;text-decoration:none}.ot-bcard small{display:block;color:#646970}
-.ot-msg{background:#fff;border:1px solid #dcdcde;padding:14px 16px;margin-bottom:14px}.ot-msg textarea{width:100%;min-height:180px;font-family:Menlo,Consolas,monospace;font-size:12px}.ot-msg .preview{border:1px solid #f0f0f1;padding:10px 14px;background:#fcfcfc;max-height:320px;overflow:auto}
-.ot-steps td,.ot-steps th{vertical-align:top}.ot-steps textarea{width:100%;min-height:110px;font-size:12px}.ot-muted{color:#646970}
-</style>';
 	}
 } );
+
+/** True on any Leads screen. */
+function ot_leads_is_screen() {
+	return is_admin() && str_starts_with( sanitize_key( $_GET['page'] ?? '' ), 'ot-lead' ); // phpcs:ignore WordPress.Security.NonceVerification
+}
+
+// The workspace: its own class on <body>, WordPress's menu folded to icons, the brand faces.
+add_filter( 'admin_body_class', fn( $c ) => ot_leads_is_screen() ? $c . ' ot-ws folded' : $c );
+add_action( 'admin_enqueue_scripts', function () {
+	if ( ! ot_leads_is_screen() ) {
+		return;
+	}
+	wp_enqueue_style( 'ot-leads-fonts', 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Manrope:wght@400;500;600;700&display=swap', array(), null ); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
+	wp_enqueue_style( 'ot-leads-admin', OT_LEADS_URL . '/assets/admin.css', array( 'dashicons' ), OT_LEADS_VERSION );
+} );
+
+/** The workspace rail and the opening of the page; $current is a rail key. */
+function ot_leads_shell( $current ) {
+	global $wpdb;
+	$own    = current_user_can( 'ot_leads_view_all' ) ? '' : $wpdb->prepare( ' AND assigned_agent = %s', ot_leads_user_agent() );
+	$wait   = (int) $wpdb->get_var( 'SELECT COUNT(*) FROM ' . ot_leads_table( 'leads' ) . " WHERE stage = 'new' AND contacted_at IS NULL$own" ); // phpcs:ignore WordPress.DB.PreparedSQL
+	$drafts = (int) $wpdb->get_var( 'SELECT COUNT(*) FROM ' . ot_leads_table( 'messages' ) . " WHERE status = 'draft'" );
+	$items  = array(
+		'today'    => array( 'ot-leads-today', 'Today', 'calendar-alt', $wait, 'ot_leads_own' ),
+		'inbox'    => array( 'ot-leads', 'All leads', 'groups', 0, 'ot_leads_own' ),
+		'board'    => array( 'ot-leads-board', 'Pipeline', 'columns', 0, 'ot_leads_own' ),
+		'queue'    => array( 'ot-leads-queue', 'Approvals', 'email-alt', $drafts, 'ot_leads_own' ),
+		'reports'  => array( 'ot-leads-reports', 'Reports', 'chart-bar', 0, 'ot_leads_own' ),
+		'-'        => null,
+		'sequence' => array( 'ot-leads-sequences', 'Sequences', 'update', 0, 'ot_leads_manage' ),
+		'news'     => array( 'ot-leads-newsletter', 'Newsletter', 'megaphone', 0, 'ot_leads_manage' ),
+		'settings' => array( 'ot-leads-settings', 'Settings', 'admin-generic', 0, 'ot_leads_manage' ),
+	);
+	$o = '<div class="ot-app"><nav class="ot-rail" aria-label="Leads"><a class="ot-rail__brand" href="' . esc_url( admin_url( 'admin.php?page=ot-leads-today' ) ) . '">The Oberdorfer Team<span>Leads</span></a><ul>';
+	foreach ( $items as $key => $it ) {
+		if ( null === $it ) {
+			$o .= '</ul><hr><ul>';
+			continue;
+		}
+		if ( ! current_user_can( $it[4] ) ) {
+			continue;
+		}
+		$o .= '<li><a class="ot-nav" href="' . esc_url( admin_url( 'admin.php?page=' . $it[0] ) ) . '"' . ( $key === $current ? ' aria-current="page"' : '' ) . '><span class="dashicons dashicons-' . esc_attr( $it[2] ) . '" aria-hidden="true"></span>' . esc_html( $it[1] ) . ( $it[3] ? '<span class="ot-nav__count">' . (int) $it[3] . '<span class="screen-reader-text"> waiting</span></span>' : '' ) . '</a></li>';
+	}
+	echo $o . '</ul></nav><main class="ot-main" id="ot-main">'; // phpcs:ignore WordPress.Security.EscapeOutput
+}
+
+function ot_leads_shell_end() {
+	echo '</main></div>';
+}
+
+/** A screen title row: the title, an optional line under it, and actions on the right. */
+function ot_leads_head( $title, $sub = '', $actions = '' ) {
+	echo '<div class="ot-head"><div><h1 class="ot-title">' . $title . '</h1>' . ( $sub ? '<p class="ot-sub">' . $sub . '</p>' : '' ) . '</div>' . ( $actions ? '<div class="ot-head__actions">' . $actions . '</div>' : '' ) . '</div><hr class="wp-header-end" style="display:none">'; // phpcs:ignore WordPress.Security.EscapeOutput
+}
+
+/** Filter chips for the agent: Everyone, Team, then each agent. */
+function ot_leads_agent_chips( $page, $cur, $extra = array() ) {
+	$opts = array( '' => 'Everyone', 'team' => 'Team' );
+	foreach ( ot_leads_agents() as $slug => $a ) {
+		$opts[ $slug ] = strtok( $a['name'], ' ' );
+	}
+	$o = '<ul class="ot-chips" aria-label="Show leads for">';
+	foreach ( $opts as $k => $label ) {
+		$o .= '<li><a class="ot-chip" href="' . esc_url( add_query_arg( array_merge( $extra, array( 'page' => $page, 'agent' => $k ?: false ) ), admin_url( 'admin.php' ) ) ) . '"' . ( (string) $cur === (string) $k ? ' aria-current="page"' : '' ) . '>' . esc_html( $label ) . '</a></li>';
+	}
+	return $o . '</ul>';
+}
+
+/** Town slugs ("worcester,west-boylston", "boston/back-bay") as names. */
+function ot_leads_towns_label( $csv ) {
+	return implode( ', ', array_map( fn( $t ) => ucwords( str_replace( array( '-', '/' ), array( ' ', ' / ' ), trim( $t ) ) ), array_filter( explode( ',', (string) $csv ) ) ) );
+}
 
 /** The lead's agent as a name. */
 function ot_leads_agent_name( $slug ) {

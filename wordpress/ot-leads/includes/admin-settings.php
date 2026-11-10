@@ -83,7 +83,9 @@ function ot_leads_settings_screen() {
 	$row = fn( $label, $html, $help = '' ) => '<tr><th>' . $label . '</th><td>' . $html . ( $help ? '<p class="description">' . $help . '</p>' : '' ) . '</td></tr>';
 	$tick = (int) get_option( 'ot_leads_last_tick' );
 
-	echo '<div class="wrap ot-wrap"><h1>Leads settings</h1>';
+	ot_leads_shell( 'settings' );
+	echo '<div class="wrap ot-wrap" style="max-width:980px">';
+	ot_leads_head( 'Settings', 'Routing, alerts, email, spam protection, an outside CRM, AI and privacy for every form on the site.' );
 	ot_leads_notice();
 	echo '<div class="ot-card"><h2>Status</h2><table class="form-table">'
 		. $row( 'Email', ot_leads_opt( 'brevo_key' ) ? '<span class="ot-pill ot-pill--ok">Brevo</span>' : '<span class="ot-pill ot-pill--bad">WordPress mail</span> Add a Brevo API key below for reliable delivery.' )
@@ -169,4 +171,5 @@ function ot_leads_settings_screen() {
 	echo '<p><button class="button button-primary">Save settings</button></p></form>';
 	echo ot_leads_agent_crm_card(); // phpcs:ignore WordPress.Security.EscapeOutput
 	echo '<div class="ot-card"><h2>Server cron (Cloudways)</h2><p>So alerts escalate and emails send on time, add <code>define( \'DISABLE_WP_CRON\', true );</code> to wp-config.php and, in Cloudways > Application Settings > Cron Job Management, a job every minute:</p><p><code>* * * * * wget -q -O - "' . esc_html( site_url( 'wp-cron.php?doing_wp_cron' ) ) . '" &gt;/dev/null 2&gt;&amp;1</code></p></div></div>';
+	ot_leads_shell_end();
 }

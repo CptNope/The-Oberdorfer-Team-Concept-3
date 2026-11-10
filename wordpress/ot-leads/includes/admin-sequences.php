@@ -49,9 +49,11 @@ add_action( 'ot_leads_admin_action', function ( $do ) {
 } );
 
 function ot_leads_sequences_screen() {
-	echo '<div class="wrap ot-wrap"><h1>Sequences</h1>';
+	ot_leads_shell( 'sequence' );
+	echo '<div class="wrap ot-wrap">';
+	ot_leads_head( 'Sequences', 'The follow-up emails each kind of lead receives, step by step.' );
 	ot_leads_notice();
-	echo '<p class="ot-muted">Each step becomes an email to the lead on its day (counted from when they enrolled). Write the body in HTML; the merge tags are {first_name}, {agent_name}, {agent_first}, {agent_phone}, {towns}, {town_links}, {listing_link}, {buy_url}, {sell_url} and {market_url}. "Town update" builds the monthly email from the guides of the towns they follow. "AI draft" writes the email from the brief, using only the lead\'s record and the guides; it always passes the checks before it can be sent. Signature, office address and unsubscribe link are added to every email.</p>';
+	echo '<p class="ot-muted" style="max-width:78ch">Each step becomes an email to the lead on its day (counted from when they enrolled). Write the body in HTML; the merge tags are {first_name}, {agent_name}, {agent_first}, {agent_phone}, {towns}, {town_links}, {listing_link}, {buy_url}, {sell_url} and {market_url}. "Town update" builds the monthly email from the guides of the towns they follow. "AI draft" writes the email from the brief, using only the lead\'s record and the guides; it always passes the checks before it can be sent. Signature, office address and unsubscribe link are added to every email.</p>';
 	echo ot_leads_form( 'sequences' ); // phpcs:ignore WordPress.Security.EscapeOutput
 	foreach ( ot_nurture_sequences() as $key => $s ) {
 		$k = esc_attr( $key );
@@ -72,4 +74,5 @@ function ot_leads_sequences_screen() {
 		echo '</tbody></table></div>';
 	}
 	echo '<p><button class="button button-primary">Save sequences</button> <button class="button" name="reset" value="1" onclick="return confirm(\'Replace all sequences with the starter set?\')">Reset to the starter set</button></p></form></div>';
+	ot_leads_shell_end();
 }

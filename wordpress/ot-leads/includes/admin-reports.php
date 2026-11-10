@@ -70,18 +70,20 @@ function ot_leads_reports_screen() {
 	$mins    = fn( $l ) => $l['contacted_at'] ? max( 0, ( strtotime( $l['contacted_at'] . ' UTC' ) - strtotime( $l['created_at'] . ' UTC' ) ) / 60 ) : null;
 	$replied = array_filter( array_map( $mins, $inq ), fn( $m ) => null !== $m );
 
-	echo '<div class="wrap ot-wrap"><h1>Reports</h1>';
+	ot_leads_shell( 'reports' );
+	echo '<div class="wrap ot-wrap">';
+	ot_leads_head( 'Reports', 'Where leads come from and how fast the team answers them.' );
 	ot_leads_notice();
-	echo '<form method="get" style="margin:8px 0 16px"><input type="hidden" name="page" value="ot-leads-reports"><select name="period">';
+	echo '<form method="get" class="ot-inline-form" style="margin:0 0 18px"><input type="hidden" name="page" value="ot-leads-reports"><label class="screen-reader-text" for="ot-period">Period</label><select id="ot-period" name="period">';
 	foreach ( array( '30' => 'Last 30 days', '90' => 'Last 90 days', '365' => 'Last 12 months', 'all' => 'All time' ) as $k => $label ) {
 		echo '<option value="' . esc_attr( $k ) . '"' . selected( $period, $k, false ) . '>' . esc_html( $label ) . '</option>';
 	}
 	echo '</select> ' . ( $all ? ot_leads_agent_select( 'agent', $agent, 'Everyone', true ) : '' ) . ' <button class="button">Show</button></form>'; // phpcs:ignore WordPress.Security.EscapeOutput
 
 	$within = $replied ? count( array_filter( $replied, fn( $m ) => $m <= $win ) ) : 0;
-	echo '<div class="ot-card"><h2>At a glance</h2><p style="font-size:15px"><strong>' . count( $inq ) . '</strong> inquiries · <strong>' . ( count( $leads ) - count( $inq ) ) . '</strong> sign-ups · <strong>' . count( $replied ) . '</strong> answered'
-		. ' · median first reply <strong>' . esc_html( ot_leads_minutes( ot_leads_median( $replied ) ) ) . '</strong>'
-		. ( $inq ? ' · <strong>' . round( $within / count( $inq ) * 100 ) . '%</strong> answered within ' . $win . ' minutes' : '' ) . '</p>'
+	echo '<div class="ot-card"><h2>At a glance</h2><ul class="ot-figures"><li><b>' . count( $inq ) . '</b>inquiries</li><li><b>' . ( count( $leads ) - count( $inq ) ) . '</b>sign-ups</li><li><b>' . count( $replied ) . '</b>answered</li>'
+		. '<li><b>' . esc_html( ot_leads_minutes( ot_leads_median( $replied ) ) ) . '</b>median first reply</li>'
+		. ( $inq ? '<li><b>' . round( $within / count( $inq ) * 100 ) . '%</b>within ' . $win . ' minutes</li>' : '' ) . '</ul>'
 		. '<p class="ot-muted">A first reply is the first call, text or email logged, or "I\'m on it". Sign-ups (newsletter, listing alerts) are not counted as inquiries.</p></div>';
 
 	echo '<div class="ot-grid"><div>';
@@ -180,6 +182,7 @@ function ot_leads_reports_screen() {
 		echo '<p class="ot-muted">Exports: tick leads in the Inbox and choose "Export to CSV", or export one lead\'s full record from its screen.</p></div>';
 	}
 	echo '</div>';
+	ot_leads_shell_end();
 }
 
 function ot_leads_dupe_name( $id ) {
@@ -201,7 +204,7 @@ function ot_leads_duplicate_card( $lead ) {
 	if ( ! $d ) {
 		return '';
 	}
-	$o = '<div class="ot-card" style="border-left:3px solid #B49A65"><h2>Possible duplicate</h2>';
+	$o = '<div class="ot-card ot-card--note"><h2>Possible duplicate</h2>';
 	foreach ( $d as list( $a, $b, $why ) ) {
 		$other = (int) $lead['id'] === $a ? $b : $a;
 		$o    .= '<p>' . ot_leads_dupe_name( $other ) . ' <span class="ot-muted">(' . esc_html( $why ) . ')</span></p><p>' . ot_leads_dupe_actions( $a, $b ) . '</p>';

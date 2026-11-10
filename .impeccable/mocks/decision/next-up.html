@@ -1,0 +1,34 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css"><style>
+header{background:var(--navy);color:var(--ivory);padding:22px 48px 26px}
+.row{display:flex;align-items:center;gap:28px}.mark{font-family:'Cormorant Garamond';font-size:20px}
+.tabs{display:flex;gap:4px;margin-left:auto}.tabs a{padding:6px 12px;color:var(--mist);font-weight:500}.tabs a.on{color:var(--ivory);box-shadow:inset 0 -2px var(--gold)}
+.cmd{margin-top:22px;height:56px;background:var(--navy8);border:1px solid var(--navy7);display:flex;align-items:center;padding:0 20px;gap:14px;font-size:16px;color:var(--mist)}
+.cmd kbd{margin-left:auto;font:600 11px Manrope;border:1px solid var(--navy7);padding:2px 8px}
+.body{display:grid;grid-template-columns:1fr 380px;gap:36px;padding:30px 48px}
+.next{background:var(--paper);border:1px solid var(--sand2);padding:30px 34px;position:relative}
+.next:before{content:"";position:absolute;inset:6px;border:1px solid var(--gold);pointer-events:none;opacity:.6}
+.next h1{font-size:48px;font-weight:400;line-height:1;margin:10px 0 6px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--sand2);border-bottom:1px solid var(--sand2);margin:20px 0}
+.facts div{padding:12px 14px 12px 0}.facts b{display:block;font-size:14px}
+blockquote{font:italic 22px/1.35 'Cormorant Garamond';color:var(--ink);border-left:2px solid var(--gold);padding-left:16px;margin-bottom:22px}
+.big{display:flex;gap:10px}.big .btn{height:44px;padding:0 22px;font-size:13px}
+.q h2{font-size:24px;font-weight:500;margin-bottom:8px}
+.qi{display:grid;grid-template-columns:1fr auto;padding:12px 0;border-top:1px solid var(--sand)}
+.qi .who{font-size:19px}.qi p{font-size:12.5px;color:var(--slate)}
+.stat{display:flex;gap:26px;margin-top:22px}.stat b{font:500 30px 'Cormorant Garamond';display:block;line-height:1}
+</style></head><body>
+<header><div class="row"><div class="mark">The Oberdorfer Team</div><nav class="tabs"><a class="on">Next up</a><a>All leads</a><a>Pipeline</a><a>Approvals · 2</a><a>Reports</a><a>Settings</a></nav></div>
+<div class="cmd">⌕ Find a person, or type “log call Dana”<kbd>/</kbd></div></header>
+<div class="body"><section>
+<div class="next"><p class="lbl">Next up · 1 of 8 · sample data</p><h1 class="serif">Dana Whitfield</h1><p class="muted">Seller · asked for a market review · waiting 2 hours <span class="tag tag--late">Late</span></p>
+<div class="facts"><div><span class="lbl">Home</span><b>14 Elm St, Shrewsbury</b></div><div><span class="lbl">Timing</span><b>3 to 6 months</b></div><div><span class="lbl">Prefers</span><b>Call · 508-555-0144</b></div><div><span class="lbl">Owner</span><b>Brandon</b></div></div>
+<blockquote>“We’re thinking about downsizing in the spring and want to know what the house might bring.”</blockquote>
+<div class="big"><span class="btn btn--p">Call Dana</span><span class="btn">Text</span><span class="btn">Email</span><span class="btn">Voicemail</span><span class="btn">Skip for now</span></div></div>
+</section>
+<aside class="q"><h2 class="serif">After Dana</h2>
+<div class="qi"><div><div class="who serif">Marcus Lee</div><p>Buyer · Team · prefers text · 25 min</p></div><span class="tag tag--new">New</span></div>
+<div class="qi"><div><div class="who serif">Priya Raman</div><p>Relocation · Kaitlyn · 1 h</p></div><span class="tag tag--new">New</span></div>
+<div class="qi"><div><div class="who serif">Alan Ruiz</div><p>Follow-up due · voicemail yesterday</p></div><span class="tag">Due</span></div>
+<div class="qi"><div><div class="who serif">Tom &amp; Ellen Gray</div><p>Back on the site · Grafton guide</p></div><span class="tag tag--warm">Warm</span></div>
+<div class="stat"><div><b>3</b><span class="muted">to reply</span></div><div><b>5</b><span class="muted">due today</span></div><div><b>42m</b><span class="muted">median reply</span></div></div></aside>
+</div></body></html>

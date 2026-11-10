@@ -1,0 +1,41 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="_base.css"><style>
+.app{display:grid;grid-template-columns:232px 1fr;height:900px}
+.rail{background:var(--navy);color:var(--ivory);padding:28px 20px;display:flex;flex-direction:column;gap:4px}
+.mark{font-family:'Cormorant Garamond';font-size:22px;letter-spacing:.06em;margin-bottom:6px}.mark small{display:block;font:600 10px Manrope;letter-spacing:.18em;color:var(--gold);text-transform:uppercase}
+.rail hr{border:0;height:1px;background:var(--navy7);margin:18px 0}
+.nav a{display:flex;justify-content:space-between;padding:9px 12px;color:var(--mist);font-weight:500;text-decoration:none}
+.nav a.on{color:var(--ivory);background:var(--navy8);box-shadow:inset 2px 0 var(--gold)}
+.nav b{font-size:11px;color:var(--navy);background:var(--gold);padding:0 7px}
+main{padding:32px 44px;display:grid;grid-template-columns:1fr 340px;gap:40px;overflow:hidden}
+h1{font-size:44px;line-height:1.05;font-weight:400}h1 em{font-style:italic;color:var(--goldink)}
+.counts{display:flex;gap:28px;margin:14px 0 20px}.counts div{font-size:13px}.counts strong{font:500 30px 'Cormorant Garamond';display:block;line-height:1}
+.filters{display:flex;gap:8px;margin-bottom:18px}
+.group{margin-top:18px}.group .lbl{display:flex;align-items:center;gap:12px}.group .lbl:after{content:"";flex:1;height:1px;background:var(--sand2)}
+.e{display:grid;grid-template-columns:64px 1fr auto;gap:16px;padding:14px 0;border-bottom:1px solid var(--sand)}
+.e time{font-size:12px;color:var(--slate);padding-top:4px}
+.e .who{font-size:21px;line-height:1.2}.e p{font-size:13px;color:var(--slate)}
+.e .acts{display:flex;gap:6px;align-items:start}
+.e.hot{background:var(--paper);margin:0 -16px;padding:14px 16px;border-left:2px solid var(--err)}
+aside .card{background:var(--paper);border:1px solid var(--sand2);padding:18px 20px;margin-bottom:16px}
+aside h2{font-size:22px;font-weight:500;margin-bottom:10px}
+.ag{display:grid;grid-template-columns:70px 1fr;padding:7px 0;border-top:1px solid var(--sand);font-size:13px}
+.spark{height:40px;display:flex;align-items:end;gap:4px;margin-top:8px}.spark i{flex:1;background:var(--sand2)}.spark i:last-child{background:var(--navy)}
+</style></head><body><div class="app">
+<nav class="rail"><div class="mark">The Oberdorfer Team<small>Leads</small></div><hr>
+<div class="nav"><a class="on">Today <b>3</b></a><a>All leads</a><a>Pipeline</a><a>Approvals <b>2</b></a><a>Reports</a><hr><a>Sequences</a><a>Newsletter</a><a>Settings</a></div></nav>
+<main><section>
+<p class="lbl">Tuesday, November 10 · sample data</p>
+<h1 class="serif">Three people are waiting. <em>Start with Dana.</em></h1>
+<div class="counts"><div><strong>3</strong>waiting for a reply</div><div><strong>5</strong>follow-ups due</div><div><strong>2</strong>back on the site</div><div><strong>2</strong>emails to approve</div></div>
+<div class="filters"><span class="chip on">Everyone</span><span class="chip">Team</span><span class="chip">Brandon</span><span class="chip">Kaitlyn</span></div>
+<div class="group"><p class="lbl">Needs you now</p>
+<div class="e hot"><time>9:42 am</time><div><div class="who serif">Dana Whitfield</div><p>Seller · market review for 14 Elm St, Shrewsbury · waiting 2 h · <span class="tag tag--late">Late</span></p></div><div class="acts"><span class="btn btn--p">Call</span><span class="btn">Text</span><span class="btn">Log ▾</span></div></div>
+<div class="e"><time>10:15 am</time><div><div class="who serif">Marcus Lee</div><p>Buyer · Worcester, Holden · prefers text · Team lead</p></div><div class="acts"><span class="btn btn--p">Text</span><span class="btn">Call</span><span class="btn">Log ▾</span></div></div>
+<div class="e"><time>11:02 am</time><div><div class="who serif">Priya Raman</div><p>General · “Do you help with relocation from Austin?” · Kaitlyn</p></div><div class="acts"><span class="btn btn--p">Email</span><span class="btn">Log ▾</span></div></div></div>
+<div class="group"><p class="lbl">Back on the site</p>
+<div class="e"><time>8:30 am</time><div><div class="who serif">Tom &amp; Ellen Gray</div><p>Read the Grafton guide · 3 pages today · <span class="tag tag--warm">Warm</span></p></div><div class="acts"><span class="btn">Call</span><span class="btn">Log ▾</span></div></div></div>
+</section>
+<aside><div class="card"><h2 class="serif">This week</h2>
+<div class="ag"><span class="muted">Wed</span>Call back Marcus Lee</div><div class="ag"><span class="muted">Thu</span>Showing follow-up · Grays</div><div class="ag"><span class="muted">Fri</span>Check in · Alan Ruiz</div></div>
+<div class="card"><p class="lbl">Median first reply · 30 days</p><div class="serif" style="font-size:34px">42 min</div><div class="spark"><i style="height:60%"></i><i style="height:45%"></i><i style="height:70%"></i><i style="height:38%"></i><i style="height:30%"></i></div></div></aside>
+</main></div></body></html>

@@ -63,14 +63,16 @@ function ot_leads_queue_screen() {
 	global $wpdb;
 	$own  = current_user_can( 'ot_leads_view_all' ) ? '' : $wpdb->prepare( ' AND l.assigned_agent = %s', ot_leads_user_agent() );
 	$rows = $wpdb->get_results( 'SELECT m.*, l.first_name, l.last_name, l.assigned_agent FROM ' . ot_leads_table( 'messages' ) . ' m LEFT JOIN ' . ot_leads_table( 'leads' ) . " l ON l.id = m.lead_id WHERE m.status = 'draft'$own ORDER BY m.id ASC LIMIT 50", ARRAY_A ); // phpcs:ignore WordPress.DB.PreparedSQL
-	echo '<div class="wrap ot-wrap"><h1>Approval queue</h1>';
+	ot_leads_shell( 'queue' );
+	echo '<div class="wrap ot-wrap" style="max-width:1180px">';
+	ot_leads_head( $rows ? 'Read, then send.' : 'Nothing to approve.', 'Emails wait here until a person approves them. Approved emails send between ' . (int) ot_leads_opt( 'hours_start' ) . ' a.m. and ' . ( (int) ot_leads_opt( 'hours_end' ) - 12 ) . ' p.m., Monday to Saturday, with the agent\'s name, the office address and an unsubscribe link added.' );
 	ot_leads_notice();
-	echo '<p class="ot-muted">Emails wait here until a person approves them. Approved emails send between ' . (int) ot_leads_opt( 'hours_start' ) . ' a.m. and ' . ( (int) ot_leads_opt( 'hours_end' ) - 12 ) . ' p.m., Monday to Saturday, with the agent\'s name, the office address and an unsubscribe link added.</p>';
 	if ( ! $rows ) {
-		echo '<p>Nothing waiting.</p></div>';
+		echo '<p class="ot-empty">Follow-up steps set to wait for approval, new-listing alerts and AI drafts appear here. Approve sends them in business hours; Skip drops them.</p></div>';
+		ot_leads_shell_end();
 		return;
 	}
-	echo ot_leads_form( 'queue' ) . '<p><button class="button button-primary" onclick="this.form.elements.act.value=\'approve\'">Approve selected</button> <button class="button" onclick="this.form.elements.act.value=\'skip\'">Skip selected</button></p>'; // phpcs:ignore WordPress.Security.EscapeOutput
+	echo ot_leads_form( 'queue' ) . '<div class="ot-actions" style="margin:0 0 16px"><button class="button button-primary" onclick="this.form.elements.act.value=\'approve\'">Approve selected</button> <button class="button" onclick="this.form.elements.act.value=\'skip\'">Skip selected</button></div>'; // phpcs:ignore WordPress.Security.EscapeOutput
 	$seqs = ot_nurture_sequences();
 	foreach ( $rows as $m ) {
 		$checks = json_decode( (string) $m['checks'], true );
@@ -80,8 +82,9 @@ function ot_leads_queue_screen() {
 		if ( $checks ) {
 			echo '<p>' . ( $checks['pass'] ? '<span class="ot-pill ot-pill--ok">Checks passed</span>' : '<span class="ot-pill ot-pill--bad">Fix before sending</span> ' . esc_html( implode( ' · ', (array) $checks['issues'] ) ) ) . ( ! empty( $checks['sources'] ) ? ' <span class="ot-muted">Sources: ' . esc_html( $checks['sources'] ) . '</span>' : '' ) . '</p>';
 		}
-		echo '<p><input type="text" class="large-text" name="subject[' . (int) $m['id'] . ']" value="' . esc_attr( $m['subject'] ) . '"></p><div class="ot-grid" style="grid-template-columns:1fr 1fr"><div class="preview">' . wp_kses_post( $m['body'] ) . '</div><textarea name="body[' . (int) $m['id'] . ']" aria-label="Email body (HTML)">' . esc_textarea( $m['body'] ) . '</textarea></div>';
-		echo '<p><button class="button button-primary" name="one" value="' . (int) $m['id'] . '" onclick="this.form.elements.act.value=\'approve\'">Approve and send</button> <button class="button" name="one" value="' . (int) $m['id'] . '" onclick="this.form.elements.act.value=\'save\'">Save edits</button> ' . ( ot_ai_enabled() && $m['lead_id'] ? '<button class="button" name="one" value="' . (int) $m['id'] . '" onclick="this.form.elements.act.value=\'regen\'">Redraft with AI</button> ' : '' ) . '<button class="button-link button-link-delete" name="one" value="' . (int) $m['id'] . '" onclick="this.form.elements.act.value=\'skip\'">Skip</button></p></div>'; // phpcs:ignore WordPress.Security.EscapeOutput
+		echo '<p><input type="text" class="large-text" name="subject[' . (int) $m['id'] . ']" value="' . esc_attr( $m['subject'] ) . '"></p><div class="ot-msg__grid"><div class="preview">' . wp_kses_post( $m['body'] ) . '</div><textarea name="body[' . (int) $m['id'] . ']" aria-label="Email body (HTML)">' . esc_textarea( $m['body'] ) . '</textarea></div>';
+		echo '<div class="ot-actions"><button class="button button-primary" name="one" value="' . (int) $m['id'] . '" onclick="this.form.elements.act.value=\'approve\'">Approve and send</button> <button class="button" name="one" value="' . (int) $m['id'] . '" onclick="this.form.elements.act.value=\'save\'">Save edits</button> ' . ( ot_ai_enabled() && $m['lead_id'] ? '<button class="button" name="one" value="' . (int) $m['id'] . '" onclick="this.form.elements.act.value=\'regen\'">Redraft with AI</button> ' : '' ) . '<button class="button-link button-link-delete" name="one" value="' . (int) $m['id'] . '" onclick="this.form.elements.act.value=\'skip\'">Skip</button></div></div>'; // phpcs:ignore WordPress.Security.EscapeOutput
 	}
 	echo '<input type="hidden" name="act" value="approve"></form></div>';
+	ot_leads_shell_end();
 }

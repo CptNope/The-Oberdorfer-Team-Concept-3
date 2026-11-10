@@ -141,7 +141,7 @@ class OT_Leads_Table extends WP_List_Table {
 			case 'lead_type':
 				return esc_html( OT_LEAD_TYPES[ $item['lead_type'] ] ?? $item['lead_type'] );
 			case 'about':
-				return $item['listing_id'] ? esc_html( get_the_title( $item['listing_id'] ) ) : esc_html( str_replace( array( ',', '/' ), array( ', ', ' / ' ), $item['towns'] ) ?: $item['topic'] );
+				return $item['listing_id'] ? esc_html( get_the_title( $item['listing_id'] ) ) : esc_html( ot_leads_towns_label( $item['towns'] ) ?: $item['topic'] );
 			case 'assigned_agent':
 				return esc_html( ot_leads_agent_name( $item['assigned_agent'] ) );
 			case 'stage':
@@ -202,7 +202,9 @@ add_action( 'admin_init', function () {
 function ot_leads_inbox_screen() {
 	$table = new OT_Leads_Table();
 	$table->prepare_items();
-	echo '<div class="wrap ot-wrap"><h1 class="wp-heading-inline">Leads</h1>';
+	ot_leads_shell( 'inbox' );
+	echo '<div class="wrap ot-wrap">';
+	ot_leads_head( 'All leads', 'Everyone who has sent a form or signed up, newest first. Search by name, email, phone or town.' );
 	if ( ! current_user_can( 'ot_leads_view_all' ) && ! ot_leads_user_agent() ) {
 		echo '<div class="notice notice-warning"><p>Your account is not linked to an agent profile yet, so no leads show. A team leader can link it under Users > your name > Agent profile.</p></div>';
 	}
@@ -215,4 +217,5 @@ function ot_leads_inbox_screen() {
 	$table->search_box( 'Search leads', 'ot-leads' );
 	$table->display();
 	echo '</form></div>';
+	ot_leads_shell_end();
 }

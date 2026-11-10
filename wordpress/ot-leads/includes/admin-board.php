@@ -16,10 +16,9 @@ function ot_leads_board_screen() {
 	foreach ( $rows as $r ) {
 		$by[ $r['stage'] ][] = $r;
 	}
-	echo '<div class="wrap ot-wrap" style="max-width:none"><h1 class="wp-heading-inline">Pipeline</h1>';
-	if ( current_user_can( 'ot_leads_view_all' ) ) {
-		echo ' <form method="get" style="display:inline"><input type="hidden" name="page" value="ot-leads-board">' . ot_leads_agent_select( 'agent', sanitize_title( wp_unslash( $_GET['agent'] ?? '' ) ), 'All agents', true ) . ' <button class="button">Show</button></form>'; // phpcs:ignore WordPress.Security.EscapeOutput
-	}
+	ot_leads_shell( 'board' );
+	echo '<div class="wrap ot-wrap" style="max-width:none">';
+	ot_leads_head( 'Pipeline', 'Drag a person to another stage, or use the menu on their card.', current_user_can( 'ot_leads_view_all' ) ? ot_leads_agent_chips( 'ot-leads-board', sanitize_title( wp_unslash( $_GET['agent'] ?? '' ) ) ) : '' );
 	ot_leads_notice();
 	echo ot_leads_form( 'move', 0, 'id="ot-move"' ) . '<input type="hidden" name="id" value=""><input type="hidden" name="stage" value=""></form>'; // phpcs:ignore WordPress.Security.EscapeOutput
 	echo '<div class="ot-board">';
@@ -30,7 +29,7 @@ function ot_leads_board_screen() {
 		$cards = $by[ $stage ] ?? array();
 		echo '<section class="ot-col" data-stage="' . esc_attr( $stage ) . '" aria-label="' . esc_attr( $label ) . '"><h2><span>' . esc_html( $label ) . '</span><span class="ot-muted">' . count( $cards ) . '</span></h2>';
 		foreach ( $cards as $c ) {
-			echo '<article class="ot-bcard" draggable="true" data-id="' . (int) $c['id'] . '"><a href="' . esc_url( ot_leads_admin_link( $c['id'] ) ) . '">' . esc_html( ot_lead_name( $c ) ) . '</a><small>' . esc_html( OT_LEAD_TYPES[ $c['lead_type'] ] ?? $c['lead_type'] ) . ' · ' . esc_html( $c['listing_id'] ? get_the_title( $c['listing_id'] ) : str_replace( ',', ', ', $c['towns'] ) ) . '</small><small>' . esc_html( ot_leads_agent_name( $c['assigned_agent'] ) ) . ' · ' . esc_html( human_time_diff( strtotime( $c['last_activity_at'] . ' UTC' ) ) ) . '</small>'
+			echo '<article class="ot-bcard" draggable="true" data-id="' . (int) $c['id'] . '"><a href="' . esc_url( ot_leads_admin_link( $c['id'] ) ) . '">' . esc_html( ot_lead_name( $c ) ) . '</a><small>' . esc_html( OT_LEAD_TYPES[ $c['lead_type'] ] ?? $c['lead_type'] ) . ' · ' . esc_html( $c['listing_id'] ? get_the_title( $c['listing_id'] ) : ot_leads_towns_label( $c['towns'] ) ) . '</small><small>' . esc_html( ot_leads_agent_name( $c['assigned_agent'] ) ) . ' · ' . esc_html( human_time_diff( strtotime( $c['last_activity_at'] . ' UTC' ) ) ) . '</small>'
 				. '<label class="screen-reader-text" for="mv' . (int) $c['id'] . '">Move to</label><select id="mv' . (int) $c['id'] . '" data-move="' . (int) $c['id'] . '" style="margin-top:6px;max-width:100%"><option value="">Move to…</option>';
 			foreach ( OT_LEAD_STAGES as $s => $l ) {
 				if ( $s !== $stage ) {
@@ -44,6 +43,7 @@ function ot_leads_board_screen() {
 	echo '</div>';
 	$lost = (int) $wpdb->get_var( "SELECT COUNT(*) FROM $t WHERE stage = 'lost'$own" ); // phpcs:ignore WordPress.DB.PreparedSQL
 	echo '<p><a href="' . esc_url( admin_url( 'admin.php?page=ot-leads&f_stage=lost' ) ) . '">Lost (' . $lost . ')</a></p></div>'; // phpcs:ignore WordPress.Security.EscapeOutput
+	ot_leads_shell_end();
 	?>
 <script>
 ( function () {
