@@ -43,7 +43,7 @@ function ot_leads_defaults() {
 		'hours_start'      => 8,
 		'hours_end'        => 20,
 		'town_owners'      => array(), // town slug => agent slug
-		'type_owners'      => array( 'recruiting' => 'brandon-kaitlyn-oberdorfer' ),
+		'type_owners'      => array(), // '' = the team (Brandon and Kaitlyn)
 		'turnstile_site'   => '',
 		'turnstile_secret' => '',
 		'brevo_key'        => '',
@@ -203,7 +203,15 @@ function ot_leads_suppress( $email, $reason ) {
 
 /* --------------------------------------------------------------------- agents */
 
-/** The team's agents from ot-core: slug => [name, given, email, phone, url]. */
+/**
+ * The joint Brandon & Kaitlyn profile is a page on the site, not an agent in the CRM (team
+ * request, 2026-11-10): a lead with no single owner has assigned_agent '' and belongs to the team,
+ * so its alerts go to both team leaders.
+ */
+const OT_LEADS_TEAM_PROFILE = 'brandon-kaitlyn-oberdorfer';
+const OT_LEADS_TEAM_LABEL   = 'Team (Brandon & Kaitlyn)';
+
+/** The team's individual agents from ot-core: slug => [name, given, email, phone, url]. */
 function ot_leads_agents() {
 	static $out = null;
 	if ( null !== $out ) {
@@ -211,6 +219,9 @@ function ot_leads_agents() {
 	}
 	$out = array();
 	foreach ( get_posts( array( 'post_type' => 'ot_agent', 'post_status' => 'publish', 'posts_per_page' => -1, 'orderby' => 'menu_order', 'order' => 'ASC' ) ) as $p ) {
+		if ( OT_LEADS_TEAM_PROFILE === $p->post_name ) {
+			continue;
+		}
 		$r     = function_exists( 'ot_agent_rec' ) ? ot_agent_rec( $p ) : array();
 		$email = get_post_meta( $p->ID, 'ot_email', true ) ?: ( $r['email'] ?? '' );
 		$out[ $p->post_name ] = array(
@@ -219,7 +230,7 @@ function ot_leads_agents() {
 			'email' => is_email( $email ) ? $email : '',
 			'phone' => get_post_meta( $p->ID, 'ot_phone', true ) ?: ( $r['direct'] ?? '' ),
 			'url'   => get_permalink( $p ),
-			'team'  => 'brandon-kaitlyn-oberdorfer' === $p->post_name,
+			'team'  => false,
 		);
 	}
 	return $out;
@@ -280,3 +291,32 @@ function ot_lead_intent( $lead_id ) {
 	}
 	return array( 'Quiet', 'No visits, forms or replies in 45 days' );
 }
+
+/** SQL for "assigned to $agent": '' = no filter, 'team' = the team's leads (no single owner). */
+function ot_leads_agent_where( $agent, $col = 'assigned_agent' ) {
+	global $wpdb;
+	if ( '' === (string) $agent ) {
+		return '';
+	}
+	return 'team' === $agent ? " AND $col = ''" : $wpdb->prepare( " AND $col = %s", $agent );
+}
+
+/** Once: leads, tasks and routing settings that named the joint profile now belong to the team. */
+add_action( 'plugins_loaded', function () {
+	if ( get_option( 'ot_leads_team_v2' ) ) {
+		return;
+	}
+	global $wpdb;
+	$wpdb->update( ot_leads_table( 'leads' ), array( 'assigned_agent' => '' ), array( 'assigned_agent' => OT_LEADS_TEAM_PROFILE ) );
+	$wpdb->update( ot_leads_table( 'tasks' ), array( 'assignee' => '' ), array( 'assignee' => OT_LEADS_TEAM_PROFILE ) );
+	$set = (array) get_option( 'ot_leads_settings', array() );
+	foreach ( array( 'town_owners', 'type_owners' ) as $k ) {
+		if ( ! empty( $set[ $k ] ) && is_array( $set[ $k ] ) ) {
+			$set[ $k ] = array_map( fn( $v ) => OT_LEADS_TEAM_PROFILE === $v ? '' : $v, $set[ $k ] );
+		}
+	}
+	if ( isset( $set['type_owners'] ) || isset( $set['town_owners'] ) ) {
+		update_option( 'ot_leads_settings', $set );
+	}
+	update_option( 'ot_leads_team_v2', 1, false );
+}, 20 );

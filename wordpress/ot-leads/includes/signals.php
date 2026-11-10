@@ -134,12 +134,12 @@ function ot_leads_today_data( $agent ) {
 	$l   = ot_leads_table( 'leads' );
 	$t   = ot_leads_table( 'tasks' );
 	$e   = ot_leads_table( 'lead_events' );
-	$own = $agent ? $wpdb->prepare( ' AND l.assigned_agent = %s', $agent ) : '';
+	$own = ot_leads_agent_where( $agent, 'l.assigned_agent' );
 	return array(
 		'waiting' => $wpdb->get_results( "SELECT l.* FROM $l l WHERE l.stage = 'new' AND l.contacted_at IS NULL$own ORDER BY l.created_at ASC LIMIT 50", ARRAY_A ),
-		'due'     => $wpdb->get_results( $wpdb->prepare( "SELECT t.id AS task_id, t.kind, t.note, t.due_at, l.* FROM $t t JOIN $l l ON l.id = t.lead_id WHERE t.done_at IS NULL AND t.due_at < %s" . ( $agent ? $wpdb->prepare( ' AND t.assignee = %s', $agent ) : '' ) . ' ORDER BY t.due_at ASC LIMIT 100', ot_leads_day_end() ), ARRAY_A ),
+		'due'     => $wpdb->get_results( $wpdb->prepare( "SELECT t.id AS task_id, t.kind, t.note, t.due_at, l.* FROM $t t JOIN $l l ON l.id = t.lead_id WHERE t.done_at IS NULL AND t.due_at < %s" . ot_leads_agent_where( $agent, 't.assignee' ) . ' ORDER BY t.due_at ASC LIMIT 100', ot_leads_day_end() ), ARRAY_A ),
 		'back'    => $wpdb->get_results( $wpdb->prepare( "SELECT l.*, MAX(e.created_at) AS seen_at FROM $e e JOIN $l l ON l.id = e.lead_id WHERE e.type = 'signal' AND e.created_at >= %s$own GROUP BY l.id ORDER BY seen_at DESC LIMIT 20", gmdate( 'Y-m-d H:i:s', time() - 3 * DAY_IN_SECONDS ) ), ARRAY_A ),
-		'week'    => $wpdb->get_results( $wpdb->prepare( "SELECT t.id AS task_id, t.kind, t.note, t.due_at, l.* FROM $t t JOIN $l l ON l.id = t.lead_id WHERE t.done_at IS NULL AND t.due_at >= %s AND t.due_at < %s" . ( $agent ? $wpdb->prepare( ' AND t.assignee = %s', $agent ) : '' ) . ' ORDER BY t.due_at ASC LIMIT 50', ot_leads_day_end(), ot_leads_day_end( 7 ) ), ARRAY_A ),
+		'week'    => $wpdb->get_results( $wpdb->prepare( "SELECT t.id AS task_id, t.kind, t.note, t.due_at, l.* FROM $t t JOIN $l l ON l.id = t.lead_id WHERE t.done_at IS NULL AND t.due_at >= %s AND t.due_at < %s" . ot_leads_agent_where( $agent, 't.assignee' ) . ' ORDER BY t.due_at ASC LIMIT 50', ot_leads_day_end(), ot_leads_day_end( 7 ) ), ARRAY_A ),
 		'drafts'  => (int) $wpdb->get_var( 'SELECT COUNT(*) FROM ' . ot_leads_table( 'messages' ) . " WHERE status = 'draft'" ),
 	);
 }

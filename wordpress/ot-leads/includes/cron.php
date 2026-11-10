@@ -52,12 +52,13 @@ add_action( 'ot_leads_daily', function () {
 function ot_leads_task_digest() {
 	// One email per address: Brandon's own leads and the team's arrive together.
 	$by = array();
-	foreach ( ot_leads_agents() as $slug => $a ) {
+	$who = ot_leads_agents() + array( 'team' => array( 'name' => OT_LEADS_TEAM_LABEL, 'team' => true ) );
+	foreach ( $who as $slug => $a ) {
 		$d = ot_leads_today_data( $slug );
 		if ( ! $d['waiting'] && ! $d['due'] && ! $d['back'] ) {
 			continue;
 		}
-		foreach ( ot_leads_agent_emails( $slug ) as $to ) {
+		foreach ( ot_leads_agent_emails( 'team' === $slug ? '' : $slug ) as $to ) {
 			$by[ strtolower( $to ) ][] = array( $slug, $a, $d );
 		}
 	}

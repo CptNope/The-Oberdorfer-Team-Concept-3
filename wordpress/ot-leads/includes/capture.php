@@ -53,7 +53,7 @@ add_filter( 'render_block_ot/agent-profile', function ( $html, $block ) {
 		return $html;
 	}
 	$slug = get_post_field( 'post_name', get_queried_object_id() );
-	$a    = ot_leads_agents()[ $slug ] ?? null;
+	$a    = OT_LEADS_TEAM_PROFILE === $slug ? array( 'team' => true, 'given' => 'Brandon & Kaitlyn' ) : ( ot_leads_agents()[ $slug ] ?? null );
 	if ( ! $a ) {
 		return $html;
 	}

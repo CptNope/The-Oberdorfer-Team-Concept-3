@@ -10,7 +10,7 @@ function ot_leads_board_screen() {
 	global $wpdb;
 	$t     = ot_leads_table( 'leads' );
 	$own   = current_user_can( 'ot_leads_view_all' ) ? '' : $wpdb->prepare( ' AND assigned_agent = %s', ot_leads_user_agent() );
-	$agent = current_user_can( 'ot_leads_view_all' ) && ! empty( $_GET['agent'] ) ? $wpdb->prepare( ' AND assigned_agent = %s', sanitize_title( wp_unslash( $_GET['agent'] ) ) ) : '';
+	$agent = current_user_can( 'ot_leads_view_all' ) && ! empty( $_GET['agent'] ) ? ot_leads_agent_where( sanitize_title( wp_unslash( $_GET['agent'] ) ) ) : '';
 	$rows  = $wpdb->get_results( "SELECT id, first_name, last_name, email, lead_type, stage, assigned_agent, towns, listing_id, created_at, last_activity_at FROM $t WHERE stage <> 'lost'$own$agent ORDER BY last_activity_at DESC LIMIT 500", ARRAY_A ); // phpcs:ignore WordPress.DB.PreparedSQL
 	$by    = array();
 	foreach ( $rows as $r ) {
@@ -18,7 +18,7 @@ function ot_leads_board_screen() {
 	}
 	echo '<div class="wrap ot-wrap" style="max-width:none"><h1 class="wp-heading-inline">Pipeline</h1>';
 	if ( current_user_can( 'ot_leads_view_all' ) ) {
-		echo ' <form method="get" style="display:inline"><input type="hidden" name="page" value="ot-leads-board">' . ot_leads_agent_select( 'agent', sanitize_title( wp_unslash( $_GET['agent'] ?? '' ) ), 'All agents' ) . ' <button class="button">Show</button></form>'; // phpcs:ignore WordPress.Security.EscapeOutput
+		echo ' <form method="get" style="display:inline"><input type="hidden" name="page" value="ot-leads-board">' . ot_leads_agent_select( 'agent', sanitize_title( wp_unslash( $_GET['agent'] ?? '' ) ), 'All agents', true ) . ' <button class="button">Show</button></form>'; // phpcs:ignore WordPress.Security.EscapeOutput
 	}
 	ot_leads_notice();
 	echo ot_leads_form( 'move', 0, 'id="ot-move"' ) . '<input type="hidden" name="id" value=""><input type="hidden" name="stage" value=""></form>'; // phpcs:ignore WordPress.Security.EscapeOutput

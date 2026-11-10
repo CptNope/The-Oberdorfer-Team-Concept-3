@@ -4,7 +4,7 @@
  *
  * Rules, first match wins: (1) the named agent (an agent's form, or the listing agent of a
  * showing or open-house sign-in); (2) the agent who owns the town (Settings > Routing);
- * (3) the owner set for the lead type; (4) Brandon and Kaitlyn.
+ * (3) the owner set for the lead type; (4) the team (no single owner; both team leaders).
  *
  * The assigned agent gets an instant email with the lead and a signed "I'm on it" link. If
  * nobody marks the lead contacted within the response window during business hours, the alert
@@ -16,6 +16,9 @@ defined( 'ABSPATH' ) || exit;
 
 function ot_leads_route( $lead, $named = '' ) {
 	$agents = ot_leads_agents();
+	if ( OT_LEADS_TEAM_PROFILE === $named ) {
+		return ''; // the joint profile's form: the team
+	}
 	if ( $named && isset( $agents[ $named ] ) ) {
 		return $named;
 	}
@@ -32,7 +35,7 @@ function ot_leads_route( $lead, $named = '' ) {
 	if ( ! empty( $types[ $lead['lead_type'] ] ) && isset( $agents[ $types[ $lead['lead_type'] ] ] ) ) {
 		return $types[ $lead['lead_type'] ];
 	}
-	return isset( $agents['brandon-kaitlyn-oberdorfer'] ) ? 'brandon-kaitlyn-oberdorfer' : (string) array_key_first( $agents );
+	return ''; // the team: Brandon and Kaitlyn
 }
 
 /* --------------------------------------------------------------------- alerts */

@@ -42,14 +42,16 @@ class OT_Leads_Table extends WP_List_Table {
 				$w[] = $wpdb->prepare( 'assigned_agent = %s', ot_leads_user_agent() );
 				break;
 			case 'unassigned':
-				$w[] = "(assigned_agent = '' OR assigned_agent = 'brandon-kaitlyn-oberdorfer')";
+				$w[] = "assigned_agent = ''";
 				break;
 			case 'warm':
 				$w[] = $wpdb->prepare( 'id IN (SELECT lead_id FROM ' . ot_leads_table( 'lead_events' ) . " WHERE created_at >= %s AND type IN ('form','page_view','reply','click') GROUP BY lead_id HAVING SUM(CASE WHEN type IN ('form','reply') THEN 3 ELSE 1 END) >= 4)", gmdate( 'Y-m-d H:i:s', time() - 14 * DAY_IN_SECONDS ) );
 				break;
 		}
 		foreach ( array( 'lead_type', 'stage', 'assigned_agent' ) as $k ) {
-			if ( ! empty( $_GET[ 'f_' . $k ] ) ) {
+			if ( 'assigned_agent' === $k && 'team' === ( $_GET['f_assigned_agent'] ?? '' ) ) {
+				$w[] = "assigned_agent = ''";
+			} elseif ( ! empty( $_GET[ 'f_' . $k ] ) ) {
 				$w[] = $wpdb->prepare( "$k = %s", sanitize_text_field( wp_unslash( $_GET[ 'f_' . $k ] ) ) );
 			}
 		}
@@ -106,7 +108,7 @@ class OT_Leads_Table extends WP_List_Table {
 		}
 		echo '</select>';
 		if ( current_user_can( 'ot_leads_view_all' ) ) {
-			echo ot_leads_agent_select( 'f_assigned_agent', sanitize_text_field( wp_unslash( $_GET['f_assigned_agent'] ?? '' ) ), 'All agents' ); // phpcs:ignore WordPress.Security.EscapeOutput
+			echo ot_leads_agent_select( 'f_assigned_agent', sanitize_text_field( wp_unslash( $_GET['f_assigned_agent'] ?? '' ) ), 'All agents', true ); // phpcs:ignore WordPress.Security.EscapeOutput
 		}
 		submit_button( 'Filter', '', 'filter_action', false );
 		echo '</div>';

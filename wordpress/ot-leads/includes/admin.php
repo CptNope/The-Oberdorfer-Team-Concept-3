@@ -47,15 +47,16 @@ add_action( 'admin_head', function () {
 
 /** The lead's agent as a name. */
 function ot_leads_agent_name( $slug ) {
-	return ot_leads_agents()[ $slug ]['name'] ?? ( $slug ?: 'Unassigned' );
+	return ot_leads_agents()[ $slug ]['name'] ?? ( ( '' === $slug || 'team' === $slug || OT_LEADS_TEAM_PROFILE === $slug ) ? OT_LEADS_TEAM_LABEL : $slug );
 }
 
 function ot_leads_stage_pill( $stage ) {
 	return '<span class="ot-pill' . ( 'new' === $stage ? ' ot-pill--new' : '' ) . '">' . esc_html( OT_LEAD_STAGES[ $stage ] ?? $stage ) . '</span>';
 }
 
-function ot_leads_agent_select( $name, $cur, $none = 'Unassigned' ) {
-	$o = '<select name="' . esc_attr( $name ) . '"><option value="">' . esc_html( $none ) . '</option>';
+/** An agent menu. '' is $none (the team, or "everyone" in a filter); $team adds a "team" choice to filters. */
+function ot_leads_agent_select( $name, $cur, $none = OT_LEADS_TEAM_LABEL, $team = false ) {
+	$o = '<select name="' . esc_attr( $name ) . '"><option value="">' . esc_html( $none ) . '</option>' . ( $team ? '<option value="team"' . selected( $cur, 'team', false ) . '>' . esc_html( OT_LEADS_TEAM_LABEL ) . '</option>' : '' );
 	foreach ( ot_leads_agents() as $slug => $a ) {
 		$o .= '<option value="' . esc_attr( $slug ) . '"' . selected( $cur, $slug, false ) . '>' . esc_html( $a['name'] ) . '</option>';
 	}

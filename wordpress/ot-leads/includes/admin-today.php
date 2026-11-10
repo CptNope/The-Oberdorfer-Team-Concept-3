@@ -112,7 +112,7 @@ function ot_leads_today_screen() {
 		echo ot_leads_health_notices(); // phpcs:ignore WordPress.Security.EscapeOutput
 	}
 	if ( $all ) {
-		echo '<form method="get" style="margin:8px 0 16px"><input type="hidden" name="page" value="ot-leads-today">' . ot_leads_agent_select( 'agent', $agent, 'Everyone' ) . ' <button class="button">Show</button></form>'; // phpcs:ignore WordPress.Security.EscapeOutput
+		echo '<form method="get" style="margin:8px 0 16px"><input type="hidden" name="page" value="ot-leads-today">' . ot_leads_agent_select( 'agent', $agent, 'Everyone', true ) . ' <button class="button">Show</button></form>'; // phpcs:ignore WordPress.Security.EscapeOutput
 	}
 	echo '<p style="font-size:14px"><strong>' . count( $d['waiting'] ) . '</strong> waiting for a first reply · <strong>' . count( $d['due'] ) . '</strong> follow-ups due · <strong>' . count( $d['back'] ) . '</strong> back on the site · <a href="' . esc_url( admin_url( 'admin.php?page=ot-leads-queue' ) ) . '"><strong>' . (int) $d['drafts'] . '</strong> emails to approve</a></p>';
 

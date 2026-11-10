@@ -61,7 +61,7 @@ function ot_leads_reports_screen() {
 	$days   = array( '30' => 30, '90' => 90, '365' => 365, 'all' => 0 );
 	$days   = $days[ $period ] ?? 90;
 	$since  = $days ? gmdate( 'Y-m-d H:i:s', time() - $days * DAY_IN_SECONDS ) : '1970-01-01 00:00:00';
-	$where  = $wpdb->prepare( ' WHERE created_at >= %s', $since ) . ( $agent ? $wpdb->prepare( ' AND assigned_agent = %s', $agent ) : '' );
+	$where  = $wpdb->prepare( ' WHERE created_at >= %s', $since ) . ot_leads_agent_where( $agent );
 	$leads  = $wpdb->get_results( 'SELECT * FROM ' . ot_leads_table( 'leads' ) . $where, ARRAY_A );
 	$win    = max( 5, (int) ot_leads_opt( 'response_minutes' ) );
 
@@ -76,7 +76,7 @@ function ot_leads_reports_screen() {
 	foreach ( array( '30' => 'Last 30 days', '90' => 'Last 90 days', '365' => 'Last 12 months', 'all' => 'All time' ) as $k => $label ) {
 		echo '<option value="' . esc_attr( $k ) . '"' . selected( $period, $k, false ) . '>' . esc_html( $label ) . '</option>';
 	}
-	echo '</select> ' . ( $all ? ot_leads_agent_select( 'agent', $agent, 'Everyone' ) : '' ) . ' <button class="button">Show</button></form>'; // phpcs:ignore WordPress.Security.EscapeOutput
+	echo '</select> ' . ( $all ? ot_leads_agent_select( 'agent', $agent, 'Everyone', true ) : '' ) . ' <button class="button">Show</button></form>'; // phpcs:ignore WordPress.Security.EscapeOutput
 
 	$within = $replied ? count( array_filter( $replied, fn( $m ) => $m <= $win ) ) : 0;
 	echo '<div class="ot-card"><h2>At a glance</h2><p style="font-size:15px"><strong>' . count( $inq ) . '</strong> inquiries · <strong>' . ( count( $leads ) - count( $inq ) ) . '</strong> sign-ups · <strong>' . count( $replied ) . '</strong> answered'
@@ -150,7 +150,7 @@ function ot_leads_reports_screen() {
 	for ( $i = 11; $i >= 0; $i-- ) {
 		$months[ gmdate( 'Y-m', strtotime( "first day of -$i month" ) ) ] = 0;
 	}
-	$ym = $wpdb->get_col( $wpdb->prepare( 'SELECT created_at FROM ' . ot_leads_table( 'leads' ) . ' WHERE created_at >= %s' . ( $agent ? $wpdb->prepare( ' AND assigned_agent = %s', $agent ) : '' ), gmdate( 'Y-m-01 00:00:00', strtotime( 'first day of -11 month' ) ) ) );
+	$ym = $wpdb->get_col( $wpdb->prepare( 'SELECT created_at FROM ' . ot_leads_table( 'leads' ) . ' WHERE created_at >= %s' . ot_leads_agent_where( $agent ), gmdate( 'Y-m-01 00:00:00', strtotime( 'first day of -11 month' ) ) ) );
 	foreach ( $ym as $c ) {
 		$k = substr( $c, 0, 7 );
 		if ( isset( $months[ $k ] ) ) {
