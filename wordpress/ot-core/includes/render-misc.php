@@ -71,7 +71,7 @@ function ot_inquiry_form( $id, $title, $topics, $submit, $context, $level = 'h3'
 	$n++;
 	$fid  = sanitize_html_class( $id ) . ( $n > 1 ? '-' . $n : '' );
 	$p    = substr( preg_replace( '/[^a-z]/', '', strtolower( $fid ) ), 0, 2 ) . $n;
-	$note = $note ?: 'Your inquiry goes to Brandon and Kaitlyn and is used only to respond to your request. [Privacy policy to be published before launch.]';
+	$note = $note ?: 'Your inquiry goes to Brandon and Kaitlyn and is used only to respond to your request. See our <a href="' . esc_url( home_url( '/privacy/' ) ) . '">privacy policy</a>.';
 	$inner  = '<div class="form__row">' . ot_field( $p . '-name', 'Full name', 'text', true, 'name' ) . ot_field( $p . '-email', 'Email', 'email', true, 'email' ) . '</div>';
 	$inner .= '<div class="form__row">' . ot_field( $p . '-phone', 'Phone', 'tel', false, 'tel', true, '[0-9\s\(\)\+\.\-]{7,}', 'Use digits, spaces or dashes, for example 978-257-4938.' ) . '</div>';
 	if ( $topics ) {
@@ -90,7 +90,7 @@ function ot_inquiry_form( $id, $title, $topics, $submit, $context, $level = 'h3'
 	return '<form class="form" id="' . esc_attr( $fid ) . '" ' . $mode . ' data-icons="' . esc_url( ot_asset( 'assets/img/icons.svg' ) ) . '" data-lead-type="' . esc_attr( $context ) . '" aria-labelledby="' . esc_attr( $fid ) . '-title">
 <' . $level . ' class="h3" id="' . esc_attr( $fid ) . '-title">' . esc_html( $title ) . '</' . $level . '>
 ' . $inner . '
-<p class="form-note">' . esc_html( $note ) . '</p>
+<p class="form-note">' . wp_kses( $note, array( 'a' => array( 'href' => true ) ) ) . '</p>
 <div><button class="btn" type="submit">' . esc_html( $submit ) . '</button></div>
 <div data-form-status hidden tabindex="-1" role="status"></div>
 </form>';

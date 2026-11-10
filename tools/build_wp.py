@@ -23,7 +23,7 @@ import build_site as S  # noqa: E402  (data and the tested title/description rul
 THEME = os.path.join(ROOT, "wordpress", "oberdorfer")
 CORE = os.path.join(ROOT, "wordpress", "ot-core")
 DIST = os.path.join(ROOT, "wordpress", "dist")
-VERSION = "0.7.6"
+VERSION = "0.8.0"
 
 ASSET_DIRS = ["assets/img/photo", "assets/logo"]
 ASSET_FILES = ["assets/css/tokens.css", "assets/css/base.css", "assets/css/components.css", "assets/css/site.css",
@@ -65,6 +65,9 @@ def copy_assets():
         dst = os.path.join(THEME, f)
         os.makedirs(os.path.dirname(dst), exist_ok=True)
         shutil.copyfile(os.path.join(ROOT, f), dst)
+    # The privacy policy text, one source for the prototype and the theme's pattern.
+    os.makedirs(os.path.join(THEME, "data"), exist_ok=True)
+    shutil.copyfile(os.path.join(ROOT, "tools", "data", "privacy-policy.json"), os.path.join(THEME, "data", "privacy-policy.json"))
 
 
 def page_meta(rel):
@@ -154,6 +157,7 @@ PAGES = [  # slug, title, prototype path for title and description, menu order
     ("home", "Home", "", 0), ("buy", "Buy", "buy", 1), ("sell", "Sell", "sell", 2), ("market", "Market insights", "market", 3),
     ("team", "Our Team", "team", 4), ("journal", "Journal", "journal", 5), ("join", "Join Our Team", "join", 6),
     ("contact", "Contact", "contact", 7),
+    ("privacy", "Privacy policy", "privacy", 8),
 ]
 
 

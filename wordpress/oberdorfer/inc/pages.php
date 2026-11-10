@@ -22,6 +22,7 @@ function oberdorfer_page_sections() {
 		'team' => array( 'page-hero-team', 'agent-directory', 'join-teaser' ),
 		'join' => array( 'page-hero-join', 'leadership-letter', 'brand-presentation', 'recruiting-form' ),
 		'contact' => array( 'page-hero-contact', 'contact-tabs', 'privacy-notes' ),
+		'privacy' => array( 'privacy-policy' ), // body only: page.html adds the title
 	);
 }
 

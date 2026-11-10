@@ -280,7 +280,7 @@ function ot_listing_detail_parts( $l, $post_id ) {
 	$who    = $agent ? get_the_title( $agent ) : 'Brandon &amp; Kaitlyn Oberdorfer';
 	$phone  = $agent ? ( get_post_meta( $agent->ID, 'ot_phone', true ) ?: OT_PHONE ) : OT_PHONE;
 	$pic    = $agent ? ot_agent_rec( $agent )['photo_url'] : ot_asset( 'assets/img/photo/team-portrait.webp' );
-	$form   = ot_inquiry_form( 'show', 'Request a showing', array( 'This week, weekday', 'This week, weekend', 'Next week', 'Flexible' ), 'Request a showing', 'showing:' . $l['slug'], 'h2', 'Your request is attached to ' . $l['address'] . ' and goes to ' . wp_strip_all_tags( html_entity_decode( $who ) ) . '. [Privacy policy to be published before launch.]' );
+	$form   = ot_inquiry_form( 'show', 'Request a showing', array( 'This week, weekday', 'This week, weekend', 'Next week', 'Flexible' ), 'Request a showing', 'showing:' . $l['slug'], 'h2', 'Your request is attached to ' . $l['address'] . ' and goes to ' . wp_strip_all_tags( html_entity_decode( $who ) ) . '. See our <a href="' . esc_url( home_url( '/privacy/' ) ) . '">privacy policy</a>.' );
 	return array(
 		'facts' => $facts ? '<div class="facts">' . $facts . '</div>' : '',
 		'story' => $story,

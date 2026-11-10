@@ -210,10 +210,10 @@ function ot_render_person_section( $section, $x ) {
 </div></section>';
 
 		case 'contact-form':
-			return ot_inquiry_form( 'pf', 'Message ' . $x['r']['given'], array( 'Buying', 'Selling', 'Both', 'A market review', 'Something else' ), 'Send to ' . $x['r']['given'], 'agent:' . $x['p']->post_name, 'h3', 'Your message goes to ' . $x['r']['given'] . ' and is used only to respond to your request. [Privacy policy to be published before launch.]' );
+			return ot_inquiry_form( 'pf', 'Message ' . $x['r']['given'], array( 'Buying', 'Selling', 'Both', 'A market review', 'Something else' ), 'Send to ' . $x['r']['given'], 'agent:' . $x['p']->post_name, 'h3', 'Your message goes to ' . $x['r']['given'] . ' and is used only to respond to your request. See our <a href="' . esc_url( home_url( '/privacy/' ) ) . '">privacy policy</a>.' );
 
 		case 'contact':
-			$form = ot_inquiry_form( 'pf', 'Message ' . $x['r']['given'], array( 'Buying', 'Selling', 'Both', 'A market review', 'Something else' ), 'Send to ' . $x['r']['given'], 'agent:' . $x['p']->post_name, 'h3', 'Your message goes to ' . $x['r']['given'] . ' and is used only to respond to your request. [Privacy policy to be published before launch.]' );
+			$form = ot_inquiry_form( 'pf', 'Message ' . $x['r']['given'], array( 'Buying', 'Selling', 'Both', 'A market review', 'Something else' ), 'Send to ' . $x['r']['given'], 'agent:' . $x['p']->post_name, 'h3', 'Your message goes to ' . $x['r']['given'] . ' and is used only to respond to your request. See our <a href="' . esc_url( home_url( '/privacy/' ) ) . '">privacy policy</a>.' );
 			return '<section class="section surface-muted" id="contact-agent"><div class="container split" style="align-items:start">
   <div style="grid-column:1/span 5" class="stack"><p class="label">Contact ' . $g . '</p><h2 class="display-m answer"><span>Start with</span><span>a conversation.</span></h2><p>Tell ' . $g . ' what you are planning. Expect a reply by your preferred method; no account, no obligation.</p><a class="cta-panel__phone" href="tel:' . OT_TEL . '" style="color:var(--ot-navy);font-size:var(--step-h2)">' . OT_PHONE . '</a></div>
   <div style="grid-column:7/span 6" class="panel">' . $form . '</div>

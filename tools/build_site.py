@@ -162,7 +162,7 @@ def reach_pref(prefix):
 <label class="choice"><input type="radio" name="{prefix}-pref" value="email"><span>Email</span></label></div></fieldset>'''
 
 def form(R, fid, title, inner, submit, lead_type, title_level="h2", note=None):
-    note = note or "Your inquiry goes to Brandon and Kaitlyn and is used only to respond to your request. [Privacy policy to be published before launch.]"
+    note = note or f'Your inquiry goes to Brandon and Kaitlyn and is used only to respond to your request. See our <a href="{R}site/privacy/">privacy policy</a>.'
     return f'''<form class="form" id="{fid}" data-demo-form data-icons="{R}assets/img/icons.svg" data-lead-type="{lead_type}" aria-labelledby="{fid}-title">
 <{title_level} class="h3" id="{fid}-title">{title}</{title_level}>
 {inner.replace("ICONS", R + "assets/img/icons.svg")}
@@ -267,7 +267,7 @@ def footer(R):
       <div class="stack" style="--stack:var(--space-3)">
         <p class="disclosure"><strong>The Oberdorfer Team</strong> is a real estate team operating under <strong>REWAP Brokerage LLC</strong>, a licensed Massachusetts real estate broker. Office: {ADDRESS}. Listings on this prototype are demonstrations.</p>
         <p class="eho">{icon(R, 'eho')}Equal Housing Opportunity</p>
-        <p class="disclosure">© 2026 The Oberdorfer Team · <a href="{R}site/contact/#privacy">Privacy</a> · <a href="{R}site/contact/#accessibility">Accessibility</a> · <a href="{R}site/contact/#fair-housing">Fair housing</a></p>
+        <p class="disclosure">© 2026 The Oberdorfer Team · <a href="{R}site/privacy/">Privacy</a> · <a href="{R}site/contact/#accessibility">Accessibility</a> · <a href="{R}site/contact/#fair-housing">Fair housing</a></p>
       </div>
     </div>
   </div>
@@ -1327,7 +1327,7 @@ def page_profile(a):
   <div class="testimonial-list" style="grid-column:7/span 6">{stories}</div>
 </div></section>''' if stories else ""
 
-    note = f"Your message goes to {g} and is used only to respond to your request. [Privacy policy to be published before launch.]"
+    note = f'Your message goes to {g} and is used only to respond to your request. See our <a href="{R}site/privacy/">privacy policy</a>.'
     contact_form = form(R, "pf", f"Message {g}" if not tpl else f"Message {g}",
                         contact_fields("pf") + select("pf-topic", "I'm interested in", ["Buying", "Selling", "Both", "A market review", "Something else"]) + field("pf-msg", "Message", "textarea", opt=True) + reach_pref("pf"),
                         f"Send to {g}" if not tpl else "Send my message", a["lead"], "h3", note=note)
@@ -1504,6 +1504,30 @@ def page_office():
 </div></section>'''
     write("office", R, "Worcester, MA Office | The Oberdorfer Team", "The Oberdorfer Team works from Worcester, Massachusetts, under REWAP Brokerage LLC, and serves buyers and sellers statewide. Request an appointment.", "", body, ld=[crumbs_ld(trail)])
 
+PRIVACY = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "privacy-policy.json")))
+
+
+def privacy_html(contact_href):
+    """The policy body from tools/data/privacy-policy.json (the WordPress pattern reads the same file)."""
+    fill = lambda t: t.replace("{phone}", PHONE).replace("{address}", ADDRESS).replace("{contact}", contact_href)
+    out = [f'<p class="caption">Last updated {PRIVACY["updated"]}</p>', f'<p>{fill(PRIVACY["intro"])}</p>']
+    for sec in PRIVACY["sections"]:
+        out.append(f'<h2>{sec["h"]}</h2>')
+        for b in sec["blocks"]:
+            out.append(f'<p>{fill(b["p"])}</p>' if "p" in b else "<ul>" + "".join(f"<li>{fill(li)}</li>" for li in b["ul"]) + "</ul>")
+    return "\n".join(out)
+
+
+def page_privacy():
+    R = "../../"
+    trail = [("Home", "site/"), ("Privacy policy", "site/privacy/")]
+    body = page_hero(R, trail, ["Your information,", "handled with care."], h1="Privacy policy", lead="What we collect through this site, how we use it, who we share it with and the choices you have.") + f'''
+<section class="section"><div class="container"><div class="prose">
+{privacy_html(R + "site/contact/")}
+</div></div></section>'''
+    write("privacy", R, "Privacy Policy | The Oberdorfer Team", "How The Oberdorfer Team collects, uses and shares information through oberdorferteam.com, the one cookie it sets after you contact us, and your choices.", "", body)
+
+
 def page_contact():
     R = "../../"
     trail = [("Home", "site/"), ("Contact", "site/contact/")]
@@ -1521,7 +1545,7 @@ def page_contact():
   <div class="stack" style="--stack:var(--space-6)">
     <a class="cta-panel__phone" href="tel:{TEL}" style="color:var(--ot-navy);font-size:var(--step-display-m)">{PHONE}</a>
     <div>
-      <div class="contact-line">{icon(R,'phone')}<div><p class="h5">Call or text</p><p class="body-s">Kaitlyn Oberdorfer · <a href="tel:+19782574938">978-257-4938</a><br>Brandon Oberdorfer · <a href="tel:{BRANDON_TEL}">{BRANDON_PHONE}</a> (also the team line)</p></div></div>
+      <div class="contact-line">{icon(R,'phone')}<div><p class="h5">Call or text</p><p class="body-s">Kaitlyn Oberdorfer · <a href="tel:+19782574938">978-257-4938</a> (also the team line)<br>Brandon Oberdorfer · <a href="tel:{BRANDON_TEL}">{BRANDON_PHONE}</a></p></div></div>
       <div class="contact-line">{icon(R,'mail')}<div><p class="h5">Email</p><p class="body-s">Kaitlyn · <a href="mailto:kaitlynoberdorfer@gmail.com">kaitlynoberdorfer@gmail.com</a><br>Brandon · <a href="mailto:brandonoberdorfer@gmail.com">brandonoberdorfer@gmail.com</a></p></div></div>
       <div class="contact-line">{icon(R,'download')}<div><p class="h5">Save our contacts</p><p class="body-s"><a href="{R}assets/vcard/kaitlyn-oberdorfer.vcf">Kaitlyn</a> · <a href="{R}assets/vcard/brandon-oberdorfer.vcf">Brandon</a> · <a href="{R}{VCARD_TEAM}">Both</a> (vCard, for your phone's contacts)</p></div></div>
       <div class="contact-line">{icon(R,'external')}<div><p class="h5">Follow along</p><p class="body-s"><a href="{INSTAGRAM}" rel="noopener">Instagram @oberdorferteam</a></p></div></div>
@@ -1532,16 +1556,16 @@ def page_contact():
   <div class="panel"><div class="tabs" role="tablist" aria-label="Type of inquiry">{tabbtn}</div>{panels}</div>
 </div></section>
 <section class="section surface-muted"><div class="container cols cols--3 col-rule body-s">
-  <div id="privacy"><h2 class="h4">Privacy</h2><p style="margin-top:var(--space-2)">Form details are used only to respond to your request and are never sold. [Full privacy policy to be written and approved before launch.]</p></div>
+  <div id="privacy"><h2 class="h4">Privacy</h2><p style="margin-top:var(--space-2)">Form details are used only to respond to your request and are never sold. <a href="{R}site/privacy/">Read our privacy policy</a>.</p></div>
   <div id="accessibility"><h2 class="h4">Accessibility</h2><p style="margin-top:var(--space-2)">This site is designed to meet WCAG 2.2 AA. If anything is hard to use, call {PHONE} and we will help.</p></div>
-  <div id="fair-housing"><h2 class="h4">Fair housing</h2><p style="margin-top:var(--space-2)">The Oberdorfer Team and REWAP Brokerage LLC are committed to the Fair Housing Act and Equal Housing Opportunity. [Required Massachusetts notices to be supplied by the principal broker.]</p></div>
+  <div id="fair-housing"><h2 class="h4">Fair housing</h2><p style="margin-top:var(--space-2)">The Oberdorfer Team and REWAP Brokerage LLC are committed to the Fair Housing Act and Equal Housing Opportunity.</p></div>
 </div></section>'''
     write("contact", R, "Contact The Oberdorfer Team | Worcester, MA Real Estate", "Call or text Brandon and Kaitlyn Oberdorfer at 978-257-4938, or send a buyer, seller, recruiting or general inquiry. Based in Worcester, serving Massachusetts.", "Contact", body, ld=[crumbs_ld(trail)])
 
 if __name__ == "__main__":
     page_home(); page_buy(); [page_listing(l) for l in LISTINGS]; page_sell(); page_market()
     page_communities(); [page_town(t) for t in TOWNS]; [page_neighborhood(n, t) for t in TOWNS for n in t.get("neighborhoods", [])]; page_team(); page_agent(); page_journal(); page_article()
-    page_join(); page_office(); page_contact()
+    page_join(); page_office(); page_contact(); page_privacy()
     for a in AGENTS: page_profile(a)
     page_profile(TEMPLATE_AGENT)
     write_discovery_files()

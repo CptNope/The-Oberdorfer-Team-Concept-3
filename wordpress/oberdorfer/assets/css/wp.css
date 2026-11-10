@@ -142,3 +142,7 @@
 .editor-styles-wrapper .hero-cover__media .components-resizable-box__container { width: 100% !important; height: 100% !important; }
 /* Editor: a core/button with design-system classes draws as the link it renders on the site. */
 .editor-styles-wrapper .wp-block-button:is(.btn, .link-arrow, .cta-panel__phone) > .wp-block-button__link { background: none; color: inherit; padding: 0; border: 0; border-radius: 0; font: inherit; letter-spacing: inherit; text-transform: inherit; }
+
+/* Body text of plain pages (page.html: the post content is "container prose"): keep the
+   container's gutters, read at the prose measure. */
+.wp-block-post-content.container.prose > * { max-width: var(--measure); }

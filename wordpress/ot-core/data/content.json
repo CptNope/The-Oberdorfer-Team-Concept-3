@@ -1,5 +1,5 @@
 {
- "version": "0.7.6 (2026-10-22)",
+ "version": "0.8.0 (2026-10-22)",
  "front_page": "home",
  "posts_page": "journal",
  "regions": [
@@ -12606,6 +12606,15 @@
    "meta": {
     "ot_seo_title": "Contact The Oberdorfer Team | Worcester, MA Real Estate",
     "ot_seo_description": "Call or text Brandon and Kaitlyn Oberdorfer at 978-257-4938, or send a buyer, seller, recruiting or general inquiry. Based in Worcester, serving Massachusetts."
+   }
+  },
+  {
+   "slug": "privacy",
+   "title": "Privacy policy",
+   "order": 8,
+   "meta": {
+    "ot_seo_title": "Privacy Policy | The Oberdorfer Team",
+    "ot_seo_description": "How The Oberdorfer Team collects, uses and shares information through oberdorferteam.com, the one cookie it sets after you contact us, and your choices."
    }
   }
  ],
