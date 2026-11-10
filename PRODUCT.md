@@ -117,6 +117,7 @@ Two things set the team apart:
 - `source/creative-brief.md`: the full creative and technical brief.
 - **Confirmed 2026-10-15:** the user confirmed that all data in the publication is correct, including the phone number 406-250-7620, "Top Producer" and the market figures. Brandon produced the publication with ChatGPT.
 - **Changed 2026-11-10:** the team line on the site is Kaitlyn's cell, 978-257-4938 (a Massachusetts area code). Brandon's 406-250-7620 stays as his direct line. The Fall 2026 publication still prints 406-250-7620.
+- **Confirmed 2026-11-10:** MA license numbers: Brandon 9562709, Kaitlyn 9573517.
 
 **Absent, so use labeled placeholders only:**
 - Additional team photography

@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.7.2
+Stable tag: 0.7.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,9 @@ Fonts: Cormorant Garamond and Manrope (SIL Open Font License 1.1), loaded from G
 this version; self-hosting is a launch task.
 
 == Changelog ==
+
+= 0.7.3 =
+* Our Team: the filter bar (specialty, service area, language) and the profile count are removed while the team has two agents.
 
 = 0.7.2 =
 * Version moves with ot-core 0.7.2. No theme changes.

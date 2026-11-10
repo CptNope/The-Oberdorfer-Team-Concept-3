@@ -23,7 +23,7 @@ import build_site as S  # noqa: E402  (data and the tested title/description rul
 THEME = os.path.join(ROOT, "wordpress", "oberdorfer")
 CORE = os.path.join(ROOT, "wordpress", "ot-core")
 DIST = os.path.join(ROOT, "wordpress", "dist")
-VERSION = "0.7.2"
+VERSION = "0.7.3"
 
 ASSET_DIRS = ["assets/img/photo", "assets/logo"]
 ASSET_FILES = ["assets/css/tokens.css", "assets/css/base.css", "assets/css/components.css", "assets/css/site.css",
@@ -134,6 +134,8 @@ def agent_entries():
                 "ot_card_url": next((u for u in rec.get("same_as", []) if "blinq" in u), ""),
                 # The one-sentence summary under the name: a field the team edits on the page.
                 "ot_summary": f"{a['name']} is a Massachusetts real estate agent who leads The Oberdorfer Team with {a['relation']}, {S.AGENT_BY_SLUG[a['partner']]['name']}. The husband-and-wife team works from Worcester, helps buyers and sellers across the state and operates under REWAP Brokerage LLC."}
+        if a.get("license"):
+            meta["ot_license"] = a["license"]  # confirmed by the team, 2026-11-10
         if review_lines(a["slug"]):
             meta["ot_review_links"] = review_lines(a["slug"])
         meta.update(page_meta(f"agents/{a['slug']}"))

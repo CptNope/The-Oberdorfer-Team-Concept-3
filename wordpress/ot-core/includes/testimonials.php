@@ -253,11 +253,15 @@ add_action( 'admin_init', function () {
 	if ( ! is_array( $data ) ) {
 		return;
 	}
+	// Newly confirmed profile facts (review links; MA license numbers, confirmed 2026-11-10) fill
+	// empty fields once, never over what the team typed or deliberately emptied.
 	foreach ( $data['agents'] ?? array() as $a ) {
-		$links = $a['meta']['ot_review_links'] ?? '';
-		$post  = $links ? get_page_by_path( $a['slug'], OBJECT, 'ot_agent' ) : null;
-		if ( $post && '' === (string) get_post_meta( $post->ID, 'ot_review_links', true ) && ! get_post_meta( $post->ID, 'ot_review_links_cleared', true ) ) {
-			update_post_meta( $post->ID, 'ot_review_links', $links );
+		$post = get_page_by_path( $a['slug'], OBJECT, 'ot_agent' );
+		foreach ( array( 'ot_review_links', 'ot_license' ) as $key ) {
+			$val = (string) ( $a['meta'][ $key ] ?? '' );
+			if ( $post && '' !== $val && '' === (string) get_post_meta( $post->ID, $key, true ) && ! get_post_meta( $post->ID, $key . '_cleared', true ) ) {
+				update_post_meta( $post->ID, $key, $val );
+			}
 		}
 	}
 	$done = (array) get_option( 'ot_testimonial_keys', array() );

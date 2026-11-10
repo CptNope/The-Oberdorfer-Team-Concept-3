@@ -1107,13 +1107,6 @@ def page_team():
     trail = [("Home", "site/"), ("Our Team", "site/team/")]
     body = page_hero(R, trail, ["A husband-and-wife team.", "A shared commitment."], h1="Meet The Oberdorfer Team", lead="Brandon and Kaitlyn lead The Oberdorfer Team. As the team grows, every agent shares the same standard of service.") + f'''
 <section class="section"><div class="container">
-  <form class="directory-bar" data-directory aria-label="Filter the team">
-    {select("d-spec","Specialty",["All specialties","Buyers","Sellers","First-time buyers","Move-up"])}
-    {select("d-area","Service area",["All of Massachusetts","Wakefield","Worcester","Boston"])}
-    {select("d-lang","Language",["Any language","English"])}
-    <button class="btn btn--secondary" type="reset">Reset</button>
-  </form>
-  <p class="results-bar__count" data-team-count aria-live="polite" style="margin-bottom:var(--space-6)">{len(AGENTS)} team profiles</p>
   <h2 class="visually-hidden">Team profiles</h2><div class="card-grid-3" data-team-grid>{"".join(agent_card(R, a) for a in AGENTS)}{seat_card(R)}</div>
   <p class="caption" style="margin-top:var(--space-5)">Every new agent receives the same profile: <a href="{R}site/agents/agent-template/">see the template</a>.</p>
 </div></section>
@@ -1149,7 +1142,7 @@ def page_agent():
         <dt>Specialties</dt><dd>Buyers · Sellers · First homes · Move-up moves</dd>
         <dt>Service area</dt><dd>Massachusetts</dd>
         <dt>Brokerage</dt><dd>REWAP Brokerage LLC</dd>
-        <dt>License</dt><dd>[MA license numbers to be added once supplied]</dd>
+        <dt>License</dt><dd>Brandon: MA {AGENTS[0]["license"]} · Kaitlyn: MA {AGENTS[1]["license"]}</dd>
       </dl>
       <div class="cluster"><a class="btn" href="#contact-agent">Send a message</a><a class="btn btn--secondary" href="tel:{TEL}">Call {PHONE}</a></div>
     </div>
@@ -1180,7 +1173,7 @@ AGENTS = [
          role="Team leader", partner="kaitlyn-oberdorfer", relation="his wife",
          photo="assets/img/photo/brandon-oberdorfer.webp", photo_w=440, photo_h=550,
          photo_note="Cropped from the team portrait in <em>Wakefield at Home</em>. Individual headshot to be supplied.",
-         title="MA Licensed Realtor", license=None, email="brandonoberdorfer@gmail.com", direct=BRANDON_PHONE, languages=None, specialties=None, bio=None, socials=None,
+         title="MA Licensed Realtor", license="9562709", email="brandonoberdorfer@gmail.com", direct=BRANDON_PHONE, languages=None, specialties=None, bio=None, socials=None,
          accolades=[("Top Producer", "Wakefield at Home, Fall 2026"), ("Realtor's Choice Winner", "Brandon's digital card")],
          card="https://blinq.me/cmere9vg301rxs60mq7nu5g5g", vcard="assets/vcard/brandon-oberdorfer.vcf",
          lead="agent:brandon-oberdorfer"),
@@ -1188,7 +1181,7 @@ AGENTS = [
          role="Team leader", partner="brandon-oberdorfer", relation="her husband",
          photo="assets/img/photo/kaitlyn-oberdorfer.webp", photo_w=440, photo_h=550,
          photo_note="Cropped from the team portrait in <em>Wakefield at Home</em>. Individual headshot to be supplied.",
-         title="MA Licensed Realtor", license=None, email="kaitlynoberdorfer@gmail.com", direct="978-257-4938", languages=None, specialties=None, bio=None, socials=None,
+         title="MA Licensed Realtor", license="9573517", email="kaitlynoberdorfer@gmail.com", direct="978-257-4938", languages=None, specialties=None, bio=None, socials=None,
          accolades=[("Top Producing Agent", "Kaitlyn's digital card"), ("Record Breaking", "Kaitlyn's digital card")],
          card="https://blinq.me/WXgsLzUBTC2V", vcard="assets/vcard/kaitlyn-oberdorfer.vcf",
          lead="agent:kaitlyn-oberdorfer"),
@@ -1280,7 +1273,8 @@ def page_profile(a):
         ("Service area", "Massachusetts" if not tpl else ph("Service areas")),
         # Hidden on a profile until the agent lists specialties; the template shows where they go.
         ("Specialties", ph("Specialties to confirm")) if tpl else (("Specialties", a["specialties"]) if a.get("specialties") else None),
-        ("Languages", ph("Languages to confirm")),
+        # Languages: left out until confirmed (team request, 2026-11-10); the template shows where it goes.
+        ("Languages", ph("Languages to confirm")) if tpl else (("Languages", a["languages"]) if a.get("languages") else None),
         ("Phone", ph("Direct phone") if tpl else
                   (f'<a href="tel:{TEL}">{PHONE}</a> (direct, and the team line)' if a.get("direct") == PHONE else
                    f'<a href="tel:+1{a["direct"].replace("-", "")}">{a["direct"]}</a> (direct) · team line <a href="tel:{TEL}">{PHONE}</a>' if a.get("direct") else
@@ -1288,7 +1282,7 @@ def page_profile(a):
         ("Email", f'<a href="mailto:{a["email"]}">{a["email"]}</a>' if a.get("email") and not tpl else ph("Email to confirm")),
         ("Online", ph("Profiles to confirm") if tpl else f'<a href="{INSTAGRAM}" rel="noopener">Instagram @oberdorferteam</a> · <a href="{a["card"]}" rel="noopener">Digital card</a>'),
         ("Contacts", ph("Contact card") if tpl else f'<a href="{R}{a["vcard"]}">Add {g} to your contacts</a> (vCard)'),
-        ("License", ph("MA license number to be supplied and verified")),
+        ("License", f"MA {a['license']}" if a.get("license") and not tpl else ph("MA license number to be supplied and verified")),
     ]
     facts_html = "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in filter(None, facts))
     # Each person's own profile dials their direct line; the team line is in the facts.

@@ -115,12 +115,13 @@ function ot_render_person_section( $section, $x ) {
 		array( 'Service area', ! empty( $r['service_area'] ) ? esc_html( $r['service_area'] ) : 'Massachusetts' ),
 		// Left out entirely until the agent lists specialties in "Agent details".
 		! empty( trim( (string) ( $r['specialties'] ?? '' ) ) ) ? array( 'Specialties', esc_html( $r['specialties'] ) ) : null,
-		array( 'Languages', ! empty( $r['languages'] ) ? esc_html( $r['languages'] ) : ot_ph( 'Languages to confirm' ) ),
+		// Left out until languages are entered in "Agent details" (team request, 2026-11-10).
+		! empty( trim( (string) ( $r['languages'] ?? '' ) ) ) ? array( 'Languages', esc_html( $r['languages'] ) ) : null,
 		array( 'Phone', $phone ),
 		array( 'Email', ! empty( $r['email'] ) ? '<a href="mailto:' . esc_attr( $r['email'] ) . '">' . esc_html( $r['email'] ) . '</a>' : ot_ph( 'Email to confirm' ) ),
 		array( 'Online', '<a href="' . OT_INSTAGRAM . '" rel="noopener">Instagram @oberdorferteam</a>' . ( ! empty( $r['card'] ) ? ' · <a href="' . esc_url( $r['card'] ) . '" rel="noopener">Digital card</a>' : '' ) ),
 		array( 'Contacts', '<a href="' . esc_url( home_url( '/?vcard=' . $x['p']->post_name ) ) . '">Add ' . $g . ' to your contacts</a> (vCard)' ),
-		array( 'License', ! empty( $r['license'] ) ? esc_html( $r['license'] ) : ot_ph( 'MA license number to be supplied and verified' ) ),
+		array( 'License', ! empty( $r['license'] ) ? 'MA ' . esc_html( $r['license'] ) : ot_ph( 'MA license number to be supplied and verified' ) ),
 	);
 	$facts_html = '';
 	foreach ( array_filter( $facts ) as $f ) {
@@ -257,7 +258,7 @@ function ot_render_team_section( $section, $x ) {
         <dt>Specialties</dt><dd>Buyers · Sellers · First homes · Move-up moves</dd>
         <dt>Service area</dt><dd>Massachusetts</dd>
         <dt>Brokerage</dt><dd>REWAP Brokerage LLC</dd>
-        <dt>License</dt><dd>[MA license numbers to be added once supplied]</dd>
+        <dt>License</dt><dd>' . ot_team_licenses() . '</dd>
       </dl>
       <div class="cluster"><a class="btn" href="#contact-agent">Send a message</a><a class="btn btn--secondary" href="tel:' . OT_TEL . '">Call ' . OT_PHONE . '</a></div>
     </div>
@@ -282,4 +283,18 @@ function ot_render_team_section( $section, $x ) {
 </div></section>';
 	}
 	return '';
+}
+
+
+/** "Brandon: MA 9562709 · Kaitlyn: MA 9573517" from each profile's Agent details, for the joint profile. */
+function ot_team_licenses() {
+	$out = array();
+	foreach ( array( 'brandon-oberdorfer', 'kaitlyn-oberdorfer' ) as $slug ) {
+		$p = get_page_by_path( $slug, OBJECT, 'ot_agent' );
+		$r = $p ? ot_agent_rec( $p->ID ) : array();
+		if ( ! empty( $r['license'] ) ) {
+			$out[] = esc_html( strtok( $p->post_title, ' ' ) ) . ': MA ' . esc_html( $r['license'] );
+		}
+	}
+	return $out ? implode( ' · ', $out ) : ot_ph( 'MA license numbers to be supplied' );
 }
