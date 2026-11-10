@@ -2,7 +2,7 @@
 Contributors: oberdorferteam
 Requires at least: 7.1
 Requires PHP: 8.3
-Stable tag: 0.8.1
+Stable tag: 0.8.2
 License: GPL-2.0-or-later
 
 The Oberdorfer Team's built-in CRM: lead capture, routing and alerts, inbox and pipeline, CRM forwarding, email nurture through Brevo, and AI drafts a person approves.
@@ -14,6 +14,9 @@ Every form on oberdorferteam.com saves here first. Leads are routed to the right
 Requires the ot-core plugin.
 
 == Changelog ==
+
+= 0.8.2 =
+* Email footer: "The Oberdorfer Team · 652 Park Ave, Unit B, Worcester, MA 01603 · Operating under REWAP Brokerage LLC", so Unit B is not read as REWAP's address.
 
 = 0.8.1 =
 * Version moves with the theme 0.8.1. No changes.

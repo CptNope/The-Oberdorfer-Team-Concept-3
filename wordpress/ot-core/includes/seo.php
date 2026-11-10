@@ -127,7 +127,7 @@ function ot_jsonld_graph() {
 		'address'   => array( '@type' => 'PostalAddress', 'streetAddress' => $street, 'addressLocality' => 'Worcester', 'addressRegion' => 'MA', 'postalCode' => $postcode, 'addressCountry' => 'US' ),
 		'slogan'    => 'Luxury at every price point.',
 		'sameAs'    => array( 'https://www.instagram.com/oberdorferteam/' ),
-		'parentOrganization' => array( '@type' => 'Organization', '@id' => $broker_id, 'name' => 'REWAP Brokerage LLC', 'url' => 'https://rewapbrokerage.com/' ),
+		'parentOrganization' => array( '@type' => 'Organization', '@id' => $broker_id, 'name' => 'REWAP Brokerage LLC', 'url' => 'https://rewapbrokerage.com/', 'address' => array( '@type' => 'PostalAddress', 'streetAddress' => '652 Park Ave, Unit A', 'addressLocality' => 'Worcester', 'addressRegion' => 'MA', 'postalCode' => '01603', 'addressCountry' => 'US' ) ), // REWAP is Unit A; the team is Unit B
 	) );
 
 	if ( ! is_front_page() ) {

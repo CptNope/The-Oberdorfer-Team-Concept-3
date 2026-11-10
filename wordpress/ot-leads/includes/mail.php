@@ -15,7 +15,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-const OT_LEADS_ADDRESS = 'The Oberdorfer Team · REWAP Brokerage LLC · 652 Park Ave, Unit B, Worcester, MA 01603';
+const OT_LEADS_ADDRESS = 'The Oberdorfer Team · 652 Park Ave, Unit B, Worcester, MA 01603 · Operating under REWAP Brokerage LLC';
 
 /** The From address: the team address (hello@oberdorferteam.com by default) with a display name. */
 function ot_leads_from( $name = 'The Oberdorfer Team' ) {

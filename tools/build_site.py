@@ -185,7 +185,8 @@ TEAM_ID = SITE + "#team"
 BROKER_ID = SITE + "#brokerage"
 UPDATED = "2026-10-22"
 # Office address confirmed 2026-10-22 (as supplied by the team; hours and formal status still open).
-STREET, POSTCODE = "652 Park Ave, Unit B", "01603"
+STREET, POSTCODE = "652 Park Ave, Unit B", "01603"  # the team's office
+BROKER_ADDRESS = "652 Park Ave, Unit A, Worcester, MA 01603"  # REWAP Brokerage LLC, same building (team, 2026-11-10)
 ADDRESS = f"{STREET}, Worcester, MA {POSTCODE}"
 INSTAGRAM = "https://www.instagram.com/oberdorferteam/"   # the team asked (2026-10-24) that every Instagram link go here
 # Contact cards built by tools/build_coming_soon.py (also served on the coming-soon page).
@@ -199,7 +200,7 @@ def head(R, title, desc, extra_ld=None, canonical_path="", og_type="website", og
           "telephone": PHONE, "areaServed": {"@type": "State", "name": "Massachusetts"},
           "address": {"@type": "PostalAddress", "streetAddress": STREET, "addressLocality": "Worcester", "addressRegion": "MA", "postalCode": POSTCODE, "addressCountry": "US"},
           "slogan": "Luxury at every price point.", "sameAs": [INSTAGRAM],
-          "parentOrganization": {"@type": "Organization", "@id": BROKER_ID, "name": "REWAP Brokerage LLC", "url": "https://rewapbrokerage.com/"}}
+          "parentOrganization": {"@type": "Organization", "@id": BROKER_ID, "name": "REWAP Brokerage LLC", "url": "https://rewapbrokerage.com/", "address": {"@type": "PostalAddress", "streetAddress": "652 Park Ave, Unit A", "addressLocality": "Worcester", "addressRegion": "MA", "postalCode": "01603", "addressCountry": "US"}}}
     blocks = [ld] + (extra_ld or [])
     lds = "".join(f'<script type="application/ld+json">{json.dumps(b)}</script>' for b in blocks)
     return f'''<!doctype html>
@@ -265,7 +266,7 @@ def footer(R):
     <div class="attribution">
       <div class="attribution__plate"><img src="{R}assets/img/rewap-logo.webp" alt="REWAP Brokerage" width="900" height="300"><small>Real Estate Wealth Acquisition and Preservation Brokerage</small></div>
       <div class="stack" style="--stack:var(--space-3)">
-        <p class="disclosure"><strong>The Oberdorfer Team</strong> is a real estate team operating under <strong>REWAP Brokerage LLC</strong>, a licensed Massachusetts real estate broker. Office: {ADDRESS}. Listings on this prototype are demonstrations.</p>
+        <p class="disclosure"><strong>The Oberdorfer Team</strong>, {ADDRESS}, is a real estate team operating under <strong>REWAP Brokerage LLC</strong>, {BROKER_ADDRESS}, a licensed Massachusetts real estate broker. Listings on this prototype are demonstrations.</p>
         <p class="eho">{icon(R, 'eho')}Equal Housing Opportunity</p>
         <p class="disclosure">© 2026 The Oberdorfer Team · <a href="{R}site/privacy/">Privacy</a> · <a href="{R}site/contact/#accessibility">Accessibility</a> · <a href="{R}site/contact/#fair-housing">Fair housing</a></p>
       </div>

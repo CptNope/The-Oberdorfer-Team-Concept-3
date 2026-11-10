@@ -106,7 +106,7 @@ $img = get_theme_file_uri( 'assets/img/' );
 
 <!-- wp:group {"className":"cs-footer__text","layout":{"type":"default"}} -->
 <div class="wp-block-group cs-footer__text"><!-- wp:paragraph {"className":"cs-disclosure"} -->
-<p class="cs-disclosure"><strong>The Oberdorfer Team</strong> is a real estate team operating under <strong>REWAP Brokerage LLC</strong>, Massachusetts. Office: 652 Park Ave, Unit B, Worcester, MA 01603.</p>
+<p class="cs-disclosure"><strong>The Oberdorfer Team</strong>, 652 Park Ave, Unit B, Worcester, MA 01603, is a real estate team operating under <strong>REWAP Brokerage LLC</strong>, 652 Park Ave, Unit A, a licensed Massachusetts real estate broker.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:html -->

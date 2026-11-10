@@ -47,6 +47,9 @@ function oberdorfer_art( $name, $label = null ) {
 }
 
 /** The office address in one line, as the prototype's ADDRESS. */
+/** REWAP Brokerage LLC is Unit A of the same building as the team's Unit B (team, 2026-11-10). */
+const OBERDORFER_BROKER_ADDRESS = '652 Park Ave, Unit A, Worcester, MA 01603';
+
 function oberdorfer_address() {
 	return OBERDORFER_STREET . ', ' . OBERDORFER_CITY . ', MA ' . OBERDORFER_POSTCODE;
 }
