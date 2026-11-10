@@ -39,7 +39,7 @@ function ot_agent_card( $a ) {
   <a class="agent-card__photo" href="' . $href . '"><img src="' . esc_url( $r['photo_url'] ) . '" alt="' . esc_attr( $r['name'] ) . '" width="' . (int) ( $r['photo_w'] ?? 440 ) . '" height="' . (int) ( $r['photo_h'] ?? 550 ) . '" loading="lazy"></a>
   <div class="stack" style="--stack:var(--space-2)"><p class="agent-card__title">' . esc_html( $r['role'] ) . ' · The Oberdorfer Team</p><h3 class="agent-card__name"><a href="' . $href . '" style="text-decoration:none;color:inherit">' . $name . '</a></h3><p class="body-s muted">Husband. Wife. Your Team.</p></div>
   <div class="agent-card__meta"><span class="chip">Buyers</span><span class="chip">Sellers</span><span class="chip">Massachusetts</span></div>
-  <div class="cluster" style="--cluster:var(--space-5)"><a class="link-arrow" href="' . $href . '">Meet ' . esc_html( $r['given'] ) . ' ' . ot_arrow() . '</a><a class="link-arrow" href="tel:' . OT_TEL . '">' . OT_PHONE . '</a></div>
+  <div class="cluster" style="--cluster:var(--space-5)"><a class="link-arrow" href="' . $href . '">Meet ' . esc_html( $r['given'] ) . ' ' . ot_arrow() . '</a><a class="link-arrow" href="' . esc_attr( ot_tel_href( ( $r['direct'] ?? '' ) ?: OT_PHONE ) ) . '">' . esc_html( ( $r['direct'] ?? '' ) ?: OT_PHONE ) . '</a></div>
 </article>';
 }
 
@@ -249,7 +249,7 @@ function ot_render_team_section( $section, $x ) {
       <dl>
         <dt>Team line</dt><dd><a href="tel:' . OT_TEL . '">' . OT_PHONE . '</a></dd>
         <dt>Kaitlyn</dt><dd><a href="tel:+19782574938">978-257-4938</a> · <a href="mailto:kaitlynoberdorfer@gmail.com">kaitlynoberdorfer@gmail.com</a></dd>
-        <dt>Brandon</dt><dd><a href="tel:' . OT_TEL . '">' . OT_PHONE . '</a> · <a href="mailto:brandonoberdorfer@gmail.com">brandonoberdorfer@gmail.com</a></dd>
+        <dt>Brandon</dt><dd><a href="tel:' . OT_BRANDON_TEL . '">' . OT_BRANDON_PHONE . '</a> · <a href="mailto:brandonoberdorfer@gmail.com">brandonoberdorfer@gmail.com</a></dd>
         <dt>Title</dt><dd>MA Licensed Realtors</dd>
         <dt>Instagram</dt><dd><a href="' . OT_INSTAGRAM . '" rel="noopener">@oberdorferteam</a></dd>
         <dt>Contacts</dt><dd><a href="' . esc_url( home_url( '/?vcard=oberdorfer-team' ) ) . '">Save both to your contacts</a> (vCard)</dd>

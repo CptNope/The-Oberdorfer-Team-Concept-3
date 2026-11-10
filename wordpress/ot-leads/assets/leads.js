@@ -104,7 +104,7 @@
 		fetch( cfg.endpoint + 'lead', { method: 'POST', credentials: 'same-origin', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify( payload( form ) ) } )
 			.then( function ( r ) { return r.json().then( function ( j ) { return { ok: r.ok, j: j }; } ); } )
 			.then( function ( res ) { done( res.ok && res.j.ok, ( res.j && res.j.message ) || '' ); } )
-			.catch( function () { done( false, 'We could not send this. Check your connection, or call 406-250-7620.' ); } )
+			.catch( function () { done( false, 'We could not send this. Check your connection, or call ' + ( cfg.phone || 'us' ) + '.' ); } )
 			.then( function () { if ( btn ) { btn.removeAttribute( 'aria-busy' ); btn.disabled = false; } resetToken( form ); } );
 	}
 

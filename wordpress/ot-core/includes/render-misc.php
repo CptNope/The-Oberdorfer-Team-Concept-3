@@ -73,7 +73,7 @@ function ot_inquiry_form( $id, $title, $topics, $submit, $context, $level = 'h3'
 	$p    = substr( preg_replace( '/[^a-z]/', '', strtolower( $fid ) ), 0, 2 ) . $n;
 	$note = $note ?: 'Your inquiry goes to Brandon and Kaitlyn and is used only to respond to your request. [Privacy policy to be published before launch.]';
 	$inner  = '<div class="form__row">' . ot_field( $p . '-name', 'Full name', 'text', true, 'name' ) . ot_field( $p . '-email', 'Email', 'email', true, 'email' ) . '</div>';
-	$inner .= '<div class="form__row">' . ot_field( $p . '-phone', 'Phone', 'tel', false, 'tel', true, '[0-9\s\(\)\+\.\-]{7,}', 'Use digits, spaces or dashes, for example 406-250-7620.' ) . '</div>';
+	$inner .= '<div class="form__row">' . ot_field( $p . '-phone', 'Phone', 'tel', false, 'tel', true, '[0-9\s\(\)\+\.\-]{7,}', 'Use digits, spaces or dashes, for example 978-257-4938.' ) . '</div>';
 	if ( $topics ) {
 		$inner .= ot_select( $p . '-topic', "I'm interested in", $topics );
 	}

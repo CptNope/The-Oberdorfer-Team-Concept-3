@@ -116,6 +116,7 @@ Two things set the team apart:
   - Market figures: Wakefield only, Redfin, accessed 2026-10-10. Median sale price $786,979 (3 months ending Aug 2026); 21 median days on market (Aug 2026); $483/sq ft (rolling 3-month); 103.3% sale-to-list (Aug 2026). These are historical, Wakefield only, and not live.
 - `source/creative-brief.md`: the full creative and technical brief.
 - **Confirmed 2026-10-15:** the user confirmed that all data in the publication is correct, including the phone number 406-250-7620, "Top Producer" and the market figures. Brandon produced the publication with ChatGPT.
+- **Changed 2026-11-10:** the team line on the site is Kaitlyn's cell, 978-257-4938 (a Massachusetts area code). Brandon's 406-250-7620 stays as his direct line. The Fall 2026 publication still prints 406-250-7620.
 
 **Absent, so use labeled placeholders only:**
 - Additional team photography

@@ -96,7 +96,7 @@ function ot_leads_confirm( $lead, $form ) {
 	$a    = ot_leads_agents()[ $lead['assigned_agent'] ] ?? null;
 	$from = $a && ! $a['team'] ? $a['name'] . ', The Oberdorfer Team' : 'Brandon & Kaitlyn Oberdorfer';
 	$who  = $a && ! $a['team'] ? $a['given'] : 'Brandon or Kaitlyn';
-	$tel  = $a && ! $a['team'] && $a['phone'] ? $a['phone'] : ( defined( 'OT_PHONE' ) ? OT_PHONE : '406-250-7620' );
+	$tel  = $a && ! $a['team'] && $a['phone'] ? $a['phone'] : OT_PHONE;
 	$html = '<p>Hi ' . esc_html( $lead['first_name'] ?: 'there' ) . ',</p><p>Thank you for getting in touch. ' . esc_html( $who ) . ' has your message and will reply ' . ( $lead['preferred'] ? 'by ' . esc_html( $lead['preferred'] ) . ' ' : '' ) . 'soon, usually within the hour during business hours.</p><p>If it is urgent, call or text ' . esc_html( $tel ) . '.</p><p>' . esc_html( $from ) . '<br>The Oberdorfer Team · REWAP Brokerage LLC</p>';
 	$reply = $a && ! $a['team'] && $a['email'] ? $a['email'] : ( ot_leads_leader_emails()[0] ?? '' );
 	list( $ok ) = ot_leads_mail( $lead['email'], 'We have your message', $html, array( 'from_name' => $from, 'reply_to' => $reply, 'tags' => array( 'confirmation' ) ) );

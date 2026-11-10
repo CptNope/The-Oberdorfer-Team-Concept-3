@@ -6,8 +6,11 @@
 
 defined( 'ABSPATH' ) || exit;
 
-const OT_PHONE    = '406-250-7620';
-const OT_TEL      = '+14062507620';
+// The team line is Kaitlyn's cell (the team's choice, 2026-11-10); Brandon's own line stays his.
+const OT_PHONE    = '978-257-4938';
+const OT_TEL      = '+19782574938';
+const OT_BRANDON_PHONE = '406-250-7620';
+const OT_BRANDON_TEL   = '+14062507620';
 const OT_INSTAGRAM = 'https://www.instagram.com/oberdorferteam/'; // the team asked (2026-10-24) that every Instagram link go here
 const OT_UPDATED  = '2026-10-22';
 const OT_UPDATED_LABEL = 'October 22, 2026';

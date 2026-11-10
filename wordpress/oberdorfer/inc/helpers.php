@@ -10,8 +10,11 @@
 defined( 'ABSPATH' ) || exit;
 
 /* Confirmed by the client (2026-10-15 and 2026-10-22). */
-const OBERDORFER_PHONE    = '406-250-7620';
-const OBERDORFER_TEL      = '+14062507620';
+// The team line is Kaitlyn's cell (the team's choice, 2026-11-10); Brandon's own line stays his.
+const OBERDORFER_PHONE    = '978-257-4938';
+const OBERDORFER_TEL      = '+19782574938';
+const OBERDORFER_BRANDON_PHONE = '406-250-7620';
+const OBERDORFER_BRANDON_TEL   = '+14062507620';
 const OBERDORFER_STREET   = '652 Park Ave, Unit B';
 const OBERDORFER_CITY     = 'Worcester';
 const OBERDORFER_POSTCODE = '01603';

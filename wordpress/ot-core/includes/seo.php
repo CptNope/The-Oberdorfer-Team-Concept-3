@@ -308,3 +308,29 @@ function ot_llms_txt() {
 		. "Facts on this site are sourced and dated. Town market figures are calendar-year 2025 single-family sales and medians from The Warren Group (MA December 2025 Sales, Prices by Town). The Wakefield snapshot is from Redfin, accessed October 10, 2026. None of the figures are live. Community guides describe places, housing, transit and history; school information is limited to links to each district's Massachusetts DESE profile.\n\n"
 		. "## People\n" . $people . "\n## Pages\n" . $pages;
 }
+
+/**
+ * Once: the team line changed from Brandon's 406-250-7620 to Kaitlyn's 978-257-4938 (2026-11-10).
+ * Saved search descriptions that name the old team line are updated; Brandon's own profile keeps
+ * his number, since there it is his direct line.
+ */
+add_action( 'admin_init', function () {
+	if ( 'team-line-978' === get_option( 'ot_phone_migrated' ) || ! current_user_can( 'edit_pages' ) ) {
+		return;
+	}
+	$ids = get_posts( array(
+		'post_type'      => 'any',
+		'post_status'    => 'any',
+		'posts_per_page' => -1,
+		'fields'         => 'ids',
+		'meta_query'     => array( array( 'key' => 'ot_seo_description', 'value' => OT_BRANDON_PHONE, 'compare' => 'LIKE' ) ),
+	) );
+	foreach ( $ids as $id ) {
+		if ( 'ot_agent' === get_post_type( $id ) && 'brandon-oberdorfer' === get_post_field( 'post_name', $id ) ) {
+			continue;
+		}
+		$d = (string) get_post_meta( $id, 'ot_seo_description', true );
+		update_post_meta( $id, 'ot_seo_description', str_replace( OT_BRANDON_PHONE, OT_PHONE, $d ) );
+	}
+	update_option( 'ot_phone_migrated', 'team-line-978', false );
+} );

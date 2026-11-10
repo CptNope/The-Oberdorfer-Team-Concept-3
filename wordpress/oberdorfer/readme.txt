@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.7.0
+Stable tag: 0.7.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,9 @@ Fonts: Cormorant Garamond and Manrope (SIL Open Font License 1.1), loaded from G
 this version; self-hosting is a launch task.
 
 == Changelog ==
+
+= 0.7.1 =
+* The team line is now Kaitlyn's 978-257-4938 (header, mobile menu, calls to action, footer, contact page, schema, lead messages). Brandon's 406-250-7620 stays as his direct line on his card and profile, and each agent card shows that agent's own number.
 
 = 0.7.0 =
 * The agent profile's Client stories section is now drawn by ot-core (testimonials and review links), and left out when there is nothing to show.

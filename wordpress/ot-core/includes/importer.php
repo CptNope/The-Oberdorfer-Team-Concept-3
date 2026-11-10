@@ -112,7 +112,11 @@ function ot_seed_page_body( $page_id, $slug ) {
 	return true;
 }
 
-/** Pages whose body is still empty get their sections the next time someone opens the admin. */
+/**
+ * After an update, the next admin visit refills each main page whose body is empty or still
+ * exactly as the importer wrote it (so a changed phone number or section reaches it). Pages the
+ * team has edited are left alone (ot_seed_page_body() checks).
+ */
 add_action( 'admin_init', function () {
 	if ( ! current_user_can( 'edit_pages' ) || ! function_exists( 'oberdorfer_page_sections' ) ) {
 		return;
@@ -128,7 +132,7 @@ add_action( 'admin_init', function () {
 			$p  = get_page_by_path( $slug );
 			$id = $p ? $p->ID : 0;
 		}
-		if ( $id && '' === trim( (string) get_post_field( 'post_content', $id ) ) ) {
+		if ( $id ) {
 			ot_seed_page_body( $id, $slug );
 		}
 	}

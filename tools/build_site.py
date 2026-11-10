@@ -11,7 +11,9 @@ import html, json, os, re, textwrap
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "site")
-PHONE, TEL = "406-250-7620", "+14062507620"
+# The team line is Kaitlyn's cell (the team's choice, 2026-11-10); Brandon's own line stays his.
+PHONE, TEL = "978-257-4938", "+19782574938"
+BRANDON_PHONE, BRANDON_TEL = "406-250-7620", "+14062507620"
 e = html.escape
 
 # --------------------------------------------------------------------------- data
@@ -171,7 +173,7 @@ def form(R, fid, title, inner, submit, lead_type, title_level="h2", note=None):
 
 def contact_fields(p, phone_opt=True):
     return (f'<div class="form__row">{field(p+"-name","Full name",req=True,auto="name")}{field(p+"-email","Email","email",req=True,auto="email")}</div>'
-            f'<div class="form__row">{field(p+"-phone","Phone","tel",auto="tel",opt=True,pattern="[0-9\\s\\(\\)\\+\\.\\-]{7,}",pattern_msg="Use digits, spaces or dashes, for example 406-250-7620.")}</div>')
+            f'<div class="form__row">{field(p+"-phone","Phone","tel",auto="tel",opt=True,pattern="[0-9\\s\\(\\)\\+\\.\\-]{7,}",pattern_msg="Use digits, spaces or dashes, for example 978-257-4938.")}</div>')
 
 # --------------------------------------------------------------------------- chrome
 SITE = "https://oberdorferteam.com/"   # production domain, confirmed 2026-10-22
@@ -435,7 +437,7 @@ def page_home():
   </div>
 </section>
 {cta_panel(R)}'''
-    write("", R, "Worcester & Massachusetts Real Estate | The Oberdorfer Team", "Brandon and Kaitlyn Oberdorfer are a husband-and-wife real estate team based in Worcester, helping buyers and sellers across Massachusetts. Call 406-250-7620.", "Home", body, overlay=False)
+    write("", R, "Worcester & Massachusetts Real Estate | The Oberdorfer Team", "Brandon and Kaitlyn Oberdorfer are a husband-and-wife real estate team based in Worcester, helping buyers and sellers across Massachusetts. Call 978-257-4938.", "Home", body, overlay=False)
 
 def page_buy():
     R = "../../"
@@ -1140,7 +1142,7 @@ def page_agent():
       <dl>
         <dt>Team line</dt><dd><a href="tel:{TEL}">{PHONE}</a></dd>
         <dt>Kaitlyn</dt><dd><a href="tel:+19782574938">978-257-4938</a> · <a href="mailto:kaitlynoberdorfer@gmail.com">kaitlynoberdorfer@gmail.com</a></dd>
-        <dt>Brandon</dt><dd><a href="tel:{TEL}">{PHONE}</a> · <a href="mailto:brandonoberdorfer@gmail.com">brandonoberdorfer@gmail.com</a></dd>
+        <dt>Brandon</dt><dd><a href="tel:{BRANDON_TEL}">{BRANDON_PHONE}</a> · <a href="mailto:brandonoberdorfer@gmail.com">brandonoberdorfer@gmail.com</a></dd>
         <dt>Title</dt><dd>MA Licensed Realtors</dd>
         <dt>Instagram</dt><dd><a href="{INSTAGRAM}" rel="noopener">@oberdorferteam</a></dd>
         <dt>Contacts</dt><dd><a href="{R}{VCARD_TEAM}">Save both to your contacts</a> (vCard)</dd>
@@ -1178,7 +1180,7 @@ AGENTS = [
          role="Team leader", partner="kaitlyn-oberdorfer", relation="his wife",
          photo="assets/img/photo/brandon-oberdorfer.webp", photo_w=440, photo_h=550,
          photo_note="Cropped from the team portrait in <em>Wakefield at Home</em>. Individual headshot to be supplied.",
-         title="MA Licensed Realtor", license=None, email="brandonoberdorfer@gmail.com", direct="406-250-7620", languages=None, specialties=None, bio=None, socials=None,
+         title="MA Licensed Realtor", license=None, email="brandonoberdorfer@gmail.com", direct=BRANDON_PHONE, languages=None, specialties=None, bio=None, socials=None,
          accolades=[("Top Producer", "Wakefield at Home, Fall 2026"), ("Realtor's Choice Winner", "Brandon's digital card")],
          card="https://blinq.me/cmere9vg301rxs60mq7nu5g5g", vcard="assets/vcard/brandon-oberdorfer.vcf",
          lead="agent:brandon-oberdorfer"),
@@ -1207,7 +1209,7 @@ def agent_card(R, a):
   <a class="agent-card__photo" href="{href}"><img src="{R}{a['photo']}" alt="{a['name']}" width="{a['photo_w']}" height="{a['photo_h']}" loading="lazy"></a>
   <div class="stack" style="--stack:var(--space-2)"><p class="agent-card__title">{a['role']} · The Oberdorfer Team</p><h3 class="agent-card__name"><a href="{href}" style="text-decoration:none;color:inherit">{a['name']}</a></h3><p class="body-s muted">Husband. Wife. Your Team.</p></div>
   <div class="agent-card__meta"><span class="chip">Buyers</span><span class="chip">Sellers</span><span class="chip">Massachusetts</span></div>
-  <div class="cluster" style="--cluster:var(--space-5)"><a class="link-arrow" href="{href}">Meet {a['given']} {arrow(R)}</a><a class="link-arrow" href="tel:{TEL}">{PHONE}</a></div>
+  <div class="cluster" style="--cluster:var(--space-5)"><a class="link-arrow" href="{href}">Meet {a['given']} {arrow(R)}</a><a class="link-arrow" href="tel:+1{(a.get('direct') or PHONE).replace('-', '')}">{a.get('direct') or PHONE}</a></div>
 </article>'''
 
 def agent_faq(a):
@@ -1385,7 +1387,7 @@ def page_profile(a):
               "Our Team", body, ld=[crumbs_ld(trail)], og_type="profile", index=False)
     else:
         title = f"{a['name']}, Real Estate Agent | The Oberdorfer Team"
-        desc = f"Meet {a['name']}, who leads The Oberdorfer Team with {a['relation']}, {partner['name']}. Helping buyers and sellers across Massachusetts. Call {PHONE}."
+        desc = f"Meet {a['name']}, who leads The Oberdorfer Team with {a['relation']}, {partner['name']}. Helping buyers and sellers across Massachusetts. Call {a.get('direct') or PHONE}."
         write(f"agents/{a['slug']}", R, title, desc, "Our Team", body,
               ld=[crumbs_ld(trail)] + profile_ld(R, a, url, faq), og_type="profile", og_image=a["photo"])
 
@@ -1526,7 +1528,7 @@ def page_contact():
   <div class="stack" style="--stack:var(--space-6)">
     <a class="cta-panel__phone" href="tel:{TEL}" style="color:var(--ot-navy);font-size:var(--step-display-m)">{PHONE}</a>
     <div>
-      <div class="contact-line">{icon(R,'phone')}<div><p class="h5">Call or text</p><p class="body-s">Kaitlyn Oberdorfer · <a href="tel:+19782574938">978-257-4938</a><br>Brandon Oberdorfer · <a href="tel:{TEL}">{PHONE}</a> (also the team line)</p></div></div>
+      <div class="contact-line">{icon(R,'phone')}<div><p class="h5">Call or text</p><p class="body-s">Kaitlyn Oberdorfer · <a href="tel:+19782574938">978-257-4938</a><br>Brandon Oberdorfer · <a href="tel:{BRANDON_TEL}">{BRANDON_PHONE}</a> (also the team line)</p></div></div>
       <div class="contact-line">{icon(R,'mail')}<div><p class="h5">Email</p><p class="body-s">Kaitlyn · <a href="mailto:kaitlynoberdorfer@gmail.com">kaitlynoberdorfer@gmail.com</a><br>Brandon · <a href="mailto:brandonoberdorfer@gmail.com">brandonoberdorfer@gmail.com</a></p></div></div>
       <div class="contact-line">{icon(R,'download')}<div><p class="h5">Save our contacts</p><p class="body-s"><a href="{R}assets/vcard/kaitlyn-oberdorfer.vcf">Kaitlyn</a> · <a href="{R}assets/vcard/brandon-oberdorfer.vcf">Brandon</a> · <a href="{R}{VCARD_TEAM}">Both</a> (vCard, for your phone's contacts)</p></div></div>
       <div class="contact-line">{icon(R,'external')}<div><p class="h5">Follow along</p><p class="body-s"><a href="{INSTAGRAM}" rel="noopener">Instagram @oberdorferteam</a></p></div></div>
@@ -1541,7 +1543,7 @@ def page_contact():
   <div id="accessibility"><h2 class="h4">Accessibility</h2><p style="margin-top:var(--space-2)">This site is designed to meet WCAG 2.2 AA. If anything is hard to use, call {PHONE} and we will help.</p></div>
   <div id="fair-housing"><h2 class="h4">Fair housing</h2><p style="margin-top:var(--space-2)">The Oberdorfer Team and REWAP Brokerage LLC are committed to the Fair Housing Act and Equal Housing Opportunity. [Required Massachusetts notices to be supplied by the principal broker.]</p></div>
 </div></section>'''
-    write("contact", R, "Contact The Oberdorfer Team | Worcester, MA Real Estate", "Call or text Brandon and Kaitlyn Oberdorfer at 406-250-7620, or send a buyer, seller, recruiting or general inquiry. Based in Worcester, serving Massachusetts.", "Contact", body, ld=[crumbs_ld(trail)])
+    write("contact", R, "Contact The Oberdorfer Team | Worcester, MA Real Estate", "Call or text Brandon and Kaitlyn Oberdorfer at 978-257-4938, or send a buyer, seller, recruiting or general inquiry. Based in Worcester, serving Massachusetts.", "Contact", body, ld=[crumbs_ld(trail)])
 
 if __name__ == "__main__":
     page_home(); page_buy(); [page_listing(l) for l in LISTINGS]; page_sell(); page_market()

@@ -11,7 +11,7 @@
  */
 $i     = fn( $n ) => oberdorfer_icon( $n );
 $lines = oberdorfer_group(
-	oberdorfer_contact_line( 'phone', 'Call or text', 'Kaitlyn Oberdorfer · <a href="tel:+19782574938">978-257-4938</a><br>Brandon Oberdorfer · <a href="tel:' . OBERDORFER_TEL . '">' . OBERDORFER_PHONE . '</a> (also the team line)' )
+	oberdorfer_contact_line( 'phone', 'Call or text', 'Kaitlyn Oberdorfer · <a href="tel:+19782574938">978-257-4938</a><br>Brandon Oberdorfer · <a href="tel:' . OBERDORFER_BRANDON_TEL . '">' . OBERDORFER_BRANDON_PHONE . '</a> (also the team line)' )
 	. oberdorfer_contact_line( 'mail', 'Email', 'Kaitlyn · <a href="mailto:kaitlynoberdorfer@gmail.com">kaitlynoberdorfer@gmail.com</a><br>Brandon · <a href="mailto:brandonoberdorfer@gmail.com">brandonoberdorfer@gmail.com</a>' )
 	. oberdorfer_contact_line( 'download', 'Save our contacts', '<a href="' . esc_url( home_url( '/?vcard=kaitlyn-oberdorfer' ) ) . '">Kaitlyn</a> · <a href="' . esc_url( home_url( '/?vcard=brandon-oberdorfer' ) ) . '">Brandon</a> · <a href="' . esc_url( home_url( '/?vcard=oberdorfer-team' ) ) . '">Both</a> (vCard, for your phone\'s contacts)' )
 	. oberdorfer_contact_line( 'external', 'Follow along', '<a href="https://www.instagram.com/oberdorferteam/" rel="noopener">Instagram @oberdorferteam</a>' )

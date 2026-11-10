@@ -128,7 +128,7 @@ add_action( 'init', function () {
 		ot_leads_page( 'You are unsubscribed', '<p>' . esc_html( $email ) . ' will not receive any more updates from The Oberdorfer Team. If you wrote to an agent about a home, they can still reply to you.</p>' );
 	}
 	if ( ! $ok ) {
-		ot_leads_page( 'This link has expired', '<p>Reply to any of our emails with "unsubscribe", or call 406-250-7620, and we will remove you.</p>' );
+		ot_leads_page( 'This link has expired', '<p>Reply to any of our emails with "unsubscribe", or call ' . OT_PHONE . ', and we will remove you.</p>' );
 	}
 	ot_leads_page( 'Unsubscribe', '<p>Stop sending updates to <strong>' . esc_html( $email ) . '</strong>?</p><form method="post"><button type="submit" style="font:inherit;padding:12px 22px;background:#071D2D;color:#F7F3EC;border:0;cursor:pointer">Unsubscribe</button></form>' );
 }, 1 );

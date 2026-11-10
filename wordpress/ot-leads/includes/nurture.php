@@ -201,7 +201,7 @@ function ot_nurture_merge( $text, $lead ) {
 		'{first_name}'   => esc_html( $lead['first_name'] ?: 'there' ),
 		'{agent_name}'   => esc_html( $team ? 'Brandon & Kaitlyn Oberdorfer' : $a['name'] ),
 		'{agent_first}'  => esc_html( $team ? 'Brandon & Kaitlyn' : $a['given'] ),
-		'{agent_phone}'  => esc_html( ! $team && $a['phone'] ? $a['phone'] : ( defined( 'OT_PHONE' ) ? OT_PHONE : '406-250-7620' ) ),
+		'{agent_phone}'  => esc_html( ! $team && $a['phone'] ? $a['phone'] : OT_PHONE ),
 		'{agent_email}'  => esc_html( ! $team ? $a['email'] : '' ),
 		'{towns}'        => esc_html( $names ? implode( ' and ', array_slice( $names, 0, 2 ) ) : 'Massachusetts' ),
 		'{town_links}'   => $links ? implode( ', ', $links ) : '<a href="' . esc_url( get_post_type_archive_link( 'ot_community' ) ) . '">all town guides</a>',

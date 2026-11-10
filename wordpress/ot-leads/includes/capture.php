@@ -105,6 +105,7 @@ add_action( 'template_redirect', function () {
 add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_script( 'ot-leads', OT_LEADS_URL . '/assets/leads.js', array(), OT_LEADS_VERSION, array( 'in_footer' => true, 'strategy' => 'defer' ) );
 	wp_localize_script( 'ot-leads', 'otLeads', array(
+		'phone'     => OT_PHONE,
 		'endpoint'  => esc_url_raw( rest_url( 'ot-leads/v1/' ) ),
 		'turnstile' => (string) ot_leads_opt( 'turnstile_site' ),
 		'icons'     => function_exists( 'ot_asset' ) ? ot_asset( 'assets/img/icons.svg' ) : '',
@@ -199,7 +200,7 @@ function ot_leads_rest_submit( WP_REST_Request $r ) {
 	$rl   = 'ot_rl_' . substr( ot_leads_ip_hash(), 0, 20 );
 	$hits = (int) get_transient( $rl );
 	if ( $hits >= 6 ) {
-		return new WP_Error( 'ot_rate', 'Too many messages from this connection. Please call 406-250-7620, or try again in a few minutes.', array( 'status' => 429 ) );
+		return new WP_Error( 'ot_rate', 'Too many messages from this connection. Please call ' . OT_PHONE . ', or try again in a few minutes.', array( 'status' => 429 ) );
 	}
 	set_transient( $rl, $hits + 1, 10 * MINUTE_IN_SECONDS );
 	if ( ! ot_leads_turnstile_ok( (string) ( $p['turnstile'] ?? '' ) ) ) {
@@ -233,7 +234,7 @@ function ot_leads_rest_submit( WP_REST_Request $r ) {
 
 	$lead_id = ot_leads_capture( $form, $towns, $listing, $agent );
 	if ( ! $lead_id ) {
-		return new WP_Error( 'ot_store', 'Something went wrong on our side. Please call 406-250-7620.', array( 'status' => 500 ) );
+		return new WP_Error( 'ot_store', 'Something went wrong on our side. Please call ' . OT_PHONE . '.', array( 'status' => 500 ) );
 	}
 	ot_leads_set_cookie( $lead_id );
 

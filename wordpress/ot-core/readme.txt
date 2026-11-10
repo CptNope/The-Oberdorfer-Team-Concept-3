@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.7.0
+Stable tag: 0.7.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,11 @@ Listings are off by default. Settings > Listings (IDX) switches the home search 
 If an SEO plugin is installed, only one of the two may print meta tags: add `define( 'OT_CORE_SEO_OUTPUT', false );` to wp-config.php to switch this plugin's output off.
 
 == Changelog ==
+
+= 0.7.1 =
+* The team line is now Kaitlyn's 978-257-4938 (header, mobile menu, calls to action, footer, contact page, schema, lead messages). Brandon's 406-250-7620 stays as his direct line on his card and profile, and each agent card shows that agent's own number.
+* After an update, main pages whose body is still exactly as first written are refilled, so the change reaches them; edited pages are left alone.
+* Saved search descriptions that named the old team line are updated once; Brandon's own profile keeps his number.
 
 = 0.7.0 =
 * Testimonials (new menu): a client's words show on their agent's profile only once the client agreed to be quoted on this website and REWAP approved it, word for word, with a link to the original review. Each screen says what is still needed.
