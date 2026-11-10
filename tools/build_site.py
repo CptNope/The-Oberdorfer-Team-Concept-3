@@ -265,7 +265,7 @@ def footer(R):
     <div class="attribution">
       <div class="attribution__plate"><img src="{R}assets/img/rewap-logo.webp" alt="REWAP Brokerage" width="900" height="300"><small>Real Estate Wealth Acquisition and Preservation Brokerage</small></div>
       <div class="stack" style="--stack:var(--space-3)">
-        <p class="disclosure"><strong>The Oberdorfer Team</strong> is a real estate team operating under <strong>REWAP Brokerage LLC</strong>, a licensed Massachusetts real estate broker. Office: {ADDRESS}. Information is deemed reliable but not guaranteed. Listings on this prototype are demonstrations.</p>
+        <p class="disclosure"><strong>The Oberdorfer Team</strong> is a real estate team operating under <strong>REWAP Brokerage LLC</strong>, a licensed Massachusetts real estate broker. Office: {ADDRESS}. Listings on this prototype are demonstrations.</p>
         <p class="eho">{icon(R, 'eho')}Equal Housing Opportunity</p>
         <p class="disclosure">© 2026 The Oberdorfer Team · <a href="{R}site/contact/#privacy">Privacy</a> · <a href="{R}site/contact/#accessibility">Accessibility</a> · <a href="{R}site/contact/#fair-housing">Fair housing</a></p>
       </div>
