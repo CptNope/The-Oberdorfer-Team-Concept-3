@@ -2,7 +2,7 @@
 Contributors: oberdorferteam
 Requires at least: 7.1
 Requires PHP: 8.3
-Stable tag: 0.10.1
+Stable tag: 0.10.2
 License: GPL-2.0-or-later
 
 The Oberdorfer Team's built-in CRM: lead capture, routing and alerts, inbox and pipeline, CRM forwarding, email nurture through Brevo, and AI drafts a person approves.
@@ -14,6 +14,9 @@ Every form on oberdorferteam.com saves here first. Leads are routed to the right
 Requires the ot-core plugin.
 
 == Changelog ==
+
+= 0.10.2 =
+* Version moves with the theme 0.10.2. No changes.
 
 = 0.10.1 =
 * Follow-up emails (formerly Sequences), rebuilt for non-technical editors: an On/Off switch and a plain "Wait for my OK / Send it on its own" choice per series; each email as a timeline row ("Right away", "2 days later") that opens to edit; plain-text messages with blank lines for paragraphs; personal details inserted from buttons as [First name]-style placeholders; a live preview with a sample person; Add an email and Remove this email. Stored emails are unchanged.
