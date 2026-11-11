@@ -111,6 +111,7 @@ Redesigned 2026-11-10 as a branded workspace inside wp-admin. The team chose the
   - All leads keeps the WordPress list table, restyled. Its saved views are chips; on phones the stage and age sit in the name cell.
   - Pipeline columns are sandstone and snap one column at a time on phones.
   - Approvals shows the rendered email, with the HTML behind "Edit the email (HTML)".
+  - Follow-up emails (the sequences) are written for non-technical editors. Each series has an On/Off switch and a "Wait for my OK / Send it on its own" choice. Its emails form a timeline of rows ("Right away", "2 days later"); each row opens to edit the timing, choose the kind of email from three explained cards, and write the message in plain text with [First name]-style placeholder buttons, beside a live preview for a sample person.
   - Reports figures use Cormorant numerals.
 - **AI-drafted content** is always labelled "AI draft", with its grounding sources one click away.
 

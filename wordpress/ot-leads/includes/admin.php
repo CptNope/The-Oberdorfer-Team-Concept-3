@@ -21,7 +21,7 @@ add_action( 'admin_menu', function () {
 	$drafts = (int) $wpdb->get_var( 'SELECT COUNT(*) FROM ' . ot_leads_table( 'messages' ) . " WHERE status = 'draft'" );
 	add_submenu_page( 'ot-leads', 'Approval queue', 'Approval queue' . ( $drafts ? ' <span class="awaiting-mod"><span class="pending-count">' . $drafts . '</span></span>' : '' ), 'ot_leads_own', 'ot-leads-queue', 'ot_leads_queue_screen' );
 	add_submenu_page( 'ot-leads', 'Reports', 'Reports', 'ot_leads_own', 'ot-leads-reports', 'ot_leads_reports_screen' );
-	add_submenu_page( 'ot-leads', 'Sequences', 'Sequences', 'ot_leads_manage', 'ot-leads-sequences', 'ot_leads_sequences_screen' );
+	add_submenu_page( 'ot-leads', 'Follow-up emails', 'Follow-up emails', 'ot_leads_manage', 'ot-leads-sequences', 'ot_leads_sequences_screen' );
 	add_submenu_page( 'ot-leads', 'Newsletter', 'Newsletter', 'ot_leads_manage', 'ot-leads-newsletter', 'ot_leads_newsletter_screen' );
 	add_submenu_page( 'ot-leads', 'Leads settings', 'Settings', 'ot_leads_manage', 'ot-leads-settings', 'ot_leads_settings_screen' );
 	add_submenu_page( 'ot-leads', 'Lead', 'Lead', 'ot_leads_own', 'ot-lead', 'ot_leads_lead_screen' );
@@ -63,7 +63,7 @@ function ot_leads_shell( $current ) {
 		'queue'    => array( 'ot-leads-queue', 'Approvals', 'email-alt', $drafts, 'ot_leads_own' ),
 		'reports'  => array( 'ot-leads-reports', 'Reports', 'chart-bar', 0, 'ot_leads_own' ),
 		'-'        => null,
-		'sequence' => array( 'ot-leads-sequences', 'Sequences', 'update', 0, 'ot_leads_manage' ),
+		'sequence' => array( 'ot-leads-sequences', 'Follow-up emails', 'update', 0, 'ot_leads_manage' ),
 		'news'     => array( 'ot-leads-newsletter', 'Newsletter', 'megaphone', 0, 'ot_leads_manage' ),
 		'settings' => array( 'ot-leads-settings', 'Settings', 'admin-generic', 0, 'ot_leads_manage' ),
 	);
