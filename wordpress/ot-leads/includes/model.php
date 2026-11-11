@@ -39,6 +39,7 @@ function ot_leads_now() {
 function ot_leads_defaults() {
 	return array(
 		'leaders'          => 'brandonoberdorfer@gmail.com, kaitlynoberdorfer@gmail.com',
+		'alert_cc'         => array(),
 		'response_minutes' => 15,
 		'hours_start'      => 8,
 		'hours_end'        => 20,
@@ -241,13 +242,23 @@ function ot_leads_user_agent( $user_id = 0 ) {
 	return (string) get_user_meta( $user_id ?: get_current_user_id(), 'ot_agent_slug', true );
 }
 
-/** Emails that receive an agent's alerts: the agent's own address, or the leaders for the joint profile. */
+/**
+ * Emails that receive an agent's alerts: the agent's own address (the one on their profile)
+ * plus any extra addresses set for them in Leads > Settings ("Also alert"), or the team leaders
+ * for team leads.
+ */
 function ot_leads_agent_emails( $slug ) {
 	$a = ot_leads_agents()[ $slug ] ?? null;
 	if ( $a && ! $a['team'] && $a['email'] ) {
-		return array( $a['email'] );
+		return array_values( array_unique( array_merge( array( $a['email'] ), ot_leads_agent_cc( $slug ) ) ) );
 	}
 	return ot_leads_leader_emails();
+}
+
+/** The extra alert addresses for an agent. */
+function ot_leads_agent_cc( $slug ) {
+	$cc = (array) ( ot_leads_opt( 'alert_cc' ) ?: array() );
+	return array_values( array_filter( array_map( 'trim', explode( ',', (string) ( $cc[ $slug ] ?? '' ) ) ), 'is_email' ) );
 }
 
 function ot_leads_leader_emails() {

@@ -40,6 +40,13 @@ add_action( 'ot_leads_admin_action', function ( $do ) {
 		$cur['crm_mode']      = in_array( $in['crm_mode'] ?? '', array( 'builtin', 'both', 'forward' ), true ) ? $in['crm_mode'] : 'builtin';
 		$cur['town_owners']   = array_filter( array_map( 'sanitize_title', (array) ( $in['town_owners'] ?? array() ) ) );
 		$cur['type_owners']   = array_filter( array_map( 'sanitize_title', (array) ( $in['type_owners'] ?? array() ) ) );
+		$cur['alert_cc']      = array();
+		foreach ( (array) ( $in['alert_cc'] ?? array() ) as $slug => $list ) {
+			$ok = array_filter( array_map( fn( $e ) => sanitize_email( trim( $e ) ), explode( ',', (string) $list ) ), 'is_email' );
+			if ( $ok && isset( ot_leads_agents()[ sanitize_title( $slug ) ] ) ) {
+				$cur['alert_cc'][ sanitize_title( $slug ) ] = implode( ', ', $ok );
+			}
+		}
 		if ( empty( $cur['brevo_token'] ) ) {
 			$cur['brevo_token'] = wp_generate_password( 32, false );
 		}
@@ -100,6 +107,7 @@ function ot_leads_settings_screen() {
 	// Routing.
 	echo '<div class="ot-card"><h2>Routing and alerts</h2><table class="form-table">'
 		. $row( '<label for="leaders">Team leaders</label>', '<input class="large-text" id="leaders" name="leaders" value="' . esc_attr( $o( 'leaders' ) ) . '">', 'Emails, comma-separated. They get team-inbox leads and escalations.' )
+		. implode( '', array_map( fn( $slug, $ag ) => $row( '<label for="cc-' . esc_attr( $slug ) . '">Also alert, for ' . esc_html( strtok( $ag['name'], ' ' ) ) . '</label>', '<input class="large-text" id="cc-' . esc_attr( $slug ) . '" name="alert_cc[' . esc_attr( $slug ) . ']" value="' . esc_attr( ( (array) ( $o( 'alert_cc' ) ?: array() ) )[ $slug ] ?? '' ) . '" placeholder="name@oberdorferteam.com">', esc_html( ( $ag['email'] ?: 'The address on their profile' ) . ' always gets ' . strtok( $ag['name'], ' ' ) . '\'s alerts. Add more addresses here, comma-separated; they are not shown on the site.' ) ), array_keys( ot_leads_agents() ), ot_leads_agents() ) )
 		. $row( '<label for="rm">Response window</label>', '<input type="number" id="rm" name="response_minutes" min="5" max="240" value="' . (int) $o( 'response_minutes' ) . '"> minutes', 'If a new lead is not marked contacted in this time during business hours, the team leaders are alerted.' )
 		. $row( 'Business hours', '<input type="number" name="hours_start" min="0" max="23" value="' . (int) $o( 'hours_start' ) . '" style="width:60px"> to <input type="number" name="hours_end" min="1" max="24" value="' . (int) $o( 'hours_end' ) . '" style="width:60px"> (24-hour, Massachusetts time), Monday to Saturday', 'Escalations and marketing email happen only within these hours.' )
 		. $row( 'Confirmation email', '<label><input type="checkbox" name="confirm_email" value="1"' . checked( (bool) $o( 'confirm_email' ), true, false ) . '> Send each person a short "we have your message" email from their agent</label>' );

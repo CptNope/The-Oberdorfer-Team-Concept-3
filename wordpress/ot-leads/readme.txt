@@ -2,7 +2,7 @@
 Contributors: oberdorferteam
 Requires at least: 7.1
 Requires PHP: 8.3
-Stable tag: 0.10.3
+Stable tag: 0.10.4
 License: GPL-2.0-or-later
 
 The Oberdorfer Team's built-in CRM: lead capture, routing and alerts, inbox and pipeline, CRM forwarding, email nurture through Brevo, and AI drafts a person approves.
@@ -14,6 +14,9 @@ Every form on oberdorferteam.com saves here first. Leads are routed to the right
 Requires the ot-core plugin.
 
 == Changelog ==
+
+= 0.10.4 =
+* Leads > Settings > Routing: "Also alert" for each agent. Their alerts and morning email go to the address on their profile and to these extra addresses (for example both a Gmail and an @oberdorferteam.com mailbox). The extra addresses are not shown on the site.
 
 = 0.10.3 =
 * Version moves with the theme 0.10.3. No changes.
