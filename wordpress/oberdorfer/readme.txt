@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.10.2
+Stable tag: 0.10.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,9 @@ Fonts: Cormorant Garamond and Manrope (SIL Open Font License 1.1), loaded from G
 this version; self-hosting is a launch task.
 
 == Changelog ==
+
+= 0.10.3 =
+* Journal: "Read it online" and "Download the PDF" sit on their own lines.
 
 = 0.10.2 =
 * Journal: the Wakefield at Home issue can be read online (opens in the browser's PDF viewer, in a new tab, also from the cover) or downloaded.
