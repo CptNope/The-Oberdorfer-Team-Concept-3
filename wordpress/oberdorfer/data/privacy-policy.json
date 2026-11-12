@@ -1,6 +1,6 @@
 {
-  "_about": "The website privacy policy. One source for the prototype (tools/build_site.py) and the WordPress theme (patterns/privacy-policy.php, copied by tools/build_wp.py). Every statement describes what the site actually does: forms and leads (ot-leads), the ot_lid cookie (capture.php), Brevo (mail.php), Google Fonts (functions.php), click-to-load video and tours (listing-media.php), retention (privacy.php, default 24 months), optional CRM forwarding and AI drafting (off unless turned on). Update it when any of those change. Tokens: {phone}, {address}. Written 2026-11-10; to be reviewed by REWAP Brokerage LLC before launch.",
-  "updated": "November 10, 2026",
+  "_about": "The website privacy policy. One source for the prototype (tools/build_site.py) and the WordPress theme (patterns/privacy-policy.php, copied by tools/build_wp.py). Every statement describes what the site actually does: forms and leads (ot-leads), the ot_lid cookie (capture.php), Brevo (mail.php), Google Fonts (functions.php), click-to-load video and tours (listing-media.php), retention (privacy.php, default 24 months), Independent Analytics (cookieless visit statistics, monthly salt, 2-year retention, installed 2026-11-11), optional CRM forwarding and AI drafting (off unless turned on). Update it when any of those change. Tokens: {phone}, {address}. Written 2026-11-10; to be reviewed by REWAP Brokerage LLC before launch.",
+  "updated": "November 11, 2026",
   "intro": "This policy explains what information The Oberdorfer Team collects through oberdorferteam.com, how we use it, who we share it with and the choices you have. The Oberdorfer Team, with an office at {address}, is a real estate team operating under REWAP Brokerage LLC, a licensed Massachusetts real estate broker.",
   "sections": [
     {
@@ -14,6 +14,9 @@
         },
         {
           "p": "<strong>One cookie, after you contact us.</strong> After you send a form, the site sets a cookie named <code>ot_lid</code> in your browser for up to one year. While it is there, the site notes which pages of this site you view, so the team can follow up on what you were looking at; if you read a town guide, that town is added to the updates you asked for. It is not set before you contact us, it is not used on other websites, and you can delete it at any time in your browser settings."
+        },
+        {
+          "p": "<strong>Visit statistics, without cookies.</strong> We count visits with Independent Analytics, a tool that runs on our own website rather than on another company's servers. It records which pages are viewed, the website or search engine that sent you, your approximate location (country and city, worked out from your IP address) and your browser and type of device. It sets no cookies and does not store your IP address. To tell visits apart, it uses a code made from your IP address and browser that changes every month. We keep these statistics for two years."
         },
         {
           "p": "We do not use advertising trackers, and we do not use analytics tools that follow you across other websites."

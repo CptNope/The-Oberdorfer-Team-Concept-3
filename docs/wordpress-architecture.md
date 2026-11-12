@@ -39,7 +39,7 @@ The production site for oberdorferteam.com is a custom block theme plus a small 
 | Two-factor login | Third-party 2FA plugin | Required for every admin and agent account |
 | Caching, backups, staging | Cloudways | Exclude form endpoints and the admin from page cache |
 | CDN, DNS, edge cache, firewall | Cloudflare (free plan) | Settings in `docs/coming-soon-launch.md` section 2b; purge the cache after publishing |
-| Analytics | `ot-core` setting | One GA4 measurement ID field; Search Console is verified at the domain (DNS) |
+| Analytics | Independent Analytics (third-party plugin, installed on live 2026-11-11) | Cookieless, stored in the site database. Settings: logged-in users not tracked; Administrator and Team agent roles ignored, also via cookie when logged out; salt refreshed monthly; data kept 2 years; Team agents can view all analytics; public view counter off; Freemius opt-in skipped. Described in the privacy policy. GA4 (an `ot-core` measurement ID field) stays optional; Search Console is verified at the domain (DNS) |
 
 ## Deliberately not used
 
