@@ -38,6 +38,7 @@ The production site for oberdorferteam.com is a custom block theme plus a small 
 | Outgoing email delivery | Email service (Amazon SES, Postmark or Mailgun) | SPF, DKIM and DMARC on oberdorferteam.com. WordPress core mail goes through the same service. |
 | Two-factor login | Third-party 2FA plugin | Required for every admin and agent account |
 | Caching, backups, staging | Cloudways | Exclude form endpoints and the admin from page cache |
+| Cloudflare connection | Cloudflare plugin (third-party, installed on live 2026-11-11) | Signed in with an API token scoped to the oberdorferteam.com zone (WordPress template: analytics, zone and DNS read, zone settings edit, cache purge). Auto Purge Content On Update on, Always Online on, Automatic HTTPS Rewrites on, Security Level Medium. "Apply recommended settings" not used; APO (paid) not bought |
 | CDN, DNS, edge cache, firewall | Cloudflare (free plan) | Settings in `docs/coming-soon-launch.md` section 2b; purge the cache after publishing |
 | Analytics | Independent Analytics (third-party plugin, installed on live 2026-11-11) | Cookieless, stored in the site database. Settings: logged-in users not tracked; Administrator and Team agent roles ignored, also via cookie when logged out; salt refreshed monthly; data kept 2 years; Team agents can view all analytics; public view counter off; Freemius opt-in skipped. Described in the privacy policy. GA4 (an `ot-core` measurement ID field) stays optional; Search Console is verified at the domain (DNS) |
 
