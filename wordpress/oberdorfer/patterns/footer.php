@@ -157,6 +157,10 @@ $u = fn( $p ) => esc_url( oberdorfer_url( $p ) );
 
 <!-- wp:paragraph {"className":"disclosure"} -->
 <p class="disclosure">© 2026 The Oberdorfer Team · <a href="<?php echo $u( '/privacy/' ); ?>">Privacy</a> · <a href="<?php echo $u( '/contact/#accessibility' ); ?>">Accessibility</a> · <a href="<?php echo $u( '/contact/#fair-housing' ); ?>">Fair housing</a></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"disclosure"} -->
+<p class="disclosure">Website designed, built and maintained by <a href="https://jeremyanderson.tech/" rel="noopener">Jeremy Anderson Tech</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>

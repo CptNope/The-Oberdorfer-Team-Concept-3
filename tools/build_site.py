@@ -269,6 +269,7 @@ def footer(R):
         <p class="disclosure"><strong>The Oberdorfer Team</strong>, {ADDRESS}, is a real estate team operating under <strong>REWAP Brokerage LLC</strong>, {BROKER_ADDRESS}, a licensed Massachusetts real estate broker. Listings on this prototype are demonstrations.</p>
         <p class="eho">{icon(R, 'eho')}Equal Housing Opportunity</p>
         <p class="disclosure">© 2026 The Oberdorfer Team · <a href="{R}site/privacy/">Privacy</a> · <a href="{R}site/contact/#accessibility">Accessibility</a> · <a href="{R}site/contact/#fair-housing">Fair housing</a></p>
+        <p class="disclosure">Website designed, built and maintained by <a href="https://jeremyanderson.tech/" rel="noopener">Jeremy Anderson Tech</a></p>
       </div>
     </div>
   </div>
