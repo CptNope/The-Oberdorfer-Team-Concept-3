@@ -35,6 +35,7 @@ The visual language evolves the team's print publication, *Wakefield at Home*, F
    - office hours and formal status (the street address is confirmed)
    - REWAP disclosures
    - privacy policy: written 2026-11-10 from what the site actually does (`tools/data/privacy-policy.json`, one source for the prototype's `site/privacy/` and the theme's `privacy-policy` pattern); REWAP still reviews it. Update it whenever forms, cookies, email, CRM or AI handling change
+   - terms of use: written 2026-11-16 from what the site actually does (`tools/data/terms-of-use.json`, one source for the prototype's `site/terms/` and the theme's `terms-of-use` pattern; footer link "Terms"); REWAP reviews it with the privacy policy. Update it when booking, forms, listings (IDX) or what the site offers change
    - IDX/MLS provider (options in `docs/idx-options.md`); outside CRM (optional; the built-in `ot-leads` is built, v0.6.0)
    - final community list (the 27 guides in `tools/data/communities.json`, Tiers 1 to 3, are a proposed list; Boston neighborhood guides are planned)
    - Brandon's and Kaitlyn's individual biographies, titles, specialties, languages and headshots (their profiles use placeholders and interim crops of the team portrait)

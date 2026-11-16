@@ -24,6 +24,7 @@ function oberdorfer_page_sections() {
 		'contact' => array( 'page-hero-contact', 'contact-tabs', 'privacy-notes' ),
 		'privacy' => array( 'privacy-policy' ), // body only: page.html adds the title
 		'accessibility' => array( 'accessibility-statement' ),
+		'terms' => array( 'terms-of-use' ),
 	);
 }
 

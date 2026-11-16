@@ -220,9 +220,9 @@ function oberdorfer_image( $src, $alt, $class = '' ) {
 
 
 /**
- * A policy page body (privacy policy, accessibility statement) as blocks, from the theme's
+ * A policy page body (privacy policy, accessibility statement, terms of use) as blocks, from the theme's
  * data/<name>.json: a "Last updated" caption, the intro, then each section's heading,
- * paragraphs and lists. Tokens {phone}, {address} and {contact} are filled in.
+ * paragraphs and lists. Tokens {phone}, {address}, {contact}, {privacy} and {accessibility} are filled in.
  */
 function oberdorfer_policy_blocks( $name ) {
 	$file = get_theme_file_path( 'data/' . $name . '.json' );
@@ -230,7 +230,7 @@ function oberdorfer_policy_blocks( $name ) {
 	if ( ! $pol ) {
 		return '';
 	}
-	$fill = fn( $t ) => strtr( $t, array( '{phone}' => OBERDORFER_PHONE, '{address}' => oberdorfer_address(), '{contact}' => oberdorfer_url( '/contact/' ) ) );
+	$fill = fn( $t ) => strtr( $t, array( '{phone}' => OBERDORFER_PHONE, '{address}' => oberdorfer_address(), '{contact}' => oberdorfer_url( '/contact/' ), '{privacy}' => oberdorfer_url( '/privacy/' ), '{accessibility}' => oberdorfer_url( '/accessibility/' ) ) );
 	$out  = oberdorfer_p( 'Last updated ' . esc_html( $pol['updated'] ), 'caption' ) . oberdorfer_p( $fill( $pol['intro'] ) );
 	foreach ( $pol['sections'] as $sec ) {
 		$out .= oberdorfer_h( esc_html( $sec['h'] ), 2 );

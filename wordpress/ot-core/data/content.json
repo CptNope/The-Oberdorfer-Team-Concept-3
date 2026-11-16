@@ -1,5 +1,5 @@
 {
- "version": "0.10.10 (2026-10-22)",
+ "version": "0.10.11 (2026-10-22)",
  "front_page": "home",
  "posts_page": "journal",
  "regions": [
@@ -12624,6 +12624,15 @@
    "meta": {
     "ot_seo_title": "Accessibility Statement | The Oberdorfer Team",
     "ot_seo_description": "How oberdorferteam.com aims to meet WCAG 2.2 AA, how it is tested, its known limitations, and how to reach Brandon and Kaitlyn if anything is hard to use."
+   }
+  },
+  {
+   "slug": "terms",
+   "title": "Terms of use",
+   "order": 10,
+   "meta": {
+    "ot_seo_title": "Terms of Use | The Oberdorfer Team",
+    "ot_seo_description": "Terms for using oberdorferteam.com: general information, not advice; no agency until agreed; booking calls; fair housing; who owns the content; Massachusetts law."
    }
   }
  ],

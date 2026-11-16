@@ -268,7 +268,7 @@ def footer(R):
       <div class="stack" style="--stack:var(--space-3)">
         <p class="disclosure"><strong>The Oberdorfer Team</strong>, {ADDRESS}, is a real estate team operating under <strong>REWAP Brokerage LLC</strong>, {BROKER_ADDRESS}, a licensed Massachusetts real estate broker. Listings on this prototype are demonstrations.</p>
         <p class="eho">{icon(R, 'eho')}Equal Housing Opportunity</p>
-        <p class="disclosure">© 2026 The Oberdorfer Team · <a href="{R}site/privacy/">Privacy</a> · <a href="{R}site/accessibility/">Accessibility</a> · <a href="{R}site/contact/#fair-housing">Fair housing</a></p>
+        <p class="disclosure">© 2026 The Oberdorfer Team · <a href="{R}site/privacy/">Privacy</a> · <a href="{R}site/accessibility/">Accessibility</a> · <a href="{R}site/terms/">Terms</a> · <a href="{R}site/contact/#fair-housing">Fair housing</a></p>
         <p class="disclosure">Website designed, built and maintained by <a href="https://jeremyanderson.tech/" rel="noopener">Jeremy Anderson Tech</a></p>
       </div>
     </div>
@@ -1509,13 +1509,15 @@ def page_office():
 
 PRIVACY = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "privacy-policy.json")))
 ACCESSIBILITY = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "accessibility-statement.json")))
+TERMS = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "terms-of-use.json")))
 
 
 def privacy_html(contact_href, pol=None):
-    """A policy body (privacy policy, accessibility statement) from its tools/data/*.json
+    """A policy body (privacy policy, accessibility statement, terms of use) from its tools/data/*.json
     (the WordPress theme's oberdorfer_policy_blocks() reads the same files)."""
     pol = pol or PRIVACY
-    fill = lambda t: t.replace("{phone}", PHONE).replace("{address}", ADDRESS).replace("{contact}", contact_href)
+    site = contact_href[: -len("contact/")]
+    fill = lambda t: t.replace("{phone}", PHONE).replace("{address}", ADDRESS).replace("{contact}", contact_href).replace("{privacy}", site + "privacy/").replace("{accessibility}", site + "accessibility/")
     out = [f'<p class="caption">Last updated {pol["updated"]}</p>', f'<p>{fill(pol["intro"])}</p>']
     for sec in pol["sections"]:
         out.append(f'<h2>{sec["h"]}</h2>')
@@ -1542,6 +1544,16 @@ def page_accessibility():
 {privacy_html(R + "site/contact/", ACCESSIBILITY)}
 </div></div></section>'''
     write("accessibility", R, "Accessibility Statement | The Oberdorfer Team", "How oberdorferteam.com aims to meet WCAG 2.2 AA, how it is tested, its known limitations, and how to reach Brandon and Kaitlyn if anything is hard to use.", "", body)
+
+
+def page_terms():
+    R = "../../"
+    trail = [("Home", "site/"), ("Terms of use", "site/terms/")]
+    body = page_hero(R, trail, ["Plain terms,", "plainly put."], h1="Terms of use", lead="What the information on this site is for, what booking a call or sending a form means, and the few rules for using it.") + f'''
+<section class="section"><div class="container"><div class="prose">
+{privacy_html(R + "site/contact/", TERMS)}
+</div></div></section>'''
+    write("terms", R, "Terms of Use | The Oberdorfer Team", "Terms for using oberdorferteam.com: general information, not advice; no agency until agreed; booking calls; fair housing; who owns the content; Massachusetts law.", "", body)
 
 
 def page_contact():
@@ -1581,7 +1593,7 @@ def page_contact():
 if __name__ == "__main__":
     page_home(); page_buy(); [page_listing(l) for l in LISTINGS]; page_sell(); page_market()
     page_communities(); [page_town(t) for t in TOWNS]; [page_neighborhood(n, t) for t in TOWNS for n in t.get("neighborhoods", [])]; page_team(); page_agent(); page_journal(); page_article()
-    page_join(); page_office(); page_contact(); page_privacy(); page_accessibility()
+    page_join(); page_office(); page_contact(); page_privacy(); page_accessibility(); page_terms()
     for a in AGENTS: page_profile(a)
     page_profile(TEMPLATE_AGENT)
     write_discovery_files()

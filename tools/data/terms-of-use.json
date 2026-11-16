@@ -1,0 +1,129 @@
+{
+  "_about": "The website terms of use. One source for the prototype (tools/build_site.py) and the WordPress theme (patterns/terms-of-use.php, copied by tools/build_wp.py). Written 2026-11-16 from what the site actually does (forms, online booking with JAT Calendar Sync, town guides and market figures with sources, testimonials quoted with permission, the REWAP logo shown only on its own plate). Nothing here promises a service, fee or result. To be reviewed by REWAP Brokerage LLC, with the privacy policy. Tokens: {phone}, {address}, {contact}, {privacy}, {accessibility}.",
+  "updated": "November 16, 2026",
+  "intro": "These terms apply when you use oberdorferteam.com. The site is run by The Oberdorfer Team, with an office at {address}, a real estate team operating under REWAP Brokerage LLC, a licensed Massachusetts real estate broker. By using the site you agree to these terms. If you do not agree, please do not use it, and call us instead.",
+  "sections": [
+    {
+      "h": "Information on this site",
+      "blocks": [
+        {
+          "p": "The site is here to help you learn about buying and selling in Massachusetts and to reach Brandon and Kaitlyn Oberdorfer. It is general information, not legal, tax, financial, lending, inspection or appraisal advice. For those, please talk to a qualified professional."
+        },
+        {
+          "ul": [
+            "<strong>Market figures</strong> show their source, period and place. They describe the past and may be revised by their source; they do not predict what a home will sell for.",
+            "<strong>Listings</strong> are offered subject to errors, changes, prior sale or withdrawal. Check measurements, taxes, zoning and condition for yourself before you rely on them.",
+            "<strong>Town and neighborhood guides</strong> describe places, housing, transit, history and amenities, with a source for each fact. Towns, school districts and transit agencies change their plans, so check with them for the latest.",
+            "<strong>Testimonials</strong> are a client's own words, quoted with their permission and linked to where they first wrote them. Every sale is different, and past results do not promise future ones."
+          ]
+        },
+        {
+          "p": "We work to keep the site accurate and up to date, but we cannot promise that every page is complete or current at every moment."
+        }
+      ]
+    },
+    {
+      "h": "Using the site does not make us your agent",
+      "blocks": [
+        {
+          "p": "Browsing the site, sending a form or booking a call does not by itself create an agency or client relationship with The Oberdorfer Team or REWAP Brokerage LLC. If we work together, the relationship is agreed directly with you, with the disclosures and agreements Massachusetts law requires. Until then, please do not send us anything you would want kept confidential in a negotiation."
+        }
+      ]
+    },
+    {
+      "h": "Contacting us and booking a call",
+      "blocks": [
+        {
+          "ul": [
+            "Please give accurate contact details, and only your own, or someone else's with their permission.",
+            "Calls booked online are with the agent you chose, at the time shown in your confirmation. An agent may occasionally need to move or cancel a call; if so, they will tell you. Your confirmation email has a private link to move or cancel it yourself.",
+            "Sending a form or booking a call does not sign you up for marketing email. We send market updates or newsletters only if you tick the box to receive them.",
+            "Please do not send Social Security numbers, bank or card details through the site."
+          ]
+        },
+        {
+          "p": "How we handle what you send us is explained in our <a href=\"{privacy}\">privacy policy</a>."
+        }
+      ]
+    },
+    {
+      "h": "Fair housing",
+      "blocks": [
+        {
+          "p": "The Oberdorfer Team is committed to equal housing opportunity and follows federal and Massachusetts fair housing law in everything on this site and in every conversation. Our <a href=\"{contact}#fair-housing\">fair housing statement</a> is on the Contact page."
+        }
+      ]
+    },
+    {
+      "h": "What you may not do",
+      "blocks": [
+        {
+          "ul": [
+            "Send spam, false inquiries or bookings, or anything unlawful, threatening or harmful through the site.",
+            "Copy listings, guides or other pages in bulk, with automated tools or otherwise, or use them to build another service.",
+            "Try to get around the site's security or spam protection, or overload it."
+          ]
+        },
+        {
+          "p": "We may block access, cancel bookings or ignore messages that break these rules."
+        }
+      ]
+    },
+    {
+      "h": "Who owns the content",
+      "blocks": [
+        {
+          "p": "The text, photographs, illustrations, logos and the <em>Wakefield at Home</em> publication on this site belong to The Oberdorfer Team or to the people who licensed them to us. The REWAP Brokerage LLC name and logo belong to REWAP. Quoted testimonials belong to the clients who wrote them. You may view, print and share pages for your own use, such as sending a guide to a family member. Please ask us before republishing anything else."
+        }
+      ]
+    },
+    {
+      "h": "Other companies' websites and content",
+      "blocks": [
+        {
+          "p": "The site links to, and in places loads content from, other companies, such as RateMyAgent, Google Maps, YouTube, Vimeo, Matterport, Instagram and Facebook, and the towns, agencies and data sources we cite. We do not control those sites, and their own terms and privacy policies apply to them."
+        }
+      ]
+    },
+    {
+      "h": "Accessibility",
+      "blocks": [
+        {
+          "p": "We want everyone to be able to use this site. Our <a href=\"{accessibility}\">accessibility statement</a> explains the standard we aim for and how to tell us if something is hard to use. You never need the website to work with us; Brandon and Kaitlyn can help with anything on it by phone."
+        }
+      ]
+    },
+    {
+      "h": "No warranty, and limits on liability",
+      "blocks": [
+        {
+          "p": "The site is provided as it is and as available. To the extent the law allows, we make no promises about it beyond those in these terms, and The Oberdorfer Team and REWAP Brokerage LLC are not liable for losses that come from using the site or relying on its general information, or from the site being unavailable. Nothing in these terms limits any right you have under Massachusetts or federal law that cannot be limited, including your rights as a consumer."
+        }
+      ]
+    },
+    {
+      "h": "Massachusetts law",
+      "blocks": [
+        {
+          "p": "These terms are governed by the laws of the Commonwealth of Massachusetts."
+        }
+      ]
+    },
+    {
+      "h": "Changes to these terms",
+      "blocks": [
+        {
+          "p": "If we change these terms, we will post the new version on this page and update the date at the top."
+        }
+      ]
+    },
+    {
+      "h": "Contact us",
+      "blocks": [
+        {
+          "p": "Questions about these terms: call or text {phone}, use the form on our <a href=\"{contact}\">Contact page</a>, or write to The Oberdorfer Team, {address}."
+        }
+      ]
+    }
+  ]
+}
