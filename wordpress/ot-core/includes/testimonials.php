@@ -178,11 +178,12 @@ function ot_testimonial_box( $post ) {
 				echo '<input class="large-text" type="url" id="' . esc_attr( $k ) . '" name="' . esc_attr( $k ) . '" value="' . esc_attr( $v ) . '" placeholder="https://">';
 				break;
 			case 'agent':
-				echo '<select id="' . esc_attr( $k ) . '" name="' . esc_attr( $k ) . '">';
+				echo '<select id="' . esc_attr( $k ) . '" name="' . esc_attr( $k ) . '"><option value="team"' . selected( $v, 'team', false ) . '>Both (shown on each profile)</option>';
 				foreach ( $agents as $a ) {
-					$val   = 'brandon-kaitlyn-oberdorfer' === $a->post_name ? 'team' : $a->post_name;
-					$label = 'team' === $val ? 'Both (shown on each profile)' : $a->post_title;
-					echo '<option value="' . esc_attr( $val ) . '"' . selected( $v, $val, false ) . '>' . esc_html( $label ) . '</option>';
+					if ( OT_TEAM_PAGE === $a->post_name ) {
+						continue; // the old joint profile, until it is moved to its page
+					}
+					echo '<option value="' . esc_attr( $a->post_name ) . '"' . selected( $v, $a->post_name, false ) . '>' . esc_html( $a->post_title ) . '</option>';
 				}
 				echo '</select>';
 				break;

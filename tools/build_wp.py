@@ -23,7 +23,7 @@ import build_site as S  # noqa: E402  (data and the tested title/description rul
 THEME = os.path.join(ROOT, "wordpress", "oberdorfer")
 CORE = os.path.join(ROOT, "wordpress", "ot-core")
 DIST = os.path.join(ROOT, "wordpress", "dist")
-VERSION = "0.10.11"
+VERSION = "0.10.12"
 
 ASSET_DIRS = ["assets/img/photo", "assets/logo"]
 ASSET_FILES = ["assets/css/tokens.css", "assets/css/base.css", "assets/css/components.css", "assets/css/site.css",
@@ -144,14 +144,18 @@ def agent_entries():
             meta["ot_review_links"] = review_lines(a["slug"])
         meta.update(page_meta(f"agents/{a['slug']}"))
         out.append({"slug": a["slug"], "title": a["name"], "order": i + 1, "meta": meta})
+    return out
+
+
+def team_page():
+    """The joint page for Brandon and Kaitlyn: a page under Our Team, not an agent (2026-11-16)."""
     team = {"kind": "team", "name": "Brandon & Kaitlyn Oberdorfer", "given": "Brandon & Kaitlyn", "prose": [
         "Home holds the everyday moments that become a life: dinners around the table, celebrations with friends, and a familiar place to land at the end of the day.",
         "We are Brandon and Kaitlyn Oberdorfer: The Oberdorfer Team, a husband-and-wife real estate partnership. Our work reflects the values we bring to our own family: care, honesty, hard work, and showing up for the people who count on us.",
         "Whether you are buying your first home, making room for your next chapter, or preparing to sell, we want you to feel heard, informed, and supported from the first conversation through closing."]}
     meta = {"ot_record": team}
-    meta.update(page_meta("agents/brandon-kaitlyn-oberdorfer"))
-    out.insert(0, {"slug": "brandon-kaitlyn-oberdorfer", "title": "Brandon & Kaitlyn Oberdorfer", "order": 0, "meta": meta})
-    return out
+    meta.update(page_meta("team/brandon-kaitlyn-oberdorfer"))
+    return {"slug": "brandon-kaitlyn-oberdorfer", "title": "Brandon & Kaitlyn Oberdorfer", "parent": "team", "order": 0, "meta": meta}
 
 
 PAGES = [  # slug, title, prototype path for title and description, menu order
@@ -170,7 +174,7 @@ def content():
         "ot_record": {"city": "Worcester", "street": S.STREET, "postcode": S.POSTCODE, "maps": S.MAPS,
                       "hours": None, "status": "A team office of REWAP Brokerage LLC (formal status to be confirmed)"},
         "ot_street": S.STREET, "ot_city": "Worcester", "ot_postcode": S.POSTCODE, **page_meta("office")}}
-    pages = [{"slug": s, "title": t, "order": o, "meta": page_meta(rel)} for s, t, rel, o in PAGES]
+    pages = [{"slug": s, "title": t, "order": o, "meta": page_meta(rel)} for s, t, rel, o in PAGES] + [team_page()]
     data = {"version": f"{VERSION} ({S.UPDATED})", "front_page": "home", "posts_page": "journal",
             "regions": regions, "communities": community_entries(), "agents": agent_entries(),
             "offices": [office], "pages": pages,

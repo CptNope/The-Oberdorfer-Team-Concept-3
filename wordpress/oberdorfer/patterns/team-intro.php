@@ -22,5 +22,5 @@ $body = oberdorfer_p( 'The people behind the promise', 'label' )
 	. oberdorfer_p( 'Home holds the everyday moments that become a life: dinners around the table, celebrations with friends, and a familiar place to land at the end of the day.', 'body-l' )
 	. oberdorfer_p( 'We are Brandon and Kaitlyn Oberdorfer, a husband-and-wife real estate partnership. Our work reflects the values we bring to our own family: care, honesty, hard work, and showing up for the people who count on us.' )
 	. $triad
-	. oberdorfer_group( oberdorfer_link_arrow( 'Our story', oberdorfer_url( '/agents/brandon-kaitlyn-oberdorfer/' ) ) . oberdorfer_p( 'Top Producer · REWAP Brokerage', 'caption' ), 'cluster ot-cluster-6' );
+	. oberdorfer_group( oberdorfer_link_arrow( 'Our story', oberdorfer_url( '/team/brandon-kaitlyn-oberdorfer/' ) ) . oberdorfer_p( 'Top Producer · REWAP Brokerage', 'caption' ), 'cluster ot-cluster-6' );
 echo oberdorfer_section( oberdorfer_group( $photo . oberdorfer_group( $body, 'intro__body' ), 'container intro' ), 'section', '', 'intro-title' ); // phpcs:ignore WordPress.Security.EscapeOutput

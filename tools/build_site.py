@@ -110,10 +110,10 @@ def listing_card(R, l, here_href):
 
 def agent_card_bk(R):
     return f'''<article class="agent-card" data-specialty="buyers sellers first-time move-up" data-area="massachusetts wakefield worcester boston" data-lang="english">
-  <a class="agent-card__photo" href="{R}site/agents/brandon-kaitlyn-oberdorfer/"><img src="{R}assets/img/photo/team-portrait.webp" alt="Brandon and Kaitlyn Oberdorfer" width="1400" height="1680" loading="lazy"></a>
-  <div class="stack" style="--stack:var(--space-2)"><p class="agent-card__title">Team leaders · Top Producer</p><h3 class="agent-card__name"><a href="{R}site/agents/brandon-kaitlyn-oberdorfer/" style="text-decoration:none;color:inherit">Brandon &amp; Kaitlyn Oberdorfer</a></h3><p class="body-s muted">Husband. Wife. Your Team.</p></div>
+  <a class="agent-card__photo" href="{R}site/team/brandon-kaitlyn-oberdorfer/"><img src="{R}assets/img/photo/team-portrait.webp" alt="Brandon and Kaitlyn Oberdorfer" width="1400" height="1680" loading="lazy"></a>
+  <div class="stack" style="--stack:var(--space-2)"><p class="agent-card__title">Team leaders · Top Producer</p><h3 class="agent-card__name"><a href="{R}site/team/brandon-kaitlyn-oberdorfer/" style="text-decoration:none;color:inherit">Brandon &amp; Kaitlyn Oberdorfer</a></h3><p class="body-s muted">Husband. Wife. Your Team.</p></div>
   <div class="agent-card__meta"><span class="chip">Buyers</span><span class="chip">Sellers</span><span class="chip">Massachusetts</span></div>
-  <div class="cluster" style="--cluster:var(--space-5)"><a class="link-arrow" href="{R}site/agents/brandon-kaitlyn-oberdorfer/">View profile {arrow(R)}</a><a class="link-arrow" href="tel:{TEL}">{PHONE}</a></div>
+  <div class="cluster" style="--cluster:var(--space-5)"><a class="link-arrow" href="{R}site/team/brandon-kaitlyn-oberdorfer/">View profile {arrow(R)}</a><a class="link-arrow" href="tel:{TEL}">{PHONE}</a></div>
 </article>'''
 
 def seat_card(R):
@@ -260,7 +260,7 @@ def footer(R):
       </div>
       <div><h2>Explore</h2><ul><li><a href="{R}site/buy/">Buy a home</a></li><li><a href="{R}site/sell/">Sell your home</a></li><li><a href="{R}site/market/">Market insights</a></li><li><a href="{R}site/communities/">Communities</a></li></ul></div>
       <div><h2>Communities</h2><ul>{"".join(f'<li><a href="{R}site/communities/{k}/">{n}, MA</a></li>' for k, n in FOOTER_TOWNS)}<li><a href="{R}site/communities/">All town guides</a></li></ul></div>
-      <div><h2>Team</h2><ul><li><a href="{R}site/team/">Meet the team</a></li><li><a href="{R}site/agents/brandon-kaitlyn-oberdorfer/">Brandon &amp; Kaitlyn</a></li><li><a href="{R}site/agents/brandon-oberdorfer/">Brandon Oberdorfer</a></li><li><a href="{R}site/agents/kaitlyn-oberdorfer/">Kaitlyn Oberdorfer</a></li><li><a href="{R}site/join/">Join our team</a></li><li><a href="{R}site/office/">Team office</a></li><li><a href="{INSTAGRAM}" rel="noopener">Instagram</a></li></ul></div>
+      <div><h2>Team</h2><ul><li><a href="{R}site/team/">Meet the team</a></li><li><a href="{R}site/team/brandon-kaitlyn-oberdorfer/">Brandon &amp; Kaitlyn</a></li><li><a href="{R}site/agents/brandon-oberdorfer/">Brandon Oberdorfer</a></li><li><a href="{R}site/agents/kaitlyn-oberdorfer/">Kaitlyn Oberdorfer</a></li><li><a href="{R}site/join/">Join our team</a></li><li><a href="{R}site/office/">Team office</a></li><li><a href="{INSTAGRAM}" rel="noopener">Instagram</a></li></ul></div>
       <div><h2>Read</h2><ul><li><a href="{R}site/journal/">Journal</a></li><li><a href="{R}site/journal/#archive">At Home archive</a></li><li><a href="{R}site/contact/">Contact</a></li></ul></div>
     </div>
     <div class="attribution">
@@ -358,7 +358,7 @@ def page_home():
         <div><p class="label">Purposeful</p><p class="h5">A plan shaped around your home and life.</p></div>
         <div><p class="label">Prepared</p><p class="h5">Clear guidance and attention to the details.</p></div>
       </div>
-      <div class="cluster" style="--cluster:var(--space-6)">{link_arrow(R, R+"site/agents/brandon-kaitlyn-oberdorfer/", "Our story")}<span class="caption">Top Producer · REWAP Brokerage</span></div>
+      <div class="cluster" style="--cluster:var(--space-6)">{link_arrow(R, R+"site/team/brandon-kaitlyn-oberdorfer/", "Our story")}<span class="caption">Top Producer · REWAP Brokerage</span></div>
     </div>
   </div>
 </section>
@@ -1117,7 +1117,7 @@ def page_team():
 
 def page_agent():
     R = "../../../"
-    trail = [("Home", "site/"), ("Our Team", "site/team/"), ("Brandon &amp; Kaitlyn Oberdorfer", "site/agents/brandon-kaitlyn-oberdorfer/")]
+    trail = [("Home", "site/"), ("Our Team", "site/team/"), ("Brandon &amp; Kaitlyn Oberdorfer", "site/team/brandon-kaitlyn-oberdorfer/")]
     homes = "".join(listing_card(R, l, f"{R}site/buy/{l['slug']}/") for l in LISTINGS[:3])
     arts = "".join(article_card(R, a) for a in ARTICLES[:3])
     body = f'''
@@ -1162,9 +1162,9 @@ def page_agent():
   <div style="grid-column:1/span 5" class="stack"><p class="label">Contact</p><h2 class="display-m answer"><span>We would love</span><span>to be a resource.</span></h2><p>Messages from this page are attributed to Brandon and Kaitlyn in the team's lead routing.</p></div>
   <div style="grid-column:7/span 6" class="panel">{form(R, "agent", "Message Brandon &amp; Kaitlyn", contact_fields("af") + select("af-topic","I'm interested in",["Buying","Selling","Both","Something else"]) + field("af-msg","Message","textarea",opt=True) + reach_pref("af"), "Send my message", "agent:brandon-kaitlyn", "h3")}</div>
 </div></section>'''
-    person = {"@context":"https://schema.org","@type":"AboutPage","url":prod("site/agents/brandon-kaitlyn-oberdorfer/"),"dateModified":UPDATED,
+    person = {"@context":"https://schema.org","@type":"AboutPage","url":prod("site/team/brandon-kaitlyn-oberdorfer/"),"dateModified":UPDATED,
               "mainEntity":{"@id":TEAM_ID},"mentions":[{"@id":prod(f"site/agents/{a['slug']}/#person")} for a in AGENTS]}
-    write("agents/brandon-kaitlyn-oberdorfer", R, "Brandon & Kaitlyn Oberdorfer | The Oberdorfer Team", "Meet Brandon and Kaitlyn Oberdorfer, the husband-and-wife leaders and Top Producers of The Oberdorfer Team, based in Worcester and serving all of Massachusetts.", "Our Team", body, ld=[crumbs_ld(trail), person])
+    write("team/brandon-kaitlyn-oberdorfer", R, "Brandon & Kaitlyn Oberdorfer | The Oberdorfer Team", "Meet Brandon and Kaitlyn Oberdorfer, the husband-and-wife leaders and Top Producers of The Oberdorfer Team, based in Worcester and serving all of Massachusetts.", "Our Team", body, ld=[crumbs_ld(trail), person])
 
 # --------------------------------------------------------------------------- agent profiles
 # One record per agent. Only confirmed facts go in plain fields; anything not yet
@@ -1305,7 +1305,7 @@ def page_profile(a):
 
     partner_html = ""
     if partner:
-        partner_html = f'''<div class="panel"><p class="label">Works alongside</p><a class="agent-mini" href="{R}site/agents/{partner['slug']}/" style="text-decoration:none;color:inherit"><img src="{R}{partner['photo']}" alt="" width="{partner['photo_w']}" height="{partner['photo_h']}"><span><span class="agent-mini__name">{partner['name']}</span><br><span class="agent-mini__meta">{partner['role']} · {a['relation'][0].upper() + a['relation'][1:]}</span></span></a>{link_arrow(R, R + "site/agents/brandon-kaitlyn-oberdorfer/", "Their story together")}</div>'''
+        partner_html = f'''<div class="panel"><p class="label">Works alongside</p><a class="agent-mini" href="{R}site/agents/{partner['slug']}/" style="text-decoration:none;color:inherit"><img src="{R}{partner['photo']}" alt="" width="{partner['photo_w']}" height="{partner['photo_h']}"><span><span class="agent-mini__name">{partner['name']}</span><br><span class="agent-mini__meta">{partner['role']} · {a['relation'][0].upper() + a['relation'][1:]}</span></span></a>{link_arrow(R, R + "site/team/brandon-kaitlyn-oberdorfer/", "Their story together")}</div>'''
     elif tpl:
         partner_html = f'''<div class="panel"><p class="label">Profile checklist</p><ul class="checklist body-s"><li>Verified MA license number</li><li>Headshot, 4:5</li><li>Biography, 120 to 250 words</li><li>Specialties and service areas</li><li>Languages</li><li>Direct phone and email</li><li>Principal broker approval</li></ul><p class="caption">The profile stays unpublished until every item is complete.</p></div>'''
 
@@ -1500,7 +1500,7 @@ def page_office():
   <div style="grid-column:9/span 4" class="stack" >
     <div class="office-card">
       <h2 class="h4">The Oberdorfer Team Office</h2>
-      <dl><dt>City</dt><dd>Worcester, Massachusetts</dd><dt>Address</dt><dd>{STREET}<br>Worcester, MA {POSTCODE}<br><a href="{MAPS}" rel="noopener">Get directions</a></dd><dt>Phone</dt><dd><a href="tel:{TEL}">{PHONE}</a></dd><dt>Hours</dt><dd><span class="placeholder-value">[Hours to be confirmed]</span></dd><dt>Brokerage</dt><dd>A team office of REWAP Brokerage LLC (formal status to be confirmed)</dd><dt>Agents</dt><dd><a href="{R}site/agents/brandon-kaitlyn-oberdorfer/">Brandon &amp; Kaitlyn Oberdorfer</a></dd></dl>
+      <dl><dt>City</dt><dd>Worcester, Massachusetts</dd><dt>Address</dt><dd>{STREET}<br>Worcester, MA {POSTCODE}<br><a href="{MAPS}" rel="noopener">Get directions</a></dd><dt>Phone</dt><dd><a href="tel:{TEL}">{PHONE}</a></dd><dt>Hours</dt><dd><span class="placeholder-value">[Hours to be confirmed]</span></dd><dt>Brokerage</dt><dd>A team office of REWAP Brokerage LLC (formal status to be confirmed)</dd><dt>Agents</dt><dd><a href="{R}site/team/brandon-kaitlyn-oberdorfer/">Brandon &amp; Kaitlyn Oberdorfer</a></dd></dl>
     </div>
     <div class="panel">{form(R, "appt", "Request an appointment", contact_fields("ap") + select("ap-topic","Topic",["Buying","Selling","Joining the team","Other"]), "Request an appointment", "office", "h3")}</div>
   </div>

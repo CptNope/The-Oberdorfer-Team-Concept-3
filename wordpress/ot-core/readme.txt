@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.10.11
+Stable tag: 0.10.12
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,10 @@ Listings are off by default. Settings > Listings (IDX) switches the home search 
 If an SEO plugin is installed, only one of the two may print meta tags: add `define( 'OT_CORE_SEO_OUTPUT', false );` to wp-config.php to switch this plugin's output off.
 
 == Changelog ==
+
+= 0.10.12 =
+* The joint Brandon & Kaitlyn page is an ordinary page under Our Team, not an entry in Agents. An existing joint profile moves to the page once (body, record, search title kept; the old entry goes to Trash) and its old address redirects.
+* Testimonials have their own "Both" option; the Start here widget links to the joint page.
 
 = 0.10.11 =
 * Version moves with the release (no changes).

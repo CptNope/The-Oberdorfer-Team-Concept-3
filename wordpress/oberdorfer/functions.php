@@ -198,7 +198,7 @@ function oberdorfer_active_nav() {
 	if ( is_post_type_archive( 'ot_community' ) || is_singular( 'ot_community' ) ) {
 		return '/communities/';
 	}
-	if ( is_page( 'team' ) || is_singular( 'ot_agent' ) ) {
+	if ( is_page( array( 'team', 'brandon-kaitlyn-oberdorfer' ) ) || is_singular( 'ot_agent' ) ) {
 		return '/team/';
 	}
 	if ( is_home() || is_singular( 'post' ) || is_category() || is_tag() ) {

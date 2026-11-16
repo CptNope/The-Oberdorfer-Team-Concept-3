@@ -109,10 +109,6 @@ add_action( 'add_meta_boxes_ot_agent', function ( $post ) {
 function ot_agent_box( $post ) {
 	wp_nonce_field( 'ot_agent_save', 'ot_agent_nonce' );
 	$rec = json_decode( (string) get_post_meta( $post->ID, 'ot_record', true ), true ) ?: array();
-	if ( ( $rec['kind'] ?? '' ) === 'team' ) {
-		echo '<p>This is the joint profile of Brandon and Kaitlyn. Write its introduction in the main editor above; while the editor is empty, the page shows the three paragraphs from <em>Wakefield at Home</em>. Each person\'s details are edited on their own profile.</p>';
-		return;
-	}
 	wp_enqueue_media();
 	echo '<p><strong>The biography is the main editor above</strong> (120 to 250 words, in the first person). While it is empty, the page shows a placeholder asking for it. The fields below fill the profile\'s quick facts; an empty field shows a [bracketed placeholder] with a "To confirm" badge, so only confirmed facts appear as facts.</p><table class="form-table" role="presentation"><tbody>';
 	foreach ( ot_agent_field_defs() as $meta => $d ) {

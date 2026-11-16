@@ -95,7 +95,7 @@ $u = fn( $p ) => esc_url( oberdorfer_url( $p ) );
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->
-<li><a href="<?php echo $u( '/agents/brandon-kaitlyn-oberdorfer/' ); ?>">Brandon &amp; Kaitlyn</a></li>
+<li><a href="<?php echo $u( '/team/brandon-kaitlyn-oberdorfer/' ); ?>">Brandon &amp; Kaitlyn</a></li>
 <!-- /wp:list-item -->
 
 <!-- wp:list-item -->

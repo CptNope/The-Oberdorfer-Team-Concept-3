@@ -126,7 +126,34 @@ function ot_page_url( $slug, $fragment = '' ) {
 	return $url . ( $fragment ? '#' . $fragment : '' );
 }
 
-/** Agents (not the team page), in menu order: [ id, slug, url, rec ]. */
+/**
+ * The joint page for Brandon and Kaitlyn: an ordinary page under Our Team (/team/brandon-kaitlyn-oberdorfer/),
+ * not an agent. Its slug is also the stored "whole team" value in older listings and leads.
+ */
+const OT_TEAM_PAGE = 'brandon-kaitlyn-oberdorfer';
+
+/** The joint page, or null. */
+function ot_team_page() {
+	$p = get_page_by_path( 'team/' . OT_TEAM_PAGE );
+	if ( ! $p ) {
+		$found = get_posts( array( 'post_type' => 'page', 'name' => OT_TEAM_PAGE, 'post_status' => 'publish', 'posts_per_page' => 1, 'no_found_rows' => true ) );
+		$p     = $found ? $found[0] : null;
+	}
+	return $p;
+}
+
+/** Is this post the joint page? */
+function ot_is_team_page( $post ) {
+	$post = get_post( $post );
+	return $post && 'page' === $post->post_type && OT_TEAM_PAGE === $post->post_name;
+}
+
+function ot_team_page_url( $fragment = '' ) {
+	$p = ot_team_page();
+	return ( $p ? get_permalink( $p ) : ot_page_url( 'team' ) . OT_TEAM_PAGE . '/' ) . ( $fragment ? '#' . $fragment : '' );
+}
+
+/** Agents, in menu order: [ id, slug, url, rec ]. ($include_team is kept for older callers; the joint page is not an agent.) */
 function ot_agents( $include_team = false ) {
 	$out   = array();
 	$posts = get_posts( array(

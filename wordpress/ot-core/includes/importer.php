@@ -199,8 +199,11 @@ function ot_import( $file = null ) {
 
 	$page_ids = array();
 	foreach ( $data['pages'] ?? array() as $p ) {
-		$page_ids[ $p['slug'] ] = $tally( ot_upsert( 'page', $p['slug'], $p['title'], 0, (int) $p['order'], $p['meta'] ), 'page ' . $p['slug'] );
+		// A child page names its parent's slug (the joint page sits under Our Team).
+		$parent = ! empty( $p['parent'] ) ? (int) ( $page_ids[ $p['parent'] ] ?? 0 ) : 0;
+		$page_ids[ $p['slug'] ] = $tally( ot_upsert( 'page', $p['slug'], $p['title'], $parent, (int) $p['order'], $p['meta'] ), 'page ' . $p['slug'] );
 	}
+	ot_move_team_profile(); // an older site's joint profile in Agents moves to the page just imported
 	if ( ! empty( $data['front_page'] ) && ! empty( $page_ids[ $data['front_page'] ] ) ) {
 		update_option( 'show_on_front', 'page' );
 		update_option( 'page_on_front', $page_ids[ $data['front_page'] ] );

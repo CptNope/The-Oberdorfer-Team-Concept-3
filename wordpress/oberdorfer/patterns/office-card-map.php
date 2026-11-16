@@ -25,7 +25,7 @@ $left = oberdorfer_html( '<div class="map-frame"><svg viewBox="0 0 800 500" role
 
 $card = oberdorfer_group(
 	oberdorfer_h( 'The Oberdorfer Team Office', 2, 'h4' )
-	. oberdorfer_html( '<dl><dt>City</dt><dd>' . esc_html( $city ) . ', Massachusetts</dd><dt>Address</dt><dd>' . esc_html( $street ) . '<br>' . esc_html( $city ) . ', MA ' . esc_html( $postcode ) . '<br><a href="' . esc_url( $maps ) . '" rel="noopener">Get directions</a></dd><dt>Phone</dt><dd><a href="tel:' . OBERDORFER_TEL . '">' . OBERDORFER_PHONE . '</a></dd><dt>Hours</dt><dd>' . $hours . '</dd><dt>Brokerage</dt><dd>' . $status . '</dd><dt>Agents</dt><dd><a href="' . esc_url( oberdorfer_url( '/agents/brandon-kaitlyn-oberdorfer/' ) ) . '">Brandon &amp; Kaitlyn Oberdorfer</a></dd></dl>' ),
+	. oberdorfer_html( '<dl><dt>City</dt><dd>' . esc_html( $city ) . ', Massachusetts</dd><dt>Address</dt><dd>' . esc_html( $street ) . '<br>' . esc_html( $city ) . ', MA ' . esc_html( $postcode ) . '<br><a href="' . esc_url( $maps ) . '" rel="noopener">Get directions</a></dd><dt>Phone</dt><dd><a href="tel:' . OBERDORFER_TEL . '">' . OBERDORFER_PHONE . '</a></dd><dt>Hours</dt><dd>' . $hours . '</dd><dt>Brokerage</dt><dd>' . $status . '</dd><dt>Agents</dt><dd><a href="' . esc_url( oberdorfer_url( '/team/brandon-kaitlyn-oberdorfer/' ) ) . '">Brandon &amp; Kaitlyn Oberdorfer</a></dd></dl>' ),
 	'office-card'
 );
 $form = oberdorfer_group( '<!-- wp:ot/inquiry-form {"context":"office","title":"Request an appointment","topics":["Buying","Selling","Joining the team","Other"],"submit":"Request an appointment","level":"h3"} /-->', 'panel' );

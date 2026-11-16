@@ -37,8 +37,7 @@ add_action( 'admin_init', function () {
 		return;
 	}
 	foreach ( get_posts( array( 'post_type' => 'ot_agent', 'post_status' => 'any', 'posts_per_page' => -1 ) ) as $a ) {
-		// The joint profile's page has no biography block (its story comes from the record).
-		if ( 'brandon-kaitlyn-oberdorfer' !== $a->post_name && '' === trim( (string) $a->post_content ) ) {
+		if ( OT_TEAM_PAGE !== $a->post_name && '' === trim( (string) $a->post_content ) ) {
 			wp_update_post( array( 'ID' => $a->ID, 'post_content' => ot_bio_prompt_block( $a ) ) );
 		}
 	}
@@ -112,7 +111,13 @@ function ot_start_here_widget() {
 	$agents = get_posts( array( 'post_type' => 'ot_agent', 'post_status' => 'publish', 'posts_per_page' => -1, 'orderby' => 'menu_order', 'order' => 'ASC' ) );
 	$links  = array();
 	foreach ( $agents as $a ) {
-		$links[] = '<a href="' . esc_url( get_edit_post_link( $a->ID ) ) . '">' . esc_html( $a->post_title ) . '</a>';
+		if ( OT_TEAM_PAGE !== $a->post_name ) {
+			$links[] = '<a href="' . esc_url( get_edit_post_link( $a->ID ) ) . '">' . esc_html( $a->post_title ) . '</a>';
+		}
+	}
+	$team = ot_team_page();
+	if ( $team ) {
+		$links[] = '<a href="' . esc_url( get_edit_post_link( $team->ID ) ) . '">Brandon &amp; Kaitlyn (joint page)</a>';
 	}
 	$items = array(
 		array( 'Edit a profile', 'Open a profile, click the text you want to change and type. The biography is the large text area; the details below the page (phone, title, specialties, headshot) are in the "Agent details" box.', implode( ' · ', $links ) ),

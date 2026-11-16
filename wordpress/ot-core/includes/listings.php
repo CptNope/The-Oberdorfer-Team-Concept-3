@@ -145,8 +145,8 @@ function ot_listings( $args = array() ) {
 		if ( ! in_array( $l['status'], (array) $args['statuses'], true ) ) {
 			continue;
 		}
-		// An agent's listings: listing or co-listing agent. The joint profile lists every team listing.
-		if ( $args['agent'] && 'brandon-kaitlyn-oberdorfer' !== $args['agent'] && $l['agent'] !== $args['agent'] && $l['coagent'] !== $args['agent'] ) {
+		// An agent's listings: listing or co-listing agent. The joint page lists every team listing.
+		if ( $args['agent'] && OT_TEAM_PAGE !== $args['agent'] && $l['agent'] !== $args['agent'] && $l['coagent'] !== $args['agent'] ) {
 			continue;
 		}
 		if ( $args['town'] ) {
@@ -455,7 +455,7 @@ function ot_listing_box( $post ) {
 			case 'agent':
 				echo '<select id="' . $id . '" name="' . $id . '"><option value="">Brandon &amp; Kaitlyn (the team)</option>';
 				foreach ( $agents as $a ) {
-					if ( 'brandon-kaitlyn-oberdorfer' === $a->post_name ) {
+					if ( OT_TEAM_PAGE === $a->post_name ) {
 						continue;
 					}
 					echo '<option value="' . esc_attr( $a->post_name ) . '"' . selected( $v, $a->post_name, false ) . '>' . esc_html( $a->post_title ) . '</option>';

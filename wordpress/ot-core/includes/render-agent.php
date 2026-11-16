@@ -2,13 +2,21 @@
 /**
  * Agent profiles, ported from page_profile() and page_agent() in tools/build_site.py.
  * Only confirmed facts are stored; anything unconfirmed renders as a [bracketed placeholder]
- * with a "To confirm" badge. The team profile (kind "team") is the joint page for Brandon and Kaitlyn.
+ * with a "To confirm" badge. The joint page for Brandon and Kaitlyn is a page (ot_team_page()), drawn by ot_render_team_section().
  */
 
 defined( 'ABSPATH' ) || exit;
 
 function ot_ax( $post_id ) {
 	$p = get_post( $post_id );
+	if ( $p && ot_is_team_page( $p ) ) {
+		// The joint page: its record (the Wakefield at Home introduction) is kept on the page.
+		$rec = json_decode( (string) get_post_meta( $p->ID, 'ot_record', true ), true ) ?: array();
+		$rec['kind'] = 'team';
+		$rec['name'] = 'Brandon & Kaitlyn Oberdorfer';
+		$rec['given'] = 'Brandon & Kaitlyn';
+		return array( 'p' => $p, 'r' => $rec, 'g' => 'Brandon &amp; Kaitlyn', 'name' => 'Brandon &amp; Kaitlyn Oberdorfer', 'url' => get_permalink( $p ), 'team' => true, 'partner' => null, 'agents' => ot_agents() );
+	}
 	if ( ! $p || 'ot_agent' !== $p->post_type ) {
 		return null;
 	}

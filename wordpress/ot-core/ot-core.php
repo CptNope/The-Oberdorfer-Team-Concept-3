@@ -3,7 +3,7 @@
  * Plugin Name:       Oberdorfer Core
  * Plugin URI:        https://oberdorferteam.com/
  * Description:       The content model, search output and importer for oberdorferteam.com: community guides, agents and offices as post types, their fields, server-rendered blocks, titles, meta descriptions, JSON-LD and llms.txt. Theme-independent by design.
- * Version:           0.10.11
+ * Version:           0.10.12
  * Requires at least: 7.1
  * Requires PHP:      8.3
  * Author:            The Oberdorfer Team
@@ -18,7 +18,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-const OT_CORE_VERSION = '0.10.11';
+const OT_CORE_VERSION = '0.10.12';
 // Bump when post types, rewrite rules or stored data change; ot_core_maybe_upgrade() then
 // flushes rewrites. Must-use plugins never run activation hooks, so this is the only trigger.
 const OT_CORE_SCHEMA  = 2; // 2: listings post type (/listings/)
@@ -48,6 +48,7 @@ require_once OT_CORE_DIR . '/includes/listing-media.php';
 require_once OT_CORE_DIR . '/includes/agent-listings.php';
 require_once OT_CORE_DIR . '/includes/testimonials.php';
 require_once OT_CORE_DIR . '/includes/editing.php';
+require_once OT_CORE_DIR . '/includes/team-page.php';
 
 /** Flush rewrite rules once after a schema change (works for mu-plugins too). */
 add_action( 'init', function () {

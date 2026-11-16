@@ -1,5 +1,5 @@
 {
- "version": "0.10.11 (2026-10-22)",
+ "version": "0.10.12 (2026-10-22)",
  "front_page": "home",
  "posts_page": "journal",
  "regions": [
@@ -12398,25 +12398,6 @@
  ],
  "agents": [
   {
-   "slug": "brandon-kaitlyn-oberdorfer",
-   "title": "Brandon & Kaitlyn Oberdorfer",
-   "order": 0,
-   "meta": {
-    "ot_record": {
-     "kind": "team",
-     "name": "Brandon & Kaitlyn Oberdorfer",
-     "given": "Brandon & Kaitlyn",
-     "prose": [
-      "Home holds the everyday moments that become a life: dinners around the table, celebrations with friends, and a familiar place to land at the end of the day.",
-      "We are Brandon and Kaitlyn Oberdorfer: The Oberdorfer Team, a husband-and-wife real estate partnership. Our work reflects the values we bring to our own family: care, honesty, hard work, and showing up for the people who count on us.",
-      "Whether you are buying your first home, making room for your next chapter, or preparing to sell, we want you to feel heard, informed, and supported from the first conversation through closing."
-     ]
-    },
-    "ot_seo_title": "Brandon & Kaitlyn Oberdorfer | The Oberdorfer Team",
-    "ot_seo_description": "Meet Brandon and Kaitlyn Oberdorfer, the husband-and-wife leaders and Top Producers of The Oberdorfer Team, based in Worcester and serving all of Massachusetts."
-   }
-  },
-  {
    "slug": "brandon-oberdorfer",
    "title": "Brandon Oberdorfer",
    "order": 1,
@@ -12633,6 +12614,26 @@
    "meta": {
     "ot_seo_title": "Terms of Use | The Oberdorfer Team",
     "ot_seo_description": "Terms for using oberdorferteam.com: general information, not advice; no agency until agreed; booking calls; fair housing; who owns the content; Massachusetts law."
+   }
+  },
+  {
+   "slug": "brandon-kaitlyn-oberdorfer",
+   "title": "Brandon & Kaitlyn Oberdorfer",
+   "parent": "team",
+   "order": 0,
+   "meta": {
+    "ot_record": {
+     "kind": "team",
+     "name": "Brandon & Kaitlyn Oberdorfer",
+     "given": "Brandon & Kaitlyn",
+     "prose": [
+      "Home holds the everyday moments that become a life: dinners around the table, celebrations with friends, and a familiar place to land at the end of the day.",
+      "We are Brandon and Kaitlyn Oberdorfer: The Oberdorfer Team, a husband-and-wife real estate partnership. Our work reflects the values we bring to our own family: care, honesty, hard work, and showing up for the people who count on us.",
+      "Whether you are buying your first home, making room for your next chapter, or preparing to sell, we want you to feel heard, informed, and supported from the first conversation through closing."
+     ]
+    },
+    "ot_seo_title": "Brandon & Kaitlyn Oberdorfer | The Oberdorfer Team",
+    "ot_seo_description": "Meet Brandon and Kaitlyn Oberdorfer, the husband-and-wife leaders and Top Producers of The Oberdorfer Team, based in Worcester and serving all of Massachusetts."
    }
   }
  ],

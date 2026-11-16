@@ -117,7 +117,7 @@ Redesigned 2026-11-10 as a branded workspace inside wp-admin. The team chose the
 
 ## Agent profiles, search and conversion
 
-Brandon and Kaitlyn each have a profile (`site/agents/brandon-oberdorfer/`, `site/agents/kaitlyn-oberdorfer/`); the joint page `site/agents/brandon-kaitlyn-oberdorfer/` tells their story together and links to both. `site/agents/agent-template/` is the profile every future agent receives, unpublished until its checklist is complete. All three come from one data model (`AGENTS` in `tools/build_site.py`).
+Brandon and Kaitlyn each have a profile (`site/agents/brandon-oberdorfer/`, `site/agents/kaitlyn-oberdorfer/`); the joint page `site/team/brandon-kaitlyn-oberdorfer/` (a page under Our Team, not an agent) tells their story together and links to both. `site/agents/agent-template/` is the profile every future agent receives, unpublished until its checklist is complete. All three come from one data model (`AGENTS` in `tools/build_site.py`).
 
 - **SEO:** one person per page, named in the title, `h1` and meta description; breadcrumbs; a canonical URL; internal links from the team page, the joint page, the footer and the partner card.
 - **AEO:** an answer-first summary sentence, a quick-facts list, an FAQ in plain language, and a visible "profile updated" date.

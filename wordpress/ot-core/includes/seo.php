@@ -85,7 +85,7 @@ add_action( 'wp_head', function () {
 	if ( $s['desc'] ) {
 		echo '<meta name="description" content="' . esc_attr( $s['desc'] ) . '">' . "\n";
 	}
-	$type  = is_singular( 'ot_agent' ) && ! ot_is_agent_listings() ? 'profile' : ( is_singular( 'post' ) ? 'article' : 'website' );
+	$type  = ( is_singular( 'ot_agent' ) && ! ot_is_agent_listings() ) || ( is_page() && ot_is_team_page( get_queried_object() ) ) ? 'profile' : ( is_singular( 'post' ) ? 'article' : 'website' );
 	$image = get_theme_file_uri( 'assets/img/share-oberdorfer-team-v1.jpg' );
 	$tags  = array(
 		'og:type'        => $type,
@@ -173,7 +173,7 @@ function ot_jsonld_graph() {
 		$about = $x['team'] ? array( '@id' => $team_id ) : array( '@id' => ot_prod_url( $x['url'] ) . '#person' );
 		$out[] = array( '@context' => 'https://schema.org', '@type' => 'CollectionPage', 'url' => $lurl, 'name' => ot_agent_listings_seo()['title'], 'about' => $about, 'isPartOf' => array( '@type' => 'WebSite', 'url' => OT_SITE_URL ),
 			'mainEntity' => array( '@type' => 'ItemList', 'numberOfItems' => count( $items ), 'itemListElement' => $items ) );
-	} elseif ( is_singular( 'ot_agent' ) ) {
+	} elseif ( is_singular( 'ot_agent' ) || ( is_page() && ot_is_team_page( get_queried_object() ) ) ) {
 		$x   = ot_ax( get_queried_object_id() );
 		$url = ot_prod_url( $x['url'] );
 		if ( $x['team'] ) {

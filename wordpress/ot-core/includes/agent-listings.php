@@ -77,7 +77,8 @@ function ot_agent_areas_html( $x ) {
 function ot_render_agent_listings_section( $section, $x ) {
 	$slug = $x['p']->post_name;
 	$who  = $x['team'] ? 'Brandon &amp; Kaitlyn' : $x['g'];
-	$url  = ot_agent_listings_url( $x['p'] );
+	// The joint page shows every team listing; its "all" link is the Buy page's team listings.
+	$url  = $x['team'] ? ot_page_url( 'buy', 'listings' ) : ot_agent_listings_url( $x['p'] );
 	switch ( $section ) {
 		case 'listings':
 			list( $current ) = ot_agent_listing_sets( $slug );
