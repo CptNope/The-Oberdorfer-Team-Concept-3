@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.10.9
+Stable tag: 0.10.10
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,10 @@ Fonts: Cormorant Garamond and Manrope (SIL Open Font License 1.1), loaded from G
 this version; self-hosting is a launch task.
 
 == Changelog ==
+
+= 0.10.10 =
+* Privacy policy and accessibility statement patterns cover online booking.
+* The booking calendar's secondary text uses the theme's muted color (WCAG AA contrast).
 
 = 0.10.9 =
 * Style for the "Read N more testimonials" toggle (.testimonial-more).

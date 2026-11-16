@@ -517,3 +517,7 @@
 .signup__row { display: flex; flex-wrap: wrap; gap: var(--space-3); }
 .signup__row .input { flex: 1 1 16rem; }
 .ot-turnstile:empty { display: none; }
+
+/* Online booking (JAT Calendar Sync, agent profiles). The plugin's default secondary text
+   (62% of the text color) measures 4.2:1 on ivory; the theme's muted token keeps it at AA. */
+.jatcs { --jatcs-muted: var(--text-muted); }
