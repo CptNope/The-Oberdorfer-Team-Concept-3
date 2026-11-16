@@ -113,18 +113,28 @@ function ot_parse_review_links( $text ) {
 /** The "Client stories" section of a profile. Empty (and so left out) until there is something real to show. */
 function ot_render_agent_stories( $x ) {
 	$slug  = $x['p']->post_name;
-	$items = ot_testimonials_for( $slug );
+	$items = ot_testimonials_for( $slug, 30 ); // Three up front; the rest behind "Read more".
 	$links = ot_parse_review_links( $x['r']['review_links'] ?? '' );
 	if ( ! $items && ! $links ) {
 		return '';
 	}
 	$body = '';
+	$more = '';
 	foreach ( $items as $i => $t ) {
 		$m    = fn( $k ) => trim( (string) get_post_meta( $t->ID, $k, true ) );
 		$cite = implode( ' · ', array_filter( array( $m( 'ot_t_name' ), $m( 'ot_t_context' ), $m( 'ot_t_year' ) ) ) );
 		$src  = $m( 'ot_t_url' ) ? '<a href="' . esc_url( $m( 'ot_t_url' ) ) . '" rel="noopener">Read it on ' . esc_html( $m( 'ot_t_platform' ) ?: 'the original site' ) . '</a>' : ( $m( 'ot_t_platform' ) ? esc_html( 'Review on ' . $m( 'ot_t_platform' ) ) : '' );
-		$body .= '<figure class="testimonial' . ( $i ? ' testimonial--compact' : '' ) . '"><span class="testimonial__mark" aria-hidden="true"></span><blockquote><p>' . nl2br( esc_html( $m( 'ot_t_quote' ) ) ) . '</p></blockquote>'
+		$fig  = '<figure class="testimonial' . ( $i ? ' testimonial--compact' : '' ) . '"><span class="testimonial__mark" aria-hidden="true"></span><blockquote><p>' . nl2br( esc_html( $m( 'ot_t_quote' ) ) ) . '</p></blockquote>'
 			. ( $cite || $src ? '<figcaption class="caption">' . esc_html( $cite ) . ( $cite && $src ? ' · ' : '' ) . $src . '</figcaption>' : '' ) . '</figure>';
+		if ( $i < 3 ) {
+			$body .= $fig;
+		} else {
+			$more .= $fig;
+		}
+	}
+	if ( $more ) {
+		$n     = count( $items ) - 3;
+		$body .= '<details class="testimonial-more"><summary>Read ' . $n . ' more ' . ( 1 === $n ? 'testimonial' : 'testimonials' ) . '</summary><div class="testimonial-list">' . $more . '</div></details>';
 	}
 	if ( $links ) {
 		$li = '';

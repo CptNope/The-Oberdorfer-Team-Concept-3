@@ -2,7 +2,7 @@
 Contributors: oberdorferteam
 Requires at least: 7.1
 Requires PHP: 8.3
-Stable tag: 0.10.8
+Stable tag: 0.10.9
 License: GPL-2.0-or-later
 
 The Oberdorfer Team's built-in CRM: lead capture, routing and alerts, inbox and pipeline, CRM forwarding, email nurture through Brevo, and AI drafts a person approves.
@@ -14,6 +14,9 @@ Every form on oberdorferteam.com saves here first. Leads are routed to the right
 Requires the ot-core plugin.
 
 == Changelog ==
+
+= 0.10.9 =
+* Version moves with ot-core 0.10.9. No changes.
 
 = 0.10.8 =
 * Online bookings (JAT Calendar Sync) become leads: matched by email to an existing lead or created as a new "Booked call" lead, assigned to the booked agent (a team lead goes to that agent; an agent's lead keeps its owner), moved to Appointment set, logged on the timeline and added as a call task at the booked time. Moves and cancellations, including those made in Google Calendar, move or remove the task. No ot-leads emails; no nurture.

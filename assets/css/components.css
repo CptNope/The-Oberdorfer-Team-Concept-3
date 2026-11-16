@@ -213,6 +213,11 @@
 .testimonial blockquote p { margin: 0; }
 .testimonial-list { display: grid; gap: var(--space-8); }
 .testimonial--compact blockquote { font-size: var(--step-h4); }
+.testimonial-more summary { cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: var(--space-3); min-height: 44px; font: 500 var(--step-label)/1 var(--font-body); letter-spacing: var(--tracking-label); text-transform: uppercase; color: var(--text-display); border-bottom: 1px solid var(--ot-gold); }
+.testimonial-more summary::-webkit-details-marker { display: none; }
+.testimonial-more summary::after { content: "+"; font-size: 1.1em; }
+.testimonial-more[open] summary::after { content: "\2212"; }
+.testimonial-more > .testimonial-list { margin-top: var(--space-7); }
 .review-links { display: grid; gap: var(--space-3); }
 .review-links ul { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-4); }
 .review-links li { display: grid; gap: var(--space-1); }
