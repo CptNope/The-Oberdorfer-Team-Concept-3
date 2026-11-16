@@ -286,3 +286,20 @@ Neither Brandon nor Kaitlyn uses an outside CRM, so the built-in one is the syst
 - **Health** (`health.php`): scheduler stalled, email not on Brevo or failing, CRM deliveries that gave up, escalated leads with no reply, drafts waiting 3+ days, duplicates. Shown on Today, the dashboard widget (errors), Settings > Status and Tools > Site Health.
 - Schema: `ot_outbox.connector` widened to 120 characters (`OT_LEADS_DB` 2) for per-agent connector names.
 - **v0.9.1:** the joint Brandon & Kaitlyn profile is no longer an agent in the CRM (team request). Leads with no single owner are "Team (Brandon & Kaitlyn)" leads (`assigned_agent` empty), alerted to both team leaders; the joint profile's form, routing's last rule and lead-type owners default to the team. Filters on Today, Inbox, Board and Reports have a Team choice. Existing leads, tasks and routing settings were moved over once (`ot_leads_team_v2`). The joint page on the site is unchanged.
+
+## 16. Online bookings become leads (v0.10.8, 2026-11-16)
+
+A confirmed booking from JAT Calendar Sync (`jatcs_booking_confirmed`, `includes/booking.php`) is recorded in the CRM:
+
+| Situation | What happens |
+|---|---|
+| Nobody with that email yet | A new lead: type **Booked call**, stage **Appointment set**, assigned to the agent who was booked |
+| An existing lead with no single owner (a team lead) | The same lead, now assigned to the agent who was booked; missing name and phone filled in |
+| An existing lead owned by an agent | The same lead keeps its owner; the timeline notes who the call is with |
+| Any of these, if the lead was New, Contacted, Nurture or Lost | Moved to **Appointment set** |
+
+- **Timeline:** a "Booked call" event with the time, type, agent, video link, answers and notes; moves and cancellations are logged too, including those made in Google Calendar (found by the plugin's hourly check).
+- **Task:** a call task at the booked time on the booked agent's Today screen. It moves when the booking moves and disappears when it is cancelled (a call already logged as done stays).
+- **No email from ot-leads:** the booking plugin already emails the visitor and the agent. A booking is not marketing consent, so no nurture sequence starts. An agent's own CRM receives it like any other inquiry.
+- **Matching the agent:** the booking's person (JAT Calendar Sync People slug) is the agent's profile slug, or the agent's "Online booking" field.
+- A booked call is not "waiting for a first reply": that badge, like Today and the reminders, applies to New leads only.

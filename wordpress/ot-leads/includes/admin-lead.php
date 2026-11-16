@@ -30,6 +30,7 @@ const OT_EVENT_LABELS = array(
 	'signal'       => 'Back on the site',
 	'touch'        => 'Logged',
 	'merged'       => 'Merged a duplicate',
+	'booking'      => 'Booked call',
 );
 
 function ot_leads_event_text( $e ) {
@@ -59,6 +60,8 @@ function ot_leads_event_text( $e ) {
 			return esc_html( ( OT_TOUCH_OUTCOMES[ $p['outcome'] ?? '' ] ?? '' ) . ( ! empty( $p['next'] ) ? ' · next: ' . $p['next'] : '' ) ) . ( ! empty( $p['note'] ) ? '<br>' . nl2br( esc_html( $p['note'] ) ) : '' );
 		case 'merged':
 			return esc_html( ( $p['name'] ?? '' ) . ' <' . ( $p['email'] ?? '' ) . '>' );
+		case 'booking':
+			return ot_leads_booking_event_text( $p );
 		case 'crm_failed':
 			return esc_html( ( $p['connector'] ?? '' ) . ': ' . ( $p['error'] ?? '' ) );
 	}
@@ -92,7 +95,8 @@ function ot_leads_lead_screen() {
 	$seqs    = ot_nurture_sequences();
 
 	ot_leads_shell( 'inbox' );
-	$waited = ! $lead['contacted_at'] ? 'Waiting ' . human_time_diff( strtotime( $lead['created_at'] . ' UTC' ) ) . ' for a first reply' : '';
+	// Same rule as Today and the reminders: only a New lead is waiting (a booked call isn't).
+	$waited = ! $lead['contacted_at'] && 'new' === $lead['stage'] ? 'Waiting ' . human_time_diff( strtotime( $lead['created_at'] . ' UTC' ) ) . ' for a first reply' : '';
 	echo '<div class="wrap ot-wrap"><div class="ot-lead-head"><div><a class="ot-back" href="' . esc_url( admin_url( 'admin.php?page=ot-leads' ) ) . '"><span class="dashicons dashicons-arrow-left-alt2" aria-hidden="true"></span>All leads</a><h1 class="ot-title">' . esc_html( ot_lead_name( $lead ) ) . '</h1>'
 		. '<div class="ot-tags">' . ot_leads_stage_pill( $lead['stage'] ) . ' <span class="ot-pill' . ( 'Warm' === $intent[0] ? ' ot-pill--warm' : '' ) . '" title="' . esc_attr( $intent[1] ) . '">' . esc_html( $intent[0] ) . '</span> <span class="ot-pill">' . esc_html( OT_LEAD_TYPES[ $lead['lead_type'] ] ?? $lead['lead_type'] ) . '</span> <span class="ot-pill">' . esc_html( ot_leads_agent_name( $lead['assigned_agent'] ) ) . '</span>' . ( $waited ? ' <span class="ot-pill ot-pill--late">' . esc_html( $waited ) . '</span>' : '' ) . '</div></div>'
 		. '<div class="ot-quick">' . ot_leads_contact_buttons( $lead ) . '</div></div><hr class="wp-header-end" style="display:none">'; // phpcs:ignore WordPress.Security.EscapeOutput

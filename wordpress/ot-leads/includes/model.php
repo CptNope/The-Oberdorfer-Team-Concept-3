@@ -28,6 +28,7 @@ const OT_LEAD_TYPES = array(
 	'listings'   => 'New-listing alerts',
 	'openhouse'  => 'Open house sign-in',
 	'general'    => 'General',
+	'booking'    => 'Booked call',
 );
 
 function ot_leads_now() {
