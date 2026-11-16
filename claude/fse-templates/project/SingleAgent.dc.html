@@ -146,6 +146,14 @@ body{margin:0}
 </div>
 </section>
 
+<section class="section fse-scope" id="book-agent">
+<span class="fse-tag"><b>ot/agent-profile</b> section "booking" · renders nothing until JAT Calendar Sync can book this agent (People slug = the profile's slug, or the "Online booking" field; Google Calendar connected and a visible appointment type), then this section and a "Book a call" button in the hero</span>
+<div class="container split" style="align-items: start;">
+<div style="grid-column: 1 / span 5;" class="stack"><p class="label">Book a call</p><h2 class="display-m answer"><span>Pick a time</span><span>that suits you.</span></h2><p>Choose an open time on {{a.given}}'s calendar. A confirmation comes by email, with a link to change or cancel.</p></div>
+<div style="grid-column: 7 / span 6;" class="panel"><p class="caption">[jat_booking host="{{a.slug}}"]: the booking calendar (shown on the live site once set up)</p></div>
+</div>
+</section>
+
 <section class="section surface-muted fse-scope" id="contact-agent">
 <span class="fse-tag"><b>pattern</b> agent-contact · Sandstone style · core/columns (5 + 6) › phone · ot/inquiry-form (lead type agent:&lt;slug&gt;, routed and attributed to this agent)</span>
 <div class="container split" style="align-items: start;">
@@ -177,13 +185,13 @@ class Component extends DCLogic {
 renderVals() {
 const on = this.props.showTags ?? true;
 const people = {
-brandon: { name: 'Brandon Oberdorfer', given: 'Brandon', partnerName: 'Kaitlyn Oberdorfer', partnerGiven: 'Kaitlyn', relation: 'his wife', relationCap: 'His wife', direct: '406-250-7620', phoneNote: '(direct, and the team line)', email: 'brandonoberdorfer@gmail.com', photo: '/_blob/580884f9c011d43c295ca9e660290e3d', partnerPhoto: '/_blob/beeffc56b18ce27c49180d106d48441d' },
-kaitlyn: { name: 'Kaitlyn Oberdorfer', given: 'Kaitlyn', partnerName: 'Brandon Oberdorfer', partnerGiven: 'Brandon', relation: 'her husband', relationCap: 'Her husband', direct: '978-257-4938', phoneNote: '(direct) · team line 406-250-7620', email: 'kaitlynoberdorfer@gmail.com', photo: '/_blob/beeffc56b18ce27c49180d106d48441d', partnerPhoto: '/_blob/580884f9c011d43c295ca9e660290e3d' }
+brandon: { slug: 'brandon-oberdorfer', name: 'Brandon Oberdorfer', given: 'Brandon', partnerName: 'Kaitlyn Oberdorfer', partnerGiven: 'Kaitlyn', relation: 'his wife', relationCap: 'His wife', direct: '406-250-7620', phoneNote: '(direct, and the team line)', email: 'brandonoberdorfer@gmail.com', photo: '/_blob/580884f9c011d43c295ca9e660290e3d', partnerPhoto: '/_blob/beeffc56b18ce27c49180d106d48441d' },
+kaitlyn: { slug: 'kaitlyn-oberdorfer', name: 'Kaitlyn Oberdorfer', given: 'Kaitlyn', partnerName: 'Brandon Oberdorfer', partnerGiven: 'Brandon', relation: 'her husband', relationCap: 'Her husband', direct: '978-257-4938', phoneNote: '(direct) · team line 406-250-7620', email: 'kaitlynoberdorfer@gmail.com', photo: '/_blob/beeffc56b18ce27c49180d106d48441d', partnerPhoto: '/_blob/580884f9c011d43c295ca9e660290e3d' }
 };
 const key = this.props.agent ?? 'kaitlyn';
 let a;
 if (key === 'template') {
-a = { isTemplate: true, isPerson: false, name: '[Agent name]', given: '[First name]', role: '[Role on the team]', roleFact: '[Role on the team]', area: '[Service areas]', partnerName: '', partnerGiven: '', relation: '', relationCap: '', photo: '', partnerPhoto: '',
+a = { isTemplate: true, isPerson: false, slug: '[agent-slug]', name: '[Agent name]', given: '[First name]', role: '[Role on the team]', roleFact: '[Role on the team]', area: '[Service areas]', partnerName: '', partnerGiven: '', relation: '', relationCap: '', photo: '', partnerPhoto: '',
 summary: '[One-sentence summary: who they are, what they help clients do, and where. For example: “[First name] is a Massachusetts real estate agent on The Oberdorfer Team who helps first-time buyers in Worcester County.”]',
 bioPrompt: '[Their story in their own words: how they came to real estate, the clients they serve best, a local detail only they would know, and one sentence on how they work with Brandon and Kaitlyn’s standard of service. Facts only; nothing that cannot be verified.]' };
 } else {

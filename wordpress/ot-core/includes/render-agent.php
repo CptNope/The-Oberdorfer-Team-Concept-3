@@ -139,7 +139,9 @@ function ot_render_person_section( $section, $x ) {
 		$rel = (string) ( $x['r']['relation'] ?? '' );
 		$partner_html = '<div class="panel"><p class="label">Works alongside</p><a class="agent-mini" href="' . esc_url( $x['partner']['url'] ) . '" style="text-decoration:none;color:inherit"><img src="' . esc_url( $pr['photo_url'] ) . '" alt="" width="' . (int) ( $pr['photo_w'] ?? 440 ) . '" height="' . (int) ( $pr['photo_h'] ?? 550 ) . '"><span><span class="agent-mini__name">' . esc_html( $pr['name'] ) . '</span><br><span class="agent-mini__meta">' . esc_html( $pr['role'] ) . ' · ' . esc_html( ucfirst( $rel ) ) . '</span></span></a>' . ot_link_arrow( ot_agent_url( 'brandon-kaitlyn-oberdorfer' ), 'Their story together' ) . '</div>';
 	}
-	$actions = '<div class="cluster profile__actions"><a class="btn" href="#contact-agent">Message ' . $g . '</a><a class="btn btn--secondary" href="' . esc_attr( ot_tel_href( $direct ?: OT_PHONE ) ) . '">Call ' . esc_html( $direct ?: OT_PHONE ) . '</a></div>
+	$host    = ot_agent_booking_host( $x );
+	$book    = '' !== $host ? '<a class="btn btn--secondary" href="#book-agent">Book a call</a>' : '';
+	$actions = '<div class="cluster profile__actions"><a class="btn" href="#contact-agent">Message ' . $g . '</a>' . $book . '<a class="btn btn--secondary" href="' . esc_attr( ot_tel_href( $direct ?: OT_PHONE ) ) . '">Call ' . esc_html( $direct ?: OT_PHONE ) . '</a></div>
       <p class="caption profile__trust">Husband. Wife. Your Team. · REWAP Brokerage LLC · Serving Massachusetts</p>';
 	$facts_block = '<dl class="quick-facts" aria-label="' . esc_attr( $r['given'] ) . ' at a glance">' . $facts_html . '</dl>
       <p class="caption">Profile updated ' . ot_updated_time() . '.</p>';
@@ -168,7 +170,7 @@ function ot_render_person_section( $section, $x ) {
       <p class="label">' . esc_html( $r['role'] ) . ' · The Oberdorfer Team</p>
       <h1 class="display-l" id="page-title">' . $name . '</h1>
       <p class="lead profile__summary">' . $summary . '</p>
-      <div class="cluster profile__actions"><a class="btn" href="#contact-agent">Message ' . $g . '</a><a class="btn btn--secondary" href="' . esc_attr( ot_tel_href( $direct ?: OT_PHONE ) ) . '">Call ' . esc_html( $direct ?: OT_PHONE ) . '</a></div>
+      <div class="cluster profile__actions"><a class="btn" href="#contact-agent">Message ' . $g . '</a>' . $book . '<a class="btn btn--secondary" href="' . esc_attr( ot_tel_href( $direct ?: OT_PHONE ) ) . '">Call ' . esc_html( $direct ?: OT_PHONE ) . '</a></div>
       <p class="caption profile__trust">Husband. Wife. Your Team. · REWAP Brokerage LLC · Serving Massachusetts</p>
       <dl class="quick-facts" aria-label="' . esc_attr( $r['given'] ) . ' at a glance">' . $facts_html . '</dl>
       <p class="caption">Profile updated ' . ot_updated_time() . '.</p>
@@ -207,6 +209,16 @@ function ot_render_person_section( $section, $x ) {
 			return '<section class="section"><div class="container split" style="align-items:start">
   <div class="stack" style="grid-column:1/span 5"><p class="label">Questions</p><h2 class="display-m answer"><span>Asked about</span><span>' . $g . '.</span></h2><p class="body-s muted">Plain answers to the questions people ask before they call.</p></div>
   <div class="accordion" style="grid-column:7/span 6">' . $faq . '</div>
+</div></section>';
+
+		case 'booking':
+			// Online booking (JAT Calendar Sync): nothing at all until it works for this agent.
+			if ( '' === $host ) {
+				return '';
+			}
+			return '<section class="section" id="book-agent" aria-labelledby="book-title"><div class="container split" style="align-items:start">
+  <div style="grid-column:1/span 5" class="stack"><p class="label">Book a call</p><h2 class="display-m answer" id="book-title"><span>Pick a time</span><span>that suits you.</span></h2><p>Choose an open time on ' . $g . '\'s calendar. A confirmation comes by email, with a link to change or cancel.</p></div>
+  <div style="grid-column:7/span 6">' . do_shortcode( '[jat_booking host="' . esc_attr( $host ) . '"]' ) . '</div>
 </div></section>';
 
 		case 'contact-form':
@@ -296,4 +308,19 @@ function ot_team_licenses() {
 		}
 	}
 	return $out ? implode( ' · ', $out ) : ot_ph( 'MA license numbers to be supplied' );
+}
+
+/**
+ * The JAT Calendar Sync person (People) this agent is booked as, or '' while online booking
+ * isn't set up for them: the plugin missing, their Google Calendar not connected, or no
+ * visible appointment type. Their field "Online booking" names the person; empty uses the
+ * profile's own slug.
+ */
+function ot_agent_booking_host( $x ) {
+	if ( ! function_exists( 'jatcs_host_ready' ) || ! empty( $x['team'] ) ) {
+		return '';
+	}
+	$host = sanitize_key( (string) ( $x['r']['booking_host'] ?? '' ) );
+	$host = '' !== $host ? $host : (string) $x['p']->post_name;
+	return jatcs_host_ready( $host ) ? $host : '';
 }

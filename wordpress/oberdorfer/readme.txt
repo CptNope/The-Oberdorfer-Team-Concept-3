@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.10.6
+Stable tag: 0.10.7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,9 @@ Fonts: Cormorant Garamond and Manrope (SIL Open Font License 1.1), loaded from G
 this version; self-hosting is a launch task.
 
 == Changelog ==
+
+= 0.10.7 =
+* Agent profile template: a "booking" section before the contact section (it renders nothing until online booking works for that agent).
 
 = 0.10.6 =
 * New Accessibility statement page (pattern accessibility-statement, from data/accessibility-statement.json). The footer's Accessibility link and the contact page's accessibility note now go there.
