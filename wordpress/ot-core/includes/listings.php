@@ -336,7 +336,7 @@ function ot_render_listing_section( $section, $post_id ) {
 			$d = ot_listing_detail_parts( $l, $post_id );
 			return '<section class="section" id="details" style="padding-top:var(--space-6)"><div class="container detail">
   <div class="stack" style="--stack:var(--space-7)">' . $d['facts'] . ot_listing_media( $l ) . ( $d['story'] ? '<div class="prose stack"><h2 class="h3">The property</h2>' . $d['story'] . '</div>' : '' ) . $d['specs'] . ot_listing_estimator( $l ) . '</div>
-  <aside class="detail__aside" aria-label="Contact about this home">' . $d['aside'] . '</aside>
+  <section class="detail__aside" aria-label="Contact about this home">' . $d['aside'] . '</section>
 </div></section>';
 
 		case 'more':

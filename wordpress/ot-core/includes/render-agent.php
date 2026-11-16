@@ -184,7 +184,7 @@ function ot_render_person_section( $section, $x ) {
 			}
 			return '<section class="section surface-muted"><div class="container split" style="align-items:start">
   <div class="stack" style="grid-column:1/span 7;--stack:var(--space-5)"><p class="label">About ' . $g . '</p><h2 class="display-m">Meet ' . $g . '.</h2>' . $bio . '</div>
-  <aside class="stack" style="grid-column:9/span 4;--stack:var(--space-5)">' . $partner_html . '</aside>
+  <div class="stack" style="grid-column:9/span 4;--stack:var(--space-5)">' . $partner_html . '</div>
 </div></section>';
 
 		case 'help':

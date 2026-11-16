@@ -45,6 +45,7 @@ The visual language evolves the team's print publication, *Wakefield at Home*, F
    - Gold `#B49A65` is **not** a text color on ivory. Use `--ot-gold-ink` there.
    - Respect `prefers-reduced-motion`.
    - Keep focus rings visible.
+   - The accessibility statement (`tools/data/accessibility-statement.json`, the prototype's `site/accessibility/` and the theme's `accessibility-statement` pattern) describes what the site actually does and its known limitations. Last audit: 2026-11-15 (axe-core on every page type plus keyboard, focus, 320px reflow and form checks). Update it after each audit, when a limitation is fixed, or when new content types (IDX search, video, PDFs) arrive.
 
 ## Working on the code
 

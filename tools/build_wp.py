@@ -23,7 +23,7 @@ import build_site as S  # noqa: E402  (data and the tested title/description rul
 THEME = os.path.join(ROOT, "wordpress", "oberdorfer")
 CORE = os.path.join(ROOT, "wordpress", "ot-core")
 DIST = os.path.join(ROOT, "wordpress", "dist")
-VERSION = "0.10.5"
+VERSION = "0.10.6"
 
 ASSET_DIRS = ["assets/img/photo", "assets/logo"]
 ASSET_FILES = ["assets/css/tokens.css", "assets/css/base.css", "assets/css/components.css", "assets/css/site.css",
@@ -67,7 +67,8 @@ def copy_assets():
         shutil.copyfile(os.path.join(ROOT, f), dst)
     # The privacy policy text, one source for the prototype and the theme's pattern.
     os.makedirs(os.path.join(THEME, "data"), exist_ok=True)
-    shutil.copyfile(os.path.join(ROOT, "tools", "data", "privacy-policy.json"), os.path.join(THEME, "data", "privacy-policy.json"))
+    for name in ("privacy-policy", "accessibility-statement"):
+        shutil.copyfile(os.path.join(ROOT, "tools", "data", name + ".json"), os.path.join(THEME, "data", name + ".json"))
 
 
 def page_meta(rel):
@@ -158,6 +159,7 @@ PAGES = [  # slug, title, prototype path for title and description, menu order
     ("team", "Our Team", "team", 4), ("journal", "Journal", "journal", 5), ("join", "Join Our Team", "join", 6),
     ("contact", "Contact", "contact", 7),
     ("privacy", "Privacy policy", "privacy", 8),
+    ("accessibility", "Accessibility statement", "accessibility", 9),
 ]
 
 

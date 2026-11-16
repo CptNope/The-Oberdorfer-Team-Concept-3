@@ -1,5 +1,5 @@
 {
- "version": "0.10.5 (2026-10-22)",
+ "version": "0.10.6 (2026-10-22)",
  "front_page": "home",
  "posts_page": "journal",
  "regions": [
@@ -12615,6 +12615,15 @@
    "meta": {
     "ot_seo_title": "Privacy Policy | The Oberdorfer Team",
     "ot_seo_description": "How The Oberdorfer Team collects, uses and shares information through oberdorferteam.com, the one cookie it sets after you contact us, and your choices."
+   }
+  },
+  {
+   "slug": "accessibility",
+   "title": "Accessibility statement",
+   "order": 9,
+   "meta": {
+    "ot_seo_title": "Accessibility Statement | The Oberdorfer Team",
+    "ot_seo_description": "How oberdorferteam.com aims to meet WCAG 2.2 AA, how it is tested, its known limitations, and how to reach Brandon and Kaitlyn if anything is hard to use."
    }
   }
  ],

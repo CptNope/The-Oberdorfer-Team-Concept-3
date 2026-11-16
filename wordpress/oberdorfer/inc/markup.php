@@ -217,3 +217,34 @@ function oberdorfer_image( $src, $alt, $class = '' ) {
 	$a = $class ? '{"className":"' . $class . '"} ' : '';
 	return '<!-- wp:image ' . $a . "-->\n" . '<figure class="wp-block-image' . ( $class ? ' ' . $class : '' ) . '"><img src="' . esc_url( $src ) . '" alt="' . esc_attr( $alt ) . '"/></figure>' . "\n<!-- /wp:image -->\n\n";
 }
+
+
+/**
+ * A policy page body (privacy policy, accessibility statement) as blocks, from the theme's
+ * data/<name>.json: a "Last updated" caption, the intro, then each section's heading,
+ * paragraphs and lists. Tokens {phone}, {address} and {contact} are filled in.
+ */
+function oberdorfer_policy_blocks( $name ) {
+	$file = get_theme_file_path( 'data/' . $name . '.json' );
+	$pol  = is_readable( $file ) ? json_decode( (string) file_get_contents( $file ), true ) : null; // phpcs:ignore WordPress.WP.AlternativeFunctions
+	if ( ! $pol ) {
+		return '';
+	}
+	$fill = fn( $t ) => strtr( $t, array( '{phone}' => OBERDORFER_PHONE, '{address}' => oberdorfer_address(), '{contact}' => oberdorfer_url( '/contact/' ) ) );
+	$out  = oberdorfer_p( 'Last updated ' . esc_html( $pol['updated'] ), 'caption' ) . oberdorfer_p( $fill( $pol['intro'] ) );
+	foreach ( $pol['sections'] as $sec ) {
+		$out .= oberdorfer_h( esc_html( $sec['h'] ), 2 );
+		foreach ( $sec['blocks'] as $b ) {
+			if ( isset( $b['p'] ) ) {
+				$out .= oberdorfer_p( $fill( $b['p'] ) );
+			} else {
+				$items = '';
+				foreach ( $b['ul'] as $li ) {
+					$items .= "<!-- wp:list-item -->\n<li>" . $fill( $li ) . "</li>\n<!-- /wp:list-item -->\n";
+				}
+				$out .= "<!-- wp:list -->\n<ul class=\"wp-block-list\">" . $items . "</ul>\n<!-- /wp:list -->\n\n";
+			}
+		}
+	}
+	return $out;
+}

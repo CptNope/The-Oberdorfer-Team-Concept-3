@@ -198,7 +198,7 @@
 /* ---- Community card --------------------------------------------------- */
 .community-card { position: relative; display: block; color: var(--ot-ivory); text-decoration: none; overflow: hidden; aspect-ratio: 3 / 4; background: var(--ot-navy); }
 .community-card img, .community-card svg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform var(--dur-reveal) var(--ease-out); }
-.community-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgb(7 29 45 / 0.85)); }
+.community-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 35%, rgb(7 29 45 / 0.6) 58%, rgb(7 29 45 / 0.92) 78%); } /* text sits in the bottom quarter: keep it at 4.5:1 over any photo */
 .community-card__body { position: absolute; z-index: 2; inset: auto var(--space-5) var(--space-5); display: grid; gap: var(--space-2); }
 .community-card__name { font: 300 var(--step-h2)/1 var(--font-display); }
 .community-card__meta { font: 600 0.6875rem/1.3 var(--font-sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ot-gold-pale); }
@@ -330,7 +330,7 @@
 /* ---- Newsletter ------------------------------------------------------- */
 .newsletter { display: grid; grid-template-columns: 1fr auto; gap: 0; max-width: 34rem; border-bottom: 1px solid currentColor; }
 .newsletter .input { border: 0; background: transparent; padding-left: 0; }
-.newsletter .input:focus-visible { box-shadow: none; }
+.newsletter .input:focus-visible { box-shadow: none; outline: var(--focus-width) solid var(--focus-ring); outline-offset: 2px; }
 .newsletter .input::placeholder { color: var(--text-muted); }
 .newsletter:focus-within { border-bottom-color: var(--ot-gold); box-shadow: 0 1px 0 var(--ot-gold); }
 .newsletter .btn { background: transparent; color: inherit; border: 0; }
@@ -362,6 +362,7 @@
 .attribution__plate small { font: 600 0.625rem/1.35 var(--font-sans); letter-spacing: 0.14em; color: var(--ot-ink); text-transform: uppercase; text-align: center; }
 .disclosure { font-size: 0.75rem; line-height: 1.6; color: var(--ot-mist); max-width: 70ch; }
 .disclosure strong { color: var(--ot-ivory); font-weight: 600; }
+.disclosure a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.2em; } /* links inside a sentence need more than color (WCAG 1.4.1) */
 .eho { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; color: var(--ot-ivory); }
 .eho svg { width: 1.6rem; height: 1.6rem; }
 @media (max-width: 44rem) { .attribution { grid-template-columns: 1fr; } }

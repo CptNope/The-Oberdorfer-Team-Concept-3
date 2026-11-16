@@ -1,6 +1,6 @@
 <?php
 /**
- * The main pages (Home, Buy, Sell, Market, Team, Join, Contact) are edited in the page itself.
+ * The main pages (Home, Buy, Sell, Market, Team, Join, Contact, Privacy, Accessibility) are edited in the page itself.
  *
  * Each page's template shows only its body (core/post-content). The body starts as the
  * theme's sections for that page, listed here: ot-core's importer copies them into the page
@@ -23,6 +23,7 @@ function oberdorfer_page_sections() {
 		'join' => array( 'page-hero-join', 'leadership-letter', 'brand-presentation', 'recruiting-form' ),
 		'contact' => array( 'page-hero-contact', 'contact-tabs', 'privacy-notes' ),
 		'privacy' => array( 'privacy-policy' ), // body only: page.html adds the title
+		'accessibility' => array( 'accessibility-statement' ),
 	);
 }
 

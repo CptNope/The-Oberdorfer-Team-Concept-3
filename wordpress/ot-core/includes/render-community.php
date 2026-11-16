@@ -200,10 +200,10 @@ function ot_render_community_about( $x ) {
   <div class="stack prose" style="grid-column:1/span 7;--stack:var(--space-4)">' . $credit . '
     <h2 class="h2" id="about-title">About ' . $name . '</h2>' . $where . $overview . $housing . '
   </div>
-  <aside class="stack" style="grid-column:9/span 4;--stack:var(--space-5)" aria-label="' . esc_attr( $x['name'] ) . ' at a glance">
+  <section class="stack" style="grid-column:9/span 4;--stack:var(--space-5)" aria-label="' . esc_attr( $x['name'] ) . ' at a glance">
     <dl class="quick-facts quick-facts--aside">' . $facts_html . '</dl>
     <div class="panel"><p class="h5">Your ' . $guides . ' guides</p><p class="body-s">Brandon &amp; Kaitlyn Oberdorfer · Based in Worcester</p><div class="cluster"><a class="btn btn--small" href="#contact-town">Ask about ' . $name . '</a><a class="link-arrow" href="tel:' . OT_TEL . '">' . OT_PHONE . '</a></div></div>
-  </aside>
+  </section>
 </div></section>';
 }
 
@@ -321,7 +321,7 @@ function ot_render_community_market( $x ) {
 			if ( ! empty( $nm['condo_median_2025'] ) ) {
 				$rows .= ot_market_row( 'Condominium median sale price', $nm['condo_median_2024'] ?? null, $nm['condo_median_2025'] );
 			}
-			$market = '<table class="spec-table market-table">' . $thead . '<tbody>' . $rows . '</tbody></table>
+			$market = '<div class="table-scroll" tabindex="0" role="region" aria-label="' . esc_attr( $x['name'] ) . ' median sale prices, 2024 and 2025"><table class="spec-table market-table">' . $thead . '<tbody>' . $rows . '</tbody></table></div>
 <p class="stat-source">Source: ' . $warren_link . '. Geography: ' . $name . ', as the report defines it. Calendar years 2024 and 2025. Not live data and not a valuation of any home.</p>';
 		} else {
 			if ( ! empty( $cm['sf_median_2025'] ) && ! ( $cm['citywide'] ?? true ) ) {
@@ -363,7 +363,7 @@ function ot_render_community_market( $x ) {
 	}
 	if ( $rows ) {
 		$geo    = ! empty( $m['geography'] ) ? ot_txt( $m['geography'] ) : 'town of ' . $name;
-		$market = '<table class="spec-table market-table">' . $thead . '<tbody>' . $rows . '</tbody></table>
+		$market = '<div class="table-scroll" tabindex="0" role="region" aria-label="' . esc_attr( $x['name'] ) . ' median sale prices, 2024 and 2025"><table class="spec-table market-table">' . $thead . '<tbody>' . $rows . '</tbody></table></div>
 <p class="stat-source">Source: ' . $warren_link . '. Geography: ' . $geo . '. Year-to-date figures through December, so calendar years 2024 and 2025. Not live data and not a valuation of any home.</p>';
 	} elseif ( ! $market ) {
 		$market = '<p class="placeholder-block">Town-level sale prices to be added from a dated, sourced report.</p>';

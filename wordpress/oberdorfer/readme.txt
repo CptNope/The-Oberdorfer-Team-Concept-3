@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.10.5
+Stable tag: 0.10.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,11 @@ Fonts: Cormorant Garamond and Manrope (SIL Open Font License 1.1), loaded from G
 this version; self-hosting is a launch task.
 
 == Changelog ==
+
+= 0.10.6 =
+* New Accessibility statement page (pattern accessibility-statement, from data/accessibility-statement.json). The footer's Accessibility link and the contact page's accessibility note now go there.
+* Accessibility fixes from the WCAG 2.2 AA audit of November 15, 2026: footer links are underlined, the footer newsletter field shows a focus outline, and the agent and listing sidebars are no longer nested complementary landmarks.
+* Policy pages share one renderer, oberdorfer_policy_blocks().
 
 = 0.10.5 =
 * Footer: a credit line, "Website designed, built and maintained by Jeremy Anderson Tech", linked to jeremyanderson.tech.

@@ -13,7 +13,7 @@ $aside = oberdorfer_p( 'The journal', 'label' )
 echo oberdorfer_section( // phpcs:ignore WordPress.Security.EscapeOutput
 	oberdorfer_group(
 		"<!-- wp:post-content {\"tagName\":\"article\",\"className\":\"article__body\",\"layout\":{\"type\":\"default\"}} /-->\n\n"
-		. oberdorfer_group( $aside, 'article__aside', 'aside', '', 'About this article' ),
+		. oberdorfer_group( $aside, 'article__aside', 'section', '', 'About this article' ),
 		'container article'
 	)
 );

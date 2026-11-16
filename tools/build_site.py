@@ -268,7 +268,7 @@ def footer(R):
       <div class="stack" style="--stack:var(--space-3)">
         <p class="disclosure"><strong>The Oberdorfer Team</strong>, {ADDRESS}, is a real estate team operating under <strong>REWAP Brokerage LLC</strong>, {BROKER_ADDRESS}, a licensed Massachusetts real estate broker. Listings on this prototype are demonstrations.</p>
         <p class="eho">{icon(R, 'eho')}Equal Housing Opportunity</p>
-        <p class="disclosure">© 2026 The Oberdorfer Team · <a href="{R}site/privacy/">Privacy</a> · <a href="{R}site/contact/#accessibility">Accessibility</a> · <a href="{R}site/contact/#fair-housing">Fair housing</a></p>
+        <p class="disclosure">© 2026 The Oberdorfer Team · <a href="{R}site/privacy/">Privacy</a> · <a href="{R}site/accessibility/">Accessibility</a> · <a href="{R}site/contact/#fair-housing">Fair housing</a></p>
         <p class="disclosure">Website designed, built and maintained by <a href="https://jeremyanderson.tech/" rel="noopener">Jeremy Anderson Tech</a></p>
       </div>
     </div>
@@ -551,10 +551,10 @@ def page_listing(l):
     <div class="map-frame"><svg viewBox="0 0 800 500" role="img" aria-label="Stylised map placeholder"><rect width="800" height="500" fill="#E9E2D5"/><g stroke="#FBF9F5" stroke-width="10" fill="none" stroke-linecap="round"><path d="M0 300C200 280 360 330 800 260"/><path d="M300 0C320 160 280 340 330 500"/><path d="M90 0L210 500"/></g><g stroke="#DDD3C2" stroke-width="4" fill="none"><path d="M0 120H500M0 200C150 190 300 220 480 180M120 380H800"/></g><g transform="translate(338 284)"><circle r="20" fill="#071D2D"/><circle r="27" fill="none" stroke="#B49A65"/></g></svg><p class="map-frame__note"><span class="badge badge--demo">Illustrative map</span></p></div>
     <p class="form-note">Listing courtesy of [Listing brokerage]. Information deemed reliable but not guaranteed. Data from [MLS name], last updated [timestamp]. Demonstration listing.</p>
   </div>
-  <aside class="detail__aside" aria-label="Contact about this home">
+  <section class="detail__aside" aria-label="Contact about this home">
     <div class="panel">{form(R, "show", "Request a showing", contact_fields("sh") + select("sh-when","Preferred time",["This week, weekday","This week, weekend","Next week","Flexible"]) + reach_pref("sh"), "Request a showing", "showing", "h2", note=f"Your request is attached to {l['name']} and goes to Brandon and Kaitlyn.")}</div>
     <div class="panel" style="grid-template-columns:5rem 1fr;align-items:center;gap:var(--space-4)"><img src="{R}assets/img/photo/team-portrait.webp" alt="" style="aspect-ratio:1;object-fit:cover;object-position:50% 15%"><div><p class="h5">Brandon &amp; Kaitlyn Oberdorfer</p><a href="tel:{TEL}" class="body-s">{PHONE}</a></div></div>
-  </aside>
+  </section>
 </div></section>
 <section class="section surface-muted"><div class="container">{section_head("More homes", "Demonstration listings", ["You may also like"], title_id="more-title")}<div class="listing-grid">{more}</div></div></section>'''
     write(f"buy/{l['slug']}", R, f"{l['name']} (demo) · {l['town']} · The Oberdorfer Team", f"Demonstration listing page: {l['style']} in {l['town']}, Massachusetts.", "Buy", body, ld=[crumbs_ld(trail)], index=False)
@@ -794,7 +794,7 @@ def page_town(t):
         market_html = f'''<div class="table-scroll" tabindex="0" role="region" aria-label="{name} single-family prices by village"><table class="spec-table market-table"><thead><tr><th scope="col">Village</th><th scope="col">Sales, 2025</th><th scope="col">Median, 2024</th><th scope="col">Median, 2025</th><th scope="col">Change</th></tr></thead><tbody>{body_rows}</tbody></table></div>
 <p class="stat-source">Source: <a href="{WARREN_URL}">The Warren Group, MA December 2025 Sales, Prices by Town</a>, single-family. The report lists {name} by village, with no town-wide figure, so none is given here. Calendar years 2024 and 2025. Not live data and not a valuation of any home.</p>'''
     if rows:
-        market_html = f'''<table class="spec-table market-table"><thead><tr><th scope="col">Calendar year</th><th scope="col">2024</th><th scope="col">2025</th><th scope="col">Change</th></tr></thead><tbody>{rows}</tbody></table>
+        market_html = f'''<div class="table-scroll" tabindex="0" role="region" aria-label="{name} median sale prices, 2024 and 2025"><table class="spec-table market-table"><thead><tr><th scope="col">Calendar year</th><th scope="col">2024</th><th scope="col">2025</th><th scope="col">Change</th></tr></thead><tbody>{rows}</tbody></table></div>
 <p class="stat-source">Source: <a href="{WARREN_URL}">The Warren Group, MA December 2025 Sales, Prices by Town</a>. Geography: {m.get("geography") or f"town of {name}"}. Year-to-date figures through December, so calendar years 2024 and 2025. Not live data and not a valuation of any home.</p>'''
     elif not market_html:
         market_html = '<p class="placeholder-block">Town-level sale prices to be added from a dated, sourced report.</p>'
@@ -850,10 +850,10 @@ def page_town(t):
     {overview}
     {housing}
   </div>
-  <aside class="stack" style="grid-column:9/span 4;--stack:var(--space-5)" aria-label="{name} at a glance">
+  <section class="stack" style="grid-column:9/span 4;--stack:var(--space-5)" aria-label="{name} at a glance">
     <dl class="quick-facts quick-facts--aside">{facts_html}</dl>
     <div class="panel"><p class="h5">Your {name} guides</p><p class="body-s">Brandon &amp; Kaitlyn Oberdorfer · Based in Worcester</p><div class="cluster"><a class="btn btn--small" href="#contact-town">Ask about {name}</a><a class="link-arrow" href="tel:{TEL}">{PHONE}</a></div></div>
-  </aside>
+  </section>
 </div></section>
 {villages}
 <section class="section" id="commute" aria-labelledby="commute-title"><div class="container split" style="align-items:start">
@@ -962,7 +962,7 @@ def page_neighborhood(n, city):
         hist = '<div class="history">' + "".join(f'<div><b>{h["year"]}</b><p class="body-s">{h["text"]}</p></div>' for h in n["history"][:4]) + "</div>"
     nm = n.get("market") or {}
     if nm.get("sf_median_2025"):
-        market_html = f'''<table class="spec-table market-table"><thead><tr><th scope="col">Calendar year</th><th scope="col">2024</th><th scope="col">2025</th><th scope="col">Change</th></tr></thead><tbody><tr><th scope="row">Single-family median sale price</th><td class="tabular">{money(nm["sf_median_2024"]) if nm.get("sf_median_2024") else "n/a"}</td><td class="tabular">{money(nm["sf_median_2025"])}</td><td class="tabular">{fmt_pct(pct(nm.get("sf_median_2024"), nm["sf_median_2025"]))}</td></tr>{nb_condo_row(nm)}</tbody></table>
+        market_html = f'''<div class="table-scroll" tabindex="0" role="region" aria-label="{name} median sale prices, 2024 and 2025"><table class="spec-table market-table"><thead><tr><th scope="col">Calendar year</th><th scope="col">2024</th><th scope="col">2025</th><th scope="col">Change</th></tr></thead><tbody><tr><th scope="row">Single-family median sale price</th><td class="tabular">{money(nm["sf_median_2024"]) if nm.get("sf_median_2024") else "n/a"}</td><td class="tabular">{money(nm["sf_median_2025"])}</td><td class="tabular">{fmt_pct(pct(nm.get("sf_median_2024"), nm["sf_median_2025"]))}</td></tr>{nb_condo_row(nm)}</tbody></table></div>
 <p class="stat-source">Source: <a href="{WARREN_URL}">The Warren Group, MA December 2025 Sales, Prices by Town</a>. Geography: {name}, as the report defines it. Calendar years 2024 and 2025. Not live data and not a valuation of any home.</p>'''
     else:
         if cm.get("sf_median_2025") and not cm.get("citywide", True):
@@ -1007,10 +1007,10 @@ def page_neighborhood(n, city):
     {overview}
     {housing}
   </div>
-  <aside class="stack" style="grid-column:9/span 4;--stack:var(--space-5)" aria-label="{name} at a glance">
+  <section class="stack" style="grid-column:9/span 4;--stack:var(--space-5)" aria-label="{name} at a glance">
     <dl class="quick-facts quick-facts--aside">{facts_html}</dl>
     <div class="panel"><p class="h5">Your {cname} guides</p><p class="body-s">Brandon &amp; Kaitlyn Oberdorfer · Based in Worcester</p><div class="cluster"><a class="btn btn--small" href="#contact-town">Ask about {name}</a><a class="link-arrow" href="tel:{TEL}">{PHONE}</a></div></div>
-  </aside>
+  </section>
 </div></section>
 {areas}
 <section class="section" id="commute" aria-labelledby="commute-title"><div class="container split" style="align-items:start">
@@ -1354,7 +1354,7 @@ def page_profile(a):
 </div></section>
 <section class="section surface-muted"><div class="container split" style="align-items:start">
   <div class="stack" style="grid-column:1/span 7;--stack:var(--space-5)"><p class="label">About {g}</p><h2 class="display-m">Meet {g}.</h2>{bio}</div>
-  <aside class="stack" style="grid-column:9/span 4;--stack:var(--space-5)">{partner_html}</aside>
+  <div class="stack" style="grid-column:9/span 4;--stack:var(--space-5)">{partner_html}</div>
 </div></section>
 <section class="section"><div class="container">{section_head("How " + g + " can help", "Services", ["A plan for", "your next move."], title_id="help-title")}
   <div class="cols cols--3 col-rule">
@@ -1447,12 +1447,12 @@ def page_article():
     <ol class="guide-list">{lis}</ol>
     <p class="caption">Seasonal schedules, crops, and access can change. Check each destination before you go. Listed details as published in October 2026.</p>
   </article>
-  <aside class="article__aside" aria-label="About this article">
+  <section class="article__aside" aria-label="About this article">
     <p class="label">Wakefield at Home</p><p class="body-s">Fall 2026 issue, page 5.</p>
     <a class="link-arrow" href="{R}site/communities/wakefield/">Wakefield community guide {arrow(R)}</a>
     <a class="link-arrow" href="{R}assets/publications/wakefield-at-home-fall-2026.pdf" target="_blank" rel="noopener">Read the issue online {arrow(R)}<span class="visually-hidden"> (PDF, opens in a new tab)</span></a>
     <a class="link-arrow" href="{R}assets/publications/wakefield-at-home-fall-2026.pdf" download="Wakefield-at-Home-Fall-2026.pdf">Download the issue (PDF, 3 MB) {icon(R,"download")}</a>
-  </aside>
+  </section>
 </div></section>
 {cta_panel(R, "Buying, selling, or simply curious <em>about Wakefield?</em>", "Wakefield and nearby towns", "Call Brandon and Kaitlyn, or ask for a property-specific market review.")}'''
     art_ld = {"@context":"https://schema.org","@type":"Article","headline":"The best plans are close to home","datePublished":"2026-10","author":{"@type":"Organization","name":"The Oberdorfer Team"}}
@@ -1508,13 +1508,16 @@ def page_office():
     write("office", R, "Worcester, MA Office | The Oberdorfer Team", "The Oberdorfer Team works from Worcester, Massachusetts, under REWAP Brokerage LLC, and serves buyers and sellers statewide. Request an appointment.", "", body, ld=[crumbs_ld(trail)])
 
 PRIVACY = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "privacy-policy.json")))
+ACCESSIBILITY = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "accessibility-statement.json")))
 
 
-def privacy_html(contact_href):
-    """The policy body from tools/data/privacy-policy.json (the WordPress pattern reads the same file)."""
+def privacy_html(contact_href, pol=None):
+    """A policy body (privacy policy, accessibility statement) from its tools/data/*.json
+    (the WordPress theme's oberdorfer_policy_blocks() reads the same files)."""
+    pol = pol or PRIVACY
     fill = lambda t: t.replace("{phone}", PHONE).replace("{address}", ADDRESS).replace("{contact}", contact_href)
-    out = [f'<p class="caption">Last updated {PRIVACY["updated"]}</p>', f'<p>{fill(PRIVACY["intro"])}</p>']
-    for sec in PRIVACY["sections"]:
+    out = [f'<p class="caption">Last updated {pol["updated"]}</p>', f'<p>{fill(pol["intro"])}</p>']
+    for sec in pol["sections"]:
         out.append(f'<h2>{sec["h"]}</h2>')
         for b in sec["blocks"]:
             out.append(f'<p>{fill(b["p"])}</p>' if "p" in b else "<ul>" + "".join(f"<li>{fill(li)}</li>" for li in b["ul"]) + "</ul>")
@@ -1529,6 +1532,16 @@ def page_privacy():
 {privacy_html(R + "site/contact/")}
 </div></div></section>'''
     write("privacy", R, "Privacy Policy | The Oberdorfer Team", "How The Oberdorfer Team collects, uses and shares information through oberdorferteam.com, the one cookie it sets after you contact us, and your choices.", "", body)
+
+
+def page_accessibility():
+    R = "../../"
+    trail = [("Home", "site/"), ("Accessibility", "site/accessibility/")]
+    body = page_hero(R, trail, ["A home search", "open to everyone."], h1="Accessibility statement", lead="The standard this site aims for, how it is checked, what is not there yet, and how to tell us when something is hard to use.") + f'''
+<section class="section"><div class="container"><div class="prose">
+{privacy_html(R + "site/contact/", ACCESSIBILITY)}
+</div></div></section>'''
+    write("accessibility", R, "Accessibility Statement | The Oberdorfer Team", "How oberdorferteam.com aims to meet WCAG 2.2 AA, how it is tested, its known limitations, and how to reach Brandon and Kaitlyn if anything is hard to use.", "", body)
 
 
 def page_contact():
@@ -1560,7 +1573,7 @@ def page_contact():
 </div></section>
 <section class="section surface-muted"><div class="container cols cols--3 col-rule body-s">
   <div id="privacy"><h2 class="h4">Privacy</h2><p style="margin-top:var(--space-2)">Form details are used only to respond to your request and are never sold. <a href="{R}site/privacy/">Read our privacy policy</a>.</p></div>
-  <div id="accessibility"><h2 class="h4">Accessibility</h2><p style="margin-top:var(--space-2)">This site is designed to meet WCAG 2.2 AA. If anything is hard to use, call {PHONE} and we will help.</p></div>
+  <div id="accessibility"><h2 class="h4">Accessibility</h2><p style="margin-top:var(--space-2)">This site aims to meet WCAG 2.2 AA. If anything is hard to use, call {PHONE} and we will help. <a href="{R}site/accessibility/">Read our accessibility statement</a>.</p></div>
   <div id="fair-housing"><h2 class="h4">Fair housing</h2><p style="margin-top:var(--space-2)">The Oberdorfer Team and REWAP Brokerage LLC are committed to the Fair Housing Act and Equal Housing Opportunity.</p></div>
 </div></section>'''
     write("contact", R, "Contact The Oberdorfer Team | Worcester, MA Real Estate", "Call or text Brandon and Kaitlyn Oberdorfer at 978-257-4938, or send a buyer, seller, recruiting or general inquiry. Based in Worcester, serving Massachusetts.", "Contact", body, ld=[crumbs_ld(trail)])
@@ -1568,7 +1581,7 @@ def page_contact():
 if __name__ == "__main__":
     page_home(); page_buy(); [page_listing(l) for l in LISTINGS]; page_sell(); page_market()
     page_communities(); [page_town(t) for t in TOWNS]; [page_neighborhood(n, t) for t in TOWNS for n in t.get("neighborhoods", [])]; page_team(); page_agent(); page_journal(); page_article()
-    page_join(); page_office(); page_contact(); page_privacy()
+    page_join(); page_office(); page_contact(); page_privacy(); page_accessibility()
     for a in AGENTS: page_profile(a)
     page_profile(TEMPLATE_AGENT)
     write_discovery_files()

@@ -1,0 +1,62 @@
+{
+  "_about": "The website accessibility statement. One source for the prototype (tools/build_site.py) and the WordPress theme (patterns/accessibility-statement.php, copied by tools/build_wp.py). Every statement describes what the site actually does, from the WCAG 2.2 AA audit of 2026-11-15 (axe-core on every page type of oberdorferteam.com, plus keyboard, focus, 320px reflow and form-error checks by hand). Update it after each audit and whenever a known limitation is fixed or a new kind of content (IDX search, video, PDFs) is added. Tokens: {phone}, {address}, {contact}.",
+  "updated": "November 15, 2026",
+  "intro": "The Oberdorfer Team wants everyone to be able to look at homes, read a town guide and reach us through oberdorferteam.com, including people who use a screen reader, a keyboard, screen magnification, voice control or other assistive technology.",
+  "sections": [
+    {
+      "h": "Our standard",
+      "blocks": [
+        {
+          "p": "We aim for this site to meet the <a href=\"https://www.w3.org/TR/WCAG22/\">Web Content Accessibility Guidelines (WCAG) 2.2</a> at level AA, the standard published by the World Wide Web Consortium (W3C)."
+        }
+      ]
+    },
+    {
+      "h": "What the site does",
+      "blocks": [
+        {
+          "ul": [
+            "Every page works with a keyboard alone. A visible outline shows where you are, and a \"Skip to content\" link jumps past the menu.",
+            "Text and controls meet the WCAG contrast minimums. Links inside sentences are underlined, not shown by color alone.",
+            "Pages reflow to the width of a small phone, the same as zooming a desktop browser to 400%, without scrolling sideways. Wide price tables scroll on their own.",
+            "Pages use headings, landmarks and labeled form fields, so screen readers can move around them.",
+            "If a form is missing something, the site says what in words, next to the field, and reads out the result when you send it.",
+            "Images have text descriptions. Decorative images are hidden from screen readers.",
+            "Animations stop when your device's \"reduce motion\" setting is on. Listing videos and 3D tours load only when you press play."
+          ]
+        }
+      ]
+    },
+    {
+      "h": "How we check it",
+      "blocks": [
+        {
+          "p": "On November 15, 2026 every type of page on the site was tested with automated checks (axe-core) and by hand: keyboard use, visible focus, reflow at 320 pixels wide, and form errors. The issues found were fixed. The site is checked again when new kinds of pages or features are added."
+        }
+      ]
+    },
+    {
+      "h": "Known limitations",
+      "blocks": [
+        {
+          "ul": [
+            "<strong>The Wakefield at Home PDF.</strong> The Fall 2026 issue is a print design and is not yet tagged for screen readers. If you would like its contents in another format, contact us and we will send them.",
+            "<strong>Spam protection.</strong> Our forms use Cloudflare Turnstile to stop spam. It usually works without asking you anything. If it ever stops you from sending a form, call or text us instead.",
+            "<strong>Other companies' content.</strong> Listing videos and 3D tours come from providers such as YouTube, Vimeo, Matterport, Kuula and CloudPano, and their players are theirs. Links to Instagram, Facebook, Google Maps and other sites lead to pages we do not control."
+          ]
+        }
+      ]
+    },
+    {
+      "h": "Tell us what is hard to use",
+      "blocks": [
+        {
+          "p": "If anything on this site is hard to use, or you need information in another format, please tell us which page and what happened. Call or text {phone}, use the form on our <a href=\"{contact}\">Contact page</a>, or write to The Oberdorfer Team, {address}. If you use a TTY, dial 711 to reach a relay service."
+        },
+        {
+          "p": "You never need this website to work with us. Brandon and Kaitlyn can help with anything on it by phone."
+        }
+      ]
+    }
+  ]
+}
