@@ -134,6 +134,10 @@ The same screen holds the provider's shortcodes (Buy page search; home page feat
 - Patterns: one per page section, named on the FSE canvas boards (`oberdorfer/<name>`).
 - JavaScript: `site.js` (menu, accordions and filters) and `site-demo.js` (demo form behavior, until `ot-leads`).
 
+## Online booking plugin
+
+`wordpress/dist/jat-calendar-sync.zip` is a build of Jeremy Anderson Tech's JAT Calendar Sync plugin (`github.com/CptNope/JAT-Calendar-Sync`, 2.1.0 or later for People). It is not built here: it is the plugin repository's files without `.distignore`'s paths, copied in so the Pages deploy publishes it at `wordpress/jat-calendar-sync.zip` for the sites to install. Replace it when the plugin is updated. ot-core reads it only through `jatcs_host_ready()` and the `[jat_booking host]` shortcode (`ot_agent_booking_host()` in `render-agent.php`).
+
 ## Releases
 
 Each release is a GitHub release tagged `vX.Y.Z` with `oberdorfer.zip` and `ot-core.zip` attached. Bump the version in `wordpress/oberdorfer/style.css`, `wordpress/ot-core/ot-core.php` (header and `OT_CORE_VERSION`), both `readme.txt` files and `VERSION` in `tools/build_wp.py`; add notes in `wordpress/release-notes/v<version>.md`; update `wordpress/release.json`; push to `main`. The workflow `.github/workflows/wp-release.yml` builds both zips, tags `v<version>` and publishes the release. Pre-releases are for staging only.
