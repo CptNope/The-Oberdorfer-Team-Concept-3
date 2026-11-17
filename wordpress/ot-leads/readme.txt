@@ -2,7 +2,7 @@
 Contributors: oberdorferteam
 Requires at least: 7.1
 Requires PHP: 8.3
-Stable tag: 0.10.14
+Stable tag: 0.10.15
 License: GPL-2.0-or-later
 
 The Oberdorfer Team's built-in CRM: lead capture, routing and alerts, inbox and pipeline, CRM forwarding, email nurture through Brevo, and AI drafts a person approves.
@@ -14,6 +14,9 @@ Every form on oberdorferteam.com saves here first. Leads are routed to the right
 Requires the ot-core plugin.
 
 == Changelog ==
+
+= 0.10.15 =
+* Every email WordPress sends (security alerts, booking confirmations, password resets) now goes through Brevo when its key is set, from the team's verified address; WordPress's own mail is the fallback (includes/wp-mail.php).
 
 = 0.10.14 =
 * Version moves with the release (no changes).

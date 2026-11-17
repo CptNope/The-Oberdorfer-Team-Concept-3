@@ -115,3 +115,7 @@ Leads > Settings > Status shows when it last ran.
 - REWAP approves the consent wording (Leads > Settings > Email) and any rules for automated email.
 - The privacy policy (/privacy/, written 2026-11-10 from `tools/data/privacy-policy.json`) covers lead storage, the page-visit cookie (`ot_lid`), Brevo, an outside CRM and the AI provider if used, and the 24-month retention. REWAP reviews it; update the JSON and rebuild if any of these change.
 - The postal address in every marketing email is the office: 652 Park Ave, Unit B, Worcester, MA 01603.
+
+## Other plugins' email (v0.10.15)
+
+With the Brevo key set, `ot-leads` also sends every other `wp_mail()` through Brevo (`includes/wp-mail.php`): JAT Site Shield alerts, JAT Calendar Sync booking email, password resets and WordPress notices. They come from the team's verified sending address with the sending plugin's name; WordPress's own mail is the fallback if Brevo refuses one. No SMTP plugin is needed.
