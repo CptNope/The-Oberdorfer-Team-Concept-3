@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.10.12
+Stable tag: 0.10.13
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,9 @@ Fonts: Cormorant Garamond and Manrope (SIL Open Font License 1.1), loaded from G
 this version; self-hosting is a launch task.
 
 == Changelog ==
+
+= 0.10.13 =
+* Privacy policy pattern: the missing-page log (Search Intel).
 
 = 0.10.12 =
 * The joint Brandon & Kaitlyn page uses the page template page-brandon-kaitlyn-oberdorfer (was single-ot_agent-brandon-kaitlyn-oberdorfer); footer and home links point to /team/brandon-kaitlyn-oberdorfer/.

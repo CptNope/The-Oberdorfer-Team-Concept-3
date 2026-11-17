@@ -380,10 +380,14 @@ add_filter( 'pre_get_document_title', function ( $t ) {
 }, 21 );
 
 add_action( 'wp_head', function () {
-	if ( ! is_singular( 'ot_listing' ) || ! ot_seo_enabled() ) {
-		return;
+	if ( is_singular( 'ot_listing' ) && ot_seo_enabled() && ! ot_si_active() ) {
+		echo ot_jsonld( ot_listing_jsonld( get_queried_object_id() ) ) . "\n";
 	}
-	$l     = ot_listing( get_queried_object_id() );
+}, 3 );
+
+/** A listing's RealEstateListing node (printed above, or added to Search Intel's graph). */
+function ot_listing_jsonld( $id ) {
+	$l     = ot_listing( $id );
 	$photo = $l['photo_id'] ? wp_get_attachment_image_url( $l['photo_id'], 'large' ) : null;
 	$data  = array(
 		'@context' => 'https://schema.org', '@type' => 'RealEstateListing', 'url' => ot_prod_url( $l['url'] ),
@@ -405,8 +409,8 @@ add_action( 'wp_head', function () {
 		$data['offers']['offeredBy'] = array( '@id' => ot_prod_url( get_permalink( $agent ) ) . '#person' );
 	}
 	// No VideoObject for the tour video: Google requires its upload date, which the team does not enter.
-	echo ot_jsonld( array_filter( $data ) ) . "\n";
-}, 3 );
+	return array_filter( $data );
+}
 
 /* --------------------------------------------------------------------- admin: the details box */
 

@@ -26,7 +26,7 @@ The production site for oberdorferteam.com is a custom block theme plus a small 
 | Custom fields | `ot-core` | `register_post_meta` with `show_in_rest`; no ACF or other fields plugin |
 | Field display in templates | `ot-core` + theme | `ot-core` registers Block Bindings sources; the theme's templates bind core blocks to them. Bindings reach only some attributes of a few core blocks (paragraph, heading, image, button and a few others), and `core/post-meta` needs `show_in_rest` and a key without a leading underscore. Structured fields go through `ot/*` blocks. |
 | JSON-LD (RealEstateAgent, Person, ProfilePage, City, WebPage, BreadcrumbList, Dataset) | `ot-core` | Same graph as the prototype, with `@id` links; no FAQPage on new templates |
-| Titles, meta descriptions, canonicals, robots | `ot-core` | A title and description field on every post type; no SEO plugin needed. An SEO plugin is optional, but only one may output meta tags. |
+| Titles, meta descriptions, canonicals, robots, sitemap, llms.txt | JAT Search Intel 3.8.19+ (Jeremy Anderson Tech; installed 2026-11-16), fed by `ot-core` | Search Intel prints the head tags, the JSON-LD graph, the XML sitemap (`/sitemap.xml`) and `/llms.txt`; the team edits each page's search title and description in its box. `ot-core/includes/search-intel.php` hands it what only ot-core knows: the RealEstateAgent details on its Organization node, the page nodes (ProfilePage and Person, AboutPage, City, RealEstateListing, Dataset, the guide ItemList) and the site's breadcrumb trail through `jat_search_intel_schema_graph`; its ot-core titles and descriptions, copied once; hidden guides as noindex; the curated llms.txt; and its own tags on agents' listings pages and the guide index, which Search Intel cannot describe. Without Search Intel, ot-core prints all of this itself (`seo.php`). Settings that must stay off: FAQ and HowTo schema (no new FAQPage markup), Speakable, and image alt text (it would replace deliberate empty `alt` on decorative images). |
 | XML sitemap | WordPress core + `ot-core` | Core's `wp-sitemap.xml` includes public CPTs automatically; `ot-core` excludes demo items with `wp_sitemaps_posts_query_args` (unpublished items are never listed) |
 | `llms.txt` | `ot-core` | Generated route; same content rules as the prototype |
 | Custom blocks `ot/*` | `ot-blocks` | Built with `@wordpress/scripts`; server-rendered where SEO matters |
@@ -51,7 +51,7 @@ The production site for oberdorferteam.com is a custom block theme plus a small 
 | ACF or other fields plugins | Core post meta and Block Bindings do the job (decided 2026-10-22). |
 | Form plugins | `ot-leads` owns capture, so every lead lands in one place with consent and routing. |
 | A separate email-marketing plugin (for example Omnisend) | `ot-leads` nurture and newsletter modules cover it, or the connected CRM does. |
-| An SEO plugin (by default) | `ot-core` outputs the same structured data the prototype was built and tested with. |
+| Another SEO plugin (Yoast, Rank Math and the like) | Search Intel is the one SEO plugin; only one may print meta tags. |
 
 ## Code layout
 

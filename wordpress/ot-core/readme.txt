@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.10.12
+Stable tag: 0.10.13
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,9 @@ Listings are off by default. Settings > Listings (IDX) switches the home search 
 If an SEO plugin is installed, only one of the two may print meta tags: add `define( 'OT_CORE_SEO_OUTPUT', false );` to wp-config.php to switch this plugin's output off.
 
 == Changelog ==
+
+= 0.10.13 =
+* With JAT Search Intel active, it prints the search output and ot-core feeds it (includes/search-intel.php): the RealEstateAgent details, page schema and breadcrumb trail through jat_search_intel_schema_graph; search titles and descriptions copied once; hidden guides marked noindex; the curated llms.txt; its own tags on agents' listings pages and the guide index; the 404 log purged after 90 days.
 
 = 0.10.12 =
 * The joint Brandon & Kaitlyn page is an ordinary page under Our Team, not an entry in Agents. An existing joint profile moves to the page once (body, record, search title kept; the old entry goes to Trash) and its old address redirects.

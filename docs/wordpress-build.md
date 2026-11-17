@@ -135,6 +135,10 @@ The same screen holds the provider's shortcodes (Buy page search; home page feat
 - Patterns: one per page section, named on the FSE canvas boards (`oberdorfer/<name>`).
 - JavaScript: `site.js` (menu, accordions and filters) and `site-demo.js` (demo form behavior, until `ot-leads`).
 
+## Search plugin
+
+`wordpress/dist/jat-search-intel.zip` is Jeremy Anderson Tech's JAT Search Intel (`github.com/CptNope/JAT-Search-Intel`), built with its own `bin/build-zip.sh` and copied in so the Pages deploy publishes it at `wordpress/jat-search-intel.zip`. Replace it when the plugin is updated. With it active, `ot-core` stops printing its own titles, descriptions, canonicals, Open Graph, JSON-LD and llms.txt rule and feeds Search Intel instead (`includes/search-intel.php`; see `docs/wordpress-architecture.md`). Its settings on oberdorferteam.com: site and Organization name "The Oberdorfer Team", logo `assets/logo/social-avatar.png`, default share image `assets/img/share-oberdorfer-team-v1.jpg`, Instagram `instagram.com/oberdorferteam`, sitemap and SEO box on pages, posts, guides, agents, listings and offices; FAQ, HowTo and Speakable schema, image alt text and the RSS footer off. Its 404 log is purged by ot-core 90 days after a path was last requested, as the privacy policy says.
+
 ## Online booking plugin
 
 `wordpress/dist/jat-calendar-sync.zip` is a build of Jeremy Anderson Tech's JAT Calendar Sync plugin (`github.com/CptNope/JAT-Calendar-Sync`, 2.1.0 or later for People). It is not built here: it is the plugin repository's files without `.distignore`'s paths, copied in so the Pages deploy publishes it at `wordpress/jat-calendar-sync.zip` for the sites to install. Replace it when the plugin is updated. ot-core reads it only through `jatcs_host_ready()` and the `[jat_booking host]` shortcode (`ot_agent_booking_host()` in `render-agent.php`).

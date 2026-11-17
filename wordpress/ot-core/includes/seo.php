@@ -11,7 +11,12 @@
 defined( 'ABSPATH' ) || exit;
 
 function ot_seo_enabled() {
-	return ! defined( 'OT_CORE_SEO_OUTPUT' ) || OT_CORE_SEO_OUTPUT;
+	if ( defined( 'OT_CORE_SEO_OUTPUT' ) && ! OT_CORE_SEO_OUTPUT ) {
+		return false;
+	}
+	// With JAT Search Intel active it prints the search output (includes/search-intel.php), except
+	// on an agent's listings page, a view of the profile that Search Intel does not know about.
+	return ! ot_si_active() || ( function_exists( 'ot_is_agent_listings' ) && ot_is_agent_listings() );
 }
 
 /** Title and description for the current view. */
@@ -102,8 +107,10 @@ add_action( 'wp_head', function () {
 	}
 	echo '<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">' . "\n";
 
-	foreach ( ot_jsonld_graph() as $block ) {
-		echo ot_jsonld( $block ) . "\n";
+	if ( ! ot_si_active() ) { // with Search Intel, these nodes join its graph instead
+		foreach ( ot_jsonld_graph() as $block ) {
+			echo ot_jsonld( $block ) . "\n";
+		}
 	}
 }, 2 );
 
@@ -216,6 +223,7 @@ function ot_jsonld_graph() {
 
 /* --------------------------------------------------------------------- sitemap */
 
+// WordPress's own sitemaps. Search Intel replaces them with its own (search-intel.php).
 add_filter( 'wp_sitemaps_add_provider', function ( $provider, $name ) {
 	return 'users' === $name ? false : $provider; // agent profiles are the people pages; author archives would expose usernames
 }, 10, 2 );
@@ -258,7 +266,9 @@ add_action( 'init', function () {
 /* --------------------------------------------------------------------- llms.txt */
 
 add_action( 'init', function () {
-	add_rewrite_rule( '^llms\.txt$', 'index.php?ot_llms=1', 'top' );
+	if ( ! ot_si_active() ) { // Search Intel serves /llms.txt, with this text (includes/search-intel.php)
+		add_rewrite_rule( '^llms\.txt$', 'index.php?ot_llms=1', 'top' );
+	}
 } );
 
 add_filter( 'query_vars', function ( $v ) {
@@ -292,8 +302,10 @@ function ot_llms_txt() {
 		}
 	}
 	$line = function ( $id, $url ) {
-		$t = (string) get_post_meta( $id, 'ot_seo_title', true ) ?: get_the_title( $id );
-		$d = (string) get_post_meta( $id, 'ot_seo_description', true );
+		// With Search Intel, the team edits titles and descriptions there.
+		$si = ot_si_active();
+		$t  = ( $si ? (string) get_post_meta( $id, '_jat_search_intel_title', true ) : '' ) ?: (string) get_post_meta( $id, 'ot_seo_title', true ) ?: get_the_title( $id );
+		$d  = ( $si ? (string) get_post_meta( $id, '_jat_search_intel_description', true ) : '' ) ?: (string) get_post_meta( $id, 'ot_seo_description', true );
 		return '- [' . html_entity_decode( $t ) . '](' . ot_prod_url( $url ) . ')' . ( $d ? ': ' . html_entity_decode( $d ) : '' ) . "\n";
 	};
 	$pages = '';

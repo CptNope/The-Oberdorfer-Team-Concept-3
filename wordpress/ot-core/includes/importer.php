@@ -204,6 +204,9 @@ function ot_import( $file = null ) {
 		$page_ids[ $p['slug'] ] = $tally( ot_upsert( 'page', $p['slug'], $p['title'], $parent, (int) $p['order'], $p['meta'] ), 'page ' . $p['slug'] );
 	}
 	ot_move_team_profile(); // an older site's joint profile in Agents moves to the page just imported
+	if ( ot_si_active() ) {
+		ot_si_sync(); // new titles and descriptions into Search Intel's empty fields
+	}
 	if ( ! empty( $data['front_page'] ) && ! empty( $page_ids[ $data['front_page'] ] ) ) {
 		update_option( 'show_on_front', 'page' );
 		update_option( 'page_on_front', $page_ids[ $data['front_page'] ] );
