@@ -282,3 +282,11 @@ add_action( 'ot_si_purge_404_log', function () {
 		$wpdb->query( $wpdb->prepare( 'DELETE FROM %i WHERE last_hit < %s', $table, gmdate( 'Y-m-d H:i:s', time() - 90 * DAY_IN_SECONDS ) ) );
 	}
 } );
+
+/* --------------------------------------------------------------------- robots.txt */
+
+// Search Intel lists its JSON schema map as a "Sitemap:"; sitemaps must be XML (or RSS or text),
+// so Search Console would report it as invalid. The schema map stays available at its address.
+add_filter( 'robots_txt', function ( $output ) {
+	return ot_si_active() ? (string) preg_replace( '#^Sitemap:\s*\S*/schema-map\s*$\R?#mi', '', (string) $output ) : $output;
+}, 1000 );
