@@ -1,6 +1,6 @@
 {
-  "version": "0.10.16",
+  "version": "0.10.17",
   "prerelease": true,
-  "title": "WordPress build v0.10.16 (pre-release)",
-  "notes": "wordpress/release-notes/v0.10.16.md"
+  "title": "WordPress build v0.10.17 (pre-release)",
+  "notes": "wordpress/release-notes/v0.10.17.md"
 }

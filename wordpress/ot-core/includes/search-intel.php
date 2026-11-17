@@ -25,6 +25,11 @@ function ot_si_active() {
 	return defined( 'JAT_SEARCH_INTEL_VERSION' );
 }
 
+/** Search Intel 3.8.22+ has the hooks ot-core uses for the guide index and agents' listings pages. */
+function ot_si_has_hooks() {
+	return ot_si_active() && version_compare( JAT_SEARCH_INTEL_VERSION, '3.8.22', '>=' );
+}
+
 /* --------------------------------------------------------------------- the graph */
 
 add_filter( 'jat_search_intel_schema_graph', 'ot_si_graph', 20, 2 );
@@ -190,9 +195,14 @@ add_filter( 'pre_get_document_title', function ( $t ) {
 	return $t;
 }, 30 );
 
-// The guide index is a post-type archive, where Search Intel prints no description or canonical.
+// The guide index is a post-type archive: Search Intel 3.8.22+ gives it a canonical and takes this
+// description through its filter; an older version prints neither, so ot-core prints both.
+add_filter( 'jat_search_intel_meta_description', function ( $description ) {
+	return is_post_type_archive( 'ot_community' ) ? ot_seo_current()['desc'] : $description;
+} );
+
 add_action( 'wp_head', function () {
-	if ( ot_si_active() && is_post_type_archive( 'ot_community' ) ) {
+	if ( ot_si_active() && ! ot_si_has_hooks() && is_post_type_archive( 'ot_community' ) ) {
 		$s = ot_seo_current();
 		echo '<meta name="description" content="' . esc_attr( $s['desc'] ) . '">' . "\n";
 		echo '<link rel="canonical" href="' . esc_url( ot_prod_url( get_post_type_archive_link( 'ot_community' ) ) ) . '">' . "\n";
@@ -283,10 +293,24 @@ add_action( 'ot_si_purge_404_log', function () {
 	}
 } );
 
-/* --------------------------------------------------------------------- robots.txt */
+/* --------------------------------------------------------------------- sitemap and robots.txt */
 
-// Search Intel lists its JSON schema map as a "Sitemap:"; sitemaps must be XML (or RSS or text),
-// so Search Console would report it as invalid. The schema map stays available at its address.
+// Agents' listings pages that have listings, in the agents' sitemap (Search Intel 3.8.22+).
+add_filter( 'jat_search_intel_sitemap_extra_urls', function ( $extra, $post_type ) {
+	if ( 'ot_agent' !== $post_type ) {
+		return $extra;
+	}
+	foreach ( get_posts( array( 'post_type' => 'ot_agent', 'post_status' => 'publish', 'posts_per_page' => -1 ) ) as $a ) {
+		list( $current, $sold ) = ot_agent_listing_sets( $a->post_name );
+		if ( $current || $sold ) {
+			$extra[] = array( 'loc' => ot_agent_listings_url( $a ) );
+		}
+	}
+	return $extra;
+}, 10, 2 );
+
+// Search Intel before 3.8.22 listed its JSON schema map as a "Sitemap:"; sitemaps must be XML (or
+// RSS or text), so Search Console would report it as invalid. 3.8.22 makes it a comment.
 add_filter( 'robots_txt', function ( $output ) {
 	return ot_si_active() ? (string) preg_replace( '#^Sitemap:\s*\S*/schema-map\s*$\R?#mi', '', (string) $output ) : $output;
 }, 1000 );

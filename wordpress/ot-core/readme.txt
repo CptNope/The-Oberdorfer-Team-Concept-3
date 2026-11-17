@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.10.16
+Stable tag: 0.10.17
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,9 @@ Listings are off by default. Settings > Listings (IDX) switches the home search 
 If an SEO plugin is installed, only one of the two may print meta tags: add `define( 'OT_CORE_SEO_OUTPUT', false );` to wp-config.php to switch this plugin's output off.
 
 == Changelog ==
+
+= 0.10.17 =
+* With JAT Search Intel 3.8.22+, the guide index takes its description through jat_search_intel_meta_description (Search Intel prints its canonical), and agents' listings pages that have listings join the agents' sitemap through jat_search_intel_sitemap_extra_urls. Older versions keep the earlier fallbacks.
 
 = 0.10.16 =
 * robots.txt no longer lists Search Intel's JSON schema map as a sitemap (Search Console would call it invalid); the map itself still works.
