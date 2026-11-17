@@ -1553,7 +1553,7 @@ def page_terms():
 <section class="section"><div class="container"><div class="prose">
 {privacy_html(R + "site/contact/", TERMS)}
 </div></div></section>'''
-    write("terms", R, "Terms of Use | The Oberdorfer Team", "Terms for using oberdorferteam.com: general information, not advice; no agency until agreed; booking calls; fair housing; who owns the content; Massachusetts law.", "", body)
+    write("terms", R, "Terms of Use | The Oberdorfer Team", "Terms for using oberdorferteam.com: general information, not advice; no agency until agreed; booking calls; fair housing; content ownership; Massachusetts law.", "", body)
 
 
 def page_contact():
