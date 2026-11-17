@@ -822,7 +822,7 @@
      "that Grafton Street climbs out of downtown."
     ],
     "answer": "Grafton Hill is a neighborhood on Worcester's East Side, on one of the city's seven named hills, anchored by Grafton Street (Route 122) and Providence Street in southeastern Worcester. Its western slope along Dorchester Street holds rows of three-deckers from the 1890s, among the earliest in the Grafton Hill and Vernon Hill area. WRTA Routes 5 and 12 run on Grafton Street, and Worcester's Union Station, on the MBTA Framingham/Worcester Line, is downtown.",
-    "meta": "Grafton Hill, Worcester: three-deckers from the 1890s, the 1879 Grafton Street School, Mulcahy Field and WRTA buses on Grafton Street. A sourced neighborhood guide.",
+    "meta": "Grafton Hill, Worcester: three-deckers from the 1890s, the 1879 Grafton Street School, Mulcahy Field and WRTA buses on Grafton Street, with sources.",
     "boundaries": {
      "text": "Grafton Hill rises in southeastern Worcester, anchored by Grafton Street and Providence Street; its lower western slope reaches Dorchester Street, and the city places Mulcahy Field, at 158 Dorchester Street, in the neighborhood. Massasoit Road spans Grafton Hill, Union Hill and the Broad Meadow Brook area.",
      "source": "https://en.wikipedia.org/wiki/Grafton_Hill"
@@ -971,7 +971,7 @@
      "at the end of the old streetcar line."
     ],
     "answer": "Tatnuck is a neighborhood on Worcester's West Side centered on Tatnuck Square, where Pleasant and Chandler Streets meet. It was a small cluster of houses by about 1830 and grew after the streetcar reached it along Pleasant Street in 1899. WRTA Route 2 still ends at Tatnuck Square, which has a city fire station, a branch library and a church, and Liberty Farm, a National Historic Landmark, stands on Mower Street.",
-    "meta": "Tatnuck, Worcester: Tatnuck Square at Pleasant and Chandler Streets, the 1899 streetcar line, Liberty Farm and WRTA Route 2. A sourced West Side neighborhood guide.",
+    "meta": "Tatnuck, Worcester: Tatnuck Square at Pleasant and Chandler Streets, the 1899 streetcar line, Liberty Farm and WRTA Route 2, in a sourced guide.",
     "boundaries": {
      "text": "Tatnuck is on Worcester's West Side around Tatnuck Square, the intersection of Pleasant and Chandler Streets. West Tatnuck, which Wikipedia lists as a separate West Side neighborhood, is where the Tatnuck streetcar line was carried in 1913 and where WRTA Route 6 runs via Chandler Street.",
      "source": "https://www.sec.state.ma.us/divisions/mhc/preservation/survey/town-reports/wor.pdf"
@@ -1408,7 +1408,7 @@
      "where Stafford Street leaves Main Street for Leicester."
     ],
     "answer": "Webster Square is a South Worcester neighborhood named for the junction of Main, Webster and Cambridge Streets, now also met by Mill Street, in the area once called New Worcester. Loring and Aury Coes built their wrench and knife works here, and Coes Reservoir and its parks lie along Mill Street. Stafford Street begins at the square, Route 12 crosses it on Mill Street, and WRTA Route 19 runs from Webster Square to Clark University on Main Street.",
-    "meta": "Webster Square, Worcester: the old New Worcester crossroads, the Coes wrench works, Coes Pond parks, Stearns Tavern and WRTA Route 19. A sourced neighborhood guide.",
+    "meta": "Webster Square, Worcester: the old New Worcester crossroads, the Coes wrench works, Coes Pond parks, Stearns Tavern and WRTA Route 19, with sources.",
     "boundaries": {
      "text": "Webster Square once referred to the intersection of Main, Webster and Cambridge Streets, a junction Mill Street has also met since it was pushed across Main Street to Webster Street in the 1980s; the name has long since spread to the neighborhood west of that junction along Main Street, past the intersection of Main Street, Park Avenue and Stafford Street. Wikipedia's list of Worcester neighborhoods places Webster Square in South Worcester.",
      "source": "https://www.bostonrambles.net/worcester-massachusetts-part-five-the-road-from-paris-to-new-york/"
@@ -1719,7 +1719,7 @@
      "on Providence Street's hill."
     ],
     "answer": "Union Hill is an East Side neighborhood in southeastern Worcester, on the hill once called Sagatabscot, one of the city's seven hills. Providence Street holds the Worcester Academy campus, on the hill since 1869, and the 1906 Shaarai Torah Synagogue, and the city's 1977-78 historic survey names Union Hill among the places built up with three-deckers. WRTA Route 1 runs via Providence Street, and Union Station is downtown.",
-    "meta": "Union Hill, Worcester: the Worcester Academy campus, the 1906 Shaarai Torah Synagogue, three-deckers and the city's 2015 revitalization initiative, with sources.",
+    "meta": "Union Hill, Worcester: the Worcester Academy campus, the 1906 Shaarai Torah Synagogue, three-deckers and the city's 2015 revitalization initiative.",
     "boundaries": {
      "text": "Union Hill has no official city boundary. Wikipedia lists it as an East Side neighborhood on the hill anchored by Grafton Street and Providence Street in southeastern Worcester, and names Massasoit Road as spanning Union Hill, Grafton Hill and Broadmeadow Brook; its documented landmarks stand on Providence Street (numbers 32 and 81) and Chapin Street.",
      "source": "https://en.wikipedia.org/wiki/Neighborhoods_in_Worcester,_Massachusetts"
@@ -6100,7 +6100,7 @@
      "with five Blue Line stops, Piers Park and Logan Airport on the water."
     ],
     "answer": "East Boston is a Boston neighborhood across Boston Harbor from downtown, built on several former islands joined by landfill and laid out on a street grid by the East Boston Company in the 1830s. The Boston Planning Department counted 43,066 residents there in 2020. Its housing runs from Greek Revival brick bowfront houses of 1847 to about 1852 on Jeffries Point to Italianate and Second Empire houses on Eagle Hill, and the Blue Line stops at Maverick, Airport, Wood Island, Orient Heights and Suffolk Downs.",
-    "meta": "East Boston: former harbor islands laid out on a grid from 1833, with Jeffries Point and Eagle Hill, five Blue Line stops, Piers Park and 2025 Warren Group prices.",
+    "meta": "East Boston: former harbor islands laid out on a grid from 1833, with Jeffries Point, Eagle Hill, five Blue Line stops, Piers Park and 2025 prices.",
     "boundaries": {
      "text": "East Boston lies across Boston Harbor from downtown and Charlestown and borders Winthrop, Revere and Chelsea. Logan International Airport lies mainly in East Boston, with part of the airfield in Winthrop.",
      "source": "https://en.wikipedia.org/wiki/East_Boston"
@@ -7568,7 +7568,7 @@
      "Castle Island and three miles of beach and parkland at the end of Broadway."
     ],
     "answer": "South Boston is a Boston neighborhood on the former Dorchester Neck, south and east of Fort Point Channel along Dorchester Bay, annexed to Boston in 1804. Its housing includes 19th-century brick and mansard row houses and flat-roofed triple-deckers, and the Boston Planning & Development Agency counted 37,917 people there in 2020, with the South Boston Waterfront counted separately. The Red Line stops at Broadway and Andrew, and Castle Island anchors three miles of shoreline parks.",
-    "meta": "South Boston: row houses and triple-deckers from Dorchester Heights to Castle Island, with Red Line stops at Broadway and Andrew and three miles of shoreline parks.",
+    "meta": "South Boston: row houses and triple-deckers from Dorchester Heights to Castle Island, with Red Line stops at Broadway and Andrew and shoreline parks.",
     "boundaries": {
      "text": "South Boston lies south and east of Fort Point Channel, along Dorchester Bay, with Castle Island beside City Point and Andrew station on its west side. The Seaport, or South Boston Waterfront, north of the residential streets is treated by the city's planners as a separate neighborhood.",
      "source": "https://en.wikipedia.org/wiki/South_Boston"
@@ -7908,7 +7908,7 @@
      "with a reservoir loop, Green Line stops and a rail station at Boston Landing."
     ],
     "answer": "Brighton is a neighborhood in the northwestern corner of Boston, incorporated as its own town in 1807 and annexed to Boston in 1874, with 52,047 residents in 2020 (2020 Census, Boston Planning Department tabulation). Its housing mixes wood-frame triple-deckers, single-family houses and brick apartment buildings. The Green Line B branch runs along Commonwealth Avenue to Boston College, and Boston Landing station is on the Framingham/Worcester commuter rail line.",
-    "meta": "Brighton, Boston: triple-deckers, Aberdeen's Shingle-style houses and brick apartments by Chestnut Hill Reservoir, with the Green Line and Boston Landing station.",
+    "meta": "Brighton, Boston: triple-deckers, Aberdeen's Shingle-style houses and brick apartments by Chestnut Hill Reservoir, with the Green Line and Boston Landing.",
     "boundaries": {
      "text": "The northwestern corner of Boston: the Charles River separates it from Cambridge and Watertown, Newton lies to the west and Brookline to the south, and it meets Allston generally along Everett, Gordon and Kelton Streets.",
      "source": "https://en.wikipedia.org/wiki/Brighton,_Boston"
