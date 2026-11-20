@@ -445,16 +445,18 @@ LENDER = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
 
 def nmls_url(kind, n): return f"https://www.nmlsconsumeraccess.org/EntityDetails.aspx/{kind}/{n}"
 
+LENDER_STATEMENT = ("REWAP Brokerage and its affiliated real estate professionals do not receive any compensation, referral fees, kickbacks, or other financial incentives, directly or indirectly, in connection with referrals to our preferred lending partners. Our preferred lenders are featured solely as a resource and convenience to our clients. Clients are under no obligation to use any recommended lender and are encouraged to explore and select the financing provider that best meets their individual needs.")
+
 def lender_disclosure(l, arrangement="none"):
-    """Same words as ot_lender_disclosure() in ot-core lender.php."""
+    """Same words as ot_lender_disclosure() in ot-core lender.php. With no arrangement, the first
+    paragraph is the team's own statement (supplied and approved 2026-11-19), word for word."""
     co = e(l["company_short"] or l["company"])
-    money = (f"{co} pays its proportional share of the cost of advertising that features it. Neither The Oberdorfer Team nor REWAP Brokerage LLC receives any fee or other payment for referring you."
-             if arrangement == "shared" else
-             "Neither The Oberdorfer Team nor REWAP Brokerage LLC receives any fee, payment or anything else of value for this introduction.")
-    return (f"You are free to choose any lender, and using {co} is not a condition of working with us. {money} "
+    first = (f"You are free to choose any lender, and using {co} is not a condition of working with us. {co} pays its proportional share of the cost of advertising that features it. Neither The Oberdorfer Team nor REWAP Brokerage LLC receives any fee or other payment for referring you."
+             if arrangement == "shared" else e(LENDER_STATEMENT))
+    return (f'<p class="caption">{first}</p><p class="caption">'
             f"{e(l['company'])} is a separate company, not part of The Oberdorfer Team or REWAP Brokerage LLC. Loan approval, rates and terms come from the lender and depend on your application; this is not an offer or commitment to lend. "
             f"{e(l['name'])}, NMLS ID {l['nmls']}. {e(l['company'])}, NMLS ID {l['company_nmls']}, Massachusetts Mortgage Broker and Lender license {l['ma_license']}. "
-            f'Check both on <a href="https://www.nmlsconsumeraccess.org/">NMLS Consumer Access</a>. Equal Housing Opportunity.')
+            f'Check both on <a href="https://www.nmlsconsumeraccess.org/">NMLS Consumer Access</a>. Equal Housing Opportunity.</p>')
 
 def lender_section(R):
     """The Buy page's financing section (ot-core ot_render_lender()). On the live site it shows only once
@@ -473,7 +475,7 @@ def lender_section(R):
 <section class="section surface-muted" id="financing" aria-labelledby="lender-title">
   <div class="container split" style="align-items:start">
     <div class="stack" style="grid-column:1/span 5;--stack:var(--space-5)">
-      <p class="label">Financing <span class="badge badge--verify">To confirm: REWAP and lender approval</span></p>
+      <p class="label">Financing</p>
       <h2 class="display-m answer" id="lender-title"><span>Start with</span><span>a preapproval.</span></h2>
       <p>{e(l["intro"])}</p>{bio}
     </div>
@@ -482,7 +484,7 @@ def lender_section(R):
       <dl>{rows}</dl><a class="link-arrow" href="{l["url"]}">{e(l["company_short"])}: {e(l["name"])} {icon(R,"external")}</a>
     </div>
   </div>
-  <div class="container"><p class="caption" style="margin-top:var(--space-6);max-width:80ch">{lender_disclosure(l)}</p></div>
+  <div class="container"><div class="stack" style="margin-top:var(--space-6);max-width:80ch;--stack:var(--space-3)">{lender_disclosure(l)}</div></div>
 </section>'''
 
 def page_buy():
