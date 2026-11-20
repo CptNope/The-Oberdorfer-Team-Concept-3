@@ -76,20 +76,20 @@
   background: var(--ot-navy); color: var(--ot-ivory);
   transition: background-color var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out), padding var(--dur-base) var(--ease-out);
 }
-/* phone strip above the header row: Brandon's cell, Kaitlyn's cell, the office (team's request, 2026-11-19) */
-.site-header__bar { border-bottom: 1px solid rgb(180 154 101 / 0.28); }
-.contact-strip { display: flex; justify-content: flex-end; align-items: center; flex-wrap: wrap; gap: 0 var(--space-6); list-style: none; margin: 0; padding: 0; font: 500 0.75rem/1 var(--font-sans); letter-spacing: 0.04em; font-variant-numeric: tabular-nums; }
-.contact-strip a { display: inline-flex; align-items: baseline; gap: 0.6em; padding-block: 0.7rem; color: inherit; text-decoration: none; }
-.contact-strip a:hover { color: var(--ot-gold-pale); }
-.contact-strip a:focus-visible { outline-color: var(--ot-gold-pale); }
-.contact-strip span { font-size: 0.625rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ot-gold-pale); }
-.site-header--light .contact-strip span { color: var(--ot-gold-ink); }
-.site-header--light .contact-strip a:hover { color: var(--ot-gold-ink); }
-@media (max-width: 40rem) {
-  .contact-strip { justify-content: space-between; gap: 0; }
-  .contact-strip a { flex-direction: column; align-items: flex-start; gap: 0.35em; padding-block: 0.55rem; }
+/* phone boxes in the header: Brandon's cell, Kaitlyn's cell, the office, side by side (team's request, 2026-11-19) */
+.phone-boxes { display: flex; gap: var(--space-2); list-style: none; margin: 0; padding: 0; }
+.phone-box {
+  display: grid; gap: 0.3rem; padding: 0.5rem 0.8rem; min-width: 7.5rem;
+  background: var(--ot-gold); color: var(--ot-navy); text-decoration: none; border: 1px solid var(--ot-gold);
+  font: 600 0.8125rem/1 var(--font-sans); letter-spacing: 0.04em; font-variant-numeric: tabular-nums; white-space: nowrap;
+  transition: background-color var(--dur-fast), border-color var(--dur-fast);
 }
+.phone-box span { font-size: 0.5625rem; letter-spacing: 0.18em; text-transform: uppercase; }
+.phone-box:hover { background: var(--ot-gold-pale); border-color: var(--ot-gold-pale); }
+.site-header .phone-box:focus-visible { outline-color: var(--ot-gold-pale); outline-offset: 3px; }
 .site-header__inner { display: flex; align-items: center; gap: var(--space-6); min-height: 4.75rem; }
+.site-header__inner > .phone-boxes { order: 3; }
+.site-header__inner > .site-header__actions { order: 2; }
 .site-header__brand { display: flex; align-items: center; gap: 0.85rem; text-decoration: none; color: inherit; margin-right: auto; }
 .site-header__brand img { height: 2.1rem; width: auto; }
 .site-header__brand .wordmark { height: 1.5rem; width: auto; }
@@ -127,10 +127,26 @@
 .mobile-menu a { display: flex; justify-content: space-between; gap: var(--space-4); padding: 1.1rem 0; color: var(--ot-ivory); text-decoration: none; font: 300 1.875rem/1.1 var(--font-display); }
 .mobile-menu a span { font: 600 0.7rem/1 var(--font-sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ot-gold); align-self: center; }
 .mobile-menu__foot { margin-top: var(--space-7); display: grid; gap: var(--space-4); }
-@media (max-width: 64rem) {
+/* the menu moves into the menu button sooner, so the phone boxes keep their room */
+@media (max-width: 84rem) {
   .nav, .site-header__actions .btn { display: none; }
   .nav-toggle { display: inline-grid; }
   .mobile-menu { display: block; }
+  .site-header__inner > .phone-boxes { order: 2; }
+  .site-header__inner > .site-header__actions { order: 3; }
+}
+/* phones: the boxes take their own row under the logo */
+@media (max-width: 48rem) {
+  .site-header__inner { flex-wrap: wrap; row-gap: var(--space-3); column-gap: var(--space-3); min-height: 0; padding-top: var(--space-3); }
+  .site-header__brand { min-height: 2.75rem; }
+  .site-header__inner > .phone-boxes { order: 4; flex: 1 0 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding-bottom: var(--space-3); }
+  .phone-box { min-width: 0; padding: 0.5rem 0.55rem; font-size: 0.75rem; letter-spacing: 0.01em; }
+}
+@media (max-width: 24rem) {
+  .site-header__brand img { height: 1.7rem !important; } /* beats the inline height so logo, search and menu share one row at 320px */
+  .phone-boxes { gap: var(--space-1); }
+  .phone-box { padding: 0.45rem 0.35rem; font-size: 0.6875rem; letter-spacing: 0; }
+  .phone-box span { font-size: 0.5rem; letter-spacing: 0.12em; }
 }
 .mobile-menu__close { position: absolute; top: 1rem; right: var(--page-margin); }
 

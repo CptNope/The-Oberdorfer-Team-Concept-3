@@ -226,11 +226,11 @@ def head(R, title, desc, extra_ld=None, canonical_path="", og_type="website", og
 <div id="live" class="visually-hidden" aria-live="polite"></div>
 <p class="demo-ribbon">Concept prototype: listings, future agents and form submissions are demonstrations. <a href="{R}index.html">Project overview</a></p>'''
 
-def contact_strip():
-    """The phone strip above the header row (theme: oberdorfer_contact_strip())."""
+def phone_boxes():
+    """Three labelled gold phone boxes in the header (theme: oberdorfer_phone_boxes())."""
     items = [("Brandon", BRANDON_PHONE, BRANDON_TEL), ("Kaitlyn", PHONE, TEL), ("Office", OFFICE_PHONE, OFFICE_TEL)]
-    lis = "".join(f'<li><a href="tel:{t}"><span>{l}</span>{p}</a></li>' for l, p, t in items)
-    return f'<div class="site-header__bar"><div class="container"><ul class="contact-strip" aria-label="Call us">{lis}</ul></div></div>'
+    lis = "".join(f'<li><a class="phone-box" href="tel:{t}"><span>{l}</span>{p}</a></li>' for l, p, t in items)
+    return f'<ul class="phone-boxes" aria-label="Call us">{lis}</ul>'
 
 def header(R, active, overlay=False):
     links = "".join(f'<a href="{R}site/{h}"{" aria-current=page" if l == active else ""}>{l}</a>' for l, h in NAV if l != "Join Our Team")
@@ -238,13 +238,12 @@ def header(R, active, overlay=False):
     logo = f'{R}assets/logo/logo-compact-ivory.svg'
     mm = "".join(f'<li><a href="{R}site/{h}">{l}{" <span>Search homes</span>" if l=="Buy" else (" <span>Market review</span>" if l=="Sell" else "")}</a></li>' for l, h in NAV)
     return f'''<header class="{cls}">
-  {contact_strip()}
   <div class="container site-header__inner">
     <a class="site-header__brand" href="{R}site/"><img src="{logo}" alt="The Oberdorfer Team, home" width="320" height="68" style="height:2.1rem"></a>
     <nav class="nav" aria-label="Primary">{links}</nav>
+    {phone_boxes()}
     <div class="site-header__actions">
       <a class="icon-btn" href="{R}site/buy/#search" aria-label="Search properties">{icon(R, 'search')}</a>
-      <a class="btn btn--gold btn--small" href="tel:{TEL}">{PHONE}</a>
       <button class="icon-btn nav-toggle" type="button" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">{icon(R, 'menu')}</button>
     </div>
   </div>

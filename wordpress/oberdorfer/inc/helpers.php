@@ -18,8 +18,8 @@ const OBERDORFER_BRANDON_TEL   = '+14062507620';
 const OBERDORFER_OFFICE_PHONE  = '508-614-9598'; // the office line, from the team (2026-11-19)
 const OBERDORFER_OFFICE_TEL    = '+15086149598';
 
-/** The phone strip above the header row: Brandon's cell, Kaitlyn's cell, the office (prototype contact_strip()). */
-function oberdorfer_contact_strip() {
+/** Three labelled gold phone boxes in the header: Brandon's cell, Kaitlyn's cell, the office (prototype phone_boxes()). */
+function oberdorfer_phone_boxes() {
 	$items = array(
 		array( 'Brandon', OBERDORFER_BRANDON_PHONE, OBERDORFER_BRANDON_TEL ),
 		array( 'Kaitlyn', OBERDORFER_PHONE, OBERDORFER_TEL ),
@@ -27,9 +27,9 @@ function oberdorfer_contact_strip() {
 	);
 	$li = '';
 	foreach ( $items as $i ) {
-		$li .= '<li><a href="tel:' . esc_attr( $i[2] ) . '"><span>' . esc_html( $i[0] ) . '</span>' . esc_html( $i[1] ) . '</a></li>';
+		$li .= '<li><a class="phone-box" href="tel:' . esc_attr( $i[2] ) . '"><span>' . esc_html( $i[0] ) . '</span>' . esc_html( $i[1] ) . '</a></li>';
 	}
-	return '<div class="site-header__bar"><div class="container"><ul class="contact-strip" aria-label="Call us">' . $li . '</ul></div></div>';
+	return '<ul class="phone-boxes" aria-label="Call us">' . $li . '</ul>';
 }
 const OBERDORFER_STREET   = '652 Park Ave, Unit B';
 const OBERDORFER_CITY     = 'Worcester';
