@@ -15,6 +15,22 @@ const OBERDORFER_PHONE    = '978-257-4938';
 const OBERDORFER_TEL      = '+19782574938';
 const OBERDORFER_BRANDON_PHONE = '406-250-7620';
 const OBERDORFER_BRANDON_TEL   = '+14062507620';
+const OBERDORFER_OFFICE_PHONE  = '508-614-9598'; // the office line, from the team (2026-11-19)
+const OBERDORFER_OFFICE_TEL    = '+15086149598';
+
+/** The phone strip above the header row: Brandon's cell, Kaitlyn's cell, the office (prototype contact_strip()). */
+function oberdorfer_contact_strip() {
+	$items = array(
+		array( 'Brandon', OBERDORFER_BRANDON_PHONE, OBERDORFER_BRANDON_TEL ),
+		array( 'Kaitlyn', OBERDORFER_PHONE, OBERDORFER_TEL ),
+		array( 'Office', OBERDORFER_OFFICE_PHONE, OBERDORFER_OFFICE_TEL ),
+	);
+	$li = '';
+	foreach ( $items as $i ) {
+		$li .= '<li><a href="tel:' . esc_attr( $i[2] ) . '"><span>' . esc_html( $i[0] ) . '</span>' . esc_html( $i[1] ) . '</a></li>';
+	}
+	return '<div class="site-header__bar"><div class="container"><ul class="contact-strip" aria-label="Call us">' . $li . '</ul></div></div>';
+}
 const OBERDORFER_STREET   = '652 Park Ave, Unit B';
 const OBERDORFER_CITY     = 'Worcester';
 const OBERDORFER_POSTCODE = '01603';

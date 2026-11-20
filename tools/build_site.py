@@ -14,6 +14,8 @@ OUT = os.path.join(ROOT, "site")
 # The team line is Kaitlyn's cell (the team's choice, 2026-11-10); Brandon's own line stays his.
 PHONE, TEL = "978-257-4938", "+19782574938"
 BRANDON_PHONE, BRANDON_TEL = "406-250-7620", "+14062507620"
+# The office line, from the team (2026-11-19); shown in the header strip with both cells.
+OFFICE_PHONE, OFFICE_TEL = "508-614-9598", "+15086149598"
 e = html.escape
 
 # --------------------------------------------------------------------------- data
@@ -224,12 +226,19 @@ def head(R, title, desc, extra_ld=None, canonical_path="", og_type="website", og
 <div id="live" class="visually-hidden" aria-live="polite"></div>
 <p class="demo-ribbon">Concept prototype: listings, future agents and form submissions are demonstrations. <a href="{R}index.html">Project overview</a></p>'''
 
+def contact_strip():
+    """The phone strip above the header row (theme: oberdorfer_contact_strip())."""
+    items = [("Brandon", BRANDON_PHONE, BRANDON_TEL), ("Kaitlyn", PHONE, TEL), ("Office", OFFICE_PHONE, OFFICE_TEL)]
+    lis = "".join(f'<li><a href="tel:{t}"><span>{l}</span>{p}</a></li>' for l, p, t in items)
+    return f'<div class="site-header__bar"><div class="container"><ul class="contact-strip" aria-label="Call us">{lis}</ul></div></div>'
+
 def header(R, active, overlay=False):
     links = "".join(f'<a href="{R}site/{h}"{" aria-current=page" if l == active else ""}>{l}</a>' for l, h in NAV if l != "Join Our Team")
     cls = "site-header" + (" site-header--overlay" if overlay else "")
     logo = f'{R}assets/logo/logo-compact-ivory.svg'
     mm = "".join(f'<li><a href="{R}site/{h}">{l}{" <span>Search homes</span>" if l=="Buy" else (" <span>Market review</span>" if l=="Sell" else "")}</a></li>' for l, h in NAV)
     return f'''<header class="{cls}">
+  {contact_strip()}
   <div class="container site-header__inner">
     <a class="site-header__brand" href="{R}site/"><img src="{logo}" alt="The Oberdorfer Team, home" width="320" height="68" style="height:2.1rem"></a>
     <nav class="nav" aria-label="Primary">{links}</nav>

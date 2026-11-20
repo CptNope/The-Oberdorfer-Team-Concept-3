@@ -5,7 +5,7 @@
  * Categories: oberdorfer, header
  * Block Types: core/template-part/header
  * Inserter: no
- * Description: Skip link, live region, staging ribbon, the sticky header (logo, primary navigation, search, team phone, menu button) and the mobile menu dialog. As the prototype's header().
+ * Description: Skip link, live region, staging ribbon, the sticky header (phone strip with Brandon's and Kaitlyn's cells and the office, logo, primary navigation, search, team phone, menu button) and the mobile menu dialog. As the prototype's header().
  *
  * The navigation links are a paragraph inside a <nav> group and the phone number is a button,
  * so the team edits them as text (Appearance > Editor > Patterns > Header). The logo, search
@@ -33,7 +33,11 @@ $links = implode( ' ', $links );
 <!-- /wp:html -->
 
 <!-- wp:group {"tagName":"header","className":"site-header","layout":{"type":"default"}} -->
-<header class="wp-block-group site-header"><!-- wp:group {"className":"container site-header__inner","layout":{"type":"default"}} -->
+<header class="wp-block-group site-header"><!-- wp:html -->
+<?php echo oberdorfer_contact_strip(); // phpcs:ignore WordPress.Security.EscapeOutput -- escaped in the helper ?>
+<!-- /wp:html -->
+
+<!-- wp:group {"className":"container site-header__inner","layout":{"type":"default"}} -->
 <div class="wp-block-group container site-header__inner"><!-- wp:html -->
 <a class="site-header__brand" href="<?php echo esc_url( oberdorfer_url( '/' ) ); ?>"><img src="<?php echo esc_url( oberdorfer_asset( 'assets/logo/logo-compact-ivory.svg' ) ); ?>" alt="The Oberdorfer Team, home" width="320" height="68" style="height:2.1rem"></a>
 <!-- /wp:html -->
