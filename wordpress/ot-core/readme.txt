@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.10.19
+Stable tag: 0.10.20
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,9 @@ Listings are off by default. Settings > Listings (IDX) switches the home search 
 If an SEO plugin is installed, only one of the two may print meta tags: add `define( 'OT_CORE_SEO_OUTPUT', false );` to wp-config.php to switch this plugin's output off.
 
 == Changelog ==
+
+= 0.10.20 =
+* Lender: an optional headshot (Settings > Lender, Headshot), shown beside the name on the lender's card.
 
 = 0.10.19 =
 * Lender: with no arrangement, the disclosure's first paragraph is the team's own statement, word for word (supplied and approved 2026-11-19); the lender's identification, NMLS and license numbers and Equal Housing Opportunity follow in a second paragraph.

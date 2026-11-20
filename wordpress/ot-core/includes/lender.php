@@ -40,6 +40,7 @@ function ot_lender_fields() {
 		'city'          => array( 'City', '' ),
 		'postcode'      => array( 'ZIP code', '' ),
 		'url'           => array( 'Lender\'s page', '' ),
+		'photo'         => array( 'Headshot', 'The image\'s address in the Media Library (Media > the image > Copy URL). Square works best; leave empty for no photo. Use the photo the lender supplied or approved.' ),
 		'intro'         => array( 'Introduction', 'Written by the team. No rates, payments, "best" or "lowest" claims, and nothing promising approval.' ),
 		'bio'           => array( 'About the lender', 'The lender\'s own words, word for word. Leave empty to hide.' ),
 		'bio_source'    => array( 'Source of those words', '' ),
@@ -133,6 +134,10 @@ function ot_render_lender() {
 	}
 	$bio  = $l['bio'] ? '<figure class="stack" style="--stack:var(--space-2);margin-inline:0"><blockquote class="body-s" style="margin:0">' . esc_html( $l['bio'] ) . '</blockquote>' . ( $l['bio_source'] ? '<figcaption class="caption">' . esc_html( $l['bio_source'] ) . '</figcaption>' : '' ) . '</figure>' : '';
 	$link = $l['url'] ? '<a class="link-arrow" href="' . esc_url( $l['url'] ) . '">' . esc_html( ( $l['company_short'] ?: $l['company'] ) . ': ' . $l['name'] ) . ' ' . ot_icon( 'external' ) . '</a>' : '';
+	$who  = '<div class="stack" style="--stack:var(--space-1)"><p class="label">Mortgage lender</p><h3 class="h3">' . esc_html( $l['name'] ) . '</h3><p class="body-s">' . esc_html( $l['title'] ) . ', ' . esc_html( $l['company'] ) . '</p></div>';
+	$head = $l['photo']
+		? '<div style="display:grid;grid-template-columns:clamp(4.5rem,3rem + 4vw,6.5rem) 1fr;gap:var(--space-5);align-items:center"><img src="' . esc_url( $l['photo'] ) . '" alt="" width="400" height="400" loading="lazy" style="width:100%;height:auto;aspect-ratio:1;object-fit:cover">' . $who . '</div>'
+		: $who;
 	return '<section class="section surface-muted" id="financing" aria-labelledby="lender-title">
   <div class="container split" style="align-items:start">
     <div class="stack" style="grid-column:1/span 5;--stack:var(--space-5)">
@@ -141,7 +146,7 @@ function ot_render_lender() {
       <p>' . esc_html( $l['intro'] ) . '</p>' . $bio . '
     </div>
     <div class="office-card" style="grid-column:7/span 6">
-      <div class="stack" style="--stack:var(--space-1)"><p class="label">Mortgage lender</p><h3 class="h3">' . esc_html( $l['name'] ) . '</h3><p class="body-s">' . esc_html( $l['title'] ) . ', ' . esc_html( $l['company'] ) . '</p></div>
+      ' . $head . '
       <dl>' . $rows . '</dl>' . $link . '
     </div>
   </div>
@@ -166,7 +171,7 @@ add_action( 'admin_post_ot_lender_save', function () {
 		$v         = (string) ( $in[ $k ] ?? '' );
 		$out[ $k ] = match ( $k ) {
 			'email'               => sanitize_email( $v ),
-			'url'                 => esc_url_raw( $v ),
+			'url', 'photo'        => esc_url_raw( $v ),
 			'intro', 'bio'        => sanitize_textarea_field( $v ),
 			default               => sanitize_text_field( $v ),
 		};
