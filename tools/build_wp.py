@@ -23,7 +23,7 @@ import build_site as S  # noqa: E402  (data and the tested title/description rul
 THEME = os.path.join(ROOT, "wordpress", "oberdorfer")
 CORE = os.path.join(ROOT, "wordpress", "ot-core")
 DIST = os.path.join(ROOT, "wordpress", "dist")
-VERSION = "0.10.17"
+VERSION = "0.10.18"
 
 ASSET_DIRS = ["assets/img/photo", "assets/logo"]
 ASSET_FILES = ["assets/css/tokens.css", "assets/css/base.css", "assets/css/components.css", "assets/css/site.css",
@@ -181,6 +181,8 @@ def content():
             # Drafts only: shown once the client agrees and REWAP approves (ot-core testimonials.php).
             "testimonials": [dict(t, url=REVIEWS["profiles"][t["agent"]][0]["url"]) for t in REVIEWS["testimonials"]]}
     os.makedirs(os.path.join(CORE, "data"), exist_ok=True)
+    # The lender's details: ot-core's defaults for Settings > Lender (lender.php).
+    shutil.copyfile(os.path.join(ROOT, "tools", "data", "lender.json"), os.path.join(CORE, "data", "lender.json"))
     with open(os.path.join(CORE, "data", "content.json"), "w") as f:
         json.dump(data, f, indent=1, ensure_ascii=False)
     return data

@@ -441,6 +441,50 @@ def page_home():
 {cta_panel(R)}'''
     write("", R, "Worcester & Massachusetts Real Estate | The Oberdorfer Team", "Brandon and Kaitlyn Oberdorfer are a husband-and-wife real estate team based in Worcester, helping buyers and sellers across Massachusetts. Call 978-257-4938.", "Home", body, overlay=False)
 
+LENDER = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "lender.json")))
+
+def nmls_url(kind, n): return f"https://www.nmlsconsumeraccess.org/EntityDetails.aspx/{kind}/{n}"
+
+def lender_disclosure(l, arrangement="none"):
+    """Same words as ot_lender_disclosure() in ot-core lender.php."""
+    co = e(l["company_short"] or l["company"])
+    money = (f"{co} pays its proportional share of the cost of advertising that features it. Neither The Oberdorfer Team nor REWAP Brokerage LLC receives any fee or other payment for referring you."
+             if arrangement == "shared" else
+             "Neither The Oberdorfer Team nor REWAP Brokerage LLC receives any fee, payment or anything else of value for this introduction.")
+    return (f"You are free to choose any lender, and using {co} is not a condition of working with us. {money} "
+            f"{e(l['company'])} is a separate company, not part of The Oberdorfer Team or REWAP Brokerage LLC. Loan approval, rates and terms come from the lender and depend on your application; this is not an offer or commitment to lend. "
+            f"{e(l['name'])}, NMLS ID {l['nmls']}. {e(l['company'])}, NMLS ID {l['company_nmls']}, Massachusetts Mortgage Broker and Lender license {l['ma_license']}. "
+            f'Check both on <a href="https://www.nmlsconsumeraccess.org/">NMLS Consumer Access</a>. Equal Housing Opportunity.')
+
+def lender_section(R):
+    """The Buy page's financing section (ot-core ot_render_lender()). On the live site it shows only once
+    the arrangement is recorded and REWAP and the lender approve; here it carries a To confirm badge."""
+    l = LENDER
+    tel = lambda n, x="": "tel:+1" + re.sub(r"\D", "", n) + ("," + x if x else "")
+    rows = (f'<dt>NMLS ID</dt><dd><a href="{nmls_url("INDIVIDUAL", l["nmls"])}">{l["nmls"]}</a></dd>'
+            f'<dt>Company NMLS</dt><dd><a href="{nmls_url("COMPANY", l["company_nmls"])}">{l["company_nmls"]}</a></dd>'
+            f'<dt>MA license</dt><dd>Mortgage Broker and Lender {l["ma_license"]}</dd>'
+            f'<dt>Office</dt><dd><a href="{tel(l["office"], l["office_ext"])}">{l["office"]} ext. {l["office_ext"]}</a></dd>'
+            f'<dt>Mobile</dt><dd><a href="{tel(l["mobile"])}">{l["mobile"]}</a></dd>'
+            f'<dt>Email</dt><dd style="overflow-wrap:anywhere"><a href="mailto:{l["email"]}">{l["email"]}</a></dd>'
+            f'<dt>Office address</dt><dd>{e(l["street"])}, {l["city"]}, MA {l["postcode"]}</dd>')
+    bio = f'<figure class="stack" style="--stack:var(--space-2);margin-inline:0"><blockquote class="body-s" style="margin:0">{e(l["bio"])}</blockquote><figcaption class="caption">{e(l["bio_source"])}</figcaption></figure>'
+    return f'''
+<section class="section surface-muted" id="financing" aria-labelledby="lender-title">
+  <div class="container split" style="align-items:start">
+    <div class="stack" style="grid-column:1/span 5;--stack:var(--space-5)">
+      <p class="label">Financing <span class="badge badge--verify">To confirm: REWAP and lender approval</span></p>
+      <h2 class="display-m answer" id="lender-title"><span>Start with</span><span>a preapproval.</span></h2>
+      <p>{e(l["intro"])}</p>{bio}
+    </div>
+    <div class="office-card" style="grid-column:7/span 6">
+      <div class="stack" style="--stack:var(--space-1)"><p class="label">Mortgage lender</p><h3 class="h3">{e(l["name"])}</h3><p class="body-s">{e(l["title"])}, {e(l["company"])}</p></div>
+      <dl>{rows}</dl><a class="link-arrow" href="{l["url"]}">{e(l["company_short"])}: {e(l["name"])} {icon(R,"external")}</a>
+    </div>
+  </div>
+  <div class="container"><p class="caption" style="margin-top:var(--space-6);max-width:80ch">{lender_disclosure(l)}</p></div>
+</section>'''
+
 def page_buy():
     R = "../../"
     cards = "".join(listing_card(R, l, f"{R}site/buy/{l['slug']}/") for l in LISTINGS)
@@ -505,6 +549,8 @@ def page_buy():
     <p class="caption" style="margin-top:var(--space-5)">Sources: <a href="https://www.nolo.com/legal-encyclopedia/relocating-what-know-before-buying-home-massachusetts.html">Nolo, Relocating to Massachusetts</a>; <a href="https://www.mass.gov/service-details/property-transfer-lead-paint-notification">Mass.gov, Property Transfer Lead Paint Notification</a>; <a href="https://www.mass.gov/guides/buying-or-selling-property-with-a-septic-system">Mass.gov, Buying or selling property with a septic system</a>. General information, not legal advice; your attorney confirms the details for your purchase.</p>
   </div>
 </section>
+
+{lender_section(R)}
 
 <section class="section" aria-labelledby="buyer-form-title">
   <div class="container split" style="align-items:start">

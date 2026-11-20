@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 function oberdorfer_page_sections() {
 	return array(
 		'home' => array( 'home-cover', 'team-intro', 'featured-listings', 'buy-sell-paths', 'promise-band', 'communities-grid', 'market-teaser', 'team-standard', 'journal-latest', 'closing-cta' ),
-		'buy' => array( 'page-hero-buy', 'team-listings', 'idx-search-results', 'buyer-steps', 'buying-in-massachusetts', 'buyer-consultation' ),
+		'buy' => array( 'page-hero-buy', 'team-listings', 'idx-search-results', 'buyer-steps', 'buying-in-massachusetts', 'preferred-lender', 'buyer-consultation' ),
 		'sell' => array( 'page-hero-sell', 'seller-steps', 'fall-edit', 'presentation-feature', 'selling-in-massachusetts', 'review-form', 'closing-cta' ),
 		'market' => array( 'page-hero-market', 'market-stats', 'town-market-table', 'market-spotlight', 'sold-vs-asking', 'closing-cta-market' ),
 		'team' => array( 'page-hero-team', 'agent-directory', 'join-teaser' ),

@@ -91,6 +91,11 @@ function ot_block_definitions() {
 			'attrs'    => array( 'section' => array( 'type' => 'string', 'default' => 'hero', 'enum' => array( 'hero', 'badge', 'location', 'price', 'gallery', 'facts', 'specs', 'aside', 'details', 'more', 'actions', 'media', 'estimator' ) ) ),
 			'render'   => fn( $a, $b ) => ot_render_listing_section( $a['section'] ?? 'hero', ot_block_post_id( $b ) ),
 		),
+		'ot/lender'               => array(
+			'title'    => 'Lender (financing section)',
+			'attrs'    => array(),
+			'render'   => fn( $a, $b ) => ot_render_lender(),
+		),
 		'ot/listings-placeholder' => array(
 			'title'    => 'Listings (IDX placeholder)',
 			'attrs'    => array( 'heading' => array( 'type' => 'string', 'default' => 'Homes for sale' ) ),

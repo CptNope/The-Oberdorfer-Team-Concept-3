@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.10.17
+Stable tag: 0.10.18
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,9 @@ Fonts: Cormorant Garamond and Manrope (SIL Open Font License 1.1), loaded from G
 this version; self-hosting is a launch task.
 
 == Changelog ==
+
+= 0.10.18 =
+* Buy page: a Financing section (pattern preferred-lender, the ot/lender block) between Buying in Massachusetts and the buyer consultation. It shows nothing until the lender is approved in Settings > Lender.
 
 = 0.10.17 =
 * Version moves with the release (no changes).
