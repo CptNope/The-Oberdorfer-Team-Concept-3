@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.10.22
+Stable tag: 0.10.23
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,9 @@ Fonts: Cormorant Garamond and Manrope (SIL Open Font License 1.1), loaded from G
 this version; self-hosting is a launch task.
 
 == Changelog ==
+
+= 0.10.23 =
+* Header: two gold phone boxes, Brandon (406-250-7620) and Kaitlyn (978-257-4938); the office line is no longer shown. The menu now folds into the menu button below 76rem instead of 84rem.
 
 = 0.10.22 =
 * Header: the phone strip and the single gold call button become three labelled gold phone boxes side by side: Brandon (406-250-7620), Kaitlyn (978-257-4938) and Office (508-614-9598). Below 84rem the menu moves into the menu button so the boxes keep their room; on phones they take their own row under the logo.

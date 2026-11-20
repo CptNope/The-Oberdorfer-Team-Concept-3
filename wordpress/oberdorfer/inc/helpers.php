@@ -18,12 +18,11 @@ const OBERDORFER_BRANDON_TEL   = '+14062507620';
 const OBERDORFER_OFFICE_PHONE  = '508-614-9598'; // the office line, from the team (2026-11-19)
 const OBERDORFER_OFFICE_TEL    = '+15086149598';
 
-/** Three labelled gold phone boxes in the header: Brandon's cell, Kaitlyn's cell, the office (prototype phone_boxes()). */
+/** Two labelled gold phone boxes in the header: Brandon's cell and Kaitlyn's cell (prototype phone_boxes()). The office line is kept for later but not shown (team's request, 2026-11-19). */
 function oberdorfer_phone_boxes() {
 	$items = array(
 		array( 'Brandon', OBERDORFER_BRANDON_PHONE, OBERDORFER_BRANDON_TEL ),
 		array( 'Kaitlyn', OBERDORFER_PHONE, OBERDORFER_TEL ),
-		array( 'Office', OBERDORFER_OFFICE_PHONE, OBERDORFER_OFFICE_TEL ),
 	);
 	$li = '';
 	foreach ( $items as $i ) {

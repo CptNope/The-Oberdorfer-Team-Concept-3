@@ -14,7 +14,7 @@ OUT = os.path.join(ROOT, "site")
 # The team line is Kaitlyn's cell (the team's choice, 2026-11-10); Brandon's own line stays his.
 PHONE, TEL = "978-257-4938", "+19782574938"
 BRANDON_PHONE, BRANDON_TEL = "406-250-7620", "+14062507620"
-# The office line, from the team (2026-11-19); shown in the header strip with both cells.
+# The office line, from the team (2026-11-19). Not shown: the team asked the same day for only the two cells in the header.
 OFFICE_PHONE, OFFICE_TEL = "508-614-9598", "+15086149598"
 e = html.escape
 
@@ -227,8 +227,8 @@ def head(R, title, desc, extra_ld=None, canonical_path="", og_type="website", og
 <p class="demo-ribbon">Concept prototype: listings, future agents and form submissions are demonstrations. <a href="{R}index.html">Project overview</a></p>'''
 
 def phone_boxes():
-    """Three labelled gold phone boxes in the header (theme: oberdorfer_phone_boxes())."""
-    items = [("Brandon", BRANDON_PHONE, BRANDON_TEL), ("Kaitlyn", PHONE, TEL), ("Office", OFFICE_PHONE, OFFICE_TEL)]
+    """Two labelled gold phone boxes in the header (the office line was taken off 2026-11-19) (theme: oberdorfer_phone_boxes())."""
+    items = [("Brandon", BRANDON_PHONE, BRANDON_TEL), ("Kaitlyn", PHONE, TEL)]
     lis = "".join(f'<li><a class="phone-box" href="tel:{t}"><span>{l}</span>{p}</a></li>' for l, p, t in items)
     return f'<ul class="phone-boxes" aria-label="Call us">{lis}</ul>'
 

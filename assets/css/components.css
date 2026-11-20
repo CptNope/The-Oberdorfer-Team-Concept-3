@@ -76,7 +76,7 @@
   background: var(--ot-navy); color: var(--ot-ivory);
   transition: background-color var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out), padding var(--dur-base) var(--ease-out);
 }
-/* phone boxes in the header: Brandon's cell, Kaitlyn's cell, the office, side by side (team's request, 2026-11-19) */
+/* phone boxes in the header: Brandon's cell and Kaitlyn's cell, side by side (team's request, 2026-11-19) */
 .phone-boxes { display: flex; gap: var(--space-2); list-style: none; margin: 0; padding: 0; }
 .phone-box {
   display: grid; gap: 0.3rem; padding: 0.5rem 0.8rem; min-width: 7.5rem;
@@ -127,8 +127,8 @@
 .mobile-menu a { display: flex; justify-content: space-between; gap: var(--space-4); padding: 1.1rem 0; color: var(--ot-ivory); text-decoration: none; font: 300 1.875rem/1.1 var(--font-display); }
 .mobile-menu a span { font: 600 0.7rem/1 var(--font-sans); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ot-gold); align-self: center; }
 .mobile-menu__foot { margin-top: var(--space-7); display: grid; gap: var(--space-4); }
-/* the menu moves into the menu button sooner, so the phone boxes keep their room */
-@media (max-width: 84rem) {
+/* the menu moves into the menu button a little sooner, so the phone boxes keep their room */
+@media (max-width: 76rem) {
   .nav, .site-header__actions .btn { display: none; }
   .nav-toggle { display: inline-grid; }
   .mobile-menu { display: block; }
@@ -139,7 +139,7 @@
 @media (max-width: 48rem) {
   .site-header__inner { flex-wrap: wrap; row-gap: var(--space-3); column-gap: var(--space-3); min-height: 0; padding-top: var(--space-3); }
   .site-header__brand { min-height: 2.75rem; }
-  .site-header__inner > .phone-boxes { order: 4; flex: 1 0 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding-bottom: var(--space-3); }
+  .site-header__inner > .phone-boxes { order: 4; flex: 1 0 100%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); padding-bottom: var(--space-3); }
   .phone-box { min-width: 0; padding: 0.5rem 0.55rem; font-size: 0.75rem; letter-spacing: 0.01em; }
 }
 @media (max-width: 24rem) {

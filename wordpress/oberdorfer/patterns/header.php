@@ -5,7 +5,7 @@
  * Categories: oberdorfer, header
  * Block Types: core/template-part/header
  * Inserter: no
- * Description: Skip link, live region, staging ribbon, the sticky header (logo, primary navigation, search, three gold phone boxes for Brandon's cell, Kaitlyn's cell and the office, menu button) and the mobile menu dialog. As the prototype's header().
+ * Description: Skip link, live region, staging ribbon, the sticky header (logo, primary navigation, search, two gold phone boxes for Brandon's and Kaitlyn's cells, menu button) and the mobile menu dialog. As the prototype's header().
  *
  * The navigation links are a paragraph inside a <nav> group and the phone boxes come from oberdorfer_phone_boxes(),
  * so the team edits them as text (Appearance > Editor > Patterns > Header). The logo, search
