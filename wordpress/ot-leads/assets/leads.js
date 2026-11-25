@@ -39,8 +39,35 @@
 			widgets.push( { el: el, id: window.turnstile.render( el, { sitekey: el.getAttribute( 'data-sitekey' ), size: 'flexible', appearance: 'interaction-only' } ) } );
 		} );
 	}
-	if ( cfg.turnstile ) {
-		var tries = 0, t = setInterval( function () { tries++; if ( window.turnstile ) { clearInterval( t ); renderTurnstile(); } else if ( tries > 40 ) { clearInterval( t ); } }, 250 );
+	// Turnstile's script loads only when a protected form is near the screen or in use, so pages
+	// whose only form is the footer sign-up don't download it up front (PageSpeed, v0.10.24).
+	var tsRequested = false;
+	function loadTurnstile() {
+		if ( tsRequested || ! cfg.turnstileSrc ) { return; }
+		tsRequested = true;
+		var s = document.createElement( 'script' );
+		s.src = cfg.turnstileSrc;
+		s.async = true;
+		s.onload = renderTurnstile;
+		document.head.appendChild( s );
+	}
+	var tsEls = cfg.turnstile ? document.querySelectorAll( '.ot-turnstile' ) : [];
+	if ( tsEls.length ) {
+		if ( 'IntersectionObserver' in window ) {
+			var io = new IntersectionObserver( function ( entries ) {
+				if ( entries.some( function ( e ) { return e.isIntersecting; } ) ) { io.disconnect(); loadTurnstile(); }
+			}, { rootMargin: '600px 0px' } );
+			Array.prototype.forEach.call( tsEls, function ( el ) { io.observe( el ); } );
+		} else {
+			loadTurnstile();
+		}
+		document.addEventListener( 'focusin', function ( e ) { if ( e.target.closest && e.target.closest( 'form' ) ) { loadTurnstile(); } } );
+	}
+	// Before sending, give the check up to 10 seconds to finish if it has not yet.
+	function whenToken( form, go ) {
+		if ( ! cfg.turnstile || ! form.querySelector( '.ot-turnstile' ) || tokenFor( form ) ) { go(); return; }
+		loadTurnstile();
+		var n = 0, t = setInterval( function () { n++; if ( tokenFor( form ) || n > 40 ) { clearInterval( t ); go(); } }, 250 );
 	}
 	function tokenFor( form ) {
 		var w = widgets.filter( function ( x ) { return form.contains( x.el ); } )[ 0 ];
@@ -121,7 +148,7 @@
 			status( form, false, 'A few details are missing.', 'Fix the highlighted fields and send again.' );
 			return;
 		}
-		send( form, function ( good, msg ) {
+		whenToken( form, function () { send( form, function ( good, msg ) {
 			if ( form.hasAttribute( 'data-newsletter' ) ) {
 				var b = form.querySelector( 'button' );
 				if ( good && b ) { b.textContent = 'Subscribed'; b.disabled = true; }
@@ -134,7 +161,7 @@
 			} else {
 				status( form, false, 'Not sent.', msg );
 			}
-		} );
+		} ); } );
 	}, true );
 
 	// The theme's demo validation also attached to these forms: drop its marker so it stays idle.

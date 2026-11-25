@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.10.23
+Stable tag: 0.10.24
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,9 @@ Fonts: Cormorant Garamond and Manrope (SIL Open Font License 1.1), loaded from G
 this version; self-hosting is a launch task.
 
 == Changelog ==
+
+= 0.10.24 =
+* Speed: the five stylesheets load as one minified file (assets/css/bundle.css, built by tools/build_wp.py; the editor still uses the separate files), and theme photos get a srcset of 640 and 960 pixel copies plus width and height, so phones download a fraction of each image. Mobile PageSpeed found the home page's main image 2 to 3 times larger than needed.
 
 = 0.10.23 =
 * Header: two gold phone boxes, Brandon (406-250-7620) and Kaitlyn (978-257-4938); the office line is no longer shown. The menu now folds into the menu button below 76rem instead of 84rem.

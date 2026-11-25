@@ -51,10 +51,16 @@ remove_action( 'wp_footer', 'the_block_template_skip_link' );
  */
 add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style( 'oberdorfer-fonts', OBERDORFER_FONTS, array(), null );
-	$prev = array( 'oberdorfer-fonts' );
-	foreach ( oberdorfer_stylesheets() as $handle => $path ) {
-		wp_enqueue_style( $handle, get_theme_file_uri( $path ), $prev, OBERDORFER_VERSION );
-		$prev = array( $handle );
+	// One minified file built by tools/build_wp.py from the five below (v0.10.24); the separate
+	// files are the fallback and what the editor loads.
+	if ( is_readable( get_theme_file_path( 'assets/css/bundle.css' ) ) ) {
+		wp_enqueue_style( 'oberdorfer-bundle', get_theme_file_uri( 'assets/css/bundle.css' ), array( 'oberdorfer-fonts' ), OBERDORFER_VERSION );
+	} else {
+		$prev = array( 'oberdorfer-fonts' );
+		foreach ( oberdorfer_stylesheets() as $handle => $path ) {
+			wp_enqueue_style( $handle, get_theme_file_uri( $path ), $prev, OBERDORFER_VERSION );
+			$prev = array( $handle );
+		}
 	}
 	$js = array( 'in_footer' => true, 'strategy' => 'defer' );
 	wp_enqueue_script( 'oberdorfer-site', get_theme_file_uri( 'assets/js/site.js' ), array(), OBERDORFER_VERSION, $js );
@@ -284,3 +290,56 @@ add_filter( 'render_block_core/image', function ( $html, $block ) {
 	}
 	return $html;
 }, 10, 2 );
+
+/* --------------------------------------------------------------------- responsive photos */
+
+/**
+ * Give every theme photo (assets/img/photo/*.webp) a srcset of its smaller copies (built by
+ * tools/build_wp.py: name-640.webp, name-960.webp), sizes, and width and height, so phones
+ * download a fraction of the full image and the browser can reserve its space (v0.10.24).
+ */
+function oberdorfer_photo_srcset( $html ) {
+	if ( false === strpos( $html, '/assets/img/photo/' ) || ! class_exists( 'WP_HTML_Tag_Processor' ) ) {
+		return $html;
+	}
+	static $dims = array();
+	// Patterns print theme URLs root-relative (/wp-content/...), so compare paths, and build the
+	// smaller copies' URLs on the same prefix as the src.
+	$base = trailingslashit( (string) wp_parse_url( get_theme_file_uri( 'assets/img/photo' ), PHP_URL_PATH ) );
+	$dir  = trailingslashit( get_theme_file_path( 'assets/img/photo' ) );
+	$p    = new WP_HTML_Tag_Processor( $html );
+	while ( $p->next_tag( 'img' ) ) {
+		$src  = (string) $p->get_attribute( 'src' );
+		$path = (string) wp_parse_url( $src, PHP_URL_PATH );
+		if ( 0 !== strpos( $path, $base ) || $p->get_attribute( 'srcset' ) || ! preg_match( '/^([\w-]+)\.webp$/', substr( $path, strlen( $base ) ), $m ) ) {
+			continue;
+		}
+		$prefix = substr( $src, 0, strrpos( $src, '/' ) + 1 );
+		$name = $m[1];
+		if ( ! isset( $dims[ $name ] ) ) {
+			$size           = is_readable( $dir . $name . '.webp' ) ? wp_getimagesize( $dir . $name . '.webp' ) : false;
+			$dims[ $name ]  = $size ? array( (int) $size[0], (int) $size[1] ) : array( 0, 0 );
+		}
+		list( $w, $h ) = $dims[ $name ];
+		if ( ! $w ) {
+			continue;
+		}
+		$set = array();
+		foreach ( array( 640, 960 ) as $v ) {
+			if ( is_readable( $dir . $name . '-' . $v . '.webp' ) ) {
+				$set[] = $prefix . $name . '-' . $v . '.webp ' . $v . 'w';
+			}
+		}
+		if ( $set ) {
+			$set[] = $src . ' ' . $w . 'w';
+			$p->set_attribute( 'srcset', implode( ', ', $set ) );
+			$p->set_attribute( 'sizes', $w / $h > 1.6 ? '100vw' : '(max-width: 48rem) 100vw, 50vw' );
+		}
+		if ( ! $p->get_attribute( 'width' ) ) {
+			$p->set_attribute( 'width', (string) $w );
+			$p->set_attribute( 'height', (string) $h );
+		}
+	}
+	return $p->get_updated_html();
+}
+add_filter( 'render_block', 'oberdorfer_photo_srcset', 20 );

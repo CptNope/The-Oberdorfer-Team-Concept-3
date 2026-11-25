@@ -145,7 +145,7 @@ function ot_render_person_section( $section, $x ) {
 	if ( $x['partner'] ) {
 		$pr  = $x['partner']['rec'];
 		$rel = (string) ( $x['r']['relation'] ?? '' );
-		$partner_html = '<div class="panel"><p class="label">Works alongside</p><a class="agent-mini" href="' . esc_url( $x['partner']['url'] ) . '" style="text-decoration:none;color:inherit"><img src="' . esc_url( $pr['photo_url'] ) . '" alt="" width="' . (int) ( $pr['photo_w'] ?? 440 ) . '" height="' . (int) ( $pr['photo_h'] ?? 550 ) . '"><span><span class="agent-mini__name">' . esc_html( $pr['name'] ) . '</span><br><span class="agent-mini__meta">' . esc_html( $pr['role'] ) . ' · ' . esc_html( ucfirst( $rel ) ) . '</span></span></a>' . ot_link_arrow( ot_agent_url( 'brandon-kaitlyn-oberdorfer' ), 'Their story together' ) . '</div>';
+		$partner_html = '<div class="panel"><p class="label">Works alongside</p><a class="agent-mini" href="' . esc_url( $x['partner']['url'] ) . '" style="text-decoration:none;color:inherit"><img src="' . esc_url( $pr['photo_url'] ) . '" alt="" width="' . (int) ( $pr['photo_w'] ?? 440 ) . '" height="' . (int) ( $pr['photo_h'] ?? 550 ) . '"><span><span class="agent-mini__name">' . esc_html( $pr['name'] ) . '</span><br><span class="agent-mini__meta">' . esc_html( $pr['role'] ) . ' · ' . esc_html( ucfirst( $rel ) ) . '</span></span></a>' . ot_link_arrow( ot_team_page_url(), 'Their story together' ) . '</div>';
 	}
 	$host    = ot_agent_booking_host( $x );
 	$book    = '' !== $host ? '<a class="btn btn--secondary" href="#book-agent">Book a call</a>' : '';

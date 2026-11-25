@@ -108,11 +108,10 @@ add_action( 'wp_enqueue_scripts', function () {
 		'phone'     => OT_PHONE,
 		'endpoint'  => esc_url_raw( rest_url( 'ot-leads/v1/' ) ),
 		'turnstile' => (string) ot_leads_opt( 'turnstile_site' ),
+		// Loaded by leads.js only when a protected form is near the screen or in use.
+		'turnstileSrc' => 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit',
 		'icons'     => function_exists( 'ot_asset' ) ? ot_asset( 'assets/img/icons.svg' ) : '',
 	) );
-	if ( ot_leads_opt( 'turnstile_site' ) ) {
-		wp_enqueue_script( 'cf-turnstile', 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit', array(), null, array( 'in_footer' => true, 'strategy' => 'defer' ) ); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
-	}
 }, 20 );
 
 /* --------------------------------------------------------------------- REST */

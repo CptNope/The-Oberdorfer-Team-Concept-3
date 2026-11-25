@@ -23,7 +23,7 @@ import build_site as S  # noqa: E402  (data and the tested title/description rul
 THEME = os.path.join(ROOT, "wordpress", "oberdorfer")
 CORE = os.path.join(ROOT, "wordpress", "ot-core")
 DIST = os.path.join(ROOT, "wordpress", "dist")
-VERSION = "0.10.23"
+VERSION = "0.10.24"
 
 ASSET_DIRS = ["assets/img/photo", "assets/logo"]
 ASSET_FILES = ["assets/css/tokens.css", "assets/css/base.css", "assets/css/components.css", "assets/css/site.css",
@@ -55,12 +55,52 @@ def theme_json():
         f.write("\n")
 
 
+def css_bundle():
+    """One minified stylesheet for the front end (assets/css/bundle.css), in the cascade order of
+    oberdorfer_stylesheets(): one request instead of five render-blocking ones (PageSpeed,
+    v0.10.24). The editor still loads the separate files."""
+    parts = []
+    for f in ("tokens", "base", "components", "site", "wp"):
+        src = os.path.join(THEME, "assets", "css", f + ".css")
+        with open(src) as fh:
+            css = fh.read()
+        css = re.sub(r"/\*.*?\*/", "", css, flags=re.S)
+        css = re.sub(r"\s+", " ", css)
+        css = re.sub(r"\s*([{};,>])\s*", r"\1", css)
+        css = css.replace(";}", "}")
+        parts.append(css.strip())
+    with open(os.path.join(THEME, "assets", "css", "bundle.css"), "w") as fh:
+        fh.write("\n".join(parts) + "\n")
+
+
+PHOTO_WIDTHS = (640, 960)
+
+
+def photo_variants():
+    """Smaller copies of each theme photo (name-640.webp, name-960.webp) for srcset, so phones
+    don't download the full-size image (PageSpeed, v0.10.24). The theme's oberdorfer_photo_srcset()
+    adds them to any <img> that shows the original."""
+    from PIL import Image
+    photo_dir = os.path.join(THEME, "assets", "img", "photo")
+    for name in sorted(os.listdir(photo_dir)):
+        if not name.endswith(".webp"):
+            continue
+        with Image.open(os.path.join(photo_dir, name)) as im:
+            for w in PHOTO_WIDTHS:
+                if im.width <= w * 1.2:
+                    continue
+                small = im.resize((w, round(im.height * w / im.width)), Image.LANCZOS)
+                small.save(os.path.join(photo_dir, name[:-5] + f"-{w}.webp"), "WEBP", quality=78, method=6)
+
+
 def copy_assets():
     for d in ASSET_DIRS:
         dst = os.path.join(THEME, d)
         if os.path.isdir(dst):
             shutil.rmtree(dst)
         shutil.copytree(os.path.join(ROOT, d), dst, ignore=shutil.ignore_patterns("*-contact.jpg"))
+    photo_variants()
+    css_bundle()
     for f in ASSET_FILES:
         dst = os.path.join(THEME, f)
         os.makedirs(os.path.dirname(dst), exist_ok=True)
