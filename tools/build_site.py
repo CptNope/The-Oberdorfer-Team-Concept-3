@@ -299,6 +299,16 @@ def add_img_dims(doc):
         return tag
     return re.sub(r"<img\b[^>]*>", fix, doc)
 
+ANSWER_RE = re.compile(r'(<(h[1-6]|p)\b[^>]*class="[^"]*\banswer\b[^"]*"[^>]*>)(.*?)(</\2>)', re.S)
+
+
+def answer_spaces(doc):
+    """Display headings set each line in its own <span> (display:block). A space between the
+    spans changes nothing on screen, but without it search engines and AI tools read the lines run
+    together ("Husband. Wife.Your Team."). Theme: oberdorfer_answer_spaces()."""
+    return ANSWER_RE.sub(lambda m: m.group(1) + m.group(3).replace("</span><span", "</span> <span") + m.group(4), doc)
+
+
 def write(rel, R, title, desc, active, body, overlay=False, ld=None, og_type="website", og_image=None, index=True):
     path = os.path.join(OUT, rel, "index.html")
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -310,6 +320,7 @@ def write(rel, R, title, desc, active, body, overlay=False, ld=None, og_type="we
     if m:
         src = re.search(r'src="([^"]+)"', m.group(0)).group(1)
         doc = doc.replace('<link rel="preconnect"', f'<link rel="preload" as="image" href="{src}" fetchpriority="high">\n<link rel="preconnect"', 1)
+    doc = answer_spaces(doc)
     with open(path, "w") as f: f.write(doc)
     print("wrote", os.path.relpath(path, ROOT))
 

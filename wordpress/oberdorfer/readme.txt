@@ -41,6 +41,7 @@ this version; self-hosting is a launch task.
 == Changelog ==
 
 = 0.10.26 =
+* SEO: display headings put a space between their line spans, so search engines and AI tools read "Husband. Wife. Your Team." instead of "Husband. Wife.Your Team." (from the ROIlift SEO audit). Nothing changes on screen.
 * Fonts: Cormorant Garamond and Manrope are served from the theme (assets/fonts, WOFF2, Latin subset) instead of Google Fonts, with the two most used files preloaded. Pages no longer wait on fonts.googleapis.com and fonts.gstatic.com, and visitors' browsers no longer connect to Google. The privacy policy says so (updated November 25, 2026).
 
 = 0.10.25 =

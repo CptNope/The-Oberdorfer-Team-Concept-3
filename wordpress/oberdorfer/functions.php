@@ -345,3 +345,20 @@ function oberdorfer_photo_srcset( $html ) {
 	return $p->get_updated_html();
 }
 add_filter( 'render_block', 'oberdorfer_photo_srcset', 20 );
+
+/**
+ * Display headings set each line in its own <span> (display:block). Put a space between the spans:
+ * nothing changes on screen, but search engines and AI tools no longer read the lines run together
+ * ("Husband. Wife.Your Team."; found by an SEO audit, 2026-11-25). Prototype: answer_spaces().
+ */
+function oberdorfer_answer_spaces( $html ) {
+	if ( false === strpos( $html, 'answer' ) || false === strpos( $html, '</span><span' ) ) {
+		return $html;
+	}
+	return (string) preg_replace_callback(
+		'#(<(h[1-6]|p)\b[^>]*class="[^"]*\banswer\b[^"]*"[^>]*>)(.*?)(</\2>)#s',
+		fn( $m ) => $m[1] . str_replace( '</span><span', '</span> <span', $m[3] ) . $m[4],
+		$html
+	);
+}
+add_filter( 'render_block', 'oberdorfer_answer_spaces', 21 );
