@@ -79,11 +79,11 @@ def copy_assets():
         if os.path.isdir(dst):
             shutil.rmtree(dst)
         shutil.copytree(os.path.join(ROOT, d), dst, ignore=shutil.ignore_patterns("*-contact.jpg"))
-    css_bundle()
     for f in ASSET_FILES:
         dst = os.path.join(THEME, f)
         os.makedirs(os.path.dirname(dst), exist_ok=True)
         shutil.copyfile(os.path.join(ROOT, f), dst)
+    css_bundle()  # after the stylesheets above are copied in
     # The privacy policy text, one source for the prototype and the theme's pattern.
     os.makedirs(os.path.join(THEME, "data"), exist_ok=True)
     for name in ("privacy-policy", "accessibility-statement", "terms-of-use"):
