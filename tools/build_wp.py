@@ -23,7 +23,7 @@ import build_site as S  # noqa: E402  (data and the tested title/description rul
 THEME = os.path.join(ROOT, "wordpress", "oberdorfer")
 CORE = os.path.join(ROOT, "wordpress", "ot-core")
 DIST = os.path.join(ROOT, "wordpress", "dist")
-VERSION = "0.10.24"
+VERSION = "0.10.25"
 
 ASSET_DIRS = ["assets/img/photo", "assets/logo"]
 ASSET_FILES = ["assets/css/tokens.css", "assets/css/base.css", "assets/css/components.css", "assets/css/site.css",
@@ -58,7 +58,7 @@ def theme_json():
 def css_bundle():
     """One minified stylesheet for the front end (assets/css/bundle.css), in the cascade order of
     oberdorfer_stylesheets(): one request instead of five render-blocking ones (PageSpeed,
-    v0.10.24). The editor still loads the separate files."""
+    v0.10.25). The editor still loads the separate files."""
     parts = []
     for f in ("tokens", "base", "components", "site", "wp"):
         src = os.path.join(THEME, "assets", "css", f + ".css")

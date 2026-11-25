@@ -295,7 +295,7 @@ add_filter( 'render_block_core/image', function ( $html, $block ) {
 
 /**
  * Give every theme photo (assets/img/photo/*.webp) a srcset of its smaller copies (made by
- * tools/build_photo_sizes.py: name-640.webp, name-960.webp), sizes, and width and height, so phones
+ * tools/build_photo_sizes.py: name-640, -800 and -960.webp), sizes, and width and height, so phones
  * download a fraction of the full image and the browser can reserve its space (v0.10.24).
  */
 function oberdorfer_photo_srcset( $html ) {
@@ -325,7 +325,7 @@ function oberdorfer_photo_srcset( $html ) {
 			continue;
 		}
 		$set = array();
-		foreach ( array( 640, 960 ) as $v ) {
+		foreach ( array( 640, 800, 960 ) as $v ) {
 			if ( is_readable( $dir . $name . '-' . $v . '.webp' ) ) {
 				$set[] = $prefix . $name . '-' . $v . '.webp ' . $v . 'w';
 			}

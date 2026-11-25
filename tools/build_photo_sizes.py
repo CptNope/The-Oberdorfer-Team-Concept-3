@@ -10,7 +10,7 @@ from PIL import Image
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PHOTO_DIR = os.path.join(ROOT, "assets", "img", "photo")
-WIDTHS = (640, 960)
+WIDTHS = (640, 800, 960)
 
 
 def main():
@@ -20,7 +20,7 @@ def main():
         with Image.open(os.path.join(PHOTO_DIR, name)) as im:
             for w in WIDTHS:
                 out = os.path.join(PHOTO_DIR, name[:-5] + f"-{w}.webp")
-                if im.width <= w * 1.2:
+                if im.width <= w * 1.05:
                     if os.path.exists(out):
                         os.remove(out)
                     continue
