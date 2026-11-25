@@ -37,6 +37,12 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if gh release view "v$VERSION" >/dev/null 2>&1; then
+            # A draft left half-uploaded by a GitHub outage (2026-11-25) is finished, not skipped.
+            if [ "$(gh release view "v$VERSION" --json isDraft -q .isDraft)" = "true" ]; then
+              gh release upload "v$VERSION" wordpress/dist/oberdorfer.zip wordpress/dist/ot-core.zip wordpress/dist/ot-leads.zip --clobber
+              gh release edit "v$VERSION" --draft=false
+              exit 0
+            fi
             echo "Release v$VERSION already exists; bump the version to publish again."
             exit 0
           fi
