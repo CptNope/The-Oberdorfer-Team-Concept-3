@@ -73,33 +73,12 @@ def css_bundle():
         fh.write("\n".join(parts) + "\n")
 
 
-PHOTO_WIDTHS = (640, 960)
-
-
-def photo_variants():
-    """Smaller copies of each theme photo (name-640.webp, name-960.webp) for srcset, so phones
-    don't download the full-size image (PageSpeed, v0.10.24). The theme's oberdorfer_photo_srcset()
-    adds them to any <img> that shows the original."""
-    from PIL import Image
-    photo_dir = os.path.join(THEME, "assets", "img", "photo")
-    for name in sorted(os.listdir(photo_dir)):
-        if not name.endswith(".webp"):
-            continue
-        with Image.open(os.path.join(photo_dir, name)) as im:
-            for w in PHOTO_WIDTHS:
-                if im.width <= w * 1.2:
-                    continue
-                small = im.resize((w, round(im.height * w / im.width)), Image.LANCZOS)
-                small.save(os.path.join(photo_dir, name[:-5] + f"-{w}.webp"), "WEBP", quality=78, method=6)
-
-
 def copy_assets():
     for d in ASSET_DIRS:
         dst = os.path.join(THEME, d)
         if os.path.isdir(dst):
             shutil.rmtree(dst)
         shutil.copytree(os.path.join(ROOT, d), dst, ignore=shutil.ignore_patterns("*-contact.jpg"))
-    photo_variants()
     css_bundle()
     for f in ASSET_FILES:
         dst = os.path.join(THEME, f)

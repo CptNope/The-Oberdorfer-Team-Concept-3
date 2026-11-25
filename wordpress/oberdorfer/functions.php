@@ -294,8 +294,8 @@ add_filter( 'render_block_core/image', function ( $html, $block ) {
 /* --------------------------------------------------------------------- responsive photos */
 
 /**
- * Give every theme photo (assets/img/photo/*.webp) a srcset of its smaller copies (built by
- * tools/build_wp.py: name-640.webp, name-960.webp), sizes, and width and height, so phones
+ * Give every theme photo (assets/img/photo/*.webp) a srcset of its smaller copies (made by
+ * tools/build_photo_sizes.py: name-640.webp, name-960.webp), sizes, and width and height, so phones
  * download a fraction of the full image and the browser can reserve its space (v0.10.24).
  */
 function oberdorfer_photo_srcset( $html ) {
