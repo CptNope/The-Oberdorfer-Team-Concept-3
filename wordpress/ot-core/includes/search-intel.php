@@ -244,6 +244,41 @@ foreach ( array( 'added_post_meta', 'updated_post_meta', 'deleted_post_meta' ) a
 	}, 10, 3 );
 }
 
+/**
+ * The Journal (the posts page) is kept out of search while it has no published article: an
+ * empty list reads to Google as a thin or soft-404 page (SEO audit, 2026-11-25). It comes back
+ * on its own when the first article is published. Like hidden guides, the noindex flag is only
+ * removed again if this function set it (marker _ot_si_noindex), never one the team set.
+ */
+function ot_si_sync_journal() {
+	$page = (int) get_option( 'page_for_posts' );
+	if ( ! $page || ! ot_si_active() ) {
+		return;
+	}
+	$has  = (bool) get_posts( array( 'post_type' => 'post', 'post_status' => 'publish', 'posts_per_page' => 1, 'fields' => 'ids', 'no_found_rows' => true ) );
+	$ours = (bool) get_post_meta( $page, '_ot_si_noindex', true );
+	if ( ! $has ) {
+		if ( ! get_post_meta( $page, '_jat_search_intel_noindex', true ) ) {
+			update_post_meta( $page, '_jat_search_intel_noindex', '1' );
+			update_post_meta( $page, '_ot_si_noindex', 1 );
+		}
+	} elseif ( $ours ) {
+		delete_post_meta( $page, '_jat_search_intel_noindex' );
+		delete_post_meta( $page, '_ot_si_noindex' );
+	}
+}
+add_action( 'transition_post_status', function ( $new, $old, $post ) {
+	if ( 'post' === $post->post_type && ( 'publish' === $new || 'publish' === $old ) ) {
+		ot_si_sync_journal();
+	}
+}, 10, 3 );
+add_action( 'admin_init', function () {
+	if ( get_option( 'ot_si_journal_synced' ) !== OT_CORE_VERSION ) {
+		ot_si_sync_journal();
+		update_option( 'ot_si_journal_synced', OT_CORE_VERSION, false );
+	}
+} );
+
 /* --------------------------------------------------------------------- llms.txt */
 
 // The curated summary (sourced facts, people, every page and guide) instead of a generated one.

@@ -114,7 +114,7 @@ Sitemap: https://oberdorferteam.com/wp-sitemap.xml
 
 **Structured data and speed**
 - [ ] Rich Results Test passes on the home, a town guide, an agent profile and the market page; the `RealEstateAgent` node has `url`, `logo`, `image`, and `address` and `sameAs` once confirmed.
-- [ ] Fonts are self-hosted in the theme (Cormorant Garamond 300 to 600 with italics, Manrope variable), as WOFF2 with `font-display: swap`. Preload the two most used files. The prototype still uses Google Fonts because the font packages were not reachable from the build workspace.
+- [x] Fonts are self-hosted in the theme (Cormorant Garamond 300 to 600 with italics, Manrope variable), as WOFF2 with `font-display: swap`. Preload the two most used files. The prototype still uses Google Fonts because the font packages were not reachable from the build workspace.
 - [ ] CSS is bundled and minified. Site templates do not load the documentation stylesheet (`docs.css`).
 - [ ] The hero image on each template is preloaded with `fetchpriority="high"`. Every `<img>` has `width` and `height`.
 - [ ] Field Core Web Vitals (LCP, INP, CLS) are checked in Search Console four weeks after launch.

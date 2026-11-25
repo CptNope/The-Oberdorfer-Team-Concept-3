@@ -3,7 +3,7 @@ Contributors: oberdorferteam
 Requires at least: 7.1
 Tested up to: 7.1
 Requires PHP: 8.3
-Stable tag: 0.10.25
+Stable tag: 0.10.26
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,9 @@ Fonts: Cormorant Garamond and Manrope (SIL Open Font License 1.1), loaded from G
 this version; self-hosting is a launch task.
 
 == Changelog ==
+
+= 0.10.26 =
+* Fonts: Cormorant Garamond and Manrope are served from the theme (assets/fonts, WOFF2, Latin subset) instead of Google Fonts, with the two most used files preloaded. Pages no longer wait on fonts.googleapis.com and fonts.gstatic.com, and visitors' browsers no longer connect to Google. The privacy policy says so (updated November 25, 2026).
 
 = 0.10.25 =
 * Speed: theme photos also get an 800 pixel copy, and the home page's main photo a 960 one, so a phone picks a closer size (PageSpeed after 0.10.24 still saw the main photo about 2.5 times too large on a phone).

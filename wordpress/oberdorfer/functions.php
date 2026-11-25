@@ -19,12 +19,16 @@ require_once __DIR__ . '/inc/helpers.php';
 require_once __DIR__ . '/inc/markup.php';
 require_once __DIR__ . '/inc/pages.php';
 
-/** Google Fonts, as the prototype's head(). Self-hosting the fonts is a launch task. */
-const OBERDORFER_FONTS = 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap';
+/**
+ * The two typefaces are served from the theme (assets/fonts, declared in assets/css/fonts.css;
+ * v0.10.26), not Google Fonts. These two are preloaded: body text and the Light display face.
+ */
+const OBERDORFER_PRELOAD_FONTS = array( 'assets/fonts/manrope-latin-wght-normal.woff2', 'assets/fonts/cormorant-garamond-latin-300-normal.woff2' );
 
-/** The design-system stylesheets, in cascade order, then the WordPress resets. */
+/** The font faces, the design-system stylesheets in cascade order, then the WordPress resets. */
 function oberdorfer_stylesheets() {
 	return array(
+		'oberdorfer-fonts'      => 'assets/css/fonts.css',
 		'oberdorfer-tokens'     => 'assets/css/tokens.css',
 		'oberdorfer-base'       => 'assets/css/base.css',
 		'oberdorfer-components' => 'assets/css/components.css',
@@ -35,7 +39,7 @@ function oberdorfer_stylesheets() {
 
 add_action( 'after_setup_theme', function () {
 	add_theme_support( 'editor-styles' );
-	add_editor_style( array_merge( array( OBERDORFER_FONTS ), array_values( oberdorfer_stylesheets() ) ) );
+	add_editor_style( array_values( oberdorfer_stylesheets() ) );
 	// Core's sample patterns do not use the design system; the theme ships its own.
 	remove_theme_support( 'core-block-patterns' );
 } );
@@ -50,13 +54,12 @@ remove_action( 'wp_footer', 'the_block_template_skip_link' );
  * `.stack > * + *` against the layout rule `:root :where(.is-layout-flow) > *`).
  */
 add_action( 'wp_enqueue_scripts', function () {
-	wp_enqueue_style( 'oberdorfer-fonts', OBERDORFER_FONTS, array(), null );
-	// One minified file built by tools/build_wp.py from the five below (v0.10.24); the separate
+	// One minified file built by tools/build_wp.py from the six below (v0.10.24); the separate
 	// files are the fallback and what the editor loads.
 	if ( is_readable( get_theme_file_path( 'assets/css/bundle.css' ) ) ) {
-		wp_enqueue_style( 'oberdorfer-bundle', get_theme_file_uri( 'assets/css/bundle.css' ), array( 'oberdorfer-fonts' ), OBERDORFER_VERSION );
+		wp_enqueue_style( 'oberdorfer-bundle', get_theme_file_uri( 'assets/css/bundle.css' ), array(), OBERDORFER_VERSION );
 	} else {
-		$prev = array( 'oberdorfer-fonts' );
+		$prev = array();
 		foreach ( oberdorfer_stylesheets() as $handle => $path ) {
 			wp_enqueue_style( $handle, get_theme_file_uri( $path ), $prev, OBERDORFER_VERSION );
 			$prev = array( $handle );
@@ -67,13 +70,12 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_script( 'oberdorfer-site-demo', get_theme_file_uri( 'assets/js/site-demo.js' ), array( 'oberdorfer-site' ), OBERDORFER_VERSION, $js );
 }, 20 );
 
-add_filter( 'wp_resource_hints', function ( $urls, $relation ) {
-	if ( 'preconnect' === $relation ) {
-		$urls[] = 'https://fonts.googleapis.com';
-		$urls[] = array( 'href' => 'https://fonts.gstatic.com', 'crossorigin' );
+/* Preload the two most used font files so text draws in its own face sooner. */
+add_action( 'wp_head', function () {
+	foreach ( OBERDORFER_PRELOAD_FONTS as $font ) {
+		printf( '<link rel="preload" href="%s" as="font" type="font/woff2" crossorigin>' . "\n", esc_url( get_theme_file_uri( $font ) ) );
 	}
-	return $urls;
-}, 10, 2 );
+}, 2 );
 
 /** Icons, manifest and browser color, as the prototype's head(). A Site Icon set in Settings takes over. */
 add_action( 'wp_head', function () {

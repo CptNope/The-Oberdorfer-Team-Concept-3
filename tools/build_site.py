@@ -216,9 +216,8 @@ def head(R, title, desc, extra_ld=None, canonical_path="", og_type="website", og
 <link rel="canonical" href="{prod(canonical_path.rstrip('/') + '/')}">
 <meta property="og:type" content="{og_type}"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:image" content="{R}{og_image or 'assets/img/share-oberdorfer-team-v1.jpg'}">{'' if og_image else '<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">'}<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="{R}assets/logo/favicon.ico" sizes="32x32"><link rel="icon" href="{R}assets/logo/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="{R}assets/logo/apple-touch-icon.png"><link rel="manifest" href="{R}assets/logo/site.webmanifest"><meta name="theme-color" content="#071D2D">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600;700&display=swap">
-<link rel="stylesheet" href="{R}assets/css/tokens.css"><link rel="stylesheet" href="{R}assets/css/base.css"><link rel="stylesheet" href="{R}assets/css/components.css"><link rel="stylesheet" href="{R}assets/css/site.css">
+<link rel="preload" href="{R}assets/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="{R}assets/fonts/cormorant-garamond-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{R}assets/css/fonts.css"><link rel="stylesheet" href="{R}assets/css/tokens.css"><link rel="stylesheet" href="{R}assets/css/base.css"><link rel="stylesheet" href="{R}assets/css/components.css"><link rel="stylesheet" href="{R}assets/css/site.css">
 {lds}
 </head>
 <body>
